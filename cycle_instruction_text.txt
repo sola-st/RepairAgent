@@ -1,0 +1,26 @@
+Determine exactly one command to use based on the given goals and the progress you have made so far, and respond using the JSON schema specified previously:
+Respond strictly with JSON. The JSON should be compatible with the TypeScript type `Response` from the following:
+```ts
+interface Response {
+// Express your thoughts based on the information that you have collected so far, the possible steps that you could do next and also your reasoning about fixing the bug in question"
+thoughts: string;
+command: {
+name: string;
+args: Record<string, any>;
+};
+}
+```
+Here is an example of command call that you can output:
+
+{
+"thoughts": "I have information about the bug, but I need to run the test cases to understand the bug better.",
+"command": {
+"name": "run_tests",
+"args": {
+"name": "Chart",
+"index": 1
+}
+}
+}
+
+**IMPORTANT NOTE TO THE ASSISTANT:** DO NOT OUTPUT ANY ENGLISH TEXT WITH YOUR JSON RESPONSE.

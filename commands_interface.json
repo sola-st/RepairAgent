@@ -1,0 +1,16 @@
+{
+    "express_hypothesis": ["hypothesis"],
+    "discard_hypothesis": ["reason_for_discarding"],
+    "go_back_to_collect_more_info": ["reason_for_going_back"],
+    "run_test":["project_name", "bug_index"],
+    "read_range":["project_name", "bug_index", "filepath", "startline", "endline"],
+    "write_range":["project_name", "bug_index", "filepath", "changed_lines"],
+    "write_fix":["project_name", "bug_index", "changes_dicts"],
+    "get_classes_and_methods":["project_name", "bug_index", "file_path"],
+    "search_code_base": ["project_name", "bug_index", "key_words"],
+    "extract_test_code": ["project_name", "bug_index", "test_file_path"],
+    "extract_similar_functions_calls": ["project_name", "bug_index", "file_path", "code_snippet"],
+    "extract_method_code":["project_name", "bug_index", "filepath", "method_name"],
+    "try_fixes": ["fixes_list"],
+    "AI_generate_method_code": ["project_name", "bug_index", "filepath", "method_name"]
+}
