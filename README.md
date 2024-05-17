@@ -6,8 +6,9 @@ https://arxiv.org/abs/2403.17134
 ## I. Requirements
 * Docker >= 20.04: see documentation on how to install docker if you do not have it: https://docs.docker.com/get-docker
 * OpenAI Token and credits:
-   * Go to OpenAI website, create an account, buy credits that allows you to use the API, and finally create an API token
-* At least 40GB of Disk space on your machine
+   * Go to OpenAI website, create an account, buy credits that allows you to use the API
+   * On the same website, create an API token
+* At least 40GB of available disk space on your machine
 * Internet access while running RepairAgent (To access OpenAI's API)
 
 ## II. How to use?
