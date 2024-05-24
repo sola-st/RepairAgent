@@ -122,11 +122,15 @@ Under "experimental_setups" folder, you find some usefull scripts to postprocess
    "external_fix_strategy": 0,
    ```
 
-### 2. Switch between gpt3 and gpt4
+### 2. Switch between gpt3.5 and gpt4
 within the file "run_on_defects4j.sh", you find the line:
 ```shell
-
+    ./run.sh --ai-settings ai_settings.yaml --gpt3only -c -l 40 -m json_file --experiment-file "$2"
 ```
+
+The parameter --gpt3only forces the usage of gpt3.5. Removing the paramter would make RepairAgent switch to gpt4.
+
+To further control the used versions of gpt3.5 and gpt4, you should search the code base for "gpt-3" and "gpt-4" and replace the existing versions names the new ones.
 
 
 ### 3. Run RepairAgent on an arbitrary project
