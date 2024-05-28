@@ -100,15 +100,6 @@
 - fix the dependence on experiment configuration file
     - this implies that now we can run concurent agents with different configurations
     
-### Future
-- postprocess the suggested fix to validate the changed lines
-    - produce patch as text and manually locate insertion location compare to lined numbers
-    - modification in modified lines should respect a minimum threshold of similarity
+## RepairAgent 0.6.4
 
-- create a setup where after each query, we ask chatgpt whether the collected information is enough to fix the bug and if so suggest a fix, otherwise what type of information should we get next (only provide the next needed information. we acknowledge that we might need multiple peices of information but we want you to give us only one for now. we will give you the chance to ask for more later.).
-    - At the end of each cycle we add the type of information to collect to the prompt of RepairAgent and it should produce a command that collects that information
-
-- Execute all commands in each state (at least once then leave the model do whatever it wants)
-- produce mutations of a line
-    - produce variants of a fix
-    - suggest relevant patterns
+## RepairAgent 0.6.5

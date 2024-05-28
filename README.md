@@ -134,13 +134,16 @@ To further control the used versions of gpt3.5 and gpt4, you should search the c
 
 
 ### 3. Run RepairAgent on an arbitrary project
-Documentation for this part will come soon. (We are working on encapsulating this part in one to make it easy to use.)
+Documentation for this part will come soon (in version 0.7.0). (We are working on encapsulating this part in one to make it easy to use.)
 
 
-## Our Patches
+## IV. Our Patches
 In our experiments, we run RepairAgent on Defects4j dataset. RepairAgent was able to fix 164 bugs.
 * The list of fixed bugs can be found [here](./final_list_of_fixed_bugs)
 * The implementation of the patches can be found in [this file](./fixes_implementation)
+
+In 29 bugs, RepairAgent terminated with an Exception raised by the MiddleWare.
+
 ## V. Help us improve RepairAgent
 If you have the opportunity to use RepairAgent, we encourage you to report any issues, bugs, or gaps in the documentation/features. We are committed to addressing your concerns promptly.
 
