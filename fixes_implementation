@@ -232,9 +232,6 @@ Identical.
 ## Why:
 Semantically equivalent
 
-# Codec 8
-
-
 # Math 94
 ## Fix:
 {'file_name': '/app/AutoGPT/auto_gpt_workspace/math_94_buggy/src/java/org/apache/commons/math/util/MathUtils.java', 'deletions': [], 'modifications': [{'line_number': 412, 'modified_line': '        if (u == 0 || v == 0) {'}]}
@@ -247,9 +244,9 @@ Identically equivalent.
 ## Why:
 Identical.
 
-# Closure 52 !!!!!
+# Closure 52
 ## Fix: 
-{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_52_buggy/src/com/google/javascript/jscomp/CodeGenerator.java', 'new_lines': ['    return len > 0 && !s.startsWith("0"); // Fix for numeric keys']}], 'deletions': [], 'modifications': []}
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_52_buggy/src/com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'new_lines': ['    return len > 0 && !s.startsWith("0"); // Fix for numeric keys']}], 'deletions': [], 'modifications': []}
 ## Why:
 Semantically equivalent.
 
@@ -1017,3 +1014,96 @@ Identical.
 }
 ## Why:
 Identical.
+
+# JacksonCore 14
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jacksoncore_14_buggy/src/main/java/com/fasterxml/jackson/core/io/IOContext.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 274,
+            modified_line: "        if ((toRelease != src) && (toRelease.length < src.length)) { throw wrongBuf(); }",
+        },
+        {
+            line_number: 279,
+            modified_line: "        if ((toRelease != src) && (toRelease.length < src.length)) { throw wrongBuf(); }",
+        },
+        {
+            line_number: 284,
+            modified_line: "return new IllegalArgumentException(\"Trying to release buffer not owned by the context\");",
+        },
+    ],
+}
+## Why:
+Semantically equivalent.
+
+# Math 72
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java",
+    insertions: [
+        {
+            line_number: 115,
+            new_lines: [
+                "// Inserted line for mutation",
+            ],
+        },
+        {
+            line_number: 127,
+            new_lines: [
+                "// Inserted line for mutation",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 115,
+            modified_line: "setResult(min, 0);",
+        },
+        {
+            line_number: 127,
+            modified_line: "setResult(max, 0);",
+        }],
+}
+# Why:
+Semantically equivalent.
+
+# Gson 12
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/gson_12_buggy/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java",
+    insertions: [
+        {
+            line_number: 262,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+        {
+            line_number: 263,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+        {
+            line_number: 264,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+        {
+            line_number: 265,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [],
+}
+## Why:
+Semantically equivalent.
+
