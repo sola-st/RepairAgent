@@ -12,9 +12,9 @@ https://arxiv.org/abs/2403.17134
 * Internet access while running RepairAgent (To access OpenAI's API)
 
 ## II. How to use?
-The easiest way to use repair is by retrieving the ready-to_use Docker image from DockerHub.
+The easiest way to use RepairAgent is by retrieving the ready-to-use Docker image from DockerHub.
 
-The advantages of using the docker image is that RepairAgent is already installed inside and the only action needed is to provide OpenAI'S API key.
+The advantages of using the docker image is that RepairAgent is already installed and the only action needed is to provide OpenAI'S API key.
 
 
 Please follow the steps below:
@@ -63,7 +63,7 @@ You can open the file "hyperparameters.json" to check the parameters it contains
 
 * RepairAgent will checkout the project with given bug id.
 * After that it will start the Autonomous process of repair.
-* During that, on your terminal you will see the logs of the steps performed by RepairAgent
+* During that, on your terminal, you will see the logs of the steps performed by RepairAgent
 
 #### 4.2. Retrieve repair logs and history
 RepairAgent saves the output to multiple files.
@@ -130,11 +130,11 @@ within the file "run_on_defects4j.sh", you find the line:
 
 The parameter --gpt3only forces the usage of gpt3.5. Removing the paramter would make RepairAgent switch to gpt4.
 
-To further control the used versions of gpt3.5 and gpt4, you should search the code base for "gpt-3" and "gpt-4" and replace the existing versions names the new ones.
+To further control the used versions of gpt3.5 and gpt4, you should search the code base for "gpt-3" and "gpt-4" and replace the existing versions names with the new ones.
 
 
 ### 3. Run RepairAgent on an arbitrary project
-Documentation for this part will come soon (in version 0.7.0). (We are working on encapsulating this part in one to make it easy to use.)
+Documentation for this part will come soon (in version 0.7.0). (We are working on encapsulating this part in one command to make it easy to use.)
 
 
 ## IV. Our Patches
@@ -142,7 +142,7 @@ In our experiments, we run RepairAgent on Defects4j dataset. RepairAgent was abl
 * The list of fixed bugs can be found [here](./final_list_of_fixed_bugs)
 * The implementation of the patches can be found in [this file](./fixes_implementation)
 
-In 29 bugs, RepairAgent terminated with an Exception raised by the MiddleWare.
+In 29 bugs, RepairAgent terminated with an Exception raised by the MiddleWare (We did not re-run those).
 
 ## V. Help us improve RepairAgent
 If you have the opportunity to use RepairAgent, we encourage you to report any issues, bugs, or gaps in the documentation/features. We are committed to addressing your concerns promptly.
