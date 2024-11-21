@@ -1,150 +1,174 @@
-# RepairAgent
-RepairAgent is an autonomous LLM-based agent for automated program repair.
-For more details on how it works and how we built it, we invite you to check our paper:
-https://arxiv.org/abs/2403.17134
+# 🛠️ RepairAgent
 
-## I. Requirements
-* Docker >= 20.04: see documentation on how to install docker if you do not have it: https://docs.docker.com/get-docker
-* OpenAI Token and credits:
-   * Go to OpenAI website, create an account, buy credits that allows you to use the API
-   * On the same website, create an API token
-* At least 40GB of available disk space on your machine
-* Internet access while running RepairAgent (To access OpenAI's API)
+RepairAgent is an autonomous LLM-based agent designed for automated program repair. For a comprehensive understanding of its workings and development, you can check out our [research paper here](https://arxiv.org/abs/2403.17134).
 
-## II. How to use?
-The easiest way to use RepairAgent is by retrieving the ready-to-use Docker image from DockerHub.
+---
 
-The advantages of using the docker image is that RepairAgent is already installed and the only action needed is to provide OpenAI'S API key.
+## 📋 I. Requirements
 
+Before you start using RepairAgent, ensure that your system meets the following requirements:
 
-Please follow the steps below:
+- **Docker**: Version 20.04 or higher. For installation instructions, see the [Docker documentation](https://docs.docker.com/get-docker).
+- **OpenAI Token and Credits**:
+  - Create an account on the OpenAI website and purchase credits to use the API.
+  - Generate an API token on the same website.
+- **Disk Space**: At least 40GB of available disk space on your machine.
+- **Internet Access**: Required while running RepairAgent to connect to OpenAI's API.
 
+---
 
-### STEP 1: Pull the Docker Image from DockerHub
+## ⚙️ II. How to Use RepairAgent?
 
-Execute the following commands in your terminal to retrieve and start our docker image
-```shell
-# Pull image
+To use RepairAgent, the easiest method is to pull a ready-to-use Docker image from DockerHub. Using the Docker image ensures that RepairAgent is pre-installed, and all you need to do is provide your OpenAI API key.
+
+### 🚀 Steps to Get Started:
+
+### **STEP 1: Pull the Docker Image**
+
+Run the following commands in your terminal to retrieve and start our Docker image:
+
+```bash
+# Pull the image from DockerHub
 docker pull islemdockerdev/repair-agent:v1
+
 # Run the image inside a container
 docker run -itd --name apr-agent islemdockerdev/repair-agent:v1
+
 # Start the container
 docker start -i apr-agent
 ```
-### STEP 2: Attach the Container to VScode
-* After starting the container, open VScode and navigate to the containers icon on the left panel (Ensure that you have the Remote Explorer extension installed on your VScode).
 
-* Under the Dev Containers tab, locate the name of the container you just started (e.g., apr-agent).
+### **STEP 2: Attach the Container to VS Code**
 
-* Finally, attach the container apr-agent to a new window by clicking the '+' sign located on the right of the container's name. Navigate to workdir folder in VScode window (**the workdir is /app/AutoGPT**).
+- After starting the container, open VS Code and navigate to the **Containers** icon on the left panel. Ensure you have the **Remote Explorer** extension installed.
+- Under the **Dev Containers** tab, find the name of the container you just started (e.g., `apr-agent`).
+- Attach the container to a new window by clicking the '+' sign to the right of the container name, then navigate to the `workdir` folder in the VS Code window (**the workdir is `/app/AutoGPT`**).
+- **Tutorial Reference**: For detailed steps on attaching a Docker container in VS Code, check out this [video tutorial (1min 38 sec)](https://www.youtube.com/watch?v=8gUtN5j4QnY&t).
 
-* **Tutorial reference:** For detailed steps on how to attach a docker container in VScode, please refer to this short video tutorial (1min 38 sec): https://www.youtube.com/watch?v=8gUtN5j4QnY&t
+### **STEP 3: Set the OpenAI API Key**
 
-### STEP 3: Set OpenAI API key
-RepairAgent is based on OpenAI's LLMs such as GPT3.5. To use RepairAgent, you need to obtain an API key from OpenAI. Once done, within the docker container, execute the following command:
-```Python
+RepairAgent relies on OpenAI's LLMs (like GPT-3.5). To configure it, obtain your OpenAI API key and execute the following command within the Docker container:
+
+```bash
 python3.10 set_api_key.py
 ```
-The script will prompt you to paste your api key (token).
 
-### STEP 4: Start RepairAgent
-RepairAgent is set by default to run on Defects4J bugs (which can be changed). 
+The script will prompt you to paste your API token.
 
-* To specify which bugs you want RepairAgent to run on, you need to create a text file called, for example, bugs_list. Within this repository (and docker image) there already exist such file which we will use for the rest of the example commands. The file is located under "experimental_setups/bugs_list" folder.
+### **STEP 4: Start RepairAgent**
 
-Once done, you simply need to call the following command:
-```shell
+By default, RepairAgent is configured to run on Defects4J bugs. 
+
+- To specify which bugs to run on, create a text file named, for example, `bugs_list`. A sample file exists in the repository and Docker image at the location `experimental_setups/bugs_list`.
+  
+Once created, execute the following command:
+
+```bash
 ./run_on_defects4j.sh experimental_setups/bugs_list hyperparameters.json
 ```
 
-You can open the file "hyperparameters.json" to check the parameters it contains (which we will explain later on).
+You can open the `hyperparameters.json` file to check its parameters (explained more in the customization section).
 
-#### 4.1. What would happen when you start RepairAgent?
+#### **4.1 What Happens When You Start RepairAgent?**
 
-* RepairAgent will checkout the project with given bug id.
-* After that it will start the Autonomous process of repair.
-* During that, on your terminal, you will see the logs of the steps performed by RepairAgent
+- RepairAgent checks out the project with the given bug ID.
+- It initiates the autonomous repair process.
+- Logs detailing each step performed will be displayed in your terminal.
 
-#### 4.2. Retrieve repair logs and history
-RepairAgent saves the output to multiple files.
+#### **4.2 Retrieve Repair Logs and History**
 
-* You find the most important logs of repair agent under the folder "experimental_setups/experiment_X". where "experiment_X" is a subfolder created automatically and it increments with each call to the command "run_on_defects_4j"
+RepairAgent saves the output in multiple files.
 
-* Under "experimental_setups/experiment_X", you typicaly find the following subfolders (created automatically):
-   * "logs": a folder containing full chat history (full prompts) of RepairAgent and outputs of executed commands. One file per bug.
-   * "plausible_patches": the list of plausible patches, if any generated. One file per bug.
-   * "mutations_history": the fixes suggested by mutating previously suggested fixes. One file per bug.
-   * "responses": the list of agent's responses at each cycle. One file per bug.
+- The primary logs are located in the folder `experimental_setups/experiment_X`, where `experiment_X` increments automatically with each run of the command `run_on_defects_4j`.
 
-#### 4.3. Analyze logs
-Under "experimental_setups" folder, you find some usefull scripts to postprocess the agent's logs.
+- Within this folder, you may find several subfolders:
+  - **logs**: Full chat history (prompts) and command outputs (one file per bug).
+  - **plausible_patches**: Any plausible patches generated (one file per bug).
+  - **mutations_history**: Suggested fixes derived by mutating prior suggestions (one file per bug).
+  - **responses**: Responses from the agent at each cycle (one file per bug).
 
-* The script "collect_plausible_patches_files.py" is used to collect the set of generated plausible patches in a range of conducted experiments.
-   * Example: the following command will collect plausible patches generated by mutations from experiments 1 to 9.
-   ```shell
-   python3.10 collect_plausible_patches.py 1 10
-   ```
+#### **4.3 Analyze Logs**
 
-* The script "get_list_of_fully_executed.py" allows to get the runs that had at least reached 38/40 cycles. This script would allow you to point out executions that had unexpected termination (or called the exit function early)
+Within the `experimental_setups` folder, several scripts are available to post-process the logs:
 
-## III. Customize RepairAgent
+- **Collect Plausible Patches**:
+  Use the script `collect_plausible_patches_files.py` to gather the generated plausible patches across multiple experiments:
+  
+  ```bash
+  python3.10 collect_plausible_patches.py 1 10
+  ```
+  
+- **Get Fully Executed Runs**:
+  Utilize `get_list_of_fully_executed.py` to retrieve runs that reached at least 38 out of 40 cycles. This identifies executions that terminated unexpectedly or called the exit function prematurely.
 
-### 1. Changing the hyperparams.json file
+---
 
-* Budget control strategy determines how to tell the agent about the number of remaining cycles and the number of fixes suggested so far and the minimum number of fixes that should be reached.
-   * FULL-TRACK: show full budget information
-   * NO-TRACK: don't show budget information
-   * FORCED: this strategy is experimental (Do not use as it is buggy)
-   * Example:
-   ```json
-   ...
-   "budget_control": {
-         "name": "FULL-TRACK", 
-         "params": {
-               "#fixes": 4
-         }
+## ✨ III. Customize RepairAgent
+
+### 1. Modify `hyperparams.json`
+
+- **Budget Control Strategy**: Defines how the agent views the remaining cycles, suggested fixes, and minimum required fixes:
+  - **FULL-TRACK**: Displays full budget information.
+  - **NO-TRACK**: Suppresses budget information.
+  - **FORCED**: Experimental and buggy—avoid use.
+  
+  Example Configuration:
+  
+  ```json
+  "budget_control": {
+      "name": "FULL-TRACK",
+      "params": {
+          "#fixes": 4
       }
-   ...
-   ```
+  }
+  ```
 
-* Repetition handling: restricted by default.
-   ```json
-   "repetition_handling": "RESTRICT",
-   ```
+- **Repetition Handling**: Default settings restrict repetitions.
+  ```json
+  "repetition_handling": "RESTRICT",
+  ```
 
-* Commands limit: controls the number cycles allowed
-   ```json
-   "commands_limit": 40
-   ```
+- **Command Limit**: Controls the maximum allowed cycles.
+  ```json
+  "commands_limit": 40
+  ```
 
-* Request external fixes: experimental feature that allows to request fixes from another LLM. The number determines how many external fixes RepairAgent can ask for.
-   ```json
-   "external_fix_strategy": 0,
-   ```
+- **Request External Fixes**: Experimental feature allowing the request of fixes from another LLM.
+  ```json
+  "external_fix_strategy": 0,
+  ```
 
-### 2. Switch between gpt3.5 and gpt4
-within the file "run_on_defects4j.sh", you find the line:
-```shell
-    ./run.sh --ai-settings ai_settings.yaml --gpt3only -c -l 40 -m json_file --experiment-file "$2"
+### 2. Switch Between GPT-3.5 and GPT-4
+
+In the `run_on_defects4j.sh` file, locate the line:
+```bash
+./run.sh --ai-settings ai_settings.yaml --gpt3only -c -l 40 -m json_file --experiment-file "$2"
 ```
+- The `--gpt3only` flag enforces GPT-3.5 usage. Removing this flag switches RepairAgent to GPT-4.
+- Search the codebase for "gpt-3" and "gpt-4" to update version names accordingly.
 
-The parameter --gpt3only forces the usage of gpt3.5. Removing the paramter would make RepairAgent switch to gpt4.
+### 3. Run RepairAgent on an Arbitrary Project
 
-To further control the used versions of gpt3.5 and gpt4, you should search the code base for "gpt-3" and "gpt-4" and replace the existing versions names with the new ones.
+Documentation for this feature is forthcoming in version 0.7.0. We are working on simplifying this process into a single command for ease of use.
 
+---
 
-### 3. Run RepairAgent on an arbitrary project
-Documentation for this part will come soon (in version 0.7.0). (We are working on encapsulating this part in one command to make it easy to use.)
+## 🔧 IV. Our Patches
 
+In our experiments, we utilized RepairAgent on the Defects4J dataset, successfully fixing 164 bugs. You can view:
+- The list of fixed bugs [here](./final_list_of_fixed_bugs).
+- The implementation details of the patches in [this file](./fixes_implementation).
 
-## IV. Our Patches
-In our experiments, we run RepairAgent on Defects4j dataset. RepairAgent was able to fix 164 bugs.
-* The list of fixed bugs can be found [here](./final_list_of_fixed_bugs)
-* The implementation of the patches can be found in [this file](./fixes_implementation)
+Note: RepairAgent encountered exceptions due to Middleware errors in 29 bugs, which were not re-run.
 
-In 29 bugs, RepairAgent terminated with an Exception raised by the MiddleWare (We did not re-run those).
+---
 
-## V. Help us improve RepairAgent
-If you have the opportunity to use RepairAgent, we encourage you to report any issues, bugs, or gaps in the documentation/features. We are committed to addressing your concerns promptly.
+## 💬 V. Help Us Improve RepairAgent
 
-You can raise an issue directly within this repository, or if you have any questions, feel free to [email me](mailto:fi_bouzenia@esi.dz).
+If you use RepairAgent, we encourage you to report any issues, bugs, or documentation gaps. We are committed to addressing your concerns promptly.
+
+You can raise an issue directly in this repository, or for any queries, feel free to [email me](mailto:fi_bouzenia@esi.dz).
+
+--- 
+
+Thank you for your interest in RepairAgent! Happy bug fixing! 🐞✨
