@@ -1,0 +1,1109 @@
+# Csv 4
+## Fix:
+[{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/csv_4_buggy/src/main/java/org/apache/commons/csv/CSVParser.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 288, 'modified_line': 'return this.headerMap != null ? new LinkedHashMap<String, Integer>(this.headerMap) : null;'}]}]
+## Why:
+Semantically equivalent.
+
+# Cli 40
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/cli_40_buggy/src/main/java/org/apache/commons/cli/TypeHandler.java', 'insertions': [{'line_number': 103, 'new_lines': ['throw new ParseException("Value creation failed"); // Throw a ParseException instead of returning null']}], 'deletions': [], 'modifications': []}
+## Why:
+Semantically equivalent.
+
+# Math 80
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/math_80_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1135, 'modified_line': 'int j = 4 * (n - 1);'}]}
+## Why:
+Identical.
+
+# Chart 8
+## Fix:
+Lines:['175'] from file org/jfree/data/time/Week.java were replaced with the following:
+{'175': 'this(time, zone, Locale.getDefault());'}
+## Why:
+Identical.
+
+# Math 94
+## Fix:
+{"file_name": "org/apache/commons/math/util/MathUtils.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 412, "modified_line": "        if (u == 0 || v == 0) {"}]}
+## Why:
+Identical.
+
+# JacksonCore 8
+## Fix:
+Lines:['307'] from file /workspace/Auto-GPT/auto_gpt_workspace/jacksoncore_8_buggy/src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java were replaced with the following:
+{'307': 'if (!_hasSegments) return _currentSegment != null && _currentSegment.length == 0 ? _currentSegment : contentsAsArray();'}
+## Why:
+Semantically equivalent.
+
+# JacksonCore 5
+## Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '            char c = str.charAt(i);\n'}]}]
+## Why:
+Identical.
+
+# Closure 168
+## Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'modifications': [{'line_number': 1996, 'modified_line': 'if (t.getScopeDepth() < 2) {'}]}]
+## Why:
+Semantically equivalent.
+
+# Lang 16
+## Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 458, 'modified_line': '        if (str.startsWith("0x") || str.startsWith("-0x") || str.startsWith("0X") || str.startsWith("-0X")) {'}]}]
+## Why:
+Identical.
+
+# Chart 1
+## Fix:
+[{'file_name': 'org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1797, 'modified_line': '        if (dataset == null) {'}]}]
+## Why:
+Identical.
+
+# Codec 3
+## Fix:
+Lines:['455'] from file org/apache/commons/codec/language/DoubleMetaphone.java were replaced with the following:
+{'455': '            } else if (contains(value, index + 1, 3, "IER")) {'}
+## Why:
+Identical.
+
+# JacksonDatabind 70
+## Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 440, 'modified_line': 'found = key.equalsIgnoreCase(prop.getName());'}]}]
+## Why:
+Semantically equivalent.
+
+# Closure 10
+## Fix:
+Lines:['1417'] from file com/google/javascript/jscomp/NodeUtil.java were replaced with the following:
+{'1417': 'return mayBeStringHelper(n);'}
+## Why:
+Semantically equivalent.
+
+# Lang 33
+## Fix:
+Lines 910 to 910 from file org/apache/commons/lang3/ClassUtils.java were replaced with the following:
+['if (array[i] != null) {', '    classes[i] = array[i].getClass();', '} else {', '    // Handle null object appropriately', '}']
+## Why:
+Semantically equivalent.
+
+# Compress 19
+## Fix:
+Lines:['259'] from file src/main/java/org/apache/commons/compress/archivers/zip/Zip64ExtendedInformationExtraField.java were replaced with the following:
+{'259': 'if (rawCentralDirectoryData.length != expectedLength)'}
+## Why:
+Identical.
+
+# Codec 4
+## Fix:
+{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/codec_4_buggy/src/java/org/apache/commons/codec/binary/Base64.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 225, 'modified_line': '        this(0);'}]}
+## Why:
+Identical.
+
+# Math 79
+## Fix:
+{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/math_79_buggy/src/main/java/org/apache/commons/math/util/MathUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1626, 'modified_line': 'final double dp = p1[i] - p2[i];'}]}
+## Why:
+Identical.
+
+## Closure 62
+## Fix:
+{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/closure_62_buggy/src/com/google/javascript/jscomp/LightweightMessageFormatter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '          && 0 <= charno && charno <= sourceExcerpt.length()) {'}]}
+## Why:
+Identical.
+
+# Closure 72
+## Fix:
+{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/closure_73_buggy/src/com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1045, 'modified_line': '            if (c > 0x1f && c < 0x7f) {'}]}
+## Why:
+Identical.
+
+# Math 82
+## Fix:
+{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/math_82_buggy/src/main/java/org/apache/commons/math/optimization/linear/SimplexSolver.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (MathUtils.compareTo(entry, 0, epsilon) > 0) {'}]}
+## Why:
+Identical.
+
+# Closure 38
+## Fix:
+{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/closure_38_buggy/src/com/google/javascript/jscomp/CodeConsumer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 245, 'modified_line': "    if (x <= 0 && prev == '-') {"}]}
+## Why:
+Identical.
+
+# Chart 4
+## Fix:
+{'file_name': '/workspace/Auto-GPT/auto_gpt_workspace/chart_4_buggy/source/org/jfree/chart/plot/XYPlot.java', 'insertions': [{'line_number': 4492, 'new_lines': ['if (r != null) {']}, {'line_number': 4501, 'new_lines': ['}']}]}
+## Why:
+Identical.
+
+# Closure 70
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_70_buggy/src/com/google/javascript/jscomp/TypedScopeCreator.java', 'modifications': [{'line_number': 1745, 'modified_line': 'jsDocParameter.getJSType(), false);'}]}
+## Why:
+Identical.
+
+# Closure 73
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_73_buggy/src/com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1045, 'modified_line': 'if (c > 0x1f && c < 0x7f) {'}]}
+## Why:
+Identical.
+
+# Closure 10
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_10_buggy/src/com/google/javascript/jscomp/NodeUtil.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1417, 'modified_line': 'return allResultsMatch(n, MAY_BE_STRING_PREDICATE) || mayBeStringHelper(n);'}]}
+## Why:
+Semantically equivalent.
+
+# Closure 31
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_31_buggy/src/com/google/javascript/jscomp/Compiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1285, 'modified_line': '          !options.skipAllPasses && options.closurePass'}]}
+## Why:
+Identical.
+
+# Closure 40
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_40_buggy/src/com/google/javascript/jscomp/NameAnalyzer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 635, 'modified_line': 'JsName name = getName(ns.name, true);'}, {'line_number': 636, 'modified_line': 'if (name != null && name.isObfuscated()) {'}, {'line_number': 639, 'modified_line': 'if (name != null && name.isObfuscated()) {'}]}
+## Why:
+Identical.
+
+# Closure 46
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_46_buggy/src/com/google/javascript/rhino/jstype/RecordType.java', 'insertions': [], 'deletions': [140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155], 'modifications': [{'line_number': 140, 'modified_line': '  @Override public JSType getLeastSupertype(JSType that) {'}, {'line_number': 149, 'modified_line': '              getPropertyType(property).isEquivalentTo(getPropertyType(property))) {'}]}
+## Why:
+Identical.
+
+# Chart 24
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/chart_24_buggy/source/org/jfree/chart/renderer/GrayPaintScale.java', 'insertions': [{'line_number': 126, 'new_lines': ['        value = Math.max(value, this.lowerBound);', '        value = Math.min(value, this.upperBound);']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Cli 28
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/cli_28_buggy/src/java/org/apache/commons/cli/Parser.java', 'insertions': [{'line_number': 290, 'new_lines': ['continue; // Skip to the next iteration without breaking prematurely']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Lang 59
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/lang_59_buggy/src/java/org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 884, 'modified_line': 'str.getChars(0, width, buffer, size);'}]}
+## Why:
+Identical.
+
+# Math 41
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/math_41_buggy/src/main/java/org/apache/commons/math/stat/descriptive/moment/Variance.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 520, 'modified_line': '                for (int i = begin; i < begin + length; i++) {'}]}
+## Why:
+Identical.
+
+# Math 75
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/math_75_buggy/src/main/java/org/apache/commons/math/stat/Frequency.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 303, 'modified_line': 'return getPct((Comparable<?>) v);'}]}
+## Why:
+Identical.
+
+# Math 80
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/math_80_buggy/src/main/java/org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1135, 'modified_line': '            int j = 4 * (n - 1);'}]}
+## Why:
+Identical.
+
+# JacksonCore 8
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/jacksoncore_8_buggy/src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 307, 'modified_line': 'if !(_hasSegments || _currentSegment == null) return _currentSegment;'}]}
+## Why:
+Semantically equivalent.
+
+# JacksonCore 25
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/jacksoncore_25_buggy/src/main/java/com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1963, 'modified_line': '            if (i < maxCode) {'}]}
+## Why:
+Identical.
+
+# Jsoup 40
+## Fix:
+{'file_name': 'org/jsoup/nodes/DocumentType.java', 'insertions': [], 'deletions': [22], 'modifications': [{'line_number': 22, 'modified_line': '        Validate.notBlank(name);'}]}
+## Why:
+Identical.
+
+# Mockito 29
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/mockito_29_buggy/src/org/mockito/internal/matchers/Same.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 29, 'modified_line': '        if (wanted != null) { description.appendText(wanted.toString());} else { description.appendText("null");}'}]}
+## Why:
+Semantically equivalent
+
+# Math 94
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/math_94_buggy/src/java/org/apache/commons/math/util/MathUtils.java', 'deletions': [], 'modifications': [{'line_number': 412, 'modified_line': '        if (u == 0 || v == 0) {'}]}
+## Why:
+Identically equivalent.
+
+# Closure 78
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_78_buggy/src/com/google/javascript/jscomp/PeepholeFoldConstants.java', 'insertions': [], 'deletions': [711, 718], 'modifications': []}
+## Why:
+Identical.
+
+# Closure 52
+## Fix: 
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_52_buggy/src/com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'new_lines': ['    return len > 0 && !s.startsWith("0"); // Fix for numeric keys']}], 'deletions': [], 'modifications': []}
+## Why:
+Semantically equivalent.
+
+# Jsoup 25
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/jsoup_25_buggy/src/main/java/org/jsoup/parser/Tag.java', 'insertions': [{'line_number': 218, 'new_lines': ['private static final String[] preserveWhitespaceTags = {"pre", "plaintext", "title", "textarea"}; // Adding \'textarea\' tag to preserve whitespace']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# JacksonDatabind
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/jacksondatabind_99_buggy/src/main/java/com/fasterxml/jackson/databind/type/ReferenceType.java', 'insertions': [{'line_number': 169, 'new_lines': ["sb.append('>');"]}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Cli 5
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/cli_5_buggy/src/java/org/apache/commons/cli/Util.java', 'insertions': [{'line_number': 36, 'new_lines': ['if (str == null) return null;']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Cli 40
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/cli_40_buggy/src/main/java/org/apache/commons/cli/TypeHandler.java', 'insertions': [{'line_number': 103, 'new_lines': ['throw new ParseException("Value creation failed"); // Throw a ParseException instead of returning null']}], 'deletions': [], 'modifications': []}
+## Why:
+Semantically equivalent.
+
+# Gason 12
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/gson_12_buggy/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java', 'insertions': [{'line_number': 262, 'new_lines': ['if (stackSize == 0) return;']}, {'line_number': 263, 'new_lines': ['if (stackSize == 0) return;']}, {'line_number': 264, 'new_lines': ['if (stackSize == 0) return;']}, {'line_number': 265, 'new_lines': ['if (stackSize == 0) return;']}], 'deletions': [], 'modifications': []}
+## Why:
+Semantically equivalent.
+
+# Compress 30
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/compress_30_buggy/src/main/java/org/apache/commons/compress/compressors/bzip2/BZip2CompressorInputStream.java', 'insertions': [{'line_number': 168, 'new_lines': ['if (len == 0) return 0;']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Csv 9
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/csv_9_buggy/src/main/java/org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 180, 'new_lines': ['if (mapping == null) { return map; }']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Jsoup 54
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/jsoup_54_buggy/src/main/java/org/jsoup/helper/W3CDom.java', 'insertions': [{'line_number': 126, 'new_lines': ['// Check for empty key before setting attribute', 'if(!key.isEmpty()) { el.setAttribute(key, attribute.getValue()); }']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Closure 77
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/closure_77_buggy/src/com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['case \'\\0\': sb.append("\\\\0"); break;']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Cli 17
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/cli_17_buggy/src/java/org/apache/commons/cli/PosixParser.java', 'insertions': [{'line_number': 303, 'new_lines': ['// Fixing the bug by adding a missing return statement\nreturn;']}]}
+## Why:
+Semantically equivalent.
+
+# Lang 21
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/lang_21_buggy/src/main/java/org/apache/commons/lang3/time/DateUtils.java', '                cal1.get(Calendar.HOUR) == cal2.get(Calendar.HOUR) &&']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 265, 'modified_line': '                cal1.get(Calendar.HOUR_OF_DAY) == cal2.get(Calendar.HOUR_OF_DAY) &&'}]}
+## Why:
+Identical.
+
+# Math 34
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/math_34_buggy/src/main/java/org/apache/commons/math3/genetics/ListPopulation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 209, 'modified_line': '        return chromosomes.stream().iterator(); // Mutated fix 7\n'}]}
+## Why:
+Semantically equivalent.
+
+# Chart 10
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/chart_10_buggy/source/org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        return " title=\\"" + toolTipText.replace("\\"", "&quot;")'}]}
+## Why:
+Semantically equivalent.
+
+# Jsoup 57
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/jsoup_57_buggy/src/main/java/org/jsoup/nodes/Attributes.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 125, 'modified_line': '                it.remove();'}]}
+## Why:
+Identical.
+
+# Jsoup 61
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/jsoup_61_buggy/src/main/java/org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1092, 'modified_line': '        final String classAttr = attributes.getIgnoreCase("CLASS");'}]}
+## Why:
+Semantically equivalent.
+
+# Lang 51
+## Fix:
+{'file_name': '/app/AutoGPT/auto_gpt_workspace/lang_51_buggy/src/java/org/apache/commons/lang/BooleanUtils.java', 'insertions': [{'line_number': 682, 'new_lines': ['if (str == null || str.length() < 4) { return false; }']}], 'deletions': [], 'modifications': []}
+## Why:
+Semantically equivalent.
+
+# Jsoup 33
+## Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['tokeniser.transition(TokeniserState.Data);']}]}]
+## Why:
+Identical.
+
+# Math 57
+## Fix:
+{file_name: "/workspace/Auto-GPT/auto_gpt_workspace/math_57_buggy/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 175,
+            modified_line: "            double sum = 0;",
+        },
+    ],
+}
+## Why:
+Identical.
+
+# Cli 11
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/cli_11_buggy/src/java/org/apache/commons/cli/HelpFormatter.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 632,
+            modified_line: "        if (option.hasArg() && (option.getArgName() == null))",
+        },
+    ],
+}
+## Why:
+Identical.
+
+# Jsoup 1
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jsoup_1_buggy/src/main/java/org/jsoup/nodes/Document.java",
+    insertions: [
+        {
+            line_number: 126,
+            new_lines: [
+                "body().prependChild(new TextNode(" ", ""));",
+            ],
+        },
+    ],
+    deletions: [125],
+    modifications: [
+        {
+            line_number: 126,
+            modified_line: "body().prependChild(node);",
+        },
+    ],
+}
+## Why:
+Identical.
+
+# Csv 14
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/csv_14_buggy/src/main/java/org/apache/commons/csv/CSVFormat.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 1039,
+            modified_line: "                if (newRecord && (c < 0x20 || c > 0x21 && c < 0x23 || c > 0x2B && c < 0x2D || c > 0x7E)) {",
+        },
+    ],
+}
+
+## Why:
+Identical.
+
+# Jsoup 45
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jsoup_45_buggy/src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 394,
+            modified_line: "            } else if (!last && (\"td\".equals(name) || \"th\".equals(name))) {",
+        },
+    ],
+}
+## Why:
+Semantically equivalent.
+
+# Jsoup 77
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jsoup_77_buggy/src/main/java/org/jsoup/parser/XmlTreeBuilder.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 117,
+            modified_line: "        String elName = endTag.normalName();",
+        },
+    ],
+},
+## Why:
+Identical.
+
+# Math 27
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/math_27_buggy/src/main/java/org/apache/commons/math3/fraction/Fraction.java",
+    insertions: [
+        {
+            line_number: 596,
+            new_lines: [
+                "        // Fix mutant: using multiplication operator instead of multiply method",
+                "\n        return 100 * doubleValue();",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [],
+}
+## Why:
+Semantically equivalent.
+
+# Math 73
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/math_73_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java",
+    insertions: [
+        {
+            line_number: 136,
+            new_lines: [
+                "        double sign = yMin * yMax;\n        if (sign >= 0) {\n            throw new IllegalArgumentException(\"Non-bracketing\");\n        }",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [],
+}
+## Why:
+Semantically equivalent.
+
+# Chart 13
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/chart_13_buggy/source/org/jfree/chart/block/BorderArrangement.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 455,
+            modified_line: "                    new Range(0.0, Math.max(constraint.getWidth() - w[2], 0.0)),",
+        },
+    ],
+}
+## Why:
+identical.
+
+# Jsoup 43
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jsoup_43_buggy/src/main/java/org/jsoup/nodes/Element.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 574,
+            modified_line: "            if (element == search)",
+        },
+    ],
+}
+## Why:
+Identical.
+
+# Mockito 38
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/mockito_38_buggy/src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java",
+    modifications: [
+        {
+            line_number: 48,
+            modified_line: "return m != null && arg != null && StringDescription.toString(m).equals(arg.toString());",
+        },
+    ],
+}
+## Why:
+Semantically equivalent.
+
+# Closure 65
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/closure_65_buggy/src/com/google/javascript/jscomp/CodeGenerator.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 1015,
+            modified_line: "        case '\\0': sb.append(\"\\\\000\"); break;",
+        },
+    ],
+}
+## Why:
+identical.
+
+# Compress 13
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/compress_13_buggy/src/main/java/org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java",
+    insertions: [
+        {
+            line_number: 512,
+            new_lines: [
+                "        this.name = name.replace('\\\\', '/'); // Replace backslashes with forward slashes for consistency",
+            ],
+        },
+    ],
+}
+## Why:
+Good enough.
+
+# Csv 2
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/csv_2_buggy/src/main/java/org/apache/commons/csv/CSVRecord.java",
+    insertions: [
+        {
+            line_number: 85,
+            new_lines: [
+                "if (index == null) { throw new IllegalArgumentException(\"Index cannot be null\"); }",
+                "if (index.intValue() < 0 || index.intValue() >= values.length) { throw new IllegalArgumentException(\"Index out of bounds: \" + index); }",
+            ],
+        }
+    ],
+    deletions: [],
+    modifications: [],
+}
+## Why:
+Semantically equivalent.
+
+# Csv 11
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/csv_11_buggy/src/main/java/org/apache/commons/csv/CSVParser.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 384,
+            modified_line: "                    final boolean emptyHeader = header != null ? header.trim().isEmpty() : true;",
+        },
+    ],
+}
+## Why:
+Semantically equivalent.
+
+# Compress 46
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/compress_46_buggy/src/main/java/org/apache/commons/compress/archivers/zip/X5455_ExtendedTimestamp.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 529,
+            modified_line: "        final long TWO_TO_32 = 0xFFFFFFFFL;",
+        },
+        {
+            line_number: 530,
+            modified_line: "        if (l < Integer.MIN_VALUE || l > Integer.MAX_VALUE) {",
+        },
+    ],
+}
+## Why:
+Semantically equivalent.
+
+# Cli 32
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/cli_32_buggy/src/main/java/org/apache/commons/cli/HelpFormatter.java",
+    insertions: [],
+    deletions: [
+        937,
+        938,
+        939,
+        940,
+        941,
+    ],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# JacksonDatabind 101
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jacksondatabind_101_buggy/src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java",
+    insertions: [
+        {
+            line_number: 777,
+            new_lines: [
+                "        // Added a fix here",
+            ],
+        },
+    ],
+    deletions: [
+        771,
+    ],
+    modifications: [],
+}
+## Why:
+Good enough.
+
+# Closure 18
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/closure_18_buggy/src/com/google/javascript/jscomp/Compiler.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 1288,
+            modified_line: "if (options.dependencyOptions.needsManagement() && true) {",
+        },
+    ],
+}
+## Why:
+Semantically equivalent.
+
+# Closure 86
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/closure_86_buggy/src/com/google/javascript/jscomp/NodeUtil.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 2465,
+            modified_line: "        return false;",
+        },
+    ],
+}
+## Why:
+Identical.
+
+# Closure 92
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/closure_92_buggy/src/com/google/javascript/jscomp/ProcessClosurePrimitives.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 789,
+            modified_line: "int indexOfDot = namespace.lastIndexOf('.');",
+        },
+    ],
+}
+## Why:
+identical.
+
+# Jsoup 6
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jsoup_6_buggy/src/main/java/org/jsoup/nodes/Entities.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 70,
+            modified_line: "                m.appendReplacement(accum, Matcher.quoteReplacement(c));",
+        },
+        {
+            line_number: 72,
+            modified_line: "                m.appendReplacement(accum, Matcher.quoteReplacement(m.group(0)));",
+        }
+    ],
+}
+## Why:
+identical.
+
+# JacksonDatabind 12
+## Fix:
+
+## Why:
+
+# JacksonDatabind 71
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jacksondatabind_71_buggy/src/main/java/com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java",
+    insertions: [
+        {
+            line_number: 75,
+            new_lines: [
+                "// Mutation 10: Adding a custom deserializer check for CharSequence.class",
+                "        if (raw == CharSequence.class || raw == String.class || raw == Object.class) {",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [],
+}
+## Why:
+Semantically equivalent.
+
+# Jsoup 88
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jsoup_88_buggy/src/main/java/org/jsoup/nodes/Attribute.java",
+    insertions: [
+        {
+            line_number: 79,
+            new_lines: [
+                "        if (val == null) return \"\";\n",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [],
+}
+## Why:
+Semantically equivalent.
+
+# Jsoup 16
+## Fix:
+{'file_name': 'src/main/java/org/jsoup/nodes/DocumentType.java', 'insertions': [{'line_number': 4, 'new_lines': ['import org.jsoup.helper.Validate;']}, {'line_number': 21, 'new_lines': ['        Validate.notEmpty(name);']}, {'line_number': 33, 'new_lines': ['         accum.append("<!DOCTYPE ").append(attr("name"));']}, {'line_number': 37, 'new_lines': ['         accum.append(" \"").append(attr("systemId")).append("\"");']}], 'deletions': [], 'modifications': []}
+## Why:
+Identical.
+
+# Mockito 34
+## Fix:
+{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 106, 'modified_line': '            if (m instanceof CapturesArguments && k < i.getArguments().length) {'}]}
+## Why:
+Semantically equivalent.
+
+# Math 65
+## Fix:
+{'file_name': 'org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 240, 'modified_line': '        double criterion = getRMS(residuals) * getRMS(residuals) * getRMS(residualsWeights);'}, {'line_number': 241, 'modified_line': '        for (int i = 0; i < rows; ++i) {'}, {'line_number': 242, 'modified_line': '            final double residual = residuals[i];'}, {'line_number': 243, 'modified_line': '            criterion += residual * residual * residualsWeights[i];'}, {'line_number': 244, 'modified_line': '        }'}, {'line_number': 245, 'modified_line': '        return Math.sqrt(criterion / rows);'}, {'line_number': 258, 'modified_line': '            chiSquare += residual * residual * residualsWeights[i];'}]}
+## why:
+Semantically equivalent.
+
+# Math 77
+## Fix:
+[{'file_name': 'org/apache/commons/math/linear/ArrayRealVector.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 503, 'mofdified_line': 'max = Math.max(max, Math.abs(iter.value()));'}]}]
+## Why:
+Semantically equivalent.
+
+# Math 101
+## Fix:
+{'file_name': 'org/apache/commons/math/complex/ComplexFormat.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 377, 'modified_line': '        if (startIndex >= source.length() || endIndex > source.length()) { return null; }'}, {'line_number': 378, 'modified_line': '            source.substring(startIndex, Math.min(endIndex, source.length())).compareTo('}]}
+## Why:
+Semantically equivalent.
+
+# Jsoup 51
+## Fix:
+{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 300, 'modified_line': "        return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c > 127);"}]}
+## Why:
+Semantically equivalent.
+
+# Lang 60
+# Fix:
+{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1673, 'modified_line': 'for (int i = 0; i < this.size; i++) {'}, {'line_number': 1730, 'modified_line': 'for (int i = startIndex; i < size; i++) {'}]}
+# why:
+Identical.
+
+# Closure 122
+## Fix:
+{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 252, 'modified_line': '    if (comment.getValue().indexOf("/* @") != -1 || comment.getValue().indexOf("\\n * @") != -1 || comment.getValue().indexOf("@type") != -1) {'}]}
+## Why:
+Good enough.
+
+# Jsoup 17
+## Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilderState.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1451, 'modified_line': "    private static String nullString = String.valueOf('\\u0000');"}]}]
+## Why:
+Identical.
+
+# Lang 20
+## Fix:
+{'file_name': 'org/apache/commons/lang3/StringUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 3298, 'modified_line': 'StringBuilder buf = new StringBuilder(noOfItems * 16);'}, {'line_number': 3383, 'modified_line': 'StringBuilder buf = new StringBuilder(noOfItems * 16);'}]}
+## Why:
+Identical.
+
+# Math 30
+## Fix:
+{'file_name': 'org/apache/commons/math3/stat/inference/MannWhitneyUTest.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 173, 'modified_line': 'final long n1n2prod = (long) n1 * n2;'}]}
+## Why:
+Good enough.
+
+# Lang 29
+## Fix:
+{'file_name': 'org/apache/commons/lang3/SystemUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1672, 'modified_line': '    static int toJavaVersionInt(String version) {'}]}
+## Why:
+Identical.
+
+# Gson 13
+## Fix:
+{'file_name': 'com/google/gson/stream/JsonReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 731, 'modified_line': 'if (last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && !(value == 0 && negative)) {'}]}
+## Why:
+Semantically equivalent.
+
+# Closure 126
+## Fix:
+{
+    file_name: "com/google/javascript/jscomp/MinimizeExitPoints.java",
+    insertions: [],
+    deletions: [141, 142, 143, 144],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Closure 6
+## Fix:
+{
+    file_name: "com/google/javascript/jscomp/TypeValidator.java",
+    insertions: [],
+    deletions: [366, 367, 368, 385, 405, 406, 407, 409],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Closure 78
+## Fix:
+{
+    file_name: "com/google/javascript/jscomp/PeepholeFoldConstants.java",
+    insertions: [],
+    deletions: [711, 718],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Closure 115
+## Fix:
+{
+    file_name: "com/google/javascript/jscomp/FunctionInjector.java",
+    insertions: [],
+    deletions: [697, 698, 699, 700, 701, 702, 703, 704, 730, 731, 732],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Closure 46
+## Fix:
+{
+    file_name: "com/google/javascript/rhino/jstype/RecordType.java",
+    insertions: [],
+    deletions: [140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Closure 11
+## Fix:
+{
+    file_name: "com/google/javascript/jscomp/TypeCheck.java",
+    insertions: [],
+    deletions: [1314, 1315],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Codec 8
+## Fix:
+{
+    file_name: "org/apache/commons/codec/binary/Base64.java",
+    insertions: [],
+    deletions: [225],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Compress 31
+## Fix:
+{
+    file_name: "org/apache/commons/compress/archivers/tar/TarUtils.java",
+    insertions: [],
+    deletions: [135, 136, 137],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Compress 27
+## Fix:
+{
+    file_name: "org/apache/commons/compress/archivers/tar/TarUtils.java",
+    insertions: [],
+    deletions: [133, 134, 135, 136],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# JacksonDatabind 83
+## Fix:
+{
+    file_name: "com/fasterxml/jackson/databind/deser/std/FromStringDeserializer.java",
+    insertions: [],
+    deletions: [119, 121],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# JacksonDatabind 102
+## Fix:
+{
+    file_name: "com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java",
+    insertions: [],
+    deletions: [67, 68, 69],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Jsoup 24
+## Fix:
+{
+    file_name: "org/jsoup/parser/TokeniserState.java",
+    insertions: [],
+    deletions: [558],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Jsoup 40
+## Fix:
+{
+    file_name: "org/jsoup/nodes/DocumentType.java",
+    insertions: [],
+    deletions: [22],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Lang 10
+## Fix:
+{
+    file_name: "org/apache/commons/lang3/time/FastDateParser.java",
+    insertions: [],
+    deletions: [304, 307, 308, 309, 310, 311, 312, 313, 314],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# Math 50
+## Fix:
+{
+    file_name: "org/apache/commons/math/analysis/solvers/BaseSecantSolver.java",
+    insertions: [],
+    deletions: [187, 188, 189, 190],
+    modifications: [],
+}
+## Why:
+Identical.
+
+# JacksonCore 14
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/jacksoncore_14_buggy/src/main/java/com/fasterxml/jackson/core/io/IOContext.java",
+    insertions: [],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 274,
+            modified_line: "        if ((toRelease != src) && (toRelease.length < src.length)) { throw wrongBuf(); }",
+        },
+        {
+            line_number: 279,
+            modified_line: "        if ((toRelease != src) && (toRelease.length < src.length)) { throw wrongBuf(); }",
+        },
+        {
+            line_number: 284,
+            modified_line: "return new IllegalArgumentException(\"Trying to release buffer not owned by the context\");",
+        },
+    ],
+}
+## Why:
+Semantically equivalent.
+
+# Math 72
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/math_72_buggy/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java",
+    insertions: [
+        {
+            line_number: 115,
+            new_lines: [
+                "// Inserted line for mutation",
+            ],
+        },
+        {
+            line_number: 127,
+            new_lines: [
+                "// Inserted line for mutation",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [
+        {
+            line_number: 115,
+            modified_line: "setResult(min, 0);",
+        },
+        {
+            line_number: 127,
+            modified_line: "setResult(max, 0);",
+        }],
+}
+# Why:
+Semantically equivalent.
+
+# Gson 12
+## Fix:
+{
+    file_name: "/app/AutoGPT/auto_gpt_workspace/gson_12_buggy/gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java",
+    insertions: [
+        {
+            line_number: 262,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+        {
+            line_number: 263,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+        {
+            line_number: 264,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+        {
+            line_number: 265,
+            new_lines: [
+                "if (stackSize == 0) return;",
+            ],
+        },
+    ],
+    deletions: [],
+    modifications: [],
+}
+## Why:
+Semantically equivalent.
+
