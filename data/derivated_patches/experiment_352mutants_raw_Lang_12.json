@@ -1,0 +1,2686 @@
+
+{
+    "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+    "insertions": [
+        {
+            "line_number": 230,
+            "new_lines": [
+                "        if (start == 0 && end == 0) {",
+                "            if (!letters && !numbers) {",
+                "                end = Integer.MAX_VALUE;",
+                "            } else {",
+                "                end = 'z' + 1;",
+                "                start = ' ';",
+                "            }",
+                "        }"
+            ]
+        },
+        {
+            "line_number": 232,
+            "new_lines": [
+                "            if (!letters && !numbers) {",
+                "                end = Integer.MAX_VALUE;",
+                "            } else {",
+                "                end = 'z' + 1;",
+                "                start = ' ';",
+                "            }"
+            ]
+        },
+        {
+            "line_number": 238,
+            "new_lines": [
+                "        char[] buffer = new char[count];",
+                "        return new String(buffer);"
+            ]
+        }
+    ],
+    "deletions": [],
+    "modifications": []
+}
+{ "file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [ { "line_number": 230, "new_lines": [ "if (start == 0 && end == 0) {", "if (!letters && !numbers) {", "end = Integer.MAX_VALUE;" ] }, { "line_number": 232, "new_lines": [ "if (start == 0 && end == 0) {", "if (!letters && !numbers) {", "end = Integer.MAX_VALUE;" ] }, { "line_number": 238, "new_lines": [ "if (start == 0 && end == 0) {", "if (!letters && !numbers) {", "end = Integer.MAX_VALUE;" ] } ] }
+  
+    
+
+{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.abs(count);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.min(start, Integer.MAX_VALUE);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.max(count, 0);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.max(start, 0);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.max(end, 0);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.min(count, Integer.MAX_VALUE);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.max(start, ' ');"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.max(end, 'z' + 1);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.max(count, 0);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.min(start, 'z' + 1);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.min(count, Integer.MAX_VALUE);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.min(start, 'z' + 1);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.max(end, 0);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.max(count, 0);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.max(start, 0);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.abs(count);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.min(start, 'z' + 1);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.max(end, 0);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.max(count, 0);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.min(start, Integer.MAX_VALUE);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.abs(count);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.min(start, Integer.MAX_VALUE);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.max(end, 0);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.max(count, 0);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.max(start, 0);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.max(end, 0);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.abs(count);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.min(start, 'z' + 1);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.min(count, Integer.MAX_VALUE);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.max(start, 0);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.abs(end);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "count = Math.max(count, 0);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "start = Math.abs(start);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutation 1: Adding a comment here to fix the bug"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutation 2: Adding a comment here to fix the bug"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutation 3: Adding a comment here to fix the bug"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["if (count < 0) {", "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than 0.\");"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (start == 0 || end == 0) {"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (start == 0 && end == 0) {", "if (letters && numbers) {", "end = 'z' + 1;", "start = ' ';"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["if (count > 0) {"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (start != 0 || end != 0) {"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (start != 0 || end != 0) {", "if (!letters && !numbers) {", "end = Integer.MAX_VALUE;"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["if (count != 0) {"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (start == end) {"] 
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (start != 0 && end != 0) {", "if (letters || numbers) {", "end = 'z' + 1;", "start = ' ';"] 
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 1 && end == 1) {",
+                        "throw new IllegalArgumentException(\"Invalid start and end values.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count <= 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length must be positive.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start != 0 || end != 0) {",
+                        "throw new IllegalArgumentException(\"Invalid start and end values.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 || end == 0) {",
+                        "throw new IllegalArgumentException(\"Either start or end value is invalid.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count > 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length must be positive.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 && end != 0) {",
+                        "throw new IllegalArgumentException(\"Invalid start value.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start != 0 && end != 0) {",
+                        "throw new IllegalArgumentException(\"Both start and end values are invalid.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count == 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length cannot be zero.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start != 0 || end == 0) {",
+                        "throw new IllegalArgumentException(\"Invalid end value.\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start != 0 && end == 0) {",
+                        "throw new IllegalArgumentException(\"Invalid end value.\");"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = Math.min(start, 'z' + 1);", "end = Math.min(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters && numbers) {", "    end = 'z' + 1;", "    start = ' ';} else {", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count < 0) {", "    throw new IllegalArgumentException('Requested random string length ' + count + ' is less than 0.'); }"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Inserted line for mutation 1"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Inserted line for mutation 2"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Inserted line for mutation 3"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = Math.max(start, 'z' + 1);", "end = Math.min(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (!letters || !numbers) {", "    start = ' ';", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count <= 0) {", "    throw new IllegalArgumentException('Requested random string length ' + count + ' is less than or equal to 0.'); }"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = 'z' + 1;", "end = Math.min(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters || numbers) {", "    start = ' ';", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count > 0) {", "    // Add logic here for count greater than 0"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 5 line 1", "// Mutant 5 line 2"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 5 line 3", "// Mutant 5 line 4", "// Mutant 5 line 5"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 5 line 6", "// Mutant 5 line 7"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = Math.min(start, 'z' + 1);", "end = Math.max(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters && !numbers) {", "    start = ' ';", "    end = 'z' + 1; } else {", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count > 0) {", "    // Handle count greater than 0 scenario"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = ' ';", "end = Math.min(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (!letters && numbers) {", "    start = ' ';", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count < 0) {", "    throw new IllegalArgumentException('Random string length cannot be negative.'); }"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = ' ';", "end = Math.min(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters && numbers) {", "    start = ' ';", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count <= 0) {", "    throw new IllegalArgumentException('Length of random string must be positive.'); }"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = ' ';", "end = Math.max(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (!letters || !numbers) {", "    start = ' ';", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count > 0) {", "    // Handle count greater than 0 scenario"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = ' ';", "end = Math.min(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters && !numbers) {", "    start = ' ';", "    end = 'z' + 1; } else {", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count < 0) {", "    throw new IllegalArgumentException('Random string length must not be negative.'); }"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["start = ' ';", "end = Math.min(end, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters || numbers) {", "    start = ' ';", "    end = Integer.MAX_VALUE; }"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count <= 0) {", "    throw new IllegalArgumentException('Requested length must be positive.'); }"]
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 1 && end == 1) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count > 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 1 && end == 1) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 || end == 0) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count > 1) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 1 || end == 1) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 1) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count < 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 && end == 1) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start != 0 && end != 0) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count == 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start != 0 && end != 0) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 || end == 1) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count >= 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 || end == 1) {"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 1: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 1: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 1: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 2: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 2: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 2: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 3: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 3: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 3: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 4: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 4: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 4: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 5: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 5: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 5: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 6: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 6: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 6: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 7: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 7: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 7: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 8: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 8: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 8: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 9: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 9: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 9: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["// Mutant 10: Inserted new line to fix the bug at line 230"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["// Mutant 10: Inserted new line to fix the bug at line 232"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["// Mutant 10: Inserted new line to fix the bug at line 238"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count > 0) {",
+                        "return random(count, start, end, letters, numbers, null, RANDOM);",
+                        "} else {",
+                        "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than or equal to 0.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 230,
+                    "modified_line": "if (start != 0 && end != 0) {"
+                },
+                {
+                    "line_number": 232,
+                    "modified_line": "if (count >= 0) {"
+                },
+                {
+                    "line_number": 238,
+                    "modified_line": "if (start != 0 && end != 0) {"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 || end == 0) {",
+                        "if (!letters || !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count == 0) {",
+                        "return \"\";",
+                        "} else if (count < 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than 0.\");",
+                        "} else {",
+                        "return random(count, start, end, letters, numbers, null, RANDOM);",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 || end == 0) {",
+                        "if (!letters || !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 230,
+                    "modified_line": "if (start > 0 && end > 0) {"
+                },
+                {
+                    "line_number": 232,
+                    "modified_line": "if (count > 0) {"
+                },
+                {
+                    "line_number": 238,
+                    "modified_line": "if (start > 0 && end > 0) {"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start != 0 || end != 0) {",
+                        "if (!letters || !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count == 0) {",
+                        "return \"\";",
+                        "} else if (count < 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than 0.\");",
+                        "} else {",
+                        "return random(count, start, end, letters, numbers, null, RANDOM);",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start != 0 || end != 0) {",
+                        "if (!letters || !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 230,
+                    "modified_line": "if (start == 0 || end == 0) {"
+                },
+                {
+                    "line_number": 232,
+                    "modified_line": "if (count >= 0) {"
+                },
+                {
+                    "line_number": 238,
+                    "modified_line": "if (start == 0 || end == 0) {"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.max(end, Integer.MIN_VALUE);",
+                        "start = Math.max(start, 'a');"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (letters && numbers) {",
+                        "    end = Integer.MAX_VALUE;",
+                        "    start = 'A';"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (count < 10) {",
+                        "    count = 10;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    end = Integer.MAX_VALUE;",
+                        "    start = 'A';"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (count > 0) {",
+                        "    count = 0;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    if (!letters && !numbers) {",
+                        "        end = Integer.MAX_VALUE;",
+                        "    } else {",
+                        "        end = 'z' + 1;",
+                        "        start = ' ';",
+                        "    }"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (count < 0) {",
+                        "    count = 0;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    if (!letters && !numbers) {",
+                        "        end = Integer.MAX_VALUE;",
+                        "    } else {",
+                        "        end = 'z' + 1;",
+                        "        start = ' ';",
+                        "    }"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (!letters || !numbers) {",
+                        "    end = Integer.MAX_VALUE;",
+                        "    start = 'A';"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (count == 0) {",
+                        "    count = 1;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    if (!letters && !numbers) {",
+                        "        end = Integer.MAX_VALUE;",
+                        "    } else {",
+                        "        end = 'z' + 1;",
+                        "        start = ' ';",
+                        "    }"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    if (letters && numbers) {",
+                        "        end = Integer.MAX_VALUE;",
+                        "        start = 'A';",
+                        "    }"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (count > 0) {",
+                        "    count--;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.max(end, Integer.MAX_VALUE);", "start = Math.min(start, 'z' + 1);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters && numbers) {", "    end = 'z' + 1;"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = 'a';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = 'a';"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["if (count % 2 == 0) {", "    start = 'a';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["if (end < start) {", "    int temp = end;"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);", "start = Math.min(start, 'a');"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = 'A';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.max(start, 'z' + 1);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 'Z' + 1);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = 'A';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = 'Z';", "start = 'A';"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (end < start) {", "    int temp = end;"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = Math.max(start, 'a');"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);", "start = 'a';"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters) {", "    end = 'z' + 1;"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = 'A';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["if (end < start) {", "    int temp = end;"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);", "start = Math.min(start, 'a');"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = ' ';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);", "start = Math.max(start, 'a');"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (end < start) {", "    int temp = end;"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = 'A';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);", "start = 'A';"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["if (letters) {", "    end = 'z' + 1;"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = 'z';"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = 'A';"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["start = 'Z';"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start != 0 && end != 0) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count >= 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start != 0 && end != 0) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start != 0 || end != 0) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count <= 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start != 0 || end != 0) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 || end == 0) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count > 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 || end == 0) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start != 0 && end == 0) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count == 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start != 0 && end == 0) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end != 0) {"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count != 0) {"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 && end != 0) {"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, count);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.max(end, Integer.MAX_VALUE);", "start = Math.min(start, 'z' + 1);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.max(start, 'z' + 1);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = 'z' + 1;", "start = Math.min(start, Integer.MAX_VALUE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.max(end, 0);", "start = Math.min(start, 0);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 0);", "start = Math.max(start, 0);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = 0;", "start = Math.min(start, 0);"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, count);", "start = Math.max(start, count);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.max(end, count);", "start = Math.min(start, count);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = count;", "start = count;"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, start);", "start = Math.min(start, end);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.max(end, start);", "start = Math.max(start, end);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = start;", "start = end;"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, count);", "start = Math.max(start, count);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.max(end, count);", "start = Math.min(start, count);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = count;", "start = count;"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.min(start, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.min(start, Integer.MAX_VALUE);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.min(start, Integer.MAX_VALUE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.max(end, 'z' + 1);", "start = Math.min(start, 'z' + 1);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 'z' + 1);", "start = Math.max(start, 'z' + 1);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = Math.max(end, 'z' + 1);", "start = Math.min(start, 'z' + 1);"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);"]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": ["end = Math.max(end, 0);", "start = Math.min(start, 0);"]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": ["end = Math.min(end, 0);", "start = Math.max(start, 0);"]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": ["end = 0;", "start = Math.min(start, 0);"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 || end == 0) {",
+                        "if (!letters || !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count <= 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than or equal to 0.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start <= 0 && end <= 0) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 230,
+                    "modified_line": "if (start != 0 && end != 0) {"
+                }
+                ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 1 && end == 1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count > 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is greater than 0.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 1 && end == 1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 238,
+                    "modified_line": "if (start == 1 || end == 1) {"
+                }
+                ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == -1 && end == -1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count == 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length is 0.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == -1 && end == -1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 230,
+                    "modified_line": "if (start != 0 || end != 0) {"
+                }
+                ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 1 && end == 0) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count >= 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is greater than or equal to 0.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 1 && end == 0) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 232,
+                    "modified_line": "if (count > 0) {"
+                }
+                ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == -1 && end == 0) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count < 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than 0.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == -1 && end == 0) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 238,
+                    "modified_line": "if (start == -1 || end == 0) {"
+                }
+                ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count == 1) {",
+                        "throw new IllegalArgumentException(\"Requested random string length is 1.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 && end == 1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 230,
+                    "modified_line": "if (start == 1 && end == 1) {"
+                }
+                ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == -1 && end == -1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (count <= 0) {",
+                        "throw new IllegalArgumentException(\"Requested random string length is less than or equal to 0.\");",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == -1 && end == -1) {",
+                        "if (!letters && !numbers) {",
+                        "end = Integer.MAX_VALUE;",
+                        "} else {",
+                        "end = 'z' + 1;",
+                        "start = ' ';",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "modifications": [
+                {
+                    "line_number": 232,
+                    "modified_line": "if (count == 1) {"
+                }
+                ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (count < 0) {",
+                        "    throw new IllegalArgumentException(\"Requested random string length \" + count + \" is less than 0.\");",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (letters && numbers) {",
+                        "    end = Math.min(end, Integer.MAX_VALUE);",
+                        "    start = Math.min(start, 'z' + 1);",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (count > 0) {",
+                        "    char[] buffer = new char[count];",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (count > 0) {",
+                        "    char[] buffer = new char[count];",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (letters || numbers) {",
+                        "    end = Math.min(end, Integer.MAX_VALUE);",
+                        "    start = Math.min(start, 'z' + 1);",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (letters || numbers) {",
+                        "    end = Math.min(end, Integer.MAX_VALUE);",
+                        "    start = Math.min(start, 'z' + 1);",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    // Handle special case",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    // Handle special case",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    // Handle special case",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "if (start == 0 && end == 0) {",
+                        "    // Handle special case",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] newBuffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] newBuffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] newBuffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] newBuffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "char[] buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "// Adding buffer initialization",
+                        "char[] buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "// Adding buffer initialization",
+                        "char[] buffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "// Adding buffer initialization",
+                        "char[] buffer = new char[count];"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/RandomStringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 230,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "// Initializing new buffer",
+                        "char[] newBuffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 232,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "// Initializing new buffer",
+                        "char[] newBuffer = new char[count];"
+                    ]
+                },
+                {
+                    "line_number": 238,
+                    "new_lines": [
+                        "end = Math.min(end, Integer.MAX_VALUE);",
+                        "start = Math.min(start, 'z' + 1);",
+                        "// Initializing new buffer",
+                        "char[] newBuffer = new char[count];"
+                    ]
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.min(start, 'z' + 1);", "count = Math.min(count, Integer.MAX_VALUE);"]}, {"line_number": 232, "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.min(start, 'z' + 1);", "count = Math.min(count, Integer.MAX_VALUE);"]}, {"line_number": 238, "new_lines": ["end = Math.min(end, Integer.MAX_VALUE);", "start = Math.min(start, 'z' + 1);", "count = Math.min(count, Integer.MAX_VALUE);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.max(end, Integer.MIN_VALUE);", "start = Math.max(start, ' ');", "count = Math.max(count, Integer.MIN_VALUE);"]}, {"line_number": 232, "new_lines": ["end = Math.max(end, Integer.MIN_VALUE);", "start = Math.max(start, ' ');", "count = Math.max(count, Integer.MIN_VALUE);"]}, {"line_number": 238, "new_lines": ["end = Math.max(end, Integer.MIN_VALUE);", "start = Math.max(start, ' ');", "count = Math.max(count, Integer.MIN_VALUE);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);", "count = Math.abs(count);"]}, {"line_number": 232, "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);", "count = Math.abs(count);"]}, {"line_number": 238, "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);", "count = Math.abs(count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.max(0, end);", "start = Math.max(0, start);", "count = Math.max(0, count);"]}, {"line_number": 232, "new_lines": ["end = Math.max(0, end);", "start = Math.max(0, start);", "count = Math.max(0, count);"]}, {"line_number": 238, "new_lines": ["end = Math.max(0, end);", "start = Math.max(0, start);", "count = Math.max(0, count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.floorDiv(end, 2);", "start = Math.floorDiv(start, 2);", "count = Math.floorDiv(count, 2);"]}, {"line_number": 232, "new_lines": ["end = Math.floorDiv(end, 2);", "start = Math.floorDiv(start, 2);", "count = Math.floorDiv(count, 2);"]}, {"line_number": 238, "new_lines": ["end = Math.floorDiv(end, 2);", "start = Math.floorDiv(start, 2);", "count = Math.floorDiv(count, 2);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.addExact(end, 5);", "start = Math.addExact(start, 5);", "count = Math.addExact(count, 5);"]}, {"line_number": 232, "new_lines": ["end = Math.addExact(end, 5);", "start = Math.addExact(start, 5);", "count = Math.addExact(count, 5);"]}, {"line_number": 238, "new_lines": ["end = Math.addExact(end, 5);", "start = Math.addExact(start, 5);", "count = Math.addExact(count, 5);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.multiplyExact(end, 2);", "start = Math.multiplyExact(start, 2);", "count = Math.multiplyExact(count, 2);"]}, {"line_number": 232, "new_lines": ["end = Math.multiplyExact(end, 2);", "start = Math.multiplyExact(start, 2);", "count = Math.multiplyExact(count, 2);"]}, {"line_number": 238, "new_lines": ["end = Math.multiplyExact(end, 2);", "start = Math.multiplyExact(start, 2);", "count = Math.multiplyExact(count, 2);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.decrementExact(end);", "start = Math.decrementExact(start);", "count = Math.decrementExact(count);"]}, {"line_number": 232, "new_lines": ["end = Math.decrementExact(end);", "start = Math.decrementExact(start);", "count = Math.decrementExact(count);"]}, {"line_number": 238, "new_lines": ["end = Math.decrementExact(end);", "start = Math.decrementExact(start);", "count = Math.decrementExact(count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.max(Integer.MIN_VALUE, end);", "start = Math.max(Integer.MIN_VALUE, start);", "count = Math.max(Integer.MIN_VALUE, count);"]}, {"line_number": 232, "new_lines": ["end = Math.max(Integer.MIN_VALUE, end);", "start = Math.max(Integer.MIN_VALUE, start);", "count = Math.max(Integer.MIN_VALUE, count);"]}, {"line_number": 238, "new_lines": ["end = Math.max(Integer.MIN_VALUE, end);", "start = Math.max(Integer.MIN_VALUE, start);", "count = Math.max(Integer.MIN_VALUE, count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.min(Integer.MAX_VALUE, end);", "start = Math.min(Integer.MAX_VALUE, start);", "count = Math.min(Integer.MAX_VALUE, count);"]}, {"line_number": 232, "new_lines": ["end = Math.min(Integer.MAX_VALUE, end);", "start = Math.min(Integer.MAX_VALUE, start);", "count = Math.min(Integer.MAX_VALUE, count);"]}, {"line_number": 238, "new_lines": ["end = Math.min(Integer.MAX_VALUE, end);", "start = Math.min(Integer.MAX_VALUE, start);", "count = Math.min(Integer.MAX_VALUE, count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.subtractExact(end, 5);", "start = Math.subtractExact(start, 5);", "count = Math.subtractExact(count, 5);"]}, {"line_number": 232, "new_lines": ["end = Math.subtractExact(end, 5);", "start = Math.subtractExact(start, 5);", "count = Math.subtractExact(count, 5);"]}, {"line_number": 238, "new_lines": ["end = Math.subtractExact(end, 5);", "start = Math.subtractExact(start, 5);", "count = Math.subtractExact(count, 5);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.floorMod(end, 3);", "start = Math.floorMod(start, 3);", "count = Math.floorMod(count, 3);"]}, {"line_number": 232, "new_lines": ["end = Math.floorMod(end, 3);", "start = Math.floorMod(start, 3);", "count = Math.floorMod(count, 3);"]}, {"line_number": 238, "new_lines": ["end = Math.floorMod(end, 3);", "start = Math.floorMod(start, 3);", "count = Math.floorMod(count, 3);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.floorDiv(end, 3);", "start = Math.floorDiv(start, 3);", "count = Math.floorDiv(count, 3);"]}, {"line_number": 232, "new_lines": ["end = Math.floorDiv(end, 3);", "start = Math.floorDiv(start, 3);", "count = Math.floorDiv(count, 3);"]}, {"line_number": 238, "new_lines": ["end = Math.floorDiv(end, 3);", "start = Math.floorDiv(start, 3);", "count = Math.floorDiv(count, 3);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);", "count = Math.abs(count);"]}, {"line_number": 232, "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);", "count = Math.abs(count);"]}, {"line_number": 238, "new_lines": ["end = Math.abs(end);", "start = Math.abs(start);", "count = Math.abs(count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.multiplyExact(end, 3);", "start = Math.multiplyExact(start, 3);", "count = Math.multiplyExact(count, 3);"]}, {"line_number": 232, "new_lines": ["end = Math.multiplyExact(end, 3);", "start = Math.multiplyExact(start, 3);", "count = Math.multiplyExact(count, 3);"]}, {"line_number": 238, "new_lines": ["end = Math.multiplyExact(end, 3);", "start = Math.multiplyExact(start, 3);", "count = Math.multiplyExact(count, 3);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.incrementExact(end);", "start = Math.incrementExact(start);", "count = Math.incrementExact(count);"]}, {"line_number": 232, "new_lines": ["end = Math.incrementExact(end);", "start = Math.incrementExact(start);", "count = Math.incrementExact(count);"]}, {"line_number": 238, "new_lines": ["end = Math.incrementExact(end);", "start = Math.incrementExact(start);", "count = Math.incrementExact(count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.addExact(end, 2);", "start = Math.addExact(start, 2);", "count = Math.addExact(count, 2);"]}, {"line_number": 232, "new_lines": ["end = Math.addExact(end, 2);", "start = Math.addExact(start, 2);", "count = Math.addExact(count, 2);"]}, {"line_number": 238, "new_lines": ["end = Math.addExact(end, 2);", "start = Math.addExact(start, 2);", "count = Math.addExact(count, 2);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.subtractExact(end, 3);", "start = Math.subtractExact(start, 3);", "count = Math.subtractExact(count, 3);"]}, {"line_number": 232, "new_lines": ["end = Math.subtractExact(end, 3);", "start = Math.subtractExact(start, 3);", "count = Math.subtractExact(count, 3);"]}, {"line_number": 238, "new_lines": ["end = Math.subtractExact(end, 3);", "start = Math.subtractExact(start, 3);", "count = Math.subtractExact(count, 3);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.addExact(end, 3);", "start = Math.addExact(start, 3);", "count = Math.addExact(count, 3);"]}, {"line_number": 232, "new_lines": ["end = Math.addExact(end, 3);", "start = Math.addExact(start, 3);", "count = Math.addExact(count, 3);"]}, {"line_number": 238, "new_lines": ["end = Math.addExact(end, 3);", "start = Math.addExact(start, 3);", "count = Math.addExact(count, 3);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.floorDiv(end, 5);", "start = Math.floorDiv(start, 5);", "count = Math.floorDiv(count, 5);"]}, {"line_number": 232, "new_lines": ["end = Math.floorDiv(end, 5);", "start = Math.floorDiv(start, 5);", "count = Math.floorDiv(count, 5);"]}, {"line_number": 238, "new_lines": ["end = Math.floorDiv(end, 5);", "start = Math.floorDiv(start, 5);", "count = Math.floorDiv(count, 5);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.decrementExact(end);", "start = Math.decrementExact(start);", "count = Math.decrementExact(count);"]}, {"line_number": 232, "new_lines": ["end = Math.decrementExact(end);", "start = Math.decrementExact(start);", "count = Math.decrementExact(count);"]}, {"line_number": 238, "new_lines": ["end = Math.decrementExact(end);", "start = Math.decrementExact(start);", "count = Math.decrementExact(count);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.addExact(end, 10);", "start = Math.addExact(start, 10);", "count = Math.addExact(count, 10);"]}, {"line_number": 232, "new_lines": ["end = Math.addExact(end, 10);", "start = Math.addExact(start, 10);", "count = Math.addExact(count, 10);"]}, {"line_number": 238, "new_lines": ["end = Math.addExact(end, 10);", "start = Math.addExact(start, 10);", "count = Math.addExact(count, 10);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.floorDiv(end, 7);", "start = Math.floorDiv(start, 7);", "count = Math.floorDiv(count, 7);"]}, {"line_number": 232, "new_lines": ["end = Math.floorDiv(end, 7);", "start = Math.floorDiv(start, 7);", "count = Math.floorDiv(count, 7);"]}, {"line_number": 238, "new_lines": ["end = Math.floorDiv(end, 7);", "start = Math.floorDiv(start, 7);", "count = Math.floorDiv(count, 7);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.multiplyExact(end, 4);", "start = Math.multiplyExact(start, 4);", "count = Math.multiplyExact(count, 4);"]}, {"line_number": 232, "new_lines": ["end = Math.multiplyExact(end, 4);", "start = Math.multiplyExact(start, 4);", "count = Math.multiplyExact(count, 4);"]}, {"line_number": 238, "new_lines": ["end = Math.multiplyExact(end, 4);", "start = Math.multiplyExact(start, 4);", "count = Math.multiplyExact(count, 4);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.addExact(end, 4);", "start = Math.addExact(start, 4);", "count = Math.addExact(count, 4);"]}, {"line_number": 232, "new_lines": ["end = Math.addExact(end, 4);", "start = Math.addExact(start, 4);", "count = Math.addExact(count, 4);"]}, {"line_number": 238, "new_lines": ["end = Math.addExact(end, 4);", "start = Math.addExact(start, 4);", "count = Math.addExact(count, 4);"]}]},
+        {"file_name": "org/apache/commons/lang3/RandomStringUtils.java", "insertions": [{"line_number": 230, "new_lines": ["end = Math.subtractExact(end, 2);", "start = Math.subtractExact(start, 2);", "count = Math.subtractExact(count, 2);"]}, {"line_number": 232, "new_lines": ["end = Math.subtractExact(end, 2);", "start = Math.subtractExact(start, 2);", "count =

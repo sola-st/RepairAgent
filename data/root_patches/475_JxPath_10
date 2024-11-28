@@ -1,0 +1,28 @@
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 42, 'modified_line': 'return evaluateCompare(ld == rd ? 0 : ld < rd ? -1 : 1);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 42, 'modified_line': 'return evaluateCompare(ld == rd ? 0 : ld < rd ? -1 : ld > rd ? 1 : -1);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 42, 'modified_line': 'return evaluateCompare(Double.compare(ld, rd));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 42, 'modified_line': 'return evaluateCompare(ld == rd ? 0 : ld < rd ? -1 : ld > rd ? 1 : -1);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 42, 'modified_line': 'return evaluateCompare(ld.equals(rd) ? 0 : ld.toString().compareTo(rd.toString()));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 54, 'modified_line': 'protected abstract boolean evaluateCompare(int compare);'}, {'line_number': 56, 'modified_line': 'private boolean evaluateCompare(double ld, double rd) { return Double.compare(ld, rd) == compare; }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'target_lines': [['42', '        return compute(args[0].computeValue(context), args[1].computeValue(context)) ']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 42, 'modified_line': 'return evaluateCompare(Double.valueOf(args[0].computeValue(context).toString()), Double.valueOf(args[1].computeValue(context).toString()));'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 42, 'modified_line': 'return evaluateCompare(Double.compare(ld, rd));'}]}]
+
+

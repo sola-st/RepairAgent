@@ -1,0 +1,16 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckSideEffects.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 104, 'modified_line': 'if (n == parent.getFirstChild() && parent.getChildCount() == 2 && n.getNext().isName() && "eval".equals(n.getNext().getString()) && parent.getParent().getType() == Token.COMMA) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckSideEffects.java', 'target_lines': [['101', '    if (parent.getType() == Token.COMMA) {'], ['102', '      Node gramps = parent.getParent();'], ['103', '      if (gramps.isCall() && parent == gramps.getFirstChild()) {'], ['104', '        if (n == parent.getFirstChild() && parent.getChildCount() == 2 && n.getNext().isName() && "eval".equals(n.getNext().getString())) {'], ['106', '        }'], ['111', '      if (n == parent.getLastChild()) {'], ['112', '        for (Node an : parent.getAncestors()) {'], ['113', '          int ancestorType = an.getType();'], ['114', '          if (ancestorType == Token.COMMA)'], ['115', '            continue;'], ['116', '          if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK)'], ['117', '            return;'], ['118', '          else'], ['119', '            break;'], ['120', '        }'], ['121', '      }'], ['122', '    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {'], ['123', '      if (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() ||'], ['124', '           n == parent.getFirstChild().getNext().getNext())) {'], ['125', '      } else {'], ['127', '      }'], ['134', '      if (n.isQualifiedName() && n.getJSDocInfo() != null) {'], ['135', '        return;'], ['136', '      } else if (n.isExprResult()) {'], ['137', '        return;'], ['138', '      }']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckSideEffects.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 104, 'modified_line': 'if (n == parent.getFirstChild() && parent.getChildCount() == 2 && n.getNext().isName() && "eval".equals(n.getNext().getString()) && parent.getParent().getType() == Token.COMMA) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckSideEffects.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 104, 'modified_line': 'if (n == parent.getFirstChild() && parent.getChildCount() == 2 && n.getNext().isName() && "eval".equals(n.getNext().getString()) && parent.getParent() == null && !NodeUtil.isStatement(parent)) {'}]}]
+
+

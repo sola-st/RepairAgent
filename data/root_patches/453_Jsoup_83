@@ -1,0 +1,49 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "if (c == '\t' || c == '\n' || c == '\r' || c == '\x0c' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<)"}]}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<':"], ['161', '//'], ['564', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [{'line_number': 253, 'new_lines': ["            if (c == '<')"]}, {'line_number': 255, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "            if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"}]}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<'"], ['161', '//'], ['564', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [{'line_number': 253, 'new_lines': ["            if (c == '<')"]}, {'line_number': 255, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "            if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"}]}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<':"], ['161', '//'], ['564', '//']], 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}, {'line_number': 564, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [{'line_number': 253, 'new_lines': ["            if (c == '<')"]}, {'line_number': 255, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "            if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"}]}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<':"], ['161', '//'], ['564', '//']], 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}, {'line_number': 564, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': [{'line_number': 161, 'modified_line': '                break;'}, {'line_number': 564, 'modified_line': '                break;'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}, {'line_number': 254, 'new_lines': ["            if (c == '\t' || c == '\n' || c == '\r' || c == '\x0c' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"]}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}, {'line_number': 564, 'new_lines': ['                break;']}, {'line_number': 581, 'new_lines': ["                case '<':"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokeniserState.java', 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': [{'line_number': 581, 'modified_line': "                case '<':"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<':"], ['161', '//'], ['564', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}, {'line_number': 254, 'new_lines': ["            if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"]}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<'"], ['161', '//'], ['564', '//']], 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}, {'line_number': 564, 'new_lines': ['                break;']}, {'line_number': 581, 'new_lines': ["                case '<':"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [{'line_number': 254, 'new_lines': ["            if (c == '\t' || c == '\n' || c == '\r' || c == '\x0c' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"]}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "            if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"}]}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<'"], ['161', '//'], ['564', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "            if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"}]}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<'"], ['161', '//'], ['564', '//']], 'insertions': [{'line_number': 161, 'new_lines': ['                break;']}], 'deletions': [], 'modifications': [{'line_number': 581, 'modified_line': "                case '<:'"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 254, 'modified_line': "if (c == '\t' || c == '\n' || c == '\r' || c == '\x0c' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [{'line_number': 254, 'new_lines': ["            if (c == '\t' || c == '\n' || c == '\r' || c == '\x0c' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"]}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['254', "            if (c == '\\t'|| c ==  '\\n'|| c ==  '\\r'|| c ==  '\\f'|| c ==  ' '|| c ==  '/'|| c ==  '>'|| c ==  TokeniserState.nullChar)"]], 'insertions': [{'line_number': 254, 'new_lines': ["            if (c == '\\t' || c == '\\n' || c == '\\r' || c == '\\f' || c == ' ' || c == '/' || c == '>' || c == TokeniserState.nullChar || c == '<')"]}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/TokeniserState.java', 'target_lines': [['581', "                case '<:'"], ['161', '//'], ['564', '//']], 'insertions': [{'line_number': 581, 'new_lines': ["                case '<':"]}], 'deletions': [], 'modifications': []}]
+
+

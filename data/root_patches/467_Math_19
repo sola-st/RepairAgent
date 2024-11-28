@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 504, 'new_lines': ['    public void checkParameters() {', '        if (lambda <= 0) {', '            throw new IllegalArgumentException("Population size (lambda) must be greater than 0");', '        }', '        ', '        if (mu <= 0 || mu > lambda) {', '            throw new IllegalArgumentException("Parent population size (mu) must be greater than 0 and less than or equal to lambda");', '        }', '        ', '        if (ccov <= 0 || ccov > 1) {', '            throw new IllegalArgumentException("Covariance matrix update parameter (ccov) must be in the range (0, 1]");', '        }', '        ', '        if (c1 <= 0 || c1 > 2) {', '            throw new IllegalArgumentException("Learning rate for rank-one update (c1) must be in the range (0, 2]");', '        }', '        ', '        if (cmu <= 0 || cmu > 2 * Math.min(1, mu / lambda)) {', '            throw new IllegalArgumentException("Learning rate for rank-mu update (cmu) must be in the range (0, 2 * min(1, mu/lambda)]");', '        }', '        ', '        if (damps <= 0) {', '            throw new IllegalArgumentException("Damping parameter (damps) must be greater than 0");', '        }', '        ', '        if (maxIterations <= 0) {', '            throw new IllegalArgumentException("Max iterations must be greater than 0");', '        }', '        ', '        if (stopFitnessTolerance <= 0) {', '            throw new IllegalArgumentException("Stop fitness tolerance must be greater than 0");', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'target_lines': [['540', '//']], 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'target_lines': [['540', '//']], 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/direct/CMAESOptimizer.java', 'insertions': [{'line_number': 540, 'new_lines': ['            if (Double.isNaN(parameters[0])) {', '                throw new NumberIsTooLargeException(parameters[0], Double.POSITIVE_INFINITY, false);', '            }']}]}]
+
+

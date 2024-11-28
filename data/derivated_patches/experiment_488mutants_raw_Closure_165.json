@@ -1,0 +1,157 @@
+[
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 68, "new_lines":["// Fixing bug by adding missing code"]}, {"line_number": 70, "new_lines":["// Fixing bug by adding missing code"]}, {"line_number": 86, "new_lines":["// Fixing bug by adding missing code"]}, {"line_number": 93, "new_lines":["// Fixing bug by adding missing code"]}, {"line_number": 95, "new_lines":["// Fixing bug by adding missing code"]}, {"line_number": 102, "new_lines":["// Fixing bug by adding missing code"]}, {"line_number": 152, "new_lines":["// Fixing bug by adding missing code"]}], "deletions": [83], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"], ["54", "//"], ["62", "//"]], "insertions": [{"line_number": 54, "new_lines":["// Fixing bug by adding missing code"]}, {"line_number": 62, "new_lines":["// Fixing bug by adding missing code"]}], "deletions": [92], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/jstype/JSTypeRegistry.java", "target_lines": [["698", "//"]], "insertions": [{"line_number": 698, "new_lines":["// Fixing bug by adding missing code"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/jstype/ObjectType.java", "target_lines": [["290", "//"]], "insertions": [{"line_number": 290, "new_lines":["// Fixing bug by adding missing code"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 68, "new_lines": ["    System.out.println(\"Inserting new line at 68\");"]}, {"line_number": 70, "new_lines": ["    System.out.println(\"Inserting new line at 70\");"]}, {"line_number": 86, "new_lines": ["    System.out.println(\"Inserting new line at 86\");"]}, {"line_number": 93, "new_lines": ["    System.out.println(\"Inserting new line at 93\");"]}, {"line_number": 95, "new_lines": ["    System.out.println(\"Inserting new line at 95\");"]}, {"line_number": 102, "new_lines": ["    System.out.println(\"Inserting new line at 102\");"]}, {"line_number": 152, "new_lines": ["    System.out.println(\"Inserting new line at 152\");"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"], ["54", "//"], ["62", "//"]], "insertions": [{"line_number": 54, "new_lines": ["    System.out.println(\"Inserting new line at 54\");"]}, {"line_number": 62, "new_lines": ["    System.out.println(\"Inserting new line at 62\");"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/jstype/JSTypeRegistry.java", "target_lines": [["698", "//"]], "insertions": [{"line_number": 698, "new_lines": ["    System.out.println(\"Inserting new line at 698\");"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/jstype/ObjectType.java", "target_lines": [["290", "//"]], "insertions": [{"line_number": 290, "new_lines": ["    System.out.println(\"Inserting new line at 290\");"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "FAULT_OF_O...  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "FAULT_OF_O...
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"], ["54", "//"], ["62", "//"]], "insertions": [{"line_number": 92, "new_lines": ["    if (properties == null) {", "        throw new IllegalArgumentException(\"Properties map cannot be null\");", "    }"]}, {"line_number": 54, "new_lines": ["    if (properties == null) {", "        throw new IllegalArgumentException(\"Properties map cannot be null\");", "    }"]}, {"line_number": 62, "new_lines": ["    if (properties == null) {", "        throw new IllegalArgumentException(\"Properties map cannot be null\");", "    "]}], "deletions": [], "modifications": []}
+{"file_name": "com/google/javascript/rhino/jstype/JSTypeRegistry.java", "target_lines": [["698", "//"]], "insertions": [{"line_number": 698, "new_lines": ["    if (properties == null) {", "        throw new IllegalArgumentException(\"Properties map cannot be null\");", "    "]}], "deletions": [], "modifications": []}
+{"file_name": "com/google/javascript/rhino/jstype/ObjectType.java", "target_lines": [["290", "//"]], "insertions": [{"line_number": 290, "new_lines": ["    if (properties == null) {", "        throw new IllegalArgumentException(\"Properties map cannot be null\");", "    "]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", 
+ "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], 
+                  ["68", "//"], 
+                  ["70", "//"], 
+                  ["86", "//"], 
+                  ["93", "//"], 
+                  ["95", "//"], 
+                  ["102", "//"], 
+                  ["152", "//"]], 
+ "insertions": [{"line_number": 83, 
+                 "new_lines": ['    if (properties == null) {', 
+                               '        throw new IllegalArgumentException("Properties map cannot be null");']}], 
+ "deletions": [], 
+ "modifications": []},
+ 
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", 
+ "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], 
+                  ["68", "//"], 
+                  ["70", "//"], 
+                  ["86", "//"], 
+                  ["93", "//"], 
+                  ["95", "//"], 
+                  ["102", "//"], 
+                  ["152", "//"]], 
+ "insertions": [{"line_number": 83, 
+                 "new_lines": ['    if (properties.isEmpty()) {', 
+                               '        throw new IllegalArgumentException("Properties map cannot be empty");']}], 
+ "deletions": [], 
+ "modifications": []},
+
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", 
+ "target_lines": [["86", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"]], 
+ "insertions": [{"line_number": 86, 
+                 "new_lines": ['        if (properties.containsKey("name")) {', 
+                               '            throw new IllegalArgumentException("Property name is reserved");']}], 
+ "deletions": [], 
+ "modifications": []},
+
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", 
+ "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"], 
+                  ["54", "//"], 
+                  ["62", "//"]], 
+ "insertions": [{"line_number": 92, 
+                 "new_lines": ['        if (properties == null) {', 
+                               '            throw new IllegalArgumentException("Properties map cannot be null");']}], 
+ "deletions": [], 
+ "modifications": []},
+
+{"file_name": "com/google/javascript/rhino/jstype/JSTypeRegistry.java", 
+ "target_lines": [["698", "//"]], 
+ "insertions": [{"line_number": 698, 
+                 "new_lines": ['    if (type == null) {', 
+                               '        throw new IllegalArgumentException("Type cannot be null");']}], 
+ "deletions": [], 
+ "modifications": []},
+
+{"file_name": "com/google/javascript/rhino/jstype/ObjectType.java", 
+ "target_lines": [["290", "//"]], 
+ "insertions": [{"line_number": 290, 
+                 "new_lines": ['        if (properties.isEmpty()) {', 
+                               '            throw new IllegalArgumentException("Properties map cannot be empty");']}], 
+ "deletions": [], 
+ "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 68, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [83], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 70, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [83], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 86, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [83], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 93, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [83], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 95, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [83], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 102, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [83], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 152, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [83], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"], ["54", "//"], ["62", "//"]], "insertions": [{"line_number": 54, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [92], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"], ["54", "//"], ["62", "//"]], "insertions": [{"line_number": 62, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [92], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/JSTypeRegistry.java", "target_lines": [["698", "//"]], "insertions": [{"line_number": 698, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/ObjectType.java", "target_lines": [["290", "//"]], "insertions": [{"line_number": 290, "new_lines": ["    // Inserted new line for mutation"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 83, "new_lines": ["    if (properties != null) {", "        // Additional validation logic here", "    }"]}, {"line_number": 68, "new_lines": ["    // New logic for line 68"]}, {"line_number": 70, "new_lines": ["    // New logic for line 70"]}, {"line_number": 86, "new_lines": ["    // New logic for line 86"]}, {"line_number": 93, "new_lines": ["    // New logic for line 93"]}, {"line_number": 95, "new_lines": ["    // New logic for line 95"]}, {"line_number": 102, "new_lines": ["    // New logic for line 102"]}, {"line_number": 152, "new_lines": ["    // New logic for line 152"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"], ["54", "//"], ["62", "//"]], "insertions": [{"line_number": 54, "new_lines": ["    // Inserted line in 54"]}, {"line_number": 62, "new_lines": ["    // Inserted line in 62"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/JSTypeRegistry.java", "target_lines": [["698", "//"]], "insertions": [{"line_number": 698, "new_lines": ["    // New line for 698 to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/jstype/ObjectType.java", "target_lines": [["290", "//"]], "insertions": [{"line_number": 290, "new_lines": ["    // Inserted line at 290 to resolve issue"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 83, "new_lines": ["    if (properties == null) {", "        throw new IllegalArgumentException(\"Properties map cannot be null\");"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 83, "new_lines": ["    if (properties.isEmpty()) {", "        throw new IllegalArgumentException(\"Properties map cannot be empty\");"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["93", "    this.properties = properties;"]], "insertions": [{"line_number": 93, "new_lines": ["        if (properties.size() < 1) {", "            throw new IllegalArgumentException(\"Properties map should have at least one property\");"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["70", "    this.properties = Collections.unmodifiableMap(properties);"]], "insertions": [{"line_number": 70, "new_lines": ["        if (properties.containsKey(null)) {", "            throw new IllegalArgumentException(\"Properties map cannot contain null keys\");"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["92", "        registry, Collections.unmodifiableMap(properties));"]], "insertions": [{"line_number": 92, "new_lines": ["        if (properties.containsValue(null)) {", "            throw new IllegalArgumentException(\"Properties map cannot contain null values\");"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["62", "      return new RecordType(registry, properties);]"], "modifications": [{"line_number": 62, "modified_line": "      return new RecordType(registry, Collections.unmodifiableMap(properties));"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/JSTypeRegistry.java", "target_lines": [["698", "    if (type == null) {"]], "insertions": [{"line_number": 698, "new_lines": ["        throw new IllegalArgumentException(\"Type cannot be null\");"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/ObjectType.java", "target_lines": [["290", "    return properties.get(name);"]], "insertions": [{"line_number": 290, "new_lines": ["        if (!properties.containsKey(name)) {", "            throw new IllegalArgumentException(\"Property '\" + name + \"' is not defined\");"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["152", "    return new RecordType(registry, properties);"]], "modifications": [{"line_number": 152, "modified_line": "    return new RecordType(registry, Collections.unmodifiableMap(properties));"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["54", "    return new RecordType(this.registry, this.properties);"]], "modifications": [{"line_number": 54, "modified_line": "    return new RecordType(this.registry, Collections.unmodifiableMap(this.properties));"]}]}
+,
+{"file_name": "com/google/javascript/rhino/jstype/RecordTypeBuilder.java", "target_lines": [["62", "      return new RecordType(registry, properties);]"], "modifications": [{"line_number": 62, "modified_line": "      return new RecordType(registry, Collections.unmodifiableMap(properties));"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType3 = {name3: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name3: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name2: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name2: string}; // Adding definition for 'name2' property"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name3: string}; // Adding definition for 'name3' property"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name: string}; // Adding definition for 'name' property"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name3: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name2: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name2: string}; // Added property 'name2' definition"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name3: string}; // Added property 'name3' definition"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name: string}; // Added property 'name' definition"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name3: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name2: string};"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/TypeCheckTest.java", "insertions": [{"line_number": 6, "new_lines": ["var RecordType2 = {name: string};"]}]}
+][
+{"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["83", "  RecordType(JSTypeRegistry registry, Map<String, RecordProperty> properties) {"], ["68", "//"], ["70", "//"], ["86", "//"], ["93", "//"], ["95", "//"], ["102", "//"], ["152", "//"]], "insertions": [{"line_number": 83, "new_lines": ["    if (properties == null) {", "        throw new IllegalArgumentException(\"Properties map cannot be null\");"]}]}
+]

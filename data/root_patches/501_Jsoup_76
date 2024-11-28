@@ -1,0 +1,16 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'insertions': [{'line_number': 382, 'new_lines': ['if (el.tagName().equals("pre")) {', 'if (tb.framesetOk(el, tb)) {', 'tb.insert(startTag(el));', 'tb.tokeniser.transition(TokeniserState.DATA);', 'tb.markInsertionMode();', 'tb.framesetOk(false);', 'return true;', '} else {', 'return false;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'insertions': [{'line_number': 382, 'new_lines': ['if (el.tagName().equals("pre")) {', 'tb.framesetOk(false);', 'return true;', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'insertions': [{'line_number': 382, 'new_lines': ['if (el.tagName().equals("pre")) {', 'tb.framesetOk(false);', 'return true;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'modifications': [{'line_number': 382, 'modified_line': 'if (el.tagName().equals("pre")) {\n'}, {'line_number': 383, 'modified_line': 'tb.framesetOk(false);\n'}]}]
+
+

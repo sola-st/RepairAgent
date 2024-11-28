@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850], 'modifications': [{'line_number': 814, 'modified_line': 'public static double[] linearCombination(double a, double[] v, double b, double[] w) {'}, {'line_number': 815, 'modified_line': '    if (v.length != w.length) {'}, {'line_number': 816, 'modified_line': '        throw new IllegalArgumentException("Vector lengths do not match");'}, {'line_number': 817, 'modified_line': '    }'}, {'line_number': 818, 'modified_line': ''}, {'line_number': 819, 'modified_line': '    double[] result = new double[v.length];'}, {'line_number': 820, 'modified_line': '    for (int i = 0; i < v.length; i++) {'}, {'line_number': 821, 'modified_line': '        result[i] = a * v[i] + b * w[i];'}, {'line_number': 822, 'modified_line': '    }'}, {'line_number': 823, 'modified_line': ''}, {'line_number': 824, 'modified_line': '    return result;'}, {'line_number': 825, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 814, 'modified_line': 'public static double[] linearCombination(double a, double[] v, double b, double[] w) {'}, {'line_number': 815, 'modified_line': '    if (v.length != w.length) {'}, {'line_number': 816, 'modified_line': '        throw new IllegalArgumentException("Vector lengths do not match");'}, {'line_number': 817, 'modified_line': '    }'}, {'line_number': 818, 'modified_line': ''}, {'line_number': 819, 'modified_line': '    double[] result = new double[v.length];'}, {'line_number': 820, 'modified_line': '    for (int i = 0; i < v.length; i++) {'}, {'line_number': 821, 'modified_line': '        result[i] = a * v[i] + b * w[i];'}, {'line_number': 822, 'modified_line': '    }'}, {'line_number': 823, 'modified_line': ''}, {'line_number': 824, 'modified_line': '    return result;'}, {'line_number': 825, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 814, 'modified_line': 'public static double[] linearCombination(final double[] a, final double[] b)'}, {'line_number': 821, 'modified_line': '            // Revert to scalar multiplication.'}, {'line_number': 822, 'modified_line': '            return linearCombination(1.0, a, 1.0, b);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 814, 'modified_line': 'public static double[] linearCombination(final double[] a, final double[] b)'}, {'line_number': 821, 'modified_line': '// Revert to scalar multiplication.'}, {'line_number': 822, 'modified_line': 'return linearCombination(1.0, a, 1.0, b);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 821, 'modified_line': '// Revert to scalar multiplication.'}, {'line_number': 822, 'modified_line': 'return linearCombination(1.0, a, 1.0, b);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850], 'modifications': [{'line_number': 814, 'modified_line': 'public double linearCombination(double a, double x, double b, double y) {'}, {'line_number': 815, 'modified_line': '    return a * x + b * y;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 821, 'modified_line': '// Revert to scalar multiplication.'}, {'line_number': 822, 'modified_line': 'return linearCombination(1.0, a, 1.0, b);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 821, 'modified_line': '// Revert to scalar multiplication.'}, {'line_number': 822, 'modified_line': 'return linearCombination(1.0, a, 1.0, b);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 821, 'modified_line': 'return linearCombination(1.0, a, 1.0, b);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'target_lines': [['821', '//'], ['822', '//']], 'insertions': [{'line_number': 821, 'new_lines': ['return linearCombination(1.0, a, 1.0, b);']}, {'line_number': 822, 'new_lines': ['// Revert to scalar multiplication.']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 837, 'modified_line': 'prodLow = aLow * bLow - (((prodHigh[i] - aHigh * bHigh) - aLow * bHigh) - aHigh * bLow);'}, {'line_number': 844, 'modified_line': 'final double prodHighCur = prodHigh[0];'}, {'line_number': 845, 'modified_line': 'double prodHighNext = prodHigh[1];'}, {'line_number': 846, 'modified_line': 'double sHighPrev = prodHighCur + prodHighNext;'}, {'line_number': 847, 'modified_line': 'double sPrime = sHighPrev - prodHighNext;'}, {'line_number': 848, 'modified_line': 'double sLowSum = (prodHighNext - (sHighPrev - sPrime)) + (prodHighCur - sPrime);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/util/MathArrays.java', 'target_lines': [['821', '//'], ['822', '//']], 'insertions': [{'line_number': 821, 'new_lines': ['// Insert new line(s) here to fix the bug.']}, {'line_number': 822, 'new_lines': ['// Insert new line(s) here to fix the bug.']}], 'deletions': [], 'modifications': []}]
+
+

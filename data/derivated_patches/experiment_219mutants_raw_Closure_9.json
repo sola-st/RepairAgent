@@ -1,0 +1,143 @@
+
+{
+    "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+    "insertions": [
+        {
+            "line_number": 119,
+            "new_lines": [
+                "int count = 0;"
+            ]
+        }
+    ],
+    "deletions": [],
+    "modifications": []
+}
+    
+    
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      filename = guessCJSModuleName(normalizeSourceName(script.getSourceFileName())); // Fix bug by calling guessCJSModuleName with correct parameters\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName()); // Fix bug by directly assigning moduleName without normalization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().replaceAll(\"\\\\\\\\\", \\\\\\\\\\\\\\\\\")); // Fix bug by normalizing source name before passing to guessCJSModuleName\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName()) + \"\"; // Fix bug by ensuring moduleName is a new instance\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().toLowerCase()); // Fix bug by normalizing source name before passing to guessCJSModuleName\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 180,
+                    "modified_line": "      Preconditions.checkArgument(scriptNodeCount >= 1, \"ProcessCommonJSModules supports only one invocation per CompilerInput / script node\"); // Fix bug by changing the check to support multiple invocations\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 180,
+                    "modified_line": "      Preconditions.checkArgument(scriptNodeCount == 1, \"ProcessCommonJSModules supports only one invocation per CompilerInput / script node\"); // Fix bug by ensuring only one invocation is supported\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 180,
+                    "modified_line": "      Preconditions.checkArgument(scriptNodeCount > 0, \"ProcessCommonJSModules supports at least one invocation per CompilerInput / script node\"); // Fix bug by allowing at least one invocation\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 180,
+                    "modified_line": "      Preconditions.checkArgument(scriptNodeCount == 0, \"ProcessCommonJSModules should not have any invocations per CompilerInput / script node\"); // Fix bug by disallowing any invocation\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 180,
+                    "modified_line": "      Preconditions.checkArgument(scriptNodeCount == 2, \"ProcessCommonJSModules supports only two invocations per CompilerInput / script node\"); // Fix bug by allowing only two invocations\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().replace(\"foo\", \"\")); // Fix bug by removing 'foo' from source file name before passing to guessCJSModuleName\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().replaceAll(\"\\\\[foo\", \"\\\\[bar\")); // Fix bug by replacing '[foo' with '[bar' in source file name before passing to guessCJSModuleName\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().replaceAll(\"\\\\[foo\\\\]\", \"\\\\[bar\\\\]\")); // Fix bug by replacing '[foo]' with '[bar]' in source file name before passing to guessCJSModuleName\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().replaceAll(\"\\\\[foo\\\\]\", \"\\\\[\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

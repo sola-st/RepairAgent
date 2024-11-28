@@ -1,0 +1,34 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [83, 84], 'modifications': [{'line_number': 81, 'modified_line': '        String className = type.getRawClass().getName();'}, {'line_number': 82, 'modified_line': '        if (className.startsWith(PREFIX_STRING)) {'}, {'line_number': 83, 'modified_line': '            throw new JsonMappingException(context.getParser(), "Invalid type: " + className);'}, {'line_number': 84, 'modified_line': '        }'}, {'line_number': 85, 'modified_line': '        if (DEFAULT_NO_DESER_CLASS_NAMES.contains(className)) {'}, {'line_number': 86, 'modified_line': '            throw new JsonMappingException(context.getParser(), "Invalid type: " + className);'}, {'line_number': 87, 'modified_line': '        }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [83, 84], 'modifications': [{'line_number': 81, 'modified_line': '        String className = type.getRawClass().getName();'}, {'line_number': 82, 'modified_line': '        if (className.startsWith(PREFIX_STRING)) {'}, {'line_number': 83, 'modified_line': '            throw new JsonMappingException(context.getParser(), "Invalid type: " + className);'}, {'line_number': 84, 'modified_line': '        '}, {'line_number': 85, 'modified_line': '        if (DEFAULT_NO_DESER_CLASS_NAMES.contains(className)) {'}, {'line_number': 86, 'modified_line': '            throw new JsonMappingException(context.getParser(), "Invalid type: " + className);'}, {'line_number': 87, 'modified_line': '        '}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [83, 84], 'modifications': [{'line_number': 83, 'modified_line': '            throw new JsonMappingException(context.getParser(), "Invalid type: " + className);'}, {'line_number': 84, 'modified_line': '        '}, {'line_number': 85, 'modified_line': '        if (DEFAULT_NO_DESER_CLASS_NAMES.contains(className)) {'}, {'line_number': 86, 'modified_line': '            throw new JsonMappingException(context.getParser(), "Invalid type: " + className);'}, {'line_number': 87, 'modified_line': '        '}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 84, 'modified_line': '        for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'target_lines': [['83', '            if (full.startsWith(PREFIX_STRING)) {'], ['84', '                for (Class<?> cls = raw; cls != Object.class; cls = cls.getSuperclass()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 83, 'modified_line': '            if (full.startsWith(PREFIX_STRING) && cls != null) {'}, {'line_number': 84, 'modified_line': '                for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [83, 84], 'modifications': [{'line_number': 84, 'modified_line': 'for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 84, 'modified_line': 'for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 83, 'modified_line': '            if (full.startsWith(PREFIX_STRING) && cls != null) {'}, {'line_number': 84, 'modified_line': '                for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 84, 'modified_line': 'for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}, {'line_number': 83, 'modified_line': 'if (full.startsWith(PREFIX_STRING) && cls != null) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 84, 'modified_line': 'for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/jsontype/impl/SubTypeValidator.java', 'target_lines': [['83', '            if (full.startsWith(PREFIX_STRING)) {'], ['84', '                for (Class<?> cls = raw; cls != Object.class; cls = cls.getSuperclass()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 83, 'modified_line': '            if (full.startsWith(PREFIX_STRING) && cls != null) {'}, {'line_number': 84, 'modified_line': '                for (Class<?> cls = raw; cls != null && cls != Object.class; cls = cls.getSuperclass()) {'}]}]
+
+

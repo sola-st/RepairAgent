@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r) * Math.sqrt((nObs - 2) / (1 - r * r)));'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r) * Math.sqrt((nObs - 2) / (1 - r * r)));'}]}, {'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [{'line_number': 171, 'new_lines': ['out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r) * Math.sqrt((nObs - 2) / (1 - r * r)));']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r * Math.sqrt((nObs - 2) / (1 - r * r))));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 171, 'modified_line': 'out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(Math.abs(r));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/correlation/PearsonsCorrelation.java', 'insertions': [], 'deletions': [160, 176], 'modifications': [{'line_number': 160, 'modified_line': 'public RealMatrix getCorrelationPValues() throws MathException {'}, {'line_number': 161, 'modified_line': '    int numVariables = correlationMatrix.getColumnDimension();'}, {'line_number': 162, 'modified_line': '    double[][] pValues = new double[numVariables][numVariables];'}, {'line_number': 163, 'modified_line': '    TDistribution tDistribution = new TDistribution(nObs - 2);'}, {'line_number': 164, 'modified_line': '    PearsonsCorrelation pearsonsCorrelation = new PearsonsCorrelation();'}, {'line_number': 165, 'modified_line': ''}, {'line_number': 166, 'modified_line': '    for (int i = 0; i < numVariables; i++) {'}, {'line_number': 167, 'modified_line': '        for (int j = i; j < numVariables; j++) {'}, {'line_number': 168, 'modified_line': '            if (i == j) {'}, {'line_number': 169, 'modified_line': '                pValues[i][j] = 0.0; // P-value for correlation with itself is always 0'}, {'line_number': 170, 'modified_line': '                continue;'}, {'line_number': 171, 'modified_line': '            }'}, {'line_number': 172, 'modified_line': ''}, {'line_number': 173, 'modified_line': '            double r = correlationMatrix.getEntry(i, j);'}, {'line_number': 174, 'modified_line': '            double t = r == 1.0 ? Double.POSITIVE_INFINITY : r == -1.0 ? Double.NEGATIVE_INFINITY : r * Math.sqrt((nObs - 2) / (1 - r * r));'}, {'line_number': 175, 'modified_line': '            double p;'}, {'line_number': 176, 'modified_line': '            if (Math.abs(r) == 1.0) {'}, {'line_number': 177, 'modified_line': '                p = 0.0;'}, {'line_number': 178, 'modified_line': '            } else {'}, {'line_number': 179, 'modified_line': '                p = 2 * (1.0 - tDistribution.cumulativeProbability(Math.abs(t)));'}, {'line_number': 180, 'modified_line': '            }'}, {'line_number': 181, 'modified_line': ''}, {'line_number': 182, 'modified_line': '            pValues[i][j] = p;'}, {'line_number': 183, 'modified_line': '            pValues[j][i] = p; // P-value matrix is symmetric'}, {'line_number': 184, 'modified_line': '        }'}, {'line_number': 185, 'modified_line': '    }'}, {'line_number': 186, 'modified_line': ''}, {'line_number': 187, 'modified_line': '    return new BlockRealMatrix(pValues);'}, {'line_number': 188, 'modified_line': '}'}]}]
+
+

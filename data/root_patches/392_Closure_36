@@ -1,0 +1,19 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/IntegrationTest.java', 'insertions': [{'line_number': 2018, 'new_lines': ['Singleton singleton = Singleton.getInstance();', 'System.out.println("Singleton instance obtained successfully");']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/IntegrationTest.java', 'insertions': [{'line_number': 2018, 'new_lines': ['Singleton fooSingleton = Foo.getInstance();', 'Singleton barSingleton = Bar.getInstance();']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/IntegrationTest.java', 'insertions': [{'line_number': 2018, 'new_lines': ['Singleton fooSingleton = Foo.getInstance();', 'Singleton barSingleton = Bar.getInstance();']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/IntegrationTest.java', 'insertions': [{'line_number': 2018, 'new_lines': ['Singleton fooSingleton = Foo.addSingletonGetter();', 'Singleton barSingleton = Bar.addSingletonGetter();']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Singleton.java', 'insertions': [{'line_number': 8, 'new_lines': ['    // Implement the method addSingletonGetter', '    public static <T> T addSingletonGetter(Class<T> clazz, T instance) {', '        if (!instances.containsKey(clazz)) {', '            instances.put(clazz, instance);', '        }', '        return clazz.cast(instances.get(clazz));', '    }']}]}]
+
+

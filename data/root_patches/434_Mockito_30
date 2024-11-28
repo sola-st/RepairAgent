@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 438, 'new_lines': ['    public void smartNullPointerException(List<Object> mocks, String message, Throwable cause) {', '        String mockNames = join(mocks);', '        String pluralized = pluralize(mocks.size(), "mock", "mocks");', '        String formattedMessage = "SmartNullPointerException (a message in this exception suggests that you have a NullPointerException in one of the mocks you are stubbing/verifying). " +', '                "You should fix the returned value for " + pluralized + ": " + mockNames + ". " +', '                "Please check the stack trace for more information.";', '        throw new MockitoException(formattedMessage, cause);', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['438', '    public void smartNullPointerException(Location location) {'], ['442', '//']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'target_lines': [['56', '            new Reporter().smartNullPointerException(location);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['438', '    public void smartNullPointerException(Location location) {'], ['442', '//']], 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'target_lines': [['56', '            new Reporter().smartNullPointerException(location);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['438', '    public void smartNullPointerException(Location location) {'], ['442', '//']], 'insertions': [{'line_number': 438, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'target_lines': [['56', '            new Reporter().smartNullPointerException(location);']], 'insertions': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['438', '    public void smartNullPointerException(Location location) {'], ['442', '//']], 'insertions': []}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'target_lines': [['56', '            new Reporter().smartNullPointerException(location);']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 442, 'new_lines': ['        return "SmartNullPointerException message with oompa and lumpa";']}]}, {'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java', 'insertions': []}]
+
+

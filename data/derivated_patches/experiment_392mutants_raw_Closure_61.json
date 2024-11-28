@@ -1,0 +1,487 @@
+[
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by adding a null check for compiler",
+"    if (compiler == null) {",
+"        return true;",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by handling the case where compiler has no global RegExp references",
+"    if (compiler != null && !compiler.hasRegExpGlobalReferences()) {",
+"        Node nameFirstChild = nameNode.getFirstChild();",
+"        if (nameFirstChild.getType() == Token.REGEXP",
+"            && REGEXP_METHODS.contains(nameNode.getLastChild().getString())) {",
+"            return false;",
+"        } else if (nameFirstChild.getType() == Token.STRING",
+"            && STRING_REGEXP_METHODS.contains(nameNode.getLastChild().getString())) {",
+"            Node param = nameNode.getNext();",
+"            if (param != null && (param.getType() == Token.STRING || param.getType() == Token.REGEXP)) {",
+"                return false;",
+"            }",
+"         }",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by checking for specific built-in functions with no side effects",
+"    if (nameNode.getType() == Token.NAME) {",
+"        String name = nameNode.getString();",
+"        if (BUILTIN_FUNCTIONS_WITHOUT_SIDEEFFECTS.contains(name)) {",
+"            return false;",
+"        }",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by handling the case where callNode has only one child",
+"    if (callNode.hasOneChild()) {",
+"        Node lastChild = nameNode.getLastChild();",
+"        if (OBJECT_METHODS_WITHOUT_SIDEEFFECTS.contains(lastChild.getString())) {",
+"            return false;",
+"        }",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by checking if callNode only modifies 'this' and evaluates to a local value",
+"    if (callNode.isOnlyModifiesThisCall() && evaluatesToLocalValue(nameNode.getFirstChild())) {",
+"        return false;",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by considering functions in the 'Math' namespace to have no side effects",
+"    if (nameNode.getFirstChild().getType() == Token.NAME",
+"        && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"        return false;",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by adding a check for specific string regexp methods",
+"    if (compiler != null && !compiler.hasRegExpGlobalReferences()) {",
+"        if (nameNode.getFirstChild().getType() == Token.STRING",
+"            && STRING_REGEXP_METHODS.contains(nameNode.getLastChild().getString())) {",
+"            Node param = nameNode.getNext();",
+"            if (param != null && (param.getType() == Token.STRING || param.getType() == Token.REGEXP)) {",
+"                return false;",
+"            }",
+"         }",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by handling the case where nameNode is a GETPROP type",
+"    if (nameNode.getType() == Token.GETPROP) {",
+"        if (callNode.isOnlyModifiesThisCall()",
+"            && evaluatesToLocalValue(nameNode.getFirstChild())) {",
+"            return false;",
+"        }",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by checking for specific methods in the 'Math' namespace",
+"    if (nameNode.getType() == Token.GETPROP",
+"        && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"        return false;",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"    // Fixing the bug by adding a null check for callNode",
+"    if (callNode == null) {",
+"        return true;",
+"    }"
+]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    // Inserted fix for functionCallHasSideEffects bug"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    return false; // Inserted fix for functionCallHasSideEffects bug"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return true;}"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return false;}"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return callNode.hasChildren();}"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return callNode.getFirstChild().hasChildren();}"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return callNode.getLastChild().hasChildren();}"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return callNode.hasOneChild();}"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return callNode.hasXChildren(2);}"]}],
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall()) {return callNode.hasXChildren(3);}"]}],
+"deletions": [], 
+"modifications": []
+}
+][
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Add a comment to describe the purpose of the functionCallHasSideEffects method"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Check for side effects in function calls"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Ensure function calls have side effects"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix for function calls with no side effects"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Add check for side effects in function calls"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Verify if function calls have side effects"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Correct side effects handling in function calls"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Modify functionCallHasSideEffects logic for bug fix"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix for function calls with unexpected side effects"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Handle side effects in function calls properly"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Ensure correct side effect evaluation in function calls"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Add missing side effects check in function calls"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix side effect detection for function calls"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Ensure functionCallHasSideEffects handles side effects correctly"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Properly check for side effects in function calls"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix bug related to functionCallHasSideEffects side effects handling"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Adding a comment for clarity"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Fixing the return statement"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    boolean hasSideEffects = callNode.isCall() && !callNode.isNoSideEffectsCall();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Check for side effects before returning"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Potential fix for side effects evaluation"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": [{"line_number": 958, "modified_line": "    boolean hasSideEffects = callNode.isCall() && !callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": [{"line_number": 958, "modified_line": "    // Adjusted the condition for side effects check"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Check for side effects in the function call"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Adding side effects evaluation for function calls"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Added a comment to explain the purpose of the condition"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Checking additional conditions for side effects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Adding a log statement for debugging purposes"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Potential fix for side effects handling"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Adjusting side effects check logic"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Ensuring side effects are correctly handled"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Side effects validation before returning result"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Modifying side effects check for better accuracy"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Considering all possible side effect scenarios"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    // Side effects evaluation included in the condition"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"sin\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"random\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"cos\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"log\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"pow\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"sqrt\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"ceil\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"floor\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"round\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"trunc\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"abs\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"max\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"min\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"random\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"pow\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"sqrt\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"ceil\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"floor\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"round\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"trunc\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"abs\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"max\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"min\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"random\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"pow\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"sqrt\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"ceil\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"floor\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"round\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"trunc\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.getFirstChild().getType() == Token.GETPROP && callNode.getFirstChild().getString().equals(\"Math\") && callNode.getLastChild().getString().equals(\"abs\") {\n", "        return true;\n", "    }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    return callNode.isCall() && callNode.hasSideEffects();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    callNode.setHasSideEffects(true);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if(callNode.getParent() != null) {", "        return true;", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if(callNode.isCall() && !callNode.isNoSideEffectsCall()) {", "        return true;", "    }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall() || callNode.isNew()) {", "        return true;", "    }", "    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.getType() == Token.CALL) {", "        return true;", "    }", "    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.getType() == Token.CALL) {", "        return true;", "    }", "    if (callNode.isNoSideEffectsCall()) {", "        return false;", "    }", "    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.getType() == Token.CALL) {", "        return true;", "    }", "    if (callNode.isNoSideEffectsCall()) {", "        return false;", "    }", "    return true;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return true;", "    }", "    if (!callNode.isNoSideEffectsCall()) {", "        return true;", "    }", "    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.getType() == Token.CALL) {", "        return true;", "    }", "    if (!callNode.isNoSideEffectsCall()) {", "        return true;", "    }", "    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return true;", "    }", "    if (callNode.isNoSideEffectsCall()) {", "        return false;", "    }", "    return true;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.getType() == Token.CALL) {", "        return true;", "    }", "    if (callNode.isNoSideEffectsCall()) {", "        return false;", "    }", "    return true;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall() || callNode.isNew()) {", "        return true;", "    }", "    if (callNode.isNoSideEffectsCall()) {", "        return false;", "    }", "    return true;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.getType() == Token.CALL) {", "        return true;", "    }", "    if (callNode.isNoSideEffectsCall()) {", "        return false;", "    }", "    return true;"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.getParent().isCall()) {", "        return true;", "    }"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Inserted line to fix the bug"]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Additional line for bug fix"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall(); // Modified to fix bug"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall(); // Fixing the bug"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Fixing the bug by changing the condition"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return !callNode.isNoSideEffectsCall(); // Fixing side effects bug"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Fixing the bug by changing the logical operation"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Fixing the bug by removing the no side effects check"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isCall(); // Fixed the no side effects bug"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: changing the logic for checking side effects"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Fixed the side effects bug"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: changed the condition to check for side effects"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Fixed side effects detection bug"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: adjusting the logic for side effects check"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Bug fixed in side effects detection"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Fixed bug by adjusting side effects detection"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Bug fixed: side effects detection"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: corrected the side effects check"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Bug fixed: adjusted side effects detection"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: fixed side effects detection logic"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Bug fixed in side effects detection logic"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: updated side effects detection logic"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Bug fixed: side effects detection logic updated"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: revised side effects detection logic"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Bug fixed: updated side effects detection logic"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [{"line_number": 958, "new_lines": ["    // Bug fix: corrected side effects detection logic"]}], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall();"}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], 
+"insertions": [], 
+"deletions": [], 
+"modifications": [{"line_number": 958, "modified_line": "return callNode.isNoSideEffectsCall(); // Bug fixed: corrected side effects detection logic"}]
+}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    // Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    return callNode.isCall() || callNode.isNew();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall() || callNode.isNew()) { return true; }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall() || callNode.isNew()) {", "        return true;", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    boolean hasSideEffects = callNode.isCall() || callNode.isNew();", "    return hasSideEffects;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall() || callNode.isNew()) {", "        return true;", "    } else {", "        return false;", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall() || callNode.isNew()) {", "        return true;", "    }", "    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    return callNode.isCall() || callNode.isNew(); // Checking for side effects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    if (callNode.isCall() || callNode.isNew()) { return true; } else { return false; } // Handle side effects check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines":["    boolean hasSideEffects = callNode.isCall() || callNode.isNew();", "    if (hasSideEffects) { return true; } else { return false; }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Add a comment to explain the purpose of the functionCallHasSideEffects method"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Implement the logic to check for side effects in the functionCallHasSideEffects method"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Add a check for built-in functions with no side effects in functionCallHasSideEffects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Check if the function call has side effects based on the node type in functionCallHasSideEffects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Add a condition to handle specific cases of functions with no side effects in functionCallHasSideEffects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Modify the side effects check to include additional function types in functionCallHasSideEffects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Enhance the logic to identify side effects in functionCallHasSideEffects method"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Check for specific functions known to have side effects in functionCallHasSideEffects method"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Update the side effects check based on the compiler information in functionCallHasSideEffects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Refine the check for side effects to consider additional scenarios in functionCallHasSideEffects"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Adding a comment to explain the purpose of the method"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Potential fix: Checking for side effects in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Ensuring side effects are properly handled"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Potential fix: Add check for side effects in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Verifying side effects presence in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Checking for side effects of function calls and handling accordingly"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Checking for side effects of function calls"]}], "deletions": [958], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Potential fix: Handling side effects in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Checking for side effects in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Verifying the presence of side effects in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Handling side effects properly in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || !callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Adding a comment to clarify function call side effects check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [958], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 958, "modified_line": "return callNode.isCall() || callNode.isNoSideEffectsCall();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Ensuring proper handling of function call side effects"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Fix: Check for side effects in function calls"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    // Potential fix: Verifying side effects in function calls"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]}]}
+][
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]}]}
+][
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com.google.javascript.jscomp/NodeUtil.java", "target_lines": [["958", "    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    callNode.checkForSideEffects();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    return !callNode.isNoSideEffectsCall();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return true;", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    // Adding a comment here for better understanding"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall() && callNode.hasChildren()) {", "        return true;", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    return callNode.isCall() ? true : false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    } else {", "        return false;", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    } else if (callNode.isNew()) {", "        return false;", "    }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    return callNode.isCall() && !callNode.isNoSideEffectsCall();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall() && !callNode.isNoSideEffectsCall()) { return true; }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall() || callNode.isNew()) { return true; }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) { return !callNode.isNoSideEffectsCall(); }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) { return true; }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        if (!callNode.isNoSideEffectsCall()) {", "            return true;", "        }", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    return functionCallHasSideEffects(callNode, null);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return !callNode.isNoSideEffectsCall();", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        return true;", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["    if (callNode.isCall()) {", "        if (callNode.isNoSideEffectsCall()) {", "            return false;", "        } else {", "            return true;", "        }", "    }"]}], "deletions": [], "modifications": []}
+]

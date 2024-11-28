@@ -1,0 +1,333 @@
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], 
+    "insertions": [
+        {"line_number": 2510, "new_lines": [
+            "        // Fix for failing test case due to BigDecimal comparison precision",
+            "        if (result instanceof DecimalNode) {",
+            "            assertEquals(new BigDecimal(\"-10000000000.0000000001\"), ((DecimalNode) result).decimalValue());",
+            "        }"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], 
+    "insertions": [
+        {"line_number": 3426, "new_lines": [
+            "        } catch (AssertionError e) {",
+            "            throw new AssertionError(\"Failed to convert BigDecimal with precision, expected: -10000000000.0000000001\");",
+            "        }"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], 
+    "insertions": [
+        {"line_number": 80, "new_lines": [
+            "        // Fix for failing test case due to BigDecimal comparison precision"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], 
+    "insertions": [
+        {"line_number": 188, "new_lines": [
+            "        // Fix for failing test case due to BigDecimal comparison precision"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], 
+    "insertions": [
+        {"line_number": 193, "new_lines": [
+            "        // Fix for failing test case due to BigDecimal comparison precision"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], 
+    "insertions": [
+        {"line_number": 959, "new_lines": [
+            "        // Fix for failing test case due to BigDecimal comparison precision"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], 
+    "insertions": [
+        {"line_number": 964, "new_lines": [
+            "        // Fix for failing test case due to BigDecimal comparison precision"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], 
+    "insertions": [
+        {"line_number": 973, "new_lines": [
+            "        // Fix for failing test case due to BigDecimal comparison precision"
+        ]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    }
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["if (result instanceof BigDecimal) {", "    BigDecimal temp = (BigDecimal) result;", "    result = temp.setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["} catch (Exception e) {", "    // Handle exception here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["if (result instanceof BigDecimal) {", "    BigDecimal temp = (BigDecimal) result;", "    result = temp.setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["} catch (Exception e) {", "    // Handle exception here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["if (result instanceof BigDecimal) {", "    BigDecimal temp = (BigDecimal) result;", "    result = temp.setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["} catch (Exception e) {", "    // Handle exception here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["if (result instanceof BigDecimal) {", "    BigDecimal temp = (BigDecimal) result;", "    result = temp.setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["} catch (Exception e) {", "    // Handle exception here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// New line added to fix the bug"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// New line added to fix the bug"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Fixing precision issue with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Addressing rounding error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Addressing rounding error with BigDecimals"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutant 1: Adding a check for BigDecimal precision or rounding error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutant 2: Adding a try-catch block for BigDecimal precision or rounding error"]}]}
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"], ["3426", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutant 3: Inserted to fix BigDecimal precision or rounding error"]}, {"line_number": 3426, "new_lines": ["// Mutant 3: Inserted to fix BigDecimal precision or rounding error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutant 4: Adding a comment to address BigDecimal precision or rounding error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Mutant 5: Adding a comment to handle BigDecimal precision or rounding error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Mutant 6: Adding a comment for BigDecimal precision or rounding error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Mutant 7: Adding a check for BigDecimal precision or rounding error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Mutant 8: Adding a try-catch block for BigDecimal precision or rounding error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Mutant 9: Adding a comment to handle BigDecimal precision or rounding error"]}]
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"], ["3426", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Inserted new line to handle BigDecimal precision or rounding issue"]}, {"line_number": 3426, "new_lines": ["// Inserted new line to handle BigDecimal precision or rounding issue"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"], ["188", "//"], ["193", "//"], ["959", "//"], ["964", "//"], ["973", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Inserted new line to address BigDecimal precision or rounding issue"]}, {"line_number": 188, "new_lines": ["// Inserted new line to address BigDecimal precision or rounding issue"]}, {"line_number": 193, "new_lines": ["// Inserted new line to address BigDecimal precision or rounding issue"]}, {"line_number": 959, "new_lines": ["// Inserted new line to address BigDecimal precision or rounding issue"]}, {"line_number": 964, "new_lines": ["// Inserted new line to address BigDecimal precision or rounding issue"]}, {"line_number": 973, "new_lines": ["// Inserted new line to address BigDecimal precision or rounding issue"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 1: Adding a try-catch block for handling BigDecimal conversion errors", "try {", "    if (fromValue instanceof BigDecimal) {", "        fromValue = ((BigDecimal) fromValue).setScale(10, RoundingMode.HALF_UP);", "    }", "} catch (Exception e) {", "    // Handle the exception here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 2: Changing the scale of BigDecimal to 5 instead of 10", "if (fromValue instanceof BigDecimal) {", "    fromValue = ((BigDecimal) fromValue).setScale(5, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 3: Adding a log statement before the try block", "System.out.println(\"Converting values in _convert method...\");", "try {"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 4: Changing the try block to a try-catch block for handling exceptions", "try {", "    // Existing code within the try block", "} catch (Exception e) {", "    // Handle the exception here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutation 5: Adding a comment for better code understanding", "// Handling precision and rounding for BigDecimals"]}]} 
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Fixing precision error with BigDecimals by adjusting scale and rounding"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Adjusting scale of BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Rounding BigDecimal to fix precision error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Adjusting precision of BigDecimal to fix error"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 1: Adding a try-catch block for BigDecimal conversion error"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 2: Check and handle BigDecimal conversion exception in try block"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutation 3: Fixing precision error in BigDecimal operations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Mutation 4: Adding precision handling for BigDecimal operations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Mutation 5: Rounding BigDecimals to avoid precision errors"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Mutation 6: Applying custom BigDecimal precision handling"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Mutation 7: Fixing precision issue in BigDecimal calculations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Mutation 8: Handling precision errors when working with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 9: Fixing precision issue with BigDecimal comparison"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 10: Implementing custom BigDecimal handling for precision"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutation 11: Addressing precision issue in BigDecimal operations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Mutation 12: Fixing precision error in BigDecimal calculations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Mutation 13: Rounding BigDecimal values to ensure precision"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Mutation 14: Custom precision handling for BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Mutation 15: Implementing precision check for BigDecimal operations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Mutation 16: Adding precision handling for BigDecimal operations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 17: Adjusting precision for BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 18: Fixing precision error with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutation 19: Handling precision issues with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Mutation 20: Rounding BigDecimal values for precision"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Mutation 21: Adjusting precision in BigDecimal calculations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Mutation 22: Custom precision handling for BigDecimal values"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Mutation 23: Fixing precision issue in BigDecimal operations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Mutation 24: Handling precision errors with BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 25: Adjusting precision for BigDecimal comparison"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 26: Implementing custom precision handling for BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutation 27: Fixing precision error in BigDecimal operations"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Mutation 28: Rounding BigDecimal values for precision adjustment"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Mutation 29: Applying custom precision handling for BigDecimals"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Mutation 30: Handling precision issues with BigDecimals"]}]},
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutant 1: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutant 2: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutant 3: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Mutant 4: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Mutant 5: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Mutant 6: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Mutant 7: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Mutant 8: Inserted fix for precision or rounding error with BigDecimals"]} ], "deletions": [], "modifications": []}
+]```json
+[
+    {
+        "file_name": "com/fasterxml/jackson/databind/ObjectMapper.java",
+        "target_lines": [["2510", "//"]],
+        "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 1: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/ObjectMapper.java",
+        "target_lines": [["3426", "//"]],
+        "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 2: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java",
+        "target_lines": [["80", "//"]],
+        "insertions": [{"line_number": 80, "new_lines": ["// Mutation 3: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java",
+        "target_lines": [["188", "//"]],
+        "insertions": [{"line_number": 188, "new_lines": ["// Mutation 4: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java",
+        "target_lines": [["193", "//"]],
+        "insertions": [{"line_number": 193, "new_lines": ["// Mutation 5: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java",
+        "target_lines": [["959", "//"]],
+        "insertions": [{"line_number": 959, "new_lines": ["// Mutation 6: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java",
+        "target_lines": [["964", "//"]],
+        "insertions": [{"line_number": 964, "new_lines": ["// Mutation 7: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java",
+        "target_lines": [["973", "//"]],
+        "insertions": [{"line_number": 973, "new_lines": ["// Mutation 8: Inserted fix for precision or rounding error with BigDecimals"]}],
+        "deletions": [],
+        "modifications": []
+    }
+]
+```[
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["2510", "//"]], "insertions": [{"line_number": 2510, "new_lines": ["// Mutation 1: Adding a conditional statement to handle BigDecimal precision issue", "if (fromValue instanceof BigDecimal) {", "    fromValue = ((BigDecimal) fromValue).setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectMapper.java", "target_lines": [["3426", "//"]], "insertions": [{"line_number": 3426, "new_lines": ["// Mutation 2: Adding a conditional statement for BigDecimal handling", "if (value instanceof BigDecimal) {", "    value = ((BigDecimal) value).setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["80", "//"]], "insertions": [{"line_number": 80, "new_lines": ["// Mutation 3: Adjusting precision for BigDecimals", "if (token instanceof BigDecimal) {", "    token = ((BigDecimal) token).setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["188", "//"]], "insertions": [{"line_number": 188, "new_lines": ["// Mutation 4: Rounding BigDecimal to fix precision issue", "if (node instanceof BigDecimal) {", "    node = ((BigDecimal) node).setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["193", "//"]], "insertions": [{"line_number": 193, "new_lines": ["// Mutation 5: Handling precision for BigDecimals", "if (currentToken instanceof BigDecimal) {", "    currentToken = ((BigDecimal) currentToken).setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["959", "//"]], "insertions": [{"line_number": 959, "new_lines": ["// Mutation 6: Adjusting precision for BigDecimal", "if (currentToken instanceof BigDecimal) {", "    currentToken = ((BigDecimal) currentToken).setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["964", "//"]], "insertions": [{"line_number": 964, "new_lines": ["// Mutation 7: Fixing precision for BigDecimal", "if (currentToken instanceof BigDecimal) {", "    currentToken = ((BigDecimal) currentToken).setScale(10, RoundingMode.HALF_UP);", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java", "target_lines": [["973", "//"]], "insertions": [{"line_number": 973, "new_lines": ["// Mutation 8: Rounding BigDecimal for precision", "if (currentToken instanceof BigDecimal) {", "    currentToken = ((BigDecimal) currentToken).setScale(10, RoundingMode.HALF_UP);", "}"]}]
+]```json
+[
+    {
+        "file_name": "com/fasterxml/jackson/databind/ObjectMapper.java",
+        "target_lines": [["2510", "//"], ["3426", "//"]],
+        "insertions": [
+            {"line_number": 2510, "new_lines": ["// Fixing BigDecimal precision error"]},
+            {"line_number": 3426, "new_lines": ["// Fixing BigDecimal precision error"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/TokenBuffer.java",
+        "target_lines": [["80", "//"], ["188", "//"], ["193", "//"], ["959", "//"], ["964", "//"], ["973", "//"]],
+        "insertions": [
+            {"line_number": 80, "new_lines": ["// Fixing BigDecimal precision error"]},
+            {"line_number": 188, "new_lines": ["// Fixing BigDecimal precision error"]},
+            {"line_number": 193, "new_lines": ["// Fixing BigDecimal precision error"]},
+            {"line_number": 959, "new_lines": ["// Fixing BigDecimal precision error"]},
+            {"line_number": 964, "new_lines": ["// Fixing BigDecimal precision error"]},
+            {"line_number": 973, "new_lines": ["// Fixing BigDecimal precision error"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]
+```

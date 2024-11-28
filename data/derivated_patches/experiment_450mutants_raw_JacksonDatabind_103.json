@@ -1,0 +1,609 @@
+[
+    {
+        "file_name": "com/fasterxml/jackson/databind/DatabindContext.java",
+        "target_lines": [
+            ["195", "                        e.getMessage()));"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 195,
+                "modified_line": "                        e.getClass().getName() + ' : ' + e.getMessage()));"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/DeserializationContext.java",
+        "target_lines": [
+            ["714", "                    e.getMessage()));"],
+            ["1603", "        } else if ((excMsg = cause.getMessage()) == null) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 714,
+                "modified_line": "                    e.getClass().getSimpleName() + ' : ' + e.getMessage()));"
+            },
+            {
+                "line_number": 1603,
+                "modified_line": "        } else if ((excMsg = cause.getClass().getSimpleName()) == null) {"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/JsonMappingException.java",
+        "target_lines": [
+            ["339", "                        src.getMessage()));"],
+            ["380", "            String msg = src.getMessage();"],
+            ["10", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 339,
+                "modified_line": "                        src.getClass().getSimpleName() + ' : ' + src.getMessage()));"
+            },
+            {
+                "line_number": 380,
+                "modified_line": "            String msg = src.getClass().getSimpleName() + ' : ' + src.getMessage();"
+            },
+            {
+                "line_number": 10,
+                "modified_line": "    // Fix the issue related to deserialization of Map key"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/SerializerProvider.java",
+        "target_lines": [
+            ["1341", "            reportMappingProblem(iae, iae.getMessage());"],
+            ["1361", "            reportMappingProblem(iae, iae.getMessage());"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 1341,
+                "modified_line": "            reportMappingProblem(iae, iae.getClass().getSimpleName() + ' : ' + iae.getMessage());"
+            },
+            {
+                "line_number": 1361,
+                "modified_line": "            reportMappingProblem(iae, iae.getClass().getSimpleName() + ' : ' + iae.getMessage());"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java",
+        "target_lines": [
+            ["1589", "                    e0.getMessage(), baseType);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 1589,
+                "modified_line": "                    e0.getClass().getSimpleName() + ' : ' + e0.getMessage(), baseType);"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java",
+        "target_lines": [
+            ["222", "                    e.getMessage(),"],
+            ["281", "                    e.getMessage(),"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 222,
+                "modified_line": "                    e.getClass().getSimpleName() + ' : ' + e.getMessage(),"
+            },
+            {
+                "line_number": 281,
+                "modified_line": "                    e.getClass().getSimpleName() + ' : ' + e.getMessage(),"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java",
+        "target_lines": [
+            ["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 268,
+                "modified_line": "            throw JsonMappingException.from(ctxt, iae.getClass().getSimpleName() + ' : ' + iae.getMessage(), iae);"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/SettableAnyProperty.java",
+        "target_lines": [
+            ["202", "            String origMsg = e.getMessage();"],
+            ["214", "        throw new JsonMappingException(null, t.getMessage(), t);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 202,
+                "modified_line": "            String origMsg = e.getClass().getSimpleName() + ' : ' + e.getMessage();"
+            },
+            {
+                "line_number": 214,
+                "modified_line": "        throw new JsonMappingException(null, t.getClass().getSimpleName() + ' : ' + t.getMessage(), t);"
+            }
+        ]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/SettableBeanProperty.java",
+        "target_lines": [
+            ["590", "            String origMsg = e.getMessage();"],
+            ["611", "        throw JsonMappingException.from(p, th.getMessage(), th);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 590,
+                "modified_line": "            String origMsg = e.getClass().getSimpleName() + ' : ' + e.getMessage();"
+            },
+            {
+                "line_number": 611,
+                "modified_line": "        throw JsonMappingException.from(p, th.getClass().getSimpleName() + ' : ' + th.getMessage(), th);"
+            }
+        ]
+    }
+]```python
+[
+    {
+        "file_name": "com/fasterxml/jackson/databind/DatabindContext.java",
+        "target_lines": [
+            ["195", "                        e.getMessage()));"]
+        ],
+        "insertions": [
+            {"line_number": 195, "new_lines": ["                        return e.getMessage();"]}
+        ],
+        "deletions": [195],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/DeserializationContext.java",
+        "target_lines": [
+            ["714", "                    e.getMessage()));"],
+            ["1603", "        } else if ((excMsg = cause.getMessage()) == null) {"]
+        ],
+        "insertions": [
+            {"line_number": 714, "new_lines": ["                    return e.getMessage();"]},
+            {"line_number": 1603, "new_lines": ["        throw new IOException();"]}
+        ],
+        "deletions": [714, 1603],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/JsonMappingException.java",
+        "target_lines": [
+            ["339", "                        src.getMessage()));"],
+            ["380", "            String msg = src.getMessage();"],
+            ["10", "//"]
+        ],
+        "insertions": [
+            {"line_number": 10, "new_lines": ["// Add a new method here to handle the exception"]},
+            {"line_number": 380, "new_lines": ["            return msg;"]}
+        ],
+        "deletions": [339],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/SerializerProvider.java",
+        "target_lines": [
+            ["1341", "            reportMappingProblem(iae, iae.getMessage());"],
+            ["1361", "            reportMappingProblem(iae, iae.getMessage());"]
+        ],
+        "insertions": [
+            {"line_number": 1341, "new_lines": ["            return iae.getMessage();"]},
+            {"line_number": 1361, "new_lines": ["            return iae.getMessage();"]}
+        ],
+        "deletions": [1341, 1361],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java",
+        "target_lines": [
+            ["1589", "                    e0.getMessage(), baseType);"]
+        ],
+        "insertions": [
+            {"line_number": 1589, "new_lines": ["                    return e0.getMessage();"]}
+        ],
+        "deletions": [1589],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java",
+        "target_lines": [
+            ["222", "                    e.getMessage()"],
+            ["281", "                    e.getMessage()"]
+        ],
+        "insertions": [
+            {"line_number": 222, "new_lines": ["                    return e.getMessage();"]},
+            {"line_number": 281, "new_lines": ["                    return e.getMessage();"]}
+        ],
+        "deletions": [222, 281],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java",
+        "target_lines": [
+            ["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]
+        ],
+        "insertions": [
+            {"line_number": 268, "new_lines": ["            return iae.getMessage();"]}
+        ],
+        "deletions": [268],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/SettableAnyProperty.java",
+        "target_lines": [
+            ["202", "            String origMsg = e.getMessage();"],
+            ["214", "        throw new JsonMappingException(null, t.getMessage(), t);"]
+        ],
+        "insertions": [
+            {"line_number": 202, "new_lines": ["            return e.getMessage();"]},
+            {"line_number": 214, "new_lines": ["        throw new IOException();"]}
+        ],
+        "deletions": [202, 214],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/SettableBeanProperty.java",
+        "target_lines": [
+            ["590", "            String origMsg = e.getMessage();"],
+            ["611", "        throw JsonMappingException.from(p, th.getMessage(), th);"]
+        ],
+        "insertions": [
+            {"line_number": 590, "new_lines": ["            return e.getMessage();"]},
+            {"line_number": 611, "new_lines": ["        throw new IOException();"]}
+        ],
+        "deletions": [590, 611],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/std/StdDeserializer.java",
+        "target_lines": [
+            ["526", "                    iae.getMessage());"]
+        ],
+        "insertions": [
+            {"line_number": 526, "new_lines": ["                    return iae.getMessage();"]}
+        ],
+        "deletions": [526],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java",
+        "target_lines": [
+            ["135", "                    re.getMessage());"],
+            ["262", "                e.getMessage());"]
+        ],
+        "insertions": [
+            {"line_number": 135, "new_lines": ["                    return re.getMessage();"]},
+            {"line_number": 262, "new_lines": ["                return e.getMessage();"]}
+        ],
+        "deletions": [135, 262],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/std/StdValueInstantiator.java",
+        "target_lines": [
+            ["456", "                \"Instantiation of \"+getValueTypeDesc()+\" value failed: \"+t.getMessage(), t);"]
+        ],
+        "insertions": [
+            {"line_number": 456, "new_lines": ["                return t.getMessage();"]}
+        ],
+        "deletions": [456],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/introspect/BasicBeanDescription.java",
+        "target_lines": [
+            ["364", "                    +t.getMessage(), t;"]
+        ],
+        "insertions": [
+            {"line_number": 364, "new_lines": ["                    return t.getMessage();"]}
+        ],
+        "deletions": [364],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/ser/DefaultSerializerProvider.java",
+        "target_lines": [
+            ["171", "filter.getClass().getName(), t.getClass().getName(), t.getMessage());"],
+            ["505", "        String msg = e.getMessage();"]
+        ],
+        "insertions": [
+            {"line_number": 171, "new_lines": ["        return t.getMessage();"]},
+            {"line_number": 505, "new_lines": ["        return e.getMessage();"]}
+        ],
+        "deletions": [171, 505],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/ser/PropertyBuilder.java",
+        "target_lines": [
+            ["103", "                return prov.reportBadDefinition(declaredType, e.getMessage());"],
+            ["105", "            return prov.reportBadPropertyDefinition(_beanDesc, propDef, e.getMessage());"]
+        ],
+        "insertions": [
+            {"line_number": 103, "new_lines": ["                return e.getMessage();"]},
+            {"line_number": 105, "new_lines": ["            return e.getMessage();"]}
+        ],
+        "deletions": [103, 105],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/ClassUtil.java",
+        "target_lines": [
+            ["10", "//"],
+            ["752", "//"]
+        ],
+        "insertions": [
+            {"line_number": 10, "new_lines": ["// Add a new method here to handle the exception"]},
+            {"line_number": 752, "new_lines": ["// Add a new method here to handle the exception"]}
+        ],
+        "deletions": [10, 752],
+        "modifications": []
+    }
+]
+```[
+    {
+        "file_name": "com/fasterxml/jackson/databind/DatabindContext.java",
+        "target_lines": [["195", "                        e.getMessage()));"]],
+        "insertions": [
+            {"line_number": 195, "new_lines": ["                        throw new RuntimeException(\"Custom error message\");"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/DeserializationContext.java",
+        "target_lines": [["714", "                    e.getMessage()));"], ["1603", "        } else if ((excMsg = cause.getMessage()) == null;"]],
+        "insertions": [
+            {"line_number": 714, "new_lines": ["                    throw new CustomException(\"Error occurred with message: \" + e.getMessage());"]},
+            {"line_number": 1603, "new_lines": ["        throw new CustomException(\"Custom error message\");"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/JsonMappingException.java",
+        "target_lines": [["339", "                        src.getMessage()));"], ["380", "            String msg = src.getMessage();"], ["10", "//"]],
+        "insertions": [
+            {"line_number": 10, "new_lines": ["        logger.error(\"Custom log message\");"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/SerializerProvider.java",
+        "target_lines": [["1341", "            reportMappingProblem(iae, iae.getMessage());"], ["1361", "            reportMappingProblem(iae, iae.getMessage());"]],
+        "insertions": [
+            {"line_number": 1341, "new_lines": ["            logger.error(\"Error occurred in serialization process\");"]},
+            {"line_number": 1361, "new_lines": ["            logger.error(\"Another error occurred in serialization process\");"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java",
+        "target_lines": [["1589", "                    e0.getMessage(), baseType);"]],
+        "insertions": [
+            {"line_number": 1589, "new_lines": ["                    throw new CustomException(\"Deserialization error: \" + e0.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java",
+        "target_lines": [["222", "                    e.getMessage()"], ["281", "                    e.getMessage()"]],
+        "insertions": [
+            {"line_number": 222, "new_lines": ["                    throw new CustomException(\"Deserialization error: \" + e.getMessage());"]},
+            {"line_number": 281, "new_lines": ["                    throw new CustomException(\"Deserialization issue: \" + e.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java",
+        "target_lines": [["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]],
+        "insertions": [
+            {"line_number": 268, "new_lines": ["            logger.error(\"Deserialization cache issue: \" + iae.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/SettableAnyProperty.java",
+        "target_lines": [["202", "            String origMsg = e.getMessage();"], ["214", "        throw new JsonMappingException(null, t.getMessage(), t);"]],
+        "insertions": [
+            {"line_number": 202, "new_lines": ["            logger.error(\"SettableAnyProperty error: \" + e.getMessage());"]},
+            {"line_number": 214, "new_lines": ["        throw new CustomException(\"Custom error with message: \" + t.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/SettableBeanProperty.java",
+        "target_lines": [["590", "            String origMsg = e.getMessage();"], ["611", "        throw JsonMappingException.from(p, th.getMessage(), th);"]],
+        "insertions": [
+            {"line_number": 590, "new_lines": ["            logger.error(\"SettableBeanProperty error: \" + e.getMessage());"]},
+            {"line_number": 611, "new_lines": ["        throw new CustomException(\"Custom error occurred: \" + th.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/std/StdDeserializer.java",
+        "target_lines": [["526", "                    iae.getMessage());"]],
+        "insertions": [
+            {"line_number": 526, "new_lines": ["                    throw new CustomException(\"Deserialization issue: \" + iae.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java",
+        "target_lines": [["135", "                    re.getMessage();"], ["262", "                e.getMessage();"]],
+        "insertions": [
+            {"line_number": 135, "new_lines": ["                    throw new CustomException(\"Key deserialization error: \" + re.getMessage());"]},
+            {"line_number": 262, "new_lines": ["                throw new CustomException(\"Another key deserialization issue: \" + e.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/std/StdValueInstantiator.java",
+        "target_lines": [["456", "                \"Instantiation of \"+getValueTypeDesc()+\" value failed: \"+t.getMessage(), t);"]],
+        "insertions": [
+            {"line_number": 456, "new_lines": ["                throw new CustomException(\"Value instantiation failed: \" + t.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/introspect/BasicBeanDescription.java",
+        "target_lines": [["364", "                    +t.getMessage(), t);"]],
+        "insertions": [
+            {"line_number": 364, "new_lines": ["                    logger.error(\"Basic bean description error: \" + t.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/ser/DefaultSerializerProvider.java",
+        "target_lines": [["171", "filter.getClass().getName(), t.getClass().getName(), t.getMessage());"], ["505", "        String msg = e.getMessage();"]],
+        "insertions": [
+            {"line_number": 171, "new_lines": ["        logger.error(\"Serialization issue: \" + t.getMessage());"]},
+            {"line_number": 505, "new_lines": ["        throw new CustomException(\"Serialization error: \" + e.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/ser/PropertyBuilder.java",
+        "target_lines": [["103", "                return prov.reportBadDefinition(declaredType, e.getMessage());"], ["105", "            return prov.reportBadPropertyDefinition(_beanDesc, propDef, e.getMessage());"]],
+        "insertions": [
+            {"line_number": 103, "new_lines": ["                logger.error(\"Property build error: \" + e.getMessage());"]},
+            {"line_number": 105, "new_lines": ["            throw new CustomException(\"Custom property definition error: \" + e.getMessage());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/util/ClassUtil.java",
+        "target_lines": [["10", "//"], ["752", "//"]],
+        "insertions": [
+            {"line_number": 10, "new_lines": ["        logger.error(\"ClassUtil error: //\");"]},
+            {"line_number": 752, "new_lines": ["        throw new CustomException(\"ClassUtil issue: //\");"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]```json
+[
+    {"file_name": "com/fasterxml/jackson/databind/DatabindContext.java", "target_lines": [["195", "                        e.getMessage()));"]], "insertions": [{"line_number": 195, "new_lines": ["                        throw new JsonMappingException(null, e.getMessage(), e);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/DeserializationContext.java", "target_lines": [["714", "                    e.getMessage()));"], ["1603", "        } else if ((excMsg = cause.getMessage()) == null;"]], "insertions": [{"line_number": 714, "new_lines": ["                    throw new JsonMappingException(null, e.getMessage(), e);"]}, {"line_number": 1603, "new_lines": ["        throw new JsonMappingException(null, excMsg, cause);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/JsonMappingException.java", "target_lines": [["339", "                        src.getMessage()));"], ["380", "            String msg = src.getMessage();"], ["10", "//"]], "insertions": [{"line_number": 10, "new_lines": ["    // Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/SerializerProvider.java", "target_lines": [["1341", "            reportMappingProblem(iae, iae.getMessage());"], ["1361", "            reportMappingProblem(iae, iae.getMessage());"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java", "target_lines": [["1589", "                    e0.getMessage(), baseType);"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["222", "                    e.getMessage(),"], ["281", "                    e.getMessage,"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java", "target_lines": [["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]], "insertions": [], "deletions": [], "modifications": []}
+]
+``````json
+[
+    {
+        "file_name": "com/fasterxml/jackson/databind/DatabindContext.java",
+        "target_lines": [["195", "                        e.getMessage()));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 195, "modified_line": "                        throw new JsonMappingException(null, e.getMessage(), e);"}]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/DeserializationContext.java",
+        "target_lines": [["714", "                    e.getMessage()));"], ["1603", "        } else if ((excMsg = cause.getMessage()) == null;"]],
+        "insertions": [{"line_number": 714, "new_lines": ["                    throw new JsonMappingException(null, e.getMessage(), e);"]}, {"line_number": 1603, "new_lines": ["        throw new JsonMappingException(null, excMsg, cause);"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/JsonMappingException.java",
+        "target_lines": [["339", "                        src.getMessage()));"], ["380", "            String msg = src.getMessage();"], ["10", "//"]],
+        "insertions": [{"line_number": 10, "new_lines": ["    // Inserted line to fix the bug"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/SerializerProvider.java",
+        "target_lines": [["1341", "            reportMappingProblem(iae, iae.getMessage());"], ["1361", "            reportMappingProblem(iae, iae.getMessage());"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java",
+        "target_lines": [["1589", "                    e0.getMessage(), baseType);"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java",
+        "target_lines": [["222", "                    e.getMessage()"], ["281", "                    e.getMessage()"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java",
+        "target_lines": [["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": []
+    }
+]
+``````json
+[
+    {"file_name": "com/fasterxml/jackson/databind/DatabindContext.java", "target_lines": [["195", "                        e.getMessage()));"]], "insertions": [{"line_number": 195, "new_lines": ["                        throw new JsonMappingException(null, e.getMessage(), e);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/DeserializationContext.java", "target_lines": [["714", "                    e.getMessage()));"], ["1603", "        } else if ((excMsg = cause.getMessage()) == null;"]], "insertions": [{"line_number": 714, "new_lines": ["                    throw new JsonMappingException(null, e.getMessage(), e);"]}, {"line_number": 1603, "new_lines": ["        throw new JsonMappingException(null, excMsg, cause);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/JsonMappingException.java", "target_lines": [["339", "                        src.getMessage()));"], ["380", "            String msg = src.getMessage();"], ["10", "//"]], "insertions": [{"line_number": 10, "new_lines": ["    // Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/SerializerProvider.java", "target_lines": [["1341", "            reportMappingProblem(iae, iae.getMessage());"], ["1361", "            reportMappingProblem(iae, iae.getMessage());"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java", "target_lines": [["1589", "                    e0.getMessage(), baseType);"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["222", "                    e.getMessage()"], ["281", "                    e.getMessage()"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java", "target_lines": [["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]], "insertions": [], "deletions": [], "modifications": []}
+]
+```[
+{"file_name": "com/fasterxml/jackson/databind/DatabindContext.java", "target_lines": [["195", "                        e.getMessage()));"]], "insertions": [{"line_number": 195, "new_lines": ["                        throw new JsonMappingException(null, e.getMessage(), e);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/DatabindContext.java", "target_lines": [["195", "                        e.getMessage()));"]], "insertions": [{"line_number": 195, "new_lines": ["                        throw new JsonMappingException(e);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/DatabindContext.java", "target_lines": [["195", "                        e.getMessage()));"]], "insertions": [{"line_number": 195, "new_lines": ["                        throw new JsonMappingException(\"Custom message\", e);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/DeserializationContext.java", "target_lines": [["714", "                    e.getMessage()));"], ["1603", "        } else if ((excMsg = cause.getMessage()) == null;"]], "insertions": [{"line_number": 714, "new_lines": ["                    throw new JsonMappingException(null, e.getMessage(), e);"]}, {"line_number": 1603, "new_lines": ["        throw new JsonMappingException(\"Custom message\", excMsg, cause);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/DeserializationContext.java", "target_lines": [["714", "                    e.getMessage()));"], ["1603", "        } else if ((excMsg = cause.getMessage()) == null;"]], "insertions": [{"line_number": 714, "new_lines": ["                    throw new JsonMappingException(e);"]}, {"line_number": 1603, "new_lines": ["        throw new JsonMappingException(excMsg, cause);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/JsonMappingException.java", "target_lines": [["339", "                        src.getMessage()));"], ["380", "            String msg = src.getMessage();"], ["10", "//"]], "insertions": [{"line_number": 10, "new_lines": ["    // Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/JsonMappingException.java", "target_lines": [["339", "                        src.getMessage()));"], ["380", "            String msg = src.getMessage();"], ["10", "//"]], "insertions": [], "deletions": [10], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/JsonMappingException.java", "target_lines": [["339", "                        src.getMessage()));"], ["380", "            String msg = src.getMessage();"], ["10", "//"]], "insertions": [{"line_number": 10, "new_lines": ["// Custom comment added to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/SerializerProvider.java", "target_lines": [["1341", "            reportMappingProblem(iae, iae.getMessage());"], ["1361", "            reportMappingProblem(iae, iae.getMessage());"]], "insertions": [{"line_number": 1341, "new_lines": ["            throw new JsonMappingException(null, iae.getMessage(), iae);"]}, {"line_number": 1361, "new_lines": ["            throw new JsonMappingException(\"Custom message\", iae.getMessage(), iae);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/SerializerProvider.java", "target_lines": [["1341", "            reportMappingProblem(iae, iae.getMessage());"], ["1361", "            reportMappingProblem(iae, iae.getMessage());"]], "insertions": [{"line_number": 1341, "new_lines": ["            throw new JsonMappingException(iae);"]}, {"line_number": 1361, "new_lines": ["            throw new JsonMappingException(\"Custom message\", iae);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java", "target_lines": [["1589", "                    e0.getMessage(), baseType);"]], "insertions": [{"line_number": 1589, "new_lines": ["                    throw new JsonMappingException(null, e0.getMessage(), baseType);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java", "target_lines": [["1589", "                    e0.getMessage(), baseType);"]], "insertions": [], "deletions": [1589], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java", "target_lines": [["1589", "                    e0.getMessage(), baseType);"]], "insertions": [{"line_number": 1589, "new_lines": ["// Fixing issue with e0.getMessage()"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["222", "                    e.getMessage(),"], ["281", "                    e.getMessage(),"]], "insertions": [{"line_number": 222, "new_lines": ["                    throw new JsonMappingException(null, e.getMessage());"]}, {"line_number": 281, "new_lines": ["                    throw new JsonMappingException(\"Custom message\", e.getMessage());"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["222", "                    e.getMessage(),"], ["281", "                    e.getMessage(),"]], "insertions": [], "deletions": [222, 281], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["222", "                    e.getMessage(),"], ["281", "                    e.getMessage(),"]], "insertions": [{"line_number": 222, "new_lines": ["// Added to fix deserialization issue"]}, {"line_number": 281, "new_lines": ["// Fixing deserialization issue"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java", "target_lines": [["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]], "insertions": [{"line_number": 268, "new_lines": ["            throw new JsonMappingException(null, iae);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java", "target_lines": [["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]], "insertions": [], "deletions": [268], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/DeserializerCache.java", "target_lines": [["268", "            throw JsonMappingException.from(ctxt, iae.getMessage(), iae);"]], "insertions": [{"line_number": 268, "new_lines": ["// Fixing deserialization issue by throwing JsonMappingException"]}], "deletions": [], "modifications": []}
+]

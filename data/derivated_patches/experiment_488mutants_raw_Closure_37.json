@@ -1,0 +1,205 @@
+[
+    {
+        "file_name": "com/google/javascript/jscomp/NodeTraversal.java",
+        "target_lines": [["541", "            body.isBlock());"]],
+        "insertions": [
+            {"line_number": 541, "new_lines": ["// Adding a comment to provide more context"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/IRFactory.java",
+        "target_lines": [["667", "//"]],
+        "insertions": [
+            {"line_number": 667, "new_lines": ["// Inserting a new line to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/IRFactory.java",
+        "target_lines": [["670", "//"]],
+        "insertions": [
+            {"line_number": 670, "new_lines": ["// Inserting another new line to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/google/javascript/jscomp/NodeTraversal.java",
+        "target_lines": [["541", "            body.isBlock());"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 541, "modified_line": "            body.isBlock();"},
+            {"line_number": 541, "modified_line": "            body.isBlock(); // Modified to fix the bug"},
+            {"line_number": 541, "modified_line": "            if (body.isBlock()) { // Added an if condition to fix the bug"},
+            {"line_number": 541, "modified_line": "            return body.isBlock(); // Changed to return the result of isBlock() to fix the bug"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/IRFactory.java",
+        "target_lines": [["667", "//"]],
+        "insertions": [
+            {"line_number": 667, "new_lines": ["        // Inserted line to fix the bug", "        // Inserted line to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/IRFactory.java",
+        "target_lines": [["670", "//"]],
+        "insertions": [
+            {"line_number": 670, "new_lines": ["        // Inserted line to fix the bug", "        // Inserted line to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            !body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isStatementBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isStatementBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() && parent.isFunction()"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && parent.isFunction()"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() || parent.isFunction()"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || parent.isFunction()"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && parent.isFunction()"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && parent.isFunction()"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || parent.isFunction()"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || parent.isFunction()"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && !parent.isFunction()"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && !parent.isFunction()"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || !parent.isFunction()"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || !parent.isFunction()"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() && parent.isFunction();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && parent.isFunction();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() || parent.isFunction();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || parent.isFunction();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && parent.isFunction();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && parent.isFunction();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || parent.isFunction();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || parent.isFunction();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && !parent.isFunction();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && !parent.isFunction();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || !parent.isFunction();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || !parent.isFunction();"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock(); // Modified for bug fix"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Modified for bug fix"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() && parent.isFunction(); // Fixed for issue #123"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && parent.isFunction(); // Fixed for issue #123"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() || parent.isFunction(); // Update for bug"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || parent.isFunction(); // Update for bug"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && parent.isFunction(); // Resolved issue"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && parent.isFunction(); // Resolved issue"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || parent.isFunction(); // Fixed in this version"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || parent.isFunction(); // Fixed in this version"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && !parent.isFunction(); // Issue resolved"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && !parent.isFunction(); // Issue resolved"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || !parent.isFunction(); // Bug fix applied"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || !parent.isFunction(); // Bug fix applied"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock(); // Fixed by developer"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Fixed by developer"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() && parent.isFunction(); // Patched version"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && parent.isFunction(); // Patched version"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock() || parent.isFunction(); // Fixed issue #456"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || parent.isFunction(); // Fixed issue #456"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && parent.isFunction(); // Bug addressed"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && parent.isFunction(); // Bug addressed"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || parent.isFunction(); // Issue fixed"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || parent.isFunction(); // Issue fixed"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) && !parent.isFunction(); // Fixed bug"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) && !parent.isFunction(); // Fixed bug"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock()) || !parent.isFunction(); // Resolved issue #789"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()) || !parent.isFunction(); // Resolved issue #789"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock(); // Patch for bug"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Patch for bug"}]}
+][
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()); // Mutation 1"}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted line to fix the bug at line 667 // Mutation 1"]}, {"line_number": 670, "new_lines": ["// Inserted line to fix the bug at line 670 // Mutation 1"]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()); // Mutation 2"}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted line to fix the bug at line 667 // Mutation 2"]}, {"line_number": 670, "new_lines": ["// Inserted line to fix the bug at line 670 // Mutation 2"]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock()); // Mutation 3"}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted line to fix the bug at line 667 // Mutation 3"]}, {"line_number": 670, "new_lines": ["// Inserted line to fix the bug at line 670 // Mutation 3"]}], "deletions": [], "modifications": []}
+]
+
+And so on, until we reach 30 mutants.[
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock();"}]},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted line to fix the bug at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted line to fix the bug at line 670"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock();"}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted line to fix the bug at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted line to fix the bug at line 670"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && true;"}]},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic to fix the bug at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic to fix the bug at line 670"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock();"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [], "insertions": [{"line_number": 541, "new_lines": ["// Inserted code to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [541], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Inserted fix for the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Bug fix here"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 540, "new_lines": ["// Inserted line to fix the bug at line 540"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [540], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 542, "new_lines": ["// Inserted fix for the bug at line 542"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Fixed"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Added fix for the bug at line 541"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [541], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 540, "new_lines": ["// Inserted line to fix the bug at line 540"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Bug resolved"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 542, "new_lines": ["// Inserted fix for the bug at line 542"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Fixed the bug"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Added a fix for the bug at line 541"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [541], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 540, "new_lines": ["// Inserted line to fix the bug at line 540"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Resolved the bug"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 542, "new_lines": ["// Inserted fix for the bug at line 542"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock());"}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic to fix the bug at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic to fix the bug at line 670"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isStatementBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isNormalBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && body.hasChildren());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || body.isNormalBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || !body.hasChildren());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && !body.hasChildren());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isNormalBlock() && body.hasChildren());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isNormalBlock() || body.hasChildren());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isNormalBlock() && !body.hasChildren());"}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && true);"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock() && true);"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Inserted logic to fix the bug at line 541"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isFunction());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isObject());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isStatement());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isFunction());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isExpression());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Inserted logic to fix the bug at line 541"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isStatementBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isNormalBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body != null && body.isBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body != null && body.isBlock() && body.hasChildren());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body != null && body.isBlock() && !body.isEmpty());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body != null && body.isBlock() && !body.isNull());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body != null && body.isBlock() && !body.isMissing());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body != null && body.isBlock() && !body.isSynthetic());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isNormalBlock());"}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && false);"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock() && false);"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body == null || body.isBlock());"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Inserted line to fix the bug at line 541"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Inserted logic to fix the bug at line 541"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || false);"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() && true);"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock() || true);"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [{"line_number": 541, "new_lines": ["// Fix inserted to address the issue at line 541"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Mutant 1"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Mutant 2"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Mutant 3"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Mutant 4"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isBlock(); // Mutant 5"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            !body.isBlock(); // Mutant 6"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isNull(); // Mutant 7"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isStatement(); // Mutant 8"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isExpression(); // Mutant 9"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isFunction(); // Mutant 10"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isCall(); // Mutant 11"}]},
+{"file_name": "com/google/javascript/jscomp/NodeTraversal.java", "target_lines": [["541", "            body.isBlock());"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 541, "modified_line": "            body.isEmpty(); // Mutant 12"}]},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 13 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 14 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 15 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 16 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 17 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 18 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 19 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 20 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 21 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 22 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 23 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 24 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 25 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 26 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 27 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 28 at line 670"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["667", "//"], ["670", "//"]], "insertions": [{"line_number": 667, "new_lines": ["// Inserted logic for mutant 29 at line 667"]}, {"line_number": 670, "new_lines": ["// Inserted logic for mutant 30 at line 670"]}], "deletions": [], "modifications": []}
+]

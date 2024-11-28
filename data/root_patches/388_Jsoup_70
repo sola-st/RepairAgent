@@ -1,0 +1,76 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el.tag.preserveWhitespace())\n', '            return true;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el.tag.preserveWhitespace()) {', '            return true;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el != null && el.tag != null && el.tag.preserveWhitespace()) {', '            return true;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el != null && el.tag != null && el.tag.preserveWhitespace()) {', '            return true;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el != null && el.tag != null && el.tag.preserveWhitespace()) {', '            return true;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1094, 'modified_line': '                    return el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1094, 'modified_line': '                    return el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '        if (el != null && el.tag != null && el.tag.preserveWhitespace()) {'}, {'line_number': 1094, 'modified_line': '                    return el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1094, 'modified_line': '                    return el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1094, 'new_lines': ['                    if (el != null && el.parent() != null && el.parent().tag != null) {', '                        return el.parent().tag.preserveWhitespace();', '                    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1094, 'new_lines': ['                    if (el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace()) {', '                        return true;', '                    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    public void preserveWhitespace(Node node) {\n        Validate.notNull(node);\n\n        NodeTraversor.traverse(new NodeVisitor() {\n            public void head(Node node, int depth) {\n                if (node instanceof TextNode) {\n                    TextNode textNode = (TextNode) node;\n                    String text = textNode.getWholeText();\n                    text = StringUtil.normaliseWhitespace(text); // Normalize whitespace\n                    textNode.text(text);\n                }\n            }\n\n            public void tail(Node node, int depth) {\n                // Do nothing on the tail visit\n            }\n        }, node);\n    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1091, 'new_lines': ['    public boolean preserveWhitespace(Node node) {', '        if (node != null && node instanceof Element) {', '            Element el = (Element) node;', '            return el.tag.preserveWhitespace();', '        }', '        return false;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    public boolean preserveWhitespace(Node node) {'}, {'line_number': 1094, 'modified_line': '                    return el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    static boolean preserveWhitespace(Node node) {'}, {'line_number': 1094, 'modified_line': '                    return el != null && el.tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    public boolean preserveWhitespace(Node node) {'}, {'line_number': 1094, 'modified_line': '                    return el != null && el.tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1091, 'new_lines': ['    public boolean preserveWhitespace(Node node) {', '        if (node != null && node instanceof Element) {', '            Element el = (Element) node;', '            return el != null && el.tag.preserveWhitespace();', '        }', '        return false;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    public boolean preserveWhitespace(Node node) {\n        if (node != null && node instanceof Element) {\n            Element el = (Element) node;\n            if (el != null && el.tag != null) {\n                return el.tag.preserveWhitespace();\n            }\n        }\n        return false;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    public boolean preserveWhitespace(Node node) {\n        if (node != null && node instanceof Element) {\n            Element el = (Element) node;\n            if (el != null && el.tag != null && el.parent() != null && el.parent().tag != null) {\n                return el.parent().tag.preserveWhitespace();\n            }\n        }\n        return false;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    public boolean preserveWhitespace(Node node) {\n        if (node != null && node instanceof Element) {\n            Element el = (Element) node;\n            if (el != null && el.tag != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace()) {\n                return true;\n            }\n        }\n        return false;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1091, 'modified_line': '    public boolean preserveWhitespace(Node node) {\n        if (node != null && node instanceof Element) {\n            Element el = (Element) node;\n            if (el != null && el.tag != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace()) {\n                return true;\n            }\n        }\n        return false;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1094, 'modified_line': '                    return el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1094, 'modified_line': '                    return el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'modifications': [{'line_number': 1094, 'modified_line': '                    return el != null && el.parent() != null && el.parent().tag != null && el.parent().tag.preserveWhitespace();'}]}]
+
+

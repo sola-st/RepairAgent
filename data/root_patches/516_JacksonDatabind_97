@@ -1,0 +1,16 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/POJONode.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 114, 'modified_line': '            gen.writeObject(_value); // Serialize _value correctly'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/POJONode.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 114, 'modified_line': '            if (_value instanceof String) {\n                gen.writeString((String) _value);\n            } else {\n                gen.writeObject(_value);\n            } // Serialize _value correctly'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/POJONode.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 114, 'modified_line': '            if (_value instanceof String) {\n                gen.writeString((String) _value);\n            } else if (_value instanceof Number) {\n                gen.writeNumber((Number) _value);\n            } else if (_value instanceof Boolean) {\n                gen.writeBoolean((Boolean) _value);\n            } else {\n                gen.writeObject(_value);\n            } // Serialize _value correctly'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/POJONode.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 114, 'modified_line': '            if (_value != null) {\n                if (_value instanceof String) {\n                    gen.writeString((String) _value);\n                } else if (_value instanceof Number) {\n                    gen.writeNumber((Number) _value);\n                } else if (_value instanceof Boolean) {\n                    gen.writeBoolean((Boolean) _value);\n                } else {\n                    gen.writeObject(_value);\n                }\n            } else {\n                ctxt.defaultSerializeNull(gen);\n            } // Serialize _value correctly'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/POJONode.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 114, 'modified_line': '            if (_value != null) {\n                if (_value instanceof String) {\n                    gen.writeString((String) _value);\n                } else if (_value instanceof Number) {\n                    gen.writeNumber((Number) _value);\n                } else if (_value instanceof Boolean) {\n                    gen.writeBoolean((Boolean) _value);\n                } else {\n                    gen.writeObject(_value);\n                }\n            } else {\n                ctxt.defaultSerializeNull(gen);\n} // Serialize _value correctly'}]}]
+
+

@@ -1,0 +1,583 @@
+[
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["        case '\\0': sb.append(\"\\\\0\"); break;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["        case '\\0': sb.append(\"\\\\000\"); break;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["        case '\\0': sb.append(\"\\\\u0000\"); break;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["        case '\\0': sb.append(\"\\\\x00\"); break;"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by handling special character '\\u0000' separately", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by modifying character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by refining character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by improving character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by updating character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by correcting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by enhancing character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by optimizing character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\n') {", "sb.append(\"\\\\n\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\r') {", "sb.append(\"\\\\r\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\t') {", "sb.append(\"\\\\t\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\\\') {", "sb.append(\"\\\\\\\\\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\"') {", "sb.append(\"\\\"\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\'' ) {", "sb.append(\"\\\\'\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [
+{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '>') {", "sb.append(\"\\\\>\");", "} else {", "sb.append(c);", "}"]}
+], 
+"deletions": [], 
+"modifications": []
+}][{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 1: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 2: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\x00') {", 'sb.append("\\\\x00");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 3: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\x00') {", 'sb.append("\\\\x00");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 4: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else {", 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 5: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\n') {", 'sb.append("\\\\n");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 6: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\t') {", 'sb.append("\\\\t");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 7: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\r') {", 'sb.append("\\\\r");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 8: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\\\') {", 'sb.append("\\\\\\\\");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 9: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\"') {", 'sb.append("\\\"");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 10: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\''') {", 'sb.append("\\\\'");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []}][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fine-tuning character escaping logic to fix bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Enhancing character escaping logic to handle bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Correcting character escaping logic based on bug analysis", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by enhancing character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\1') {", "sb.append(\"\\\\1\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\x00') {", "sb.append(\"\\\\x00\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\u0001') {", "sb.append(\"\\\\u0001\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\x01') {", "sb.append(\"\\\\x01\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\x0001') {", "sb.append(\"\\\\x0001\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "    sb.append(\"\\\\u0000\");", "} else {", "    sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Fixing bug by adding additional character escaping logic", 
+"if (c == '\\u0000') {", 
+"sb.append(\"\\\\u0000\");", 
+"} else if (c == '\\0') {", 
+"sb.append(\"\\\\0\");", 
+"} else {", 
+"sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Fixing bug by adjusting character escaping logic", 
+"if (c == '\\u0000') {", 
+"sb.append(\"\\\\u0000\");", 
+"} else if (c == '\\0') {", 
+"sb.append(\"\\\\0\");", 
+"} else {", 
+"sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Refining character escaping logic to address bug", 
+"if (c == '\\u0000') {", 
+"sb.append(\"\\\\u0000\");", 
+"} else if (c == '\\0') {", 
+"sb.append(\"\\\\0\");", 
+"} else {", 
+"sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Fixing bug by adjusting character escaping logic", 
+"if (c == '\\u0000') {", 
+"sb.append(\"\\\\u0000\");", 
+"} else if (c == '\\0') {", 
+"sb.append(\"\\\\0\");", 
+"} else {", 
+"sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Fixing bug by adjusting character escaping logic", 
+"if (c == '\\u0000') {", 
+"sb.append(\"\\\\u0000\");", 
+"} else if (c == '\\0') {", 
+"sb.append(\"\\\\0\");", 
+"} else {", 
+"sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Refining character escaping logic to address bug", 
+"if (c == '\\u0000') {", 
+"sb.append(\"\\\\u0000\");", 
+"} else if (c == '\\0') {", 
+"sb.append(\"\\\\0\");", 
+"} else {", 
+"sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Fixing bug by adjusting character escaping logic", 
+"if (c == '\\u0000') {", 
+"    sb.append(\"\\\\u0000\");", 
+"} else {", 
+"    sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], 
+"insertions": [{"line_number": 966, "new_lines": [
+"// Refining character escaping logic to address bug", 
+"if (c == '\\u0000') {", 
+"    sb.append(\"\\\\u0000\");", 
+"} else {", 
+"    sb.append(c);", 
+"}"
+]}], 
+"deletions": [], 
+"modifications": []
+}][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adding additional character escaping logic", "if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 1: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 2: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 3: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 4: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 5: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 6: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 7: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 8: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 9: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 10: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else if (c == \'\\0\') {', 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 1: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 2: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 3: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 4: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 5: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 6: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 7: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 8: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 9: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 10: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 11: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 12: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 13: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 14: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 15: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 16: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 17: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 18: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 19: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 20: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 21: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 22: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 23: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 24: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 25: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 26: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 27: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 28: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 29: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 30: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 1: Fixing bug by adding additional character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 2: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else if (c == '\\0') {",
+"sb.append(\"\\\\\\0\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 3: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else if (c == '\\0') {",
+"sb.append(\"\\\\\\0\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 4: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 5: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 6: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 7: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 8: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 9: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": [
+"// Mutant 10: Fixing bug by adjusting character escaping logic",
+"if (c == '\\u0000') {",
+"sb.append(\"\\\\\\u0000\");",
+"} else {",
+"sb.append(c);",
+"}"
+]}]}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 1: Adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 2: Adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 3: Refining character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 4: Enhancing character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 5: Modifying character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 6: Adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 7: Improving character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 8: Refactoring character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 9: Tweaking character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 10: Adjusting escaping logic for special characters", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 1: Fixing bug by adding specific character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "\tsb.append(\"\\\\\\0\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 2: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 3: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "\tsb.append(\"\\\\\\0\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 4: Fixing bug by adding specific character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 5: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "\tsb.append(\"\\\\\\0\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 6: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 7: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "\tsb.append(\"\\\\\\0\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 8: Fixing bug by adding specific character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 9: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "\tsb.append(\"\\\\\\0\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines":["// Mutant 10: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "\tsb.append(\"\\\\\\u0000\");", "} else {", "\tsb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\1') {", "sb.append(\"\\\\1\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\u0001') {", "sb.append(\"\\\\u0001\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\u0002') {", "sb.append(\"\\\\u0002\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\u0003') {", "sb.append(\"\\\\u0003\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\u0004') {", "sb.append(\"\\\\u0004\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\u0005') {", "sb.append(\"\\\\u0005\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\u0006') {", "sb.append(\"\\\\u0006\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 1: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 2: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else {", 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 3: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 4: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else {", 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 5: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else {", 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 6: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 7: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else {", 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 8: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 9: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutation 10: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 1: Adding additional character escaping logic", "if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 2: Adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 3: Modifying character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 4: Adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 5: Modifying character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 6: Refining character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 7: Adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 8: Modifying character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 9: Adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 10: Refining character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\x00') {", "sb.append(\"\\\\x00\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\x00') {", "sb.append(\"\\\\x00\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\x00') {", "sb.append(\"\\\\x00\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 1: Fixing bug by adding extra character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 2: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 3: Fixing bug by adding additional character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 4: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 5: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 6: Fixing bug by adding extra character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 7: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 8: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 9: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Mutant 10: Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by refining character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Adjusting character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by refining character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Adjusting character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "sb.append(\"\\\\u0000\");", "} else if (c == '\\0') {", "sb.append(\"\\\\0\");", "} else {", "sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Fixing bug by adjusting character escaping logic", "if (c == '\\u0000') {", "    sb.append(\"\\\\u0000\");", "} else {", "    sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "if (c == '\\u0000') {", "    sb.append(\"\\\\u0000\");", "} else {", "    sb.append(c);", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["966", "//"]], "insertions": [{"line_number": 966, "new_lines": ["// Refining character escaping logic to address bug", "StringBuilder sb = new StringBuilder();", "if (c == '\\u0000') {", "    sb.append(\"\\\\u0000\");", "} else {", "    sb.append(c);", "}"]}], "deletions": [], "modifications": []}
+]

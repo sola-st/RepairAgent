@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'com.google.gson.internal.bind.util.ISO8601Utils', 'insertions': [{'line_number': 213, 'new_lines': ['                // Adjusting time zone offset handling for proper parsing', "                if (timezoneIndicator == '+' || timezoneIndicator == '-') {", '                    String timezoneOffset = date.substring(offset);', '                    if (timezoneOffset.length() < 6) {', '                        timezoneOffset += ":00"; // Append minutes if missing', '                    }', '                    offset += timezoneOffset.length();', '                }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'target_lines': [['214', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'target_lines': [['214', '//']], 'insertions': [{'line_number': 214, 'new_lines': ['                // Adjusting time zone offset handling for proper parsing', "                if (timezoneIndicator == '+' || timezoneIndicator == '-') {", '                    String timezoneOffset = date.substring(offset);', '                    if (timezoneOffset.length() < 6) {', '                        timezoneOffset += ":00"; // Append minutes if missing', '                    }', '                    offset += timezoneOffset.length();', '                }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com.google.gson.internal.bind.util.ISO8601Utils', 'insertions': [{'line_number': 214, 'new_lines': ['                // Adjusting time zone offset handling for proper parsing', "                if (timezoneIndicator == '+' || timezoneIndicator == '-') {", '                    String timezoneOffset = date.substring(offset);', '                    if (timezoneOffset.length() < 6) {', '                        timezoneOffset += ":00"; // Append minutes if missing', '                    }', '                    offset += timezoneOffset.length();', '                }']}]}]
+
+###Fix:
+[{'file_name': 'com.google.gson.internal.bind.util.ISO8601Utils', 'insertions': [{'line_number': 213, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'target_lines': [['214', '//']], 'insertions': [{'line_number': 214, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'insertions': [{'line_number': 214, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com.google.gson.internal.bind.util.ISO8601Utils', 'insertions': [{'line_number': 214, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() != 5) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com.google.gson.internal.bind.util.ISO8601Utils', 'insertions': [{'line_number': 213, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'target_lines': [['214', '//']], 'insertions': [{'line_number': 214, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'insertions': [{'line_number': 214, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'insertions': [{'line_number': 213, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'target_lines': [['214', '//']], 'insertions': [{'line_number': 214, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'insertions': [{'line_number': 213, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/util/ISO8601Utils.java', 'target_lines': [['214', '//']], 'insertions': [{'line_number': 214, 'new_lines': ['// Adjusting time zone offset handling for proper parsing', "if (timezoneIndicator == '+' || timezoneIndicator == '-') {", 'String timezoneOffset = date.substring(offset);', 'if (timezoneOffset.length() < 6) {', 'timezoneOffset += ":00"; // Append minutes if missing', '}', 'offset += timezoneOffset.length();', '}']}]}]
+
+

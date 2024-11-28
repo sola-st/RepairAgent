@@ -1,0 +1,40 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [{'line_number': 47, 'new_lines': ['    public static String unescape(String string) {', '        // Define the pattern to match HTML entities', '        Pattern pattern = Pattern.compile("&(\\\\w+?);");', '', '        // Map of HTML entities and their corresponding characters', '        Map<String, String> entityMap = new HashMap<>();', '        entityMap.put("lt", "<");', '        entityMap.put("gt", ">");', '        entityMap.put("nbsp", " ");', '        entityMap.put("amp", "&");', '        entityMap.put("quot", "\\"");', '', '        // Replace HTML entities with their corresponding characters', '        Matcher matcher = pattern.matcher(string);', '        StringBuffer sb = new StringBuffer(string.length());', '        while (matcher.find()) {', '            String entity = matcher.group(1);', '            String replacement = entityMap.get(entity);', '            matcher.appendReplacement(sb, (replacement != null) ? replacement : "");', '        }', '        matcher.appendTail(sb);', '', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'target_lines': [['64', '                String name = m.group(1).toLowerCase();'], ['2235', '            baseByVal.put(c, ((String) entity[0]).toLowerCase();'], ['2240', '            fullByVal.put(c, ((String) entity[0]).toLowerCase();']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1);'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]);'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]);'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1);'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]);'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'target_lines': [['64', '                String name = m.group(1).toLowerCase();'], ['2235', '            baseByVal.put(c, ((String) entity[0]).toLowerCase();'], ['2240', '            fullByVal.put(c, ((String) entity[0]).toLowerCase();']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1);'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]);'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]));'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1);'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]);'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1).toLowerCase();'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]).toLowerCase();'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]).toLowerCase();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1).toLowerCase();'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]).toLowerCase();'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]).toLowerCase();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1);'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]);'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1);'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]);'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'modifications': [{'line_number': 64, 'modified_line': '                String name = m.group(1).toLowerCase();'}, {'line_number': 2235, 'modified_line': '            baseByVal.put(c, ((String) entity[0]).toLowerCase();'}, {'line_number': 2240, 'modified_line': '            fullByVal.put(c, ((String) entity[0]).toLowerCase();'}]}]
+
+

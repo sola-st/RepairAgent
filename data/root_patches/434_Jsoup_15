@@ -1,0 +1,13 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilderState.java', 'insertions': [{'line_number': 283, 'new_lines': ['    public void insert(Node root, Node nodeToInsert, int index) {', '        if (root instanceof Element) {', '            Element rootElement = (Element) root;', '            LinkedList<Node> children = rootElement.childNodes();', '            if (index >= 0 && index <= children.size()) {', '                children.add(index, nodeToInsert);', '            } else {', '                throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + children.size());', '            }', '        } else {', '            throw new IllegalArgumentException("Root node must be an Element");', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilderState.java', 'modifications': [{'line_number': 283, 'modified_line': '                    } else if (StringUtil.in(name, "base", "basefont", "bgsound", "command", "link", "meta", "noframes", "style", "title")) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilderState.java', 'modifications': [{'line_number': 283, 'modified_line': '                    } else if (StringUtil.in(name, "base", "basefont", "bgsound", "command", "link", "meta", "noframes", "style", "title")) {'}]}]
+
+

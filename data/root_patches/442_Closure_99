@@ -1,0 +1,19 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'insertions': [{'line_number': 126, 'new_lines': ['// Adjusted condition to handle prototype property assignment correctly', 'if (lhs.getType() == Token.GETPROP && lhs.getLastChild().getString().equals("prototype") && lhs.getFirstChild().getType() == Token.THIS) {']}, {'line_number': 130, 'new_lines': ['// Adjusted condition to handle prototype property assignment correctly', 'if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(".prototype.") && lhs.getFirstChild().getType() == Token.THIS) {']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'target_lines': [['129', '          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(".prototype.")) {'], ['92', '//'], ['125', '//'], ['132', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'target_lines': [['129', '          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(".prototype.")) {'], ['92', '//'], ['125', '//'], ['132', '//']], 'insertions': [{'line_number': 92, 'new_lines': ['// Inserted line to fix the bug at line 92']}, {'line_number': 125, 'new_lines': ['// Inserted line to fix the bug at line 125']}, {'line_number': 132, 'new_lines': ['// Inserted line to fix the bug at line 132']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'insertions': [{'line_number': 129, 'new_lines': ['// Adjusted condition to handle prototype property assignment correctly', 'if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(".prototype.") && lhs.getFirstChild().getType() == Token.THIS) {']}, {'line_number': 92, 'new_lines': ['// Inserted line to fix the bug at line 92']}, {'line_number': 125, 'new_lines': ['// Inserted line to fix the bug at line 125']}, {'line_number': 132, 'new_lines': ['// Inserted line to fix the bug at line 132']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'insertions': [{'line_number': 126, 'new_lines': ['// Adjusted condition to handle prototype property assignment correctly', 'if (lhs.getType() == Token.GETPROP && lhs.getLastChild().getString().equals("prototype") && lhs.getFirstChild().getType() == Token.THIS) {']}, {'line_number': 130, 'new_lines': ['// Adjusted condition to handle prototype property assignment correctly', 'if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(".prototype.") && lhs.getFirstChild().getType() == Token.THIS) {']}]}]
+
+

@@ -1,0 +1,43 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctionsTest.java', 'modifications': [{'line_number': 1668, 'modified_line': '    preload_check_all.call(this);'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 777, 'modified_line': '    if (node.getType() == Token.CALL && child.getType() == Token.NAME) {'}, {'line_number': 778, 'modified_line': '      Node child = node.getFirstChild();'}, {'line_number': 779, 'modified_line': '      if (child.getType() == Token.NAME) {'}, {'line_number': 780, 'modified_line': '        changed.add(child.getString());'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 780, 'modified_line': '        if (node.getType() == Token.CALL && child.getType() == Token.NAME) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 777, 'modified_line': '    if (node.getType() == Token.CALL && child.getType() == Token.NAME) {'}, {'line_number': 778, 'modified_line': '      Node child = node.getFirstChild();'}, {'line_number': 779, 'modified_line': '      if (child.getType() == Token.NAME) {'}, {'line_number': 780, 'modified_line': '        changed.add(child.getString());'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctionsTest.java', 'modifications': [{'line_number': 1668, 'modified_line': '    preload_check_all.call(this); // Modifying the method to call the correct function'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 777, 'modified_line': '    if (node.getType() == Token.CALL && child.getType() == Token.NAME) {'}, {'line_number': 778, 'modified_line': '      Node child = node.getFirstChild();'}, {'line_number': 779, 'modified_line': '      if (child.getType() == Token.NAME) {'}, {'line_number': 780, 'modified_line': '        changed.add(child.getString());'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 780, 'modified_line': '        if (node.getType() == Token.CALL && child.getType() == Token.NAME) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 777, 'modified_line': '    if (node.getType() == Token.CALL && child.getType() == Token.NAME) {'}, {'line_number': 778, 'modified_line': '      Node child = node.getFirstChild();'}, {'line_number': 779, 'modified_line': '      if (child.getType() == Token.NAME) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 777, 'modified_line': '    if (node.getType() == Token.CALL && child.getType() == Token.NAME) {'}, {'line_number': 778, 'modified_line': '      Node child = node.getFirstChild();'}, {'line_number': 779, 'modified_line': '      if (child.getType() == Token.NAME) {'}, {'line_number': 780, 'modified_line': '        changed.add(child.getString());'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 777, 'modified_line': '    if (node.getType() == Token.CALL && child != null && child.getType() == Token.NAME) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctions.java', 'target_lines': [['777', '    if (node.getType() == Token.CALL) {'], ['778', '      Node child = node.getFirstChild();'], ['779', '      if (child.getType() == Token.NAME) {'], ['780', '        changed.add(child.getString());']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 777, 'modified_line': '    if (node.getType() == Token.CALL && child != null && child.getType() == Token.NAME) {'}, {'line_number': 778, 'modified_line': '      Node child = node.getFirstChild();'}, {'line_number': 779, 'modified_line': '      if (child != null && child.getType() == Token.NAME) {'}, {'line_number': 780, 'modified_line': '        changed.add(child.getString());'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineFunctionsTest.java', 'modifications': [{'line_number': 1668, 'modified_line': '    preload_check_all(); // Correcting the function call'}]}]
+
+

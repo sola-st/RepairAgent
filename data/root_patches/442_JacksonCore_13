@@ -1,0 +1,31 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'insertions': [{'line_number': 132, 'new_lines': ['        _cfgUnqNames = !Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic\n']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'target_lines': [['127', '//']], 'insertions': [{'line_number': 127, 'new_lines': ['        _cfgUnqNames = !Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'insertions': [{'line_number': 132, 'new_lines': ['_cfgUnqNames = !Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'target_lines': [['127', '//']], 'insertions': [{'line_number': 127, 'new_lines': ['_cfgUnqNames = !Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'insertions': [{'line_number': 127, 'new_lines': ['_cfgUnqNames = !Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'insertions': [{'line_number': 132, 'new_lines': ['_cfgUnqNames = Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'target_lines': [['127', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 127, 'modified_line': '_cfgUnqNames = !Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'insertions': [{'line_number': 132, 'new_lines': ['        int change = (newFeatureFlags ^ _formatFeatures) & changedFeatures;', '        if (change != 0) {', '            if ((change & Feature.QUOTE_FIELD_NAMES.getMask()) != 0) {', '                if ((_formatFeatures & Feature.QUOTE_FIELD_NAMES.getMask()) != 0) {', '                    _cfgUnqNames = true;', '                } else {', '                    _cfgUnqNames = false;', '                }', '            }', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/JsonGeneratorImpl.java', 'target_lines': [['127', '//']], 'insertions': [{'line_number': 127, 'new_lines': ['        _cfgUnqNames = !Feature.QUOTE_FIELD_NAMES.enabledIn(newFeatureFlags); // Fixing field name quoting logic']}], 'deletions': [], 'modifications': []}]
+
+

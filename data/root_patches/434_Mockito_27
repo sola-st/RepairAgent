@@ -1,0 +1,28 @@
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MockUtil.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 64, 'modified_line': '        MockHandlerInterface<T> oldMockHandler = getMockHandler(mock);'}, {'line_number': 65, 'modified_line': '        MockHandler<T> newMockHandler = new MockHandler<T>(oldMockHandler);\n        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS);\n        ((Factory) mock).setCallback(0, newFilter);'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MockUtil.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 64, 'modified_line': '        MockHandlerInterface<T> oldMockHandler = getMockHandler(mock);'}, {'line_number': 65, 'modified_line': '        MockHandler<T> newMockHandler = new MockHandler<T>(oldMockHandler);\n        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS));\n        ((Factory) mock).setCallback(0, newFilter);'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MockUtil.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS));\n        ((Factory) mock).setCallback(0, newFilter);'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MockUtil.java', 'target_lines': [['64', '        MockHandler<T> newMockHandler = new MockHandler<T>(oldMockHandler);'], ['65', '        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS));']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 64, 'modified_line': '        MockHandlerInterface<T> oldMockHandler = getMockHandler(mock);\n        MockHandler<T> newMockHandler = new MockHandler<T>(oldMockHandler);'}, {'line_number': 65, 'modified_line': '        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS));\n        ((Factory) mock).setCallback(0, newFilter);'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MethodInterceptorFilter.java', 'insertions': [{'line_number': 0, 'new_lines': ['// Updated implementation of MethodInterceptorFilter for potential bug fix', 'public class MethodInterceptorFilter implements Callback, Serializable {', '', '    private final MockHandlerInterface handler;', '', '    public MethodInterceptorFilter(MockHandlerInterface handler) {', '        this.handler = handler;', '    }', '', '    public Object intercept(Object obj, java.lang.reflect.Method method, Object[] args, org.mockito.cglib.proxy.MethodProxy proxy) throws Throwable {', '        if (handler.isMockitoMock(obj)) {', '            return new InvocationNotifierHandler(handler).handle(obj, method, args, proxy);', '        } else if (handler.getMockSettings().isSerializable()) {', '            return LenientCopyTool.copyToMock(obj, handler.getMockSettings());', '        } else {', '            throw new NotAMockException("Not a mock: " + obj.getClass().getSimpleName());', '        }', '    }', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MockUtil.java', 'insertions': [{'line_number': 66, 'new_lines': ['        if (mock instanceof Factory) {', '            Factory factory = (Factory) mock;', '            if (factory.getCallback(0) instanceof MethodInterceptorFilter) {', '                MethodInterceptorFilter filter = (MethodInterceptorFilter) factory.getCallback(0);', '                filter.intercept(null, null, null, null);', '            }', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MockUtil.java', 'target_lines': [['64', '        MockHandler<T> newMockHandler = new MockHandler<T>(oldMockHandler);'], ['65', '        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS));']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/MockUtil.java', 'target_lines': [['64', '        MockHandler<T> newMockHandler = new MockHandler<T>(oldMockHandler);'], ['65', '        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS));']], 'insertions': [{'line_number': 64, 'new_lines': ['        MockHandlerInterface<T> oldMockHandler = getMockHandler(mock);']}, {'line_number': 65, 'new_lines': ['        MockHandler<T> newMockHandler = new MockHandler<T>(oldMockHandler);', '        MethodInterceptorFilter newFilter = new MethodInterceptorFilter(newMockHandler, (MockSettingsImpl) org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS));']}], 'deletions': [], 'modifications': []}]
+
+

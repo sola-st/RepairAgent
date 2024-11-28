@@ -1,0 +1,16 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CollapseVariableDeclarations.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 204, 'modified_line': '          && !blacklistedVars.contains(var) && !var.isDeclared() && !var.isLocal();'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CollapseVariableDeclarations.java', 'target_lines': [['204', '//'], ['208', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CollapseVariableDeclarations.java', 'target_lines': [['204', '//'], ['208', '//']], 'insertions': [{'line_number': 204, 'new_lines': ['          && !blacklistedVars.contains(var) && !var.isDeclared() && !var.isLocal();']}, {'line_number': 208, 'new_lines': ['    if (var.isDeclared()) {', '      blacklistedVars.add(var);', '    }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CollapseVariableDeclarations.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 204, 'modified_line': '          && !blacklistedVars.contains(var) && !var.isDeclared() && !var.isLocal();'}, {'line_number': 208, 'modified_line': '    if (var.isDeclared()) {\n      blacklistedVars.add(var);\n    }'}]}]
+
+

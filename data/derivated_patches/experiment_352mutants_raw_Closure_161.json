@@ -1,0 +1,55 @@
+
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeFoldConstants.java",
+        "insertions": [
+            {
+                "line_number": 1283,
+                "new_lines": [
+                    "if (arrayIndex >= 0) {",
+                    "return arrayAccess;"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+    
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeFoldConstants.java",
+        "insertions": [
+            {
+                "line_number": 1283,
+                "new_lines": [
+                    "// Adjusting array access logic to prevent index out of bounds error",
+                    "if (index >= 0 && index < array.length) {",
+                    "    // Access the array element only if the index is within bounds",
+                    "    result = array[index];",
+                    "} else {",
+                    "    // Handle out of bounds index appropriately",
+                    "    result = null;",
+                    "}"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeFoldConstants.java",
+        "insertions": [
+            {
+                "line_number": 1283,
+                "new_lines": [
+                    "// Adjusting array access logic to prevent index out of bounds error",
+                    "if (index >= 0 && index < array.length) {",
+                    "    // Access the array element only if the index is within bounds",
+                    "    result = array[index];",
+                    "} else {",
+                    "    // Handle out of bounds index appropriately",
+                    "    result = null;",
+                    "}"
+                ]
+            }
+        ]
+    }
+    

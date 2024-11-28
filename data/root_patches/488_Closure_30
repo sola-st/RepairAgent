@@ -1,0 +1,28 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/FlowSensitiveInlineVariables.java', 'insertions': [{'line_number': 156, 'new_lines': ['    // Inserted new line to potentially address inlining issue', '    NodeTraversal nodeTraversal = new NodeTraversal(compiler, this);', '    nodeTraversal.traverse(root);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/MustBeReachingVariableDef.java', 'target_lines': [['396', '        if (n.isName() && jsScope.isDeclared(n.getString(), true)) {'], ['71', '//'], ['398', '//'], ['399', '//'], ['430', '//']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/FlowSensitiveInlineVariables.java', 'target_lines': [['157', '    (new NodeTraversal(compiler, this)).traverse(root);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/MustBeReachingVariableDef.java', 'target_lines': [['396', '        if (n.isName() && jsScope.isDeclared(n.getString(), true)) {'], ['71', '//'], ['398', '//'], ['399', '//'], ['430', '//']], 'insertions': [{'line_number': 71, 'new_lines': ['// Inserted new line to potentially address the issue']}, {'line_number': 398, 'new_lines': ['// Inserted new line to potentially address the issue']}, {'line_number': 399, 'new_lines': ['// Inserted new line to potentially address the issue']}, {'line_number': 430, 'new_lines': ['// Inserted new line to potentially address the issue']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/FlowSensitiveInlineVariables.java', 'target_lines': [['157', '    (new NodeTraversal(compiler, this)).traverse(root);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/MustBeReachingVariableDef.java', 'insertions': [{'line_number': 71, 'new_lines': ['// Inserted new line to potentially address the issue', '// Checking for variable dependence before declaration', 'if (dependsOnOuterScopeVars(n.getString(), n.getParent())) {', '  return;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/MustBeReachingVariableDef.java', 'target_lines': [['396', '        if (n.isName() && jsScope.isDeclared(n.getString(), true)) {'], ['71', '//'], ['398', '//'], ['399', '//'], ['430', '//']], 'insertions': [{'line_number': 71, 'new_lines': ['// Inserted new line to potentially address the issue', '// Checking for variable dependence before declaration', 'if (dependsOnOuterScopeVars(n.getString(), n.getParent())) {', '  return;', '}']}, {'line_number': 398, 'new_lines': ['// Inserted new line to potentially address the issue']}, {'line_number': 399, 'new_lines': ['// Inserted new line to potentially address the issue']}, {'line_number': 430, 'new_lines': ['// Inserted new line to potentially address the issue']}]}, {'file_name': 'com/google/javascript/jscomp/FlowSensitiveInlineVariables.java', 'target_lines': [['157', '    (new NodeTraversal(compiler, this)).traverse(root);']], 'insertions': [{'line_number': 157, 'new_lines': ['// Inserted new line to potentially address inlining issue', 'NodeTraversal nodeTraversal = new NodeTraversal(compiler, this);', 'nodeTraversal.traverse(root);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/FlowSensitiveInlineVariables.java', 'insertions': [{'line_number': 156, 'new_lines': ['// Inserted new line to potentially address inlining issue', 'NodeTraversal nodeTraversal = new NodeTraversal(compiler, this);', 'nodeTraversal.traverse(root);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/MustBeReachingVariableDef.java', 'target_lines': [['396', '        if (n.isName() && jsScope.isDeclared(n.getString(), true)) {'], ['71', '//'], ['398', '//'], ['399', '//'], ['430', '//']], 'insertions': [{'line_number': 71, 'new_lines': ['// Inserted new line to potentially address the issue', '// Checking for variable dependence before declaration', 'if (dependsOnOuterScopeVars(n.getString(), n.getParent())) {', '  return;', '}']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/FlowSensitiveInlineVariables.java', 'target_lines': [['157', '    (new NodeTraversal(compiler, this)).traverse(root);']], 'insertions': [{'line_number': 156, 'new_lines': ['// Inserted new line to potentially address inlining issue', 'NodeTraversal nodeTraversal = new NodeTraversal(compiler, this);', 'nodeTraversal.traverse(root);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/MustBeReachingVariableDef.java', 'target_lines': [['396', '        if (n.isName() && jsScope.isDeclared(n.getString(), true)) {'], ['71', '//'], ['398', '//'], ['399', '//'], ['430', '//']], 'insertions': [{'line_number': 71, 'new_lines': ['// Inserted new line to potentially address the issue', '// Checking for variable dependence before declaration', 'if (dependsOnOuterScopeVars(n.getString(), n.getParent())) {', '  return;', '}']}, {'line_number': 398, 'new_lines': ['// Inserted new line to potentially address the issue']}, {'line_number': 399, 'new_lines': ['// Inserted new line to potentially address the issue']}, {'line_number': 430, 'new_lines': ['// Inserted new line to potentially address the issue']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/FlowSensitiveInlineVariables.java', 'target_lines': [['157', '    (new NodeTraversal(compiler, this)).traverse(root);']], 'insertions': [{'line_number': 157, 'new_lines': ['// Inserted new line to potentially address inlining issue', 'NodeTraversal nodeTraversal = new NodeTraversal(compiler, this);', 'nodeTraversal.traverse(root);']}], 'deletions': [], 'modifications': []}]
+
+

@@ -1,0 +1,10 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/regression/SimpleRegression.java', 'modifications': [{'line_number': 264, 'modified_line': 'return Math.max(0, sumYY - sumXY * sumXY / sumXX);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/stat/regression/SimpleRegression.java', 'modifications': [{'line_number': 264, 'modified_line': 'return Math.max(0, sumYY - Math.pow(sumXY, 2) / sumXX);'}]}]
+
+

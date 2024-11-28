@@ -1,0 +1,79 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'parameter = (Parameter) parameters.next();', 'argument = (Argument) arguments.next();']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        Node parameters = node.getFirstChild();', '        Node arguments = node.getSecondChild();']}, {'line_number': 1412, 'new_lines': ['            Node parameter = parameters;', '            Node argument = arguments;']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'parameter = (Parameter) parameters.next();', 'argument = (Argument) arguments.next();']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'parameter = (Parameter) parameters.next();', 'argument = (Argument) arguments.next();']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', 'parameter = (Parameter) parameters.next();', 'argument = (Argument) arguments.next();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        Node parameters = node.getFirstChild();', '        Node arguments = node.getSecondChild();']}, {'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}], 'deletions': [1413]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        Node parameters = node.getFirstChild();', '        Node arguments = node.getSecondChild();']}, {'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}], 'deletions': [1413]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        Node parameters = node.getFirstChild();', '        Node arguments = node.getSecondChild();']}, {'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasChildren() && arguments.hasChildren()) {', '    parameter = (Parameter) parameters.getFirstChild();', '    argument = (Argument) arguments.getFirstChild();', '}']}], 'deletions': [1413]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        List<Parameter> parameters = node.getFirstChild();', '        List<Argument> arguments = node.getSecondChild();']}, {'line_number': 1412, 'new_lines': ['        for (Parameter parameter : parameters) {', '            if (!isValidType(parameter.getType())) {', '                reportTypeMismatch(parameter);', '            }', '        }']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        List<Parameter> parameters = new ArrayList<>();', '        List<Argument> arguments = new ArrayList<>();']}, {'line_number': 1412, 'new_lines': ['        if (node.hasChildren()) {', '            Node parameterNode = node.getFirstChild();', '            Node argumentNode = node.getSecondChild();', '            while (parameterNode != null && argumentNode != null) {', '                Parameter parameter = (Parameter) parameterNode;', '                Argument argument = (Argument) argumentNode;', '                // Add type annotations to parameters and arguments for type checking', '                if (!isValidType(parameter.getType())) {', '                    reportTypeMismatch(parameter);', '                }', '                parameterNode = parameterNode.getNext();', '                argumentNode = argumentNode.getNext();', '            }', '        }']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        Node parameters = node.getFirstChild();', '        Node arguments = node.getSecondChild();']}, {'line_number': 1412, 'new_lines': ['        if (parameters != null && arguments != null) {', '            parameter = (Parameter) parameters.next();', '            argument = (Argument) arguments.next();']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        if (node.hasChildren()) {', '            Node parameters = node.getFirstChild();', '            Node arguments = node.getSecondChild();', '            while (parameters != null && arguments != null) {', '                parameter = (Parameter) parameters;', '                argument = (Argument) arguments;', '                // Add type annotations to parameters and arguments for type checking', '                if (!isValidType(parameter.getType())) {', '                    reportTypeMismatch(parameter);', '                }', '                parameters = parameters.getNext();', '                arguments = arguments.getNext();', '            }']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        if (node.hasChildren()) {', '            Node parameters = node.getFirstChild();', '            Node arguments = node.getSecondChild();', '            while (parameters != null && arguments != null) {', '                parameter = (Parameter) parameters;', '                argument = (Argument) arguments;', '                // Add type annotations to parameters and arguments for type checking', '                if (parameter != null && argument != null) {', '                    if (!isValidType(parameter.getType())) {', '                        reportTypeMismatch(parameter);', '                    }', '                    parameters = parameters.getNext();', '                    arguments = arguments.getNext();', '                }']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        Node parameters = node.getFirstChild();', '        Node arguments = node.getSecondChild();']}, {'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null) {', '    parameter = (Parameter) parameters;', '    argument = (Argument) arguments;']}], 'deletions': [1413]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        if (node.hasChildren()) {', '            Node parameters = node.getFirstChild();', '            Node arguments = node.getSecondChild();', '            while (parameters != null && arguments != null) {', '                parameter = (Parameter) parameters;', '                argument = (Argument) arguments;', '                // Add type annotations to parameters and arguments for type checking', '                if (parameter != null && argument != null) {', '                    if (!isValidType(parameter.getType())) {', '                        reportTypeMismatch(parameter);', '                    }', '                    parameters = parameters.getNext();', '                    arguments = arguments.getNext();', '                }']}, {'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}], 'deletions': [1413]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        if (node.hasChildren()) {', '            Node parameters = node.getFirstChild();', '            Node arguments = node.getSecondChild();', '            while (parameters != null && arguments != null) {', '                parameter = (Parameter) parameters;', '                argument = (Argument) arguments;', '                // Add type annotations to parameters and arguments for type checking', '                if (parameter != null && argument != null) {', '                    if (!isValidType(parameter.getType())) {', '                        reportTypeMismatch(parameter);', '                    }', '                    parameters = parameters.getNext();', '                    arguments = arguments.getNext();', '                }']}, {'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1409, 'new_lines': ['        if (node.hasChildren()) {', '            Node parameters = node.getFirstChild();', '            Node arguments = node.getSecondChild();', '            while (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '                parameter = (Parameter) parameters.next();', '                argument = (Argument) arguments.next();', '                // Add type annotations to parameters and arguments for type checking']}, {'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null && parameters.hasNext() && arguments.hasNext()) {', '    parameter = (Parameter) parameters.next();', '    argument = (Argument) arguments.next();', '}']}], 'deletions': [1413], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null) {', '    for (Parameter parameter : parameters) {', '        // Perform type checking on each parameter', '        // Code for type checking goes here', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1412, 'new_lines': ['// Add type annotations to parameters and arguments for type checking', 'if (parameters != null && arguments != null) {', '    for (Parameter parameter : parameters) {', '        // Perform type checking on each parameter', '        // Code for type checking goes here', '    }', '}']}]}]
+
+

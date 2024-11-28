@@ -1,0 +1,227 @@
+[
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":221, "new_lines":["        return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":220, "new_lines":["      if (value == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":220, "new_lines":["      if (value == undefined) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":220, "new_lines":["      if (value == 'null') {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":220, "new_lines":["      if (value.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":220, "new_lines":["      if (value.equals('null')) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":221, "new_lines":["        throw new IllegalArgumentException();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":219, "new_lines":["        value = value != null ? value : new Node();"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":220, "new_lines":["      if (value == undefined || value == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number":222, "new_lines":["            return;"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java",
+        "target_lines": [["220", "      if (value != null) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 220,
+                "modified_line": "if (value != null && value.isCall()) {"
+            }
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java",
+        "target_lines": [["220", "      if (value != null) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 220,
+                "modified_line": "if (value != null && value.isString()) {"
+            }
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java",
+        "target_lines": [["220", "      if (value != null) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 220,
+                "modified_line": "if (value != null && value.isNumber()) {"
+            }
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java",
+        "target_lines": [["220", "      if (value != null) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 220,
+                "modified_line": "if (value != null && value.isBoolean()) {"
+            }
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java",
+        "target_lines": [["220", "      if (value != null) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 220,
+                "modified_line": "if (value != null && value.isFunction()) {"
+            }
+        ]
+    }
+    // Add more mutations following a similar structure
+][
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isAdd()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isNumber()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isBlock()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isFunction()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isVariable()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isAssignment()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isComparison()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isLogical()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isAdd()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isAdd() && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isAdd() && value.isNumber()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.isNumber()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isAdd() && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isAdd() && value.isNumber()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isString() && value.isNumber()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isAdd() && value.isString() && value.isNumber()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isAdd() && value.isString() && value.isNumber()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["// Check if value is not null before further operations"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["throw new IllegalStateException(\"Value should not be null at this point\");"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 219, "new_lines": ["if (callTarget == null) {", "   throw new IllegalArgumentException(\"callTarget cannot be null!\");", "}"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 218, "new_lines": ["if (value == null) {", "   throw new IllegalArgumentException(\"value cannot be null!\");", "}"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["value = value != null ? value : Node.newString(\"\");"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["if (value == null) {", "   return null;", "}"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 219, "new_lines": ["if (value == null) {", "   value = Node.newString(\"\");", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isString()) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isNumber()) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value == null) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isObject()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isFunction()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isBoolean()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isArray()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isUndefined()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isRegExp()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isTemplateLiteral()) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isRegExp()) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isSymbol()) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isBigInt()) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value == null || value.isString()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.getLength() > 0) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.isNotEmpty()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.length() > 0) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.size() > 0) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.isNotEmpty()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isString() && value.trim() != '') {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isString() && value.trim().length() > 0) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isString() && value.trim().length() > 0 && value.charAt(0) == 'h') {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isString() && value.trim().length() > 0 && value.charAt(0) == 'h' && value.charAt(value.length() - 1) == 'o') {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isString() && value.trim().length() > 0 && value.charAt(0) == 'h' && value.charAt(value.length() - 1) == 'o' && value.contains('e')) {"]}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["Node value = callTarget.getNext();", "if (value != null && value.isString() && value.trim().length() > 0 && value.charAt(0) == 'h' && value.charAt(value.length() - 1) == 'o' && value.contains('e') && value.startsWith('h')) {"]}]
+][
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": [{"line_number": 220, "modified_line": "if (value == null) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isNumber()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isBoolean()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isFunction()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isObject()) {"}]},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["// Added a comment for clarification"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 219, "new_lines": ["// Inserted new line before the condition"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["// Inserted new line after the condition"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["if(value != null){ // New line with modified condition"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["if(value != null && checkValue(value)){ // New line with additional check"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall()) && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() || value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() && value.isAddition()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.isAddition()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() || value.isAddition()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall() || value.isAddition()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.isCall() && value.isAddition()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["if (value != null && value.isCall()) {"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["if (value != null && value.isString()) {"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if (value == null) { // Mutated condition to check for null value"]}]}},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if (value == null || value.isString()) { // Mutated condition to check for null value or string type"]}]}},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "      if (value == null) { // Modified condition to check for null value"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "      if (value == null || value.isString()) { // Modified condition to check for null value or string type"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "modifications": [{"line_number": 220, "modified_line": "      if (value == null) { // Modified condition to check for null value"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "deletions": [220]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if (value == null) { // Mutated condition to check for null value"]}], "modifications": [{"line_number": 220, "modified_line": "      if (value == null) { // Modified condition to check for null value"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if (value == null || value.isString()) { // Mutated condition to check for null value or string type"]}], "modifications": [{"line_number": 220, "modified_line": "      if (value == null || value.isString()) { // Modified condition to check for null value or string type"}]}
+][
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value == null) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value == null || value.isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["// Adding a null check for value"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["// Potential fix for null pointer exception"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": [{"line_number": 220, "modified_line": "if (value == null) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [220], "modifications": [{"line_number": 220, "modified_line": "if (value == null || value.isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 219, "new_lines": ["// Inserting a null check for value"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["// Checking if value is not null before proceeding"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 222, "new_lines": ["// Adding a null pointer check for value"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 223, "new_lines": ["// Fixing potential null pointer issue with value"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value == null) { // Mutation 1 - Changing '!=' to '==' for null check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value == undefined) { // Mutation 2 - Changing 'null' to 'undefined' for null check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value == '' || value == null) { // Mutation 3 - Adding additional condition for empty string check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value != null && value.isString()) { // Mutation 4 - Adding type check for value"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value == null || value.isCall()) { // Mutation 5 - Combining null and type check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value != null) { \n        return; // Mutation 6 - Early return after null check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value != null) { \n        throw new IllegalStateException(); // Mutation 7 - Throwing exception after null check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value != null) { \n        log.error(\"Value is not null\"); // Mutation 8 - Logging after null check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value != null) { \n        value = value.getFirstChild(); // Mutation 9 - Modifying value after null check"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 219, "new_lines": ["      // Additional comment before the null check"], {"line_number": 220, "new_lines": ["      if (value != null) {"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isCall()) && value.getFirstChild().isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.getFirstChild().isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.isString() && value.getFirstChild().isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.getFirstChild() != null) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.getFirstChild() != null && value.getFirstChild().isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.getFirstChild() != null && value.getFirstChild().isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.getFirstChild() != null && value.getFirstChild().isString() && value.getFirstChild().isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.getFirstChild() != null && value.getFirstChild().isCall() && value.getFirstChild().isString()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.getFirstChild() != null && value.getFirstChild().isString() && value.getFirstChild().isCall()) {"}]},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "if (value != null && value.getFirstChild() != null && value.getFirstChild().isCall() && value.getFirstChild().isString()) {"}]}
+][
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "      if (value != null && value.isCall()) {"}]},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "      if (value != null && value.isString()) {"}]},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "      if (value != null && value.isCall() && value.isString()) {"}]},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 220, "modified_line": "      if (value != null && value.isCall() && value.isString() && value.getFirstChild().isString()) {"}]},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if(value == null){", "            return null;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        if (value.isCall()) {", "            return value;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if(value.isCall()) {", "            return value;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if(value.isString()) {", "            return value;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if(value.isString()) {", "            return null;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["        if(value.isCall() && value.isString()) {", "            return null;"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = value.cloneNode();"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = value.cloneTree();"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = value.detachFromParent();"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = IR.string('');"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = IR.name('newValue');"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = IR.add(IR.string(''), value);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = IR.add(IR.string(''), IR.string('newValue'));"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 221, "new_lines": ["        value = IR.add(IR.string(''), IR.name('newValue'));"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value == null) return n;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java", "target_lines": [["220", "      if (value != null) {"]], "insertions": [{"line_number": 220, "new_lines": ["      if (value == null) { return n; }"]}], "deletions": [], "modifications": []}
+]

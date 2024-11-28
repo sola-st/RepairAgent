@@ -1,0 +1,571 @@
+
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && result.warnings.size() == 0) {\n",
+                        "    // Handle case where there are no warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.size() != 0) {\n",
+                        "    // Handle case where there are some warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.isEmpty()) {\n",
+                        "    // Check if there are no warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.size() > 0) {\n",
+                        "    // Handle case with one or more warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || !result.warnings.isEmpty()) {\n",
+                        "    // Check if there are warnings present\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && !result.warnings.isEmpty()) {\n",
+                        "    // Handle case with one or more warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.size() == 2) {\n",
+                        "    // Check if there are exactly 2 warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.size() < 0) {\n",
+                        "    // Check if there are negative number of warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && result.warnings.size() >= 0) {\n",
+                        "    // Handle case where there are non-negative number of warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.size() <= 1) {\n",
+                        "    // Check if there is at most 1 warning\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && result.warnings.size() == 0) {\n",
+                        "    // Handle case when there are no warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.isEmpty()) {\n",
+                        "    // Handle case when there are no warnings\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null || result.warnings.size() != 0) {\n",
+                        "    // Handle case when there are warnings present\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings != null && !result.warnings.isEmpty()) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings == null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings == null && result.errors == null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings == null || result.errors == null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.errors != null && !result.errors.isEmpty()) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.errors == null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.errors != null && result.errors.size() == 0) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.errors != null && result.errors.size() != 0) {\n",
+                        "    // Handle case when there are errors present\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings and errors appropriately\n",
+                        "if (result.warnings == null && result.errors == null) {\n",
+                        "    // Handle case when both warnings and errors are null\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings and errors appropriately\n",
+                        "if (result.warnings != null || result.errors != null) {\n",
+                        "    // Handle case when either warnings or errors are present\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings and errors appropriately\n",
+                        "if (result.warnings == null && result.errors != null) {\n",
+                        "    // Handle case when warnings are null but errors are present\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings != null && result.errors == null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.errors != null && result.warnings == null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings == null || result.errors != null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.errors == null || result.warnings != null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings == null && result.errors == null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.warnings != null || result.errors != null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.errors == null && result.warnings != null) {\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings and errors appropriately\n",
+                        "if (result.warnings != null && result.errors != null) {\n",
+                        "    // Handle case when both warnings and errors are present\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings and errors appropriately\n",
+                        "if (result.warnings == null && result.errors == null) {\n",
+                        "    // Handle case when both warnings and errors are null\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings and errors appropriately\n",
+                        "if (result.warnings != null || result.errors != null) {\n",
+                        "    // Handle case when either warnings or errors are present\n",
+                        "}\n"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 862,
+                    "modified_line": "if (result.errors != null || result.warnings != null) {\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings == null) {\n",
+                        "    fail(\"Expected no warnings, but found null warnings\");\n",
+                        "}\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && result.warnings.size() < 1) {\n",
+                        "    fail(\"Expected no warnings, but found: \" + result.warnings.size());\n",
+                        "}\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && !result.warnings.isEmpty()) {\n",
+                        "    // Warnings found, handle them accordingly\n",
+                        "}\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && result.warnings.size() > 0) {\n",
+                        "    // Handle warnings here\n",
+                        "}\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && result.warnings.size() == 2) {\n",
+                        "    // Two warnings found, handle them specifically\n",
+                        "}\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 862,
+                    "new_lines": [
+                        "// Inserted new lines to handle warnings appropriately\n",
+                        "if (result.warnings != null && result.warnings.size() != 0) {\n",
+                        "    fail(\"Unexpected warnings found\");\n",
+                        "}\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 1: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 2: Inserted new lines to handle warnings appropriately\n", "if (result.warnings == null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 3: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() == 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 4: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() != 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 5: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null || result.errors != null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 6: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.errors == null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 7: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.isEmpty()) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 8: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() > 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 9: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() == 2) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 10: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() > 1) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 11: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() < 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 12: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() >= 2) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 13: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() <= 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 14: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() < 2) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 15: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() != 2) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 16: Inserted new lines to handle warnings appropriately\n", "if (result.warnings == null || result.errors == null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 17: Inserted new lines to handle warnings appropriately\n", "if (result.warnings == null && result.errors != null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 18: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.isEmpty() || result.errors.isEmpty()) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 19: Inserted new lines to handle warnings appropriately\n", "if (!result.warnings.isEmpty()) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 20: Inserted new lines to handle warnings appropriately\n", "if (result.warnings == null && result.errors == null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 21: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null || result.errors != null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 22: Inserted new lines to handle warnings appropriately\n", "if (result.warnings == null || result.errors == null) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 23: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() > 0 || result.errors.size() > 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 24: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() == 0 && result.errors.size() == 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 25: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() <= 0 && result.errors.size() <= 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 26: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() >= 0 && result.errors.size() >= 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 27: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() < 0 && result.errors.size() < 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 28: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() > 0 && result.errors.size() == 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 29: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() == 0 && result.errors.size() > 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 30: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() != 0 && result.errors.size() != 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+   	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 31: Inserted new lines to handle warnings appropriately\n", "if (!result.warnings.isEmpty() && !result.errors.isEmpty()) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+        {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 32: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.isEmpty() && result.errors.isEmpty()) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 33: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && !result.warnings.isEmpty() && result.errors != null && !result.errors.isEmpty()) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 34: Inserted new lines to handle warnings appropriately\n", "if (result.warnings == null || result.errors == null || result.warnings.size() != 0 || result.errors.size() != 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 35: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() >= 0 && result.errors != null && result.errors.size() >= 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 36: Inserted new lines to handle warnings appropriately\n", "if (result.warnings != null && result.warnings.size() <= 0 && result.errors != null && result.errors.size() <= 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 37: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() > 0 && result.errors.size() == 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 38: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() == 0 && result.errors.size() > 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 39: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() != 0 && result.errors.size() != 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 40: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() < 0 && result.errors.size() < 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+   	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 41: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() == 0 && result.errors.size() == 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 42: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() <= 0 && result.errors.size() <= 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 43: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() >= 0 && result.errors.size() >= 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+	{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "insertions": [{"line_number": 862, "new_lines": ["// Mutant 44: Inserted new lines to handle warnings appropriately\n", "if (result.warnings.size() < 0 && result.errors.size() < 0) {\n", "    assertEquals(0, result.warnings.size()); // Ensure no warnings are present\n", "}\n"]}]},
+   	

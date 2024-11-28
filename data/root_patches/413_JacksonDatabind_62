@@ -1,0 +1,31 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'insertions': [{'line_number': 183, 'new_lines': ['if (delegateDeser == null) {', '    throw new IllegalStateException("No deserializer found for delegate type: " + delegateType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'target_lines': [['184', '//']], 'insertions': [{'line_number': 184, 'new_lines': ['// Inserted to fix the bug by handling delegate deserialization properly']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'insertions': [{'line_number': 184, 'new_lines': ['if (delegateDeser == null) {', '    throw new IllegalStateException("No deserializer found for delegate type: " + delegateType);', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'insertions': [{'line_number': 184, 'new_lines': ['// Inserted to fix the bug by handling delegate deserialization properly', 'if (delegateDeser == null) {', '    throw new IllegalStateException("No deserializer found for delegate type: " + delegateType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'insertions': [{'line_number': 184, 'new_lines': ['// Inserted to fix the bug by handling delegate deserialization properly', 'if (delegateDeser == null) {', '    throw new IllegalStateException("No deserializer found for delegate type: " + delegateType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'insertions': [{'line_number': 170, 'new_lines': ['    @Override', '    public JsonDeserializer<?> createContextual(DeserializationContext ctxt, BeanProperty property) throws JsonMappingException {', '        JsonDeserializer<?> valueDeser = _valueDeserializer;', '        TypeDeserializer valueTypeDeser = _valueTypeDeserializer;', '        JsonDeserializer<?> delegateDeser = _delegateDeserializer;', '        Boolean unwrapSingle = _unwrapSingle;', '', '        if (valueDeser == null) {', '            valueDeser = ctxt.findContextualValueDeserializer(_collectionType.getContentType(), property);', '        } else { // if we have a ValueInstantiator, may also need to contextualize it', '            if (valueDeser instanceof ContextualDeserializer) {', '                valueDeser = ((ContextualDeserializer) valueDeser).createContextual(ctxt, property);', '            }', '        }', '        if (valueTypeDeser != null) {', '            valueTypeDeser = valueTypeDeser.forProperty(property);', '        }', '        if (delegateDeser != null) {', '            delegateDeser = ctxt.handleSecondaryContextualization(delegateDeser, property, _collectionType.getContentType());', '        }', '        // finally: if we do not have an unwrapped value, may want to disable failing on unknown properties', '        if ((unwrapSingle == null) && !ctxt.isEnabled(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY)) {', '            unwrapSingle = Boolean.FALSE;', '        }', '        // and then see if we can find a converter that needs contextualization', '        Converter<Object,Object> conv = _valueInstantiator == null ? null : _valueInstantiator.getArrayDelegateDeserializer();', '        if (conv != null) {', '            @SuppressWarnings("unchecked")', '            JsonDeserializer<Object> cd = (JsonDeserializer<Object>) conv.createContextual(ctxt, property);', '            if (cd != _delegateDeserializer) {', '                delegateDeser = cd;', '            }', '        }', '        if ((valueDeser == _valueDeserializer) && (valueTypeDeser == _valueTypeDeserializer)', '                && (delegateDeser == _delegateDeserializer) && (unwrapSingle == _unwrapSingle)) {', '            return this;', '        }', '        return new CollectionDeserializer(_collectionType, valueDeser, valueTypeDeser,', '                _valueInstantiator, delegateDeser, unwrapSingle);', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'insertions': [{'line_number': 183, 'new_lines': ['if (delegateDeser == null) {', '    throw new IllegalStateException("No deserializer found for delegate type: " + delegateType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'target_lines': [['184', '//']], 'insertions': [{'line_number': 184, 'new_lines': ['// Inserted to fix the bug by handling delegate deserialization properly']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/CollectionDeserializer.java', 'target_lines': [['184', '//']], 'insertions': [{'line_number': 184, 'new_lines': ['if (delegateDeser == null) {', '    throw new IllegalStateException("No deserializer found for delegate type: " + delegateType);']}], 'deletions': [], 'modifications': []}]
+
+

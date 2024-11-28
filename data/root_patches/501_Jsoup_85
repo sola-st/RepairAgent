@@ -1,0 +1,67 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 42, 'new_lines': ['        Validate.notEmpty(key); // trimming could potentially make empty, so validate here\n', '        this.val = value;\n', '        this.parent = parent;\n']}], 'deletions': [45], 'modifications': [{'line_number': 42, 'modified_line': '    public Attribute(String key, String value, Attributes parent) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 46, 'new_lines': ['        throw new IllegalArgumentException("Key must not be empty");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 45, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 46, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 46, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 45, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 46, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'target_lines': [['44', '        this.key = key.trim();'], ['46', '//']], 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [{'line_number': 44, 'new_lines': ['        if (key.trim().isEmpty()) {', '            throw new IllegalArgumentException("Key must not be empty");', '        }', '        this.key = key.trim();']}, {'line_number': 46, 'new_lines': ['        if (val == null) {', '            throw new IllegalArgumentException("Value must not be null");', '        }', '        this.val = val;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Attribute.java', 'insertions': [], 'deletions': [45], 'modifications': [{'line_number': 42, 'modified_line': '    public Attribute(String key, String value, Attributes parent) {'}, {'line_number': 44, 'modified_line': '        if (key.trim().isEmpty()) {'}]}]
+
+

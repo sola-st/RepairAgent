@@ -1,0 +1,52 @@
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'target_lines': [['8', '//'], ['9', '//'], ['36', '//']], 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'target_lines': [['8', '//'], ['9', '//'], ['36', '//']], 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['    public Object answer(InvocationOnMock invocation) {', '        Class<?> returnType = invocation.getMethod().getReturnType();', '        if (returnType.isPrimitive()) {', '            if (returnType == boolean.class) {', '                return false;', '            } else if (returnType == char.class) {', "                return '\n';", '            } else if (returnType == byte.class) {', '                return (byte) 0;', '            } else if (returnType == short.class) {', '                return (short) 0;', '            } else if (returnType == int.class) {', '                return 0;', '            } else if (returnType == long.class) {', '                return 0L;', '            } else if (returnType == float.class) {', '                return 0.0f;', '            } else if (returnType == double.class) {', '                return 0.0d;', '            }', '        }', '        return null;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'target_lines': [['8', '//'], ['9', '//'], ['36', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'target_lines': [['8', '//'], ['9', '//'], ['36', '//']], 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'target_lines': [['8', '//'], ['9', '//'], ['36', '//']], 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/CallsRealMethods.java', 'insertions': [{'line_number': 8, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}, {'line_number': 9, 'new_lines': ['        return invocation.getMock();']}, {'line_number': 36, 'new_lines': ['        if (invocation.getMethod().isAbstract()) {', '            throw new MockitoException("Cannot call abstract real method on java object!");', '        }']}], 'deletions': [], 'modifications': []}]
+
+

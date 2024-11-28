@@ -1,0 +1,770 @@
+
+{
+    "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+    "insertions": [
+        {
+            "line_number": 376,
+            "new_lines": [
+                "// Mutant 1: Modifying the condition to check for immutable value of right",
+                "if (!NodeUtil.isImmutableValue(left)) {"
+            ]
+        }
+    ],
+    "deletions": [376],
+    "modifications": []
+}
+    
+    
+{
+    "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {
+            "line_number": 376,
+            "modified_line": "      if (NodeUtil.isImmutableValue(right)) {" 
+        }
+    ]
+}
+  
+  
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isImmutableValue(left)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isMutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isImmutableValue(left) && NodeUtil.isImmutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isMutableValue(left) && NodeUtil.isMutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isImmutableValue(left) || NodeUtil.isImmutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isMutableValue(left) || NodeUtil.isMutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isImmutableValue(left) && !NodeUtil.isImmutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isMutableValue(left) && !NodeUtil.isMutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isImmutableValue(left) || !NodeUtil.isImmutableValue(right)) {" 
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [],
+            "deletions": [376],
+            "modifications": [
+                {
+                    "line_number": 376,
+                    "modified_line": "      if (NodeUtil.isMutableValue(left) || !NodeUtil.isMutableValue(right)) {" 
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (!NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "deletions": [376]
+        }
+    ]
+}
+{ "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java", "insertions": [ { "line_number": 389, "new_lines": [ "      if (NodeUtil.isImmutableValue(right)) {", "        return n;", "      }" ] }, { "line_number": 390, "new_lines": [ "      return tryFoldArrayJoin(n);" ] } ], "deletions": [376] }
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (!NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "// Inserted new logic here to handle immutable values",
+                        "      if (!NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "// Call the tryFoldArrayJoin method to handle array join operation",
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "      if (NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "      // Handle the array join operation by calling tryFoldArrayJoin method",
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+            "insertions": [
+                {
+                    "line_number": 389,
+                    "new_lines": [
+                        "// Check for immutability before proceeding with array join operation",
+                        "      if (!NodeUtil.isImmutableValue(right)) {",
+                        "        return n;",
+                        "      }"
+                    ]
+                },
+                {
+                    "line_number": 390,
+                    "new_lines": [
+                        "// Perform array join operation by calling tryFoldArrayJoin method",
+                        "      return tryFoldArrayJoin(n);"
+                    ]
+                }
+            ],
+            "deletions": [376]
+        }
+    ]
+}
+{
+    "file_name": "com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java",
+    "insertions": [
+        {
+            "line_number": 376,
+            "new_lines": [
+                "      if (NodeUtil.isImmutableValue(right)) {",
+                "        return n;",
+                "      }"
+            ]
+        },
+        {
+            "line_number": 389,
+            "new_lines": [
+                "      if (!NodeUtil.isImmutableValue(right)) {",
+                "        return n;",
+                "      }"
+            ]
+        },
+        {
+            "line_number": 390,
+            "new_lines": [
+                "      return tryFoldArrayJoin(n);"
+            ]
+        }
+    ],
+    "deletions": [376]
+}

@@ -1,0 +1,359 @@
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : Collections.emptySet();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<String>();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? new HashSet<>(ignorals.getIgnored()) : Collections.emptySet();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? new HashSet<>(ignorals.getIgnored()) : new HashSet<String>();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored =  (ignorals != null && ignorals.getIgnored() != null) ? new HashSet<>(ignorals.getIgnored()) : Collections.emptySet();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null && ignorals.getIgnored() != null ? new HashSet<>(ignorals.getIgnored()) : Collections.emptySet();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null && ignorals.getIgnored() != null ? new HashSet<>(ignorals.getIgnored()) : new HashSet<String>();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<String>();"}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [495], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["            if(ignorals == null) {\n", "                ignored = Collections.emptySet();\n", "            } else {\n", "                ignored = ignorals.getIgnored();\n", "            }\n"]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["            ignored = ignorals != null ? ignorals.getIgnored() : Collections.emptySet();\n"]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 496, "new_lines": ["            ignored = ignorals.getIgnored();\n"]}], "deletions": [495], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["            if(ignorals != null && ignorals.getIgnored() != null) {\n", "                ignored = new HashSet<>(ignorals.getIgnored());\n", "            } else {\n", "                ignored = Collections.emptySet();\n", "            }\n"]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["            ignored = ignorals != null && ignorals.getIgnored() != null ? new HashSet<>(ignorals.getIgnored()) : Collections.emptySet();\n"]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["            ignored = ignorals != null && ignorals.getIgnored() != null ? new HashSet<>(ignorals.getIgnored()) : new HashSet<String>();\n"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals != null ? ignorals.getIgnored() : Collections.emptySet();"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<>();"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<String>();"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<String>(Arrays.asList(\"default\"));"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [495], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "ignored = ignorals != null ? ignorals.getIgnored() : Collections.emptySet();"}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<>();"}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<String>();"}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 495, "modified_line": "ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<String>(Arrays.asList(\"default\"));"}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && ignorals.getIgnored() != null) {", "    ignored = ignorals.getIgnored();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "} else {", "    ignored = new HashSet<>();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : Collections.emptySet();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? new HashSet<>(ignorals.getIgnored()) : Collections.emptySet();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? new HashSet<>(ignorals.getIgnored()) : ignorals.getIgnored();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "} else {", "    throw new IllegalStateException(\"Ignorals should not be null\");", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals == null) {", "    throw new IllegalStateException(\"Ignorals should not be null\");", "}", "ignored = ignorals.getIgnored();"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<>();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : ignorals.getIgnored();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && !ignorals.getIgnored().isEmpty()) {", "    ignored = ignorals.getIgnored();", "} else {", "    ignored = new HashSet<>();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals == null || ignorals.getIgnored() == null) {", "    throw new IllegalStateException(\"Ignorals should not be null\");", "}", "ignored = ignorals.getIgnored();"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "} else {", "    ignored = Collections.emptySet();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null && ignorals.getIgnored() != null ? new HashSet<>(ignorals.getIgnored()) : Collections.emptySet();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null && ignorals.getIgnored() != null ? new HashSet<>(ignorals.getIgnored()) : ignorals.getIgnored();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals == null || ignorals.getIgnored() == null) {", "    throw new IllegalStateException(\"Ignorals should not be null\");", "}", "ignored = ignorals.getIgnored();"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && !ignorals.getIgnored().isEmpty()) {", "    ignored = ignorals.getIgnored();", "} else {", "    ignored = Collections.emptySet();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null || ignorals.getIgnored() == null ? Collections.emptySet() : ignorals.getIgnored();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null || ignorals.getIgnored() == null ? new HashSet<>() : ignorals.getIgnored();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null && ignorals.getIgnored() != null && !ignorals.getIgnored().isEmpty() ? new HashSet<>(ignorals.getIgnored()) : new HashSet<>();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null && ignorals.getIgnored() != null && !ignorals.getIgnored().isEmpty() ? new HashSet<>(ignorals.getIgnored()) : ignorals.getIgnored();"}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497, 498]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497, 498, 499]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497, 498, 499, 500]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497, 498, 499, 500, 501]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497, 498, 499, 500, 501, 502]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "}"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && ignorals.getIgnored() != null) {", "    ignored = ignorals.getIgnored();", "}"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && !ignorals.getIgnored().isEmpty()) {", "    ignored = ignorals.getIgnored();", "}"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "} else {", "    ignored = Collections.emptySet();", "}"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "} else {", "    ignored = new HashSet<>();", "}"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();", "} else {", "    ignored = new HashSet<String>();", "}"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : Collections.emptySet();"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<>();"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<String>();"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : Collections.singleton(\"default\");"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<>(Arrays.asList(\"default1\", \"default2\"));"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<>(Collections.singletonList(\"default\"));"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null ? Collections.emptySet() : ignorals.getIgnored();"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null ? new HashSet<>() : ignorals.getIgnored();"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null ? new HashSet<String>() : ignorals.getIgnored();"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null ? Collections.emptySet() : new HashSet<>(ignorals.getIgnored());"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null ? new HashSet<>() : new HashSet<>(ignorals.getIgnored());"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals == null ? new HashSet<String>() : new HashSet<>(ignorals.getIgnored());"}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495, 496, 497, 498]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    Set<String> ignored = ignorals.getIgnored();"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals == null) {", "    return;"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["ignored = new HashSet<>();"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "ignored = ignorals != null ? ignorals.getIgnored() : new HashSet<>();"}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null && propDef.getName() != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (propDef != null) {", "    if (\"name\".equals(propDef.getName())) {", "        prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "    }"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["ignored = new HashSet<String>();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals.getIgnored(); // Potential fix to ensure 'ignored' is properly initialized"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["Set<String> ignored = new HashSet<>();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals.getIgnored() != null ? ignorals.getIgnored() : Collections.emptySet(); // Handling potential null value"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals.getIgnored(); // Check for null before assigning"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals.getIgnored(); // Set 'ignored' based on 'ignorals' if not null"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "deletions": [495]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "modifications": [{"line_number": 495, "modified_line": "            ignored = new HashSet<>(ignorals.getIgnored()); // Initialize 'ignored' with 'ignorals' values"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["Set<String> ignored = new HashSet<>();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["ignored = new HashSet<>(); // Initialize 'ignored' as a new HashSet"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals.getIgnored() != null ? ignorals.getIgnored() : Collections.emptySet(); // Check for null before assigning"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals.getIgnored(); // Set 'ignored' based on 'ignorals' if not null"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals.getIgnored(); // Potential fix to ensure 'ignored' is properly initialized"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["Set<String> ignored = new HashSet<>();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "modifications": [{"line_number": 495, "modified_line": "            ignored = new HashSet<>(ignorals.getIgnored()); // Initialize 'ignored' with 'ignorals' values"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals.getIgnored(); // Set 'ignored' based on 'ignorals' if not null"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "deletions": [495]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "deletions": [495]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "modifications": [{"line_number": 495, "modified_line": "ignored = ignorals.getIgnored(); // Set 'ignored' based on 'ignorals' if not null"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["ignored = ignorals.getIgnored(); // Initialize 'ignored' based on 'ignorals' values"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals.getIgnored(); // Check for null before assigning"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["ignored = new HashSet<String>();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "modifications": [{"line_number": 495, "modified_line": "            ignored = ignorals.getIgnored(); // Potential fix to ensure 'ignored' is properly initialized"}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    ignored = ignorals.getIgnored();"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["ignored = new HashSet<>(); // Initialize 'ignored' as a new HashSet"]}]}
+]
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "insertions": [{"line_number": 495, "new_lines": ["Set<String> ignored = new HashSet<>();"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && \"name\".equals(propDef.getName())) {", "    prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && \"name\".equals(propDef.getName())) {", "    prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && \"name\".equals(propDef.getName())) {", "    prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && \"name\".equals(propDef.getName())) {", "    prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && \"name\".equals(propDef.getName())) {", "    prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);"]}]}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null && \"name\".equals(propDef.getName())) {", "    prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java", "target_lines": [["495", "            ignored = ignorals.getIgnored();"]], "insertions": [{"line_number": 495, "new_lines": ["if (ignorals != null) {", "    Set<String> ignored = ignorals.getIgnored();", "    for (String propName : ignored) {", "        if (\"name\".equals(propName)) {", "            prop = constructSettableProperty(ctxt, beanDesc, propDef, prop);", "        }", "    }", "}"]}]}
+]

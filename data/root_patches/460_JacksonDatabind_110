@@ -1,0 +1,40 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'target_lines': [['78', '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'], ['47', '//'], ['58', '//']], 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}], 'deletions': [], 'modifications': [{'line_number': 78, 'modified_line': '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'target_lines': [['78', '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'], ['47', '//'], ['58', '//']], 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}, {'line_number': 58, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}], 'deletions': [], 'modifications': [{'line_number': 78, 'modified_line': '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}, {'line_number': 58, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}], 'deletions': [], 'modifications': [{'line_number': 78, 'modified_line': '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '        public UnmodifiableList() {', '            super(new ArrayList<>());', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'target_lines': [['78', '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'], ['47', '//'], ['58', '//']], 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}, {'line_number': 58, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '    }']}, {'line_number': 78, 'new_lines': ['        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }', '        public UnmodifiableList() {', '            super(new ArrayList<>());', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'target_lines': [['78', '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'], ['47', '//'], ['58', '//']], 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 58, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 78, 'new_lines': ['        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'target_lines': [['78', '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'], ['47', '//'], ['58', '//']], 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 58, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 78, 'new_lines': ['        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'target_lines': [['78', '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'], ['47', '//'], ['58', '//']], 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 58, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 78, 'new_lines': ['        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/JavaUtilCollectionsDeserializers.java', 'target_lines': [['78', '        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {'], ['47', '//'], ['58', '//']], 'insertions': [{'line_number': 47, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 58, 'new_lines': ['    public static class UnmodifiableList extends java.util.Collections$UnmodifiableList {', '        public UnmodifiableList(List<?> list) {', '            super(list);', '        }']}, {'line_number': 78, 'new_lines': ['        } else if (type.hasRawClass(CLASS_UNMODIFIABLE_LIST)) {']}], 'deletions': [], 'modifications': []}]
+
+

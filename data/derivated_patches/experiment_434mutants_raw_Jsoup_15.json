@@ -1,0 +1,174 @@
+[
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 283, "modified_line": "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", "link", "meta", "noframes", "style", "title\")) {"}]}
+][
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: add more tags to the list for handling"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: consider using a switch statement for better readability"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: refactor this condition into a separate method for clarity"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: add a logging statement here for debugging"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: check if name is not null before performing 'StringUtil.in' check"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: use a Set data structure for faster tag lookup"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: refactor this into a separate class for better organization"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: consider using a Map to store the tags for faster retrieval"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: add a comment explaining the purpose of this condition"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: consider extracting this block into a separate method for reusability"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Potential fix: add additional tags to the existing list to handle more cases"]} ], "deletions": [], "modifications": []}
+]Here are 30 mutants of the target buggy line in the TreeBuilderState.java file:
+
+1.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    // Inserted mutant for testing purposes"]}], "deletions": [], "modifications": []}]
+```
+
+2.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (name.equals(\"base\") || name.equals(\"basefont\") || name.equals(\"bgsound\") || name.equals(\"command\") || name.equals(\"link\") || name.equals(\"meta\") || name.equals(\"noframes\") || name.equals(\"style\") || name.equals(\"title\")) {"]}], "deletions": [], "modifications": []}]
+```
+
+3.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isSpecialTag(name)) {"]}], "deletions": [], "modifications": []}]
+```
+
+4.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isReservedTag(name)) {"]}], "deletions": [], "modifications": []}]
+```
+
+5.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isVoidTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+6.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isDataTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+7.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isFormatAsPhrasingContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+8.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isFormListedTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+9.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isScriptSupportingTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+10.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isTransparentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+11.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isInlineTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+12.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isBlockTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+13.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isSectioningContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+14.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isHeadingTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+15.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isListedTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+16.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isEmbeddedContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+17.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isInteractiveContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+18.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isMetadataContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+19.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isPhrasingContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+20.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isGroupingContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+21.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isFlowContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+22.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isSectioningRootTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+23.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isTabularTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+24.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isTextContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+25.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isEmbeddedInteractiveContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+26.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isInteractiveElement(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+27.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isMetaCharsetTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+28.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isNonPhrasingTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+29.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isTabularContainerTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` 
+
+30.
+```json
+[{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (isTransparentContentTag(name)) {"]}], "deletions": [], "modifications": []}]
+``` [
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (name.equals(\"style\") || name.equals(\"title\")) {"]}]},
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (name.equals(\"base\") || name.equals(\"command\") || name.equals(\"link\") || name.equals(\"meta\") || name.equals(\"noframes\") || name.equals(\"style\") || name.equals(\"title\")) {"]}]},
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (name.equals(\"base\") || name.equals(\"basefont\") || name.equals(\"bgsound\") || name.equals(\"command\") || name.equals(\"link\") || name.equals(\"meta\") || name.equals(\"noframes\") || name.equals(\"style\") || name.equals(\"title\")) {"]}]},
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (name.equalsIgnoreCase(\"base\") || name.equalsIgnoreCase(\"basefont\") || name.equalsIgnoreCase(\"bgsound\") || name.equalsIgnoreCase(\"command\") || name.equalsIgnoreCase(\"link\") || name.equalsIgnoreCase(\"meta\") || name.equalsIgnoreCase(\"noframes\") || name.equalsIgnoreCase(\"style\") || name.equalsIgnoreCase(\"title\")) {"]}]},
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "insertions": [{"line_number": 283, "new_lines": ["                    } else if (name.equalsAny(\"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]}]},
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "deletions": [283]},
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "modifications": [{"line_number": 283, "modified_line": "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"style\", \"title\")) {"}]},
+{"file_name": "org/jsoup/parser/TreeBuilderState.java", "target_lines": [["283", "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\", \"title\")) {"]], "modifications": [{"line_number": 283, "modified_line": "                    } else if (StringUtil.in(name, \"base\", \"basefont\", \"bgsound\", \"command\", \"link\", \"meta\", \"noframes\", \"style\") || name.equals(\"title\")) {"}]
+]

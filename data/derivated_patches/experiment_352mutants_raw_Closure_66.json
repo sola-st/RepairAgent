@@ -1,0 +1,1322 @@
+
+    {
+        "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+        "insertions": [
+            {
+                "line_number": 516,
+                "new_lines": [
+                    "          if (NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                    "            ensureTyped(t, n, STRING_TYPE);",
+                    "          }"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+    
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && t != null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else {",
+                        "            // Handle case when t is null",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && t != null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else {",
+                        "            // Handle case when t is null",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() || t == null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else {",
+                        "            ensureTyped(t, n, OBJECT_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else {",
+                        "            ensureTyped(t, n, OBJECT_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else if (t == null) {",
+                        "            ensureTyped(t, n, OBJECT_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else if (t != null) {",
+                        "            ensureTyped(t, n, OBJECT_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else if (t == null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          } else {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (!n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (!n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          ensureTyped(t, n, STRING_TYPE);"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Adding new mutation here"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Adding new mutation here",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Another new mutation here"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Another new mutation here",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation for testing here"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Mutation for testing here",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Potential fix attempt"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Potential fix attempt",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // New mutation added"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // New mutation added",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Another mutation for testing"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Another mutation for testing",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation test case here"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Mutation test case here",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // New mutation for validation"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // New mutation for validation",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Code mutation here"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Code mutation here",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation added for testing"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          // Mutation added for testing",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+  { "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+    "insertions": [
+        { "line_number": 516, "new_lines": [ "          if (n.isObjectLitKey() && NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, STRING_TYPE);", "          }" ] },
+        { "line_number": 517, "new_lines": [ "          if (!n.isObjectLitKey()) {", "            ensureTyped(t, n, STRING_TYPE);", "          }" ] }
+    ]
+  }
+
+  
+  {
+    "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+    "insertions": [
+      {
+        "line_number": 516,
+        "new_lines": [
+          "          if (n.isObjectLitKey()) {",
+          "            ensureTyped(t, n, STRING_TYPE);",
+          "          }",
+          "          // Added mutation: Checking for object literal key parent before ensuring type",
+          "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+          "            ensureTyped(t, n, STRING_TYPE);",
+          "          }"
+        ]
+      },
+      {
+        "line_number": 517,
+        "new_lines": [
+          "          if (n.isObjectLitKey()) {",
+          "            ensureTyped(t, n, STRING_TYPE);",
+          "          }",
+          "          // Added mutation: Checking for object literal key parent before ensuring type",
+          "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+          "            ensureTyped(t, n, STRING_TYPE);",
+          "          }"
+        ]
+      }
+    ]
+  }
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey() && n.getParent() != null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && n.getParent() == null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey() && n.getGrandparent() != null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && n.getGrandparent() == null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey() && n.getPrevious() != null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && n.getPrevious() == null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey() && n.getNext() != null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && n.getNext() == null) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey() && n.hasChildren()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && !n.hasChildren()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey() && n.hasSiblings()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey() && !n.hasSiblings()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, STRING_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, STRING_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, NUMBER_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, NUMBER_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, BOOLEAN_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 517, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, BOOLEAN_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, OBJECT_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 517, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, OBJECT_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, ARRAY_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, ARRAY_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, STRING_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, STRING_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, NUMBER_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, NUMBER_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, BOOLEAN_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 517, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, BOOLEAN_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, OBJECT_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 517, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, OBJECT_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, ARRAY_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, ARRAY_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, STRING_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, STRING_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, NUMBER_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, NUMBER_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, BOOLEAN_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 517, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n)) {", "            ensureTyped(t, n, BOOLEAN_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 516, "new_lines": ["          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {", "            ensureTyped(t, n, OBJECT_TYPE);", "          }"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeCheck.java", "insertions": [{"line_number": 517, "new_lines": ["          if (n.isObjectLitKey()) {", "            ensureTyped(t, n, OBJECT_TYPE);", "          }"]}]}
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added an extra ensureTyped call for STRING_TYPE"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for !NodeUtil.isObjectLitKey"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for !NodeUtil.isObjectLitKey"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added duplicate ensureTyped call"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for n.isObjectLitKey"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for !NodeUtil.isObjectLitKey"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed duplicate ensureTyped call"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added an extra ensureTyped call for STRING_TYPE"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added duplicate ensureTyped call"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added a new conditional block"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for !NodeUtil.isObjectLitKey"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added an extra ensureTyped call for STRING_TYPE"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for !NodeUtil.isObjectLitKey"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for n.isObjectLitKey"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for !NodeUtil.isObjectLitKey"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added a new conditional block"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeCheck.java",
+            "insertions": [
+                {
+                    "line_number": 516,
+                    "new_lines": [
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Removed the check for !NodeUtil.isObjectLitKey"
+                    ]
+                },
+                {
+                    "line_number": 517,
+                    "new_lines": [
+                        "          if (!NodeUtil.isObjectLitKey(n, n.getParent())) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          if (n.isObjectLitKey()) {",
+                        "            ensureTyped(t, n, STRING_TYPE);",
+                        "          }",
+                        "          // Mutation: Added duplicate ensureTyped call"
+                    ]
+                }
+            ]
+        }
+    ]
+}

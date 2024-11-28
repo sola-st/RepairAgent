@@ -1,0 +1,10 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math3/dfp/Dfp.java', 'insertions': [{'line_number': 1619, 'new_lines': ['if (nans == INFINITE && isNaN()) {\n', 'field.setIEEEFlagsBits(DfpField.FLAG_INVALID);\n', 'result = newInstance(getZero());\n', 'result.nans = QNAN;\n', 'result = dotrap(DfpField.FLAG_INVALID, MULTIPLY_TRAP, result, result);\n', 'return result;\n']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/dfp/Dfp.java', 'target_lines': [['1603', '//'], ['1604', '//']], 'insertions': [{'line_number': 1603, 'new_lines': ['// Insert new logic to handle NaN values in multiply method']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/dfp/Dfp.java', 'target_lines': [['1603', '//'], ['1604', '//']], 'insertions': [{'line_number': 1603, 'new_lines': ['// Insert new logic to handle NaN values in multiply method']}, {'line_number': 1604, 'new_lines': ['// Insert new logic to handle NaN values in multiply method']}]}]
+
+

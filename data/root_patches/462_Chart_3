@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1064, 'modified_line': 'copy.add((TimeSeriesDataItem) clone.clone());'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [{'line_number': 1057, 'new_lines': ['// Insert new line(s) here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1064, 'modified_line': 'copy.add(clone);'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [{'line_number': 1057, 'new_lines': ['copy.data = new java.util.ArrayList(); // Initialize copy data to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'modifications': [{'line_number': 1064, 'modified_line': 'copy.add((TimeSeriesDataItem) clone.clone());'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [{'line_number': 1057, 'new_lines': ['copy.data = new java.util.ArrayList(); // Initialize copy data to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'modifications': [{'line_number': 1064, 'modified_line': 'copy.add((TimeSeriesDataItem) clone.clone()); // Adjusted the way data is added to the copy'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [{'line_number': 1057, 'new_lines': ['copy.data = new java.util.ArrayList(); // Initialize copy data to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'modifications': [{'line_number': 1064, 'modified_line': 'copy.add((TimeSeriesDataItem) clone.clone()); // Adjusted the way data is added to the copy to ensure correct copying'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1057, 'modified_line': 'copy.data = new java.util.ArrayList(); // Initialize copy data to fix the bug'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1064, 'modified_line': 'copy.add((TimeSeriesDataItem) clone.clone()); // Adjusted the way data is added to the copy to ensure correct copying'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [{'line_number': 1057, 'new_lines': ['copy.data = new java.util.ArrayList(); // Initialize copy data to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'insertions': [{'line_number': 1048, 'new_lines': ['    public TimeSeries createCopy(int start, int end) throws CloneNotSupportedException {', '        if (start < 0) {', '            throw new IllegalArgumentException("Requires start >= 0.");', '        }', '        if (end < start) {', '            throw new IllegalArgumentException("Requires start <= end.");', '        }', '        try {', '            ByteArrayOutputStream bos = new ByteArrayOutputStream();', '            ObjectOutputStream out = new ObjectOutputStream(bos);', '            out.writeObject(this);', '', '            ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());', '            ObjectInputStream in = new ObjectInputStream(bis);', '            return (TimeSeries) in.readObject();', '        } catch (IOException | ClassNotFoundException e) {', '            e.printStackTrace();', '            return null;', '        }', '    }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [{'line_number': 1057, 'new_lines': ['copy.data = new java.util.ArrayList(); // Initialize copy data to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'modifications': [{'line_number': 1064, 'modified_line': 'copy.add((TimeSeriesDataItem) clone.clone()); // Adjusted the way data is added to the copy to ensure correct copying'}]}]
+
+###Fix:
+[{'file_name': 'org/jfree/data/time/TimeSeries.java', 'target_lines': [['1057', '//']], 'insertions': [{'line_number': 1057, 'new_lines': ['copy.data = new java.util.ArrayList(); // Initialize copy data to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+

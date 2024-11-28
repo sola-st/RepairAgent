@@ -1,0 +1,1449 @@
+
+{
+    "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+    "insertions": [
+        {
+            "line_number": 92,
+            "new_lines": [
+                "          if (lhs.getQualifiedName() == null) {",
+                "            return false;",
+                "          }"
+            ]
+        },
+        {
+            "line_number": 125,
+            "new_lines": [
+                "          if (lhs.getType() == Token.GETPROP &&",
+                "              lhs.getLastChild().getString().equals(\"prototype\")) {",
+                "            return false;",
+                "          }"
+            ]
+        },
+        {
+            "line_number": 132,
+            "new_lines": [
+                "          if (lhs.getQualifiedName() == null) {",
+                "            return false;",
+                "          }"
+            ]
+        }
+    ],
+    "deletions": [129],
+    "modifications": []
+}
+    {
+        "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+        "insertions": [
+            {
+                "line_number": 92,
+                "new_lines": [
+                    "        if (lhs != null) { // Added null check to potentially fix the bug\n",
+                    "            // Perform necessary operations when lhs is not null\n",
+                    "        }"
+                ]
+            },
+            {
+                "line_number": 125,
+                "new_lines": [
+                    "          if (lhs.getQualifiedName() == null) { // Modified condition to potentially fix the bug\n",
+                    "            return false;",
+                    "          }"
+                ]
+            },
+            {
+                "line_number": 132,
+                "new_lines": [
+                    "          if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                    "            return false;",
+                    "          }"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }  
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().indexOf(\".prototype.\") > -1) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().indexOf(\"prototype\") > -1) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().startsWith(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "          if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\".prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null || lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null || lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null || lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().startsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().startsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().startsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                },
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                },
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                },
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "            return false;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                },
+                {
+                    "line_number": 92,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                },
+                {
+                    "line_number": 125,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                },
+                {
+                    "line_number": 132,
+                    "new_lines": [
+                        "        if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n",
+                        "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "deletions": [125]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 132,
+                    "modified_line": "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 92,
+                    "modified_line": "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 132,
+                    "modified_line": "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "deletions": [132]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 125,
+                    "modified_line": "        if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null || lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\") && lhs.getQualifiedName().startsWith(\"test\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().toString().equals(\"Object\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().toString().equals(\"Function\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().toString().equals(\"Array\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().toString().equals(\"Number\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().isFunctionType()) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().isObject()) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().isArrayType()) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\") && lhs.getJSType().isUnknownType()) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().isEmpty()) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null || lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().endsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().endsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return true;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n", "                return false;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n", "                return false;"]}, {"line_number": 92, "new_lines": ["        if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n", "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"]}, {"line_number": 125, "new_lines": ["        if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n", "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"]}, {"line_number": 132, "new_lines": ["        if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Inserted new condition to potentially fix the bug\n", "            report(lhs, CheckLevel.WARNING, USED_GLOBAL_THIS);"]}]}],
+        "modifications": [{"line_number": 129, "modified_line": "          if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n"}]
+    }
+   		
+   		
+  		
+  	
+		
+  	
+		
+  	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n", "                return false;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n", "                return false;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n", "                return true;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().isEmpty()) { // Modified condition to potentially fix the bug\n", "                return false;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().startsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n", "                return false;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n", "                return true;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n", "                return null;"]}]},
+        {"file_name": "com/google/javascript/jscomp/CheckGlobalThis.java", "insertions": [{"line_number": 129, "new_lines": ["            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n", "                return true;"]}]}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() == null || !lhs.getQualifiedName().contains(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\".prototype\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contains(\"prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && !lhs.getQualifiedName().contains(\"prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().isEmpty()) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().equalsIgnoreCase(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().contentEquals(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().endsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckGlobalThis.java",
+            "insertions": [
+                {
+                    "line_number": 129,
+                    "new_lines": [
+                        "            if (lhs.getQualifiedName() != null && lhs.getQualifiedName().startsWith(\".prototype.\")) { // Modified condition to potentially fix the bug\n",
+                        "                return false;"
+                    ]
+                }
+            ]
+        }
+    ]
+}

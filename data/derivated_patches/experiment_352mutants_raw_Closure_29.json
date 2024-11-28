@@ -1,0 +1,1781 @@
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "if (refs.isEmpty()) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "if (refs.size() > 1) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "if (refs.get(0).getNode().isGetElem() && refs.get(0).getParent().isCall()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "if (refs.size() == 1) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "if (!refs.isEmpty()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "if (refs.get(0) != null) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "if (refs.size() > 2) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "if (refs.get(0).isName()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "if (refs.get(0).isGetProp() && refs.get(0).getParent().isAssign()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "if (!refs.isEmpty()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "if (refs.size() == 0) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "if (refs.get(0).isAssign()) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "if (refs.size() == 0) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "if (refs.size() > 0) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "if (refs.get(0).isGetProp() && refs.get(0).getParent().isCall()) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "if (refs.size() > 1) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "if (refs.get(0).isCall()) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "if (refs.get(0).isCall() && refs.get(0).getParent().isAssign()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "if (refs.isEmpty()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "if (!refs.isEmpty()) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "if (refs.get(0).isAssign()) {",
+                        "    return true;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(null);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.get(0));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.subList(0, 2));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(Collections.emptyList());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs); // Fixing the bug by passing the correct argument"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(referenceInfo.references);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs); // Passing refs to isInlinableObject method"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(getReferences());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.get(1));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(getLocalReferences());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.subList(2, 4));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.subList(1, 3));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.get(2));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(getReferences().subList(0, 2));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.subList(1, 4));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(getReferences().subList(2, 4));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(new ArrayList<>());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(refs.subList(0, 1));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(Collections.singletonList(refs.get(0)));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(getReferences().subList(1, 3));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "isInlinableObject(Collections.singletonList(refs.get(1)));"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs) && true;"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs) || true;"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs) == false;"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs) && false;"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs) || false;"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+  "mutations": [
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 157,
+          "new_lines": [
+            "// Mutant 1: Adding a comment here",
+            "return isInlinableObject(refs);"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 157,
+          "new_lines": [
+            "// Mutant 2: Changing the method call",
+            "return isInlinableObject(referenceInfo.references);"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 157,
+          "new_lines": [
+            "// Mutant 3: Modifying the method call",
+            "return isInlinableObject(refs, true);"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 181,
+          "new_lines": [
+            "// Mutant 4: Adding a comment here",
+            "//if (!val.isObjectLit()) {"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 181,
+          "new_lines": [
+            "// Mutant 5: Changing the condition",
+            "if (val.isObjectLit()) {"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 181,
+          "new_lines": [
+            "// Mutant 6: Modifying the condition",
+            "if (val.isObjectLit() && hasSelfReferentialAssignment(val)) {"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 216,
+          "new_lines": [
+            "// Mutant 7: Adding a comment here",
+            "// Logic for checking self-referential assignments"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 216,
+          "new_lines": [
+            "// Mutant 8: Changing the condition",
+            "if (child.isGetterDef() || child.isSetterDef() || child.isSomeOtherType()) {"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 216,
+          "new_lines": [
+            "// Mutant 9: Modifying the condition",
+            "if (!child.isGetterDef() || !child.isSetterDef()) {"
+          ]
+        }
+      ]
+    },
+    {
+      "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+      "insertions": [
+        {
+          "line_number": 240,
+          "new_lines": [
+            "// Mutant 10: Inserting new logic here",
+            "return true;"
+          ]
+        }
+      ]
+    }
+  ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 1: Inserted new line for mutation",
+                        "isInlinableObject(refs); // Mutant 1"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 1: Inserted new line for mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 1: Inserted new line for mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 2: Inserted new line for mutation",
+                        "isInlinableObject(referenceInfo.references); // Mutant 2"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 2: Inserted new line for mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 2: Inserted new line for mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 3: Inserted new line for mutation",
+                        "isInlinableObject(refs); // Mutant 3"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 3: Inserted new line for mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 3: Inserted new line for mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 4: Inserted new line for mutation",
+                        "isInlinableObject(refs); // Mutant 4"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 4: Inserted new line for mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 4: Inserted new line for mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 5: Inserted new line for mutation",
+                        "isInlinableObject(refs); // Mutant 5"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 5: Inserted new line for mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 5: Inserted new line for mutation at line 216"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 1: Inserted mutation at line 157",
+                        "isInlinableObject(refs); // Mutant 1"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 1: Inserted mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 1: Inserted mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 2: Inserted mutation at line 157",
+                        "return isInlinableObject(refs); // Mutant 2"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 2: Inserted mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 2: Inserted mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 3: Inserted mutation at line 157",
+                        "isInlinableObject(refs); // Mutant 3"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 3: Inserted mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 3: Inserted mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 4: Inserted mutation at line 157",
+                        "return isInlinableObject(refs); // Mutant 4"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 4: Inserted mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 4: Inserted mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 5: Inserted mutation at line 157",
+                        "isInlinableObject(refs); // Mutant 5"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 5: Inserted mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 5: Inserted mutation at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 6: Inserted mutation at line 157",
+                        "return isInlinableObject(refs); // Mutant 6"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 6: Inserted mutation at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 6: Inserted mutation at line 216"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 1: Adding a new condition to check for a specific property before returning true",
+                        "if (val.hasProperty('specificProperty')) {",
+                        "return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 2: Changing the condition to return false always",
+                        "return false;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 3: Modifying the statement to skip this block of code",
+                        "continue;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [
+                181
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 5: Adding a log statement before the loop",
+                        "System.out.println('Entering the loop for self-referential assignments check');"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 6: Adding a new condition to check for a specific value in the loop",
+                        "if (childVal == specificValue) {",
+                        "return false;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 7: Removing the condition and always returning true",
+                        "return true;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [
+                181
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 9: Modifying the statement to break out of the loop",
+                        "break;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 10: Changing the loop control variable in the for loop",
+                        "for (Node child = val.getLastChild(); child != null; child = child.getPrevious()) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [
+                157
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 12: Changing the loop condition to always true",
+                        "for (Node child = val.getFirstChild(); true; child = child.getNext()) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [],
+            "deletions": [
+                181
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 14: Adding a new condition to skip the loop",
+                        "if (val.isEmpty()) {",
+                        "break;",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 15: Changing the loop control variable to null initially",
+                        "Node child = null;",
+                        "for (child = val.getFirstChild(); child != null; child = child.getNext()) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 1: Changing condition in isInlinableObject method",
+                        "if (parent.isGetProp() && gramps.isCall() && gramps.getFirstChild() != parent) {"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 1: Adding more conditions for refinement",
+                        "if (!isVarOrAssignExprLhs(name) && isVarOrAssignExprRhs(name)) {"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 1: Modifying the condition inside the loop",
+                        "if (childVal == null) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 2: Changing the condition logic in isInlinableObject",
+                        "if (!parent.isGetProp() && gramps.isCall()) {"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 2: Adding a new condition to isVarOrAssignExprLhs",
+                        "if (!isVarOrAssignExprLhs(name) && isVarOrAssignExprRhs(name) && val != null) {"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 2: Changing the condition for childVal check",
+                        "if (childVal != null) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 3: Reversing the conditions in isInlinableObject method",
+                        "if (parent.isCall() && gramps.isGetProp() && gramps.getFirstChild() == parent) {"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 3: Adding an additional condition to isVarOrAssignExprLhs",
+                        "if (!isVarOrAssignExprLhs(name) && val != null) {"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 3: Modifying the childVal null check condition",
+                        "if (childVal != val) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 4: Changing the conditions for isInlinableObject to return true",
+                        "if (parent.isGetProp() && gramps.isCall() && gramps.getFirstChild() != parent && name != null) {"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 4: Modifying the condition for isVarOrAssignExprLhs",
+                        "if (!isVarOrAssignExprLhs(name) && val == null) {"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 4: Reversing the condition for childVal null check",
+                        "if (childVal == val) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 5: Modifying the logic for isInlinableObject to return false",
+                        "if (!parent.isGetProp() && !gramps.isCall()) {"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 5: Changing the condition for isVarOrAssignExprLhs to return false",
+                        "if (isVarOrAssignExprLhs(name) && val == null) {"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 5: Adding a condition to check childVal is not null",
+                        "if (childVal != null) {"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs); // Mutant 1"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs); // Mutant 2"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs); // Mutant 3"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs); // Mutant 4"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 157",
+                        "return isInlinableObject(refs); // Mutant 5"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutation 1: Modify the condition to include a different check",
+                        "if (!val.isObjectLit() && hasSelfReferentialAssignment(val)) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutation 2: Change the logical operator in the condition",
+                        "if (!val.isObjectLit() && !hasSelfReferentialAssignment(val)) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutation 3: Negate the condition",
+                        "if (!(val.isObjectLit() || hasSelfReferentialAssignment(val))) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutation 4: Add a new line of code for debugging purposes",
+                        "logger.debug(\"Self-referential assignment detected at line 181\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutation 5: Modify the condition to include additional checks",
+                        "if (!val.isObjectLit() || hasSelfReferentialAssignment(val) || isCircularReference(val)) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutation 6: Change the condition to always return true",
+                        "if (true) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutation 7: Modify the logic for handling self-referential assignments",
+                        "if (!val.hasNoReferences() || hasSelfReferentialAssignment(val)) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutation 8: Change the condition to check for specific reference types",
+                        "if (val.hasReferencesOfType('self')) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutation 9: Introduce a new check in the condition",
+                        "if (!val.isObjectLit() || hasCircularDependency(val)) {",
+                        "    return false;",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 157",
+                        "return !val.isObjectLit() || hasSelfReferentialAssignment(val);"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 1: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 157",
+                        "return !val.isObjectLit() && hasSelfReferentialAssignment(val);"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 2: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 157",
+                        "return !val.isObjectLit() && !hasSelfReferentialAssignment(val);"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 3: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 157",
+                        "return val.isObjectLit() || hasSelfReferentialAssignment(val);"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 4: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/InlineObjectLiterals.java",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 157",
+                        "return val.isObjectLit() && hasSelfReferentialAssignment(val);"
+                    ]
+                },
+                {
+                    "line_number": 181,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 181"
+                    ]
+                },
+                {
+                    "line_number": 216,
+                    "new_lines": [
+                        "// Mutant 5: Inserted line to fix the bug at line 216"
+                    ]
+                }
+            ]
+        }
+    ]
+}

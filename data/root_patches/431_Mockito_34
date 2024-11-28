@@ -1,0 +1,25 @@
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 106, 'modified_line': 'if (matcher instanceof CapturesArguments) {'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 106, 'modified_line': 'if (m instanceof CapturesArguments) {'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'insertions': [{'line_number': 106, 'new_lines': ['    public List<Object> captureArgumentsFrom(PrintableInvocation invocation) {', '        if (invocation instanceof PrintingFriendlyInvocation) {', '            PrintingFriendlyInvocation friendlyInvocation = (PrintingFriendlyInvocation) invocation;', '            List<Object> arguments = friendlyInvocation.getArguments();', '            if (arguments != null) {', '                return arguments;', '            }', '        }', '        return Collections.emptyList();', '    }']}], 'deletions': [106], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 109, 'modified_line': 'k = Math.min(k, i.getArguments().length - 1);'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'target_lines': [['106', '            if (m instanceof CapturesArguments) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 106, 'modified_line': '            if (m instanceof CapturesArguments) {'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 106, 'modified_line': 'if (m instanceof CapturesArguments && k < i.getArguments().length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 109, 'modified_line': 'for (int k = 0; k < i.getArguments().length; k++) {'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/invocation/InvocationMatcher.java', 'target_lines': [['106', '            if (m instanceof CapturesArguments) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 106, 'modified_line': '            if (m instanceof CapturesArguments && k < i.getArguments().length) {'}]}]
+
+

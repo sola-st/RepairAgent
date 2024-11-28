@@ -1,0 +1,142 @@
+[
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1138, "modified_line": "// clone.classNames();"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["// Temporary fix for clone.classNames()"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1138, "modified_line": "clone.attributes().put(\"class\", StringUtil.join(clone.classNames(), \" \"));"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["// Fixing clone.classNames() here"]}], "deletions": [1138], "modifications": []}
+][
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames.addAll(classNames);"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames.clear();"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new HashSet<>(classNames);"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new ArrayList<>(classNames);"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new LinkedHashSet<>(classNames);"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new TreeSet<>(classNames);"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new HashSet<>(Arrays.asList(classNames.toArray(new String[0])));"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new HashSet<>(Arrays.asList(classNames.toArray(new String[classNames.size()])));"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new HashSet<>(List.copyOf(classNames));"]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], 
+"insertions": [
+    {"line_number": 1138, "new_lines": ["        clone.classNames = new HashSet<>(List.copyOf(classNames));"]}
+], 
+"deletions": [],
+"modifications": []
+}
+][
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new LinkedHashSet<>(classNames);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames.addAll(classNames);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames.clear();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new HashSet<>(classNames);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new TreeSet<>(classNames);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new LinkedHashSet<>(classNames));"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new HashSet<>(classNames));"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new TreeSet<>(classNames));"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new LinkedHashSet<>(classNames); // Fixing the bug by initializing classNames set properly"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new LinkedHashSet<>(classNames)); // Initializing classNames set correctly"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new HashSet<>(classNames)); // Correcting classNames initialization"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new TreeSet<>(classNames)); // Properly initializing classNames set"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new LinkedHashSet<>(classNames); // Initializing classNames set to avoid the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new HashSet<>(classNames); // Fixing classNames initialization bug"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new TreeSet<>(classNames); // Initialize classNames properly"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new LinkedHashSet<>(classNames)); // Correctly set classNames"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new HashSet<>(classNames)); // Setting classNames correctly"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new TreeSet<>(classNames)); // Properly setting classNames"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new LinkedHashSet<>(classNames)); // Initialization of classNames corrected"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new HashSet<>(classNames)); // Fixed classNames initialization issue"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(new TreeSet<>(classNames)); // Correct initialization of classNames set"}]}
+][
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new LinkedHashSet<>(classNames); // Mutation 1"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames.addAll(classNames); // Mutation 2"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new LinkedHashSet<>(classNames)); // Mutation 3"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(classNames); // Mutation 4"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new HashSet<>(classNames)); // Mutation 5"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new ArrayList<>(classNames)); // Mutation 6"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new TreeSet<>(classNames)); // Mutation 7"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new LinkedHashSet<>(Arrays.asList(classNames))); // Mutation 8"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new HashSet<>(Arrays.asList(classNames))); // Mutation 9"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new ArrayList<>(Arrays.asList(classNames))); // Mutation 10"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new TreeSet<>(Arrays.asList(classNames))); // Mutation 11"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new LinkedHashSet<>(List.of(classNames))); // Mutation 12"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new HashSet<>(List.of(classNames))); // Mutation 13"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new ArrayList<>(List.of(classNames))); // Mutation 14"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new TreeSet<>(List.of(classNames))); // Mutation 15"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["Set<String> classSet = new LinkedHashSet<>(classNames); clone.setClassNames(classSet); // Mutation 16"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["Set<String> classSet = new HashSet<>(classNames); clone.setClassNames(classSet); // Mutation 17"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["Set<String> classSet = new ArrayList<>(classNames); clone.setClassNames(classSet); // Mutation 18"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["Set<String> classSet = new TreeSet<>(classNames); clone.setClassNames(classSet); // Mutation 19"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new LinkedHashSet<>(classNames); // Mutation 20"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames.addAll(classNames); // Mutation 21"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new LinkedHashSet<>(classNames)); // Mutation 22"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(classNames); // Mutation 23"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new HashSet<>(classNames)); // Mutation 24"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new ArrayList<>(classNames)); // Mutation 25"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new TreeSet<>(classNames)); // Mutation 26"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new LinkedHashSet<>(Arrays.asList(classNames))); // Mutation 27"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new HashSet<>(Arrays.asList(classNames))); // Mutation 28"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new ArrayList<>(Arrays.asList(classNames))); // Mutation 29"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.setClassNames(new TreeSet<>(Arrays.asList(classNames))); // Mutation 30"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new LinkedHashSet<>(classNames); // Mutation 1"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames.clear(); // Mutation 2"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new HashSet<>(classNames); // Mutation 3"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new TreeSet<>(classNames); // Mutation 4"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new HashSet<>(classNames); // Mutation 5"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [{"line_number": 1138, "new_lines": ["clone.classNames = new LinkedHashSet<>(classNames); // Mutation 6"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        // clone.classNames(); // Mutation 7"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        return clone.classNames; // Mutation 8"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.classNames = classNames; // Mutation 9"}]},
+{"file_name": "org/jsoup/nodes/Element.java", "target_lines": [["1138", "        clone.classNames();"]], "insertions": [], "deletions": [1138], "modifications": [{"line_number": 1138, "modified_line": "        clone.setClassNames(classNames); // Mutation 10"}]}
+]

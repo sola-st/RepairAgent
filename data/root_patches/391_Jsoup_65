@@ -1,0 +1,52 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || StringUtil.in(next.nodeName(), "html"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 360, 'modified_line': '        clearStackToContext("tbody", "tfoot", "thead", "tr");'}, {'line_number': 364, 'modified_line': '        clearStackToContext("tr");'}]}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1036, 'modified_line': '                    if (name.equals("tr") || StringUtil.in(name, "th", "td")) {'}, {'line_number': 1096, 'modified_line': '                if (StringUtil.in(name, "th", "td")) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || next.nodeName().equals("html"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || next.nodeName().equals("html") || StringUtil.in(next.nodeName(), "tbody", "tfoot", "thead", "tr"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || next.nodeName().equals("html"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || next.nodeName().equals("html"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || StringUtil.in(next.nodeName(), "html") || StringUtil.in(next.nodeName(), "table", "tbody", "tfoot", "thead", "tr"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || StringUtil.in(next.nodeName(), "html") || StringUtil.in(next.nodeName(), "table", "tbody", "tfoot", "thead", "tr"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 360, 'modified_line': 'clearStackToContext("tbody", "tfoot", "thead", "tr");'}]}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'modifications': [{'line_number': 1036, 'modified_line': 'if (name.equals("tr") || StringUtil.in(name, "th", "td")) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 360, 'modified_line': 'clearStackToContext("tbody", "tfoot", "thead", "tr");'}, {'line_number': 364, 'modified_line': 'clearStackToContext("tr");'}]}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1036, 'modified_line': 'if (name.equals("tr") || StringUtil.in(name, "th", "td")) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || next.nodeName().equals("html") || StringUtil.in(next.nodeName(), "tr"))'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 367, 'modified_line': 'if (StringUtil.in(next.nodeName(), nodeNames) || next.nodeName().equals("html") || StringUtil.in(next.nodeName(), "tr"))'}]}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1036, 'modified_line': 'if (name.equals("tr") || StringUtil.in(name, "th", "td")) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'target_lines': [['360', '        clearStackToContext("tbody", "tfoot", "thead");'], ['364', '        clearStackToContext("tr");']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 360, 'modified_line': '        clearStackToContext("tbody", "tfoot", "thead", "tr");'}, {'line_number': 364, 'modified_line': '        clearStackToContext("tr");'}]}, {'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'target_lines': [['1036', '                    if (name.equals("tr")) {'], ['1096', '                if (StringUtil.in(name, "th", "td")) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1036, 'modified_line': '                    if (name.equals("tr") || StringUtil.in(name, "th", "td")) {'}]}]
+
+

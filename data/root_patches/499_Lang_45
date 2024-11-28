@@ -1,0 +1,34 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 605, 'new_lines': ['    public static String abbreviate(String str) {', '        if (str == null || str.isEmpty()) {', '            return "";', '        }', '', '        StringBuilder abbreviation = new StringBuilder();', '        String[] words = str.split("\\\\s+");', '', '        for (String word : words) {', '            if (!word.isEmpty()) {', '                abbreviation.append(word.charAt(0));', '            }', '        }', '', '        return abbreviation.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'target_lines': [['616', '//']], 'insertions': [{'line_number': 616, 'new_lines': ['        if (lower > str.length()) {', '            return str;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (lower > str.length()) {', '            return str;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (lower > str.length()) {', '            return str;', '        }', '        if (upper < lower) {', '            return str.substring(0, upper);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (upper > str.length()) {', '            upper = str.length();', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (upper > str.length()) {', '            upper = str.length();', '        }', '        if (upper < lower) {', '            upper = lower;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (upper > str.length()) {', '            upper = str.length();', '        }', '        if (upper < lower) {', '            upper = lower;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (upper > str.length()) {', '            upper = str.length();', '        }', '        if (upper < lower) {', '            upper = Math.min(upper, str.length());', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (upper > str.length()) {', '            upper = Math.min(upper, str.length());', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (upper > str.length()) {', '            upper = Math.min(upper, str.length());', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/WordUtils.java', 'insertions': [{'line_number': 616, 'new_lines': ['        if (upper > str.length()) {', '            upper = Math.min(upper, str.length());', '        }']}]}]
+
+

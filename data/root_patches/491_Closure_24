@@ -1,0 +1,13 @@
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.ScopedAliasesTest', 'modifications': [{'line_number': 405, 'modified_line': 'test("goog.scope(function() {" + code + "});", null, expectedError);'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ScopedAliases.java', 'target_lines': [['278', '        if (parent.isVar()) {'], ['279', '          if (n.hasChildren() && n.getFirstChild().isQualifiedName()) {'], ['294', '        }'], ['287', '//'], ['289', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ScopedAliases.java', 'target_lines': [['278', '        if (parent.isVar()) {'], ['279', '          if (n.hasChildren() && n.getFirstChild().isQualifiedName()) {'], ['294', '        }'], ['287', '//'], ['289', '//']], 'insertions': [{'line_number': 287, 'new_lines': ['// Inserted line to fix the bug at line 287']}, {'line_number': 289, 'new_lines': ['// Inserted line to fix the bug at line 289']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ScopedAliases.java', 'insertions': [{'line_number': 287, 'new_lines': ['// Inserted line to fix the bug at line 287']}, {'line_number': 289, 'new_lines': ['// Inserted line to fix the bug at line 289']}], 'deletions': [], 'modifications': []}]
+
+

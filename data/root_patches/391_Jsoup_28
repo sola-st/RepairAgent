@@ -1,0 +1,43 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [{'line_number': 3, 'new_lines': ['import java.util.HashMap;']}, {'line_number': 61, 'new_lines': ['private static final HashMap<String, Integer> full = new HashMap<>();']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [{'line_number': 3, 'new_lines': ['import java.util.HashMap;']}, {'line_number': 61, 'new_lines': ['private static final HashMap<String, Integer> full = new HashMap<>();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 && charval <= 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 || charval > 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [{'line_number': 3, 'new_lines': ['import java.util.Map;', 'import java.util.HashMap;', 'import java.util.regex.Matcher;', 'import java.util.regex.Pattern;']}], 'deletions': [], 'modifications': [{'line_number': 1, 'modified_line': 'import java.util.HashMap;'}, {'line_number': 61, 'modified_line': 'private static final Map<String, String> htmlEntities = new HashMap<>();'}, {'line_number': 103, 'modified_line': 'Matcher matcher = pattern.matcher(string);'}, {'line_number': 108, 'modified_line': 'StringBuilder sb = new StringBuilder();'}, {'line_number': 109, 'modified_line': 'Map<String, String> htmlEntities = new HashMap<>();'}, {'line_number': 121, 'modified_line': 'while (matcher.find()) {'}, {'line_number': 122, 'modified_line': 'sb.append(string, lastIndex, matcher.start());'}, {'line_number': 127, 'modified_line': 'sb.append(htmlEntities.getOrDefault(entity, "&" + entity + ";"));'}, {'line_number': 129, 'modified_line': 'sb.append(string.substring(lastIndex));'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 || charval > 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [{'line_number': 3, 'new_lines': ['import java.util.Map;', 'import java.util.HashMap;', 'import java.util.regex.Matcher;', 'import java.util.regex.Pattern;']}], 'deletions': [], 'modifications': [{'line_number': 1, 'modified_line': 'import java.util.HashMap;'}, {'line_number': 61, 'modified_line': 'private static final Map<String, String> htmlEntities = new HashMap<>();'}, {'line_number': 103, 'modified_line': 'Matcher matcher = pattern.matcher(string);'}, {'line_number': 108, 'modified_line': 'StringBuilder sb = new StringBuilder();'}, {'line_number': 109, 'modified_line': 'Map<String, String> htmlEntities = new HashMap<>();'}, {'line_number': 121, 'modified_line': 'while (matcher.find()) {'}, {'line_number': 122, 'modified_line': 'sb.append(string, lastIndex, matcher.start());'}, {'line_number': 127, 'modified_line': 'sb.append(htmlEntities.getOrDefault(entity, "&" + entity + ";");'}, {'line_number': 129, 'modified_line': 'sb.append(string.substring(lastIndex));'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 && charval <= 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 || charval > 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 || charval > 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}, {'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 && charval <= 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 && charval <= 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 || charval > 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 121, 'modified_line': 'if (charval != -1 && charval <= 0xFFFF) {'}, {'line_number': 122, 'modified_line': 'String c = Character.toString((char) charval);'}]}]
+
+

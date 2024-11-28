@@ -1,0 +1,58 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 67, 'modified_line': 'str = str.substring(str.startsWith("\\"") ? 1 : 0, str.endsWith("\\"") ? str.length() - 1 : str.length());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\"")'], ['66', '        {'], ['67', '            str = str.substring(1, str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\"")'], ['72', '            str = str.substring(0, length - 1);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        if (str.startsWith("\\"") || str.startsWith("\'"))'}, {'line_number': 66, 'modified_line': '        {'}, {'line_number': 67, 'modified_line': '            str = str.substring(str.startsWith("\\"") || str.startsWith("\'") ? 1 : 0, str.endsWith("\\"") || str.endsWith("\'") ? str.length() - 1 : str.length());'}, {'line_number': 68, 'modified_line': '        }'}, {'line_number': 70, 'modified_line': '        if (str.endsWith("\\"") || str.endsWith("\'"))'}, {'line_number': 72, 'modified_line': '            str = str.substring(0, (str.endsWith("\\"") || str.endsWith("\'")) ? str.length() - 1 : str.length());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 67, 'modified_line': 'str = str.substring(str.startsWith("\\"") ? 1 : 0, str.endsWith("\\"") ? str.length() - 1 : str.length());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\"")'], ['66', '        {'], ['67', '            str = str.substring(1, str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\"")'], ['72', '            str = str.substring(0, length - 1);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        if (str.startsWith("\\"") || str.startsWith("\'"))'}, {'line_number': 66, 'modified_line': '        {'}, {'line_number': 67, 'modified_line': '            str = str.substring(str.startsWith("\\"") || str.startsWith("\'") ? 1 : 0, str.endsWith("\\"") || str.endsWith("\'") ? str.length() - 1 : str.length());'}, {'line_number': 68, 'modified_line': '        }'}, {'line_number': 70, 'modified_line': '        if (str.endsWith("\\"") || str.endsWith("\'"))'}, {'line_number': 72, 'modified_line': '            str = str.substring(0, (str.endsWith("\\"") || str.endsWith("\'")) ? str.length() - 1 : str.length();'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 72, 'modified_line': '            str = str.substring(0, str.endsWith("\\"") ? str.length() - 1 : str.length());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\"")'], ['66', '        {'], ['67', '            str = str.substring(1, str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\"")'], ['72', '            str = str.substring(0, length - 1);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        if (str.startsWith("\\"") || str.startsWith("\'"))'}, {'line_number': 66, 'modified_line': '        {'}, {'line_number': 67, 'modified_line': '            str = str.substring(str.startsWith("\\"") || str.startsWith("\'") ? 1 : 0, str.endsWith("\\"") || str.endsWith("\'") ? str.length() - 1 : str.length());'}, {'line_number': 68, 'modified_line': '        }'}, {'line_number': 70, 'modified_line': '        if (str.endsWith("\\"") || str.endsWith("\'"))'}, {'line_number': 72, 'modified_line': '            str = str.substring(0, (str.endsWith("\\"") || str.endsWith("\'")) ? str.length() - 1 : str.length());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 67, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}, {'line_number': 72, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.substring(1, str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.substring(0, length - 1);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        if (str.startsWith("\\"") || str.startsWith("\'"))'}, {'line_number': 66, 'modified_line': '        {'}, {'line_number': 67, 'modified_line': '            str = str.substring(str.startsWith("\\"") || str.startsWith("\'") ? 1 : 0, str.endsWith("\\"") || str.endsWith("\'") ? str.length() - 1 : str.length());'}, {'line_number': 68, 'modified_line': '        }'}, {'line_number': 70, 'modified_line': '        if (str.endsWith("\\"") || str.endsWith("\'"))'}, {'line_number': 72, 'modified_line': '            str = str.substring(0, (str.endsWith("\\"") || str.endsWith("\'")) ? str.length() - 1 : str.length());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 67, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}, {'line_number': 72, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.substring(1, str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.substring(0, length - 1);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        if (str.startsWith("\\"") || str.startsWith("\'"))'}, {'line_number': 66, 'modified_line': '        {'}, {'line_number': 67, 'modified_line': '            str = str.substring(str.startsWith("\\"") || str.startsWith("\'") ? 1 : 0, str.endsWith("\\"") || str.endsWith("\'") ? str.length() - 1 : str.length());'}, {'line_number': 68, 'modified_line': '        }'}, {'line_number': 70, 'modified_line': '        if (str.endsWith("\\"") || str.endsWith("\'"))'}, {'line_number': 72, 'modified_line': '            str = str.substring(0, (str.endsWith("\\"") || str.endsWith("\'")) ? str.length() - 1 : str.length();'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 67, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}, {'line_number': 72, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.replaceAll("^\\"|\\"$", "");'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.replaceAll("^\\"|\\"$", "");']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.replaceAll("^\\"|\\"$", "");'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.replaceAll("^\\"|\\"$", "");']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.replaceAll("^\\"|\\"$", "");'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.replaceAll("^\\"|\\"$", "");']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.substring(str.startsWith("\\"") ? 1 : 0, str.endsWith("\\"") ? str.length() - 1 : str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.substring(0, str.endsWith("\\"") ? str.length() - 1 : str.length());']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.substring(str.startsWith("\\"") ? 1 : 0, str.endsWith("\\"") ? str.length() - 1 : str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.substring(0, length - 1);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'target_lines': [['65', '        if (str.startsWith("\\""))'], ['66', '        {'], ['67', '            str = str.substring(str.startsWith("\\"") ? 1 : 0, str.endsWith("\\"") ? str.length() - 1 : str.length());'], ['68', '        }'], ['70', '        if (str.endsWith("\\""))'], ['72', '            str = str.substring(0, length - 1);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 65, 'modified_line': '        if (str.startsWith("\\"") || str.startsWith("\'"))'}, {'line_number': 66, 'modified_line': '        {'}, {'line_number': 67, 'modified_line': '            str = str.substring(str.startsWith("\\"") || str.startsWith("\'") ? 1 : 0, str.endsWith("\\"") || str.endsWith("\'") ? str.length() - 1 : str.length());'}, {'line_number': 68, 'modified_line': '        }'}, {'line_number': 70, 'modified_line': '        if (str.endsWith("\\"") || str.endsWith("\'"))'}, {'line_number': 72, 'modified_line': '            str = str.substring(0, (str.endsWith("\\"") || str.endsWith("\'")) ? str.length() - 1 : str.length();'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Util.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 67, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}, {'line_number': 72, 'modified_line': 'str = str.replaceAll("^\\"|\\"$", "");'}]}]
+
+

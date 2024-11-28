@@ -1,0 +1,25 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/AnalyzePrototypeProperties.java', 'insertions': [{'line_number': 318, 'new_lines': ['    return propertyName.endsWith("prototype");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/AnalyzePrototypeProperties.java', 'insertions': [{'line_number': 318, 'new_lines': ['        if (propertyName.endsWith("prototype")) {', '            return true;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/AnalyzePrototypeProperties.java', 'insertions': [{'line_number': 319, 'new_lines': ["        // Check if the property ends with 'prototype' to identify prototype property assignments involving chained properties", '        if (propertyName.endsWith("prototype")) {', '            return true;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/AnalyzePrototypeProperties.java', 'target_lines': [['318', '          ) {']], 'insertions': [{'line_number': 318, 'new_lines': ['        if (propertyName.endsWith("prototype")) {', '            return true;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/AnalyzePrototypeProperties.java', 'insertions': [{'line_number': 318, 'new_lines': ['        if (propertyName.endsWith("prototype")) {', '            return true;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/AnalyzePrototypeProperties.java', 'insertions': [{'line_number': 318, 'new_lines': ['        if (propertyName.endsWith("prototype") && n.getFirstChild().getNext().getString().equals("prototype")) {', '            return true;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/AnalyzePrototypeProperties.java', 'insertions': [{'line_number': 318, 'new_lines': ['        if (propertyName.endsWith("prototype") && n.getFirstChild().getNext().getString().equals("prototype")) {', '            return true;', '        }']}], 'deletions': [], 'modifications': []}]
+
+

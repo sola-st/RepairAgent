@@ -1,0 +1,2807 @@
+
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {
+            "line_number": 522,
+            "modified_line": "    seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"
+        },
+        {
+            "line_number": 529,
+            "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+        },
+        {
+            "line_number": 532,
+            "modified_line": "        my $val_start_col = 30;"
+        },
+        {
+            "line_number": 533,
+            "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    my $num_seps = $val_start_col - length($key);"
+        },
+        {
+            "line_number": 535,
+            "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");"
+        }
+    ]
+}
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [
+        {
+            "line_number": 522,
+            "new_lines": [
+                "my $fh = ''; # Fixing variable declaration issue"
+            ]
+        },
+        {
+            "line_number": 532,
+            "new_lines": [
+                "my $val_start_col = 0; # Fixing variable scoping issue"
+            ]
+        },
+        {
+            "line_number": 534,
+            "new_lines": [
+                "my $num_seps = 0; # Fixing variable scoping issue"
+            ]
+        },
+        {
+            "line_number": 535,
+            "new_lines": [
+                "my $key = ''; # Fixing variable scoping issue",
+                "my $val = ''; # Fixing variable scoping issue"
+            ]
+        }
+    ],
+    "deletions": [529],
+    "modifications": []
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Inserted line 1 at line 1262",
+                        "# Inserted line 2 at line 1262"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 522,
+                    "modified_line": "    seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"
+                },
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 534,
+                    "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    my $num_seps = $val_start_col - length($key); # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": [
+                        "# Inserted line 1 at line 2910",
+                        "# Inserted line 2 at line 2910"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 522,
+                    "modified_line": "    seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"
+                },
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 534,
+                    "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    my $num_seps = $val_start_col - length($key); # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 522,
+                    "modified_line": "    seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"
+                },
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 534,
+                    "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    my $num_seps = $val_start_col - length($key); # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 522,
+                    "modified_line": "    seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"
+                },
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 534,
+                    "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    my $num_seps = $val_start_col - length($key); # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 522,
+                    "modified_line": "    seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"
+                },
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 534,
+                    "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    my $num_seps = $val_start_col - length($key); # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 522,
+                    "modified_line": "    seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"
+                },
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 534,
+                    "modified_line": "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    my $num_seps = $val_start_col - length($key); # Fixing variable scoping issue"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 1"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 2"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 4"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 5"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 6"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 7"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 8"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 9"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 10"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 11"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 12"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 13"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 14"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 15"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 16"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 17"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 18"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 19"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 20"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 21"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 22"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 23"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 24"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 25"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 26"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 27"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 28"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Inserted line for mutation 29"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Inserted line for mutation 30"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 522, "modified_line": "seek ($fh, 0, SEEK_END) or die 'Cannot seek: $!'; # seek if someone appended while we were waiting'"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 529, "new_lines": ["my $oldconf = (); # Fixing variable scoping issue", "my $fh = undef; # Fixing file handle declaration"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 532, "modified_line": "        my $val_start_col = 30;"}, {"line_number": 534, "modified_line": "    my $num_seps = $val_start_col - length($key);"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 534, "new_lines": ["    my $key = 'example_key'; # Initializing key"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [533], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 535, "modified_line": "    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n');"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 529, "new_lines": ["my $oldconf = (); # Fixing variable scoping issue", "my $fh = undef; # Fixing file handle declaration"]}], "deletions": [], "modifications": [{"line_number": 532, "modified_line": "        $val_start_col = 30;"}, {"line_number": 534, "modified_line": "    my $num_seps = $val_start_col - length($key);"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 534, "new_lines": ["    my $key = 'example_key'; # Initializing key"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [533], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 535, "new_lines": ["    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n'); # Fixing print statement"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [532], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 532, "new_lines": ["    my $val_start_col = 30; # Setting start column value"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 535, "modified_line": "    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n'); # Fixing print statement"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 522, "new_lines": ["seek ($fh, 0, SEEK_END) or die 'Cannot seek: $!'; # seek if someone appended while we were waiting'"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [529], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 529, "new_lines": ["my $oldconf = (); # Fixing variable scoping issue", "my $fh = undef; # Fixing file handle declaration"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [534], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 534, "new_lines": ["    my $key = 'example_key'; # Initializing key"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 535, "modified_line": "    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n');"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 535, "new_lines": ["    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n'); # Fixing print statement"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [532], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 532, "new_lines": ["    my $val_start_col = 30; # Setting start column value"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 535, "modified_line": "    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n'); # Fixing print statement"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 522, "new_lines": ["seek ($fh, 0, SEEK_END) or die 'Cannot seek: $!'; # seek if someone appended while we were waiting'"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [529], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 529, "new_lines": ["my $oldconf = (); # Fixing variable scoping issue", "my $fh = undef; # Fixing file handle declaration"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [534], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 534, "new_lines": ["    my $key = 'example_key'; # Initializing key"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 535, "modified_line": "    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n');"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 535, "new_lines": ["    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n'); # Fixing print statement"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [532], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 532, "new_lines": ["    my $val_start_col = 30; # Setting start column value"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 535, "modified_line": "    print(STDERR '$key' . ('.' x $num_seps) . '${val}\n'); # Fixing print statement"}]}
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": [
+                        "my $fh = undef; # Fixing variable declaration"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": [
+                        "my $num_seps = 0; # Fixing variable initialization"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": [
+                        "my $key = ''; # Initializing key variable",
+                        "my $val = ''; # Initializing val variable"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 0; # Initializing val_start_col variable"
+                    ]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": [
+                        "my $num_seps = $val_start_col - length($key); # Fixing variable initialization based on val_start_col"
+                    ]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": [
+                        "my $key = ''; # Initializing key variable",
+                        "my $val = ''; # Initializing val variable"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 532,
+                    "new_lines": [
+                        "if (!defined($val_start_col)) { $val_start_col = 0; } # Checking and initializing val_start_col if not defined"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 533,
+                    "new_lines": [
+                        "if (!defined($val_start_col)) { $val_start_col = 0; } # Checking and initializing val_start_col if not defined"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": [
+                        "$num_seps //= 0; # Setting default value for num_seps if not defined"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": [
+                        "$key //= ''; # Setting default value for key if not defined",
+                        "$val //= ''; # Setting default value for val if not defined"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": [
+                        "my $num_seps = 0; # Initializing num_seps variable"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 533,
+                    "new_lines": [
+                        "if (!defined($val_start_col)) { $val_start_col = 0; } # Checking and initializing val_start_col if not defined"
+                    ]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": [
+                        "my $key = ''; # Initializing key variable",
+                        "my $val = ''; # Initializing val variable"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 1: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 1: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 2: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 2: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 3: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 3: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 4: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 4: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 5: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 5: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 6: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 6: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 7: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 7: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 8: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 8: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 9: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 9: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 10: Adding a fix for line 1262"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 10: Adding a fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 1: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 2: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 3: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 4: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 5: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 6: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 7: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 8: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 9: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 10: Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 11: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 12: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 13: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 14: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 15: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 16: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 17: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 18: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 19: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 20: Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": ["    seek ($fh, 0, SEEK_SET) or die \"Cannot seek: $!\"; # seek to the beginning"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 533,
+                    "new_lines": ["        {"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = length($key) - $val_start_col; # Fixing variable scoping issue"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 10; # Fixing variable scoping issue"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": ["    print(STDERR \"Value: $val\\n\");"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = length($key) + $val_start_col; # Fixing variable scoping issue"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 20; # Fixing variable scoping issue"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [528],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [533],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [534],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [535],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [532],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [533, 534],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [534, 535],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [532, 533],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [533, 535],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [532, 534],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [532, 535],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [529, 534],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = length($key); # Fixing variable scoping issue"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": ["    print(STDERR \"$key: $val\\n\");"] 
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Mutant 1: Inserted new line for mutation at line 1262"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 2: Inserted new line for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Mutant 3: Inserted new line for mutation at line 1262"
+                    ]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": [
+                        "# Mutant 3: Inserted new line for mutation at line 2910"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 4: Inserted new line for mutation at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 4: Inserted new line for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Mutant 5: Inserted new line for mutation at line 1262"
+                    ]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": [
+                        "# Mutant 5: Inserted new line for mutation at line 2910"
+                    ]
+                }
+            ],
+            "deletions": []
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 1: Add necessary fix for line 1262"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 2: Add necessary fix for line 1262"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 3: Add necessary fix for line 1262"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 4: Add necessary fix for line 1262"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 5: Add necessary fix for line 1262"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 6: Add necessary fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 7: Add necessary fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 8: Add necessary fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 9: Add necessary fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 10: Add necessary fix for line 2910"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": ["# Mutant 1: Add a comment here"]
+                },
+                {
+                    "line_number": 522,
+                    "new_lines": ["# Mutant 2: Add a comment here"]
+                },
+                {
+                    "line_number": 522,
+                    "new_lines": ["# Mutant 3: Add a comment here"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["# Mutant 4: Change the variable initialization value here"]
+                },
+                {
+                    "line_number": 529,
+                    "new_lines": ["# Mutant 5: Change the variable initialization value here"]
+                },
+                {
+                    "line_number": 529,
+                    "new_lines": ["# Mutant 6: Change the variable initialization value here"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": ["# Mutant 7: Change the calculation logic here"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["# Mutant 8: Change the calculation logic here"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["# Mutant 9: Change the calculation logic here"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": ["# Mutant 10: Change the variable assignment here"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["# Mutant 11: Change the variable assignment here"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["# Mutant 12: Change the variable assignment here"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 13: Add a comment here"]
+                },
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 14: Add a comment here"]
+                },
+                {
+                    "line_number": 1262,
+                    "new_lines": ["# Mutant 15: Add a comment here"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 16: Add a comment here"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 17: Add a comment here"]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": ["# Mutant 18: Add a comment here"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 1: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 2: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 3: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 4: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 5: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 6: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 7: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 8: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 9: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Mutant 10: Inserted code for mutation at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 11: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 12: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 13: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 14: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 15: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 16: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 17: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 18: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 19: Inserted code for mutation at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Mutant 20: Inserted code for mutation at line 2910"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 529, "new_lines": ["my $val_start_col = 1; # Fixing variable scoping issue"]},
+                           {"line_number": 534, "new_lines": ["my $num_seps = $val_start_col + length($key); # Fixing variable scoping issue"]},
+                           {"line_number": 535, "new_lines": ["my $key = 'bug_fixed'; # Fixing variable scoping issue", "my $val = 'fixed'; # Fixing variable scoping issue"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 529, "new_lines": ["my $val_start_col = 10; # Fixing variable scoping issue"]},
+                           {"line_number": 534, "new_lines": ["my $num_seps = $val_start_col * length($key); # Fixing variable scoping issue"]},
+                           {"line_number": 535, "new_lines": ["my $key = 'mutated'; # Fixing variable scoping issue", "my $val = 'mutated'; # Fixing variable scoping issue"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 529, "new_lines": ["my $val_start_col = 5; # Fixing variable scoping issue"]},
+                           {"line_number": 534, "new_lines": ["my $num_seps = $val_start_col / length($key); # Fixing variable scoping issue"]},
+                           {"line_number": 535, "new_lines": ["my $key = 'adjusted'; # Fixing variable scoping issue", "my $val = 'adjusted'; # Fixing variable scoping issue"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 529, "new_lines": ["my $val_start_col = 20; # Fixing variable scoping issue"]},
+                           {"line_number": 534, "new_lines": ["my $num_seps = $val_start_col % length($key); # Fixing variable scoping issue"]},
+                           {"line_number": 535, "new_lines": ["my $key = 'altered'; # Fixing variable scoping issue", "my $val = 'altered'; # Fixing variable scoping issue"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 529, "new_lines": ["my $val_start_col = length($key); # Fixing variable scoping issue"]},
+                           {"line_number": 534, "new_lines": ["my $num_seps = $val_start_col / 2; # Fixing variable scoping issue"]},
+                           {"line_number": 535, "new_lines": ["my $key = 'corrected'; # Fixing variable scoping issue", "my $val = 'corrected'; # Fixing variable scoping issue"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 529, "new_lines": ["my $val_start_col = 15; # Fixing variable scoping issue"]},
+                           {"line_number": 534, "new_lines": ["my $num_seps = $val_start_col * 2; # Fixing variable scoping issue"]},
+                           {"line_number": 535, "new_lines": ["my $key = 'revised'; # Fixing variable scoping issue", "my $val = 'revised'; # Fixing variable scoping issue"]}],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fixing variable scoping issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fixing variable scoping issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fixing the scoping issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fixing the scoping issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fixing scoping at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fixing scoping issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fixing the scoping issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fixing the scoping issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fixing scoping at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 1; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col + length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'new_key'; # Fixing variable scoping issue", "my $val = 'new_val'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = -1; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col * length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'another_key'; # Fixing variable scoping issue", "my $val = 'another_val'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 10; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col / length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'key_value'; # Fixing variable scoping issue", "my $val = 'val_value'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 5; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col % length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'updated_key'; # Fixing variable scoping issue", "my $val = 'updated_val'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 3; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col + length($key) + 1; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'key_updated'; # Fixing variable scoping issue", "my $val = 'val_updated'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fixing the issue at line 1262 by adding necessary code"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fixing the issue at line 2910 by adding necessary code"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fix the problem at line 1262 with appropriate code"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fix the issue at line 2910 by adding necessary code"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Introduce changes to resolve the problem at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Introduce changes to resolve the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Implement a fix for the problem at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Implement a solution for the issue at line 2910"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Modify the line to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Modify the line to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Adjust the code at line 1262 to resolve the error"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Adjust the code at line 2910 to resolve the error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fix the issue present at line 1262 with a suitable modification"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fix the issue present at line 2910 with a suitable modification"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Implement the fix for the error at line 1262"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Implement the fix for the error at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Correct the code at line 1262 to address the bug"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Correct the code at line 2910 to address the bug"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Fix the issue at line 1262 by modifying the code appropriately"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Fix the issue at line 2910 by modifying the code appropriately"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 1; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col + length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'new_key'; # Fixing variable scoping issue", "my $val = 'new_val'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 5; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col * length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'another_key'; # Fixing variable scoping issue", "my $val = 'another_val'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 10; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col / length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'key_value'; # Fixing variable scoping issue", "my $val = 'val_content'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 3; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col % length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'key_value_updated'; # Fixing variable scoping issue", "my $val = 'val_content_updated'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": ["my $val_start_col = 7; # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 534,
+                    "new_lines": ["my $num_seps = $val_start_col ** length($key); # Fixing variable scoping issue"]
+                },
+                {
+                    "line_number": 535,
+                    "new_lines": ["my $key = 'updated_key'; # Fixing variable scoping issue", "my $val = 'updated_val'; # Fixing variable scoping issue"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        }
+    ]
+}{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 1; # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Add necessary fix for line 1262 to handle different value"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": [
+                        "my $num_seps = $val_start_col + length($key); # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": [
+                        "# Add necessary fix for line 2910 to adjust values"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": [
+                        "my $key = 'bug'; # Fixing variable scoping issue",
+                        "my $val = 'fixed'; # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Add necessary fix for line 1262 to account for new values"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 10; # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": [
+                        "# Add necessary fix for line 2910 to handle larger values"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": [
+                        "my $num_seps = $val_start_col * length($key); # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Add necessary fix for line 1262 to adjust multiplication"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": [
+                        "my $key = 'patch'; # Fixing variable scoping issue",
+                        "my $val = 'mutation'; # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": [
+                        "# Add necessary fix for line 2910 to handle new strings"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = -1; # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 2910,
+                    "new_lines": [
+                        "# Add necessary fix for line 2910 to manage negative values"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 534,
+                    "new_lines": [
+                        "my $num_seps = $val_start_col / length($key); # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Add necessary fix for line 1262 to adjust division"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 535,
+                    "new_lines": [
+                        "my $key = 'improved'; # Fixing variable scoping issue",
+                        "my $val = 'enhanced'; # Fixing variable scoping issue"
+                    ]
+                },
+                {
+                    "line_number": 1262,
+                    "new_lines": [
+                        "# Add necessary fix for line 1262 with improved values"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 1263,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 1264,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 1265,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 1263,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 1264,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 1265,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1262,
+                    "modified_line": "# Insert your modification here to fix the issue at line 1262"
+                },
+                {
+                    "line_number": 1263,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 1264,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 1265,
+                    "modified_line": "my $bid = 'Lang-13'; # Initializing $bid with the correct value"
+                },
+                {
+                    "line_number": 2910,
+                    "modified_line": "# Insert your modification here to fix the issue at line 2910"
+                }
+            ]
+        }
+    ]
+}

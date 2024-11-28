@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 75, 'modified_line': 'for (int i = max; i >= shortest && i > 0; i--) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [{'line_number': 75, 'new_lines': ['for (int i = max; i >= shortest && i > 0; i--) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 75, 'modified_line': 'for (int i = max; i >= shortest && i > 0; i--) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 31, 'modified_line': '    private final HashMap<CharSequence, CharSequence> lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 51, 'modified_line': '                this.lookupMap.put(seq[0], seq[1]);'}, {'line_number': 77, 'modified_line': '            final CharSequence result = lookupMap.get(subSeq);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [{'line_number': 75, 'new_lines': ['for (int i = max; i >= shortest && i > 0; i--) {']}], 'deletions': [], 'modifications': [{'line_number': 31, 'modified_line': '    private final HashMap<CharSequence, CharSequence> lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 46, 'modified_line': '        lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 51, 'modified_line': '                this.lookupMap.put(seq[0], seq[1]);'}, {'line_number': 77, 'modified_line': '            final CharSequence result = lookupMap.get(subSeq);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 75, 'modified_line': 'for (int i = max; i >= shortest && i > 0 && i <= input.length() - index; i--) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 31, 'modified_line': '    private final HashMap<CharSequence, CharSequence> lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 46, 'modified_line': '        lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 51, 'modified_line': '                this.lookupMap.put(seq[0], seq[1]);'}, {'line_number': 77, 'modified_line': '            final CharSequence result = lookupMap.get(subSeq);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'insertions': [{'line_number': 69, 'new_lines': ['        int max = longest;', '        if (index + longest > input.length()) {', '            max = input.length() - index;', '        }', '        // descend so as to get a greedy algorithm', '        for (int i = max; i >= shortest && i > 0; i--) {', '            final CharSequence subSeq = input.subSequence(index, index + i);', '            final CharSequence result = lookupMap.get(subSeq);', '            if (result != null) {', '                out.write(result.toString());', '                return i;', '            }', '        }', '        return 0;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [{'line_number': 69, 'new_lines': ['        int max = longest;', '        if (index + longest > input.length()) {', '            max = input.length() - index;', '        }', '        // descend so as to get a greedy algorithm', '        for (int i = max; i >= shortest && i > 0; i--) {', '            final CharSequence subSeq = input.subSequence(index, index + i);', '            final CharSequence result = lookupMap.get(subSeq);', '            if (result != null) {', '                out.write(result.toString());', '                return i;', '            }', '        }', '        return 0;']}], 'deletions': [], 'modifications': [{'line_number': 31, 'modified_line': '    private final HashMap<CharSequence, CharSequence> lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 46, 'modified_line': '        lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 51, 'modified_line': '                this.lookupMap.put(seq[0], seq[1]);'}, {'line_number': 77, 'modified_line': '            final CharSequence result = lookupMap.get(subSeq);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 75, 'modified_line': 'for (int i = max; i >= shortest && i > 0; i--)'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [{'line_number': 75, 'new_lines': ['for (int i = max; i >= shortest && i > 0; i--) {']}], 'deletions': [], 'modifications': [{'line_number': 31, 'modified_line': '    private final HashMap<CharSequence, CharSequence> lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 46, 'modified_line': '        lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 51, 'modified_line': '                this.lookupMap.put(seq[0], seq[1]);'}, {'line_number': 77, 'modified_line': '            final CharSequence result = lookupMap.get(subSeq);'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 75, 'modified_line': 'for (int i = max; i >= shortest && i > 0 && i <= input.length() - index; i--)'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/LookupTranslator.java', 'target_lines': [['31', '    private final HashMap<CharSequence, CharSequence> lookupMap;'], ['46', '        lookupMap = new HashMap<CharSequence, CharSequence>();'], ['51', '                this.lookupMap.put(seq[0], seq[1]);'], ['77', '            final CharSequence result = lookupMap.get(subSeq);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 31, 'modified_line': '    private final HashMap<CharSequence, CharSequence> lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 46, 'modified_line': '        lookupMap = new HashMap<CharSequence, CharSequence>();'}, {'line_number': 51, 'modified_line': '                this.lookupMap.put(seq[0], seq[1]);'}, {'line_number': 77, 'modified_line': '            final CharSequence result = lookupMap.get(subSeq);'}]}]
+
+

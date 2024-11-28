@@ -1,0 +1,224 @@
+[
+    {"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines":["        if (appendTo == null) return null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines":["        if (escapingOn) return appendTo.append(QUOTE);"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines":["        if (escapingOn) {", "            return appendTo == null ? null : appendTo.append(QUOTE);", "        }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines":["        if (escapingOn && appendTo != null) {", "            return appendTo.append(QUOTE);", "        }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines":["        if (escapingOn && appendTo != null) { return appendTo.append(QUOTE); }"]}], "deletions": [], "modifications": []}
+][{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines":["        // Inserted line to fix OutOfMemoryError: Java heap space\n"]}], "deletions": [], "modifications": []}][
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && pattern.charAt(i) == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "continue;",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && pattern.charAt(i) == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "break;",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && pattern.charAt(i) == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "return appendTo;",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && pattern.charAt(i) == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "throw new IllegalArgumentException(\"Unexpected character found at position \" + i);",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && pattern.charAt(i) == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "pos.setIndex(i + 1);",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && c[i] == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "continue;",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && c[i] == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "break;",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && c[i] == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "return appendTo;",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && c[i] == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "throw new IllegalArgumentException(\"Unexpected character found at position \" + i);",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], 
+ "insertions": [
+     {"line_number": 422, "new_lines": [
+        "// Handle escaped quotes more efficiently to prevent OutOfMemoryError", 
+        "if (escapingOn && c[i] == QUOTE) {",
+        "appendTo.append(QUOTE);",
+        "pos.setIndex(i + 1);",
+        "lastHold = i + 1;",
+        "pos.setIndex(i + 1);",
+     ]}
+ ],
+ "deletions": [],
+ "modifications": []
+}
+][
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "return appendTo;"]}]},"deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "return appendTo;"]}]},"deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "return appendTo == null ? null : appendTo;"]}]},"deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "return appendTo == null ? null : appendTo;"]}]},"deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for handling escaped quotes more efficiently", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Improved handling of escaped quotes to avoid OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Update for handling escaped quotes more efficiently", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Optimize handling of escaped quotes to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Enhanced handling of escaped quotes to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Correct handling of escaped quotes to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to avoid OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Prevent OutOfMemoryError by improving escaped quotes handling", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Mitigate OutOfMemoryError by adjusting escaped quotes handling", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Update escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for OutOfMemoryError related to escaped quotes handling", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Improve escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Adjust escaped quotes handling to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes better to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Optimize escaped quotes handling to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Enhance handling of escaped quotes to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Correct escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Prevent OutOfMemoryError by optimizing escaped quotes handling", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for escaped quotes to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Update escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for OutOfMemoryError due to escaped quotes handling", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Improve escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Adjust escaped quotes handling to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes better to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Optimize escaped quotes handling to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Enhance handling of escaped quotes to prevent OutOfMemoryError", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Correct escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Prevent OutOfMemoryError by optimizing escaped quotes handling", "if (escapingOn && pattern.charAt(i) == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);", "pos.setIndex(i + 1);", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for escaped quotes to avoid OutOfMemoryError", "if (escapingOn && c[i] == ESCAPED_QUOTE) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(ESCAPED_QUOTE);",[
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Updated logic to handle escaped quotes more efficiently", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for handling escaped quotes efficiently to prevent OOM", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Optimize escaped quotes handling to avoid OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Enhance handling of escaped quotes for memory optimization", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for OutOfMemoryError by handling escaped quotes efficiently", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Improved handling of escaped quotes to prevent OOM error", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Update for handling escaped quotes more efficiently", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix to handle escaped quotes better and prevent OOM issue", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Optimize handling of escaped quotes to avoid OOM error", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Efficiently handle escaped quotes to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Update escaped quotes handling for better memory usage", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for OutOfMemoryError caused by inefficient escaped quotes handling", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Enhance escaped quotes processing to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Improve handling of escaped quotes to avoid OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix to handle escaped quotes more efficiently and prevent OOM issue", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Optimize escaped quotes processing to prevent OOM error", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Efficient handling of escaped quotes to avoid OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Update escaped quotes handling for better memory optimization", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for OutOfMemoryError due to inefficient escaped quotes handling", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Enhance escaped quotes processing to avoid OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]},
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Improve handling of escaped quotes for prevention of OOM error", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;", "}"]}]}
+][
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for handling escaped quotes to avoid OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Improved handling of escaped quotes to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Optimize escaped quotes handling to avoid OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix escaping quotes logic to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Enhance handling of escaped quotes to avoid OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Adjust escaped quotes handling to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Fix for OutOfMemoryError by improving escaped quotes handling", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Update escaped quotes processing to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}],
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Mitigate OutOfMemoryError by optimizing escaped quotes handling", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}
+][
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines":["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}
+][
+{"file_name": "org/apache/commons/lang/text/ExtendedMessageFormat.java", "target_lines": [["422", "//"]], "insertions": [{"line_number": 422, "new_lines": ["// Handle escaped quotes more efficiently to prevent OutOfMemoryError", "if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {", "appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);", "pos.setIndex(i + ESCAPED_QUOTE.length());", "lastHold = pos.getIndex();", "continue;"]}]}
+]

@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null) {', '    if (context.parents().size() > MAX_DEPTH) {', '        throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null) {', '    if (context.parents() != null && context.parents().size() > MAX_DEPTH) {', '        throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null) {', '    if (context.parents() != null && context.parents().size() > MAX_DEPTH) {', '        throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', 'throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 87, 'new_lines': ['// Check for deep stack handling', 'if (context != null && context.parents() != null && context.parents().size() > MAX_DEPTH) {', '    throw new StackOverflowError("Exceeded maximum depth for parsing HTML fragment");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.HtmlTreeBuilder.java', 'insertions': [{'line_number': 86, 'new_lines': ['// Alternative implementation for deep stack handling', 'closeTo("html");', 'generateImpliedEndTags(null);', 'clearFormattingElementsToLastMarker();', 'reconstructFormattingElements();', 'insertMarkerToFormattingElements();', 'removeFromActiveFormattingElements(context);', 'removeDescendantsFromFormattingElements(context);', 'getActiveFormattingElement("html");']}]}]
+
+

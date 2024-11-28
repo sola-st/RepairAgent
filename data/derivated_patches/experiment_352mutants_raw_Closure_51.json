@@ -1,0 +1,2100 @@
+
+    {
+        "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+        "insertions": [
+            {
+                "line_number": 259,
+                "new_lines": [
+                    "      add(Double.toString(x));"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+   
+    
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  {
+    "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+    "insertions": [
+        {
+            "line_number": 259,
+            "new_lines": [
+                "      if (x != (long) x) {",
+                "        add(String.valueOf(x));"
+            ]
+        }
+    ],
+    "deletions": [
+        241
+    ],
+    "modifications": []
+  }
+    {
+        "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+        "insertions": [
+            {
+                "line_number": 259,
+                "new_lines": [
+                    "      if ((long) x != x) {",
+                    "        add(String.valueOf(x));"
+                ]
+            },
+            {
+                "line_number": 260,
+                "new_lines": [
+                    "      } else {",
+                    "        add(Long.toString((long) x));"
+                ]
+            }
+        ],
+        "deletions": [241]
+    }
+     
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle special case when x is negative zero",
+                        "        if ((long) x == x) {",
+                        "          add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle negative zero value of x",
+                        "        if (x == -0.0) {",
+                        "          add(Double.toString(x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Convert x to positive if negative zero",
+                        "        if (x == -0.0) {",
+                        "          x = 0.0;"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Check for NaN value of x",
+                        "        if (Double.isNaN(x)) {",
+                        "          add(\"NaN\");"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle negative zero with workaround",
+                        "        if (x == -0.0) {",
+                        "          add(\"-0.0\");"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle negative zero using Math.abs",
+                        "        if (Math.abs(x) == 0.0) {",
+                        "          add(\"0.0\");"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle negative zero with different comparison",
+                        "        if (x == -0.0 && x == 0.0) {",
+                        "          add(\"-0.0\");"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle negative zero using Math.round",
+                        "        if (Math.round(x) == 0) {",
+                        "          add(\"0\");"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle negative zero by checking sign",
+                        "        if (Math.signum(x) == 0.0) {",
+                        "          add(\"0.0\");"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "        // Inserted mutation: Handle negative zero using Double.compare",
+                        "        if (Double.compare(x, -0.0) == 0) {",
+                        "          add(\"-0.0\");"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x != (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x >= (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x > (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x <= (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x < (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x != (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x == (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x >= (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x > (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x <= (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x < (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x != (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x == (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x >= (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x > (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x <= (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [],
+            "deletions": [241],
+            "modifications": [
+                {
+                    "line_number": 241,
+                    "modified_line": "      if (x < (long) x) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                260
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                260
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if ((long) x == x) {"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                260
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                260
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                260
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258,
+                260
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      if ((long) x == x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      if ((long) x != x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      if ((long) x != x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                }
+            ],
+            "deletions": [
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                }
+            ],
+            "deletions": [
+                241,
+                242,
+                243,
+                244,
+                245,
+                246,
+                247,
+                248,
+                249,
+                250,
+                251,
+                252,
+                253,
+                254,
+                255,
+                256,
+                257,
+                258
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(String.valueOf((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Long.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(String.valueOf((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x != (long) x) {", "        add(String.valueOf(x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      } else {", "        add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x != (long) x) {", "        add(String.valueOf(x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      }"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x == (long) x) {", "        add(Long.toString((long) x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      } else {", "        add(String.valueOf(x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x != (long) x) {", "        add(String.valueOf(x));"]
+                }
+            ],
+            "deletions": [241, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x != (long) x) {", "        add(String.valueOf(x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      }", "      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x == (long) x) {", "        add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x > (long) x) {", "        add(String.valueOf(x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      } else {", "        add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x < (long) x) {", "        add(String.valueOf(x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      } else {", "        add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x == (long) x) {", "        add(Long.toString((long) x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      } else {", "        add(String.valueOf(x));"]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 259,
+                    "new_lines": ["      if (x != (long) x) {", "        add(String.valueOf(x));"]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": ["      }", "      add(Long.toString((long) x));"]
+                }
+            ],
+            "deletions": [241]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x >= (long) x) {"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x > (long) x) {"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x <= (long) x) {"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x < (long) x) {"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Double.toString((double) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x >= (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x > (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x <= (long) x) {",
+                        "        add(Double.toString((double) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x < (long) x) {",
+                        "        add(Double.toString((double) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (double) x) {",
+                        "        add(Double.toString((double) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (int) x) {",
+                        "        add(Integer.toString((int) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (int) x) {",
+                        "        add(Integer.toString((int) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x > (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x < (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x <= (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x >= (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/CodeConsumer.java", "insertions": [{"line_number": 259, "new_lines": ["      if (x != (long) x) {", "        add(String.valueOf(x));"]}]}],
+        "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+    }
+    
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Double.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Double.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Double.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != (long) x) {",
+                        "        add(Double.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Double.toString(x));"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Double.toString(x));"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 260]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Double.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == (long) x) {",
+                        "        add(Double.toString(x));"
+                    ]
+                },
+                {
+                    "line_number": 259,
+                    "new_lines": [
+                        "      } else {",
+                        "        add(String.valueOf(x));"
+                    ]
+                },
+                {
+                    "line_number": 260,
+                    "new_lines": [
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258]
+        }
+    ]
+}
+    {
+        "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+        "insertions": [
+            {
+                "line_number": 241,
+                "new_lines": [
+                    "      if (x != (long) x) {"
+                ]
+            }
+        ],
+        "deletions": [241]
+    }
+   	
+   		
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+   	
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if ((x == (long) x) && (x >= 0)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if ((x == (long) x) && (x < 0)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != Double.NEGATIVE_INFINITY && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != Double.POSITIVE_INFINITY && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != Double.NaN && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != 0 && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x > 0 && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x < 0 && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x == 0 && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeConsumer.java",
+            "insertions": [
+                {
+                    "line_number": 241,
+                    "new_lines": [
+                        "      if (x != 0 && (x == (long) x)) {",
+                        "        add(Long.toString((long) x));"
+                    ]
+                }
+            ],
+            "deletions": [241]
+        }
+    ]
+}
+{"file_name": "com/google/javascript/jscomp/CodeConsumer.java", "insertions": [{"line_number": 241, "new_lines": ["      if ((long) x != x) {", "        add(String.valueOf(x));"]}], "deletions": [241]}
+    
+   

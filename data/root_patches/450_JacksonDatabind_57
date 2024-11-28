@@ -1,0 +1,16 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'insertions': [{'line_number': 1441, 'new_lines': ['return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src));']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/seq/ReadValuesTest.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 46, 'modified_line': 'final String JSON = "{\\"a\\":3},{\\"a\\":27}  ";'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/seq/ReadValuesTest.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 46, 'modified_line': 'final String JSON = "{\\"a\\":3}, {\\"a\\":27}";'}]}, {'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'target_lines': [['1441', '        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), ']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'target_lines': [['1441', '        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), ']], 'insertions': [{'line_number': 1441, 'new_lines': ['        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src));']}], 'deletions': [], 'modifications': []}]
+
+

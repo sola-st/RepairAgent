@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'insertions': [{'line_number': 119, 'new_lines': ["    String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace('\\', '/')));"]}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '    if (filename.indexOf(filenamePrefix) == 0) {']], 'insertions': [{'line_number': 119, 'new_lines': ['      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 183, 'new_lines': ["      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace('\\', '/')));"]}, {'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'insertions': [{'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 183, 'new_lines': ["      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace('\\', '/'));"]}, {'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'insertions': [{'line_number': 116, 'new_lines': ['  private String normalizeSourceName(String filename) {', '    // Remove leading path from the filename', "    int lastSlashIndex = filename.lastIndexOf('/');", '    if (lastSlashIndex != -1) {', '      filename = filename.substring(lastSlashIndex + 1);', '    }', '    // Remove file extension from the filename', "    int lastDotIndex = filename.lastIndexOf('.');", '    if (lastDotIndex != -1) {', '      filename = filename.substring(0, lastDotIndex);', '    }', '    // Replace non-alphanumeric characters with underscores', '    filename = filename.replaceAll("[^a-zA-Z0-9]", "_");', '    return filename;', '  }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}]}, 'deletions', 'modifications']
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'insertions': [{'line_number': 116, 'new_lines': ['  private String normalizeSourceName(String filename) {', '    // Remove leading path from the filename', "    int lastSlashIndex = filename.lastIndexOf('/');", '    if (lastSlashIndex != -1) {', '      filename = filename.substring(lastSlashIndex + 1);', '    }', '    // Remove file extension from the filename', "    int lastDotIndex = filename.lastIndexOf('.');", '    if (lastDotIndex != -1) {', '      filename = filename.substring(0, lastDotIndex);', '    }', '    // Replace non-alphanumeric characters with underscores', '    filename = filename.replaceAll("[^a-zA-Z0-9]", "_");', '    return filename;', '  }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': [{'line_number': 119, 'modified_line': '    if (filename.indexOf(filenamePrefix) == 0) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 183, 'new_lines': ["      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace('\\', '/'));"]}, {'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'insertions': [{'line_number': 116, 'new_lines': ['  private String normalizeSourceName(String filename) {', '    // Remove leading path from the filename', "    int lastSlashIndex = filename.lastIndexOf('/');", '    if (lastSlashIndex != -1) {', '      filename = filename.substring(lastSlashIndex + 1);', '    }', '    // Remove file extension from the filename', "    int lastDotIndex = filename.lastIndexOf('.');", '    if (lastDotIndex != -1) {', '      filename = filename.substring(0, lastDotIndex);', '    }', '    // Replace non-alphanumeric characters with underscores', '    filename = filename.replaceAll("[^a-zA-Z0-9]", "_");', '    return filename;', '  }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ProcessCommonJSModules.java', 'target_lines': [['183', '      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));'], ['119', '//']], 'insertions': [{'line_number': 119, 'new_lines': ['    if (filename.indexOf(filenamePrefix) == 0) {', '      filename = filename.substring(filenamePrefix.length());']}]}]
+
+

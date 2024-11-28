@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'insertions': [{'line_number': 540, 'new_lines': ['        // Euclidean algorithm to find the GCD\n', '        while (b != 0) {\n', '            int temp = b;\n', '            b = a % b;\n', '            a = temp;\n', '        }\n']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'target_lines': [['543', '//'], ['714', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'target_lines': [['543', '//'], ['714', '//']], 'insertions': [{'line_number': 543, 'new_lines': ['throw new ArithmeticException("GCD calculation error: division by zero");']}, {'line_number': 714, 'new_lines': ['throw new ArithmeticException("LCM calculation error: division by zero");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'insertions': [{'line_number': 543, 'new_lines': ['if (u == 0 || v == 0) { throw new ArithmeticException("GCD calculation error: division by zero"); }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'target_lines': [['543', '//'], ['714', '//']], 'insertions': [{'line_number': 543, 'new_lines': ['if (u == 0 || v == 0) { throw new ArithmeticException("GCD calculation error: division by zero"); }']}, {'line_number': 714, 'new_lines': ['if (u == 0 || v == 0) { throw new ArithmeticException("LCM calculation error: division by zero"); }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'insertions': [{'line_number': 714, 'new_lines': ['if (a == 0 || b == 0) { throw new ArithmeticException("LCM calculation error: division by zero"); }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'target_lines': [['543', '//'], ['714', '//']], 'insertions': [{'line_number': 543, 'new_lines': ['if (u == 0 || v == 0) { throw new ArithmeticException("GCD calculation error: division by zero"); }']}, {'line_number': 714, 'new_lines': ['if (a == 0 || b == 0) { throw new ArithmeticException("LCM calculation error: division by zero"); }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'insertions': [{'line_number': 543, 'new_lines': ['if (u == 0 || v == 0) { throw new ArithmeticException("GCD calculation error: division by zero"); }']}, {'line_number': 714, 'new_lines': ['if (a == 0 || b == 0) { throw new ArithmeticException("LCM calculation error: division by zero"); }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'insertions': [{'line_number': 543, 'new_lines': ['if (u == 0 || v == 0) { return 0; }']}, {'line_number': 714, 'new_lines': ['if (a == 0 || b == 0) { return 0; }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'insertions': [{'line_number': 714, 'new_lines': ['return Math.abs(a * b) / gcd(a, b);']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'target_lines': [['543', '//'], ['714', '//']], 'insertions': [{'line_number': 543, 'new_lines': ['if (u == 0 || v == 0) { throw new ArithmeticException("GCD calculation error: division by zero"); }']}, {'line_number': 714, 'new_lines': ['if (a == 0 || b == 0) { throw new ArithmeticException("LCM calculation error: division by zero"); }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/util/MathUtils.java', 'insertions': [{'line_number': 543, 'new_lines': ['if (u == 0 || v == 0) { throw new ArithmeticException("GCD calculation error: division by zero"); }']}]}]
+
+

@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'insertions': [{'line_number': 511, 'new_lines': ['    public void pad4(StringBuffer buffer, int value) {', '        String strValue = String.valueOf(value);', '        int zerosToAdd = 4 - strValue.length();', '        if (zerosToAdd > 0) {', '            for (int i = 0; i < zerosToAdd; i++) {', "                buffer.append('0');", '            }', '        }', '        buffer.append(strValue);', '    }']}], 'deletions': [512]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': [{'line_number': 441, 'new_lines': ['// Insert new line(s) here to fix the bug at line 441']}, {'line_number': 446, 'new_lines': ['// Insert new line(s) here to fix the bug at line 446']}, {'line_number': 447, 'new_lines': ['// Insert new line(s) here to fix the bug at line 447']}, {'line_number': 483, 'new_lines': ['// Insert new line(s) here to fix the bug at line 483']}, {'line_number': 485, 'new_lines': ['// Insert new line(s) here to fix the bug at line 485']}, {'line_number': 488, 'new_lines': ['// Insert new line(s) here to fix the bug at line 488']}, {'line_number': 516, 'new_lines': ['// Insert new line(s) here to fix the bug at line 516']}, {'line_number': 517, 'new_lines': ['// Insert new line(s) here to fix the bug at line 517']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'insertions': [{'line_number': 483, 'new_lines': ['        if (year == 1) {', '            buffer.append("+0000"); // BCE 1 output', '        } else {', "            buffer.append('-');", '            pad4(buffer, year);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': [{'line_number': 441, 'new_lines': ['// Insert new line(s) here to fix the bug at line 441']}, {'line_number': 446, 'new_lines': ['// Insert new line(s) here to fix the bug at line 446']}, {'line_number': 447, 'new_lines': ['// Insert new line(s) here to fix the bug at line 447']}, {'line_number': 483, 'new_lines': ['// Insert new line(s) here to fix the bug at line 483']}, {'line_number': 485, 'new_lines': ['// Insert new line(s) here to fix the bug at line 485']}, {'line_number': 488, 'new_lines': ['// Insert new line(s) here to fix the bug at line 488']}, {'line_number': 516, 'new_lines': ['// Insert new line(s) here to fix the bug at line 516']}, {'line_number': 517, 'new_lines': ['// Insert new line(s) here to fix the bug at line 517']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'insertions': [{'line_number': 511, 'new_lines': ['    public void pad4(StringBuffer buffer, int value) {', '        if (value == 1) {', '            buffer.append("+0000"); // BCE 1 output', '        } else {', "            buffer.append('-');", '            pad2(buffer, value);', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': [{'line_number': 441, 'new_lines': ['// Insert new line(s) here to fix the bug at line 441']}, {'line_number': 446, 'new_lines': ['// Insert new line(s) here to fix the bug at line 446']}, {'line_number': 447, 'new_lines': ['// Insert new line(s) here to fix the bug at line 447']}, {'line_number': 483, 'new_lines': ['// Insert new line(s) here to fix the bug at line 483']}, {'line_number': 485, 'new_lines': ['// Insert new line(s) here to fix the bug at line 485']}, {'line_number': 488, 'new_lines': ['// Insert new line(s) here to fix the bug at line 488']}, {'line_number': 516, 'new_lines': ['// Insert new line(s) here to fix the bug at line 516']}, {'line_number': 517, 'new_lines': ['// Insert new line(s) here to fix the bug at line 517']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'insertions': [{'line_number': 511, 'new_lines': ['    public void pad4(StringBuffer buffer, int value) {', '        if (value == 1) {', '            buffer.append("+0000"); // BCE 1 output', '        } else {', "            buffer.append('-');", '            pad2(buffer, value);', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': [{'line_number': 441, 'new_lines': ['// Insert new line(s) here to fix the bug at line 441']}, {'line_number': 446, 'new_lines': ['// Insert new line(s) here to fix the bug at line 446']}, {'line_number': 447, 'new_lines': ['// Insert new line(s) here to fix the bug at line 447']}, {'line_number': 483, 'new_lines': ['// Insert new line(s) here to fix the bug at line 483']}, {'line_number': 485, 'new_lines': ['// Insert new line(s) here to fix the bug at line 485']}, {'line_number': 488, 'new_lines': ['// Insert new line(s) here to fix the bug at line 488']}, {'line_number': 516, 'new_lines': ['// Insert new line(s) here to fix the bug at line 516']}, {'line_number': 517, 'new_lines': ['// Insert new line(s) here to fix the bug at line 517']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'insertions': [{'line_number': 483, 'new_lines': ['        if (year == 1) {', '            buffer.append("+0000"); // BCE 1 output', '        } else {', "            buffer.append('-');", '            pad4(buffer, year);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': [{'line_number': 441, 'new_lines': ['// Insert new line(s) here to fix the bug at line 441']}, {'line_number': 446, 'new_lines': ['// Insert new line(s) here to fix the bug at line 446']}, {'line_number': 447, 'new_lines': ['// Insert new line(s) here to fix the bug at line 447']}, {'line_number': 483, 'new_lines': ['// Insert new line(s) here to fix the bug at line 483']}, {'line_number': 485, 'new_lines': ['// Insert new line(s) here to fix the bug at line 485']}, {'line_number': 488, 'new_lines': ['// Insert new line(s) here to fix the bug at line 488']}, {'line_number': 516, 'new_lines': ['// Insert new line(s) here to fix the bug at line 516']}, {'line_number': 517, 'new_lines': ['// Insert new line(s) here to fix the bug at line 517']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'insertions': [{'line_number': 483, 'new_lines': ['        if (year == 1) {', '            buffer.append("+0000"); // BCE 1 output', '        } else {', "            buffer.append('-');", '            pad4(buffer, year);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/util/StdDateFormat.java', 'target_lines': [['441', '//'], ['446', '//'], ['447', '//'], ['483', '//'], ['485', '//'], ['488', '//'], ['516', '//'], ['517', '//']], 'insertions': [{'line_number': 441, 'new_lines': ['// Insert new line(s) here to fix the bug at line 441']}, {'line_number': 446, 'new_lines': ['// Insert new line(s) here to fix the bug at line 446']}, {'line_number': 447, 'new_lines': ['// Insert new line(s) here to fix the bug at line 447']}, {'line_number': 483, 'new_lines': ['// Insert new line(s) here to fix the bug at line 483']}, {'line_number': 485, 'new_lines': ['// Insert new line(s) here to fix the bug at line 485']}, {'line_number': 488, 'new_lines': ['// Insert new line(s) here to fix the bug at line 488']}, {'line_number': 516, 'new_lines': ['// Insert new line(s) here to fix the bug at line 516']}, {'line_number': 517, 'new_lines': ['// Insert new line(s) here to fix the bug at line 517']}]}]
+
+

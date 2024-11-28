@@ -1,0 +1,40 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.max(0, thisBuf.length - strLen);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.max(0, thisBuf.length - strLen); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.min(Math.max(0, thisBuf.length - strLen), thisBuf.length); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'public int indexOf(String str, int startIndex) {\n        if (str == null) {\n            throw new NullPointerException("The input string must not be null");\n        }\n\n        if (startIndex < 0) {\n            startIndex = 0;\n        }\n\n        if (startIndex >= value.length()) {\n            return -1;\n        }\n\n        int index = value.indexOf(str, startIndex);\n\n        return index;\n    } // Replaced the buggy indexOf method with the AI-generated implementation'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'public int indexOf(String str) {\n        if (str == null) {\n            return -1;\n        }\n\n        if (str.isEmpty()) {\n            return 0;\n        }\n\n        int max = value.length - str.length();\n        for (int i = 0; i <= max; i++) {\n            if (value[i] != str.charAt(0)) {\n                while (++i <= max && value[i] != str.charAt(0));\n            }\n\n            if (i <= max) {\n                int j = i + 1;\n                int end = j + str.length() - 1;\n                for (int k = 1; j < end && value[j] == str.charAt(k); j++, k++);\n\n                if (j == end) {\n                    return i;\n                }\n            }\n        }\n        return -1;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.max(0, Math.min(thisBuf.length - strLen, thisBuf.length)); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.min(Math.max(0, thisBuf.length - strLen), thisBuf.length); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.min(Math.max(0, thisBuf.length - strLen), thisBuf.length); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.min(Math.max(0, Math.min(thisBuf.length, thisBuf.length - strLen))); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.min(Math.max(0, thisBuf.length), thisBuf.length - strLen); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.max(0, Math.min(thisBuf.length, thisBuf.length - strLen)); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.max(0, thisBuf.length - strLen); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/StrBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1776, 'modified_line': 'int len = Math.min(Math.max(0, Math.min(thisBuf.length, thisBuf.length - strLen)), thisBuf.length); // Adjusted calculation to prevent ArrayIndexOutOfBoundsException and ensure valid index'}]}]
+
+

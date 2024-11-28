@@ -1,0 +1,1606 @@
+
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {"line_number": 632, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"},
+        {"line_number": 634, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"},
+        {"line_number": 638, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"},
+        {"line_number": 665, "modified_line": "my $oldconf = (); # Inserting missing variable initialization\n"},
+        {"line_number": 673, "modified_line": "print_environment_var('LC_TYPE'); # Inserting missing environment variable handling\n"},
+        {"line_number": 632, "modified_line": "my $oldconf = 0; # Mutant 1\n"},
+        {"line_number": 634, "modified_line": "my $oldconf = 1; # Mutant 2\n"},
+        {"line_number": 638, "modified_line": "my $oldconf = ''; # Mutant 3\n"},
+        {"line_number": 665, "modified_line": "my $oldconf = (1, 2, 3); # Mutant 4\n"},
+        {"line_number": 673, "modified_line": "print_environment_var('LC_ALL'); # Mutant 5\n"},
+        {"line_number": 632, "modified_line": "my $oldconf = 1; # Mutant 6\n"},
+        {"line_number": 634, "modified_line": "my $oldconf = ''; # Mutant 7\n"},
+        {"line_number": 638, "modified_line": "my $oldconf = (); # Mutant 8\n"},
+        {"line_number": 665, "modified_line": "my $oldconf = 0; # Mutant 9\n"},
+        {"line_number": 673, "modified_line": "print_environment_var('LANG'); # Mutant 10\n"},
+        {"line_number": 632, "modified_line": "my $oldconf = (); # Mutant 11\n"},
+        {"line_number": 634, "modified_line": "my $oldconf = 0; # Mutant 12\n"},
+        {"line_number": 638, "modified_line": "my $oldconf = (1, 2, 3); # Mutant 13\n"},
+        {"line_number": 665, "modified_line": "my $oldconf = ''; # Mutant 14\n"},
+        {"line_number": 673, "modified_line": "print_environment_var('LC_CTYPE'); # Mutant 15\n"},
+        {"line_number": 632, "modified_line": "my $oldconf = (1, 2, 3); # Mutant 16\n"},
+        {"line_number": 634, "modified_line": "my $oldconf = ''; # Mutant 17\n"},
+        {"line_number": 638, "modified_line": "my $oldconf = (); # Mutant 18\n"},
+        {"line_number": 665, "modified_line": "my $oldconf = 1; # Mutant 19\n"},
+        {"line_number": 673, "modified_line": "print_environment_var('LC_ALL'); # Mutant 20\n"},
+        {"line_number": 632, "modified_line": "my $oldconf = ''; # Mutant 21\n"},
+        {"line_number": 634, "modified_line": "my $oldconf = (); # Mutant 22\n"},
+        {"line_number": 638, "modified_line": "my $oldconf = 0; # Mutant 23\n"},
+        {"line_number": 665, "modified_line": "my $oldconf = (1, 2, 3); # Mutant 24\n"},
+        {"line_number": 673, "modified_line": "print_environment_var('LANG'); # Mutant 25\n"}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"}
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = []; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = {}; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = undef; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = ''; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 0; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 1; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 1.5; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 'file'; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 10; # Fixing variable initialization issue\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (1, 2, 3); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = {}; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = undef; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = ''; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 0; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 95,
+                    "new_lines": ["my $fh_in = 10; # Fixing variable initialization issue\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 95,
+                    "new_lines": ["my $fh_in = -1; # Fixing variable initialization issue\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 95,
+                    "new_lines": ["my $fh_in = 1; # Fixing variable initialization issue\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 95,
+                    "new_lines": ["my $fh_in = ''; # Fixing variable initialization issue\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 1; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2367,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 356,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 357,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 365,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 366,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 82,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 99,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2369,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 377,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 386,
+                    "modified_line": "; # Modified line\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = []; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "my $oldconf = {}; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = undef; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = []; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 386,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 2367,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [2367],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [356, 357],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [365, 366],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [82, 99, 2369, 377, 386],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutants": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = (); # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = (); # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = 0; # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = 0; # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = (); # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = 1; # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = 0; # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = (); # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = 1; # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = (); # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = 0; # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 632, "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue by addressing syntax errors\n"}, {"line_number": 633, "modified_line": "$oldconf = 1; # Fixing variable scoping issue by changing variable assignment\n"}, {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}]}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [2367],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [356],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [357],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [365],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [366],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 82, "new_lines": ["; # Mutation: Changed variable assignment for oldconf\n"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 99, "new_lines": ["; # Mutation: Modified variable initialization for oldconf\n"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 2369, "new_lines": ["; # Mutation: Added new line for oldconf\n"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 377, "new_lines": ["; # Mutation: Changed variable assignment for oldconf\n"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 386, "new_lines": ["; # Mutation: Modified variable initialization for oldconf\n"]}],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (1, 2, 3); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 2367,
+                    "modified_line": "$fh_in = 'modified_value'; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 356,
+                    "modified_line": "my $fh_in; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 357,
+                    "modified_line": "$fh_in = 0; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 365,
+                    "modified_line": "$fh_in = 'new_value'; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 366,
+                    "modified_line": "$fh_in = (); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 0; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 2367,
+                    "modified_line": "$fh_in = ''; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 356,
+                    "modified_line": "my $fh_in = 1; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 357,
+                    "modified_line": "$fh_in = (1, 2, 3); # Fixing variable initialization issue\n"
+                }
+            ]
+        }
+    ]
+}{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "$oldconf = (1, 2, 3); # Fixing variable scoping issue by changing variable assignment\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue by addressing syntax errors\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "$oldconf = (); # Fixing variable scoping issue by changing variable assignment\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 0; # Fixing variable scoping issue by changing initialization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "$oldconf = 0; # Fixing variable scoping issue by changing variable assignment\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = 0; # Fixing variable scoping issue by changing initialization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 'new_value'; # Fixing variable scoping issue by changing initialization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "$oldconf = 'new_value'; # Fixing variable scoping issue by changing variable assignment\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = 'new_value'; # Fixing variable scoping issue by changing initialization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 1; # Fixing variable scoping issue by changing initialization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "$oldconf = 1; # Fixing variable scoping issue by changing variable assignment\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = 1; # Fixing variable scoping issue by changing initialization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue by ensuring variable content\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "$oldconf = (); # Fixing variable scoping issue by ensuring proper assignment\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue by ensuring correct initialization\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 632,
+                    "modified_line": "my $oldconf = 0; # Fixing variable scoping issue by setting an integer value\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 634,
+                    "modified_line": "$oldconf = 0; # Fixing variable scoping issue by ensuring assignment to an integer\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 638,
+                    "modified_line": "my $oldconf = 0; # Fixing variable scoping issue by initializing with an integer value\n"
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $newconf = (); # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $newconf = (); # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $newconf = (); # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $newconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $newconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $newconf = ''; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $newconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $newconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $newconf = 1; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $newconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $newconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $newconf = 1; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $oldconf = ''; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue\n"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 632, "modified_line": "my $newconf = 1; # Fixing variable scoping issue\n"},
+                {"line_number": 634, "modified_line": "my $newconf = 0; # Fixing variable scoping issue\n"},
+                {"line_number": 638, "modified_line": "my $newconf = 1; # Fixing variable scoping issue\n"}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (1, 2, 3); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (0); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = ''; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = 1; # Fixing variable initialization issue\n"
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 95,
+                    "modified_line": "my $fh_in = (1, 2, 3); # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 82,
+                    "new_lines": ["# New line 1\n"]
+                }
+            ],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 356,
+                    "modified_line": "my $fh_in = {}; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 357,
+                    "modified_line": "my $fh_in = ''; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 365,
+                    "modified_line": "my $fh_in = undef; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 366,
+                    "modified_line": "my $fh_in = 0; # Fixing variable initialization issue\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 99,
+                    "new_lines": ["# New line 2\n"]
+                }
+            ],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 2367,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 356,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 357,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 365,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 366,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 82,
+                    "modified_line": "; # Inserting missing line\n"
+                },
+                {
+                    "line_number": 99,
+                    "modified_line": "; # Inserting missing line\n"
+                },
+                {
+                    "line_number": 2369,
+                    "modified_line": "; # Inserting missing line\n"
+                },
+                {
+                    "line_number": 377,
+                    "modified_line": "; # Inserting missing line\n"
+                },
+                {
+                    "line_number": 386,
+                    "modified_line": "; # Inserting missing line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 82,
+                    "modified_line": "; # Inserting new line\n"
+                },
+                {
+                    "line_number": 99,
+                    "modified_line": "; # Inserting new line\n"
+                },
+                {
+                    "line_number": 2369,
+                    "modified_line": "; # Inserting new line\n"
+                },
+                {
+                    "line_number": 377,
+                    "modified_line": "; # Inserting new line\n"
+                },
+                {
+                    "line_number": 386,
+                    "modified_line": "; # Inserting new line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 82,
+                    "modified_line": "; # Inserting additional line\n"
+                },
+                {
+                    "line_number": 99,
+                    "modified_line": "; # Inserting additional line\n"
+                },
+                {
+                    "line_number": 2369,
+                    "modified_line": "; # Inserting additional line\n"
+                },
+                {
+                    "line_number": 377,
+                    "modified_line": "; # Inserting additional line\n"
+                },
+                {
+                    "line_number": 386,
+                    "modified_line": "; # Inserting additional line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 82,
+                    "modified_line": "; # Inserting extra line\n"
+                },
+                {
+                    "line_number": 99,
+                    "modified_line": "; # Inserting extra line\n"
+                },
+                {
+                    "line_number": 2369,
+                    "modified_line": "; # Inserting extra line\n"
+                },
+                {
+                    "line_number": 377,
+                    "modified_line": "; # Inserting extra line\n"
+                },
+                {
+                    "line_number": 386,
+                    "modified_line": "; # Inserting extra line\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [
+                {
+                    "line_number": 82,
+                    "modified_line": "; # Inserting missing line of code\n"
+                },
+                {
+                    "line_number": 99,
+                    "modified_line": "; # Inserting missing line of code\n"
+                },
+                {
+                    "line_number": 2369,
+                    "modified_line": "; # Inserting missing line of code\n"
+                },
+                {
+                    "line_number": 377,
+                    "modified_line": "; # Inserting missing line of code\n"
+                },
+                {
+                    "line_number": 386,
+                    "modified_line": "; # Inserting missing line of code\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [{"line_number": 82, "modified_line": "my $oldconf = 0; # Fixing variable initialization issue\n"}, {"line_number": 99, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}, {"line_number": 2369, "modified_line": "my $oldconf = 'missing_value'; # Fixing variable initialization issue\n"}, {"line_number": 377, "modified_line": "my $oldconf = 1; # Fixing variable initialization issue\n"}, {"line_number": 386, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [{"line_number": 82, "modified_line": "my $oldconf = ''; # Fixing variable initialization issue\n"}, {"line_number": 99, "modified_line": "my $oldconf = 1; # Fixing variable initialization issue\n"}, {"line_number": 2369, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}, {"line_number": 377, "modified_line": "my $oldconf = 'new_value'; # Fixing variable initialization issue\n"}, {"line_number": 386, "modified_line": "my $oldconf = 0; # Fixing variable initialization issue\n"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [{"line_number": 82, "modified_line": "my $oldconf = 10; # Fixing variable initialization issue\n"}, {"line_number": 99, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}, {"line_number": 2369, "modified_line": "my $oldconf = 'adjusted_value'; # Fixing variable initialization issue\n"}, {"line_number": 377, "modified_line": "my $oldconf = 0; # Fixing variable initialization issue\n"}, {"line_number": 386, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [{"line_number": 82, "modified_line": "my $oldconf = 'modified_value'; # Fixing variable initialization issue\n"}, {"line_number": 99, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}, {"line_number": 2369, "modified_line": "my $oldconf = 5; # Fixing variable initialization issue\n"}, {"line_number": 377, "modified_line": "my $oldconf = 1; # Fixing variable initialization issue\n"}, {"line_number": 386, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [95, 2367, 356, 357, 365, 366],
+            "modifications": [{"line_number": 82, "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable initialization issue\n"}, {"line_number": 99, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}, {"line_number": 2369, "modified_line": "my $oldconf = 'corrected_value'; # Fixing variable initialization issue\n"}, {"line_number": 377, "modified_line": "my $oldconf = 0; # Fixing variable initialization issue\n"}, {"line_number": 386, "modified_line": "my $oldconf = (); # Fixing variable initialization issue\n"}]
+        }
+    ]
+}

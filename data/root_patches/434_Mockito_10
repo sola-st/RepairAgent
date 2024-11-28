@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 100, 'new_lines': ['                .serializable(false)']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'target_lines': [['71', '                newDeepStubMock(returnTypeGenericMetadata),'], ['87', '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata) {'], ['90', '                withSettingsUsing(returnTypeGenericMetadata)'], ['94', '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'], ['99', '        return mockSettings.serializable()'], ['17', '//'], ['103', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'target_lines': [['71', '                newDeepStubMock(returnTypeGenericMetadata),'], ['87', '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata) {'], ['90', '                withSettingsUsing(returnTypeGenericMetadata)'], ['94', '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'], ['99', '        return mockSettings.serializable()'], ['17', '//'], ['103', '//']], 'insertions': [{'line_number': 17, 'new_lines': ['        return mockSettings.serializable(false);']}, {'line_number': 103, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'target_lines': [['71', '                newDeepStubMock(returnTypeGenericMetadata),'], ['87', '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata) {'], ['90', '                withSettingsUsing(returnTypeGenericMetadata)'], ['94', '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'], ['99', '        return mockSettings.serializable()'], ['17', '//'], ['103', '//']], 'insertions': [{'line_number': 17, 'new_lines': ['        return mockSettings.serializable(false);']}, {'line_number': 103, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': [{'line_number': 71, 'modified_line': '                newDeepStubMock(returnTypeGenericMetadata, withSettingsUsing(returnTypeGenericMetadata)),'}, {'line_number': 87, 'modified_line': '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata, MockSettings mockSettings) {'}, {'line_number': 90, 'modified_line': '                withSettingsUsing(returnTypeGenericMetadata).serializable()'}, {'line_number': 94, 'modified_line': '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'}, {'line_number': 99, 'modified_line': '        return mockSettings'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 101, 'new_lines': ['                .serializable(false)']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'target_lines': [['71', '                newDeepStubMock(returnTypeGenericMetadata),'], ['87', '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata) {'], ['90', '                withSettingsUsing(returnTypeGenericMetadata)'], ['94', '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'], ['99', '        return mockSettings.serializable()'], ['17', '//'], ['103', '//']], 'insertions': [{'line_number': 17, 'new_lines': ['        return mockSettings.serializable(false);']}, {'line_number': 103, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': [{'line_number': 71, 'modified_line': '                newDeepStubMock(returnTypeGenericMetadata, withSettingsUsing(returnTypeGenericMetadata)),'}, {'line_number': 87, 'modified_line': '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata, MockSettings mockSettings) {'}, {'line_number': 90, 'modified_line': '                withSettingsUsing(returnTypeGenericMetadata).serializable()'}, {'line_number': 94, 'modified_line': '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'}, {'line_number': 99, 'modified_line': '        return mockSettings.serializable(false)'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 99, 'new_lines': ['        return mockSettings.serializable(false)']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 17, 'new_lines': ['        return mockSettings.serializable(false);']}, {'line_number': 103, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': [{'line_number': 71, 'modified_line': '                newDeepStubMock(returnTypeGenericMetadata, withSettingsUsing(returnTypeGenericMetadata)),'}, {'line_number': 87, 'modified_line': '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata, MockSettings mockSettings) {'}, {'line_number': 90, 'modified_line': '                withSettingsUsing(returnTypeGenericMetadata).serializable()'}, {'line_number': 94, 'modified_line': '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'}, {'line_number': 99, 'modified_line': '        return mockSettings.serializable(false)'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 99, 'new_lines': ['        return mockSettings.serializable(false).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata));']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 99, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 94, 'new_lines': ['    // Updated implementation of withSettingsUsing method', '    public MockSettings withSettingsUsing(MockSettings settings) {', '        CreationSettings creationSettings = new CreationSettings();', '        creationSettings.copyMockSettings(settings);', '        return Mockito.withSettings().spiedInstance(core.createMock(creationSettings));', '    }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 99, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 17, 'new_lines': ['        return mockSettings.serializable(false);']}, {'line_number': 103, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 71, 'new_lines': ['                newDeepStubMock(returnTypeGenericMetadata, withSettingsUsing(returnTypeGenericMetadata));']}, {'line_number': 90, 'new_lines': ['                withSettingsUsing(returnTypeGenericMetadata).serializable()']}, {'line_number': 94, 'new_lines': ['    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {']}, {'line_number': 99, 'new_lines': ['        return mockSettings.serializable(false)']}, {'line_number': 17, 'new_lines': ['        return mockSettings.serializable(false);']}, {'line_number': 103, 'new_lines': ['        return mockSettings.serializable(false);']}], 'deletions': [], 'modifications': [{'line_number': 71, 'modified_line': '                newDeepStubMock(returnTypeGenericMetadata),'}, {'line_number': 87, 'modified_line': '    private Object newDeepStubMock(GenericMetadataSupport returnTypeGenericMetadata) {'}, {'line_number': 90, 'modified_line': '                withSettingsUsing(returnTypeGenericMetadata)'}, {'line_number': 94, 'modified_line': '    private MockSettings withSettingsUsing(GenericMetadataSupport returnTypeGenericMetadata) {'}, {'line_number': 99, 'modified_line': '        return mockSettings'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java', 'insertions': [{'line_number': 99, 'new_lines': ['        return mockSettings.serializable(false).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata));']}], 'deletions': [], 'modifications': []}]
+
+

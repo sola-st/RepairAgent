@@ -1,0 +1,13 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/optimization/linear/SimplexTableau.java', 'insertions': [{'line_number': 275, 'new_lines': ['    public int getBasicRow(int colIndex) {', '        int colNum = tableau.getNumObjectiveFunctions() + tableau.getNumDecisionVariables();', '        int rowNum = tableau.getHeight();', '        int basicRow = -1;', '', '        for (int i = 0; i < rowNum; i++) {', '            if (tableau.getEntry(i, colIndex) == 1 && tableau.getEntry(i, colNum) == 0) {', '                if (basicRow == -1) {', '                    basicRow = i;', '                } else {', '                    return -1; // Return -1 if there is more than one basic row for the given column index', '                }', '            }', '        }', '', '        return basicRow;', '    }']}], 'deletions': [275, 276, 277, 278, 279, 280]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/optimization/linear/SimplexTableau.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 275, 'modified_line': 'if (Math.abs(getEntry(i, col) - 0.0) > epsilon) {'}, {'line_number': 276, 'modified_line': 'if (row == null) {'}, {'line_number': 278, 'modified_line': '} else {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/optimization/linear/SimplexTableau.java', 'target_lines': [['275', '            if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {'], ['276', '                if (row == null) {'], ['278', '                } else {'], ['280', '                }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 275, 'modified_line': 'if (Math.abs(getEntry(i, col) - 0.0) > epsilon) {'}, {'line_number': 276, 'modified_line': 'if (row == null) {'}, {'line_number': 278, 'modified_line': '} else {'}, {'line_number': 280, 'modified_line': 'return null;'}]}]
+
+

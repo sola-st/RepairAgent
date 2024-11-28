@@ -1,0 +1,31 @@
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 668, 'modified_line': '        if (p1.getRootNode() != p2.getRootNode()) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'target_lines': [['665', '            throw new JXPathException('], ['666', '                    "Cannot compare pointers that do not belong to the same tree: \'"'], ['667', '                            + p1 + "\' and \'" + p2 + "\'");']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 665, 'modified_line': '            throw new JXPathException("Cannot compare pointers that do not belong to the same tree: \'" + p1 + "\' and \'" + p2 + "\'");'}, {'line_number': 666, 'modified_line': ''}, {'line_number': 667, 'modified_line': ''}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 668, 'modified_line': '        if (p1.getRootNode() != p2.getRootNode()) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'target_lines': [['665', '            throw new JXPathException('], ['666', '                    "Cannot compare pointers that do not belong to the same tree: \'"'], ['667', '                            + p1 + "\' and \'" + p2 + "\'");']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 665, 'modified_line': '            if (p1.getRootNode() != p2.getRootNode()) {'}, {'line_number': 666, 'modified_line': '                    throw new JXPathException("Cannot compare pointers that do not belong to the same tree: \'" + p1 + "\' and \'" + p2 + "\'");'}, {'line_number': 667, 'modified_line': '                            return;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 665, 'modified_line': '            if (p1.getRootNode() != p2.getRootNode()) {'}, {'line_number': 666, 'modified_line': '                    throw new JXPathException("Cannot compare pointers that do not belong to the same tree: \'" + p1 + "\' and \'" + p2 + "\'");'}, {'line_number': 667, 'modified_line': '                            return;'}, {'line_number': 668, 'modified_line': '            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 665, 'modified_line': '            if (p1.getRootNode() != p2.getRootNode() && p1.getRootNode() != null && p2.getRootNode() != null) {'}, {'line_number': 666, 'modified_line': '                    throw new JXPathException("Cannot compare pointers that do not belong to the same tree: \'" + p1 + "\' and \'" + p2 + "\'");'}, {'line_number': 667, 'modified_line': '                            return;'}, {'line_number': 668, 'modified_line': '            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 665, 'modified_line': '            if (p1.getRootNode() != p2.getRootNode() && p1.getRootNode() != null && p2.getRootNode() != null && p1.getRootNode().equals(p2.getRootNode())) {'}, {'line_number': 666, 'modified_line': '                    return;'}, {'line_number': 667, 'modified_line': '            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 665, 'modified_line': '            if (p1.getRootNode() != p2.getRootNode() && p1.getRootNode() != null && p2.getRootNode() != null && p1.getRootNode().equals(p2.getRootNode())) {'}, {'line_number': 666, 'modified_line': '                    return;'}, {'line_number': 667, 'modified_line': '            }'}, {'line_number': 668, 'modified_line': '            throw new JXPathException("Cannot compare pointers that do not belong to the same tree: \'" + p1 + "\' and \'" + p2 + "\'");'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 665, 'modified_line': '            if (p1.getRootNode() != p2.getRootNode() && p1.getRootNode() != null && p2.getRootNode() != null && !p1.getRootNode().equals(p2.getRootNode())) {'}, {'line_number': 666, 'modified_line': '                    throw new JXPathException("Cannot compare pointers that do not belong to the same tree: \'" + p1 + "\' and \'" + p2 + "\'");'}, {'line_number': 667, 'modified_line': '            }'}, {'line_number': 668, 'modified_line': '            return;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/NodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 660, 'modified_line': '    public int compareNodePointers(NodePointer nodePointer1, NodePointer nodePointer2) {'}, {'line_number': 661, 'modified_line': '        // Extract the node indices from the node pointers'}, {'line_number': 662, 'modified_line': '        int index1 = nodePointer1.getNodeIndex();'}, {'line_number': 663, 'modified_line': '        int index2 = nodePointer2.getNodeIndex();'}, {'line_number': 664, 'modified_line': ''}, {'line_number': 665, 'modified_line': '        // Compare the node indices'}, {'line_number': 666, 'modified_line': '        return Integer.compare(index1, index2);'}, {'line_number': 667, 'modified_line': '    }'}]}]
+
+

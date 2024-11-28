@@ -1,0 +1,28 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'insertions': [{'line_number': 583, 'new_lines': ['        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'target_lines': [['584', '        if (Math.abs(u) <= 1 || Math.abs(v) <= 1) {'], ['583', '//']], 'insertions': [{'line_number': 583, 'new_lines': ['        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'target_lines': [['584', '        if (Math.abs(u) <= 1 || Math.abs(v) <= 1) {'], ['583', '//']], 'insertions': [{'line_number': 584, 'new_lines': ['        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {']}, {'line_number': 583, 'new_lines': ['        // Handle extreme values to prevent overflow issues', '        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'insertions': [{'line_number': 583, 'new_lines': ['        // Handle extreme values to prevent overflow issues', '        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'target_lines': [['584', '        if (Math.abs(u) <= 1 || Math.abs(v) <= 1) {'], ['583', '//']], 'insertions': [{'line_number': 584, 'new_lines': ['        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {']}, {'line_number': 583, 'new_lines': ['        // Handle extreme values to prevent overflow issues', '        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'insertions': [{'line_number': 583, 'new_lines': ['        // Handle extreme values to prevent overflow issues', '        if (u == Integer.MIN_VALUE || v == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'insertions': [{'line_number': 584, 'new_lines': ['        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {']}, {'line_number': 583, 'new_lines': ['        // Handle extreme values to prevent overflow issues', '        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/Fraction.java', 'insertions': [{'line_number': 583, 'new_lines': ['        // Handle extreme values to prevent overflow issues', '        if (Math.abs(u) == Integer.MIN_VALUE || Math.abs(v) == Integer.MIN_VALUE) {', '            return Integer.MIN_VALUE;']}]}]
+
+

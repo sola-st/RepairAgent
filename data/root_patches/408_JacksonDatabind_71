@@ -1,0 +1,25 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'insertions': [{'line_number': 23, 'new_lines': ['import java.lang.CharSequence;']}, {'line_number': 45, 'new_lines': ['else if (raw == CharSequence.class) {', 'kind = TYPE_CHARSEQUENCE;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'target_lines': [['75', '        if (raw == String.class || raw == Object.class) {']], 'insertions': [{'line_number': 45, 'new_lines': ['else if (raw == CharSequence.class) {', 'kind = TYPE_CHARSEQUENCE;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'insertions': [{'line_number': 45, 'new_lines': ['else if (raw == CharSequence.class) {', 'kind = TYPE_CHARSEQUENCE;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'modifications': [{'line_number': 75, 'modified_line': 'else if (raw == CharSequence.class) {\n                return new StdKeyDeserializer(TYPE_CHARSEQUENCE, raw);\n            }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'modifications': [{'line_number': 75, 'modified_line': 'else if (raw == CharSequence.class) {\n                return new StdKeyDeserializer(TYPE_CHARSEQUENCE, raw);\n            }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'insertions': [{'line_number': 45, 'new_lines': ['else if (raw == CharSequence.class) {', 'kind = TYPE_CHARSEQUENCE;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'target_lines': [['75', '        if (raw == String.class || raw == Object.class) {']], 'insertions': [{'line_number': 75, 'new_lines': ['else if (raw == CharSequence.class) {', 'return new StdKeyDeserializer(TYPE_CHARSEQUENCE, raw);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StdKeyDeserializer.java', 'modifications': [{'line_number': 75, 'modified_line': 'else if (raw == CharSequence.class) {\n                return new StdKeyDeserializer(TYPE_CHARSEQUENCE, raw);\n            }'}]}]
+
+

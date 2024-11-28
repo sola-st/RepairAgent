@@ -1,0 +1,22 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/NullifyingDeserializer.java', 'insertions': [{'line_number': 36, 'new_lines': ['if (p.getCurrentToken() == JsonToken.FIELD_NAME && "location".equals(p.getCurrentName())) {', 'p.nextToken();', 'continue;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/NullifyingDeserializer.java', 'target_lines': [['35', '//'], ['36', '//']], 'insertions': [{'line_number': 35, 'new_lines': ['if (p.getCurrentToken() == JsonToken.FIELD_NAME && "location".equals(p.getCurrentName())) {', 'p.nextToken();', 'continue;']}, {'line_number': 36, 'new_lines': ['}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/NullifyingDeserializer.java', 'insertions': [{'line_number': 35, 'new_lines': ['if (p.getCurrentToken() == JsonToken.FIELD_NAME && "location".equals(p.getCurrentName())) {', 'p.nextToken();', 'continue;']}, {'line_number': 36, 'new_lines': ['}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/NullifyingDeserializer.java', 'insertions': [{'line_number': 32, 'new_lines': ["// Check for 'location' field during deserialization", 'if (p.getCurrentToken() == JsonToken.FIELD_NAME && "location".equals(p.getCurrentName())) {', 'p.nextToken();', 'continue;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/NullifyingDeserializer.java', 'target_lines': [['35', '//'], ['36', '//']], 'insertions': [{'line_number': 35, 'new_lines': ['if (p.getCurrentToken() == JsonToken.FIELD_NAME && "location".equals(p.getCurrentName())) {', 'p.nextToken();', 'continue;']}, {'line_number': 36, 'new_lines': ['}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/NullifyingDeserializer.java', 'insertions': [{'line_number': 35, 'new_lines': ['if (p.getCurrentToken() == JsonToken.FIELD_NAME && "location".equals(p.getCurrentName())) {', 'p.nextToken();', 'continue;']}, {'line_number': 36, 'new_lines': ['}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/NullifyingDeserializer.java', 'modifications': [{'line_number': 31, 'modified_line': 'public Object deserialize(JsonParser p, DeserializationContext ctxt, TypeDeserializer typeDeserializer) throws IOException'}, {'line_number': 32, 'modified_line': '{'}, {'line_number': 33, 'modified_line': "    // Check for 'location' field during deserialization"}, {'line_number': 34, 'modified_line': '    if (p.getCurrentToken() == JsonToken.FIELD_NAME && "location".equals(p.getCurrentName())) {'}, {'line_number': 35, 'modified_line': '        p.nextToken();'}, {'line_number': 36, 'modified_line': '        continue;'}, {'line_number': 37, 'modified_line': '    }'}, {'line_number': 38, 'modified_line': '    p.skipChildren();'}, {'line_number': 39, 'modified_line': '    return null;'}, {'line_number': 40, 'modified_line': '}'}]}]
+
+

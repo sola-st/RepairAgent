@@ -1,0 +1,61 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        return parent().siblingNodes(); // Fixing bug by returning sibling nodes instead of children\n']}, {'line_number': 447, 'new_lines': ['        return parent().siblingNodes(); // Fixing bug by returning sibling nodes instead of children\n']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // No parent, hence no siblings', '        }', '        Elements siblings = new Elements();', '        for (Element sibling : parent.children()) {', '            if (sibling != this) {', '                siblings.add(sibling);', '            }', '        }', '        return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // No parent, hence no siblings', '        }', '        Elements siblings = new Elements();', '        if (parent.children() != null) {', '            for (Element sibling : parent.children()) {', '                if (sibling != this) {', '                    siblings.add(sibling);', '                }', '            }', '        }', '        return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}, {'line_number': 447, 'new_lines': ['        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}, {'line_number': 447, 'new_lines': ['        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        if (parent() == null) {', '            return new Elements(); // No parent, hence no siblings', '        }', '        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}, {'line_number': 447, 'new_lines': ['        if (parent() == null) {', '            return new Elements(); // No parent, hence no siblings', '        }', '        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // No parent, hence no siblings', '        }', '        Elements siblings = new Elements();', '        for (Element sibling : parent.children()) {', '            if (sibling != this) {', '                siblings.add(sibling);', '            }', '        }', '        return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // No parent, hence no siblings', '        }', '        Elements siblings = new Elements();', '        if (parent.children() != null) {', '            for (Element sibling : parent.children()) {', '                if (sibling != this) {', '                    siblings.add(sibling);', '                }', '            }', '        }', '        return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}, {'line_number': 447, 'new_lines': ['        return parent().siblingElements(); // Fixing bug by returning sibling elements instead of children']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements();', '        } else {', '            Elements siblings = parent.children();', '            siblings.remove(this);', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // No parent, hence no siblings', '        } else {', '            Elements siblings = new Elements();', '            Elements parentChildren = parent.children();', '            if (parentChildren != null) {', '                for (Element sibling : parentChildren) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        if (parent() == null) {', '            return new Elements(); // No parent, hence no siblings', '        } else {', '            Elements siblings = new Elements();', '            Elements parentChildren = parent().children();', '            if (parentChildren != null) {', '                for (Element sibling : parentChildren) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // No parent means no siblings', '        } else {', "            return parent.children().not(this); // Return all children that are not 'this' element"]}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // No parent means no siblings', '        } else {', '            Elements siblings = new Elements();', '            Elements parentChildren = parent.children();', '            if (parentChildren != null) {', '                for (Element sibling : parentChildren) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        if (parent() == null) {', '            return new Elements(); // No parent means no siblings', '        } else {', '            Elements siblings = new Elements();', '            Elements parentChildren = parent().children();', '            if (parentChildren != null) {', '                for (Element sibling : parentChildren) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        if (parent() == null) {', '            return new Elements(); // No parent means no siblings', '        } else {', '            Elements siblings = new Elements();', '            if (parent().children() != null) {', '                for (Element sibling : parent().children()) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // Return an empty list if there is no parent', '        }', '        Elements siblings = parent.children();', '        siblings.remove(this); // Remove the current element from the list of siblings', '        return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        Element parent = parent();', '        if (parent == null) {', '            return new Elements(); // Return an empty list if there is no parent', '        } else {', '            Elements siblings = new Elements();', '            Elements parentChildren = parent.children();', '            if (parentChildren != null) {', '                for (Element sibling : parentChildren) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        if (parent() == null) {', '            return new Elements(); // No parent means no siblings', '        } else {', '            Elements siblings = new Elements();', '            Elements parentChildren = parent().children();', '            if (parentChildren != null) {', '                for (Element sibling : parent().children()) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 434, 'new_lines': ['        if (parent() == null) {', '            return new Elements(); // No parent means no siblings', '        } else {', '            Elements siblings = new Elements();', '            Elements parentChildren = parent() != null ? parent().children() : new Elements();', '            if (parentChildren != null) {', '                for (Element sibling : parentChildren) {', '                    if (sibling != this) {', '                        siblings.add(sibling);', '                    }', '                }', '            }', '            return siblings;']}]}]
+
+

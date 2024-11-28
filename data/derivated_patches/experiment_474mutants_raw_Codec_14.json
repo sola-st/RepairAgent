@@ -1,0 +1,98 @@
+[
+    {"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [], "deletions": [98, 102], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [], "deletions": [31, 338, 361, 364], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [], "deletions": [158], "modifications": []}
+][
+    {"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [], "deletions": [], "modifications": [
+        {"line_number": 338, "modified_line": "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR); // Mutated line for bug fix"},
+        {"line_number": 361, "modified_line": "            phonemes.addAll(subBuilder.getPhonemes()); // Mutated line for bug fix"},
+        {"line_number": 364, "modified_line": "        return new PhonemeBuilder(phonemes); // Mutated line for bug fix"}
+    ]},
+    {"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [], "deletions": [], "modifications": [
+        {"line_number": 158, "modified_line": "// Insert code here to fix the bug"}
+    ]}
+][
+    {"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [{"line_number": 98, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [{"line_number": 364, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [{"line_number": 158, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []}
+]```python
+[
+    {"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [], "deletions": [], "modifications": []}
+]
+```[
+{"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 98, "modified_line": "    private static final String LANGUAGE_RULES_RN = \"//\";"}, {"line_number": 102, "modified_line": "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"}]},
+{"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 31, "modified_line": "import java.util.HashSet;"}, {"line_number": 338, "modified_line": "        final Set<Rule.Phoneme> phonemes = new HashSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"}, {"line_number": 361, "modified_line": "            phonemes.addAll(subBuilder.getPhonemes()); // Mutation 1"}, {"line_number": 364, "modified_line": "        return new PhonemeBuilder(phonemes); // Mutation 1"}]},
+{"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 158, "modified_line": "// Fix for the bug"}]}
+][
+{"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [{"line_number": 98, "new_lines": ["    // Fixing the bug by adding a null check before loading the language rules resource file", "    if (LANGUAGE_RULES_RN == null) {", "        System.out.println(\"Language rules resource file is null. Failed to load.\");", "        return; // Returning without loading the resource file", "    }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [{"line_number": 338, "new_lines": ["        // Fixing the bug by checking if subBuilder is null before adding phonemes", "        if (subBuilder == null) {", "            System.out.println(\"SubBuilder is null. Cannot add phonemes.\");", "            return new PhonemeBuilder(new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR));", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [{"line_number": 158, "new_lines": ["// Inserted to fix the bug"]}]}]```json
+[
+    {
+        "file_name": "org/apache/commons/codec/language/bm/Lang.java",
+        "target_lines": [
+            ["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"],
+            ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s));"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 98, "modified_line": "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/custom_lang.txt\"; // Fixed the buggy line"},
+            {"line_number": 102, "modified_line": "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s))); // Fixed the buggy line"}
+        ]
+    },
+    {
+        "file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java",
+        "target_lines": [
+            ["31", "import java.util.TreeSet;"],
+            ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"],
+            ["361", "            phonemes.addAll(subBuilder.getPhonemes();"],
+            ["364", "        return new PhonemeBuilder(phonemes);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 338, "modified_line": "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(); // Fixed the buggy line"},
+            {"line_number": 361, "modified_line": "            phonemes.addAll(subBuilder.getPhonemes()); // Fixed the buggy line"},
+            {"line_number": 364, "modified_line": "        return new PhonemeBuilder(phonemes); // Fixed the buggy line"}
+        ]
+    },
+    {
+        "file_name": "org/apache/commons/codec/language/bm/Rule.java",
+        "target_lines": [
+            ["158", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 158, "modified_line": "// Insert fix for the buggy line here"}
+        ]
+    }
+]
+```[
+{"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [{"line_number": 98, "new_lines": ["    // Insert fix for the buggy line here"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes()"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [{"line_number": 364, "new_lines": ["        // Insert fix for the buggy line here"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 158, "modified_line": "// Insert fix for the buggy line here"}]}
+]```python
+[
+    # Mutant 1
+    {"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 98, "modified_line": "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\"; // Mutated the buggy line"}, {"line_number": 102, "modified_line": "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s))); // Mutated the buggy line"}]},
+    # Mutant 2
+    {"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 31, "modified_line": "import java.util.TreeSet; // Mutated the buggy line"}, {"line_number": 338, "modified_line": "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(); // Mutated the buggy line"}, {"line_number": 361, "modified_line": "            phonemes.addAll(subBuilder.getPhonemes()); // Mutated the buggy line"}, {"line_number": 364, "modified_line": "        return new PhonemeBuilder(phonemes); // Mutated the buggy line"}]},
+    # Mutant 3
+    {"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 158, "modified_line": "// Mutated fix for the buggy line here"}]}
+]
+```  ```python
+[
+    {"file_name": "org/apache/commons/codec/language/bm/Lang.java", "target_lines": [["98", "    private static final String LANGUAGE_RULES_RN = \"org/apache/commons/codec/language/bm/lang.txt\";"], ["102", "            Langs.put(s, loadFromResource(LANGUAGE_RULES_RN, Languages.getInstance(s)));"]], "insertions": [{"line_number": 98, "new_lines": ["    // Fixing the buggy line by updating the resource name to the correct one"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/language/bm/PhoneticEngine.java", "target_lines": [["31", "import java.util.TreeSet;"], ["338", "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(Rule.Phoneme.COMPARATOR);"], ["361", "            phonemes.addAll(subBuilder.getPhonemes());"], ["364", "        return new PhonemeBuilder(phonemes);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 338, "modified_line": "        final Set<Rule.Phoneme> phonemes = new TreeSet<Rule.Phoneme>(); // Fixed the buggy line"}]},
+    {"file_name": "org/apache/commons/codec/language/bm/Rule.java", "target_lines": [["158", "//"]], "insertions": [{"line_number": 158, "new_lines": ["// Insert fix for the buggy line here"]}], "deletions": [], "modifications": []}
+]
+```

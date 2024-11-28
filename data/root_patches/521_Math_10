@@ -1,0 +1,22 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/analysis/differentiation/DSCompiler.java', 'insertions': [{'line_number': 1419, 'new_lines': ['// Add specific checks for special cases to prevent NaN results', 'if (Double.isNaN(x) || Double.isNaN(y)) {', '    return Double.NaN;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/analysis/differentiation/DSCompiler.java', 'insertions': [{'line_number': 1419, 'new_lines': ['// Add specific checks for special cases to prevent NaN results', 'if (Double.isNaN(x) || Double.isNaN(y)) {', '    return Double.NaN;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/analysis/differentiation/DSCompiler.java', 'insertions': [{'line_number': 1419, 'new_lines': ['// Add specific checks for special cases to prevent NaN results', 'if (Double.isNaN(x) || Double.isNaN(y)) {', '    return Double.NaN;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/analysis/differentiation/DSCompiler.java', 'insertions': [{'line_number': 1419, 'new_lines': ['// Replace the existing DSCompiler.atan2 method with the generated code for a new implementation', 'public void atan2(double[] x, double[] y, double[] quadrant) {', '    for (int i = 0; i < x.length; i++) {', '        if (x[i] == 0.0 && y[i] == 0.0) {', '            quadrant[i] = Double.NaN; // undefined', '        } else if (x[i] > 0.0) {', '            quadrant[i] = Math.atan(y[i] / x[i]);', '        } else if (x[i] < 0.0) {', '            quadrant[i] = Math.atan(y[i] / x[i]) + Math.PI;', '        } else { // x[i] == 0.0', '            quadrant[i] = (y[i] > 0.0) ? Math.PI / 2 : -Math.PI / 2;', '        }', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/analysis/differentiation/DSCompiler.java', 'insertions': [{'line_number': 1419, 'new_lines': ['// Refine the logic to handle special cases in atan2 method', 'if (Double.isNaN(x) || Double.isNaN(y)) {', '    return Double.NaN;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/analysis/differentiation/DSCompiler.java', 'insertions': [{'line_number': 1419, 'new_lines': ['// Add specific checks for special cases to prevent NaN results', 'if (Double.isNaN(x) || Double.isNaN(y)) {', '    return Double.NaN;', '}']}]}]
+
+

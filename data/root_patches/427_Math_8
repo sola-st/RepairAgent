@@ -1,0 +1,28 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final T[] out = (T[]) new Object[sampleSize];'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 181, 'modified_line': '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'}, {'line_number': 187, 'modified_line': '        final T[] out = (T[]) new Object[sampleSize];'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final T[] out = (T[]) new Object[sampleSize];'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 181, 'modified_line': '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'}, {'line_number': 187, 'modified_line': '        final T[] out = (T[]) new Object[sampleSize];'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final T[] out = (T[]) new Object[sampleSize];'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [{'line_number': 181, 'new_lines': ['        if (sampleSize <= 0) {', '            throw new NotStrictlyPositiveException(LocalizedFormats.NUMBER_OF_SAMPLES,', '                    sampleSize);', '        }']}], 'deletions': [187], 'modifications': [{'line_number': 187, 'modified_line': '        final T[] out = (T[]) new Object[sampleSize];'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final T[] out = (T[]) new Object[sampleSize];'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [{'line_number': 181, 'new_lines': ['        if (sampleSize <= 0) {', '            throw new NotStrictlyPositiveException(LocalizedFormats.NUMBER_OF_SAMPLES,', '                    sampleSize);', '        }']}, {'line_number': 187, 'new_lines': ['        final T[] out = (T[]) new Object[sampleSize];']}], 'deletions': [], 'modifications': []}]
+
+

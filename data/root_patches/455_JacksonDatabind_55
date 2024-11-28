@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 79, 'new_lines': ['if (Enum.class.isAssignableFrom(rawKeyType)) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'target_lines': [['82', '                return new Default(Default.TYPE_ENUM, rawKeyType);'], ['10', '//'], ['215', '//'], ['216', '//'], ['217', '//'], ['218', '//']], 'insertions': [{'line_number': 10, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 215, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 216, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 217, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 218, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (Enum.class.isAssignableFrom(rawKeyType)) {'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 82, 'new_lines': ['if (rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'target_lines': [['82', '                return new Default(Default.TYPE_ENUM, rawKeyType);'], ['10', '//'], ['215', '//'], ['216', '//'], ['217', '//'], ['218', '//']], 'insertions': [{'line_number': 10, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 215, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 216, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 217, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 218, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (rawKeyType.isEnum()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 79, 'new_lines': ['if (rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'target_lines': [['82', '                return new Default(Default.TYPE_ENUM, rawKeyType);'], ['10', '//'], ['215', '//'], ['216', '//'], ['217', '//'], ['218', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (rawKeyType.isEnum()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'target_lines': [['82', '                return new Default(Default.TYPE_ENUM, rawKeyType);'], ['10', '//'], ['215', '//'], ['216', '//'], ['217', '//'], ['218', '//']], 'insertions': [{'line_number': 10, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 215, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 216, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 217, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 218, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (rawKeyType.isEnum()) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 79, 'new_lines': ['if (rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 79, 'new_lines': ['if (rawKeyType == Enum.class || rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'target_lines': [['82', '                return new Default(Default.TYPE_ENUM, rawKeyType);'], ['10', '//'], ['215', '//'], ['216', '//'], ['217', '//'], ['218', '//']], 'insertions': [{'line_number': 10, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 82, 'new_lines': ['if (rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);']}, {'line_number': 215, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 216, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 217, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 218, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 79, 'new_lines': ['if (rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'target_lines': [['82', '                return new Default(Default.TYPE_ENUM, rawKeyType);'], ['10', '//'], ['215', '//'], ['216', '//'], ['217', '//'], ['218', '//']], 'insertions': [{'line_number': 10, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 215, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 216, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 217, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 218, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 82, 'new_lines': ['if (rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 79, 'new_lines': ['if (Enum.class.isAssignableFrom(rawKeyType) || rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'target_lines': [['82', '                return new Default(Default.TYPE_ENUM, rawKeyType);'], ['10', '//'], ['215', '//'], ['216', '//'], ['217', '//'], ['218', '//']], 'insertions': [{'line_number': 82, 'new_lines': ['if (Enum.class.isAssignableFrom(rawKeyType) || rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);']}, {'line_number': 10, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 215, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 216, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 217, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 218, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializers.java', 'insertions': [{'line_number': 79, 'new_lines': ['if (rawKeyType.isEnum()) {', 'return new Default(Default.TYPE_ENUM, rawKeyType);']}]}]
+
+

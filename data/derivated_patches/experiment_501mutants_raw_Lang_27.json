@@ -1,0 +1,227 @@
+[
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos > str.length() || decPos > str.length()) {"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || decPos >= str.length()) {"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || decPos >= str.length()) { // Fixing index out of range issue"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= 0 && expPos < str.length() && decPos >= 0 && decPos < str.length()) {"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos < str.length() && decPos < str.length()) {"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= 0 && decPos >= 0 && expPos < str.length() && decPos < str.length()) {"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= 0 && decPos >= 0 && expPos < str.length() && decPos < str.length()) { // Bug fix for index out of range error"}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos < str.length() && decPos < str.length()) { // Fixing index out of range issue"}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos < str.length() && decPos < str.length()) { // Mutation to prevent index out of range error"}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= 0 && expPos < str.length() && decPos >= 0 && decPos < str.length()) { // Fix for index out of range bug"}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= 0 && decPos >= 0 && expPos < str.length() && decPos < str.length()) { // Bug fix for index out of range error"}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= 0 && decPos >= 0 && expPos < str.length() && decPos < str.length()) { // Mutation to prevent index out of range error"}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");"]}]}
+][
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos > str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos <= expPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos > decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos > str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos > decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos > str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos > str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= decPos) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos < str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+][
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos > decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos == decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos != decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos > decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos == decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos != decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}],
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos <= decPos) {"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");"]}]}
+][
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + " is not a valid number.");\n", "                }\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + " is not a valid number.");\n", "                }\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + " is not a valid number.");\n", "                }\n"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + " is not a valid number.");\n", "                }\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + " is not a valid number.");\n", "                }\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + " is not a valid number.");\n", "                }\n"]}, {"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + " is not a valid number.");\n", "                }\n"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos >= decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= decPos) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos >= decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos >= decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {\n", "                    throw new NumberFormatException(str + \" is not a valid number.\");\n"]}]}
+]Based on the provided information, here are 30 mutants generated for the buggy lines in the `NumberUtils.java` file:
+
+1. Mutation 1:
+```json
+[{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}], "deletions": [], "modifications": []}]
+```
+
+2. Mutation 2:
+```json
+[{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}], "deletions": [], "modifications": []}]
+```
+
+3. Mutation 3:
+```json
+[{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}, {"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}], "deletions": [], "modifications": []}]
+```
+
+4. Mutation 4:
+```json
+[{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}]}]
+```
+
+5. Mutation 5:
+```json
+[{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}]}]
+```
+
+6. Mutation 6:
+```json
+[{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}]}]
+```
+
+7. Mutation 7:
+```json
+[{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + \" is not a valid number.\");", "                "]}]}]
+```[
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length()) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 489, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/math/NumberUtils.java", "target_lines": [["479", "                if (expPos < decPos) {"], ["489", "//"]], "insertions": [{"line_number": 479, "new_lines": ["                if (expPos >= str.length() || expPos < 0) {", "                    throw new NumberFormatException(str + " is not a valid number.");", "                "]}], "deletions": [], "modifications": []}
+]

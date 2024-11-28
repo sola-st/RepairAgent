@@ -1,0 +1,64 @@
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData.length() > 0 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData.length() > 0 && docData.charAt(0) == UNICODE_BOM && docData.length() > 1 && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData.length() > 0 && docData.charAt(0) == UNICODE_BOM && docData.length() > 1 && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.length() > 1 && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 93, 'new_lines': ['    public static Document parseByteData(byte[] byteData, String charsetName, String baseUri) {', '        Document doc;', '        InputStream byteStream = new ByteArrayInputStream(byteData);', '        try {', '            doc = Parser.htmlParser().parseInput(byteStream, charsetName, baseUri);', '        } catch (IOException e) {', '            throw new RuntimeException("IOException when parsing byte data", e);', '        }', '        return doc;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 93, 'new_lines': ['    public static Document parseByteData(byte[] byteData, String charset, String baseUri) {', '        ByteBuffer byteBuffer = ByteBuffer.wrap(byteData);', '        String data;', '        if (charset == null) {', '            data = Charset.forName(defaultCharset).decode(byteBuffer).toString();', '        } else {', '            try {', '                data = Charset.forName(validateCharset(charset)).decode(byteBuffer).toString();', '            } catch (IllegalCharsetNameException e) {', '                data = Charset.forName(defaultCharset).decode(byteBuffer).toString();', '            }', '        }', '', '        Document doc = Parser.htmlParser().parseInput(data, baseUri);', '        return doc;', '    }', '', '    private static String validateCharset(String charset) {', '        try {', '            if (Charset.isSupported(charset)) {', '                return charset;', '            }', '        } catch (IllegalCharsetNameException e) {', '            // fall through', '        }', '        return defaultCharset;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.length() > 0 && docData.charAt(0) == UNICODE_BOM && docData.length() > 1 && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 93, 'new_lines': ['    public static String parseByteData(byte[] byteData, Charset charset) {', '        ByteBuffer byteBuffer = ByteBuffer.wrap(byteData);', '        byte[] dataCopy = byteData;', '', '        if (charset == null) {', '            charset = Charset.forName(defaultCharset);', '        }', '', '        // Check for BOM (Byte Order Mark) and skip if present', '        if (byteData.length >= 2 && byteData[0] == (byte) 0xFF && byteData[1] == (byte) 0xFE) {', '            byteBuffer.order(ByteOrder.LITTLE_ENDIAN);', '            dataCopy = Arrays.copyOfRange(byteData, 2, byteData.length);', '        } else if (byteData.length >= 2 && byteData[0] == (byte) 0xFE && byteData[1] == (byte) 0xFF) {', '            byteBuffer.order(ByteOrder.BIG_ENDIAN);', '            dataCopy = Arrays.copyOfRange(byteData, 2, byteData.length);', '        }', '', '        return charset.decode(ByteBuffer.wrap(dataCopy)).toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.length() > 1 && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 126, 'new_lines': ['        if (docData != null && docData.length() > 1 && docData.charAt(0) == UNICODE_BOM && docData.charAt(1) == UNICODE_BOM) {']}]}]
+
+

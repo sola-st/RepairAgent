@@ -1,0 +1,28 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 495, 'modified_line': 'ignored = ignorals.getIgnoredPropertyNames();'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [{'line_number': 495, 'new_lines': ['    // Method that will add properties from a bean', '    protected BeanDeserializerFactory addBeanProps(BeanDescription beanDesc, BeanDeserializerBuilder builder) {', '        // Get all properties for the bean', '        List<BeanPropertyDefinition> propDefs = beanDesc.findProperties();', '', '        // Loop through each property definition', '        for (BeanPropertyDefinition propDef : propDefs) {', '            // Get the property name', '            String name = propDef.getName();', '', '            // Check if the property is already handled', '            if (!builder.hasProperty(name)) {', '                // Get the property definition', '                SimpleBeanPropertyDefinition prop = (SimpleBeanPropertyDefinition) propDef;', '', '                // Add property to the builder', '                builder = builder.addProperty(prop);', '            }', '        }', '', '        // Return the updated builder', '        return this;', '    }']}], 'deletions': [495], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 495, 'modified_line': 'ignored = ignorals.getIgnoredPropertyNames();'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 495, 'modified_line': 'ignored = ignorals.getIgnoredPropertyNames();'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 495, 'modified_line': 'ignored = ignorals.getIgnoredPropertyNames();'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 495, 'modified_line': 'ignored = ignorals.getIgnoredPropertyNames();'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 495, 'modified_line': 'ignored = ignorals.getIgnoredPropertyNames();'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 495, 'modified_line': 'ignored = ignorals.getIgnored();'}]}]
+
+

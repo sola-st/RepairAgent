@@ -1,0 +1,70 @@
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['30', '//']], 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 29, 'new_lines': ['        if (answer instanceof CallsRealMethods) {', '            validateCallsRealMethods((CallsRealMethods) answer, invocation);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (answer instanceof CallsRealMethods) {', '            validateCallsRealMethods((CallsRealMethods) answer, invocation);', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (answer instanceof CallsRealMethods) {', '            validateCallsRealMethods((CallsRealMethods) answer, invocation);', '        }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateCallsRealMethods(CallsRealMethods answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithRealMethod();', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }', '    }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'target_lines': [['28', '//'], ['30', '//']], 'insertions': [{'line_number': 28, 'new_lines': ['    private void validateException(ThrowsException answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithThrowable();', '        }']}, {'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (invocation.isVoid()) {', '            reporter.cannotStubVoidMethodWithAReturnValue();', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/stubbing/answers/AnswersValidator.java', 'insertions': [{'line_number': 30, 'new_lines': ['    private void validateReturnValue(Returns answer, Invocation invocation) {', '        if (answer instanceof CallsRealMethods) {', '            validateCallsRealMethods((CallsRealMethods) answer, invocation);', '        }']}]}]
+
+

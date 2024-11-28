@@ -1,0 +1,40 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'insertions': [{'line_number': 111, 'new_lines': ['pendingAttributeValue = pendingAttributeValue.trim();']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'target_lines': [['107', '//'], ['116', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = "";']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'target_lines': [['107', '//'], ['116', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = "";']}, {'line_number': 116, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = "";']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'insertions': [{'line_number': 106, 'new_lines': ['pendingAttributeName = pendingAttributeName.replaceAll("[\\x00-\\x1F]", "");']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'target_lines': [['107', '//'], ['116', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = "";']}, {'line_number': 116, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = "";']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'insertions': [{'line_number': 106, 'new_lines': ['pendingAttributeName = pendingAttributeName.replaceAll("[\\x00-\\x1F]", "");']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'target_lines': [['107', '//'], ['116', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = "";']}, {'line_number': 116, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = "";']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'target_lines': [['107', '//'], ['116', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeValue.isEmpty()) { pendingAttributeValue = ""; }']}, {'line_number': 116, 'new_lines': ['if (pendingAttributeValue.isEmpty()) { pendingAttributeValue = ""; }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeName.isEmpty()) pendingAttributeName = "";']}, {'line_number': 116, 'new_lines': ['if (pendingAttributeName.isEmpty()) pendingAttributeName = "";']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeName != null) {', 'pendingAttributeName = pendingAttributeName.trim();', 'Attribute attribute;', 'if (hasPendingAttributeValue)', 'attribute = new Attribute(pendingAttributeName, pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);', 'else if (hasEmptyAttributeValue)', 'attribute = new Attribute(pendingAttributeName, "");', 'else', 'attribute = new BooleanAttribute(pendingAttributeName);', 'attributes.put(attribute);']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'target_lines': [['107', '//'], ['116', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeName != null) {', 'pendingAttributeName = pendingAttributeName.trim();', 'Attribute attribute;', 'if (hasPendingAttributeValue)', 'attribute = new Attribute(pendingAttributeName, pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);', 'else if (hasEmptyAttributeValue)', 'attribute = new Attribute(pendingAttributeName, "");', 'else', 'attribute = new BooleanAttribute(pendingAttributeName);', 'attributes.put(attribute);']}, {'line_number': 116, 'new_lines': ['if (pendingAttributeName != null) {', 'pendingAttributeName = pendingAttributeName.trim();', 'Attribute attribute;', 'if (hasPendingAttributeValue)', 'attribute = new Attribute(pendingAttributeName, pendingAttributeValue.length() > 0 ? pendingAttributeValue.toString() : pendingAttributeValueS);', 'else if (hasEmptyAttributeValue)', 'attribute = new Attribute(pendingAttributeName, "");', 'else', 'attribute = new BooleanAttribute(pendingAttributeName);', 'attributes.put(attribute);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'insertions': [{'line_number': 106, 'new_lines': ['pendingAttributeName = pendingAttributeName.replaceAll("[\\x00-\\x1F]", "");']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Token.java', 'target_lines': [['107', '//'], ['116', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = ";";']}, {'line_number': 116, 'new_lines': ['if (pendingAttributeValue.isEmpty()) pendingAttributeValue = ";";']}], 'deletions': [], 'modifications': []}]
+
+

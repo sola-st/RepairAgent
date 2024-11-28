@@ -1,0 +1,19 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 516, 'new_lines': ['        if (node.isObjectLit()) {', '            Node key = node.getFirstChild();', '            while (key != null) {', '                if (!key.isString()) {', '                    report(JSError.make(key, OBJECT_LITERAL_KEY_NOT_STRING));', '                }', '                key = key.getNext();', '            }', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'target_lines': [['516', '//'], ['517', '//']], 'insertions': [{'line_number': 516, 'new_lines': ['        if (node.isObjectLit()) {', '            Node key = node.getFirstChild();', '            while (key != null) {', '                if (!key.isString()) {', '                    report(JSError.make(key, OBJECT_LITERAL_KEY_NOT_STRING));', '                }', '                key = key.getNext();', '            }', '        }']}, {'line_number': 517, 'new_lines': ['        // Inserted new line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 516, 'new_lines': ['        if (node.isObjectLit()) {', '            Node key = node.getFirstChild();', '            while (key != null) {', '                if (!key.isString()) {', '                    report(JSError.make(key, OBJECT_LITERAL_KEY_NOT_STRING));', '                }', '                key = key.getNext();', '            }', '        }']}, {'line_number': 517, 'new_lines': ['        // Inserted new line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 516, 'new_lines': ['        if (node.isObjectLit()) {', '            Node key = node.getFirstChild();', '            while (key != null) {', '                if (!key.isString()) {', '                    report(JSError.make(key, OBJECT_LITERAL_KEY_NOT_STRING));', '                }', '                key = key.getNext();', '            }', '        }']}, {'line_number': 517, 'new_lines': ['        // Inserted new line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[]
+
+

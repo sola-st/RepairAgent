@@ -1,0 +1,25 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'insertions': [{'line_number': 1580, 'new_lines': ["// Functions with explicit 'this' types must be called in a GETPROP or GETELEM.", 'if (functionType.hasThisType()) {', '  Node parent = n.getParent();', '  if (parent != null && (parent.isGetProp() || parent.isGetElem())) {', "    // Handle 'this' type appropriately", '  } else {', '    report(t, n, THIS_TYPE_CALL_ERROR, functionType.toString());', '  }', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'modifications': [{'line_number': 1581, 'modified_line': 'visitParameterList(t, n, functionType)'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'target_lines': [['1580', '//']], 'insertions': [{'line_number': 1580, 'new_lines': ["// Functions with explicit 'this' types must be called in a GETPROP or GETELEM.", 'if (functionType.hasThisType()) {', '  Node parent = n.getParent();', '  if (parent != null && (parent.isGetProp() || parent.isGetElem())) {', "    // Handle 'this' type appropriately", '  } else {', '    report(t, n, THIS_TYPE_CALL_ERROR, functionType.toString());', '  }', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'modifications': [{'line_number': 1581, 'modified_line': 'if (functionType.hasThisType()) {'}, {'line_number': 1582, 'modified_line': '  Node parent = n.getParent();'}, {'line_number': 1583, 'modified_line': '  if (parent != null && (parent.isGetProp() || parent.isGetElem())) {'}, {'line_number': 1584, 'modified_line': "    // Handle 'this' type appropriately"}, {'line_number': 1585, 'modified_line': '  } else {'}, {'line_number': 1586, 'modified_line': '    report(t, n, THIS_TYPE_CALL_ERROR, functionType.toString());'}, {'line_number': 1587, 'modified_line': '  }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'target_lines': [['1580', '//']], 'insertions': [{'line_number': 1580, 'new_lines': ["// Functions with explicit 'this' types must be called in a GETPROP or GETELEM.", 'if (functionType.hasThisType()) {', '  Node parent = n.getParent();', '  if (parent != null && (parent.isGetProp() || parent.isGetElem())) {', "    // Handle 'this' type appropriately", '  } else {', '    report(t, n, THIS_TYPE_CALL_ERROR, functionType.toString());', '  }', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'modifications': [{'line_number': 1581, 'modified_line': 'if (functionType.hasThisType()) {'}, {'line_number': 1582, 'modified_line': '  Node parent = n.getParent();'}, {'line_number': 1583, 'modified_line': '  if (parent != null && (parent.isGetProp() || parent.isGetElem())) {'}, {'line_number': 1584, 'modified_line': "    // Handle 'this' type appropriately"}, {'line_number': 1585, 'modified_line': '  } else {'}, {'line_number': 1586, 'modified_line': '    report(t, n, THIS_TYPE_CALL_ERROR, functionType.toString());'}, {'line_number': 1587, 'modified_line': '  }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeCheck.java', 'target_lines': [['1580', '//']], 'insertions': [{'line_number': 1580, 'new_lines': ["// Functions with explicit 'this' types must be called in a GETPROP or GETELEM.", 'if (functionType.hasThisType()) {', '  Node parent = n.getParent();', '  if (parent != null && (parent.isGetProp() || parent.isGetElem())) {', "    // Handle 'this' type appropriately", '  } else {', '    report(t, n, THIS_TYPE_CALL_ERROR, functionType.toString());', '  }', '}']}]}]
+
+

@@ -1,0 +1,52 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/PatternOptionBuilderTest.java', 'modifications': [{'line_number': 70, 'modified_line': 'assertEquals("number flag n", 4.5, line.getOptionObject("n"));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', 'return NumberUtils.createNumber(str);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 25, 'modified_line': 'import org.apache.commons.lang.math.NumberUtils;'}, {'line_number': 162, 'modified_line': 'return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 162, 'modified_line': 'return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', 'return NumberUtils.createNumber(str);']], 'insertions': [{'line_number': 25, 'new_lines': ['import org.apache.commons.lang.math.NumberUtils;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', '            return NumberUtils.createNumber(str);']], 'insertions': [{'line_number': 25, 'new_lines': ['import org.apache.commons.lang.math.NumberUtils;']}], 'deletions': [], 'modifications': [{'line_number': 162, 'modified_line': '            return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/PatternOptionBuilderTest.java', 'modifications': [{'line_number': 70, 'modified_line': 'assertEquals("number flag n", 4.5, line.getOptionObject("n"));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', '            return NumberUtils.createNumber(str);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 25, 'modified_line': 'import org.apache.commons.lang.math.NumberUtils;'}, {'line_number': 162, 'modified_line': '            return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 161, 'modified_line': 'return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 157, 'modified_line': 'public static Number createNumber(String str) {'}, {'line_number': 158, 'modified_line': 'try {'}, {'line_number': 159, 'modified_line': 'String numericStr = str.replaceAll("[^0-9]", "");'}, {'line_number': 160, 'modified_line': 'int number = Integer.parseInt(numericStr);'}, {'line_number': 161, 'modified_line': 'return number;'}, {'line_number': 162, 'modified_line': '} catch (NumberFormatException nfe) {'}, {'line_number': 163, 'modified_line': 'System.err.println(nfe.getMessage());'}, {'line_number': 164, 'modified_line': 'return null;'}, {'line_number': 165, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', '            return NumberUtils.createNumber(str);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 25, 'modified_line': 'import org.apache.commons.lang.math.NumberUtils;'}, {'line_number': 162, 'modified_line': '            return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 162, 'modified_line': '            return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', '            return NumberUtils.createNumber(str);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 25, 'modified_line': 'import org.apache.commons.lang.math.NumberUtils;'}, {'line_number': 162, 'modified_line': '            return new Double(str);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 163, 'modified_line': 'catch (NumberFormatException nfe) { return null; }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', '            return NumberUtils.createNumber(str);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 25, 'modified_line': 'import org.apache.commons.lang.math.NumberUtils;'}, {'line_number': 162, 'modified_line': '            try { return NumberUtils.createNumber(str); } catch (NumberFormatException nfe) { System.err.println(nfe.getMessage()); return null; }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', '            return NumberUtils.createNumber(str);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 162, 'modified_line': '            try { return new Double(str); } catch (NumberFormatException nfe) { System.err.println(nfe.getMessage()); return null; }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/TypeHandler.java', 'target_lines': [['25', 'import org.apache.commons.lang.math.NumberUtils;'], ['162', '            return NumberUtils.createNumber(str);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 25, 'modified_line': 'import org.apache.commons.lang.math.NumberUtils;'}, {'line_number': 162, 'modified_line': '            try { return new Double(str); } catch (NumberFormatException nfe) { System.err.println(nfe.getMessage()); return null; '}]}]
+
+

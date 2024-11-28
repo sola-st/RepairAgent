@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 194, 'modified_line': 'char c = str.charAt(i);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'target_lines': [['193', '        for (int i = 0; i < len; ++i) {'], ['194', '            char c = str.charAt(i);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Fixing the loop to start from 1 instead of 0 to match the expected behavior'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to match the loop starting from 1'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Fixing the loop to start from 1 instead of 0 to match the expected behavior'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to match the loop starting from 1'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to match the loop starting from 1'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'target_lines': [['193', '        for (int i = 0; i < len; ++i) {'], ['194', '            char c = str.charAt(i);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Fixing the loop to start from 1 instead of 0 to match the expected behavior'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to match the loop starting from 1'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Updating _parseIndex method with a new parsing logic to fix the bug'}, {'line_number': 194, 'modified_line': 'protected static int _parseIndex(String str, int i) {'}, {'line_number': 195, 'modified_line': "    // Skip leading '/'"}, {'line_number': 196, 'modified_line': "    if (str.charAt(i) == '/') {"}, {'line_number': 197, 'modified_line': '        ++i;'}, {'line_number': 198, 'modified_line': '    }'}, {'line_number': 199, 'modified_line': '    int len = str.length();'}, {'line_number': 200, 'modified_line': '    int val = 0;'}, {'line_number': 201, 'modified_line': '    for (; i < len; ++i) {'}, {'line_number': 202, 'modified_line': '        char c = str.charAt(i);'}, {'line_number': 203, 'modified_line': "        if (c < '0' || c > '9') {"}, {'line_number': 204, 'modified_line': '            break;'}, {'line_number': 205, 'modified_line': '        }'}, {'line_number': 206, 'modified_line': '        if (val == 0 && i > 1) {'}, {'line_number': 207, 'modified_line': '            break;'}, {'line_number': 208, 'modified_line': '        }'}, {'line_number': 209, 'modified_line': "        val = (val * 10) + (c - '0');"}, {'line_number': 210, 'modified_line': '        if (val < 0) {'}, {'line_number': 211, 'modified_line': '            throw new IllegalArgumentException("Illegal digit in JSON Pointer index");'}, {'line_number': 212, 'modified_line': '        }'}, {'line_number': 213, 'modified_line': '    }'}, {'line_number': 214, 'modified_line': '    return val;'}, {'line_number': 215, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Fixing the loop to start from 1 instead of 0 to match the expected behavior'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to match the loop starting from 1'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Fixing the loop to start from 1 instead of 0 to match the expected behavior'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to match the loop starting from 1'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Refining the loop to start from 1 instead of 0 for correct index parsing'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to start from 1 for correct parsing'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Further refining the loop to start from 1 instead of 0 for correct index parsing'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to start from 1 for correct parsing'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/JsonPointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 193, 'modified_line': '// Fixing the loop to start from 1 instead of 0 to match the expected behavior'}, {'line_number': 194, 'modified_line': 'char c = str.charAt(i - 1); // Adjusting index to match the loop starting from 1'}]}]
+
+

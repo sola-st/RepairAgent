@@ -1,0 +1,55 @@
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '};']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '};']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '};']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 835, 'new_lines': ['// Inserted lines to fix the bug at line 835']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '};']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 835, 'new_lines': ['// Inserted lines to fix the bug at line 835']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}, {'line_number': 835, 'new_lines': ['// Inserted lines to fix the bug at line 835']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}, {'line_number': 835, 'new_lines': ['// Inserted lines to fix the bug at line 835']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}, {'line_number': 835, 'new_lines': ['// Inserted lines to fix the bug at line 835']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}, {'line_number': 835, 'new_lines': ['// Inserted lines to fix the bug at line 835']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'target_lines': [['833', '        return (TypeAdapter<T2>) typeAdapter;'], ['835', '//']], 'insertions': [{'line_number': 833, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}, {'line_number': 835, 'new_lines': ['// Inserted lines to fix the bug at line 835']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/TypeAdapters.java', 'insertions': [{'line_number': 834, 'new_lines': ['if (typeAdapter instanceof TypeAdapter<JsonPrimitive> && requestedType == JsonObject.class) {', 'return (TypeAdapter<T2>) new TypeAdapter<JsonObject>() {', '@Override', 'public void write(JsonWriter out, JsonObject value) throws IOException {', 'out.nullValue();', '}', '@Override', 'public JsonObject read(JsonReader in) throws IOException {', 'return in.peek() == JsonToken.NULL ? null : new JsonObject();', '}', '};']}]}]
+
+

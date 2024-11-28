@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (attr.getNamespace().equals(ns) || (ns == null && attr.getNamespace().equals(""))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java', 'target_lines': [['84', '            if (equalStrings(testPrefix, nodePrefix)) {'], ['87', '            String testNS = null;'], ['88', '            if (testPrefix != null) {'], ['89', '                testNS = parent.getNamespaceURI(testPrefix);'], ['91', '            String nodeNS = null;'], ['92', '            if (nodePrefix != null) {'], ['93', '                nodeNS = parent.getNamespaceURI(nodePrefix);'], ['94', '            }'], ['95', '            return equalStrings(testNS, nodeNS);'], ['155', '}']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'target_lines': [['70', '                if (ns != null) {'], ['74', '                    }'], ['82', '                    if (attr.getNamespace().equals(ns)) {'], ['117', '}']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (attr.getNamespace().equals(ns) || (ns == null && attr.getNamespace().equals("")) || (ns == null && attr.getNamespace().equals(""))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (attr.getNamespace().equals(ns) || (ns == null && attr.getNamespace().equals(""))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (attr.getNamespace().equals(ns) || (ns == null && attr.getNamespace().equals(""))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (attr.getNamespace().equals(ns) || (ns == null && attr.getNamespace().equals(""))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (attr.getNamespaceResolver().equals(ns) || (ns == null && attr.getNamespace().equals("xml")) || (ns == null && attr.getNamespace().equals("*"))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java', 'target_lines': [['84', '            if (equalStrings(testPrefix, nodePrefix)) {'], ['87', '            String testNS = null;'], ['88', '            if (testPrefix != null) {'], ['89', '                testNS = parent.getNamespaceURI(testPrefix);'], ['91', '            String nodeNS = null;'], ['92', '            if (nodePrefix != null) {'], ['93', '                nodeNS = parent.getNamespaceURI(nodePrefix);'], ['94', '            }'], ['95', '            return equalStrings(testNS, nodeNS);'], ['155', '}']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'target_lines': [['70', '                if (ns != null) {'], ['74', '                    }'], ['82', '                    if (attr.getNamespace().equals(ns)) {'], ['117', '}']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java', 'target_lines': [['84', '            if (equalStrings(testPrefix, nodePrefix)) {'], ['87', '            String testNS = null;'], ['88', '            if (testPrefix != null) {'], ['89', '                testNS = parent.getNamespaceURI(testPrefix);'], ['91', '            String nodeNS = null;'], ['92', '            if (nodePrefix != null) {'], ['93', '                nodeNS = parent.getNamespaceURI(nodePrefix);'], ['94', '            }'], ['95', '            return equalStrings(testNS, nodeNS);'], ['155', '}']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'target_lines': [['70', '                if (ns != null) {'], ['74', '                    }'], ['82', '                    if (attr.getNamespace().equals(ns)) {'], ['117', '}']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java', 'target_lines': [['84', '            if (equalStrings(testPrefix, nodePrefix)) {'], ['87', '            String testNS = null;'], ['88', '            if (testPrefix != null) {'], ['89', '                testNS = parent.getNamespaceURI(testPrefix);'], ['91', '            String nodeNS = null;'], ['92', '            if (nodePrefix != null) {'], ['93', '                nodeNS = parent.getNamespaceURI(nodePrefix);'], ['94', '            }'], ['95', '            return equalStrings(testNS, nodeNS);'], ['155', '}']], 'insertions': [{'line_number': 90, 'new_lines': ['                if (testPrefix == null && nodePrefix == null) {', '                    return true;', '                }']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'target_lines': [['70', '                if (ns != null) {'], ['74', '                    }'], ['82', '                    if (attr.getNamespace().equals(ns)) {'], ['117', '}']], 'insertions': [{'line_number': 74, 'new_lines': ['                    if (ns == null && attr.getNamespace().equals("")) {', '                        return true;', '                    }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMAttributeIterator.java', 'insertions': [{'line_number': 90, 'new_lines': ['                if (testPrefix == null && nodePrefix == null) {', '                    return true;', '                }']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMAttributeIterator.java', 'insertions': [{'line_number': 74, 'new_lines': ['                    if (ns == null && attr.getNamespace().equals("")) {', '                        return true;', '                    }']}], 'deletions': [], 'modifications': [{'line_number': 82, 'modified_line': 'if (attr.getNamespace().equals(ns) || (ns == null && attr.getNamespace().equals("")) || (ns == null && attr.getNamespace().equals(""))) {'}]}]
+
+

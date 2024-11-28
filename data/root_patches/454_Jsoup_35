@@ -1,0 +1,16 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'insertions': [{'line_number': 726, 'new_lines': ['// Inserted fix to handle unclosed anchor tags properly', 'if (furthestBlock.nodeName().equals("a") && !tb.currentElement().nodeName().equals("a")) {', '    tb.error(this);', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'insertions': [{'line_number': 726, 'new_lines': ['// Refactored to properly handle child nodes for unclosed anchor tags', 'Node[] childNodes = furthestBlock.childNodes().toArray(new Node[furthestBlock.childNodeSize()]);', 'for (Node childNode : childNodes) {', '    if (childNode instanceof Element) {', '        Element childElement = (Element) childNode;', '        if (childElement.tag().isFormListed()) {', '            tb.process(childElement);', '        } else {', '            tb.error(this);', '        }', '    } else if (childNode instanceof Comment) {', '        tb.process(childNode);', '    } else {', '        tb.error(this);', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'insertions': [{'line_number': 726, 'new_lines': ['// Refactored to properly handle child nodes for unclosed anchor tags', 'Node[] childNodes = furthestBlock.childNodes().toArray(new Node[furthestBlock.childNodeSize()]);', 'for (Node childNode : childNodes) {', 'if (childNode instanceof Element) {', 'Element childElement = (Element) childNode;', 'if (childElement.tag().isFormListed()) {', 'tb.process(childElement);', '} else {', 'tb.error(this);', '}', '} else if (childNode instanceof Comment) {', 'tb.process(childNode);', '} else {', 'tb.error(this);', '}', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilderState.java', 'insertions': [{'line_number': 726, 'new_lines': ['// Refactored to properly handle child nodes for unclosed anchor tags', 'for (Node childNode : furthestBlock.childNodes()) {', 'if (childNode instanceof Element) {', 'Element childElement = (Element) childNode;', 'if (childElement.tag().isFormListed()) {', 'tb.process(childElement);', '} else {', 'tb.error(this);', '}', '} else if (childNode instanceof Comment) {', 'tb.process(childNode);', '} else {', 'tb.error(this);', '}', '}']}]}]
+
+

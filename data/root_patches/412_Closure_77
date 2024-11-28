@@ -1,0 +1,85 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adding additional character escaping logic', "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else {', 'sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else {', 'sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else {', 'sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', '} else {', 'sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 1, 'new_lines': ['package com.google.javascript.jscomp;', '', 'public class CodeGenerator {', '    // Other methods and variables', '    public static String strEscape(String str) {', '        StringBuilder sb = new StringBuilder();', '        for (int i = 0; i < str.length(); i++) {', '            char c = str.charAt(i);', '            switch (c) {', '                case \'\\\'\' : sb.append("\\\\\'"); break;', '                case \'"\' : sb.append("\\\\""); break;', '                case \'\\\\\' : sb.append("\\\\\\\\"); break;', '                case \'\\b\' : sb.append("\\\\b"); break;', '                case \'\\f\' : sb.append("\\\\f"); break;', '                case \'\\n\' : sb.append("\\\\n"); break;', '                case \'\\r\' : sb.append("\\\\r"); break;', '                case \'\\t\' : sb.append("\\\\t"); break;', '                default : if (Character.isISOControl(c)) { sb.append(String.format("\\\\u%04x", (int) c)); } else { sb.append(c); }', '            }', '        }', '        return sb.toString();', '    }', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", 'sb.append("\\\\u0000");', "} else if (c == '\\0') {", 'sb.append("\\\\0");', '} else {', 'sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 1, 'new_lines': ['package com.google.javascript.jscomp;', '', 'public class CodeGenerator {', '    // Other methods and variables', '    public static String strEscape(String str) {', '        if (str == null) {', '            return null;', '        }', '', '        StringBuilder output = new StringBuilder(str.length());', '        for (int i = 0; i < str.length(); i++) {', '            char c = str.charAt(i);', '            switch (c) {', '                case \'\\\'\' : output.append("\\\\\'"); break;', '                case \'"\' : output.append("\\\\\\""); break;', '                case \'\\\\\' : output.append("\\\\\\\\"); break;', '                case \'\\t\' : output.append("\\\\t"); break;', '                case \'\\n\' : output.append("\\\\n"); break;', '                case \'\\r\' : output.append("\\\\r"); break;', '                case \'\\f\' : output.append("\\\\f"); break;', '                case \'\\b\' : output.append("\\\\b"); break;', '                default : if (Character.isISOControl(c)) { output.append("\\\\u").append(String.format("%04x", (int) c)); } else { output.append(c); }', '            }', '        }', '        return output.toString();', '    }', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', 'StringBuilder sb = new StringBuilder();', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', 'StringBuilder sb = new StringBuilder();', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', 'StringBuilder sb = new StringBuilder();', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', "} else if (c == '\\0') {", '    sb.append("\\\\0");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Fixing bug by adjusting character escaping logic', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 1, 'new_lines': ['package com.google.javascript.jscomp;', '', 'public class CodeGenerator {', '    // Other methods and variables', '    public static String strEscape(String str) {', '        if (str == null) {', '            return null;', '        }', '', '        StringBuilder result = new StringBuilder();', '        for (char c : str.toCharArray()) {', '            switch (c) {', '                case \'\\\'\' : result.append("\\\\\'"); break;', '                case \'"\' : result.append("\\\\\\""); break;', '                case \'\\\\\' : result.append("\\\\\\\\"); break;', '                case \'\\t\' : result.append("\\\\t"); break;', '                case \'\\n\' : result.append("\\\\n"); break;', '                case \'\\r\' : result.append("\\\\r"); break;', '                case \'\\f\' : result.append("\\\\f"); break;', '                case \'\\b\' : result.append("\\\\b"); break;', '                default : if (c < \' \') { String hex = Integer.toHexString(c); result.append("\\\\u"); for (int i = 0; i < 4 - hex.length(); i++) { result.append(\'0\'); } result.append(hex); } else { result.append(c); }', '            }', '        }', '        return result.toString();', '    }', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CodeGenerator.java', 'insertions': [{'line_number': 966, 'new_lines': ['// Refining character escaping logic to address bug', "if (c == '\\u0000') {", '    sb.append("\\\\u0000");', '} else {', '    sb.append(c);', '}']}], 'deletions': [], 'modifications': []}]
+
+

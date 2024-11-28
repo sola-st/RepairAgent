@@ -1,0 +1,580 @@
+
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+        "insertions": [
+            {
+                "line_number": 126,
+                "new_lines": [
+                    "        Node next = c.getNext();"
+                ]
+            }
+        ],
+        "deletions": [128],
+        "modifications": []
+    }
+    
+    {
+        "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+        "insertions": [
+            {
+                "line_number": 126,
+                "new_lines": [
+                    "// Generating mutant by changing method call to getNext() instead of traverse(c)",
+                    "Node next = c.getNext();"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+    
+{"file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java", "insertions": [{"line_number": 127, "new_lines": ["        Node next = c.getNext();"]}], "deletions": [], "modifications": [{"line_number": 126, "modified_line": "        traverse(c);"}, {"line_number": 128, "modified_line": "        c = next;"}]}
+ 
+    
+   
+  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+{
+    "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+    "insertions": [
+        {
+            "line_number": 127,
+            "new_lines": [
+                "        Node next = c.getNext();"
+            ]
+        }
+    ],
+    "modifications": [
+        {
+            "line_number": 126,
+            "modified_line": "        traverse(c);"
+        },
+        {
+            "line_number": 128,
+            "modified_line": "        c = next;"
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"inserted_line\");",
+                        "        c.addChildAfter(newNode, c);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        c.insertBefore(Node.newString(\"new_line\"));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        Node next = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_node\");",
+                        "        c.addChildToFront(newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = next;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_content\");",
+                        "        c.addChildToFront(newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        processNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getParent();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newNumber(123);",
+                        "        c.addChildToBack(newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        processNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getFirstChild();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        optimizeNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_line\");",
+                        "        c.addChildBefore(newNode, c);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_content\");",
+                        "        c.replaceChild(c.getFirstChild(), newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        processNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getFirstChild();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_line\");",
+                        "        c.addChildToBack(newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        optimize(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        process(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        handleNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_content\");",
+                        "        c.addChildToFront(newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        transform(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_line\");",
+                        "        c.addChildAfter(newNode, c);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        optimizeCode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_content\");",
+                        "        c.addChildBefore(newNode, c);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        process(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        optimizeNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_content\");",
+                        "        c.replaceChild(c.getFirstChild(), newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_line\");",
+                        "        c.addChildAfter(newNode, c);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        processNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getFirstChild();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "insertions": [
+                {
+                    "line_number": 128,
+                    "new_lines": [
+                        "        Node newNode = Node.newString(\"new_line\");",
+                        "        c.addChildToFront(newNode);"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        traverse(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/PeepholeOptimizationsPass.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        optimizeNode(c);"
+                },
+                {
+                    "line_number": 128,
+                    "modified_line": "        c = c.getNext();"
+                }
+            ]
+        }
+    ]
+}

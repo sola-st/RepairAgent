@@ -1,0 +1,583 @@
+
+   {
+      "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+      "insertions": [],
+      "deletions": [],
+      "modifications": [
+          {
+              "line_number": 1451,
+              "modified_line": "      attachLiteralTypes(n);"
+          },
+          {
+              "line_number": 1452,
+              "modified_line": "      switch (n.getType()) {"
+          },
+          {
+              "line_number": 1453,
+              "modified_line": "        case Token.FUNCTION:"
+          },
+          {
+              "line_number": 1454,
+              "modified_line": "          if (parent.getType() == Token.NAME) {"
+          },
+          {
+              "line_number": 1455,
+              "modified_line": "            break;"
+          },
+          {
+              "line_number": 1456,
+              "modified_line": "          }"
+          },
+          {
+              "line_number": 1457,
+              "modified_line": "          defineDeclaredFunction(n, parent);"
+          },
+          {
+              "line_number": 1458,
+              "modified_line": "          break;"
+          },
+          {
+              "line_number": 1459,
+              "modified_line": "        case Token.CATCH:"
+          },
+          {
+              "line_number": 1460,
+              "modified_line": "          defineCatch(n, parent);"
+          },
+          {
+              "line_number": 1461,
+              "modified_line": "          break;"
+          },
+          {
+              "line_number": 1462,
+              "modified_line": "        case Token.VAR:"
+          },
+          {
+              "line_number": 1463,
+              "modified_line": "          defineVar(n, parent);"
+          },
+          {
+              "line_number": 1464,
+              "modified_line": "          break;"
+          },
+          {
+              "line_number": 1465,
+              "modified_line": "      }"
+          }
+      ]
+  }
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 1451, "modified_line": "      attachLiteralTypes(n); // Mutation 1"},
+                {"line_number": 1452, "modified_line": "      switch (n.getType()) { // Mutation 1"},
+                {"line_number": 1453, "modified_line": "        case Token.FUNCTION: // Mutation 1"},
+                {"line_number": 1454, "modified_line": "          if (parent.getType() != Token.NAME) { // Mutation 1"},
+                {"line_number": 1455, "modified_line": "            return; // Mutation 1"},
+                {"line_number": 1456, "modified_line": "          } // Mutation 1"},
+                {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent); // Mutation 1"},
+                {"line_number": 1458, "modified_line": "          break; // Mutation 1"},
+                {"line_number": 1459, "modified_line": "        case Token.CATCH: // Mutation 1"},
+                {"line_number": 1460, "modified_line": "          defineCatch(n, parent); // Mutation 1"},
+                {"line_number": 1461, "modified_line": "          break; // Mutation 1"},
+                {"line_number": 1462, "modified_line": "        case Token.VAR: // Mutation 1"},
+                {"line_number": 1463, "modified_line": "          defineVar(n, parent); // Mutation 1"},
+                {"line_number": 1464, "modified_line": "          break; // Mutation 1"},
+                {"line_number": 1465, "modified_line": "      } // Mutation 1"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 1451, "modified_line": "      attachLiteralTypes(n); // Mutation 2"},
+                {"line_number": 1452, "modified_line": "      switch (n.getType()) { // Mutation 2"},
+                {"line_number": 1453, "modified_line": "        case Token.FUNCTION: // Mutation 2"},
+                {"line_number": 1454, "modified_line": "          if (parent.getType() != Token.NAME) { // Mutation 2"},
+                {"line_number": 1455, "modified_line": "            return; // Mutation 2"},
+                {"line_number": 1456, "modified_line": "          } // Mutation 2"},
+                {"line_number": 1457, "modified_line": "          // Updated logic here // Mutation 2"},
+                {"line_number": 1458, "modified_line": "          break; // Mutation 2"},
+                {"line_number": 1459, "modified_line": "        case Token.CATCH: // Mutation 2"},
+                {"line_number": 1460, "modified_line": "          defineCatch(n, parent); // Mutation 2"},
+                {"line_number": 1461, "modified_line": "          break; // Mutation 2"},
+                {"line_number": 1462, "modified_line": "        case Token.VAR: // Mutation 2"},
+                {"line_number": 1463, "modified_line": "          defineVar(n, parent); // Mutation 2"},
+                {"line_number": 1464, "modified_line": "          break; // Mutation 2"},
+                {"line_number": 1465, "modified_line": "      } // Mutation 2"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 1451, "modified_line": "      attachLiteralTypes(n); // Mutation 3"},
+                {"line_number": 1452, "modified_line": "      switch (n.getType()) { // Mutation 3"},
+                {"line_number": 1453, "modified_line": "        case Token.FUNCTION: // Mutation 3"},
+                {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME && n.hasChildren()) { // Mutation 3"},
+                {"line_number": 1455, "modified_line": "            return; // Mutation 3"},
+                {"line_number": 1456, "modified_line": "          } // Mutation 3"},
+                {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent); // Mutation 3"},
+                {"line_number": 1458, "modified_line": "          break; // Mutation 3"},
+                {"line_number": 1459, "modified_line": "        case Token.CATCH: // Mutation 3"},
+                {"line_number": 1460, "modified_line": "          defineCatch(n, parent); // Mutation 3"},
+                {"line_number": 1461, "modified_line": "          break; // Mutation 3"},
+                {"line_number": 1462, "modified_line": "        case Token.VAR: // Mutation 3"},
+                {"line_number": 1463, "modified_line": "          defineVar(n, parent); // Mutation 3"},
+                {"line_number": 1464, "modified_line": "          break; // Mutation 3"},
+                {"line_number": 1465, "modified_line": "      } // Mutation 3"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 1451, "modified_line": "      attachLiteralTypes(n); // Mutation 4"},
+                {"line_number": 1452, "modified_line": "      switch (n.getType()) { // Mutation 4"},
+                {"line_number": 1453, "modified_line": "        case Token.FUNCTION: // Mutation 4"},
+                {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME || n.hasChildren()) { // Mutation 4"},
+                {"line_number": 1455, "modified_line": "            return; // Mutation 4"},
+                {"line_number": 1456, "modified_line": "          } // Mutation 4"},
+                {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent); // Mutation 4"},
+                {"line_number": 1458, "modified_line": "          break; // Mutation 4"},
+                {"line_number": 1459, "modified_line": "        case Token.CATCH: // Mutation 4"},
+                {"line_number": 1460, "modified_line": "          defineCatch(n, parent); // Mutation 4"},
+                {"line_number": 1461, "modified_line": "          break; // Mutation 4"},
+                {"line_number": 1462, "modified_line": "        case Token.VAR: // Mutation 4"},
+                {"line_number": 1463, "modified_line": "          defineVar(n, parent); // Mutation 4"},
+                {"line_number": 1464, "modified_line": "          break; // Mutation 4"},
+                {"line_number": 1465, "modified_line": "      } // Mutation 4"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 1451, "modified_line": "      attachLiteralTypes(n); // Mutation 5"},
+                {"line_number": 1452, "modified_line": "      switch (n.getType()) { // Mutation 5"},
+                {"line_number": 1453, "modified_line": "        case Token.FUNCTION: // Mutation 5"},
+                {"line_number": 1454, "modified_line": "          if (parent.getType() != Token.NAME || n.hasChildren()) { // Mutation 5"},
+                {"line_number": 1455, "modified_line": "            return; // Mutation 5"},
+                {"line_number": 1456, "modified_line": "          } // Mutation 5"},
+                {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent); // Mutation 5"},
+                {"line_number": 1458, "modified_line": "          break; // Mutation 5"},
+                {"line_number": 1459, "modified_line": "        case Token.CATCH: // Mutation 5"},
+                {"line_number": 1460, "modified_line": "          defineCatch(n, parent); // Mutation 5"},
+                {"line_number": 1461, "modified_line": "          break; // Mutation 5"},
+                {"line_number": 1462, "modified_line": "        case Token.VAR: // Mutation 5"},
+                {"line_number": 1463, "modified_line": "          defineVar(n, parent); // Mutation 5"},
+                {"line_number": 1464, "modified_line": "          break; // Mutation 5"},
+                {"line_number": 1465, "modified_line": "      } // Mutation 5"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 1451, "modified_line": "      attachLiteralTypes(n); // Mutation 6"},
+                {"line_number": 1452, "modified_line": "      switch (n.getType()) { // Mutation 6"},
+                {"line_number": 1453, "modified_line": "        case Token.FUNCTION: // Mutation 6"},
+                {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME && !n.hasChildren()) { // Mutation 6"},
+                {"line_number": 1455, "modified_line": "            return; // Mutation 6"},
+                {"line_number": 1456, "modified_line": "          } // Mutation 6"},
+                {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent); // Mutation 6"},
+                {"line_number": 1458, "modified_line": "          break; // Mutation 6"},
+                {"line_number": 1459, "modified_line": "        case Token.CATCH: // Mutation 6"},
+                {"line_number": 1460, "modified_line": "          defineCatch(n, parent); // Mutation 6"},
+                {"line_number": 1461, "modified_line": "          break; // Mutation 6"},
+                {"line_number": 1462, "modified_line": "        case Token.VAR: // Mutation 6"},
+                {"line_number": 1463, "modified_line": "          defineVar(n, parent); // Mutation 6"},
+                {"line_number": 1464, "modified_line": "          break; // Mutation 6"},
+                {"line_number": 1465, "modified_line": "      } // Mutation 6"}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Commenting out attachLiteralTypes(n);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Removing attachLiteralTypes(n); and switch statement"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Disabling switch statement"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Skipping switch statement"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Ignoring switch cases"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Adjusting code flow"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Modifying structure"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Rearranging code logic"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Changing control flow"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Reorganizing code structure"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Changing code path"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Adjusting code execution"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Switch statement removed"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Skipping switch cases and default behavior"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Modifying control structure"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Changing switch logic"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Adjusting switch statement"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Altering switch flow"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Modifying switch behavior"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Changing switch case handling"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Revising switch statement"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Modifying switch case handling"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Adjusting switch behavior"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Modifying switch structure"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Rearranging switch logic"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Changing switch control flow"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Adjusting switch behavior"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Modifying switch handling"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypedScopeCreator.java",
+            "insertions": [],
+            "deletions": [1451, 1452, 1453, 1454, 1455, 1456, 1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465],
+            "modifications": [
+                {
+                    "line_number": 1451,
+                    "modified_line": "      // Changing switch case processing"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1455], "modifications": [{"line_number": 1455, "modified_line": "            // Remove early return"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n); // Added a comment here for clarity"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1454, "modified_line": "          if (parent.getType() != Token.NAME) {"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1460, "modified_line": "          defineCatch(n, parent); // Updated method call"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1459, "modified_line": "        case Token.CATCH: // Added a comment for better understanding"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1462], "modifications": [{"line_number": 1462, "modified_line": "// Deleted case Token.VAR"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1453], "modifications": [{"line_number": 1453, "modified_line": "// Commented out case Token.FUNCTION"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1456], "modifications": [{"line_number": 1456, "modified_line": "// Removed early return"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1461], "modifications": [{"line_number": 1461, "modified_line": "// Removed case Token.CATCH"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1465], "modifications": [{"line_number": 1465, "modified_line": "// Removed end of switch statement"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1457, "modified_line": "          // Updated defineDeclaredFunction method call"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1458], "modifications": [{"line_number": 1458, "modified_line": "// Removed break statement"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1454], "modifications": [{"line_number": 1454, "modified_line": "// Commented out if condition for parent type"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1463, "modified_line": "          defineVar(n, parent); // Updated defineVar method call"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1452, "modified_line": "      // Added comment for switch statement"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1464], "modifications": [{"line_number": 1464, "modified_line": "// Removed case Token.VAR"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1459], "modifications": [{"line_number": 1459, "modified_line": "// Commented out case Token.CATCH"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1453, "modified_line": "// Commented out case Token.FUNCTION"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1455], "modifications": [{"line_number": 1455, "modified_line": "// Removed early return"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1460], "modifications": [{"line_number": 1460, "modified_line": "// Removed defineCatch method call"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1462], "modifications": [{"line_number": 1462, "modified_line": "// Removed case Token.VAR"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1454], "modifications": [{"line_number": 1454, "modified_line": "// Updated if condition for parent type"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1460, "modified_line": "          // Updated defineCatch method call"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1461], "modifications": [{"line_number": 1461, "modified_line": "// Removed case Token.CATCH"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1465], "modifications": [{"line_number": 1465, "modified_line": "// Removed end of switch statement"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1457, "modified_line": "          // Updated defineDeclaredFunction method call"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1458], "modifications": [{"line_number": 1458, "modified_line": "// Removed break statement"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1454], "modifications": [{"line_number": 1454, "modified_line": "// Commented out if condition for parent type"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1463, "modified_line": "          defineVar(n, parent); // Updated defineVar method call"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1452, "modified_line": "      // Added comment for switch statement"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1464], "modifications": [{"line_number": 1464, "modified_line": "// Removed case Token.VAR"}]},
+        {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [1459], "modifications": [{"line_number": 1459, "modified_line": "// Commented out case Token.CATCH"}]}
+    ]
+}
+{ "fixes": [
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            return; // Mutant 1: Changed early return to continue"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // TODO: Add logging here"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Potential bug fix: Add a log statement before return"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Check for special case: parent is a name"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Potential fix: Handle case where parent is a name"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Fix: Skip processing when parent is a name"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Consider refactoring this condition later"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Potential enhancement: Handle special case"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // To-Do: Improve handling of name type"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Potential fix: Skip processing if parent is of type name"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Fix: Handle the case where parent is a name"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number": 1455, "modified_line": "            // Improvement: Skip processing for names"}, {"line_number": 1456, "modified_line": "          }"}, {"line_number": 1457, "modified_line": "          defineDeclaredFunction(n, parent);"}, {"line_number": 1458, "modified_line": "          break;"}, {"line_number": 1459, "modified_line": "        case Token.CATCH:"}, {"line_number": 1460, "modified_line": "          defineCatch(n, parent);"}, {"line_number": 1461, "modified_line": "          break;"}, {"line_number": 1462, "modified_line": "        case Token.VAR:"}, {"line_number": 1463, "modified_line": "          defineVar(n, parent);"}, {"line_number": 1464, "modified_line": "          break;"}, {"line_number": 1465, "modified_line": "      "}]},
+    {"file_name": "com/google/javascript/jscomp/TypedScopeCreator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 1451, "modified_line": "      attachLiteralTypes(n);"}, {"line_number": 1452, "modified_line": "      switch (n.getType()) {"}, {"line_number": 1453, "modified_line": "        case Token.FUNCTION:"}, {"line_number": 1454, "modified_line": "          if (parent.getType() == Token.NAME) {"}, {"line_number":

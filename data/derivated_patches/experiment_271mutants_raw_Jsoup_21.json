@@ -1,0 +1,1359 @@
+
+  {
+      "file_name": "org/jsoup/select/QueryParser.java",
+      "insertions": [
+          {
+              "line_number": 64,
+              "new_lines": [
+                  "// Fixing bug by properly handling commas in subqueries",
+                  "String subQuery = tq.chompTo(\",\");",
+                  "or.add(parse(subQuery));"
+              ]
+          }
+      ],
+      "deletions": [58, 59, 60, 61, 62, 63, 65, 66],
+      "modifications": []
+  }
+  
+{
+    "file_name": "org/jsoup/select/QueryParser.java",
+    "insertions": [
+        {
+            "line_number": 64,
+            "new_lines": [
+                "// Fixing bug by properly handling commas in subqueries",
+                "String subQuery = tq.chompTo(\",\");",
+                "or.add(parse(subQuery)); // Mutation 1: Changed parse to anotherMethod"
+            ]
+        },
+        {
+            "line_number": 101,
+            "new_lines": [
+                "// Fixing bug by properly handling commas in subqueries",
+                "String subQuery = tq.chompTo(\",\");",
+                "or.add(anotherMethod(subQuery)); // Mutation 2: Changed parse to anotherMethod"
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 58,
+                    "modified_line": "if (!tq.matchChomp(\",\")) {"
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "if (!tq.matchesAny(combinators)) {"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 59,
+                    "modified_line": "evals.clear();"
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 59,
+                    "modified_line": "evals.clear();"
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "evals.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 59,
+                    "modified_line": "evals.clear();"
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 59,
+                    "modified_line": "evals.clear();"
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "or.add(parse(tq.chompTo(\",\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "or.add(parse(tq.chompTo(\",\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "evals.add(parse(tq.chompTo(\",\")));"
+                    ]
+                }
+            ],
+            "deletions": [59, 60, 61, 62, 63, 64, 65, 66]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 1: Handling commas differently in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 2: Changing the way subqueries are processed",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 3: Modifying subquery handling logic",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 4: Adjusting subquery parsing for commas",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 5: Altered approach to handling subqueries with commas",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 6: Reworking subquery parsing mechanism",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 7: Handling commas in subqueries differently",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 8: Changing subquery processing for commas",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 9: Modifying comma handling in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 10: Adjusting subquery handling for commas",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [58, 59, 60, 61, 62, 63, 65, 66]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 1: Fixing bug by handling commas in subqueries differently",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 2: Fixing bug by adjusting subquery parsing",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery.trim()));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 3: Fixing bug by handling subqueries with trimming",
+                        "String subQuery = tq.chompTo(\",\").trim();",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 4: Fixing bug by handling subqueries with additional validation",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "if (!subQuery.isEmpty()) {",
+                        "    or.add(parse(subQuery));",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 5: Fixing bug by handling subqueries with null check",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "if (subQuery != null) {",
+                        "    or.add(parse(subQuery));",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 6: Fixing bug by handling subqueries with length check",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "if (subQuery.length() > 0) {",
+                        "    or.add(parse(subQuery));",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 7: Fixing bug by handling subqueries with a different approach",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery.toUpperCase()));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 8: Fixing bug by handling subqueries with lowercase conversion",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery.toLowerCase()));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 9: Fixing bug by handling subqueries with a different operation",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery.concat(\"_extra\")));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 10: Fixing bug by handling subqueries with a custom operation",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(customOperation(subQuery)));"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 1: Handling commas in subqueries differently",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery) != null ? subQuery : \"\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 2: Adjusting subquery parsing",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery.trim()));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 3: Changing how subqueries are added",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(new Evaluator());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 4: Modifying subquery handling logic",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery) == null ? new Evaluator() : parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 5: Checking subquery before adding",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "if (!subQuery.isEmpty()) { or.add(parse(subQuery)); }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 6: Handling empty subqueries differently",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery.isEmpty() ? \"default\" : subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 7: Changing subquery parsing approach",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery) != null ? parse(subQuery) : new Evaluator());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 8: Adjusting subquery handling",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery) != null ? parse(subQuery) : or);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 9: Modifying subquery addition",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery) == null ? new Evaluator() : parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 10: Checking subquery content before adding",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "if (subQuery != null) { or.add(parse(subQuery)); }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 1: Handling commas in subqueries differently",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 2: Modifying how subqueries are parsed",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 3: Changing subquery handling logic",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 4: Adjusting subquery parsing method",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 5: Altered approach to subsquery extraction",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 6: Changing subquery extraction process",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 7: Modifying subquery parsing mechanism",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 8: Adjusting subquery handling in the parser",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 9: Changing subquery parsing logic",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Mutant 10: Modifying subquery extraction method",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [65],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 65,
+                    "new_lines": [
+                        "// Modifying to handle commas in subqueries better",
+                        "evals.add(or);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 65,
+                    "new_lines": [
+                        "// Adjusting code to handle commas in subqueries correctly",
+                        "}"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [65],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "if (tq.matchesAny(combinators)) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Adjusting for handling commas in subqueries",
+                        "if (tq.matchesAny(combinators)) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [65],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 65,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        ""
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [65],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "if (tq.matchesAny(combinators)) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Adjusting for handling commas in subqueries",
+                        "if (tq.matchesAny(combinators)) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [65],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 65,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        ""
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                }
+            ],
+            "deletions": [65],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "if (tq.matchesAny(combinators)) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/jsoup/select/QueryParser.java",
+            "insertions": [
+                {
+                    "line_number": 64,
+                    "new_lines": [
+                        "// Fixing bug by properly handling commas in subqueries",
+                        "String subQuery = tq.chompTo(\",\");",
+                        "or.add(parse(subQuery));"
+                    ]
+                },
+                {
+                    "line_number": 101,
+                    "new_lines": [
+                        "// Adjusting for handling commas in subqueries",
+                        "if (tq.matchesAny(combinators)) {"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 141, 'modified_line': '        new FilePosition(node.getLineno() - 1, node.getCharno()),'}, {'line_number': 138, 'modified_line': '        // '}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 141, 'modified_line': 'new FilePosition(node.getLineno() - 1, node.getCharno()),'}, {'line_number': 138, 'modified_line': '// '}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 141, 'modified_line': '        new FilePosition(node.getLineno() - 1, node.getCharno()),'}, {'line_number': 138, 'modified_line': '        // '}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 141, 'modified_line': '        new FilePosition(node.getLineno() - 1, node.getCharno()),'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 141, 'modified_line': '        new FilePosition(node.getLineno() - 1, node.getCharno()),'}, {'line_number': 138, 'modified_line': '// '}]}]
+
+###Fix:
+[{'file_name': 'com/google/debugging/sourcemap/SourceMapConsumerV3.java', 'insertions': [{'line_number': 489, 'new_lines': ['    // Method to get the original mapping for a specific entry', '    public OriginalMapping getOriginalMappingForEntry(Entry entry) {', '        if (entry.getSourceFileId() == UNMAPPED) {', '            return null;', '        } else {', '            Builder x = OriginalMapping.newBuilder()', '                .setOriginalFile(sources[entry.getSourceFileId()])', '                .setLineNumber(entry.getSourceLine())', '                .setColumnPosition(entry.getSourceColumn());', '            if (entry.getNameId() != UNMAPPED) {', '                x.setIdentifier(names[entry.getNameId()]);', '            }', '            return x.build();', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/debugging/sourcemap/SourceMapConsumerV3.java', 'insertions': [{'line_number': 489, 'new_lines': ['    // Method to get the original mapping for a specific entry', '    public OriginalMapping getOriginalMappingForEntry(Entry entry) {', '        if (entry.getSourceFileId() == UNMAPPED) {', '            return null;', '        } else {', '            Builder x = OriginalMapping.newBuilder();', '            x.setOriginalFile(sources[entry.getSourceFileId()]);', '            x.setLineNumber(entry.getSourceLine());', '            x.setColumnPosition(entry.getSourceColumn());', '            if (entry.getNameId() != UNMAPPED) {', '                x.setIdentifier(names[entry.getNameId()]);', '            }', '            return x.build();', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 141, 'modified_line': '        new FilePosition(node.getLineno() - 1, node.getCharno()),'}, {'line_number': 138, 'modified_line': '        // '}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [{'line_number': 140, 'new_lines': ['        sourceFile = fixupSourceLocation(sourceFile);', '        node.setLineno(node.getLineno() - 1);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [{'line_number': 141, 'new_lines': ['        new FilePosition(node.getLineno() - 1, node.getCharno()),']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [{'line_number': 141, 'new_lines': ['        new FilePosition(node.getLineno() - 1, node.getCharno()),']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [{'line_number': 141, 'new_lines': ['        new FilePosition(node.getLineno() - 1, node.getCharno());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/SourceMap.java', 'insertions': [{'line_number': 141, 'new_lines': ['        new FilePosition(node.getLineno() - 1, node.getCharno());']}], 'deletions': [], 'modifications': [{'line_number': 141, 'modified_line': '        new FilePosition(node.getLineno() - 1, node.getCharno());'}]}]
+
+

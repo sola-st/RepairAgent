@@ -1,0 +1,1399 @@
+
+{
+    "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+    "insertions": [
+        {
+            "line_number": 520,
+            "new_lines": [
+                "      if (inputCharset != null) {",
+                "        options.outputCharset = inputCharset;",
+                "      } else {",
+                "        options.outputCharset = Charsets.US_ASCII;",
+                "      }"
+            ]
+        }
+    ],
+    "deletions": [518, 519, 521, 522]
+}
+    
+      
+     
+     
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset != null && inputCharset.equals(Charsets.UTF_8)) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_8;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 521,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_16;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_16;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "insertions": [
+                {
+                    "line_number": 960,
+                    "new_lines": [
+                        "  public Charset outputCharset = Charsets.UTF_8;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "// Fixing bug by setting outputCharset based on inputCharset"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 693,
+                    "new_lines": [
+                        "// Ensure outputCharset is correctly set based on inputCharset"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 693,
+                    "new_lines": [
+                        "options.outputCharset = Charsets.UTF_8;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 693,
+                    "new_lines": [
+                        "options.outputCharset = Charsets.US_ASCII;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 471,
+                    "new_lines": [
+                        "initOptionsFromFlags(options);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/Compiler.java",
+            "insertions": [
+                {
+                    "line_number": 1362,
+                    "new_lines": [
+                        "Charset charset = options.outputCharset != null ? options.outputCharset : Charsets.UTF_8;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset != Charsets.UTF_8) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 519,
+                    "new_lines": [
+                        "      options.outputCharset = Charsets.US_ASCII;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 520,
+                    "modified_line": "    } else if (inputCharset == Charsets.UTF_8) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 521,
+                    "modified_line": "      options.outputCharset = inputCharset;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "deletions": [522]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "deletions": [471]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/Compiler.java",
+            "deletions": [1362]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "deletions": [588]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "// Fixing the bug by handling inputCharset properly"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 693,
+                    "new_lines": [
+                        "// Potential fix by adjusting how outputCharset is assigned based on inputCharset"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "insertions": [
+                {
+                    "line_number": 960,
+                    "new_lines": [
+                        "// Adjusting the outputCharset assignment based on the inputCharset"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset != Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [519, 520, 521],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8 && options.outputCharset == null) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [519, 520, 521],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.US_ASCII) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [519, 520, 521],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_16) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [519, 520, 521],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.UTF_16;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ],
+            "deletions": [519, 520, 521],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = inputCharset;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_16;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_8;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_16;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_8;",
+                        "      }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset != Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 519,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 521,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_8;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 471,
+                    "modified_line": "    options.outputCharset = Charsets.UTF_8;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/Compiler.java",
+            "modifications": [
+                {
+                    "line_number": 1362,
+                    "modified_line": "    Charset charset = options.outputCharset != null ? options.outputCharset : Charset.defaultCharset();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset outputCharset = Charset.defaultCharset();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "    if (options.outputCharset == null) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 693,
+                    "new_lines": [
+                        "    if (options.outputCharset == null) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "insertions": [
+                {
+                    "line_number": 960,
+                    "new_lines": [
+                        "    if (options.outputCharset == null) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == null) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 519,
+                    "new_lines": [
+                        "      if (inputCharset != null) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "    if (inputCharset != null) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 521,
+                    "new_lines": [
+                        "      if (inputCharset != null) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = inputCharset;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": [
+                        "    if (inputCharset == null) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 471,
+                    "modified_line": "    initOptionsFromFlags(options); // Initializing options from flags"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/Compiler.java",
+            "modifications": [
+                {
+                    "line_number": 1362,
+                    "modified_line": "    Charset charset = options.outputCharset != null ? options.outputCharset : Charset.defaultCharset(); // Setting charset"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset outputCharset = Charset.defaultCharset(); // Initializing output charset to default"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "    if (options.outputCharset == null) {",
+                        "      options.outputCharset = Charset.defaultCharset();",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 693,
+                    "new_lines": [
+                        "    if (options.outputCharset == null) {",
+                        "      options.outputCharset = Charset.defaultCharset();",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "insertions": [
+                {
+                    "line_number": 960,
+                    "new_lines": [
+                        "    if (options.outputCharset == null) {",
+                        "      options.outputCharset = Charset.defaultCharset();",
+                        "    }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 518,
+                    "modified_line": "    if (inputCharset == Charsets.UTF_8) {"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 519,
+                    "new_lines": [
+                        "      options.outputCharset = Charsets.UTF_8;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.UTF_8) {",
+                        "        options.outputCharset = Charsets.US_ASCII;",
+                        "      } else {",
+                        "        options.outputCharset = Charsets.UTF_8;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 521,
+                    "new_lines": [
+                        "      options.outputCharset = Charsets.UTF_8;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 471,
+                    "modified_line": "    initOptionsFromFlags(options); // Mutation: Changed method call"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/Compiler.java",
+            "modifications": [
+                {
+                    "line_number": 1362,
+                    "modified_line": "    Charset charset = options.outputCharset; // Mutation: Changed variable name"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset inputCharset; // Mutation: Changed variable type"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 693,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "insertions": [
+                {
+                    "line_number": 960,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) { // Mutation: Added new condition"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset outputCharset; // Mutation: Changed variable name"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset inputCharset; // Mutation: Changed variable type"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "deletions": [518, 519, 520, 521, 522]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 471,
+                    "new_lines": [
+                        "    options.outputCharset = Charsets.UTF_8; // Mutation: Changed default charset"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/Compiler.java",
+            "insertions": [
+                {
+                    "line_number": 1362,
+                    "new_lines": [
+                        "    Charset charset = Charsets.UTF_8; // Mutation: Changed default charset"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "insertions": [
+                {
+                    "line_number": 588,
+                    "new_lines": [
+                        "  public Charset outputCharset = Charsets.UTF_8; // Mutation: Assigned default charset"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset outputCharset; // Mutation: Changed variable name"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 518,
+                    "modified_line": "    if (inputCharset == Charsets.UTF_8) { // Mutation: Added comment to clarify condition"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 519,
+                    "modified_line": "      options.outputCharset = Charsets.US_ASCII; // Mutation: Changed charset assignment"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 522,
+                    "modified_line": "    } // Mutation: Added comment to clarify end of else block"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 693,
+                    "modified_line": "    } // Mutation: Added comment to clarify end of if-else block"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 159,
+                    "modified_line": "    if (inputCharset != Charsets.UTF_8) { // Mutation: Changed condition to not equal"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 159,
+                    "modified_line": "    if (inputCharset == Charsets.US_ASCII) { // Mutation: Changed condition to check US_ASCII"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 693,
+                    "modified_line": "    if (inputCharset == Charsets.US_ASCII) { // Mutation: Changed condition to check US_ASCII"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "insertions": [
+                {
+                    "line_number": 960,
+                    "new_lines": [
+                        "    options.outputCharset = Charsets.UTF_8; // Mutation: Changed default charset"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset outputCharset; // Mutation: Changed variable name"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "  public Charset inputCharset; // Mutation: Changed variable type"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "deletions": [960]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "    if (inputCharset != Charsets.US_ASCII) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 159,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset != Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.UTF_8;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = null;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charset.defaultCharset();",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charset.forName(\"UTF-16\");",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charset.forName(\"ISO-8859-1\");",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charset.forName(\"UTF-8\");",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset == Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = Charset.defaultCharset();",
+                        "    }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 518,
+                    "new_lines": [
+                        "    if (inputCharset != Charsets.UTF_8) {",
+                        "      options.outputCharset = Charsets.US_ASCII;",
+                        "    } else {",
+                        "      options.outputCharset = inputCharset;",
+                        "    }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 520,
+                    "new_lines": [
+                        "      if (inputCharset == Charsets.US_ASCII) {",
+                        "        options.outputCharset = Charsets.UTF_8;",
+                        "      } else {",
+                        "        options.outputCharset = inputCharset;",
+                        "      }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/AbstractCommandLineRunner.java",
+            "insertions": [
+                {
+                    "line_number": 522,
+                    "new_lines": [
+                        "    // Inserted new line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CommandLineRunner.java",
+            "modifications": [
+                {
+                    "line_number": 471,
+                    "modified_line": "    // Modified line to fix the bug"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/Compiler.java",
+            "modifications": [
+                {
+                    "line_number": 1362,
+                    "modified_line": "    // Modified line to fix the bug"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CompilerOptions.java",
+            "modifications": [
+                {
+                    "line_number": 588,
+                    "modified_line": "    // Modified line to fix the bug"
+                }
+            ]
+        }
+    ]
+}

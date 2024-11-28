@@ -1,0 +1,1343 @@
+
+    {
+        "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+        "insertions": [
+            {
+                "line_number": 536,
+                "new_lines": [
+                    "my $fh; # Explicitly declaring file handle",
+                    "my $num_seps = 0; # Initializing variable for scoping",
+                    "my $val_start_col = 0; # Initializing variable for scoping",
+                    "my $key; # Explicitly declaring key variable",
+                    "my $val; # Explicitly declaring value variable"
+                ]
+            }
+        ],
+        "deletions": [543],
+        "modifications": [
+            {
+                "line_number": 548,
+                "modified_line": "print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");    $num_seps = $val_start_col - length($key);"
+            }
+        ]
+    }
+    {
+        "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+        "insertions": [
+            {
+                "line_number": 536,
+                "new_lines": [
+                    "my $fh = (); # Fixing missing declaration",
+                    "my $num_seps = 0;",
+                    "my $val_start_col = 0;",
+                    "my $key = (); # Fixing missing declaration",
+                    "my $val = (); # Fixing missing declaration"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [
+        {
+            "line_number": 543,
+            "new_lines": ["my $fh = ();", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = ();", "my $val = ();"]
+        }
+    ]
+}
+    
+    
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 545,
+                    "new_lines": ["my $oldconf = (); # Fixing variable scoping issue"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["$val_start_col = 0; # Initializing variable for scoping"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["$val_start_col = 0; # Initializing variable for scoping"]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": ["print(STDERR '$key' . ('.' x $num_seps) . '${val}\\n');"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["$val_start_col = 0; # Initializing variable for scoping"]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": ["print(STDERR '$key' . ('.' x $num_seps) . '${val}\\n');"]
+                },
+                {
+                    "line_number": 550,
+                    "new_lines": ["print(STDERR '$key' . ('.' x $num_seps) . '${val}\\n');"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["$val_start_col = 0; # Initializing variable for scoping"]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": ["print(STDERR '$key' . ('.' x $num_seps) . '${val}\\n');"]
+                },
+                {
+                    "line_number": 550,
+                    "new_lines": ["print(STDERR '$key' . ('.' x $num_seps) . '${val}\\n');"]
+                },
+                {
+                    "line_number": 551,
+                    "new_lines": ["## Inserted line to fix the bug ##"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 546,
+                    "new_lines": ["if (condition) {", "    $val_start_col = 30;", "}"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": ["if (condition) {", "    $num_seps = $val_start_col - length($key);", "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 551,
+                    "new_lines": ["# Inserted line to fix the unmatched right curly bracket issue", "}"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["if (condition) {", "    $key = value;", "}"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 547,
+                    "new_lines": ["# Inserted line to fix the unmatched right curly bracket issue", "}"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["if (condition) {", "    $val_start_col = value;", "}"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 550,
+                    "new_lines": ["if (condition) {", "    print(STDERR \"$key\" . ('.' x $num_seps) . \"${val}\\n\");", "}"]
+                }
+            ]
+        }
+        ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 547,
+                    "new_lines": [
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": [
+                        "my $num_seps = 0;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": [
+                        "my $val_start_col = 0;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": [
+                        "my $val_start_col = 0;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": [
+                        "my $key;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": [
+                        "my $val;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 551,
+                    "new_lines": [
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": [
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": [
+                        "my $fh;",
+                        "my $num_seps = 0;",
+                        "my $val_start_col = 0;",
+                        "my $key;",
+                        "my $val;"
+                    ]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": [
+                        "my $val_start_col = 0;"
+                    ]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": [
+                        "my $num_seps = 0;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 547,
+                    "new_lines": ["if (condition) {", "   # do something", "}"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 551,
+                    "new_lines": ["# End of block"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 540,
+                    "new_lines": ["# Additional code here"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["my $val = 10;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 549,
+                    "new_lines": ["# Print values"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 550,
+                    "new_lines": ["# Check for end condition"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 551,
+                    "new_lines": ["# End of function"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 547,
+                    "new_lines": ["# Add more logic here"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 548,
+                    "new_lines": ["# Adjust num_seps value"]
+                }
+            ]
+        }
+    ]
+}
+{"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 543, "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]}]}
+
+    
+  {
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val = 0;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = '';", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = '';", "my $val = '';"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = 0;", "my $val = 0;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = 0;", "my $val = '';"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = '';", "my $val = 0;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = 0;", "my $val = 0;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = 'key';", "my $val = 'value';"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key = 'key';", "my $val = 0;"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 1,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 536,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                },
+                {
+                    "line_number": 1285,
+                    "modified_line": "## Modify this line as needed to fix the bug ##"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 543,
+                    "new_lines": ["my $fh;", "my $num_seps = 0;", "my $val_start_col = 0;", "my $key;", "my $val;"]
+                }
+            ]
+        }
+    ]
+}

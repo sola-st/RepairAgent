@@ -1,0 +1,58 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '      }', '      if (first.isName() && "eval".equals(first.getString())) {', '        first.putBooleanProp(Node.DIRECT_EVAL, true);', '      }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '      }', '      if (first.isName() && "abc".equals(first.getString())) {', '        first.putBooleanProp(Node.DIRECT_EVAL, true);', '      }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '      }', '      if (first.isName() && "abc".equals(first.getString())) {', '        first.putBooleanProp(Node.DIRECT_EVAL, true);', '      }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '      }', '      if (first.isName() && "abc".equals(first.getString())) {', '        first.putBooleanProp(Node.DIRECT_EVAL, true);', '      }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        if (first.isName() && "abc".equals(first.getString())) {', '          first.putBooleanProp(Node.DIRECT_EVAL, true);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        if (first.isName() && "abc".equals(first.getString())) {', '          first.putBooleanProp(Node.DIRECT_EVAL, true);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        if (first.isName() && "abc".equals(first.getString())) {', '          first.putBooleanProp(Node.DIRECT_EVAL, true);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        if (first.isName() && "abc".equals(first.getString())) {', '          first.putBooleanProp(Node.DIRECT_EVAL, true);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (first != null && !NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        if (first.isName() && "abc".equals(first.getString())) {', '          first.putBooleanProp(Node.DIRECT_EVAL, true);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n != null && n.isCall());', '      Node first = n != null ? n.getFirstChild() : null;', '      if (first != null && !NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        if (first.isName() && "abc".equals(first.getString())) {', '          first.putBooleanProp(Node.DIRECT_EVAL, true);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n != null && n.isCall());', '      Node first = n != null ? n.getFirstChild() : null;', '      if (first != null && !NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        if (first != null && first.isName() && "abc".equals(first.getString())) {', '          first.putBooleanProp(Node.DIRECT_EVAL, true);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/IntegrationTest.java', 'modifications': [{'line_number': 7, 'modified_line': 'String code = "" + "console.log((new x()).abc());";'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        for (String call : calls) {', '            System.out.println("Annotating call: " + call);', '            // Add annotation logic here', '        }', '      }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        for (String call : calls) {', '            System.out.println("Annotating call: " + call);', '            // Add annotation logic here', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        for (String call : calls) {', '            System.out.println("Annotating call: " + call);', '            // Add annotation logic here', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        List<String> calls = new ArrayList<>();', '        for (String call : calls) {', '            System.out.println("Annotating call: " + call);', '            // Add annotation logic here', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        List<String> calls = new ArrayList<>(); // Initialize calls list with relevant data', '        for (String call : calls) {', '            System.out.println("Annotating call: " + call);', '            // Add annotation logic here', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PrepareAst.java', 'insertions': [{'line_number': 166, 'new_lines': ['      Preconditions.checkState(n.isCall());', '      Node first = n.getFirstChild();', '      if (!NodeUtil.isGet(first)) {', '        n.putBooleanProp(Node.FREE_CALL, true);', '        List<String> calls = new ArrayList<>(); // Initialize calls list with relevant data', '        calls.add("abc"); // Example data addition', '        for (String call : calls) {', '            System.out.println("Annotating call: " + call);', '            // Add annotation logic here', '        }']}]}]
+
+

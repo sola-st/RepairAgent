@@ -1,0 +1,58 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [324], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [{'line_number': 4, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n']}, {'line_number': 324, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [324], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [{'line_number': 4, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n']}, {'line_number': 324, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [{'line_number': 4, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n']}, {'line_number': 324, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [324], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [{'line_number': 4, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n']}, {'line_number': 324, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Renamed setAll method to avoid conflict\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [324], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Renamed setAll method to avoid conflict\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [{'line_number': 4, 'new_lines': ['    // Renamed setAll method to avoid conflict\n']}, {'line_number': 324, 'new_lines': ['    // Renamed setAll method to avoid conflict\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Differentiated conflicting setters by modifying the method signature\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 4, 'modified_line': '// Modified setAll method signature to differentiate conflicting setters'}, {'line_number': 324, 'modified_line': '// Modified setAll method signature to differentiate conflicting setters'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 324, 'modified_line': '// Differentiated conflicting setters by modifying the method signature'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 4, 'modified_line': '// Differentiated conflicting setters by modifying the method signature'}, {'line_number': 324, 'modified_line': '// Differentiated conflicting setters by modifying the method signature'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [324], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'target_lines': [['4', '//'], ['324', '//']], 'insertions': [{'line_number': 4, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n']}, {'line_number': 324, 'new_lines': ['    // Modified setAll method signature to differentiate conflicting setters\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/node/ObjectNode.java', 'insertions': [{'line_number': 324, 'new_lines': ['    // Renamed setAll method that takes a Map parameter to avoid conflict\n', '    public JsonNode setAllFromMap(Map<String,? extends JsonNode> properties) {\n', '        for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {\n', '            JsonNode n = en.getValue();\n', '            if (n == null) {\n', '                n = nullNode();\n', '            }\n', '            _children.put(en.getKey(), n);\n', '        }\n', '        return this;\n', '    }\n']}], 'deletions': [324], 'modifications': []}]
+
+

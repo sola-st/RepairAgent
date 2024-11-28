@@ -1,0 +1,1636 @@
+
+{ "file_name": "com/google/javascript/jscomp/TypeInference.java",
+  "insertions": [
+    { "line_number": 550, "new_lines": ["        boolean isVarTypeBetter = isVarDeclaration && var != null && var.isTypeInferred();"] },
+    { "line_number": 562, "new_lines": ["        if (isVarTypeBetter || var == null) {", "          redeclareSimpleVar(scope, left, resultType);", "        }"] }
+  ]
+}
+
+   
+
+ 
+{
+    "file_name": "com/google/javascript/jscomp/TypeInference.java",
+    "insertions": [
+        {"line_number": 550, "new_lines": ["        boolean isVarDeclaration = left.hasChildren();"]},
+        {"line_number": 550, "new_lines": ["        boolean isVarDeclaration = !left.hasChildren();"]}
+    ],
+    "deletions": [530, 548, 564, 565],
+    "modifications": []
+}
+    
+   
+
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = isVarDeclaration && (var == null || var.isTypeInferred());"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 530,
+                    "modified_line": "        boolean isVarDeclaration = left.hasChildren();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = isVarDeclaration && (var == null || !var.isTypeInferred());"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 548,
+                    "modified_line": "        boolean isVarTypeBetter = !isVarDeclaration || var == null || !var.isTypeInferred();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = isVarDeclaration && (var != null && var.isTypeInferred());"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 564,
+                    "modified_line": "        left.setJSType(isVarDeclaration || leftType == null ? resultType : null);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var != null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 565,
+                    "modified_line": "        left.setJSType(isVarDeclaration || leftType == null ? resultType : unknownType);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 564,
+                    "modified_line": "        left.setJSType(isVarDeclaration || leftType == null ? resultType : leftType);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 564,
+                    "modified_line": "        left.setJSType(isVarDeclaration || leftType == null ? resultType : unknownType);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var != null || !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 548,
+                    "modified_line": "        boolean isVarTypeBetter = isVarDeclaration && (var == null || !var.isTypeInferred());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 548,
+                    "modified_line": "        boolean isVarTypeBetter = !isVarDeclaration || var != null || var.isTypeInferred();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 548,
+                    "modified_line": "        boolean isVarTypeBetter = isVarDeclaration && (var != null || var.isTypeInferred());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var != null || !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 564,
+                    "modified_line": "        left.setJSType(isVarDeclaration || leftType == null ? resultType : unknownType);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 564,
+                    "modified_line": "        left.setJSType(isVarDeclaration || leftType == null ? resultType : leftType);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [548, 564, 565],
+            "modifications": [
+                {
+                    "line_number": 565,
+                    "modified_line": "        left.setJSType(isVarDeclaration || leftType == null ? resultType : null);"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+        ,
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 550, "new_lines": ["        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();", "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"]}, {"line_number": 562, "new_lines": ["          if (!isVarTypeBetter) {", "            redeclareSimpleVar(scope, left, resultType);", "          }"]}]}
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = false;",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) && !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) && !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = !isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = !isVarDeclaration || (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = !isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) && !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = isVarDeclaration && !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null;"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left == null;",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarDeclaration = left.hasChildren();",
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [
+                530,
+                548,
+                564,
+                565
+            ],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));",
+                        "        isVarTypeBetter = !isVarDeclaration && var != null && !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }",
+                        "          else {",
+                        "            // Handle the case where isVarTypeBetter is false",
+                        "          }"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));",
+                        "        isVarTypeBetter = isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }",
+                        "          // Additional logic for when isVarTypeBetter is false"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));",
+                        "        isVarTypeBetter = var == null || !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }",
+                        "          // Handle the case when isVarTypeBetter is false"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));",
+                        "        isVarTypeBetter = isVarDeclaration || var != null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }",
+                        "          // Additional handling when isVarTypeBetter is false"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));",
+                        "        isVarTypeBetter = var != null || !var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }",
+                        "          // Handle the scenario when isVarTypeBetter is false"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType)); // Mutated for testing"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (!isVarTypeBetter) {", 
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          } // Mutated for testing"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = !isVarDeclaration || var == var; // Mutated for testing"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          } // Mutated for testing"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && var.isTypeInferred(); // Mutated for testing"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          } // Mutated for testing"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = false; // Mutated for testing"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          } // Mutated for testing"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = !isVarDeclaration && var.isTypeInferred(); // Mutated for testing"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          } // Mutated for testing"
+                    ]
+                }
+            ],
+            "deletions": [530, 548, 564, 565],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);",
+                        "          }"
+                    ]
+                },
+                {
+                    "line_number": 564,
+                    "new_lines": [
+                        "        left.setJSType(isVarDeclaration || leftType == null ? resultType : null);"
+                    ]
+                },
+                {
+                    "line_number": 565,
+                    "new_lines": [
+                        "            resultType : null);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));",
+                        "        isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (!isVarTypeBetter) {",
+                        "            return;"
+                    ]
+                },
+                {
+                    "line_number": 564,
+                    "new_lines": [
+                        "        left.setJSType(isVarDeclaration && leftType == null ? resultType : null);"
+                    ]
+                },
+                {
+                    "line_number": 565,
+                    "new_lines": [
+                        "            resultType : null);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (!isVarTypeBetter) {",
+                        "            return;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarDeclaration && var != null) {",
+                        "            redeclareSimpleVar(scope, left, resultType);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 565,
+                    "new_lines": [
+                        "            resultType : null); // Check this line for potential issue"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter && var != null) {",
+                        "            redeclareSimpleVar(scope, left, resultType);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (!isVarDeclaration || var == null) {",
+                        "            return;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 564,
+                    "new_lines": [
+                        "        left.setJSType(isVarDeclaration || leftType == null ? resultType : null); // Verify this line for correctness"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType)); // Check for potential issue here"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                },
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (!isVarTypeBetter) {",
+                        "            return;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 562,
+                    "new_lines": [
+                        "          if (isVarTypeBetter) {",
+                        "            redeclareSimpleVar(scope, left, resultType);"
+                    ]
+                },
+                {
+                    "line_number": 564,
+                    "new_lines": [
+                        "        left.setJSType(isVarDeclaration && leftType == null ? resultType : null);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                564
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                530
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                548
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 550,
+                    "new_lines": [
+                        "        boolean isVarTypeBetter = !isVarDeclaration || var == null || var.isTypeInferred();",
+                        "        isVarTypeBetter = isVarDeclaration && (varType.restrictByNotNullOrUndefined().isSubtype(resultType) || !resultType.isSubtype(varType));"
+                    ]
+                }
+            ],
+            "deletions": [
+                562
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                550
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                562
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                550,
+                562
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                550,
+                564
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                550,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                548,
+                562
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                548,
+                564
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                548,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                530,
+                562
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                530,
+                564
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                530,
+                565
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [
+                530,
+                548
+            ],
+            "modifications": []
+        }
+    ]
+}

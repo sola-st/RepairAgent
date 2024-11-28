@@ -1,0 +1,61 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [467, 468, 469, 470, 471, 472], 'modifications': [{'line_number': 466, 'modified_line': 'public int createNumber(int[] digits) {'}, {'line_number': 467, 'modified_line': '    int number = 0;'}, {'line_number': 468, 'modified_line': '    for (int i = 0; i < digits.length; i++) {'}, {'line_number': 469, 'modified_line': '        number = number * 10 + digits[i];'}, {'line_number': 470, 'modified_line': '    }'}, {'line_number': 471, 'modified_line': '    return number;'}, {'line_number': 472, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [468, 471], 'modifications': [{'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}, {'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [], 'deletions': [467, 468, 471], 'modifications': [{'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}, {'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}, {'line_number': 467, 'modified_line': '// Insert your fix for line 467 here'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}, {'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}], 'deletions': [468, 471], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}, {'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}], 'deletions': [468, 471], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}, {'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}], 'deletions': [468, 471], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}, {'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}], 'deletions': [468, 471], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}, {'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}]}, 'deletions', 'modifications']
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}]}, 'deletions', 'modifications']
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}]}, {'line_number': 468, 'modified_line': 'if (hexDigits > 16) { // too many for Long'}, {'line_number': 471, 'modified_line': 'if (hexDigits > 16) { // too many for an int'}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'target_lines': [['468', '            if (hexDigits > 16) { // too many for Long'], ['471', '            if (hexDigits > 8) { // too many for an int'], ['467', '//']], 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}]}, 'deletions', 'modifications']
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}]}, 'deletions', 'modifications']
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/math/NumberUtils.java', 'insertions': [{'line_number': 467, 'new_lines': ['    if (hexDigits > 16) { // adjust for Long and int comparisons']}], 'deletions': [], 'modifications': []}]
+
+

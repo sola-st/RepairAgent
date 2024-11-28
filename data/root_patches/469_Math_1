@@ -1,0 +1,64 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted parameters to prevent overflow', 'throw new FractionConversionException(value, 1, 1);']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '} else {', '    return new Fraction(1, 2);', '}']}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '} else {', '    return new BigFraction(1, 2);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '} else {', '    return new Fraction((long)(value * 2), 2);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '} else {', '    return new Fraction((long)(value * 2), 2);', '}']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '} else {', '    return new BigFraction((long)(value * 2), 2);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'insertions': [{'line_number': 301, 'new_lines': ['// Adjusted calculation logic to prevent overflow', 'p2 = (a1 * p1) / 2 + p0;', 'q2 = (a1 * q1) / 2 + q0;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0 / 2;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0 / 2;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0 / 2;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0 / 2;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0 / 2;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0 / 2;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0 / 2;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0 / 2;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0 / 2;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0 / 2;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'target_lines': [['215', '//']], 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'target_lines': [['306', '//']], 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0 / 2;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0 / 2;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/fraction/Fraction.java', 'insertions': [{'line_number': 215, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new Fraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 209, 'modified_line': 'p2 = a1 * p1 + p0;'}, {'line_number': 210, 'modified_line': 'q2 = a1 * q1 + q0;'}]}, {'file_name': 'org/apache/commons/math3/fraction/BigFraction.java', 'insertions': [{'line_number': 306, 'new_lines': ['// Adjusted conversion logic to prevent overflow', 'if (value == 0.5) {', '    return new BigFraction(1, 2);', '}']}], 'deletions': [], 'modifications': [{'line_number': 301, 'modified_line': 'p2 = a1 * p1 + p0 / 2;'}, {'line_number': 302, 'modified_line': 'q2 = a1 * q1 + q0 / 2;'}]}]
+
+

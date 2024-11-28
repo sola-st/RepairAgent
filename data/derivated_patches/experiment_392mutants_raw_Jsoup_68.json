@@ -1,0 +1,80 @@
+[
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 468, "modified_line": "        int bottom = stack.size() - 1; // Fixed space after minus sign"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["469", "        if (bottom > MaxScopeSearchDepth) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 469, "modified_line": "        if (bottom >= MaxScopeSearchDepth) { // Changed > to >= for inclusive check"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["470", "            bottom = MaxScopeSearchDepth;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 470, "modified_line": "            bottom = Math.min(bottom, MaxScopeSearchDepth); // Ensured bottom is not greater than MaxScopeSearchDepth"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["471", "        }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 471, "modified_line": ""}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"]], "insertions": [{"line_number": 468, "new_lines": ["        bottom = Math.min(bottom, MaxScopeSearchDepth); // Ensured bottom is not greater than MaxScopeSearchDepth"]}], "deletions": [469], "modifications": []},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"]], "insertions": [{"line_number": 469, "new_lines": ["        bottom = Math.min(bottom, MaxScopeSearchDepth); // Ensured bottom is not greater than MaxScopeSearchDepth"]}], "deletions": [468], "modifications": []},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"]], "insertions": [{"line_number": 468, "new_lines": ["        bottom = Math.min(bottom, MaxScopeSearchDepth); // Ensured bottom is not greater than MaxScopeSearchDepth"]}, {"line_number": 469, "new_lines": ["        if (bottom >= MaxScopeSearchDepth) { // Changed > to >= for inclusive check"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["471", "        }"]], "insertions": [], "deletions": [469, 470], "modifications": [{"line_number": 468, "modified_line": "        int bottom = Math.min(stack.size() - 1, MaxScopeSearchDepth); // Ensured bottom is not greater than MaxScopeSearchDepth"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["471", "        }"]], "insertions": [], "deletions": [469, 470], "modifications": [{"line_number": 468, "modified_line": "        int bottom = Math.min(stack.size() - 1, MaxScopeSearchDepth); // Ensured bottom is not greater than MaxScopeSearchDepth"}, {"line_number": 471, "modified_line": "// Removed unnecessary closing bracket"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 469, "modified_line": "        if (bottom >= MaxScopeSearchDepth) { // Changed > to >= for inclusive check"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"]], "insertions": [], "deletions": [469], "modifications": [{"line_number": 470, "modified_line": "// Removed unnecessary assignment to bottom"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"]], "insertions": [], "deletions": [470], "modifications": [{"line_number": 469, "modified_line": "        if (bottom >= MaxScopeSearchDepth) { // Changed > to >= for inclusive check"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["469", "        if (bottom > MaxScopeSearchDepth) {"], ["471", "        }"]], "insertions": [], "deletions": [470], "modifications": [{"line_number": 469, "modified_line": "        if (bottom >= MaxScopeSearchDepth) { // Changed > to >= for inclusive check"}, {"line_number": 471, "modified_line": "// Removed unnecessary closing bracket"}]},
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [], "deletions": [470], "modifications": [{"line_number": 470, "modified_line": "// Removed unnecessary assignment to bottom"}, {"line_number": 471, "modified_line": ""}]
+][
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [], "deletions": [468, 469, 470, 471], "modifications": [
+        {"line_number": 468, "modified_line": "        int bottom = stack.size() - 2;"},
+        {"line_number": 469, "modified_line": "        if (bottom >= MaxScopeSearchDepth) {"}
+    ]}
+]
+
+[
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [], "deletions": [468, 469, 470, 471], "modifications": [
+        {"line_number": 468, "modified_line": "        int bottom = stack.size();"},
+        {"line_number": 469, "modified_line": "        if (bottom >= MaxScopeSearchDepth) {"}
+    ]}
+]
+
+[
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [], "deletions": [468, 469, 470, 471], "modifications": [
+        {"line_number": 468, "modified_line": "        int bottom = stack.size() - 3;"},
+        {"line_number": 469, "modified_line": "        if (bottom <= MaxScopeSearchDepth) {"}
+    ]}
+]
+
+[
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [], "deletions": [468, 469, 470, 471], "modifications": [
+        {"line_number": 468, "modified_line": "        int bottom = stack.size() - 4;"},
+        {"line_number": 469, "modified_line": "        if (bottom < MaxScopeSearchDepth) {"}
+    ]}
+]
+
+[
+    {"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [], "deletions": [468, 469, 470, 471], "modifications": [
+        {"line_number": 468, "modified_line": "        int bottom = stack.size() - 5;"},
+        {"line_number": 469, "modified_line": "        if (bottom != MaxScopeSearchDepth) {"}
+    ]}
+][
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 470, "new_lines": ["        if (bottom >= MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 471, "new_lines": ["        return;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 468, "new_lines": ["        int bottom = stack.size();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 469, "new_lines": ["        if (bottom >= MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 468, "new_lines": ["        int bottom = stack.size();"]}, {"line_number": 469, "new_lines": ["        if (bottom >= MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 471, "new_lines": ["        return true;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 469, "new_lines": ["        if (bottom >= MaxScopeSearchDepth) {"]}, {"line_number": 470, "new_lines": ["            bottom = MaxScopeSearchDepth - 1;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 468, "new_lines": ["        int bottom = stack.size();"]}, {"line_number": 470, "new_lines": ["            bottom = MaxScopeSearchDepth - 1;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 468, "new_lines": ["        int bottom = stack.size();"]}, {"line_number": 471, "new_lines": ["        return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 470, "new_lines": ["            bottom = MaxScopeSearchDepth - 1;"]}, {"line_number": 471, "new_lines": ["        return false;"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 469, "new_lines": ["        bottom = Math.min(bottom, MaxScopeSearchDepth);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 468, "new_lines": ["        int bottom = Math.min(stack.size(), MaxScopeSearchDepth) - 1;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 470, "new_lines": ["            if (bottom == MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 469, "new_lines": ["        if (bottom >= MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 471, "new_lines": ["        if (bottom < MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [], "deletions": [468, 469, 470, 471], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 468, "new_lines": ["        int bottom = stack.size() > MaxScopeSearchDepth ? MaxScopeSearchDepth : stack.size() - 2;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 469, "new_lines": ["        if (bottom >= MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 470, "new_lines": ["            if (bottom == MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/HtmlTreeBuilder.java", "target_lines": [["468", "        int bottom = stack.size() -1;"], ["469", "        if (bottom > MaxScopeSearchDepth) {"], ["470", "            bottom = MaxScopeSearchDepth;"], ["471", "        }"]], "insertions": [{"line_number": 471, "new_lines": ["        if (bottom < MaxScopeSearchDepth) {"]}], "deletions": [], "modifications": []}
+]

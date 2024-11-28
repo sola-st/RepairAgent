@@ -1,0 +1,1298 @@
+
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {"line_number": 152, "modified_line": "open my $fh, '>>$file' or die 'Cannot open file for appending $file: $!';    open my $fh, '>>', $file or die 'Cannot open file for appending $file: $!';"},
+        {"line_number": 152, "modified_line": "open my $fh, '>>$file' or die 'Cannot open file for appending $file: $!';    open my $fh, '>>', $file or die 'Cannot open file for appending $file: $!';"},
+        {"line_number": 152, "modified_line": "open my $fh, '>>$file' or die 'Cannot open file for appending $file: $!';    open my $fh, '>>', $file or die 'Cannot open file for appending $file: $!';"},
+        {"line_number": 156, "modified_line": "my $seen = 0; # Fixing variable scoping issue    my $seen; # Fixing variable scoping issue"},
+        {"line_number": 161, "modified_line": "my $seen = 1; # Fixing variable scoping issue    my $seen; # Fixing variable scoping issue"},
+        {"line_number": 163, "modified_line": "my $seen = 1; # Fixing variable scoping issue    my $seen; # Fixing variable scoping issue"},
+        {"line_number": 165, "modified_line": "my $seen = 1; # Fixing variable scoping issue    my $seen; # Fixing variable scoping issue"},
+        {"line_number": 166, "modified_line": "my $seen = 0; # Fixing variable scoping issue    my $seen; # Fixing variable scoping issue"},
+        {"line_number": 167, "modified_line": "my $seen = 0; # Fixing variable scoping issue    my $seen; # Fixing variable scoping issue"},
+        {"line_number": 168, "modified_line": "my $line; # Correcting variable declaration    my $line = ''; # Correcting variable declaration"},
+        {"line_number": 173, "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in        last    my $fh_in = ''; # Adding explicit package name declaration for $fh_in"},
+        {"line_number": 175, "modified_line": "close $fh_in;    my $fh_in = ''; # Adding explicit package name declaration for $fh_in"},
+        {"line_number": 176, "modified_line": "unless ($seen) {    my $oldconf = ();        seek ($fh, 0, SEEK_END) or die 'Cannot seek: $!'; # seek if someone appended while we were waiting"},
+        {"line_number": 177, "modified_line": "seek ($fh, 0, SEEK_END) or die 'Cannot seek: $!'; # seek if someone appended while we were waiting    print $fh $string;"},
+        {"line_number": 180, "modified_line": "chomp @files;    my $fh;        close $fh;"},
+        {"line_number": 181, "modified_line": "return $seen == 1 ? 0 : 1;    my $fh;        close $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"},
+        {"line_number": 182, "modified_line": "}    return $seen == 1 ? 0 : 1;        my $fh;"}
+    ]
+}
+{ "fixes": [
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 160, "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 162, "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 167, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 168, "modified_line": "my $line = ''; # Correcting variable declaration"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 162, "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 167, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}]},
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 168, "modified_line": "my $line; # Correcting variable declaration"}]}
+    ]
+}{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [416], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 160, "modified_line": "my $line = 'modified'; # Adding explicit package name declaration for $line"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 160, "modified_line": "my $line = 'fixed'; # Adding explicit package name declaration for $line"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 162, "modified_line": "my $fh_in = 'updated'; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 162, "modified_line": "my $fh_in = 'corrected'; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 167, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 167, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 168, "modified_line": "my $line = 'adjusted'; # Correcting variable declaration"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 168, "modified_line": "my $line = 'improved'; # Correcting variable declaration"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 161, "modified_line": "my $newconf = (); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 161, "modified_line": "my $newconf = 'adjusted'; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 173, "modified_line": "my @files = (); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 173, "modified_line": "my @files = 'corrected'; # Fixing variable scoping issue"}]}
+    ]
+}
+{
+    "fixes": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = -1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 2; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = ''; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = undef; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}, {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}, {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}, {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}, {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = -1; # Fixing variable scoping issue"}, {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 2; # Fixing variable scoping issue"}, {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 160, "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 160, "modified_line": "my $line = 0; # Adding explicit package name declaration for $line"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 160, "new_lines": ["my $line = 'text'; # Adding explicit package name declaration for $line"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 156, "new_lines": ["my $fh_in = (); # Adding explicit package name declaration for $fh_in"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 168, "new_lines": ["my $line; # Correcting variable declaration"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 168, "new_lines": ["my $line = 'updated'; # Correcting variable declaration"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 168, "new_lines": ["my $line = 1; # Correcting variable declaration"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 168, "new_lines": ["my $line = 0.0; # Correcting variable declaration"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 162, "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in", "my $seen = 0; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 162, "new_lines": ["my $fh_in = undef; # Adding explicit package name declaration for $fh_in", "my $seen = 1; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 162, "new_lines": ["my $fh_in = (); # Adding explicit package name declaration for $fh_in", "my $seen = undef; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 162, "new_lines": ["my $fh_in = 0; # Adding explicit package name declaration for $fh_in", "my $seen = ''; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 167, "new_lines": ["my $seen = 1; # Fixing variable scoping issue", "my $line = ''; # Adding explicit package name declaration for $line"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 167, "new_lines": ["my $seen = 0; # Fixing variable scoping issue", "my $line = 0; # Adding explicit package name declaration for $line"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 167, "new_lines": ["my $seen = ''; # Fixing variable scoping issue", "my $line = 'modified'; # Adding explicit package name declaration for $line"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 173, "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line", "my $fh_in = ''; # Adding explicit package name declaration for $fh_in", "my $seen = 1; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 173, "new_lines": ["my $line = 0; # Adding explicit package name declaration for $line", "my $fh_in = 0; # Adding explicit package name declaration for $fh_in", "my $seen = 0; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}, 
+                {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"}, 
+                {"line_number": 160, "modified_line": "my $line = 0; # Adding explicit package name declaration for $line"}, 
+                {"line_number": 162, "modified_line": "my $fh_in = 0; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"}, 
+                {"line_number": 167, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}, 
+                {"line_number": 168, "modified_line": "my $line; # Correcting variable declaration"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}, 
+                {"line_number": 156, "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"}, 
+                {"line_number": 160, "modified_line": "my $line = 0; # Adding explicit package name declaration for $line"}, 
+                {"line_number": 162, "modified_line": "my $fh_in = 0; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"}, 
+                {"line_number": 167, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}, 
+                {"line_number": 168, "modified_line": "my $line; # Correcting variable declaration"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 181,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 181,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 181,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [416],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 155,
+                    "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 156,
+                    "modified_line": "my $fh_in = ();\nmy @files = ();\nmy $oldconf = ();\nmy %newconf = ();\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 160,
+                    "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"
+                },
+                {
+                    "line_number": 162,
+                    "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in\nmy $seen = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 167,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 168,
+                    "modified_line": "my $line; # Correcting variable declaration"
+                }
+            ]
+        }
+    ]
+}

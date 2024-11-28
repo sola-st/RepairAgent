@@ -1,0 +1,1693 @@
+
+{
+    "file_name": "org/apache/commons/lang3/StringUtils.java",
+    "insertions": [
+        {
+            "line_number": 1376,
+            "new_lines": [
+                "            if (cs == null || searchChars == null) {",
+                "                return false;",
+                "            }"
+            ]
+        },
+        {
+            "line_number": 1377,
+            "new_lines": [
+                "            for (char searchChar : searchChars) {",
+                "                if (cs.indexOf(searchChar) >= 0) {",
+                "                    return true;",
+                "                }",
+                "            }",
+                "            return false;"
+            ]
+        },
+        {
+            "line_number": 1381,
+            "new_lines": [
+                "            if (cs == null || searchChars == null) {",
+                "                return false;",
+                "            }"
+            ]
+        },
+        {
+            "line_number": 1382,
+            "new_lines": [
+                "            for (char searchChar : searchChars.toCharArray()) {",
+                "                if (cs.indexOf(searchChar) >= 0) {",
+                "                    return true;",
+                "                }",
+                "            }",
+                "            return false;"
+            ]
+        },
+        {
+            "line_number": 1383,
+            "new_lines": [
+                "            if (cs == null || searchChars == null) {",
+                "                return false;",
+                "            }"
+            ]
+        },
+        {
+            "line_number": 1533,
+            "new_lines": [
+                "            if (cs == null || searchChars == null) {",
+                "                return -1;",
+                "            }"
+            ]
+        },
+        {
+            "line_number": 1534,
+            "new_lines": [
+                "            for (int i = 0; i < cs.length(); i++) {",
+                "                if (searchChars.indexOf(cs.charAt(i)) < 0) {",
+                "                    return i;",
+                "                }",
+                "            }",
+                "            return -1;"
+            ]
+        },
+        {
+            "line_number": 1539,
+            "new_lines": [
+                "            if (cs == null || searchChars == null) {",
+                "                return -1;",
+                "            }"
+            ]
+        },
+        {
+            "line_number": 1540,
+            "new_lines": [
+                "            for (int i = 0; i < cs.length(); i++) {",
+                "                if (searchChars.indexOf(cs.charAt(i)) >= 0) {",
+                "                    return i;",
+                "                }",
+                "            }",
+                "            return -1;"
+            ]
+        },
+        {
+            "line_number": 1578,
+            "new_lines": [
+                "            if (cs == null || searchChars == null) {",
+                "                return false;",
+                "            }"
+            ]
+        },
+        {
+            "line_number": 1678,
+            "new_lines": [
+                "            if (cs == null || searchChars == null) {",
+                "                return -1;",
+                "            }"
+        ],
+        "line_number": 1679,
+        "new_lines": [
+            "            for (int i = 0; i < cs.length(); i++) {",
+            "                if (searchChars.indexOf(cs.charAt(i)) >= 0) {",
+            "                    return i;",
+            "                }",
+            "            }",
+            "            return -1;"
+        ]
+    },
+    {
+        "line_number": 1683,
+        "new_lines": [
+            "            if (cs == null || searchChars == null) {",
+            "                return false;",
+            "            }"
+        ]
+    },
+    {
+        "line_number": 1684,
+        "new_lines": [
+            "            for (char searchChar : searchChars) {",
+            "                if (cs.indexOf(searchChar) < 0) {",
+            "                    return false;",
+            "                }",
+            "            }",
+            "            return true;"
+        ]
+    },
+    {
+        "line_number": 1686,
+        "new_lines": [
+            "            if (cs == null || searchChars == null) {",
+            "                return false;",
+            "            }"
+        ]
+    }
+]
+}
+{
+    "fixes": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] != cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] > cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] < cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] >= cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] <= cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] == cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] != cs.charAt(i + 1) && someConditionHere) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] == cs.charAt(i + 1) && someOtherConditionHere) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            // Additional logic here to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            // Additional logic here to fix the bug"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [1443]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                        return true;"
+                    ]
+                }
+            ],
+            "deletions": [1455]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        return false;"
+                    ]
+                }
+            ],
+            "deletions": [1457]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "deletions": [1497]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "deletions": [1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1381,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1382,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1383,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1533,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1534,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1539,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1540,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1578,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1678,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1679,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1683,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1684,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1686,
+                    "new_lines": [
+                        "// Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "    public static boolean containsAnyModified(CharSequence cs, char[] searchChars) {"
+                    ]
+                }
+            ],
+            "deletions": [1443]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] == cs.charAt(i + 1)) {"
+                    ]
+                }
+            ],
+            "deletions": [1455]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                            return true;"
+                    ]
+                }
+            ],
+            "deletions": [1457]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "    public static boolean containsAnyModified(CharSequence cs, String searchChars) {"
+                    ]
+                }
+            ],
+            "deletions": [1497]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "            if (cs instanceof String) {"
+                    ]
+                }
+            ],
+            "deletions": [1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (cs == null || searchChars == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1376]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (cs instanceof String) {"
+                    ]
+                }
+            ],
+            "deletions": [1377]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1381,
+                    "new_lines": [
+                        "                if (cs.toString().indexOf(ch) < 0) {"
+                    ]
+                }
+            ],
+            "deletions": [1381]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1382,
+                    "new_lines": [
+                        "                return false;"
+                    ]
+                }
+            ],
+            "deletions": [1382]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1383,
+                    "new_lines": [
+                        "            } else {",
+                        "                return true;"
+                    ]
+                }
+            ],
+            "deletions": [1383]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1533,
+                    "new_lines": [
+                        "                if (searchChars.indexOf(ch) < 0) {"
+                    ]
+                }
+            ],
+            "deletions": [1533]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1534,
+                    "new_lines": [
+                        "                    return false;"
+                    ]
+                }
+            ],
+            "deletions": [1534]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1539,
+                    "new_lines": [
+                        "                return true;"
+                    ]
+                }
+            ],
+            "deletions": [1539]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1540,
+                    "new_lines": [
+                        "            } else {",
+                        "                return false;"
+                    ]
+                }
+            ],
+            "deletions": [1540]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1578,
+                    "new_lines": [
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [1578]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1678,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {"
+                    ]
+                }
+            ],
+            "deletions": [1678]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1679,
+                    "new_lines": [
+                        "                return false;"
+                    ]
+                }
+            ],
+            "deletions": [1679]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1683,
+                    "new_lines": [
+                        "            return true;"
+                    ]
+                }
+            ],
+            "deletions": [1683]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1684,
+                    "new_lines": [
+                        "        } else {",
+                        "            return false;"
+                    ]
+                }
+            ],
+            "deletions": [1684]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1686,
+                    "new_lines": [
+                        "        return false;"
+                    ]
+                }
+            ],
+            "deletions": [1686]
+        }
+    ]
+}
+{"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["    public static boolean containsNone(CharSequence cs, char[] searchChars) {"]}], "deletions": [1443, 1455, 1457, 1497, 1576]}
+    
+    
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1443"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1455"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1457"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1497"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1576"
+                    ]
+                },
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1376"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1377"
+                    ]
+                },
+                {
+                    "line_number": 1381,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1381"
+                    ]
+                },
+                {
+                    "line_number": 1382,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1382"
+                    ]
+                },
+                {
+                    "line_number": 1383,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1383"
+                    ]
+                },
+                {
+                    "line_number": 1533,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1533"
+                    ]
+                },
+                {
+                    "line_number": 1534,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1534"
+                    ]
+                },
+                {
+                    "line_number": 1539,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1539"
+                    ]
+                },
+                {
+                    "line_number": 1540,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1540"
+                    ]
+                },
+                {
+                    "line_number": 1578,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1578"
+                    ]
+                },
+                {
+                    "line_number": 1678,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1678"
+                    ]
+                },
+                {
+                    "line_number": 1679,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1679"
+                    ]
+                },
+                {
+                    "line_number": 1683,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1683"
+                    ]
+                },
+                {
+                    "line_number": 1684,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1684"
+                    ]
+                },
+                {
+                    "line_number": 1686,
+                    "new_lines": [
+                        "    // Mutated fix 1 for bug at line 1686"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1443"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1455"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1457"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1497"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1576"
+                    ]
+                },
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1376"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1377"
+                    ]
+                },
+                {
+                    "line_number": 1381,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1381"
+                    ]
+                },
+                {
+                    "line_number": 1382,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1382"
+                    ]
+                },
+                {
+                    "line_number": 1383,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1383"
+                    ]
+                },
+                {
+                    "line_number": 1533,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1533"
+                    ]
+                },
+                {
+                    "line_number": 1534,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1534"
+                    ]
+                },
+                {
+                    "line_number": 1539,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1539"
+                    ]
+                },
+                {
+                    "line_number": 1540,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1540"
+                    ]
+                },
+                {
+                    "line_number": 1578,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1578"
+                    ]
+                },
+                {
+                    "line_number": 1678,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1678"
+                    ]
+                },
+                {
+                    "line_number": 1679,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1679"
+                    ]
+                },
+                {
+                    "line_number": 1683,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1683"
+                    ]
+                },
+                {
+                    "line_number": 1684,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1684"
+                    ]
+                },
+                {
+                    "line_number": 1686,
+                    "new_lines": [
+                        "    // Mutated fix 2 for bug at line 1686"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1443"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1455"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1457"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1497"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1576"
+                    ]
+                },
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1376"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1377"
+                    ]
+                },
+                {
+                    "line_number": 1381,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1381"
+                    ]
+                },
+                {
+                    "line_number": 1382,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1382"
+                    ]
+                },
+                {
+                    "line_number": 1383,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1383"
+                    ]
+                },
+                {
+                    "line_number": 1533,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1533"
+                    ]
+                },
+                {
+                    "line_number": 1534,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1534"
+                    ]
+                },
+                {
+                    "line_number": 1539,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1539"
+                    ]
+                },
+                {
+                    "line_number": 1540,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1540"
+                    ]
+                },
+                {
+                    "line_number": 1578,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1578"
+                    ]
+                },
+                {
+                    "line_number": 1678,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1678"
+                    ]
+                },
+                {
+                    "line_number": 1679,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1679"
+                    ]
+                },
+                {
+                    "line_number": 1683,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1683"
+                    ]
+                },
+                {
+                    "line_number": 1684,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1684"
+                    ]
+                },
+                {
+                    "line_number": 1686,
+                    "new_lines": [
+                        "    // Mutated fix 3 for bug at line 1686"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "// Mutation 1: Inserted line to fix the bug at line 1443"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "// Mutation 2: Inserted line to fix the bug at line 1455"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "// Mutation 3: Inserted line to fix the bug at line 1457"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "// Mutation 4: Inserted line to fix the bug at line 1497"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "// Mutation 5: Inserted line to fix the bug at line 1576"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "// Mutation 6: Inserted line to fix the bug at line 1376"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "// Mutation 7: Inserted line to fix the bug at line 1377"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1381,
+                    "new_lines": [
+                        "// Mutation 8: Inserted line to fix the bug at line 1381"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1382,
+                    "new_lines": [
+                        "// Mutation 9: Inserted line to fix the bug at line 1382"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1383,
+                    "new_lines": [
+                        "// Mutation 10: Inserted line to fix the bug at line 1383"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "// Mutation 1: Adding a comment for clarification"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "// Mutation 1: Adjusting the condition for high surrogate"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "// Mutation 1: Adjusting the condition for high surrogate"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "// Mutation 1: Adding a null check for searchChars"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "// Mutation 1: Adjusting the condition for index of searchChars"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "// Mutation 2: Inserted comment for tracking"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "// Mutation 2: Ensuring correct handling of high surrogate character"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "// Mutation 2: Ensuring correct handling of high surrogate character"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "// Mutation 2: Added validation for searchChars being null"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "// Mutation 2: Updated condition for index of searchChars"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "// Mutation 3: Added a comment for clarity"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "// Mutation 3: Updated condition for high surrogate handling"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "// Mutation 3: Updated condition for high surrogate handling"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "// Mutation 3: Added a null check for searchChars"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "// Mutation 3: Adjusted condition for index of searchChars"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "// Mutation 4: Added a comment for explanation"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "// Mutation 4: Handling high surrogate characters correctly"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "// Mutation 4: Handling high surrogate characters correctly"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "// Mutation 4: Added check for null searchChars"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "// Mutation 4: Updated condition for searchChars index"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "// Mutation 5: Comment added for context"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "// Mutation 5: Checking high surrogate characters correctly"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "// Mutation 5: Checking high surrogate characters correctly"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "// Mutation 5: Added null check for searchChars"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "// Mutation 5: Adjusted condition for searchChars index"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "// Mutation 1: Inserted line to fix the bug at line 1443"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "// Mutation 2: Inserted line to fix the bug at line 1455"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "// Mutation 3: Inserted line to fix the bug at line 1457"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "// Mutation 4: Inserted line to fix the bug at line 1497"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "// Mutation 5: Inserted line to fix the bug at line 1576"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "// Mutation 6: Inserted line to fix the bug at line 1376"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "// Mutation 7: Inserted line to fix the bug at line 1377"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1381,
+                    "new_lines": [
+                        "// Mutation 8: Inserted line to fix the bug at line 1381"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1382,
+                    "new_lines": [
+                        "// Mutation 9: Inserted line to fix the bug at line 1382"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1383,
+                    "new_lines": [
+                        "// Mutation 10: Inserted line to fix the bug at line 1383"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] != cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch < Character.MAX_HIGH_SURROGATE && searchChars[j + 1] == cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j] == cs.charAt(i)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MIN_HIGH_SURROGATE && searchChars[j + 1] == cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j] == cs.charAt(i)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] != cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j] != cs.charAt(i)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1456,
+                    "new_lines": [
+                        "                        if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && searchChars[j + 1] == cs.charAt(i + 1)) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.isEmpty()) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.isEmpty()) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "            if (cs == null || searchChars == null || searchChars.indexOf(ch) < 0) {"
+                    ]
+                }
+            ]
+        }
+    ]
+}

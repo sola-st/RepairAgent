@@ -1,0 +1,43 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'insertions': [{'line_number': 1707, 'new_lines': ['        if (p == null) {', '            return null;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'target_lines': [['1169', '        return (T) _bindAsTree(p);'], ['1707', '//']], 'insertions': [{'line_number': 1707, 'new_lines': ['        if (p == null) {', '            return null;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'target_lines': [['1169', '        return (T) _bindAsTree(p);'], ['1707', '//']], 'insertions': [{'line_number': 1169, 'new_lines': ['        if (p == null) {', '            return null;', '        }']}, {'line_number': 1707, 'new_lines': ['        if (p == null) {', '            return null;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1169, 'modified_line': '        if (p == null) {\n            return null;\n        }\n        return (T) _bindAsTree(p);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1707, 'modified_line': '        if (p == null) {\n            return null;\n        }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1169, 'modified_line': '        if (p == null) {\n            return null;\n        }\n        return (T) _bindAsTree(p);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1707, 'modified_line': '        if (p == null) {\n            return null;\n        }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'target_lines': [['1169', '        return (T) _bindAsTree(p);'], ['1707', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'target_lines': [['1169', '        return (T) _bindAsTree(p);'], ['1707', '//']], 'insertions': [{'line_number': 1169, 'new_lines': ['        if (p == null) {', '            return null;', '        ']}, {'line_number': 1707, 'new_lines': ['        if (p == null) {', '            return null;', '        ']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1707, 'modified_line': '        if (p == null) {\n            return null;\n        }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1169, 'modified_line': '        return (T) _bindAsTree(p);'}, {'line_number': 1707, 'modified_line': '        return _bindAndClose(p);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1707, 'modified_line': '        if (p == null) {\n            return null;\n        }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1169, 'modified_line': '    public <T extends TreeNode> T readTree(JsonParser p) throws IOException {\n        JsonParser p = _parserFactory.createParser(in);\n        return _bindAsTree(p);\n    }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ObjectReader.java', 'modifications': [{'line_number': 1169, 'modified_line': '    public JsonNode readTree(JsonParser p) throws IOException, JsonProcessingException {\n        return _bindAndCloseAsTree(p);\n    }'}, {'line_number': 1707, 'modified_line': '    protected JsonNode _bindAsTree(JsonParser p) throws IOException {\n        return _config.getNodeFactory().rootNode();\n    }'}]}]
+
+

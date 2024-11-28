@@ -1,0 +1,832 @@
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeName = null;"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["hasEmptyAttributeValue = false;"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["hasPendingAttributeValue = false;"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["hasPendingAttributeValue = true;"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0 && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["reset(pendingAttributeValue);"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (attributes != null) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName.trim() : null;"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeName == null) { pendingAttributeName = \"defaultName\"; }"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName.trim() : \"\";"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName == null ? \"defaultName\" : pendingAttributeName.trim();"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeName == null) { pendingAttributeName = \"defaultName\"; }"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeName == null) { pendingAttributeName = \"defaultName\"; }"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName.trim() : \"defaultName\";"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeName == null) { pendingAttributeName = \"defaultName\"; }"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]} 
+], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", ""], ["116", "//"]], "insertions": [
+{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName.trim() : \"defaultName\";"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} 
+], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName.trim();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["hasEmptyAttributeValue = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["hasPendingAttributeValue = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["reset(pendingAttributeValue);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValueS = null;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["} // end if (pendingAttributeName != null)"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["// Reset attribute related variables"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) { // Check if pending attribute name is not null"]}, {"line_number": 116, "new_lines": ["// Reset pending attribute values"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) { // Verify pending attribute name is not null"]}, {"line_number": 116, "new_lines": ["// Clean up attribute related variables"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [], "modifications": []}
+]
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeName.isEmpty()) {"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeName != null) {"]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeName != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeName != null && !pendingAttributeValue.isEmpty()) {"]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && pendingAttributeName != null) {"]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && !pendingAttributeValue.isEmpty()) {"]}], "deletions": [], "modifications": []
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue.trim();"]}, {"line_number": 116, "new_lines": ["hasPendingAttributeValue = true;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = \"attribute\";"]}, {"line_number": 116, "new_lines": ["hasEmptyAttributeValue = true;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = \"newAttributeName\";"]}, {"line_number": 116, "new_lines": ["pendingAttributeName = null;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName.toUpperCase();"]}, {"line_number": 116, "new_lines": ["hasPendingAttributeValue = false;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName.replace(\"a\", \"b\");"]}, {"line_number": 116, "new_lines": ["reset(pendingAttributeValue);"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName == null) { pendingAttributeName = \"default\"; }"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName == null) { throw new IllegalArgumentException(\"Attribute name cannot be null\"); }"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) { attributes = new Attributes(); }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["while (pendingAttributeName == null) { pendingAttributeName = \"default\"; }"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) { attributes = new Attributes(); }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]},
+    {"line_number": 116, "new_lines": ["if (attributes != null) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null) {pendingAttributeName = \"default\";}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {attributes = new Attributes();}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null) {pendingAttributeName = \"attribute\";}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {throw new IllegalStateException(\"Attributes cannot be null\");}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null) {pendingAttributeName = \"attribute_name\";}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {attributes = new Attributes();}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null) {throw new IllegalArgumentException(\"Attribute name cannot be null\");}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {attributes = new Attributes();}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null || pendingAttributeName.isEmpty()) {pendingAttributeName = \"default\";}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {throw new IllegalArgumentException(\"Attributes cannot be null\");}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null || pendingAttributeName.isEmpty()) {throw new IllegalArgumentException(\"Attribute name is empty or null\");}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {attributes = new Attributes();}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null || pendingAttributeName.isEmpty()) {throw new IllegalArgumentException(\"Missing attribute name\");}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {attributes = new Attributes();}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null || pendingAttributeName.isEmpty()) {pendingAttributeName = \"default\";}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {attributes = new Attributes();}"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+    {"line_number": 107, "new_lines": ["if (pendingAttributeName == null || pendingAttributeName.isEmpty()) {pendingAttributeName = \"default\";}"]},
+    {"line_number": 116, "new_lines": ["if (attributes == null) {throw new IllegalStateException(\"Attributes must be initialized\");}"]}
+],
+"deletions": [],
+"modifications": []
+}][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && attributes.size() > 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && attributes.size() > 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && attributes.size() > 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && attributes.size() > 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder();"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Added null check"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Check for null before assigning"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Fix for potential null value"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder();"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Check for null before assignment"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder();"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Handle potential null value"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Check for null"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Handle null case"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeValue = pendingAttributeValue != null ? pendingAttributeValue : new StringBuilder(); // Check for nullability"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder(); // Initialize pendingAttributeValue"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.equals("")) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName != "") {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() != 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName != null && !pendingAttributeName.equals("")) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeName = null;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["hasEmptyAttributeValue = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["hasPendingAttributeValue = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["reset(pendingAttributeValue);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValueS = null;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["// Reset pendingAttributeValueS"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["// Reset attributes state"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["// Clear pending attributes"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["// Perform additional cleanup here"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["// Verify pending attributes after processing"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [112], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}], "deletions": [112], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}], "deletions": [112], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.toString().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.toString().isEmpty()) {"]}], "deletions": [112], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.toString().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.toString().length() > 0) {"]}], "deletions": [112], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.toString().isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.toString().isBlank()) {"]}], "deletions": [112], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName != \"\") {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.equals(\"\") ) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.equals(\"\") ) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName != \"\") {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["pendingAttributeValue = new StringBuilder();"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.equals("")) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.trim().isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (hasPendingAttributeValue) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (hasEmptyAttributeValue) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (hasPendingAttributeValue && !hasPendingAttributeValue.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]} , {"line_number": 116, "new_lines": ["if (hasEmptyAttributeValue && !hasEmptyAttributeValue.isEmpty()) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["} // Closing brace for if (pendingAttributeName != null) block"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) { // check for non-empty attribute value"]}, {"line_number": 116, "new_lines": ["} // End of if (pendingAttributeName != null) block"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) { // checking for non-empty attribute value"]}, {"line_number": 116, "new_lines": ["} // End of pendingAttributeName != null check"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) { // Ensure pendingAttributeValue is not empty"]}, {"line_number": 116, "new_lines": ["} // End of if (pendingAttributeName != null) condition"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) { // Checking if pendingAttribute is not empty"]}, {"line_number": 116, "new_lines": ["} // End of pendingAttributeName != null check"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) { // Ensure pendingAttributeValue has content"]}, {"line_number": 116, "new_lines": ["} // End of the check for pendingAttributeName not being null"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) { // Check pendingAttributeValue is not empty"]}, {"line_number": 116, "new_lines": ["} // Closing bracket for if (pendingAttributeName != null) block"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) { // Verify pendingAttributeValue is not empty"]}, {"line_number": 116, "new_lines": ["} // End of if (pendingAttributeName != null) condition"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) { // Check if pendingAttributeValue is not empty"]}, {"line_number": 116, "new_lines": ["} // End of the check for pendingAttributeName not being null"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"defaultName\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"newAttribute\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"attributeName\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"attrName\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"name\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"attribute\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"defaultAttributeValue\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"attributeValue\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"value\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName != null ? pendingAttributeName : \"attrValue\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null && !pendingAttributeName.isEmpty() ? pendingAttributeName : \"defaultName\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName != null && !pendingAttributeName.isEmpty() ? pendingAttributeName : \"defaultAttributeValue\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null && !pendingAttributeName.isEmpty() ? pendingAttributeName : \"attributeName\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName != null && !pendingAttributeName.isEmpty() ? pendingAttributeName : \"attrName\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName != null && !pendingAttributeName.isEmpty() ? pendingAttributeName : \"attributeValue\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName != null && !pendingAttributeName.isEmpty() ? pendingAttributeName : \"value\";"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName.trim();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName.trim();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Trimming the attribute name before assigning a value to it."]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Trimming the attribute value before assigning a value to it."]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Removing leading and trailing whitespaces from the attribute name before use."]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Removing leading and trailing whitespaces from the attribute value before use."]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Trimming the pending attribute name to ensure no leading or trailing whitespaces."]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Trimming the pending attribute value to remove any leading or trailing whitespaces."]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Removing any leading or trailing whitespaces from the pending attribute name."]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 116, "new_lines": ["pendingAttributeName = pendingAttributeName.trim(); // Removing any leading or trailing whitespaces from the pending attribute value."]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && !pendingAttributeValue.isBlank()) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && !pendingAttributeValue.equals(\"\")) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.trim().length() > 0) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.trim().isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.trim().length() > 0 && !pendingAttributeValue.trim().isBlank()) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.trim().length() > 0 && !pendingAttributeValue.trim().equals(\"\")) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue != \"\") {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.equals(\"\") && !pendingAttributeValue.isBlank()) {"]},
+{"line_number": 116, "new_lines": ["}"]
+]},
+"deletions": [],
+"modifications": []
+}
+][{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    pendingAttributeValue = new StringBuilder();", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null) {", "    return; // or handle the null case appropriately", "}"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() == 0) {", "    pendingAttributeValue.append(\"\");", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null || pendingAttributeName.isEmpty()) {", "    return; // or handle the null/empty case appropriately", "}"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName == null) {", "    return; // or handle the null case appropriately", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    pendingAttributeValue = new StringBuilder();", "}"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName == null || pendingAttributeName.isEmpty()) {", "    return; // or handle the null/empty case appropriately", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null && hasEmptyAttributeValue) {", "    pendingAttributeValue = new StringBuilder();", "}"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {", "    pendingAttributeName = pendingAttributeName.trim();", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    pendingAttributeValue = new StringBuilder();", "}"]}], "deletions": [], "modifications": []}][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeName.isEmpty() && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty() && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeValue.isEmpty() && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeValue.isEmpty() && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeValue.isEmpty() && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeValue.isEmpty() && pendingAttributeValue != null && (pendingAttributeValue.length() > 0)) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && (pendingAttributeValue.length() > 0)) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeValue.isEmpty() && pendingAttributeValue != null && (pendingAttributeValue.length() > 0)) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty() && (pendingAttributeValue.length() > 0)) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty() && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && pendingAttributeName.length() > 0 && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && pendingAttributeName.length() > 0 && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && pendingAttributeValue.length() > 0 && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0 && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank() && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0 && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank() && pendingAttributeValue != null && !pendingAttributeValue.isBlank()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0 && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue == null) {", "    attribute = new Attribute(pendingAttributeName, \"\");", "} else {", "    attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "}"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeValue == null) {", "    reset(pendingAttributeValue);", "} else {", "    reset(pendingAttributeValue.toString());", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["}"]}]}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0 && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0 && attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty() && attributes != null && !attributes.isEmpty()) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isBlank()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && !pendingAttributeValue.isBlank()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeName.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && pendingAttributeValue != null && pendingAttributeValue.trim().length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.toString() != null) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isBlank()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.equalsIgnoreCase("")) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isBlank()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && !pendingAttributeValue.isBlank()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && pendingAttributeValue.length() > 0 && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {", "attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {", "attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {", "attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "} else {", "attribute = new Attribute(pendingAttributeName, "");"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {", "attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());", "} else {", "attribute = new Attribute(pendingAttributeName, "");"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {", "attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {", "attribute = new Attribute(pendingAttributeName, pendingAttributeValue.toString());"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]}]}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes != null) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (attributes == null) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName == null) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && attributes == null) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && attributes != null) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && hasPendingAttributeValue) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && hasEmptyAttributeValue) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && hasEmptyAttributeValue && attributes == null) {"]}], "deletions": [107, 116], "modifications": []},
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeName != null && !pendingAttributeName.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["if (pendingAttributeName != null && hasEmptyAttributeValue && attributes != null) {"]}], "deletions": [107, 116], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+},
+
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], 
+"insertions": [
+{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]},
+{"line_number": 116, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}
+],
+"deletions": [],
+"modifications": []
+}
+][
+{"file_name": "org/jsoup/parser/Token.java", "target_lines": [["107", "//"], ["116", "//"]], "insertions": [{"line_number": 107, "new_lines": ["if (pendingAttributeValue != null && !pendingAttributeValue.isEmpty()) {"]}, {"line_number": 116, "new_lines": ["}"]}]}
+]

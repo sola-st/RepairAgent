@@ -1,0 +1,22 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/io/IOContext.java', 'modifications': [{'line_number': 274, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 279, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/io/IOContext.java', 'target_lines': [['274', '        if ((toRelease != src) && (toRelease.length <= src.length)) { throw wrongBuf(); }'], ['279', '        if ((toRelease != src) && (toRelease.length <= src.length)) { throw wrongBuf(); }'], ['284', 'return new IllegalArgumentException("Trying to release buffer not owned by the context"); ']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 274, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 279, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 284, 'modified_line': 'return new IllegalArgumentException("Trying to release buffer not owned by the context");'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/io/IOContext.java', 'modifications': [{'line_number': 274, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 279, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 284, 'modified_line': 'return new IllegalArgumentException("Trying to release buffer not owned by the context");'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/io/IOContext.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 274, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 279, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/io/IOContext.java', 'target_lines': [['274', '        if ((toRelease != src) && (toRelease.length <= src.length)) { throw wrongBuf(); }'], ['279', '        if ((toRelease != src) && (toRelease.length <= src.length)) { throw wrongBuf(); }'], ['284', 'return new IllegalArgumentException("Trying to release buffer not owned by the context"); ']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 274, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 279, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length) && (toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 284, 'modified_line': 'return new IllegalArgumentException("Trying to release buffer not owned by the context"); '}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/io/IOContext.java', 'modifications': [{'line_number': 274, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length && toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 279, 'modified_line': 'if ((toRelease != src) && (toRelease.length <= src.length && toRelease != null)) { throw wrongBuf(); }'}, {'line_number': 284, 'modified_line': 'return new IllegalArgumentException("Trying to release buffer not owned by the context");'}]}]
+
+

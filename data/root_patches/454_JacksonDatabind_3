@@ -1,0 +1,31 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'insertions': [{'line_number': 66, 'new_lines': ['if (value == null) {', '    return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'target_lines': [['66', '                value = _elementDeserializer.getNullValue();'], ['95', '            String value = (t == JsonToken.VALUE_NULL) ? null : deser.deserialize(jp, ctxt);']], 'insertions': [{'line_number': 66, 'new_lines': ['if (value == null) {', '    return null;', '}']}, {'line_number': 95, 'new_lines': ['if (value == null) {', '    return null;', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'insertions': [{'line_number': 95, 'new_lines': ['if (t == JsonToken.VALUE_NULL) {', '    return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'target_lines': [['66', '                value = _elementDeserializer.getNullValue();'], ['95', '            String value = (t == JsonToken.VALUE_NULL) ? null : deser.deserialize(jp, ctxt);']], 'insertions': [{'line_number': 66, 'new_lines': ['if (value == null) {', '    return null;']}, {'line_number': 95, 'new_lines': ['if (value == null) {', '    return null;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'insertions': [{'line_number': 66, 'new_lines': ['if (value == null) {', '    return null;', '}']}, {'line_number': 95, 'new_lines': ['if (t == JsonToken.VALUE_NULL) {', '    return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'insertions': [{'line_number': 95, 'new_lines': ['if (t == JsonToken.VALUE_NULL) {', 'return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'target_lines': [['66', '                value = _elementDeserializer.getNullValue();'], ['95', '            String value = (t == JsonToken.VALUE_NULL) ? null : deser.deserialize(jp, ctxt);']], 'insertions': [{'line_number': 66, 'new_lines': ['if (value == null) {', '    return null;']}, {'line_number': 95, 'new_lines': ['if (value == null) {', '    return null;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'insertions': [{'line_number': 84, 'new_lines': ['    @Override', '    public String[] _deserializeCustom(JsonParser p, DeserializationContext ctxt, String[] intoValue) throws IOException', '    {', "        // Read the starting '[' token", '        if (!p.isExpectedStartArrayToken()) {', '            return handleNonArray(p, ctxt, intoValue);', '        }', '', '        // Buffer that contains deserialized String values', '        ObjectBuffer buffer = ctxt.leaseObjectBuffer();', '        String[] chunk = buffer.resetAndStart();', '', '        int ix = 0;', '        try {', '            for (; p.nextToken() != JsonToken.END_ARRAY; ix++) {', '                // If the buffer is full, need to expand it', '                if (ix >= chunk.length) {', '                    chunk = buffer.appendCompletedChunk(chunk);', '                    ix = 0;', '                }', '                String value = _elementDeserializer.deserialize(p, ctxt);', '                if (value == null) {', '                    value = ""; // Ok to coerce nulls into empty Strings', '                }', '                chunk[ix] = value;', '            }', '        } catch (Exception e) {', '            throw JsonMappingException.wrapWithPath(e, chunk, buffer.bufferedSize() + ix);', '        }', '', "        // Let's handle the last chunk separately, if any", '        if (ix > 0) {', '            intoValue = buffer.completeAndClearBuffer(chunk, ix);', '            buffer.returnObjectBuffer(buffer);', '        } else {', '            intoValue = ctxt.handleUnexpectedToken(_valueClass, p);', '        }', '', '        return intoValue;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java', 'target_lines': [['66', '                value = _elementDeserializer.getNullValue();'], ['95', '            String value = (t == JsonToken.VALUE_NULL) ? null : deser.deserialize(jp, ctxt);']], 'insertions': [{'line_number': 66, 'new_lines': ['if (value == null) {', '    return null;']}, {'line_number': 95, 'new_lines': ['if (t == JsonToken.VALUE_NULL) {', '    return null;']}], 'deletions': [], 'modifications': []}]
+
+

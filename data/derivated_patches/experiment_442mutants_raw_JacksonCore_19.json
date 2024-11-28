@@ -1,0 +1,408 @@
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr++;"]}]}
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr++;"]}]}
+]
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = outPtr + 1;"]}]}
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = outPtr + 1;"]}]}
+]
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outBuf[outPtr++] = _inputBuffer[_inputPtr++];"]}]}
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outBuf[outPtr++] = _inputBuffer[_inputPtr++];"]}]}
+]
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {outBuf = _textBuffer.finishCurrentSegment(); outPtr = 0; }"]}]}
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {outBuf = _textBuffer.finishCurrentSegment(); outPtr = 0; }"]}]}
+]
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {outBuf = _textBuffer.finishCurrentSegment(); outPtr = 0; }"]}]}
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {outBuf = _textBuffer.finishCurrentSegment(); outPtr = 0; }"]}]}
+]
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outBuf[outPtr++] = '-';"]}]}
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outBuf[outPtr++] = '-';"]}]}
+][
+    {
+        "file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java",
+        "target_lines": [["1418", "//"]],
+        "insertions": [
+            {
+                "line_number": 1418,
+                "new_lines": [
+                    "if (outPtr >= outBuf.length) {",
+                    "    outBuf = _textBuffer.finishCurrentSegment();",
+                    "    outPtr = 0;",
+                    "}"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java",
+        "target_lines": [["1544", "//"]],
+        "insertions": [
+            {
+                "line_number": 1544,
+                "new_lines": [
+                    "if (outPtr >= outBuf.length) {",
+                    "    outBuf = _textBuffer.finishCurrentSegment();",
+                    "    outPtr = 0;",
+                    "}"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                ]]}}, "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                ]]}}, "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": [
+        "                if (outPtr >= outBuf.length) {",
+        "                    outBuf = _textBuffer.finishCurrentSegment();",
+        "                    outPtr = 0;",
+        "                }", 
+        "                // Additional mutation 1: Increase outPtr by 2", 
+        "                outPtr += 2;"]}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": [
+        "                if (outPtr >= outBuf.length) {",
+        "                    outBuf = _textBuffer.finishCurrentSegment();",
+        "                    outPtr = 0;",
+        "                }", 
+        "                // Additional mutation 2: Change outPtr to outPtr - 1", 
+        "                outPtr -= 1;"]}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": [
+        "                if (outPtr >= outBuf.length) {",
+        "                    outBuf = _textBuffer.finishCurrentSegment();",
+        "                    outPtr = 0;",
+        "                }", 
+        "                // Additional mutation 3: Modify outPtr assignment to increment by 3", 
+        "                outPtr += 3;"]}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": [
+        "                if (outPtr >= outBuf.length) {",
+        "                    outBuf = _textBuffer.finishCurrentSegment();",
+        "                    outPtr = 0;",
+        "                }", 
+        "                // Additional mutation 4: Change outPtr assignment to decrement by 2", 
+        "                outPtr -= 2;"]}]}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": [
+        "                if (outPtr >= outBuf.length) {",
+        "                    outBuf = _textBuffer.finishCurrentSegment();",
+        "                    outPtr = 0;",
+        "                }", 
+        "                // Additional mutation 5: Change outPtr increment to outPtr += 4", 
+        "                outPtr += 4;"]}]}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;"]}]}  
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;"]}]}  
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;"]}]}  
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;"]}]}  
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "}"]}]},
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;"]}],"deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;"]}],"deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+]
+[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr > outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr > outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+]
+[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+]
+[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr < outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr < outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+]
+[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+]
+[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr > outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr > outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+]
+[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr < outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr < outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+]
+[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length - 1) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length - 1) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr += 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr += 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outPtr = 0;", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outPtr = 0;", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length - 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length - 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outPtr + 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outPtr + 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr += 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr += 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr <= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr <= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr += 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr += 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length - 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length - 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outPtr + 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outPtr + 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outPtr = 0;", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outPtr = 0;", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length - 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length - 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outBuf.length;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outPtr + 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = outPtr + 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr += 1;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/[
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr != outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr < outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr > outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["outPtr = 0;", "if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["outPtr = 0;", "if (outPtr == outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "}"]}]}
+
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["                if (outPtr >= outBuf.length) {", "                    outBuf = _textBuffer.finishCurrentSegment();", "                    outPtr = 0;", "                "]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]}
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]}
+    
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]}
+    
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "outBuf = _textBuffer.finishCurrentSegment();", "outPtr = 0;", "}"]}]}
+
+    {"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]}
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java",
+        "target_lines": [["1418", "//"]],
+        "insertions": [
+            {"line_number": 1418, "new_lines": [
+                "if (outPtr >= outBuf.length) {",
+                "    outBuf = _textBuffer.finishCurrentSegment();",
+                "    outPtr = 0;",
+                "}"
+            ]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java",
+        "target_lines": [["1544", "//"]],
+        "insertions": [
+            {"line_number": 1544, "new_lines": [
+                "if (outPtr >= outBuf.length) {",
+                "    outBuf = _textBuffer.finishCurrentSegment();",
+                "    outPtr = 0;",
+                "}"
+            ]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java",
+        "target_lines": [["1418", "//"]],
+        "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]
+    },
+    {
+        "file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java",
+        "target_lines": [["1544", "//"]],
+        "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}]
+    }
+][
+{"file_name": "com/fasterxml/jackson/core/json/ReaderBasedJsonParser.java", "target_lines": [["1418", "//"]], "insertions": [{"line_number": 1418, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/core/json/UTF8StreamJsonParser.java", "target_lines": [["1544", "//"]], "insertions": [{"line_number": 1544, "new_lines": ["if (outPtr >= outBuf.length) {", "    outBuf = _textBuffer.finishCurrentSegment();", "    outPtr = 0;", "}"]}], "deletions": [], "modifications": []}
+]

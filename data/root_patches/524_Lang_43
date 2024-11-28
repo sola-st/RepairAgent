@@ -1,0 +1,25 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/ExtendedMessageFormat.java', 'insertions': [{'line_number': 422, 'new_lines': ['// Handle escaped quotes more efficiently to prevent OutOfMemoryError', 'if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {', 'appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);', 'pos.setIndex(i + ESCAPED_QUOTE.length());', 'lastHold = pos.getIndex();', 'continue;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/ExtendedMessageFormat.java', 'modifications': [{'line_number': 417, 'modified_line': 'private StringBuffer appendQuotedString(String pattern, ParsePosition pos, StringBuffer appendTo, boolean escapingOn) {'}, {'line_number': 418, 'modified_line': 'return appendTo == null ? null : appendTo.append(QUOTE);'}, {'line_number': 419, 'modified_line': 'int start = pos.getIndex();'}, {'line_number': 420, 'modified_line': 'char[] c = pattern.toCharArray();'}, {'line_number': 421, 'modified_line': 'if (escapingOn && c[start] == QUOTE) {'}, {'line_number': 422, 'modified_line': 'return appendTo == null ? null : appendTo.append(QUOTE);'}, {'line_number': 423, 'modified_line': 'int lastHold = start;'}, {'line_number': 424, 'modified_line': 'for (int i = pos.getIndex(); i < pattern.length(); i++) {'}, {'line_number': 425, 'modified_line': 'if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {'}, {'line_number': 426, 'modified_line': 'appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);'}, {'line_number': 427, 'modified_line': 'pos.setIndex(i + ESCAPED_QUOTE.length());'}, {'line_number': 428, 'modified_line': 'lastHold = pos.getIndex();'}, {'line_number': 429, 'modified_line': 'continue;'}, {'line_number': 430, 'modified_line': '}'}, {'line_number': 431, 'modified_line': 'switch (c[pos.getIndex()]) {'}, {'line_number': 432, 'modified_line': 'case QUOTE:'}, {'line_number': 433, 'modified_line': 'next(pos);'}, {'line_number': 434, 'modified_line': 'return appendTo == null ? null : appendTo.append(c, lastHold, pos.getIndex() - lastHold);'}, {'line_number': 435, 'modified_line': 'default:'}, {'line_number': 436, 'modified_line': 'next(pos);'}, {'line_number': 437, 'modified_line': '}'}, {'line_number': 438, 'modified_line': '}'}, {'line_number': 439, 'modified_line': 'throw new IllegalArgumentException("Unterminated quoted string at position " + start);'}, {'line_number': 440, 'modified_line': '}'}, {'line_number': 441, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/ExtendedMessageFormat.java', 'modifications': [{'line_number': 422, 'modified_line': '// Handle escaped quotes more efficiently to prevent OutOfMemoryError'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/ExtendedMessageFormat.java', 'insertions': [{'line_number': 422, 'new_lines': ['// Handle escaped quotes more efficiently to prevent OutOfMemoryError', 'if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {', 'appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);', 'pos.setIndex(i + ESCAPED_QUOTE.length());', 'lastHold = pos.getIndex();', 'continue;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/ExtendedMessageFormat.java', 'modifications': [{'line_number': 422, 'modified_line': '// Handle escaped quotes more efficiently to prevent OutOfMemoryError'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/ExtendedMessageFormat.java', 'insertions': [{'line_number': 422, 'new_lines': ['// Handle escaped quotes more efficiently to prevent OutOfMemoryError', 'if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {', 'appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);', 'pos.setIndex(i + ESCAPED_QUOTE.length());', 'lastHold = pos.getIndex();', 'continue;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/text/ExtendedMessageFormat.java', 'insertions': [{'line_number': 422, 'new_lines': ['// Handle escaped quotes more efficiently to prevent OutOfMemoryError', 'if (escapingOn && pattern.substring(i).startsWith(ESCAPED_QUOTE)) {', 'appendTo.append(c, lastHold, pos.getIndex() - lastHold).append(QUOTE);', 'pos.setIndex(i + ESCAPED_QUOTE.length());', 'lastHold = pos.getIndex();', 'continue;']}]}]
+
+

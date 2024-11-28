@@ -1,0 +1,46 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (entityRef != null && Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (entityRef != null && Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (entityRef != null && Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (entityRef != null && Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 135, 'new_lines': ['            if (nameRef == null) {', '                return null;', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 135, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (entityRef != null && Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (entityRef != null && Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 135, 'new_lines': ['            if (nameRef == null) {', '                return null;', '            }']}, {'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (entityRef != null && Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 136, 'new_lines': ['            if (nameRef != null && nameRef.startsWith("&") && nameRef.endsWith(";") && nameRef.length() > 2) {', '                String entityRef = nameRef.substring(1, nameRef.length() - 1);', '                if (Entities.isNamedEntity(entityRef)) {', '                    char c = Entities.getCharacterByName(entityRef);', '                    if (c != Entities.CHAR_NULL) {', '                        reader.consume(nameRef.length());', '                        return c;', '                    }', '                }', '            }']}]}]
+
+

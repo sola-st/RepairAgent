@@ -1,0 +1,90 @@
+
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.KILL;"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return NodeUtil.isName(n) && variable.equals(n.getString()) ? (NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.KILL) : VariableLiveness.MAY_LIVE;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        return NodeUtil.isName(n) && variable.equals(n.getString()) ? (NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.KILL : VariableLiveness.READ) : VariableLiveness.MAY_LIVE;"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.READ;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        if (NodeUtil.isName(n) && variable.equals(n.getString())) {"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        if (NodeUtil.isLhs(n, n.getParent())) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        return VariableLiveness.MAY_LIVE;"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.KILL;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        return VariableLiveness.READ;"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.MAY_LIVE;"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 85, 'modified_line': 'int consumed = translate(input, pos, out);'}, {'line_number': 87, 'modified_line': 'char[] c = Character.toChars(Character.codePointAt(input, pos));'}, {'line_number': 88, 'modified_line': 'out.write(c);'}, {'line_number': 89, 'modified_line': 'pos += c.length;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length();'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': [{'line_number': 89, 'new_lines': ['// Fixing the issue related to pos increment and decrement']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 89, 'modified_line': '// Fixing the issue related to pos increment and decrement'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': [{'line_number': 89, 'new_lines': ['// Fixing the issue related to pos increment and decrement']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 95, 'modified_line': 'pos += Character.charCount(Character.codePointAt(input, pos));'}, {'line_number': 100, 'modified_line': 'pos--;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': [{'line_number': 89, 'new_lines': ['// Fixing the issue related to pos increment and decrement']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': [{'line_number': 89, 'new_lines': ['// Fixing the issue related to pos increment and decrement']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': [{'line_number': 89, 'new_lines': ['// Fixing the issue related to pos increment and decrement']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/text/translate/CharSequenceTranslator.java', 'target_lines': [['83', '        int len = Character.codePointCount(input, 0, input.length());'], ['90', '            else {'], ['94', '                    if (pos < len - 2) {'], ['96', '                    } else {'], ['97', '                        pos++;'], ['98', '                    }'], ['99', '                }'], ['100', '                pos--;'], ['102', '            pos++;'], ['89', '//']], 'insertions': []}]
+
+

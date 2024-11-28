@@ -1,0 +1,40 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'insertions': [{'line_number': 23, 'new_lines': ["            // also: need to try to resolve 'external' type ids...", '            for (SettableBeanProperty prop : creatorProps) {', '                if (prop.hasValueTypeDeserializer()) {', '                    TypeDeserializer typeDeser = prop.getValueTypeDeserializer();', '                    if (typeDeser.getTypeInclusion() == JsonTypeInfo.As.EXTERNAL_PROPERTY) {', '                        if (extTypes == null) {', '                            extTypes = new ExternalTypeHandler.Builder();', '                        }', '                        extTypes.addExternal(prop, typeDeser);', '                    }', '                }', '            }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '_externalTypeIdHandler = extTypes.build();']], 'insertions': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '_externalTypeIdHandler = extTypes.build();']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '_externalTypeIdHandler = extTypes.build();']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': [{'line_number': 310, 'new_lines': ['// Inserted line to fix the bug at line 310']}, {'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '            _externalTypeIdHandler = extTypes.build();']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': [{'line_number': 310, 'new_lines': ['// Inserted line to fix the bug at line 310']}, {'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '            _externalTypeIdHandler = extTypes.build();']], 'insertions': [{'line_number': 612, 'new_lines': ['// Inserted line to fix the bug at line 612']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': [{'line_number': 310, 'new_lines': ['// Inserted line to fix the bug at line 310']}, {'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'insertions': [{'line_number': 612, 'new_lines': ['// Inserted line to fix the bug at line 612']}]}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 310, 'new_lines': ['// Inserted line to fix the bug at line 310']}, {'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 310, 'new_lines': ['// Inserted line to fix the bug at line 310', 'if (extTypes == null) {', 'extTypes = new ExternalTypeHandler.Builder();', '}']}, {'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311', 'extTypes.addExternal(prop, typeDeser);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '            _externalTypeIdHandler = extTypes.build();']], 'insertions': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': [{'line_number': 310, 'new_lines': ['// Inserted line to fix the bug at line 310']}, {'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 310, 'new_lines': ['// Linking type id property as per databind#999', '// Inserted line to fix the bug at line 310']}, {'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '            _externalTypeIdHandler = extTypes.build();']], 'insertions': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'target_lines': [['612', '            _externalTypeIdHandler = extTypes.build();']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['310', '//'], ['311', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java', 'insertions': [{'line_number': 612, 'new_lines': ['// Inserted line to fix the bug at line 612']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 310, 'new_lines': ['// Inserted line to fix the bug at line 310']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 311, 'new_lines': ['// Inserted line to fix the bug at line 311']}], 'deletions': [], 'modifications': []}]
+
+

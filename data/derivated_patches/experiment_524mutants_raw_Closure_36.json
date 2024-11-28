@@ -1,0 +1,405 @@
+[
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["      // Fixing bug by adding missing return statement\n      return canMoveAggressively(value) ||\n          canMoveModerately(initialization, reference);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["      // Fixing bug by adding missing return statement\n      return canMoveAggressively(value) ||\n          canMoveModerately(initialization, reference);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["      // Bug fix: Adding missing return statement\n      return canMoveAggressively(value) ||\n          canMoveModerately(initialization, reference);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["      // Added missing return statement to fix the bug\n      return canMoveAggressively(value) ||\n          canMoveModerately(initialization, reference);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["      // Inserted missing return statement for bug resolution\n      return canMoveAggressively(value) ||\n          canMoveModerately(initialization, reference);"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() || value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() || value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() && value.getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() && value.getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() || value.getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() || value.getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() && value.isGetProp() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}],
+"deletions": [],
+"modifications": []
+},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines":["        if (value.isFunction() && value.isGetProp() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}],
+"deletions": [],
+"modifications": []
+}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingleton\") && reference.isCall()) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\") && reference.isCall()) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") && reference.isCall()) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") && reference.isCall()) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\") || reference.isCall()) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") || reference.isCall()) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\") || reference.isCall()) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\") || reference.isCall()) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingleton\") && reference.isCall()) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\") && reference.isCall()) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") && reference.isCall()) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") && reference.isCall()) { return true; }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\") || reference.isCall()) { return false; }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") || reference.isCall()) { return false; }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\") || reference.isCall()) { return false; }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\") || reference.isCall()) { return true; }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") && reference.isCall()) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\") || reference.isCall()) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\") || reference.isCall()) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575, 576]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575, 576, 577]}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {\n            return true;\n        }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {\n            return false;\n        }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getType() == Token.FUNCTION && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getType() == Token.FUNCTION && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getType() == Token.FUNCTION && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {\n            return true;\n        }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getType() == Token.FUNCTION && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {\n            return false;\n        }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getType() == Token.FUNCTION && value.getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\") && value.getFirstChild().getNext().getType() == Token.FUNCTION) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\") && value.getFirstChild().getNext().getType() == Token.FUNCTION) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\") && value.getFirstChild().getNext().getType() == Token.FUNCTION) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575, 576]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575, 576, 577]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [576]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [576, 577]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [577]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {\n            return true;\n        }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {\n            return false;\n        }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getType() == Token.FUNCTION && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getType() == Token.FUNCTION && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {"}]}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": [
+"        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {",
+"            return false;",
+"        }"
+]}]}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingleton\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetterMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"fetchSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"generateSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"buildSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"initializeSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"obtainSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"acquireSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"retrieveSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"findSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"initializeInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"constructSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"obtainInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createSingletonMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"generateInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"fetchInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"initializeSingletonMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"constructInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getInstanceMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"obtainInstanceMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"fetchInstanceMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createInstanceMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"generateSingletonMethod\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"obtainSingletonMethod\")) {", "            return false;", "        }"}]}
+][{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []}][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (!value.isFunction() || !value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && !value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "deletions": [575]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }", "    // Fix applied by the assistant"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            // Fix applied by the assistant"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        } // Fix applied by the assistant"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return true;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isNull() || value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) { // Added condition to check for singleton getter"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isNull() || value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) { // Modified condition to check for null"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) { // Changed string comparison"}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "modifications": [{"line_number": 575, "modified_line": "        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) { // Adjusted condition"}]}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"someOtherMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"anotherMethodName\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"someFunction\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"someGetterMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"helperMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specialCase\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"uniqueMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"customFunction\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specificGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"uniqueGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specificMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"newFunction\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"differentGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"anotherFunction\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specificGetterMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specializedMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specificFunctionality\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"uniqueFunctionality\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specialFunction\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specificMethodCall\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"uniqueMethodCall\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "FAULT_OF_OISSION"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"customGetterMethod\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specificMethodLogic\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"uniqueGetterLogic\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specializedGetterLogic\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"specificGetterLogic\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"uniqueFunctionalityLogic\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (declaration.isFunction() && declaration.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (reference.isFunction() && reference.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (initialization.isFunction() && initialization.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingleton\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"generateSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"makeSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"buildSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"fetchSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"obtainSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"retrieveSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"searchSingletonGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"fetchInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"obtainInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"retrieveInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"searchInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (declaration.isFunction() && declaration.getFirstChild().getString().equals(\"getInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (declaration.isFunction() && declaration.getFirstChild().getString().equals(\"fetchInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (declaration.isFunction() && declaration.getFirstChild().getString().equals(\"obtainInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (declaration.isFunction() && declaration.getFirstChild().getString().equals(\"retrieveInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (reference.isFunction() && reference.getFirstChild().getString().equals(\"getInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (reference.isFunction() && reference.getFirstChild().getString().equals(\"fetchInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (reference.isFunction() && reference.getFirstChild().getString().equals(\"obtainInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (reference.isFunction() && reference.getFirstChild().getString().equals(\"retrieveInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (initialization.isFunction() && initialization.getFirstChild().getString().equals(\"getInstanceGetter\")) {", "            return false;", "        }"]}]},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (initialization.isFunction() && initialization.getFirstChild().getString().equals(\"fetchInstanceGetter\")) {", "            return false;", "        }"]}]},
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"customSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingletonFunction\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createSingleton\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"generateSingleton\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"instantiateSingleton\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"lazySingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getInstanceSingleton\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"retrieveSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"accessSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingletonObject\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"fetchSingletonObject\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"initializeSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingleInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createInstanceSingleton\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"makeSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"obtainSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"fetchInstanceSingleton\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getInstanceObject\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"provideSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"initializeSingleton\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingletonInstanceObject\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createSingletonObject\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"generateSingletonInstance\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"retrieveSingletonObject\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"goog.addSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"singletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"getSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"createSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/InlineVariables.java", "target_lines": [["575", "//"]], "insertions": [{"line_number": 575, "new_lines": ["        if (value.isFunction() && value.getFirstChild().getString().equals(\"generateSingletonGetter\")) {", "            return false;", "        }"]}], "deletions": [], "modifications": []}
+]

@@ -1,0 +1,34 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'insertions': [{'line_number': 108, 'new_lines': ['        _currInputProcessed += (end - start); // Update current input processed based on the new input', '        _currInputRowStart = start; // Update current row start position']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'insertions': [{'line_number': 108, 'new_lines': ['        // Update current input processed based on the new input', '        _currInputProcessed += (end - start);', '        // Update current row start position', '        _currInputRowStart = start;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'insertions': [{'line_number': 108, 'new_lines': ['_currInputProcessed += (end - start); // Update current input processed based on the new input', '_currInputRowStart = start; // Update current row start position']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'insertions': [{'line_number': 108, 'new_lines': ['    // Method to feed input to the parser', '    @Override', '    public void feedInput(byte[] buffer, int offset, int len) throws IOException {', '        if (_inputPtr < _inputEnd) {', '            _reportError("Still have %d undecoded bytes, should not call \'feedInput\'", _inputEnd - _inputPtr);', '        }', '        if (offset > len) {', '            throw new IllegalArgumentException("Illegal offset/length: offset (" + offset + "), length (" + len + ")");', '        }', '        if (_feeder == null) {', '            _reportError("Can not use input source of type " + buffer.getClass().getName());', '        }', '', '        _inputBuffer = buffer;', '        _inputPtr = offset;', '        _inputEnd = offset + len;', '', '        _feeder.feedInput(buffer, offset, offset + len);', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'modifications': [{'line_number': 91, 'modified_line': '_reportError("Still have %d undecoded bytes, should not call \'feedInput\'", _inputEnd - _inputPtr);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'target_lines': [['108', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'target_lines': [['108', '//']], 'insertions': [{'line_number': 108, 'new_lines': ['        _currInputProcessed += (end - start); // Update current input processed based on the new input', '        _currInputRowStart = start; // Update current row start position']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'modifications': [{'line_number': 108, 'modified_line': '_currInputProcessed += (end - start); // Update current input processed based on the new input'}, {'line_number': 109, 'modified_line': '_currInputRowStart = start; // Update current row start position'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'modifications': [{'line_number': 102, 'modified_line': '_currInputProcessed += (end - start); // Update current input processed based on the new input'}, {'line_number': 105, 'modified_line': '_currInputRowStart = start; // Update current row start position'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/json/async/NonBlockingJsonParser.java', 'target_lines': [['108', '//']], 'insertions': [{'line_number': 108, 'new_lines': ['_currInputProcessed += (end - start); // Update current input processed based on the new input', '_currInputRowStart = start; // Update current row start position']}], 'deletions': [], 'modifications': []}]
+
+

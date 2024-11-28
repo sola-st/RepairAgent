@@ -1,0 +1,34 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/reflection/GenericMaster.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 20, 'modified_line': '                return (Class<?>) actual;'}, {'line_number': 21, 'modified_line': "                //in case of nested generics we don't go deep"}, {'line_number': 22, 'modified_line': '        }'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/reflection/GenericMaster.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 16, 'modified_line': '    public Type getGenericType(Field field) {'}, {'line_number': 17, 'modified_line': '        // Get the generic type of the field'}, {'line_number': 18, 'modified_line': '        Type fieldType = field.getGenericType();'}, {'line_number': 19, 'modified_line': ''}, {'line_number': 20, 'modified_line': '        // Check if the generic type is a parameterized type'}, {'line_number': 21, 'modified_line': '        if (fieldType instanceof ParameterizedType) {'}, {'line_number': 22, 'modified_line': '            ParameterizedType parameterizedType = (ParameterizedType) fieldType;'}, {'line_number': 23, 'modified_line': ''}, {'line_number': 24, 'modified_line': '            // Return the actual type argument of the parameterized type'}, {'line_number': 25, 'modified_line': '            return parameterizedType.getActualTypeArguments()[0];'}, {'line_number': 26, 'modified_line': '        }'}, {'line_number': 27, 'modified_line': ''}, {'line_number': 28, 'modified_line': '        return null;'}, {'line_number': 29, 'modified_line': '    }'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/reflection/GenericMaster.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 20, 'modified_line': '                return (Class<?>) actual;'}, {'line_number': 21, 'modified_line': "                //in case of nested generics we don't go deep"}, {'line_number': 22, 'modified_line': '        }'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/reflection/GenericMaster.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 16, 'modified_line': '    public static Class<?> getGenericType(Field field) {'}, {'line_number': 17, 'modified_line': '        // Get the generic type of the field'}, {'line_number': 18, 'modified_line': '        Type genericType = field.getGenericType();'}, {'line_number': 19, 'modified_line': ''}, {'line_number': 20, 'modified_line': '        if (genericType instanceof ParameterizedType) {'}, {'line_number': 21, 'modified_line': '            // Return the actual type argument of the parameterized type'}, {'line_number': 22, 'modified_line': '            ParameterizedType parameterizedType = (ParameterizedType) genericType;'}, {'line_number': 23, 'modified_line': '            Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();'}, {'line_number': 24, 'modified_line': '            if (actualTypeArguments.length > 0 && actualTypeArguments[0] instanceof Class) {'}, {'line_number': 25, 'modified_line': '                return (Class<?>) actualTypeArguments[0];'}, {'line_number': 26, 'modified_line': '            }'}, {'line_number': 27, 'modified_line': '        }'}, {'line_number': 28, 'modified_line': ''}, {'line_number': 29, 'modified_line': '        return null;'}, {'line_number': 30, 'modified_line': '    }'}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/reflection/GenericMaster.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 20, 'modified_line': '                return (Class<?>) actual;'}, {'line_number': 21, 'modified_line': "                //in case of nested generics we don't go deep"}, {'line_number': 22, 'modified_line': '        }'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/reflection/GenericMaster.java', 'insertions': [{'line_number': 19, 'new_lines': ['        if (generic instanceof ParameterizedType) {', '            ParameterizedType parameterizedType = (ParameterizedType) generic;', '            Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();', '            if (actualTypeArguments.length > 0 && actualTypeArguments[0] instanceof Class) {', '                return (Class<?>) actualTypeArguments[0];', '            }', '        }']}], 'deletions': [], 'modifications': [{'line_number': 16, 'modified_line': '    public static Class<?> getGenericType(Field field) {'}, {'line_number': 17, 'modified_line': '        // Get the generic type of the field'}, {'line_number': 18, 'modified_line': '        Type generic = field.getGenericType();'}, {'line_number': 19, 'modified_line': ''}, {'line_number': 20, 'modified_line': '        if (generic instanceof ParameterizedType) {'}, {'line_number': 21, 'modified_line': '            ParameterizedType parameterizedType = (ParameterizedType) generic;'}, {'line_number': 22, 'modified_line': '            Type[] actualTypeArguments = parameterizedType.getActualTypeArguments();'}, {'line_number': 23, 'modified_line': '            if (actualTypeArguments.length > 0 && actualTypeArguments[0] instanceof Class) {'}, {'line_number': 24, 'modified_line': '                return (Class<?>) actualTypeArguments[0];'}, {'line_number': 25, 'modified_line': '            }'}, {'line_number': 26, 'modified_line': '        }'}, {'line_number': 27, 'modified_line': ''}, {'line_number': 28, 'modified_line': '        return null;'}, {'line_number': 29, 'modified_line': '    }'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/mockito/internal/util/reflection/GenericMaster.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 20, 'modified_line': '                return (Class<?>) actual;'}, {'line_number': 21, 'modified_line': "                //in case of nested generics we don't go deep"}, {'line_number': 22, 'modified_line': '        }'}]}]
+
+

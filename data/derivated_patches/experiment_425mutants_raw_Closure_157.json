@@ -1,0 +1,353 @@
+[
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "        // Object literal property names don't have to be quoted if they"], ["724", "        // Insert new line to fix the bug here"], ["725", "        // Insert new line to fix the bug here"]], "insertions": [{"line_number": 724, "new_lines":["        if (c.isQuotedString()) { // Inserted to fix the bug"]}, {"line_number": 725, "new_lines":["            add(c.getString()); // Inserted to fix the bug"]}], "deletions": [343, 350, 656, 657, 658, 659, 662, 663, 666], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines":["        // Inserted new line to fix the bug"]}, {"line_number": 256, "new_lines":["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING); // Inserted new line to fix the bug"]}, {"line_number": 258, "new_lines":["    } // Inserted new line to fix the bug"]}, {"line_number": 347, "new_lines":["        return ret; // Inserted new line to fix the bug"]}, {"line_number": 355, "new_lines":["    // New line added to fix the bug"]}], "deletions": [349, 350, 351, 353], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines":["        // Inserted new line to fix the bug"]}, {"line_number": 377, "new_lines":["        // Inserted new line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [["654", "// Modified condition to include additional check"], ["724", "// Modified condition to include additional check"], ["725", "// Modified condition to include additional check"]],
+        "insertions": [
+            {"line_number": 654, "new_lines": [
+                "    if (c.getType() == Token.STRING &&",
+                "        !c.isQuotedString() &&",
+                "        !TokenStream.isKeyword(c.getString()) &&",
+                "        TokenStream.isJSIdentifier(c.getString()) &&",
+                "        NodeUtil.isLatin(c.getString())) {",
+                "      add(c.getString());",
+                "    } else {"
+            ]},
+            {"line_number": 724, "new_lines": [
+                "    if (c.getType() == Token.STRING &&",
+                "        !c.isQuotedString() &&",
+                "        !TokenStream.isKeyword(c.getString()) &&",
+                "        TokenStream.isJSIdentifier(c.getString()) &&",
+                "        NodeUtil.isLatin(c.getString())) {",
+                "      add(c.getString());",
+                "    } else {"
+            ]},
+            {"line_number": 725, "new_lines": [
+                "    if (c.getType() == Token.STRING &&",
+                "        !c.isQuotedString() &&",
+                "        !TokenStream.isKeyword(c.getString()) &&",
+                "        TokenStream.isJSIdentifier(c.getString()) &&",
+                "        NodeUtil.isLatin(c.getString())) {",
+                "      add(c.getString());",
+                "    } else {"
+            ]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/IRFactory.java",
+        "target_lines": [["255", "// Modified condition to include additional check"], ["256", "// Modified condition to include additional check"], ["258", "// Modified condition to include additional check"], ["347", "// Modified condition to include additional check"], ["355", "// Modified condition to include additional check"]],
+        "insertions": [
+            {"line_number": 255, "new_lines": [
+                "        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"
+            ]},
+            {"line_number": 256, "new_lines": [
+                "        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"
+            ]},
+            {"line_number": 258, "new_lines": [
+                "        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"
+            ]},
+            {"line_number": 347, "new_lines": [
+                "        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"
+            ]},
+            {"line_number": 355, "new_lines": [
+                "        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"
+            ]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/RenamePrototypes.java",
+        "target_lines": [["336", "// Modified condition to include additional check"], ["377", "// Modified condition to include additional check"]],
+        "insertions": [
+            {"line_number": 336, "new_lines": [
+                "              if (child.getType() == Token.NUMBER) {"
+            ]},
+            {"line_number": 377, "new_lines": [
+                "              if (key.getType() == Token.NUMBER) {"
+            ]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]```json
+[
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [["654", "// Object literal property names don't have to be quoted if they"], ["724", "// Object literal property names don't have to be quoted if they"], ["725", "// Object literal property names don't have to be quoted if they"]],
+        "insertions": [
+            {"line_number":654, "new_lines":["            // Add the condition to check if the string is not a keyword or quoted"]} ,
+            {"line_number":724, "new_lines":["            // Add the condition to check if the string is not a keyword or quoted"]},
+            {"line_number":725, "new_lines":["            // Add the condition to check if the string is not a keyword or quoted"]}
+        ],
+        "deletions": [656, 657, 658, 659, 662, 663, 666],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/IRFactory.java",
+        "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"]],
+        "insertions": [
+            {"line_number":349, "new_lines":["        // Add a condition to handle the case when the type is a string"]},
+            {"line_number":350, "new_lines":["            // Add a condition to handle the case when the type is a string;"]},
+            {"line_number":351, "new_lines":["        // Add logic to process the string type here"]}
+        ],
+        "deletions": [353],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/RenamePrototypes.java",
+        "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"],
+        "insertions": [
+            {"line_number":336, "new_lines":["              // Add a check to ensure the child type is a number before processing"]},
+            {"line_number":377, "new_lines":["              // Ensure the key type is a number before proceeding"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]
+```[
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["654", "// Adding a comment to potentially fix the issue"], ["724", "// Adding a comment to potentially fix the issue"], ["725", "// Adding a comment to potentially fix the issue"]], "insertions": [{"line_number": 654, "new_lines": ["// Object literal property names don't have to be quoted if they", "// are not JavaScript keywords", "if (c.getType() == Token.STRING &&", "    !c.isQuotedString() &&", "    !TokenStream.isKeyword(c.getString()) &&", "    TokenStream.isJSIdentifier(c.getString()) &&", "    NodeUtil.isLatin(c.getString())) {", "  add(c.getString());", "} else {"]}, {"line_number": 724, "new_lines": ["// Object literal property names don't have to be quoted if they", "// are not JavaScript keywords", "if (c.getType() == Token.STRING &&", "    !c.isQuotedString() &&", "    !TokenStream.isKeyword(c.getString()) &&", "    TokenStream.isJSIdentifier(c.getString()) &&", "    NodeUtil.isLatin(c.getString())) {", "  add(c.getString());", "} else {"]}, {"line_number": 725, "new_lines": ["// Object literal property names don't have to be quoted if they", "// are not JavaScript keywords", "if (c.getType() == Token.STRING &&", "    !c.isQuotedString() &&", "    !TokenStream.isKeyword(c.getString()) &&", "    TokenStream.isJSIdentifier(c.getString()) &&", "    NodeUtil.isLatin(c.getString())) {", "  add(c.getString());", "} else {"]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["654", "// Fixing the issue by adding a new condition"], ["724", "// Fixing the issue by adding a new condition"], ["725", "// Fixing the issue by adding a new condition"]], "insertions": [{"line_number": 654, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else if (c.getType() == Token.NUMBER) {", "      add(123); // Inserting a number for testing"]}, {"line_number": 724, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else if (c.getType() == Token.NUMBER) {", "      add(456); // Inserting a number for testing"]}, {"line_number": 725, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else if (c.getType() == Token.NUMBER) {", "      add(789); // Inserting a number for testing"]}]},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["654", "// Fixing the issue by modifying the existing condition"], ["724", "// Fixing the issue by modifying the existing condition"], ["725", "// Fixing the issue by modifying the existing condition"]], "modifications": [{"line_number": 654, "modified_line": "            if (c.getType() == Token.STRING || c.getType() == Token.NUMBER &&"}, {"line_number": 724, "modified_line": "            if (c.getType() == Token.STRING || c.getType() == Token.NUMBER &&"}, {"line_number": 725, "modified_line": "            if (c.getType() == Token.STRING || c.getType() == Token.NUMBER &&"}]},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "// Fixing the issue by adding a comment"], ["350", "// Fixing the issue by adding a comment"], ["351", "// Fixing the issue by adding a comment"], ["353", "// Fixing the issue by adding a comment"]], "insertions": [{"line_number": 349, "new_lines": ["// Checking the type before processing further", "Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 350, "new_lines": ["// Making sure to handle STRING type", "if (ret.getType() == Token.STRING) {"]}, {"line_number": 351, "new_lines": ["// Handling the STRING type further processing"]}, {"line_number": 353, "new_lines": ["// End of processing for STRING type"]}]},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "// Introducing a new condition to fix the issue"], ["350", "// Introducing a new condition to fix the issue"], ["351", "// Introducing a new condition to fix the issue"], ["353", "// Introducing a new condition to fix the issue"]], "insertions": [{"line_number": 349, "new_lines": ["if (ret.getType() == Token.STRING) {", "    processString(ret.getString());", "} else {", "    processNumber(ret.getNumber());", "}"]}, {"line_number": 350, "new_lines": ["// Additional processing for STRING type"]}, {"line_number": 351, "new_lines": ["// Additional processing for STRING type"]}, {"line_number": 353, "new_lines": ["// Additional processing for STRING type"]}]},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "// Modifying the condition to handle both cases"], ["377", "// Modifying the condition to handle both cases"]], "modifications": [{"line_number": 336, "modified_line": "              if (child.getType() != Token.NUMBER && child.getType() != Token.STRING) {"}, {"line_number": 377, "modified_line": "              if (key.getType() != Token.NUMBER && key.getType() != Token.STRING) {"}]}
+][
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "//"], ["724", "//"], ["725", "//"]], "insertions": [{"line_number": 654, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["    Preconditions.checkState(ret.getType() == Token.STRING);"]}, {"line_number": 256, "new_lines": ["        if (ret.getType() == Token.NUMBER) {"]}, {"line_number": 258, "new_lines": ["    if (ret.getType() == Token.STRING) {"]}, {"line_number": 347, "new_lines": ["    Preconditions.checkState(ret.getType() == Token.NUMBER);"]}, {"line_number": 355, "new_lines": ["    Preconditions.checkState(ret.getType() == Token.STRING);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["              if (child.getType() == Token.NUMBER) {"]}, {"line_number": 377, "new_lines": ["              if (key.getType() == Token.NUMBER) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 256, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 258, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 347, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 355, "new_lines": ["        Preconditions.checkNotNull(ret);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["              Preconditions.checkNotNull(child);"]}, {"line_number": 377, "new_lines": ["              Preconditions.checkNotNull(key);"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "//"], ["724", "//"], ["725", "//"]], "insertions": [{"line_number": 654, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["    Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 256, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}, {"line_number": 258, "new_lines": ["        }"]}, {"line_number": 347, "new_lines": ["//"]}, {"line_number": 355, "new_lines": ["//"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["//"]}, {"line_number": 377, "new_lines": ["//"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["654", "            // Object literal property names don't have to be quoted if they"],
+            ["724", "            // Object literal property names don't have to be quoted if they"],
+            ["725", "            // Object literal property names don't have to be quoted if they"]
+        ],
+        "insertions": [
+            {"line_number": 654, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 724, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 725, "new_lines": ["            add(c.getString());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["654", "            // Object literal property names don't have to be quoted if they"],
+            ["724", "            // Object literal property names don't have to be quoted if they"],
+            ["725", "            // Object literal property names don't have to be quoted if they"]
+        ],
+        "insertions": [
+            {"line_number": 654, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 724, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 725, "new_lines": ["            add(c.getString());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["654", "            // Object literal property names don't have to be quoted if they"],
+            ["724", "            // Object literal property names don't have to be quoted if they"],
+            ["725", "            // Object literal property names don't have to be quoted if they"]
+        ],
+        "insertions": [
+            {"line_number": 654, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 724, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 725, "new_lines": ["            add(c.getString());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["654", "            // Object literal property names don't have to be quoted if they"],
+            ["724", "            // Object literal property names don't have to be quoted if they"],
+            ["725", "            // Object literal property names don't have to be quoted if they"]
+        ],
+        "insertions": [
+            {"line_number": 654, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 724, "new_lines": ["            add(c.getString());"]},
+            {"line_number": 725, "new_lines": ["            add(c.getString());"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["660", "              add(c.getString());"],
+            ["730", "              add(c.getString());"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 660, "modified_line": "              add(c.getString()); // Adding the property name without quotes"},
+            {"line_number": 730, "modified_line": "    return n.getType() == Token.NAME && \"eval\".equals(n.getString()) && // Check if the name is an indirect eval"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["660", "              add(c.getString());"],
+            ["730", "              add(c.getString());"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 660, "modified_line": "              add(c.getString()); // Adding the property name without quotes"},
+            {"line_number": 730, "modified_line": "    return n.getType() == Token.NAME && \"eval\".equals(n.getString()) && // Check if the name is an indirect eval"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["660", "              add(c.getString());"],
+            ["730", "              add(c.getString());"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 660, "modified_line": "              add(c.getString()); // Adding the property name without quotes"},
+            {"line_number": 730, "modified_line": "    return n.getType() == Token.NAME && \"eval\".equals(n.getString()) && // Check if the name is an indirect eval"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["660", "              add(c.getString());"],
+            ["730", "              add(c.getString());"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 660, "modified_line": "              add(c.getString()); // Adding the property name without quotes"},
+            {"line_number": 730, "modified_line": "    return n.getType() == Token.NAME && \"eval\".equals(n.getString()) && // Check if the name is an indirect eval"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["660", "              add(c.getString());"],
+            ["730", "              add(c.getString());"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 660, "modified_line": "              add(c.getString()); // Adding the property name without quotes"},
+            {"line_number": 730, "modified_line": "    return n.getType() == Token.NAME && \"eval\".equals(n.getString()) && // Check if the name is an indirect eval"}
+        ]
+    }
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["                NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !c.isQuotedString() &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString()))[{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "//"], ["724", "//"], ["725", "//"]], "insertions": [{"line_number": 654, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []}, {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["    Preconditions.checkState(ret.getType() == Token.NUMBER"], {"line_number": 256, "new_lines": ["        || ret.getType() == Token.STRING);"], {"line_number": 258, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}, {"line_number": 347, "new_lines": ["        }"], {"line_number": 355, "new_lines": ["        }"]}], "deletions": [], "modifications": []}, {"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["              if (child.getType() != Token.NUMBER) {"], {"line_number": 377, "new_lines": ["              if (key.getType() != Token.NUMBER) {"]}], "deletions": [], "modifications": []}][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "//"], ["724", "//"], ["725", "//"]], "insertions": [{"line_number": 654, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["    Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 256, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}, {"line_number": 258, "new_lines": ["        }"]}, {"line_number": 347, "new_lines": ["//"]}, {"line_number": 355, "new_lines": ["//"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["//"]}, {"line_number": 377, "new_lines": ["//"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "//"], ["724", "//"], ["725", "//"]], "insertions": [{"line_number": 654, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["    if (c.getType() == Token.STRING &&", "        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 256, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}, {"line_number": 258, "new_lines": ["        }"]}, {"line_number": 347, "new_lines": ["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 355, "new_lines": ["        }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["              if (child.getType() != Token.STRING) {"]}, {"line_number": 377, "new_lines": ["              if (key.getType() != Token.STRING) {"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "target_lines": [
+            ["343", "        if (!TokenStream.isJSIdentifier(name) &&"],
+            ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"],
+            ["656", "            if (c.getType() != Token.STRING &&"],
+            ["657", "                c.isQuotedString() &&"],
+            ["658", "                TokenStream.isKeyword(c.getString()) &&"],
+            ["659", "                !TokenStream.isJSIdentifier(c.getString()) &&"],
+            ["662", "                !NodeUtil.isLatin(c.getString())) {"],
+            ["663", "              // add(c.getString());"],
+            ["666", "              addExpr(c, 1);"]
+        ],
+        "insertions": [
+            {"line_number": 654, "new_lines": ["    if (c.getType() == Token.STRING &&"]},
+            {"line_number": 724, "new_lines": ["    if (c.getType() == Token.STRING &&"]},
+            {"line_number": 725, "new_lines": ["    if (c.getType() == Token.STRING &&"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/IRFactory.java",
+        "target_lines": [
+            ["349", "        Preconditions.checkState(ret.getType() != Token.NUMBER"],
+            ["350", "            || ret.getType() != Token.STRING);"],
+            ["351", "        if (ret.getType() != Token.STRING) {"],
+            ["353", "        }"]
+        ],
+        "insertions": [
+            {"line_number": 255, "new_lines": ["    Preconditions.checkNotNull(ret);"]},
+            {"line_number": 256, "new_lines": ["    Preconditions.checkNotNull(ret);"]},
+            {"line_number": 258, "new_lines": ["    Preconditions.checkNotNull(ret);"]},
+            {"line_number": 347, "new_lines": ["    Preconditions.checkNotNull(ret);"]},
+            {"line_number": 355, "new_lines": ["    Preconditions.checkNotNull(ret);"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/RenamePrototypes.java",
+        "target_lines": [
+            ["336", "              if (child.getType() == Token.NUMBER) {"],
+            ["377", "              if (key.getType() == Token.NUMBER) {"]
+        ],
+        "insertions": [
+            {"line_number": 336, "new_lines": ["              if (child.getType() == Token.STRING) {"]},
+            {"line_number": 377, "new_lines": ["              if (key.getType() == Token.STRING) {"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "        if (c.getType() == Token.STRING &&"], ["724", "        if (c.getType() == Token.STRING &&"], ["725", "            if (c.isQuotedString() ||"]], "insertions": [{"line_number": 654, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"]], "insertions": [{"line_number": 255, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 256, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 258, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 347, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 355, "new_lines": ["        Preconditions.checkNotNull(ret);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 336, "modified_line": "              if (child.getType() == Token.NUMBER) {"}, {"line_number": 377, "modified_line": "              if (key.getType() == Token.NUMBER) {"}]},
+    {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "        if (c.getType() == Token.STRING &&"], ["724", "        if (c.getType() == Token.STRING &&"], ["725", "            if (c.isQuotedString() ||"]], "insertions": [{"line_number": 654, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"]], "insertions": [{"line_number": 255, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 256, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 258, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 347, "new_lines": ["        Preconditions.checkNotNull(ret);"]}, {"line_number": 355, "new_lines": ["        Preconditions.checkNotNull(ret);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 336, "modified_line": "              if (child.getType() == Token.NUMBER) {"}, {"line_number": 377, "modified_line": "              if (key.getType() == Token.NUMBER) {"}]}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "        if (c.getType() == Token.STRING &&"], ["724", "        if (c.getType() == Token.STRING &&"], ["725", "            if (c.getType() == Token.STRING &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 256, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}, {"line_number": 258, "new_lines": ["        }"]}, {"line_number": 347, "new_lines": ["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 355, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["              if (child.getType() == Token.NUMBER) {"]}, {"line_number": 377, "new_lines": ["              if (key.getType() == Token.NUMBER) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "    if (c.getType() == Token.STRING &&"], ["725", "        !c.isQuotedString() &&"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "        if (c.getType() == Token.STRING &&"], ["724", "        if (c.getType() == Token.STRING &&"], ["725", "            if (c.getType() == Token.STRING &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "          add(c.getString());", "        } else {"]}, {"line_number": 724, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "          add(c.getString());", "        } else {"]}, {"line_number": 725, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "          add(c.getString());", "        } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 256, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}, {"line_number": 258, "new_lines": ["        }"]}, {"line_number": 347, "new_lines": ["//"]}, {"line_number": 355, "new_lines": ["//"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["              if (child.getType() != Token.NUMBER) {"]}, {"line_number": 377, "new_lines": ["              if (key.getType() != Token.NUMBER) {"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "target_lines": [["343", "        if (TokenStream.isJSIdentifier(name) &&"], ["350", "          add(jsString(n.getString(), outputCharsetEncoder));"], ["656", "            if (c.getType() == Token.STRING &&"], ["657", "                !c.isQuotedString() &&"], ["658", "                !TokenStream.isKeyword(c.getString()) &&"], ["659", "                TokenStream.isJSIdentifier(c.getString()) &&"], ["662", "                NodeUtil.isLatin(c.getString())) {"], ["663", "              add(c.getString());"], ["666", "              addExpr(c, 1);"], ["654", "    if (c.getType() == Token.STRING &&"], ["724", "          if (c.getType() == Token.STRING &&"], ["725", "              !c.isQuotedString() &&"]], "insertions": [{"line_number": 654, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 724, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}, {"line_number": 725, "new_lines": ["        !c.isQuotedString() &&", "        !TokenStream.isKeyword(c.getString()) &&", "        TokenStream.isJSIdentifier(c.getString()) &&", "        NodeUtil.isLatin(c.getString())) {", "      add(c.getString());", "    } else {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/IRFactory.java", "target_lines": [["349", "        Preconditions.checkState(ret.getType() == Token.NUMBER"], ["350", "            || ret.getType() == Token.STRING);"], ["351", "        if (ret.getType() == Token.STRING) {"], ["353", "        }"], ["255", "//"], ["256", "//"], ["258", "//"], ["347", "//"], ["355", "//"]], "insertions": [{"line_number": 255, "new_lines": ["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 256, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}, {"line_number": 258, "new_lines": ["        }"]}, {"line_number": 347, "new_lines": ["        Preconditions.checkState(ret.getType() == Token.NUMBER || ret.getType() == Token.STRING);"]}, {"line_number": 355, "new_lines": ["        if (ret.getType() == Token.STRING) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/RenamePrototypes.java", "target_lines": [["336", "              if (child.getType() != Token.NUMBER) {"], ["377", "              if (key.getType() != Token.NUMBER) {"]], "insertions": [{"line_number": 336, "new_lines": ["              if (child.getType() == Token.STRING) {"]}, {"line_number": 377, "new_lines": ["              if (key.getType() == Token.STRING) {"]}], "deletions": [], "modifications": []}
+]

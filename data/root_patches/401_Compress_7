@@ -1,0 +1,28 @@
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1, 'modified_line': '// Method to parse the name from a given input string\npublic void parseName(String input) {\n    // Check if the input string is null or empty\n    if (input == null || input.isEmpty()) {\n        System.out.println("Input string is null or empty. Cannot parse name.");\n        return;\n    }\n    \n    // Split the input string by space to extract the name\n    String[] parts = input.split(" ");\n    \n    // Assuming the first part is the first name and the last part is the last name\n    String firstName = parts[0];\n    String lastName = parts[parts.length - 1];\n    \n    // Print the extracted first name and last name\n    System.out.println("First Name: " + firstName);\n    System.out.println("Last Name: " + lastName);\n}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'target_lines': [['98', '            if (buffer[i] == 0) {'], ['101', '            result.append((char) buffer[i]);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533 || buffer[i] == 65535) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533 || buffer[i] == 65535 || buffer[i] == 65536) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533 || buffer[i] == 65535 || buffer[i] == 65536 || buffer[i] == 177) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533 || buffer[i] == 65535 || buffer[i] == 65536 || buffer[i] == 177 || buffer[i] == 177 || buffer[i] == 65534) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '            if (buffer[i] == 0 || buffer[i] == 65533 || buffer[i] == 65535) {'}, {'line_number': 101, 'modified_line': '            result.append((char) buffer[i]);'}]}]
+
+

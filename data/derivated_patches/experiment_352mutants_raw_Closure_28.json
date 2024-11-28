@@ -1,0 +1,1207 @@
+
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [
+        {
+            "line_number": 529,
+            "new_lines": ["my $val_start_col = 20; # Changing initialization value for variable"]
+        }
+    ],
+    "deletions": [],
+    "modifications": []
+}
+      
+    {
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = (); # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = 0; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = 'file'; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = 1.5; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = undef; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = ''; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $oldconf; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = 10; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = -1; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $val_start_col; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $num_seps; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $key; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $val; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh; # Fixing variable scoping issue with a new declaration"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $file_handle; # Fixing variable scoping issue with a new declaration"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $val_start_col = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $num_seps = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $val_start_col = 1; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $num_seps = 1; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $val_start_col = -1; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $num_seps = -1; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $val_start_col = 'start'; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $num_seps = 'separators'; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = ''; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = undef; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = (); # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = {}; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = [1, 2, 3]; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = sub { return 1; }; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = \n; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = 1; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh_in = 3.14; # Initializing variable for scoping"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 1; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -1; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 10; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -10; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 5; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -5; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 100; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -100; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 15; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -15; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 20; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -20; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 25; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -25; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 50; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -50; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 75; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -75; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 2; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -2; # Initializing variable for scoping"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $seen = 0;    my $seen = 1;    my $seen;my $line;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line;my $fh_in;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;F<stdout>:"
+                    ]
+                },
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 0; # Initializing variable for scoping",
+                        "my $num_seps = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $seen = 0;    my $seen = 1;    my $seen;my $line;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line;my $fh_in;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;F<stdout>:"
+                    ]
+                },
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 0; # Initializing variable for scoping",
+                        "my $num_seps = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $seen = 0;    my $seen = 1;    my $seen;my $line;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line;my $fh_in;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;F<stdout>:"
+                    ]
+                },
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 0; # Initializing variable for scoping",
+                        "my $num_seps = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $seen = 0;    my $seen = 1;    my $seen;my $line;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line;my $fh_in;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;F<stdout>:"
+                    ]
+                },
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 0; # Initializing variable for scoping",
+                        "my $num_seps = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $seen = 0;    my $seen = 1;    my $seen;my $line;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line = <FH_IN>;my $line;my $fh_in;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;my $line;F<stdout>:"
+                    ]
+                },
+                {
+                    "line_number": 529,
+                    "new_lines": [
+                        "my $val_start_col = 0; # Initializing variable for scoping",
+                        "my $num_seps = 0; # Initializing variable for scoping"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $new_fh; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $fh = 1; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $fh = 'file_handle'; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $fh = <FH_IN>; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $new_fh = <FH_IN>; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $new_fh = 1; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $new_fh = 'file_handle'; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $new_fh = 0; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $new_fh = ''; # Fixing variable scoping issue"]}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 102, "new_lines": ["my $new_fh = 'new_file_handle'; # Fixing variable scoping issue"]}]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = 0; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = 1; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = ''; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = undef; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = -1; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = 0.5; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = \"file_handle\"; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = shift @files; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = pop @files; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = join ',', @files; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $new_file; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = \"/path/to/file\"; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $seen; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = $line; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 102,
+                    "new_lines": [
+                        "my $fh = %newconf; # Fixing variable scoping issue"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 10; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 20; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 5; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 15; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 25; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 8; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 18; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 3; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 12; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 22; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 7; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 17; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 6; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 16; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 4; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 14; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 24; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 9; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 19; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 2; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 13; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = 23; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -5; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -15; # Initializing variable for scoping"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 529,
+                    "modified_line": "my $val_start_col = -25; # Initializing variable for scoping"
+                }
+            ]
+        }
+    ]
+}

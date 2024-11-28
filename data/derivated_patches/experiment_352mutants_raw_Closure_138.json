@@ -1,0 +1,1169 @@
+
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "        if (paramType == null) {"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 218,
+                    "new_lines": [
+                        "            if (paramType == null) {"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 632,
+                    "new_lines": [
+                        "      if (var == null || (var.isTypeInferred() && unflowableVarNames.contains(varName))) {"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 633,
+                    "new_lines": [
+                        "          // Add your custom logic here"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 639,
+                    "new_lines": [
+                        "        type = var.getType();",
+                        "        if (type == null) {",
+                        "            type = getNativeType(UNKNOWN_TYPE);",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 643,
+                    "new_lines": [
+                        "        // Insert your fix here"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 644,
+                    "new_lines": [
+                        "        // Add fix for the bug"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": [
+                        "        // Your fix goes here"
+                    ]
+                }
+            ],
+            "deletions": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "if (paramType == null) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 218,
+                    "new_lines": [
+                        "// Add additional logic here"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 632,
+                    "new_lines": [
+                        "if (var != null && !(var.isTypeInferred() || unflowableVarNames.contains(varName))) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 633,
+                    "new_lines": [
+                        "// New comment for line 633"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 639,
+                    "new_lines": [
+                        "// Insertion for line 639"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 643,
+                    "new_lines": [
+                        "// Modification for line 643"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 644,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (type == null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": [
+                        "if (var != null && type != null) {",
+                        "type = var.getType();"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (type == null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (type != null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (var != null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 639,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (type != null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 643,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (var != null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 644,
+                    "new_lines": [
+                        "if (var != null && type == null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (type != null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 639,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (var != null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 643,
+                    "new_lines": [
+                        "if (type == null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 644,
+                    "new_lines": [
+                        "if (var != null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": [
+                        "type = var.getType();",
+                        "if (var != null && type == null) {",
+                        "type = getNativeType(UNKNOWN_TYPE);"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": ["if (paramType == null) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 218,
+                    "new_lines": ["} else { // Handle paramType not being null case"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 632,
+                    "new_lines": ["if (var == null || var.isTypeInferred() || !unflowableVarNames.contains(varName)) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 633,
+                    "new_lines": ["// Adjusted condition for var"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 639,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 643,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 644,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": ["if (paramType != null && paramType.equals(\"array\")) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 218,
+                    "new_lines": ["} else { // Handle different paramType cases"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 632,
+                    "new_lines": ["if (var != null && !var.isTypeInferred() && unflowableVarNames.contains(varName)) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 633,
+                    "new_lines": ["// Adjusted condition for var"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 639,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 643,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 644,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": ["if (paramType != null && paramType.equals(\"function\")) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 218,
+                    "new_lines": ["} else { // Handle different paramType cases"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 632,
+                    "new_lines": ["if (var != null && var.isTypeInferred() && unflowableVarNames.contains(varName)) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 633,
+                    "new_lines": ["// Adjusted condition for var"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 639,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 643,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 644,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {
+                    "line_number": 647,
+                    "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType(); // Check for type"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType(); // Check for type"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType(); // Check for type"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Check for type"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Ensure type is not null"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType(); // Retrieve type"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType(); // Retrieve type"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType(); // Retrieve type"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Retrieve type"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Handle potential null type"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Handle null case"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Check if type is null"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Handle type being null"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType(); // Obtain type information"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType(); // Obtain type information"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType(); // Obtain type information"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Obtain type information"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Handle potential null type info"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Check for null type"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Handle null type case"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Check for type being null"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Handle null type scenario"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 639,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 643,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 644,
+                    "modified_line": "        type = var.getType();"
+                },
+                {
+                    "line_number": 647,
+                    "modified_line": "        type = var.getType(); // Check and handle null type"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {"line_number": 208, "new_lines": ["if (paramType == null) {"]},
+                {"line_number": 218, "new_lines": ["}"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {"line_number": 208, "new_lines": ["if (paramType == null) { // Mutated to check for null"]},
+                {"line_number": 218, "new_lines": ["} // End of mutation"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {"line_number": 208, "new_lines": ["if (paramType == null) { // Fixing potential null pointer"]},
+                {"line_number": 218, "new_lines": ["} // End of potential fix"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 632, "new_lines": ["if (var == null || unflowableVarNames == null) { // Checking var and unflowableVarNames for null"]},
+                {"line_number": 633, "new_lines": ["// Inserted lines for null check"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Getting type of var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Getting type of var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Getting type of var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Getting type of var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Handling type of var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Checking type of var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType();"]},
+                {"line_number": 643, "new_lines": ["type = var.getType();"]},
+                {"line_number": 644, "new_lines": ["type = var.getType();"]},
+                {"line_number": 647, "new_lines": ["type = var.getType();"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Potential fix"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Potential fix"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Potential fix"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Potential fix"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 632, "new_lines": ["if (var != null && !(var.isTypeInferred() && unflowableVarNames.contains(varName))) { // Additional check for var and unflowableVarNames"]},
+                {"line_number": 633, "new_lines": ["// Inserted lines for additional check"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Additional handling of type"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Additional handling of type"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Additional handling of type"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Additional handling of type"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Type check on var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Type check on var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Type check on var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Type check on var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType();"]},
+                {"line_number": 643, "new_lines": ["type = var.getType();"]},
+                {"line_number": 644, "new_lines": ["type = var.getType();"]},
+                {"line_number": 647, "new_lines": ["type = var.getType();"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Potential fix for type handling"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Potential fix for type handling"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Potential fix for type handling"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Potential fix for type handling"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 632, "new_lines": ["if (var != null && !(var.isTypeInferred() && unflowableVarNames.contains(varName))) { // Checking var and unflowableVarNames for nullability"]},
+                {"line_number": 633, "new_lines": ["// Inserted lines for null check"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Handling type of var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Checking type of var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType();"]},
+                {"line_number": 643, "new_lines": ["type = var.getType();"]},
+                {"line_number": 644, "new_lines": ["type = var.getType();"]},
+                {"line_number": 647, "new_lines": ["type = var.getType();"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Potential fix"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Potential fix"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Potential fix"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Potential fix"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 632, "new_lines": ["if (var == null || unflowableVarNames == null) { // Additional check for var and unflowableVarNames"]},
+                {"line_number": 633, "new_lines": ["// Inserted lines for additional check"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Additional handling of type"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Additional handling of type"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Additional handling of type"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Additional handling of type"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Type check on var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Type check on var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Type check on var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Type check on var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType();"]},
+                {"line_number": 643, "new_lines": ["type = var.getType();"]},
+                {"line_number": 644, "new_lines": ["type = var.getType();"]},
+                {"line_number": 647, "new_lines": ["type = var.getType();"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Potential fix for type handling"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Potential fix for type handling"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Potential fix for type handling"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Potential fix for type handling"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 632, "new_lines": ["if (var != null && !(var.isTypeInferred() && unflowableVarNames.contains(varName))) { // Checking var and unflowableVarNames for nullability"]},
+                {"line_number": 633, "new_lines": ["// Inserted lines for null check"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Handling type of var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Handling type of var"]}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/TypeInference.java",
+            "insertions": [
+                {"line_number": 639, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 643, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 644, "new_lines": ["type = var.getType(); // Checking type of var"]},
+                {"line_number": 647, "new_lines": ["type = var.getType(); // Checking type of var"]}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 639, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "return;"]}, {"line_number": 643, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "return;"]}, {"line_number": 644, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "return;"]}, {"line_number": 647, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "return;"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 639, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "break;"]}, {"line_number": 643, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "break;"]}, {"line_number": 644, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "break;"]}, {"line_number": 647, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "break;"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 639, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "continue;"]}, {"line_number": 643, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "continue;"]}, {"line_number": 644, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "continue;"]}, {"line_number": 647, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "continue;"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 639, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "throw new RuntimeException();"]}, {"line_number": 643, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "throw new RuntimeException();"]}, {"line_number": 644, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "throw new RuntimeException();"]}, {"line_number": 647, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);", "throw new RuntimeException();"]}]},
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "modifications": [{"line_number": 639, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    return;\n"}, {"line_number": 643, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    return;\n"}, {"line_number": 644, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    return;\n"}, {"line_number": 647, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    return;\n"}]},
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "modifications": [{"line_number": 639, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    break;\n"}, {"line_number": 643, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    break;\n"}, {"line_number": 644, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    break;\n"}, {"line_number": 647, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    break;\n"}]},
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "modifications": [{"line_number": 639, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    continue;\n"}, {"line_number": 643, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    continue;\n"}, {"line_number": 644, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    continue;\n"}, {"line_number": 647, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    continue;\n"}]},
+        {"file_name": "com/google/javascript/jscomp/TypeInference.java", "modifications": [{"line_number": 639, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    throw new RuntimeException();\n"}, {"line_number": 643, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    throw new RuntimeException();\n"}, {"line_number": 644, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    throw new RuntimeException();\n"}, {"line_number": 647, "modified_line": "type = var.getType();\nif (type == null) {\n    type = getNativeType(UNKNOWN_TYPE);\n    throw new RuntimeException();\n"}]}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/ClosureReverseAbstractInterpreter.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "if (paramType == null) {"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{"file_name": "com/google/javascript/jscomp/TypeInference.java", "insertions": [{"line_number": 639, "new_lines": ["type = var.getType();", "if (type == null) {", "type = getNativeType(UNKNOWN_TYPE);"]}]}
+  
+  

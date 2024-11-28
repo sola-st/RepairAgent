@@ -1,0 +1,94 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close))', '                        depth--;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [270], 'modifications': [{'line_number': 260, 'modified_line': '        if (c == close) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [270], 'modifications': [{'line_number': 270, 'modified_line': '                    else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 270, 'modified_line': '                    else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 260, 'modified_line': '    public String chompBalanced(char open, char close) {'}, {'line_number': 261, 'modified_line': '        int start = pos;'}, {'line_number': 262, 'modified_line': '        int end = queue.length();'}, {'line_number': 263, 'modified_line': '        '}, {'line_number': 264, 'modified_line': '        int depth = 0;'}, {'line_number': 265, 'modified_line': '        boolean inQuote = false;'}, {'line_number': 266, 'modified_line': '        '}, {'line_number': 267, 'modified_line': '        for (int i = start; i < end; i++) {'}, {'line_number': 268, 'modified_line': '            char c = queue.charAt(i);'}, {'line_number': 269, 'modified_line': '            '}, {'line_number': 270, 'modified_line': '            if (depth == 0 && i != start && inQuote) {'}, {'line_number': 271, 'modified_line': '                inQuote = false;'}, {'line_number': 272, 'modified_line': '            }'}, {'line_number': 273, 'modified_line': '            '}, {'line_number': 274, 'modified_line': '            if (c == open) {'}, {'line_number': 275, 'modified_line': '                depth++;'}, {'line_number': 276, 'modified_line': '            } else if (c == close) {'}, {'line_number': 277, 'modified_line': '                depth--;'}, {'line_number': 278, 'modified_line': '            } else if (c == \'"\' || c == \'\\\'\' ) {'}, {'line_number': 279, 'modified_line': '                inQuote = !inQuote;'}, {'line_number': 280, 'modified_line': '            }'}, {'line_number': 281, 'modified_line': '            '}, {'line_number': 282, 'modified_line': '            if (depth == 0 && i > start) {'}, {'line_number': 283, 'modified_line': '                pos = i + 1;'}, {'line_number': 284, 'modified_line': '                return queue.substring(start, i);'}, {'line_number': 285, 'modified_line': '            }'}, {'line_number': 286, 'modified_line': '        }'}, {'line_number': 287, 'modified_line': '        '}, {'line_number': 288, 'modified_line': '        return "";'}, {'line_number': 289, 'modified_line': '    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 260, 'modified_line': '    public String chompBalanced(char open, char close) {'}, {'line_number': 261, 'modified_line': '        int start = pos;'}, {'line_number': 262, 'modified_line': '        int end = queue.length();'}, {'line_number': 263, 'modified_line': ''}, {'line_number': 264, 'modified_line': '        int depth = 0;'}, {'line_number': 265, 'modified_line': '        boolean inQuote = false;'}, {'line_number': 266, 'modified_line': ''}, {'line_number': 267, 'modified_line': '        for (int i = start; i < end; i++) {'}, {'line_number': 268, 'modified_line': '            char c = queue.charAt(i);'}, {'line_number': 269, 'modified_line': ''}, {'line_number': 270, 'modified_line': '            if (depth == 0 && i != start && inQuote) {'}, {'line_number': 271, 'modified_line': '                inQuote = false;'}, {'line_number': 272, 'modified_line': '            '}, {'line_number': 273, 'modified_line': '            if (c == open) {'}, {'line_number': 274, 'modified_line': '                depth++;'}, {'line_number': 275, 'modified_line': '            } else if (c == close) {'}, {'line_number': 276, 'modified_line': '                depth--;'}, {'line_number': 277, 'modified_line': '            } else if (c == \'"\' || c == \'\\\'\' ) {'}, {'line_number': 278, 'modified_line': '                inQuote = !inQuote;'}, {'line_number': 279, 'modified_line': '            }'}, {'line_number': 280, 'modified_line': ''}, {'line_number': 281, 'modified_line': '            if (depth == 0 && i > start) {'}, {'line_number': 282, 'modified_line': '                pos = i + 1;'}, {'line_number': 283, 'modified_line': '                return queue.substring(start, i);'}, {'line_number': 284, 'modified_line': '            }'}, {'line_number': 285, 'modified_line': '        }'}, {'line_number': 286, 'modified_line': ''}, {'line_number': 287, 'modified_line': '        return "";'}, {'line_number': 288, 'modified_line': '    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 260, 'modified_line': '    public String chompBalanced(char open, char close) {'}, {'line_number': 261, 'modified_line': '        int start = pos;'}, {'line_number': 262, 'modified_line': '        int end = queue.length();'}, {'line_number': 263, 'modified_line': ''}, {'line_number': 264, 'modified_line': '        int depth = 0;'}, {'line_number': 265, 'modified_line': '        boolean inQuote = false;'}, {'line_number': 266, 'modified_line': ''}, {'line_number': 267, 'modified_line': '        for (int i = start; i < end; i++) {'}, {'line_number': 268, 'modified_line': '            char c = queue.charAt(i);'}, {'line_number': 269, 'modified_line': ''}, {'line_number': 270, 'modified_line': '            if (depth == 0 && i != start && inQuote) {'}, {'line_number': 271, 'modified_line': '                inQuote = false;'}, {'line_number': 272, 'modified_line': ''}, {'line_number': 273, 'modified_line': '            if (c == open) {'}, {'line_number': 274, 'modified_line': '                depth++;'}, {'line_number': 275, 'modified_line': '            } else if (c == close) {'}, {'line_number': 276, 'modified_line': '                depth--;'}, {'line_number': 277, 'modified_line': '            } else if (c == \'"\' || c == \'\\\'\' ) {'}, {'line_number': 278, 'modified_line': '                inQuote = !inQuote;'}, {'line_number': 279, 'modified_line': '            }'}, {'line_number': 280, 'modified_line': ''}, {'line_number': 281, 'modified_line': '            if (depth == 0 && i > start) {'}, {'line_number': 282, 'modified_line': '                pos = i + 1;'}, {'line_number': 283, 'modified_line': '                return queue.substring(start, i);'}, {'line_number': 284, 'modified_line': '            }'}, {'line_number': 285, 'modified_line': '        }'}, {'line_number': 286, 'modified_line': ''}, {'line_number': 287, 'modified_line': '        return "";'}, {'line_number': 288, 'modified_line': '    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288], 'modifications': [{'line_number': 260, 'modified_line': '    public void chompBalanced(char openTag, char closeTag) {'}, {'line_number': 261, 'modified_line': '        int start = pos;'}, {'line_number': 262, 'modified_line': '        int depth = 0;'}, {'line_number': 263, 'modified_line': ''}, {'line_number': 264, 'modified_line': '        if (pos < queue.length() && peek() == openTag) {'}, {'line_number': 265, 'modified_line': '            pos++;'}, {'line_number': 266, 'modified_line': '            while (pos < queue.length()) {'}, {'line_number': 267, 'modified_line': '                char c = queue.charAt(pos);'}, {'line_number': 268, 'modified_line': '                if (c == openTag) {'}, {'line_number': 269, 'modified_line': '                    depth++;'}, {'line_number': 270, 'modified_line': '                } else if (c == closeTag) {'}, {'line_number': 271, 'modified_line': '                    if (depth == 0) {'}, {'line_number': 272, 'modified_line': '                        break;'}, {'line_number': 273, 'modified_line': '                    } else {'}, {'line_number': 274, 'modified_line': '                        depth--;'}, {'line_number': 275, 'modified_line': '                    }'}, {'line_number': 276, 'modified_line': '                }'}, {'line_number': 277, 'modified_line': '                pos++;'}, {'line_number': 278, 'modified_line': '            }'}, {'line_number': 279, 'modified_line': '        }'}, {'line_number': 280, 'modified_line': '    }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 270, 'modified_line': '                else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 270, 'modified_line': '                else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 270, 'modified_line': '                else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 260, 'modified_line': '    public String chompBalanced(char open, char close) {'}, {'line_number': 270, 'modified_line': '                else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 270, 'modified_line': '                else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 270, 'modified_line': '                else if (c.equals(close)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [{'line_number': 270, 'new_lines': ['                    else if (c.equals(close)) {', '                        depth--;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokenQueue.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 276, 'modified_line': '                    } else if (c == close) {'}]}]
+
+

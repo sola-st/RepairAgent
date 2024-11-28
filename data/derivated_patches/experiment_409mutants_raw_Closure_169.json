@@ -1,0 +1,1305 @@
+[
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [
+            {"line_number": 177, "new_lines": ["    // Inserted comment for clarification"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    // Modified line for better readability"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [
+            {"line_number": 531, "new_lines": ["    // Inserted comment to explain the logic"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [
+            {"line_number": 118, "new_lines": ["      // Inserted comment for better understanding"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [
+            {"line_number": 335, "new_lines": ["    // Inserted comment for clarity"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [
+            {"line_number": 180, "new_lines": ["      return returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns);"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["531", "//"]
+        ],
+        "insertions": [
+            {"line_number": 531, "new_lines": ["        return thisUnknown && thatUnknown;"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [
+            {"line_number": 900, "new_lines": ["        return call.hasEqualParameters(other.call, true);"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [
+            {"line_number": 120, "new_lines": ["          return properties.get(key).checkEquivalenceHelper(otherRecord.properties.get(key), tolerateUnknowns);"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [
+            {"line_number": 335, "new_lines": ["    if (tolerateUnknowns) {"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [
+            {"line_number": 178, "new_lines": ["      return false; // Inserted a return statement to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [
+            {"line_number": 793, "new_lines": ["      return true; // Inserted a return statement to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [
+            {"line_number": 521, "new_lines": ["    if (this.isSomeType() && that.isSomeType()) { // Inserted a new type check to fix the bug"]},
+            {"line_number": 540, "new_lines": ["        return false; // Inserted a return statement to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [
+            {"line_number": 119, "new_lines": ["        return true; // Inserted a return statement to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [
+            {"line_number": 335, "new_lines": ["    if (tolerateUnknowns) { // Inserted a condition to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["187", "                otherParamType, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["204", "      ArrowType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["209", "    return hasEqualParameters(that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["792", "    if (call.hasEqualParameters(other.call, false)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, false)) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["890", "      FunctionType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["908", "        that.typeOfThis, tolerateUnknowns) &&"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 908, "modified_line": "        that.typeOfThis, tolerateUnknowns) && // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, false); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["492", "    return checkEquivalenceHelper(that, false);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 492, "modified_line": "    return checkEquivalenceHelper(that, false); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["500", "    return checkEquivalenceHelper(that, false);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 500, "modified_line": "    return checkEquivalenceHelper(that, false); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["514", "    return !checkEquivalenceHelper(that, true);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 514, "modified_line": "    return !checkEquivalenceHelper(that, true); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["528", "      if (tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 528, "modified_line": "      if (tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["545", "          that.toMaybeUnionType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 545, "modified_line": "          that.toMaybeUnionType(), tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 550, "modified_line": "          that.toMaybeFunctionType(), tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["555", "          that.toMaybeRecordType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 555, "modified_line": "          that.toMaybeRecordType(), tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["565", "            thatParamType.getParameterType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 565, "modified_line": "            thatParamType.getParameterType(), tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["566", "      } else if (tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 566, "modified_line": "      } else if (tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["571", "      } else {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 571, "modified_line": "      } else { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["572", "        paramsMatch = false;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 572, "modified_line": "        paramsMatch = false; // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 580, "modified_line": "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["592", "              that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 592, "modified_line": "              that, tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["598", "          tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 598, "modified_line": "          tolerateUnknowns); // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["126", "              properties.get(key), tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 126, "modified_line": "              properties.get(key), tolerateUnknowns)) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 204, "modified_line": "              (propType.isUnknownType() || altPropType.isUnknownType() || // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["205", "                  altPropType.isEquivalentTo(propType))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 205, "modified_line": "                  altPropType.isEquivalentTo(propType))) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 268, "modified_line": "      if (!propA.isUnknownType() && !propB.isUnknownType()) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["280", "          }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 280, "modified_line": "          } // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["334", "      UnionType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "      UnionType that, boolean tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["335", "    if (!tolerateUnknowns"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 335, "modified_line": "    if (!tolerateUnknowns // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 340, "modified_line": "      if (!hasAlternate(alternate, tolerateUnknowns)) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 347, "modified_line": "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) { // Bug fixed by adding a comment"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 349, "modified_line": "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) { // Bug fixed by adding a comment"}]}
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [
+            {"line_number": 180, "new_lines": ["        // Inserted line for fixing bug\n"]},
+            {"line_number": 208, "new_lines": ["      // Inserted line for fixing bug\n"]}
+        ],
+        "deletions": [206],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [
+            {"line_number": 900, "new_lines": ["    // Inserted line for fixing bug\n"]},
+            {"line_number": 915, "new_lines": ["    // Inserted line for fixing bug\n"]}
+        ],
+        "deletions": [907],
+        "modifications": [
+            {"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [
+            {"line_number": 531, "new_lines": ["        // Inserted line for fixing bug\n"]}
+        ],
+        "deletions": [530],
+        "modifications": [
+            {"line_number": 530, "modified_line": "        // Modified line for fixing bug\n"},
+            {"line_number": 566, "modified_line": "      } else if (tolerateUnknowns || (thisUnknown && thatUnknown)) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [
+            {"line_number": 120, "new_lines": ["        // Inserted line for fixing bug\n"]},
+            {"line_number": 270, "new_lines": ["        // Inserted line for fixing bug\n"]}
+        ],
+        "deletions": [203, 210],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) {"},
+            {"line_number": 268, "modified_line": "      if (!propA.isUnknownType() || !propB.isUnknownType()) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [
+            {"line_number": 336, "new_lines": ["      // Inserted line for fixing bug\n"]},
+            {"line_number": 344, "new_lines": ["      // Inserted line for fixing bug\n"]}
+        ],
+        "deletions": [336, 343],
+        "modifications": [
+            {"line_number": 335, "modified_line": "    if (tolerateUnknowns"},
+            {"line_number": 335, "modified_line": "    if (!tolerateUnknowns"}
+        ]
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"},
+            {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, false)) {"},
+            {"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 908, "modified_line": "        that.typeOfThis, tolerateUnknowns) &&"},
+            {"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"},
+            {"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 492, "modified_line": "    return checkEquivalenceHelper(that, false);"},
+            {"line_number": 500, "modified_line": "    return checkEquivalenceHelper(that, false);"},
+            {"line_number": 514, "modified_line": "    return !checkEquivalenceHelper(that, true);"},
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"},
+            {"line_number": 528, "modified_line": "      if (tolerateUnknowns) {"},
+            {"line_number": 545, "modified_line": "          that.toMaybeUnionType(), tolerateUnknowns);"},
+            {"line_number": 550, "modified_line": "          that.toMaybeFunctionType(), tolerateUnknowns);"},
+            {"line_number": 555, "modified_line": "          that.toMaybeRecordType(), tolerateUnknowns);"},
+            {"line_number": 565, "modified_line": "            thatParamType.getParameterType(), tolerateUnknowns);"},
+            {"line_number": 566, "modified_line": "      } else if (tolerateUnknowns) {"},
+            {"line_number": 571, "modified_line": "      } else {"},
+            {"line_number": 572, "modified_line": "        paramsMatch = false;"},
+            {"line_number": 580, "modified_line": "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"},
+            {"line_number": 592, "modified_line": "              that, tolerateUnknowns);"},
+            {"line_number": 598, "modified_line": "          tolerateUnknowns);"},
+            {"line_number": 531, "modified_line": "//"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) {"},
+            {"line_number": 126, "modified_line": "              properties.get(key), tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "              (propType.isUnknownType() || altPropType.isUnknownType() ||"},
+            {"line_number": 205, "modified_line": "                  altPropType.isEquivalentTo(propType))) {"},
+            {"line_number": 268, "modified_line": "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"},
+            {"line_number": 280, "modified_line": "          "}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 334, "modified_line": "      UnionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 335, "modified_line": "    if (!tolerateUnknowns"},
+            {"line_number": 340, "modified_line": "      if (!hasAlternate(alternate, tolerateUnknowns)) {"},
+            {"line_number": 347, "modified_line": "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"},
+            {"line_number": 349, "modified_line": "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"}
+        ]
+    }
+][
+{"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"], ["187", "                otherParamType, tolerateUnknowns)) {"], ["204", "      ArrowType that, boolean tolerateUnknowns) {"], ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"], ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"}, {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"}, {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}]},
+{"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"], ["187", "                otherParamType, tolerateUnknowns)) {"], ["204", "      ArrowType that, boolean tolerateUnknowns) {"], ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"], ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"}, {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"}, {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}]},
+{"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"], ["187", "                otherParamType, tolerateUnknowns)) {"], ["204", "      ArrowType that, boolean tolerateUnknowns) {"], ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"], ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"}, {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"}, {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}]},
+{"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"], ["187", "                otherParamType, tolerateUnknowns)) {"], ["204", "      ArrowType that, boolean tolerateUnknowns) {"], ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"], ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"}, {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"}, {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}]},
+{"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"], ["187", "                otherParamType, tolerateUnknowns)) {"], ["204", "      ArrowType that, boolean tolerateUnknowns) {"], ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"], ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"}, {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"}, {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"}, {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}]}
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"},
+            {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, false)) {"},
+            {"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 908, "modified_line": "        that.typeOfThis, tolerateUnknowns) &&"},
+            {"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"},
+            {"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 492, "modified_line": "    return checkEquivalenceHelper(that, false);"},
+            {"line_number": 500, "modified_line": "    return checkEquivalenceHelper(that, false);"},
+            {"line_number": 514, "modified_line": "    return !checkEquivalenceHelper(that, true);"},
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"},
+            {"line_number": 528, "modified_line": "      if (tolerateUnknowns) {"},
+            {"line_number": 545, "modified_line": "          that.toMaybeUnionType(), tolerateUnknowns);"},
+            {"line_number": 550, "modified_line": "          that.toMaybeFunctionType(), tolerateUnknowns);"},
+            {"line_number": 555, "modified_line": "          that.toMaybeRecordType(), tolerateUnknowns);"},
+            {"line_number": 565, "modified_line": "            thatParamType.getParameterType(), tolerateUnknowns);"},
+            {"line_number": 566, "modified_line": "      } else if (tolerateUnknowns) {"},
+            {"line_number": 571, "modified_line": "      } else {"},
+            {"line_number": 572, "modified_line": "        paramsMatch = false;"},
+            {"line_number": 580, "modified_line": "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"},
+            {"line_number": 592, "modified_line": "              that, tolerateUnknowns);"},
+            {"line_number": 598, "modified_line": "          tolerateUnknowns);"},
+            {"line_number": 531, "modified_line": "//"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) {"},
+            {"line_number": 126, "modified_line": "              properties.get(key), tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "              (propType.isUnknownType() || altPropType.isUnknownType() ||"},
+            {"line_number": 205, "modified_line": "                  altPropType.isEquivalentTo(propType))) {"},
+            {"line_number": 268, "modified_line": "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"},
+            {"line_number": 280, "modified_line": "          "}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 334, "modified_line": "      UnionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 335, "modified_line": "    if (!tolerateUnknowns"},
+            {"line_number": 340, "modified_line": "      if (!hasAlternate(alternate, tolerateUnknowns)) {"},
+            {"line_number": 347, "modified_line": "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"},
+            {"line_number": 349, "modified_line": "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"}
+        ]
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) { // Modified to include comments"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, true)) { // Modified to change the boolean value"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [531],
+        "modifications": [
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) { // Added comments for clarity"},
+            {"line_number": 528, "modified_line": "      if (tolerateUnknowns || thisUnknown || thatUnknown) { // Modified condition for readability"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) { // Added comments for better understanding"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 335, "modified_line": "    if (tolerateUnknowns"}
+        ]
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, true)) {"},
+            {"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, true);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns, int additionalParam) {"},
+            {"line_number": 126, "modified_line": "              properties.get(key), tolerateUnknowns, additionalParam)) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 334, "modified_line": "      UnionType that, boolean tolerateUnknowns, int additionalParam) {"},
+            {"line_number": 335, "modified_line": "    if (tolerateUnknowns"}
+        ]
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 206, "modified_line": "    if (returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"},
+            {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, true)) {"},
+            {"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 908, "modified_line": "        that.typeOfThis, !tolerateUnknowns) &&"},
+            {"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, !tolerateUnknowns);"},
+            {"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, true);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 492, "modified_line": "    return checkEquivalenceHelper(that, true);"},
+            {"line_number": 500, "modified_line": "    return checkEquivalenceHelper(that, true);"},
+            {"line_number": 514, "modified_line": "    return !checkEquivalenceHelper(that, false);"},
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"},
+            {"line_number": 528, "modified_line": "      if (!tolerateUnknowns) {"},
+            {"line_number": 545, "modified_line": "          that.toMaybeUnionType(), !tolerateUnknowns);"},
+            {"line_number": 550, "modified_line": "          that.toMaybeFunctionType(), !tolerateUnknowns);"},
+            {"line_number": 555, "modified_line": "          that.toMaybeRecordType(), !tolerateUnknowns);"},
+            {"line_number": 565, "modified_line": "            thatParamType.getParameterType(), !tolerateUnknowns);"},
+            {"line_number": 566, "modified_line": "      } else if (!tolerateUnknowns) {"},
+            {"line_number": 571, "modified_line": "      } else {"},
+            {"line_number": 572, "modified_line": "        paramsMatch = true;"},
+            {"line_number": 580, "modified_line": "          thisRootType.checkEquivalenceHelper(thatRootType, !tolerateUnknowns);"},
+            {"line_number": 592, "modified_line": "              that, !tolerateUnknowns);"},
+            {"line_number": 598, "modified_line": "          !tolerateUnknowns);"},
+            {"line_number": 531, "modified_line": "//"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean !tolerateUnknowns) {"},
+            {"line_number": 126, "modified_line": "              properties.get(key), !tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "              (propType.isUnknownType() || altPropType.isUnknownType() ||"},
+            {"line_number": 205, "modified_line": "                  !altPropType.isEquivalentTo(propType))) {"},
+            {"line_number": 268, "modified_line": "      if (propA.isUnknownType() && propB.isUnknownType()) {"},
+            {"line_number": 280, "modified_line": "          }
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 334, "modified_line": "      UnionType that, boolean !tolerateUnknowns) {"},
+            {"line_number": 335, "modified_line": "    if (tolerateUnknowns"],
+            {"line_number": 340, "modified_line": "      if (hasAlternate(alternate, !tolerateUnknowns)) {"},
+            {"line_number": 347, "modified_line": "  private boolean hasAlternate(JSType type, boolean !tolerateUnknowns) {"},
+            {"line_number": 349, "modified_line": "      if (!alternate.checkEquivalenceHelper(type, !tolerateUnknowns)) {"}
+        ]
+    }
+][
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) { // Mutation 1"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["187", "                otherParamType, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) { // Mutation 2"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["204", "      ArrowType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) { // Mutation 3"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) { // Mutation 4"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/ArrowType.java", "target_lines": [["209", "    return hasEqualParameters(that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns); // Mutation 5"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["792", "    if (call.hasEqualParameters(other.call, false)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, false)) { // Mutation 6"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["890", "      FunctionType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) { // Mutation 7"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["908", "        that.typeOfThis, tolerateUnknowns) &&"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 908, "modified_line": "        that.typeOfThis, tolerateUnknowns) && // Mutation 8"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns); // Mutation 9"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/FunctionType.java", "target_lines": [["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, false); // Mutation 10"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["492", "    return checkEquivalenceHelper(that, false);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 492, "modified_line": "    return checkEquivalenceHelper(that, false); // Mutation 11"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["500", "    return checkEquivalenceHelper(that, false);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 500, "modified_line": "    return checkEquivalenceHelper(that, false); // Mutation 12"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["514", "    return !checkEquivalenceHelper(that, true);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 514, "modified_line": "    return !checkEquivalenceHelper(that, true); // Mutation 13"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) { // Mutation 14"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["528", "      if (tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 528, "modified_line": "      if (tolerateUnknowns) { // Mutation 15"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["545", "          that.toMaybeUnionType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 545, "modified_line": "          that.toMaybeUnionType(), tolerateUnknowns); // Mutation 16"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 550, "modified_line": "          that.toMaybeFunctionType(), tolerateUnknowns); // Mutation 17"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["555", "          that.toMaybeRecordType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 555, "modified_line": "          that.toMaybeRecordType(), tolerateUnknowns); // Mutation 18"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["565", "            thatParamType.getParameterType(), tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 565, "modified_line": "            thatParamType.getParameterType(), tolerateUnknowns); // Mutation 19"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["566", "      } else if (tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 566, "modified_line": "      } else if (tolerateUnknowns) { // Mutation 20"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["571", "      } else {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 571, "modified_line": "      } else { // Mutation 21"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["572", "        paramsMatch = false;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 572, "modified_line": "        paramsMatch = false; // Mutation 22"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 580, "modified_line": "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns); // Mutation 23"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["592", "              that, tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 592, "modified_line": "              that, tolerateUnknowns); // Mutation 24"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["598", "          tolerateUnknowns);"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 598, "modified_line": "          tolerateUnknowns); // Mutation 25"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/JSType.java", "target_lines": [["531", "//"]], "insertions": [{"line_number": 531, "new_lines": ["// Inserted line for mutation 26"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) { // Mutation 27"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["126", "              properties.get(key), tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 126, "modified_line": "              properties.get(key), tolerateUnknowns)) { // Mutation 28"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 204, "modified_line": "              (propType.isUnknownType() || altPropType.isUnknownType() || // Mutation 29"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["205", "                  altPropType.isEquivalentTo(propType))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 205, "modified_line": "                  altPropType.isEquivalentTo(propType))) { // Mutation 30"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 268, "modified_line": "      if (!propA.isUnknownType() && !propB.isUnknownType()) { // Mutation 31"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/RecordType.java", "target_lines": [["280", "          }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 280, "modified_line": "          } // Mutation 32"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["334", "      UnionType that, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "      UnionType that, boolean tolerateUnknowns) { // Mutation 33"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["335", "    if (!tolerateUnknowns"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 335, "modified_line": "    if (!tolerateUnknowns // Mutation 34"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 340, "modified_line": "      if (!hasAlternate(alternate, tolerateUnknowns)) { // Mutation 35"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 347, "modified_line": "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) { // Mutation 36"}]},
+    {"file_name": "com/google/javascript/rhino/jstype/UnionType.java", "target_lines": [["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 349, "modified_line": "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) { // Mutation 37"}]}
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "      ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 206, "modified_line": "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"},
+            {"line_number": 209, "modified_line": "    return hasEqualParameters(that, tolerateUnknowns);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, false)) {"},
+            {"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 908, "modified_line": "        that.typeOfThis, tolerateUnknowns) &&"},
+            {"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"},
+            {"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 492, "modified_line": "    return checkEquivalenceHelper(that, false);"},
+            {"line_number": 500, "modified_line": "    return checkEquivalenceHelper(that, false);"},
+            {"line_number": 514, "modified_line": "    return !checkEquivalenceHelper(that, true);"},
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"},
+            {"line_number": 528, "modified_line": "      if (tolerateUnknowns) {"},
+            {"line_number": 545, "modified_line": "          that.toMaybeUnionType(), tolerateUnknowns);"},
+            {"line_number": 550, "modified_line": "          that.toMaybeFunctionType(), tolerateUnknowns);"},
+            {"line_number": 555, "modified_line": "          that.toMaybeRecordType(), tolerateUnknowns);"},
+            {"line_number": 565, "modified_line": "            thatParamType.getParameterType(), tolerateUnknowns);"},
+            {"line_number": 566, "modified_line": "      } else if (tolerateUnknowns) {"},
+            {"line_number": 571, "modified_line": "      } else {"},
+            {"line_number": 572, "modified_line": "        paramsMatch = false;"},
+            {"line_number": 580, "modified_line": "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"},
+            {"line_number": 592, "modified_line": "              that, tolerateUnknowns);"},
+            {"line_number": 598, "modified_line": "          tolerateUnknowns);"},
+            {"line_number": 531, "modified_line": "//"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) {"},
+            {"line_number": 126, "modified_line": "              properties.get(key), tolerateUnknowns)) {"},
+            {"line_number": 204, "modified_line": "              (propType.isUnknownType() || altPropType.isUnknownType() ||"},
+            {"line_number": 205, "modified_line": "                  altPropType.isEquivalentTo(propType))) {"},
+            {"line_number": 268, "modified_line": "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"},
+            {"line_number": 280, "modified_line": "          "}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 334, "modified_line": "      UnionType that, boolean tolerateUnknowns) {"},
+            {"line_number": 335, "modified_line": "    if (!tolerateUnknowns"},
+            {"line_number": 340, "modified_line": "      if (!hasAlternate(alternate, tolerateUnknowns)) {"},
+            {"line_number": 347, "modified_line": "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"},
+            {"line_number": 349, "modified_line": "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"}
+        ]
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParams(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns) && {"},
+            {"line_number": 204, "modified_line": "      ArrowType thisArrow, boolean tolerateUnknowns) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParams(other.call, true)) {"},
+            {"line_number": 890, "modified_line": "      FunctionType thisFunction, boolean tolerateUnknowns) {"},
+            {"line_number": 908, "modified_line": "        that.typeOfThis, tolerateUnknowns) ||"},
+            {"line_number": 909, "modified_line": "        call.checkArrowEquivalenceHelper(that.call, false);"},
+            {"line_number": 918, "modified_line": "    return this.call.checkArrowEquivalenceHelper(otherType.call, true);"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 492, "modified_line": "    return checkEquivalenceHelper(that, true);"},
+            {"line_number": 500, "modified_line": "    return checkEquivalenceHelper(that, true);"},
+            {"line_number": 514, "modified_line": "    return !checkEquivalenceHelper(that, false);"},
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"},
+            {"line_number": 528, "modified_line": "      if (!tolerateUnknowns) {"},
+            {"line_number": 545, "modified_line": "          that.toMaybeUnionType(), !tolerateUnknowns);"},
+            {"line_number": 550, "modified_line": "          that.toMaybeFunctionType(), !tolerateUnknowns);"},
+            {"line_number": 555, "modified_line": "          that.toMaybeRecordType(), !tolerateUnknowns);"},
+            {"line_number": 565, "modified_line": "            thatParamType.getParameterType(), !tolerateUnknowns);"},
+            {"line_number": 566, "modified_line": "      } else if (!tolerateUnknowns) {"},
+            {"line_number": 571, "modified_line": "      } else {"},
+            {"line_number": 572, "modified_line": "        paramsMatch = true;"},
+            {"line_number": 580, "modified_line": "          thisRootType.checkEquivalenceHelper(thatRootType, !tolerateUnknowns);"},
+            {"line_number": 592, "modified_line": "              that, !tolerateUnknowns);"},
+            {"line_number": 598, "modified_line": "          !tolerateUnknowns);"},
+            {"line_number": 531, "modified_line": "    return true;"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns, int value) {"},
+            {"line_number": 126, "modified_line": "              properties.get(key), tolerateUnknowns) && value == 0) {"},
+            {"line_number": 204, "modified_line": "              (propType.isUnknownType() || altPropType.isUnknownType() || value == 1) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 334, "modified_line": "      UnionType thisUnion, boolean tolerateUnknowns) {"},
+            {"line_number": 335, "modified_line": "    if (tolerateUnknowns"},
+            {"line_number": 340, "modified_line": "      if (hasAlternate(alternate, !tolerateUnknowns)) {"},
+            {"line_number": 347, "modified_line": "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns, int value) {"},
+            {"line_number": 349, "modified_line": "      if (alternate.checkEquivalenceHelper(type, !tolerateUnknowns)) {"}
+        ]
+    }
+][
+    {
+        "file_name": "com/google/javascript/rhino/jstype/ArrowType.java",
+        "target_lines": [
+            ["177", "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"],
+            ["187", "                otherParamType, tolerateUnknowns)) {"],
+            ["204", "      ArrowType that, boolean tolerateUnknowns) {"],
+            ["206", "    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {"],
+            ["209", "    return hasEqualParameters(that, tolerateUnknowns);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 177, "modified_line": "  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {"},
+            {"line_number": 187, "modified_line": "                otherParamType, tolerateUnknowns)) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/FunctionType.java",
+        "target_lines": [
+            ["792", "    if (call.hasEqualParameters(other.call, false)) {"],
+            ["890", "      FunctionType that, boolean tolerateUnknowns) {"],
+            ["908", "        that.typeOfThis, tolerateUnknowns) &&"],
+            ["909", "        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);"],
+            ["918", "    return this.call.checkArrowEquivalenceHelper(otherType.call, false);"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 792, "modified_line": "    if (call.hasEqualParameters(other.call, true)) {"},
+            {"line_number": 890, "modified_line": "      FunctionType that, boolean tolerateUnknowns) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/JSType.java",
+        "target_lines": [
+            ["492", "    return checkEquivalenceHelper(that, false);"],
+            ["500", "    return checkEquivalenceHelper(that, false);"],
+            ["514", "    return !checkEquivalenceHelper(that, true);"],
+            ["520", "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"],
+            ["528", "      if (tolerateUnknowns) {"],
+            ["545", "          that.toMaybeUnionType(), tolerateUnknowns);"],
+            ["550", "          that.toMaybeFunctionType(), tolerateUnknowns);"],
+            ["555", "          that.toMaybeRecordType(), tolerateUnknowns);"],
+            ["565", "            thatParamType.getParameterType(), tolerateUnknowns);"],
+            ["566", "      } else if (tolerateUnknowns) {"],
+            ["571", "      } else {"],
+            ["572", "        paramsMatch = false;"],
+            ["580", "          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);"],
+            ["592", "              that, tolerateUnknowns);"],
+            ["598", "          tolerateUnknowns);"],
+            ["531", "//"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 520, "modified_line": "  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/RecordType.java",
+        "target_lines": [
+            ["118", "      RecordType otherRecord, boolean tolerateUnknowns) {"],
+            ["126", "              properties.get(key), tolerateUnknowns)) {"],
+            ["204", "              (propType.isUnknownType() || altPropType.isUnknownType() ||"],
+            ["205", "                  altPropType.isEquivalentTo(propType))) {"],
+            ["268", "      if (!propA.isUnknownType() && !propB.isUnknownType()) {"],
+            ["280", "          }"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 118, "modified_line": "      RecordType otherRecord, boolean tolerateUnknowns) {"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/jstype/UnionType.java",
+        "target_lines": [
+            ["334", "      UnionType that, boolean tolerateUnknowns) {"],
+            ["335", "    if (!tolerateUnknowns"],
+            ["340", "      if (!hasAlternate(alternate, tolerateUnknowns)) {"],
+            ["347", "  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {"],
+            ["349", "      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {"]
+        ],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 334, "modified_line": "      UnionType that, boolean tolerateUnknowns) {"}
+        ]
+    }
+]

@@ -1,0 +1,76 @@
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 224, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name']}, {'line_number': 225, 'new_lines': ['    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name']}, {'line_number': 233, 'new_lines': ['    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode']}, {'line_number': 111, 'new_lines': ['    // Inserted new line(s) to fix the bug']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 111, 'modified_line': 'public static Node tryFinally(Node tryBody, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 111, 'new_lines': ['public static Node tryFinally(Node tryBody, Node finallyBody) {']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': 'public static Node tryCatchFinally(Node tryBody, Node catchNode, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 237, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name', '    Preconditions.checkState(catchNode.isLabelName()); // Check if catchNode is a label name', '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 224, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name']}, {'line_number': 225, 'new_lines': ['    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name']}, {'line_number': 233, 'new_lines': ['    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode']}, {'line_number': 111, 'new_lines': ['    // Inserted new line(s) to fix the bug']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': 'public static Node tryCatchFinally(Node tryBody, Node catchNode, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': 'public static Node tryFinally(Node tryBody, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': 'public static Node tryFinally(Node tryBody, Node catchNode, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': 'public static Node tryFinally(Node tryBody, Node catchNode, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 224, 'modified_line': '    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name'}, {'line_number': 225, 'modified_line': '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name'}, {'line_number': 233, 'modified_line': '    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 111, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name', '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name', '    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 111, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name', '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name', '    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 111, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name', '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name', '    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 224, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name']}, {'line_number': 225, 'new_lines': ['    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name']}, {'line_number': 233, 'new_lines': ['    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode']}, {'line_number': 111, 'new_lines': ['    // Inserted new line(s) to fix the bug']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 224, 'modified_line': '    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name'}, {'line_number': 225, 'modified_line': '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name'}, {'line_number': 233, 'modified_line': '    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode'}, {'line_number': 111, 'modified_line': '    // Inserted new line(s) to fix the bug'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 224, 'modified_line': '    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name'}, {'line_number': 225, 'modified_line': '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name'}, {'line_number': 233, 'modified_line': '    Node catchBody = block(catchNode).copyInformationFrom(catchNode); // Copy information from catchNode'}, {'line_number': 111, 'modified_line': '    // Inserted new line(s) to fix the bug'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': 'public static Node tryFinally(Node tryBody, Node catchNode, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': 'public static Node tryFinally(Node tryBody, Node finallyBody) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 237, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name', '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': '    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name'}, {'line_number': 238, 'modified_line': '    Preconditions.checkState(catchNode.isLabelName()); // Check if catchNode is a label name'}, {'line_number': 239, 'modified_line': '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'insertions': [{'line_number': 237, 'new_lines': ['    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name']}, {'line_number': 238, 'new_lines': ['    Preconditions.checkState(catchNode.isLabelName()); // Check if catchNode is a label name']}, {'line_number': 239, 'new_lines': ['    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': '    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name'}, {'line_number': 238, 'modified_line': '    Preconditions.checkState(catchNode.isLabelName()); // Check if catchNode is a label name'}, {'line_number': 239, 'modified_line': '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': '    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name'}, {'line_number': 238, 'modified_line': '    Preconditions.checkState(catchNode.isLabelName()); // Check if catchNode is a label name'}, {'line_number': 239, 'modified_line': '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/rhino/IR.java', 'modifications': [{'line_number': 237, 'modified_line': '    Preconditions.checkState(tryBody.isLabelName()); // Check if tryBody is a label name'}, {'line_number': 238, 'modified_line': '    Preconditions.checkState(catchNode.isLabelName()); // Check if catchNode is a label name'}, {'line_number': 239, 'modified_line': '    Preconditions.checkState(finallyBody.isLabelName()); // Check if finallyBody is a label name'}]}]
+
+

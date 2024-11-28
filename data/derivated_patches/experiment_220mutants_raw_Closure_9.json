@@ -1,0 +1,663 @@
+
+  { "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+    "insertions": [
+        { "line_number": 119,
+          "new_lines": [
+            "        if (script.getSourceFileName().contains(\"foo\")) {", 
+            "            moduleName = \"module$[]\" + moduleName.substring(moduleName.indexOf(\"foo\") + 3);",
+            "        }"
+          ]
+        }
+    ],
+    "deletions": [],
+    "modifications": []
+  }
+
+  
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Fixing the backslashes in the filename",
+                        "    filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Replacing backslashes with forward slashes in the filename",
+                        "    filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Normalize file path by replacing backslashes with forward slashes",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Fixing the file path by replacing backslashes with forward slashes",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Correcting file path format by replacing backslashes with forward slashes",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Fix the path by replacing backslashes with forward slashes",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Update file path to replace backslashes with forward slashes",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Replace backslashes with forward slashes in file path",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Adjust file path to use forward slashes instead of backslashes",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "// Fix the filename by replacing backslashes with forward slashes",
+                        "filename = filename.replace(\"\\\\\", \"/\");"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Normalize backslashes in the filename",
+                        "    filename = filename.replace('\\\\', '/');"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Normalize forward slashes in the filename",
+                        "    filename = filename.replace('/', '\\\\');"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Replace backslashes with forward slashes in the filename",
+                        "    filename = filename.replace('\\\\', '/');"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // No normalization needed for the filename",
+                        "    // filename = filename;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Perform additional filename processing here",
+                        "    // filename = filename;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Handle special cases for filename normalization",
+                        "    // filename = filename;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Check for null filename before normalization",
+                        "    // if (filename != null) {"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Add logging for filename normalization",
+                        "    // System.out.println(\"Normalizing filename: \" + filename);"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('/', '\\\\')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('\\\\', '/')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('\\\\', '\\')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'bar')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('baz', 'qux')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', '')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('', 'bar')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'baz')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'baz').replace('bar', 'qux')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'baz').replace('baz', 'qux')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'baz').replace('qux', 'quux')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'baz').replace('qux', '')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'baz').replace('', 'qux')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', 'baz').replace('', '')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', '').replace('baz', 'qux')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', '').replace('qux', 'quux')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', '').replace('qux', '')));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('foo', '').replace('', 'qux')));"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Normalize forward slashes in the filename",
+                        "    filename = filename.replace('/', '\\');"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Normalize backslashes in the filename",
+                        "    filename = filename.replace('/', '\\');"
+                    ]
+                },
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(filename.replace('/', '\\')));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Convert filename to lowercase",
+                        "    filename = filename.toLowerCase();"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Add prefix to the filename",
+                        "    filename = \"prefix_\" + filename;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Remove file extension from the filename",
+                        "    filename = filename.substring(0, filename.lastIndexOf('.'));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Trim leading and trailing whitespaces from the filename",
+                        "    filename = filename.trim();"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Add suffix to the filename",
+                        "    filename = filename + \"_suffix\";"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Check if filename is empty",
+                        "    if (filename.isEmpty()) { return; }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Replace all occurrences of 'foo' with 'bar' in the filename",
+                        "    filename = filename.replaceAll(\"foo\", \"bar\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Check if filename ends with '.js'",
+                        "    if (!filename.endsWith(\".js\")) { return; }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Add a prefix to the filename based on its length",
+                        "    filename = (filename.length() < 10) ? \"short_\" + filename : \"long_\" + filename;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Check if filename contains 'foo'",
+                        "    if (!filename.contains(\"foo\")) { return; }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Reverse the filename",
+                        "    filename = new StringBuilder(filename).reverse().toString();"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Convert filename to uppercase",
+                        "    filename = filename.toUpperCase();"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Check if filename starts with 'foo'",
+                        "    if (!filename.startsWith(\"foo\")) { return; }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Double the filename",
+                        "    filename = filename + filename;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Get the first 5 characters of the filename",
+                        "    filename = filename.substring(0, Math.min(filename.length(), 5));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Add a suffix to the filename based on its length",
+                        "    filename = (filename.length() < 10) ? filename + \"_short\" : filename + \"_long\";"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "    // Remove consecutive occurrences of '/' in the filename",
+                        "    filename = filename.replaceAll(\"/+", 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,

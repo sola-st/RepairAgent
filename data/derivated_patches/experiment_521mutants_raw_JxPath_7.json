@@ -1,0 +1,549 @@
+[
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [19, 20], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["34", "    public Object computeValue(EvalContext context) {"], ["35", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["36", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["37", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [19, 20], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [19, 20], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["34", "    public Object computeValue(EvalContext context) {"], ["35", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["36", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["37", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [19, 20], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["19", "//"], ["33", "//"], ["42", "//"], ["43", "//"], ["44", "//"], ["45", "//"], ["46", "//"], ["47", "//"]], "insertions": [], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "return l == r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "return l == r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["19", "import org.apache.commons.jxpath.ri.EvalContext;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["33", "import org.apache.commons.jxpath.ri.InfoSetUtil;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["42", "    public Object computeValue(EvalContext context) {"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["43", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["44", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["45", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["46", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["47", ""]], "insertions": [], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+    "target_lines": [
+        ["33", "    public Object computeValue(EvalContext context) {"], 
+        ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], 
+        ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], 
+        ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]
+    ], 
+    "insertions": [
+        {"line_number": 34, "new_lines": ["        double result = l - r;"]},
+        {"line_number": 35, "new_lines": ["        if (result > 0) { return Boolean.TRUE; } else { return Boolean.FALSE; }"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+    "target_lines": [
+        ["33", "    public Object computeValue(EvalContext context) {"], 
+        ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], 
+        ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], 
+        ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]
+    ], 
+    "insertions": [
+        {"line_number": 34, "new_lines": ["        double diff = l - r;"]},
+        {"line_number": 35, "new_lines": ["        return diff > 0 ? Boolean.TRUE : Boolean.FALSE;"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+    "target_lines": [
+        ["33", "    public Object computeValue(EvalContext context) {"], 
+        ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], 
+        ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], 
+        ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]
+    ], 
+    "insertions": [
+        {"line_number": 34, "new_lines": ["        double subtraction = l - r;"]},
+        {"line_number": 35, "new_lines": ["        return subtraction > 0 ? Boolean.TRUE : Boolean.FALSE;"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+    "target_lines": [
+        ["33", "    public Object computeValue(EvalContext context) {"], 
+        ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], 
+        ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], 
+        ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]
+    ], 
+    "insertions": [
+        {"line_number": 34, "new_lines": ["        double diff = l - r;"]},
+        {"line_number": 35, "new_lines": ["        return diff > 0 ? true : false;"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+    "target_lines": [
+        ["33", "    public Object computeValue(EvalContext context) {"], 
+        ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], 
+        ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], 
+        ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]
+    ], 
+    "insertions": [
+        {"line_number": 34, "new_lines": ["        double diff = l - r;"]},
+        {"line_number": 35, "new_lines": ["        return diff > 0 ? true : false;"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    }
+][
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l < r ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l != r ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l >= r ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l != r ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? false : true;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? 1 : 0;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? 0 : 1;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? 1 : 0;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? 0 : 1;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r > l ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r > l ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r == l ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r == l ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? false : true;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? 1 : 0;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? 0 : 1;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? 1 : 0;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? 0 : 1;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r > l ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r > l ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r == l ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return r == l ? Boolean.FALSE : Boolean.TRUE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l == r ? false : true;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? 1 : 0;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 34, "modified_line": "        return l > r ? 0 : 1;"}]}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 33, "new_lines": ["        // Performing a greater than operation between l and r"]} , {"line_number": 35, "new_lines": ["        // l is greater than r: " + (l > r)]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 34, "new_lines": ["        // l value: " + l]}, {"line_number": 36, "new_lines": ["        // r value: " + r]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // DEBUG: l = " + l + ", r = " + r]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Checking the result of l > r operation: " + (l > r)]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 35, "new_lines": ["        // Comparing l and r for greater than operation"]} , {"line_number": 36, "new_lines": ["        // Result of comparison: " + (l > r)]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Result of greater than operation: " + (l > r)]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Check if l is greater than r and return the result"]} , {"line_number": 36, "new_lines": ["        // Return Boolean value after greater than operation: " + (l > r)]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 34, "new_lines": ["        // l value before comparison: " + l]}, {"line_number": 35, "new_lines": ["        // r value before comparison: " + r]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Check if l is greater than r and return Boolean value"]} , {"line_number": 36, "new_lines": ["        // Boolean result of l > r: " + (l > r)]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Evaluate whether l is greater than r and return the result"]} , {"line_number": 36, "new_lines": ["        // Result of l > r comparison: " + (l > r)]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 33, "new_lines": ["        if (l > r) {", "            return Boolean.TRUE;", "        } else {", "            return Boolean.FALSE;", "        }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? null : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? null : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? null : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? null : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? null : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? null : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 34, "new_lines": ["        if (l >= r) {", "            return Boolean.TRUE;", "        } else {", "            return Boolean.FALSE;", "        }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l >= r ? Boolean.TRUE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.TRUE : null;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? null : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l <= r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l <= r ? Boolean.TRUE : null;"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        // Fixing bug by ensuring proper comparison result\n        return l > r;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by adjusting the comparison logic\n        return l < r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by changing the comparison operator\n        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by considering NaN values\n        return Double.compare(l, r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by ensuring strict comparison\n        return Double.compare(l, r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by changing the return value\n        return l > r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by handling edge cases\n        return (int) (l - r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by using strict comparison\n        return l > r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by ensuring proper boolean result\n        return l > r ? true : false;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by changing to explicit comparison\n        return l > r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by considering NaN values\n        return Double.isNaN(l) || (l > r);"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by ensuring strict comparison\n        return Double.compare(l, r) == 1 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by simplifying the return statement\n        return l > r;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        // Fixing bug by changing the comparison operator\n        return l <= r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l >= r;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l < r;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l == r;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l != r;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return l;"]}], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", 
+     "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+     "insertions": [{"line_number": 36, "new_lines": ["        return r;"]}], 
+     "deletions": [], 
+     "modifications": []
+    }
+][
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l > r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l < r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l >= r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l == r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return r < l;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return r > l;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l != r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l + r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l - r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l * r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l / r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return Math.max(l, r);"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return Math.min(l, r);"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return Math.abs(l - r);"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return Math.pow(l, r);"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return Math.sqrt(l * l - r * r);"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l % r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l & r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l | r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l ^ r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l << r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l >> r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l >>> r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l == r || l > r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return l > r && l == r;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return r > l ? Boolean.TRUE : Boolean.FALSE;"}]},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 36, "modified_line": "        return r == l ? Boolean.TRUE : Boolean.FALSE;"}]}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l <= r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l <= r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return true ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return false ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return true ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return false ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return null ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return null ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        if (l > r) {", "            return Boolean.TRUE;", "        } else {", "            return Boolean.FALSE;", "        }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [36], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l > r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l > r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 37, "new_lines": ["        return l <= r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]],
+    "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return r < l ? Boolean.TRUE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.TRUE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["19", "import org.apache.commons.jxpath.ri.EvalContext;"], ["20", "import org.apache.commons.jxpath.ri.InfoSetUtil;"], ["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 19, "new_lines": ["import org.apache.commons.jxpath.ri.EvalContext;"]}, {"line_number": 20, "new_lines": ["import org.apache.commons.jxpath.ri.InfoSetUtil;"]}, {"line_number": 33, "new_lines": ["    public Object computeValue(EvalContext context) {"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 36, "new_lines": ["        return l > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["20", "import org.apache.commons.jxpath.ri.InfoSetUtil;"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"]], 
+    "insertions": [{"line_number": 20, "new_lines": ["import org.apache.commons.jxpath.ri.InfoSetUtil; // Importing InfoSetUtil for data conversion"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"]], 
+    "insertions": [{"line_number": 34, "new_lines": ["        double l = args[0].computeValue(context); // Without converting to double"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"]], 
+    "insertions": [{"line_number": 34, "new_lines": ["        double l = InfoSetUtil.doubleValue(args[0].computeValue(context)); // Keeping conversion to double"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["20", "import org.apache.commons.jxpath.ri.InfoSetUtil;"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"]], 
+    "insertions": [{"line_number": 20, "new_lines": ["import org.apache.commons.jxpath.ri.InfoSetUtil; // Adding a comment for InfoSetUtil import"]}], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["19", "import org.apache.commons.jxpath.ri.EvalContext;"], ["20", "import org.apache.commons.jxpath.ri.InfoSetUtil;"], ["33", "    public Object computeValue(EvalContext context) {"], ["34", "        double l = InfoSetUtil.doubleValue(args[0].computeValue(context));"], ["35", "        double r = InfoSetUtil.doubleValue(args[1].computeValue(context));"], ["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], 
+    "insertions": [{"line_number": 19, "new_lines": ["import org.apache.commons.jxpath.ri.EvalContext; // Importing EvalContext for context access"]}], 
+    "deletions": [], 
+    "modifications": []
+    }
+][
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.FALSE;"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : Boolean.FALSE; // Mutation 1"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE; // Mutation 2"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE; // Mutation 3"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE; // Mutation 4"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE; // Mutation 5"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l >= r ? Boolean.TRUE : Boolean.TRUE; // Mutation 6"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l < r ? Boolean.FALSE : Boolean.TRUE; // Mutation 7"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l != r ? Boolean.TRUE : Boolean.TRUE; // Mutation 8"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l == r ? Boolean.TRUE : Boolean.FALSE; // Mutation 9"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "deletions": [36]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r; // Mutation 11"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r; // Mutation 12"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r; // Mutation 13"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r; // Mutation 14"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r; // Mutation 15"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l >= r; // Mutation 16"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l < r; // Mutation 17"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l != r; // Mutation 18"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "modifications": [{"line_number": 36, "modified_line": "        return l == r; // Mutation 19"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "deletions": [36]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.TRUE : Boolean.FALSE; // Mutation 21"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE; // Mutation 22"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE; // Mutation 23"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE; // Mutation 24"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE; // Mutation 25"]}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "modifications": [{"line_number": 36, "modified_line": "        return l >= r ? Boolean.TRUE : Boolean.TRUE; // Mutation 26"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "modifications": [{"line_number": 36, "modified_line": "        return l < r ? Boolean.FALSE : Boolean.TRUE; // Mutation 27"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "modifications": [{"line_number": 36, "modified_line": "        return l != r ? Boolean.TRUE : Boolean.TRUE; // Mutation 28"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "modifications": [{"line_number": 36, "modified_line": "        return l == r ? Boolean.TRUE : Boolean.FALSE; // Mutation 29"}]}
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "deletions": [36]}
+]```python
+[
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["34", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l == r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l != r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return r > l ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return r >= l ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return r == l ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return r != l ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l + r > 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l - r > 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l * r > 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l / r > 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l * r >= 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l - r >= 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l + r >= 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l / r >= 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return Math.abs(l - r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return Math.abs(l + r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return Math.abs(l * r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return Math.abs(l / r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l * r != 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l + r != 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l - r != 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l / r != 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []}
+]
+```[
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l < r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r < l ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r <= l ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r > l ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r >= l ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l <= r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r != l ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r == l ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r < l ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r <= l ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r >= l ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r > l ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r <= l ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return r != l ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []}
+]```python
+[
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return Double.compare(l, r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return Double.compare(l, r) >= 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return Double.compare(l, r) < 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return Double.compare(l, r) <= 0 ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l >= r;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l < r;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l <= r;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThanOrEqual.java", "target_lines": [["37", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThan.java", "target_lines": [["36", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "        return l < r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationLessThanOrEqual.java", "target_lines": [["37", "        return l <= r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["19", "//"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["33", "//"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["42", "//"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["43", "//"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["44", "//"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["45", "//"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["46", "//"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationRelationalExpression.java", "target_lines": [["47", "//"]], "insertions": [], "deletions": [], "modifications": []}
+]
+``````json
+[
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l > r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l >= r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l == r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l != r ? Boolean.FALSE : Boolean.TRUE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l + r > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return l - r > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/jxpath/ri/compiler/CoreOperationGreaterThan.java", "target_lines": [["36", "        return l > r ? Boolean.TRUE : Boolean.FALSE;"]], "insertions": [{"line_number": 36, "new_lines": ["        return (l + r) > 0 ? Boolean.TRUE : Boolean.FALSE;"]}], "deletions": [], "modifications": []}
+]
+```

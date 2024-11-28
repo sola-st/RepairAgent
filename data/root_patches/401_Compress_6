@@ -1,0 +1,70 @@
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'insertions': [{'line_number': 464, 'new_lines': ['                if (name == null && other.name != null) {', '                    return false;']}, {'line_number': 466, 'new_lines': ['            } else if (name != null && !name.equals(other.name)) {', '                return false;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name != null && !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'modifications': [{'line_number': 466, 'modified_line': '        } else if (name == null ? other.name != null : !name.equals(other.name)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'modifications': [{'line_number': 466, 'modified_line': '        } else if (name == null ? other.name != null : !name.equals(other.name)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'modifications': [{'line_number': 466, 'modified_line': '        } else if (name == null ? (other.name != null) : !name.equals(other.name)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'modifications': [{'line_number': 462, 'modified_line': '        if (name == null ? other.name != null : !name.equals(other.name)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'insertions': [{'line_number': 464, 'new_lines': ['                if (name == null && other.name != null) {', '                    return false;']}, {'line_number': 466, 'new_lines': ['            } else if (name != null && !name.equals(other.name)) {', '                return false;']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'modifications': [{'line_number': 466, 'modified_line': '        } else if (name == null ? (other.name != null) : !name.equals(other.name)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'modifications': [{'line_number': 466, 'modified_line': '        } else if (name == null ? (other.name != null) : !name.equals(other.name)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'insertions': [{'line_number': 464, 'new_lines': ['                if (name == null && other.name != null) {', '                    return false;']}, {'line_number': 466, 'new_lines': ['            } else if (name != null && !name.equals(other.name)) {', '                return false;']}], 'deletions': [462, 463, 466]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'modifications': [{'line_number': 466, 'modified_line': '        } else if (name == null ? (other.name != null) : !name.equals(other.name)) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/zip/ZipArchiveEntry.java', 'target_lines': [['462', '        if (name == null) {'], ['463', '            if (other.name != null) {'], ['466', '        } else if (!name.equals(other.name)) {'], ['64', '//']], 'insertions': [{'line_number': 64, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 462, 'new_lines': ['        if (name == null && other.name != null) {', '            return false;']}, {'line_number': 463, 'new_lines': ['            if (other.name == null) {', '                return false;']}, {'line_number': 466, 'new_lines': ['        } else if (name == null || !name.equals(other.name)) {', '            return false;']}], 'deletions': [64], 'modifications': []}]
+
+

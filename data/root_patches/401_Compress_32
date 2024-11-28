@@ -1,0 +1,25 @@
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'modifications': [{'line_number': 501, 'modified_line': 'try { currEntry.setGroupId(Integer.parseInt(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}, {'line_number': 505, 'modified_line': 'try { currEntry.setUserId(Integer.parseInt(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'modifications': [{'line_number': 501, 'modified_line': 'applyPaxHeadersToCurrentEntry(paxHeaders);'}, {'line_number': 505, 'modified_line': '// applyPaxHeadersToCurrentEntry(paxHeaders); // Commenting out the direct calls to setGroupId and setUserId'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'modifications': [{'line_number': 501, 'modified_line': 'try { currEntry.setGroupId(safelyParseInteger(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}, {'line_number': 505, 'modified_line': 'try { currEntry.setUserId(safelyParseInteger(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'modifications': [{'line_number': 501, 'modified_line': 'try { currEntry.setGroupId(safelyParseInteger(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}, {'line_number': 505, 'modified_line': 'try { currEntry.setUserId(safelyParseInteger(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}, {'line_number': 511, 'modified_line': 'try { currEntry.setDevMinor(safelyParseInteger(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}, {'line_number': 515, 'modified_line': 'try { currEntry.setDevMajor(safelyParseInteger(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'modifications': [{'line_number': 501, 'modified_line': 'currEntry.setGroupId(safelyParseInteger(val)); // Safely parse and set group id'}, {'line_number': 505, 'modified_line': 'currEntry.setUserId(safelyParseInteger(val)); // Safely parse and set user id'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'modifications': [{'line_number': 501, 'modified_line': 'try { currEntry.setGroupId(Integer.parseUnsignedInt(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}, {'line_number': 505, 'modified_line': 'try { currEntry.setUserId(Integer.parseUnsignedInt(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'modifications': [{'line_number': 501, 'modified_line': 'try { currEntry.setGroupId(Long.parseLong(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}, {'line_number': 505, 'modified_line': 'try { currEntry.setUserId(Long.parseLong(val)); } catch (NumberFormatException e) { /* Handle the exception */ }'}]}]
+
+

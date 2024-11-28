@@ -1,0 +1,85 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ['        if (n.getType() == Token.SWITCH) {', '            return tryRemoveUnconditionalBranching(n.getFirstChild());', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ['        if (n != null && n.getType() == Token.SWITCH) {', '            return tryRemoveUnconditionalBranching(n.getFirstChild());', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ['    void tryRemoveUnconditionalBranching(Node n) {', '        if (NodeUtil.isControlStructure(n)) {', '            if (n.isBreak() || n.isContinue() || n.isReturn()) {', '                Node parent = n.getParent();', '                Node replacement = null;', '', '                if (n.isBreak() || n.isContinue()) {', '                    Node target = n.getFirstChild();', '                    replacement = IR.block();', '                    replacement.useSourceInfoIfMissingFromForTree(n);', '                    replacement.addChildToFront(IR.doWhile(IR.falseNode(), IR.breakNode(target)).useSourceInfoFrom(n));', '                } else if (n.isReturn()) {', '                    replacement = IR.block();', '                    replacement.useSourceInfoIfMissingFromForTree(n);', '                    replacement.addChildToFront(IR.returnNode());', '                }', '', '                parent.replaceChild(n, replacement);', '            }', '        }', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ['        if (n != null && n.getType() == Token.SWITCH) {', '            return tryRemoveUnconditionalBranching(n.getFirstChild());', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'modifications': [{'line_number': 183, 'modified_line': '          Node fallThrough = tryRemoveUnconditionalBranching(computeFollowing(n));'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'modifications': [{'line_number': 183, 'modified_line': '          Node fallThrough = tryRemoveUnconditionalBranching(computeFollowing(n)); // Adjusted logic to handle the bug more effectively'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 161, 'new_lines': ['        if (n.getType() == Token.BLOCK && n.hasChildren()) {', '          Node first = n.getFirstChild();', '          return tryRemoveUnconditionalBranching(first);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 160, 'new_lines': ['        if (n.getType() == Token.BLOCK) {', '          if (n.hasChildren()) {', '            Node first = n.getFirstChild();', '            return tryRemoveUnconditionalBranching(first);', '          }', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 160, 'new_lines': ['        if (n != null && n.getType() == Token.BLOCK && n.hasChildren()) {', '          Node first = n.getFirstChild();', '          return tryRemoveUnconditionalBranching(first);']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'modifications': [{'line_number': 196, 'modified_line': '    if (n != null && n.getType() == Token.SWITCH) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'modifications': [{'line_number': 196, 'modified_line': '    if (n != null && n.getType() == Token.SWITCH) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ['    if (n != null && n.getType() == Token.SWITCH) {', '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'modifications': [{'line_number': 196, 'modified_line': '    if (n != null && n.getType() == Token.SWITCH) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'modifications': [{'line_number': 196, 'modified_line': '    if (n != null && n != undefined && n.getType() == Token.SWITCH) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n.getType() == Token.SWITCH) {"]}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n.getType() == Token.SWITCH) {"]}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n.getType() == Token.SWITCH) {"]}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n.getType() == Token.SWITCH) {"]}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n != 'null' && n.getType() == Token.SWITCH) {"]}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n != 'undefined' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n != 'undefined' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n != 'undefined' && n != null && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n != 'undefined' && n != null && n != 'null' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n != 'undefined' && n != null && n != 'null' && n != 'undefined' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/UnreachableCodeElimination.java', 'insertions': [{'line_number': 196, 'new_lines': ["    if (n != null && n != undefined && n != 'undefined' && n != 'null' && n != 'null' && n != 'undefined' && n != 'undefined' && n != null && n != 'null' && n != 'undefined' && n != 'undefined' && n.getType() == Token.SWITCH) {", '        return tryRemoveUnconditionalBranching(n.getFirstChild());', '    }']}]}]
+
+

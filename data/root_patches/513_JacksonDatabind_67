@@ -1,0 +1,25 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1403, 'modified_line': 'return StdKeyDeserializers.constructEnumKeyDeserializer(ctxt.getConfig(), type);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java', 'target_lines': [['1403', '                return _createEnumKeyDeserializer(ctxt, type);'], ['1405', '            deser = StdKeyDeserializers.findStringBasedKeyDeserializer(config, type);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1403, 'modified_line': 'return StdKeyDeserializers.constructEnumKeyDeserializer(ctxt.getConfig(), type);'}, {'line_number': 1405, 'modified_line': '// Modify this line as needed to fix the bug'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1403, 'modified_line': '// Refine the logic for custom enum deserializer handling in _createEnumKeyDeserializer method to address enum key deserialization issue'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java', 'target_lines': [['1403', '                return _createEnumKeyDeserializer(ctxt, type);'], ['1405', '            deser = StdKeyDeserializers.findStringBasedKeyDeserializer(config, type);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1403, 'modified_line': '// Refine the logic for custom enum deserializer handling in _createEnumKeyDeserializer method to address enum key deserialization issue'}, {'line_number': 1405, 'modified_line': '// Modify this line as needed to fix the bug'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1403, 'modified_line': '// Refine the logic for custom enum deserializer handling in _createEnumKeyDeserializer method to address enum key deserialization issue'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1403, 'modified_line': '// Refine the logic for custom enum deserializer handling in _createEnumKeyDeserializer method to address enum key deserialization issue'}, {'line_number': 1403, 'modified_line': 'protected KeyDeserializer _createEnumKeyDeserializer(Class<?> enumType, DeserializationConfig config, DeserializerFactoryConfig factoryConfig, EnumValues enumResolver, JsonDeserializer<?> valueDeser) {'}, {'line_number': 1405, 'modified_line': 'if (enumType == null) {'}, {'line_number': 1406, 'modified_line': '/* Since Enum key type is null, return null for key deserializer */'}, {'line_number': 1407, 'modified_line': 'return null;'}, {'line_number': 1409, 'modified_line': 'return StdKeyDeserializers.constructEnumKeyDeserializer(enumResolver, enumType);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BasicDeserializerFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1403, 'modified_line': '// Refine the logic for custom enum deserializer handling in _createEnumKeyDeserializer method to address enum key deserialization issue'}, {'line_number': 1405, 'modified_line': '// Modify the logic for finding key deserializer based on the enum type to ensure correct deserialization'}]}]
+
+

@@ -1,0 +1,28 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java', 'insertions': [{'line_number': 110, 'new_lines': ['                if (delegateCreator != null && delegateType == null) {', '                    delegateType = _valueInstantiator.constructType(delegateCreator.resolveType(ctxt.getConfig()));', '                }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java', 'target_lines': [['107', '            AnnotatedWithParams delegateCreator = _valueInstantiator.getDelegateCreator();'], ['109', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java', 'target_lines': [['107', '            AnnotatedWithParams delegateCreator = _valueInstantiator.getDelegateCreator();'], ['109', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['            if (delegateCreator != null) {']}, {'line_number': 109, 'new_lines': ['                JavaType delegateType = _valueInstantiator.getDelegateType(ctxt.getConfig());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java', 'insertions': [{'line_number': 110, 'new_lines': ['                if (delegateCreator != null && delegateType == null) {', '                    delegateType = _valueInstantiator.constructType(delegateCreator.resolveType(ctxt.getConfig()));', '                }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java', 'target_lines': [['107', '            AnnotatedWithParams delegateCreator = _valueInstantiator.getDelegateCreator();'], ['109', '//']], 'insertions': [{'line_number': 109, 'new_lines': ['                JavaType delegateType = _valueInstantiator.getDelegateType(ctxt.getConfig());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java', 'target_lines': [['107', '            AnnotatedWithParams delegateCreator = _valueInstantiator.getDelegateCreator();'], ['109', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['            if (delegateCreator != null) {']}, {'line_number': 109, 'new_lines': ['                JavaType delegateType = _valueInstantiator.getDelegateType(ctxt.getConfig());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/creators/DelegatingArrayCreator2324Test$ImmutableBag.java', 'insertions': [{'line_number': 0, 'new_lines': ['public ImmutableBag() {', '// Default no-arguments constructor', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/std/StringCollectionDeserializer.java', 'target_lines': [['107', '            AnnotatedWithParams delegateCreator = _valueInstantiator.getDelegateCreator();'], ['109', '//']], 'insertions': [{'line_number': 107, 'new_lines': ['            if (delegateCreator != null) {']}, {'line_number': 109, 'new_lines': ['                JavaType delegateType = _valueInstantiator.getDelegateType(ctxt.getConfig());']}], 'deletions': [], 'modifications': []}]
+
+

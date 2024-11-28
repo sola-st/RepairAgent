@@ -1,0 +1,37 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'return node.isObjectLit() && node.getParent().isAssign() && node.getParent().getParent().isExprResult() && node.getParent().getFirstChild() == node;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'return node.isObjectLit() && node.getParent().isAssign() && node.getParent().getParent().isExprResult() && node.getParent().getFirstChild() == node && checkState(val.isObjectLit()) && checkState(object.isObjectLit()) && checkState(val.isObjectLit()) && removeChild(ref.getParent()) && replaceChild(ref.getParent()) && checkState(parent.getFirstChild()) && for (Node child = val.getFirstChild()) && for (Node child = val.getFirstChild()) && for (Node key = object.getFirstChild()) && for (Node key = val.getFirstChild();'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'public boolean isInlinableObject(Node objLit) {\n        // Check if the object literal is eligible for inlining\n        if (objLit == null || objLit.getType() != Token.OBJECTLIT) {\n            return false;\n        }\n\n        // Check if the object literal has only one property (key-value pair)\n        Node objProp = objLit.getFirstChild();\n        if (objProp == null || objProp.getNext() != null) {\n            return false;\n        }\n\n        // Check if the property value is an object literal or a function\n        Node propValue = objProp.getFirstChild().getNext();\n        if (propValue == null || (propValue.getType() != Token.OBJECTLIT && propValue.getType() != Token.FUNCTION)) {\n            return false;\n        }\n\n        // Check if the property key is a string\n        Node propName = objProp.getFirstChild();\n        return propName.getType() == Token.STRING;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'public boolean isInlinableObject(Node node) {\n        // Check if the node is an object literal\n        if (node.getToken() == Token.OBJECTLIT) {\n            // Check if the object literal has properties\n            return node.hasChildren();\n        }\n        return false;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'public boolean isInlinableObject(Node node) {\n        // Check if the node is an object literal\n        if (node != null && node.getToken() == Token.OBJECTLIT) {\n            // Check if the object literal has properties\n            return node.hasChildren();\n        }\n        return false;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'return node.isObjectLit() && node.getParent().isAssign() && node.getParent().getParent().isExprResult() && node.getParent().getFirstChild() == node;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'return node.isObjectLit() && node.getParent() != null && node.getParent().isAssign() && node.getParent().getParent() != null && node.getParent().getParent().isExprResult() && node.getParent().getFirstChild() == node;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'return node != null && node.isObjectLit() && node.getParent() != null && node.getParent().isAssign() && node.getParent().getParent() != null && node.getParent().getParent().isExprResult() && node.getParent().getFirstChild() == node;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'return node != null && node.isObjectLit() && node.getParent() != null && node.getParent().isAssign() && node.getParent().getParent() != null && node.getParent().getParent().isExprResult() && node.getParent().getFirstChild() == node;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': 'public boolean isInlinableObject(Node node) {\n        // Check if the node is an object literal\n        if (node.isObjectLit()) {\n            // Check if the object literal has properties\n            if (node.hasChildren()) {\n                return true; // Return true if the object literal has properties\n            }\n        }\n        return false; // Return false if the node is not an object literal or does not have properties\n    }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineObjectLiterals.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 176, 'modified_line': '// Refining object property handling logic to address the bug\npublic boolean isInlinableObject(Node node) {\n    if (node != null && node.getToken() == Token.OBJECTLIT) {\n        return node.hasChildren();\n    }\n    return false;\n}'}]}]
+
+

@@ -1,0 +1,715 @@
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines":["Element el = doc.child(0); // Inserted to fix IndexOutOfBoundsException"]} , {"line_number": 94, "new_lines":["// Inserted to fix IndexOutOfBoundsException"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines":["// Adding a null check for doc before accessing child(0)"]} , {"line_number": 94, "new_lines":["// Adding a null check for el before performing operations"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines":["Element el = doc.childNode(0); // Fixed IndexOutOfBoundsException by using childNode"]} , {"line_number": 94, "new_lines":["// Added null check for el to prevent NullPointerException"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines":["// Ensure doc has children before accessing Element"]} , {"line_number": 94, "new_lines":["// Check if el is not null before performing operations"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines":["Element el = doc.selectFirst(\"*\"); // Get first child element to avoid IndexOutOfBoundsException"]} , {"line_number": 94, "new_lines":["// Add null check for el to prevent NullPointerException"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 1) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() >= 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() >= 1) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            // Handle empty children case"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() == 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() == 1) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() != 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() != 1) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            // Add a comment here to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            // Add a comment here to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.childNodes().size() > 0) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            // Add a comment here to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.childNodes().size() > 0) {", "            Element el = doc.childNodes().get(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            // Add a comment here to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.children().first();", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            // Add a comment here to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.children().first();", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            // insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            // Add a comment here to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.children().first();", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            insert.attributes().clear(); // Fix the bug by clearing attributes"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.children().first();", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            // Change something here to fix the bug"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }", "            insert.attributes().addAll(el.attributes());"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }", "            insert.attributes().addAll(el.attributes());"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }"]}, {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {", "            Element el = doc.child(0);", "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith("!"));", "            insert.attributes().addAll(el.attributes());", "        }", "            insert.attributes().addAll(el.attributes());"]}], "deletions": [], "modifications": []}
+][{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Fixing the issue here"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Insert fix here"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Potential fix"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Issue fixed here"]}]}][{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            insert.attributes().addAll(el.attributes());"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null || doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            insert.attributes().addAll(el.attributes());"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null || doc.children().size() == 0) {"]}, {"line_number": 94, "new_lines": ["            insert.attributes().addAll(el.attributes());"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() == 0) {"]}, {"line_number": 94, "new_lines": ["            insert.attributes().addAll(el.attributes());"]}]}]
+
+[{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            insert.attributes().addAll(el.attributes());"]}]}][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]},
+{"line_number": 94, "new_lines": ["            if (insert != null) {"]}
+]},
+"deletions": [], 
+"modifications": []
+}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}
+]
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}
+]
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}
+]
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}
+]
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}
+][
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.childNode(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.childNode(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.childNode(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    },
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+    "insertions": [
+        {"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]},
+        {"line_number": 94, "new_lines": ["            Element el = doc.childNode(0);"]}
+    ], 
+    "deletions": [], 
+    "modifications": []
+    }
+][
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["91", "//"], ["94", "//"]],
+        "insertions": [
+            {"line_number": 91, "new_lines": ["        if (doc != null && doc.children().isEmpty()) {"]},
+            {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]
+
+[
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["91", "//"], ["94", "//"]],
+        "insertions": [
+            {"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]},
+            {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]
+
+[
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["91", "//"], ["94", "//"]],
+        "insertions": [
+            {"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]},
+            {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]
+
+[
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["91", "//"], ["94", "//"]],
+        "insertions": [
+            {"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]},
+            {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]
+
+[
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["91", "//"], ["94", "//"]],
+        "insertions": [
+            {"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]},
+            {"line_number": 94, "new_lines": ["            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc == null) {",
+        "            return; // Add a return statement to handle null doc",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc.children().size() == 0) {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc != null && doc.children().size() == 0) {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc == null) {",
+        "            return; // Add a return statement to handle null doc",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc == null || doc.children().size() == 0) {",
+        "            return; // Add a return statement to handle null doc or empty children",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc == null) {",
+        "            return; // Add a return statement to handle null doc",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc != null && doc.children().size() > 0) {",
+        "            Element el = doc.child(0);",
+        "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));",
+        "            insert.attributes().addAll(el.attributes());",
+        "        } else {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc == null) {",
+        "            return; // Add a return statement to handle null doc",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc != null && doc.children().size() > 0) {",
+        "            Element el = doc.child(0);",
+        "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));",
+        "            insert.attributes().addAll(el.attributes());",
+        "        } else {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc != null && doc.children().size() == 0) {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc == null || doc.children().size() == 0) {",
+        "            return; // Add a return statement to handle null doc or empty children",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc != null && doc.children().size() > 0) {",
+        "            Element el = doc.child(0);",
+        "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));",
+        "            insert.attributes().addAll(el.attributes());",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc == null || doc.children().size() == 0) {",
+        "            return; // Add a return statement to handle null doc or empty children",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc == null) {",
+        "            return; // Add a return statement to handle null doc",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc == null) {",
+        "            return; // Add a return statement to handle null doc",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc != null && doc.children().size() > 0) {",
+        "            Element el = doc.child(0);",
+        "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));",
+        "            insert.attributes().addAll(el.attributes());",
+        "        } else {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc != null && doc.children().size() > 0) {",
+        "            Element el = doc.child(0);",
+        "            insert = new XmlDeclaration(settings.normalizeTag(el.tagName()), data.startsWith(\"!\"));",
+        "            insert.attributes().addAll(el.attributes());",
+        "        } else {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc == null || doc.children().size() == 0) {",
+        "            return; // Add a return statement to handle null doc or empty children",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], 
+"insertions": [
+    {"line_number": 91, "new_lines": [
+        "        if (doc != null && doc.children().size() == 0) {",
+        "            return; // Add a return statement if children size is 0",
+        "        }"
+    ]},
+    {"line_number": 94, "new_lines": [
+        "        if (doc == null) {",
+        "            return; // Add a return statement to handle null doc",
+        "        }"
+    ]}
+], 
+"deletions": [],
+"modifications": []
+}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": []}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": []}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            return;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            break;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Handle the case when there are no children"]}]}],
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            // Add handling for empty children list"]}]}],
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Check for empty children list"]}]}],
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Handle case of no children in the document"]}]}],
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            // Perform action when children list is empty"]}]}],
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // Handle empty children list case"]}]}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(0);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.childNode(0);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.childNodes().get(0);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(1);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(1);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.childNodes().get(1);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.childNodes().get(1);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(2);"]}]}
+]
+
+[
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            Element el = doc.child(2);"]}]}
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["        }"]}]},
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.childNodes().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.childNodes().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.childNodes().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.childNodes().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.childNodes().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.childNodes().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.childNodes().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children() != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty() && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children() != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty() && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children() != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty() && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children() != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty() && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children() != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty() && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children() != null && !doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty() && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc.children().size() > 0 && doc != null) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null) {", "            // handle null document case here", "        }", "        else if (!doc.children().isEmpty()) {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null) {", "            // handle null document case here", "        }", "        else if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null || doc.children().isEmpty()) {", "            // handle null document or empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() == 0) {", "            // handle document with no children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().isEmpty()) {", "            // handle document with empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() == 0) {", "            // handle document with no children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null || doc.children().isEmpty()) {", "            // handle null document or empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null) {", "            // handle null document case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().isEmpty()) {", "            // handle document with empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null || doc.children().size() == 0) {", "            // handle null document or no children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && !doc.children().isEmpty()) {", "            // handle non-null document with non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {", "            // handle non-null document with children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null || doc.children().isEmpty()) {", "            // handle null document or empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null) {", "            // handle null document case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null) {", "            // handle null document case here", "        }", "        else if (doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc == null || doc.children().isEmpty()) {", "            // handle null document or empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() == 0) {", "            // handle document with no children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() == 0) {", "            // handle document with no children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (!doc.children().isEmpty()) {", "            // handle non-empty children case here", "        }", "        else {"]}, {"line_number": 94, "new_lines": ["            // handle insertion logic here"]}]},
+][
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}]},
+][{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["91", "//"], ["94", "//"]], "insertions": [{"line_number": 91, "new_lines": ["        if (doc != null && doc.children().size() > 0) {"]}, {"line_number": 94, "new_lines": ["            }"]}], "deletions": [], "modifications": []}]

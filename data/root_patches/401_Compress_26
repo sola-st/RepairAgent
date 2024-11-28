@@ -1,0 +1,40 @@
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 102, 'modified_line': 'long skipped = input.skip(available);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'target_lines': [['104', '//']], 'insertions': [{'line_number': 104, 'new_lines': ['// Fixing the bug by correctly skipping the specified number of bytes', 'while (numToSkip > 0) {', 'long skipped = input.skip(available);', 'if (skipped == 0) {', 'break;', '}', 'numToSkip -= skipped;', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 102, 'modified_line': 'long skipped = input.skip(numToSkip);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'target_lines': [['104', '//']], 'insertions': [{'line_number': 104, 'new_lines': ['// Fixing the bug by correctly skipping the specified number of bytes', 'while (numToSkip > 0) {', 'long skipped = input.skip(numToSkip);', 'if (skipped == 0) {', 'break;', '}', 'numToSkip -= skipped;', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 102, 'modified_line': 'long skipped = input.skip(available); // Fixing the bug by correctly skipping the specified number of bytes'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'target_lines': [['104', '//']], 'insertions': [{'line_number': 104, 'new_lines': ['// Fixing the bug by correctly skipping the specified number of bytes', 'while (numToSkip > 0) {', 'long skipped = input.skip(numToSkip);', 'if (skipped == 0) {', 'break;', '}', 'numToSkip -= skipped;', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 104, 'modified_line': 'long skipped = input.skip(numToSkip); // Fixing the bug by correctly skipping the specified number of bytes'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 104, 'modified_line': '// Fixing the bug by correctly skipping the specified number of bytes\nwhile (numToSkip > 0) {\nlong skipped = input.skip(numToSkip);\nif (skipped == 0) {\nbreak;\n}\nnumToSkip -= skipped;\n}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 102, 'modified_line': 'long skipped = input.skip(numToSkip); // Fixing the bug by correctly skipping the specified number of bytes'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'target_lines': [['104', '//']], 'insertions': [{'line_number': 104, 'new_lines': ['// Fixing the bug by correctly skipping the specified number of bytes', 'while (numToSkip > 0) {', 'long skipped = input.skip(numToSkip);', 'if (skipped == 0) {', 'break;', '}', 'numToSkip -= skipped;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 102, 'modified_line': 'long skipped = input.skip(numToSkip); // Fixing the bug by correctly skipping the specified number of bytes'}, {'line_number': 104, 'modified_line': '// Fixing the bug by correctly skipping the specified number of bytes\nwhile (numToSkip > 0) {\nlong skipped = input.skip(numToSkip);\nif (skipped == 0) {\nbreak;\n}\nnumToSkip -= skipped;\n}'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/utils/IOUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 104, 'modified_line': '// Fixing the bug by correctly skipping the specified number of bytes\nwhile (numToSkip > 0) {\nlong skipped = input.skip(numToSkip);\nif (skipped == 0) {\nbreak;\n}\nnumToSkip -= skipped;\n}'}]}]
+
+

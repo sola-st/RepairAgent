@@ -1,0 +1,13 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.XmlTreeBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 117, 'modified_line': 'String elName = endTag.normalName();'}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.XmlTreeBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 117, 'modified_line': "String elName = endTag.normalName(); // Fixing the method call to use 'normalName()' instead of 'name()'"}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup.parser.XmlTreeBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 117, 'modified_line': 'private void popStackToClose(Tag tag) {\n        int pos = stack.size() - 1;\n        while (pos >= 0) {\n            Element next = stack.get(pos);\n            stack.remove(pos);\n            if (next.tag().equals(tag)) {\n                break;\n            }\n            pos--;\n        }\n    }'}]}]
+
+

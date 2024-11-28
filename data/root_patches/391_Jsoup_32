@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': 'clone.classNames(); // Ensure class names are correctly handled during cloning'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        clone.classNames();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        clone.classNames(); // Call classNames() on the cloned element'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        clone.classNames(); // Ensure classNames() is called on the cloned element'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': 'return (Element) super.clone(); // Return the cloned element without calling classNames()'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': 'clone.classNames(); // Call classNames() on the cloned element'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        clone.classNames(); // Call classNames() on the cloned element'}]}, {'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        clone.classNames(); // Call classNames() on the cloned element'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        return (Element) super.clone(); // Return the cloned element without calling classNames()'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1136, 'modified_line': 'public Element clone() {'}, {'line_number': 1137, 'modified_line': 'Element clonedElement = new Element(tag, baseUri, attributes);'}, {'line_number': 1138, 'modified_line': '// Copy class names'}, {'line_number': 1139, 'modified_line': 'if (classNames != null) {'}, {'line_number': 1140, 'modified_line': 'clonedElement.classNames = new LinkedHashSet<>(classNames);'}, {'line_number': 1141, 'modified_line': '}'}, {'line_number': 1142, 'modified_line': '// Copy children'}, {'line_number': 1143, 'modified_line': 'for (Node child : childNodes) {'}, {'line_number': 1144, 'modified_line': 'Node childClone = child.clone();'}, {'line_number': 1145, 'modified_line': 'clonedElement.appendChild(childClone);'}, {'line_number': 1146, 'modified_line': '}'}, {'line_number': 1147, 'modified_line': 'return clonedElement;'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1139, 'modified_line': '// Ensure class names are correctly handled during cloning\n        if (classNames == null) {\n            String[] names = className().split("\\\\s+");\n            classNames = new LinkedHashSet<String>(Arrays.asList(names));\n        }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'target_lines': [['1138', '        clone.classNames();']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        clone.classNames();'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        return (Element) super.clone(); // Return the cloned element without calling classNames()'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        if (classNames == null) {\n            String[] names = className().split("\\\\s+");\n            classNames = new LinkedHashSet<String>(Arrays.asList(names));\n        }'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1136, 'modified_line': 'public Element clone() {'}, {'line_number': 1137, 'modified_line': 'Element clonedElement = new Element(tag, baseUri, attributes);'}, {'line_number': 1138, 'modified_line': '// Copy class names'}, {'line_number': 1139, 'modified_line': 'if (classNames != null) {'}, {'line_number': 1140, 'modified_line': 'clonedElement.classNames = new LinkedHashSet<>(classNames);'}, {'line_number': 1141, 'modified_line': '}'}, {'line_number': 1142, 'modified_line': '// Copy children'}, {'line_number': 1143, 'modified_line': 'for (Node child : childNodes) {'}, {'line_number': 1144, 'modified_line': 'Node childClone = child.clone();'}, {'line_number': 1145, 'modified_line': 'clonedElement.appendChild(childClone);'}, {'line_number': 1146, 'modified_line': '}'}, {'line_number': 1147, 'modified_line': 'return clonedElement;'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1138, 'modified_line': '// Ensure class names are correctly handled during cloning\n        clone.classNames(); // Call classNames() on the cloned element'}]}]
+
+

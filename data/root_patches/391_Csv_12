@@ -1,0 +1,25 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'modifications': [{'line_number': 219, 'modified_line': '    public static final CSVFormat EXCEL = DEFAULT.withIgnoreEmptyLines(true);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'modifications': [{'line_number': 219, 'modified_line': '    public static final CSVFormat EXCEL = DEFAULT.withIgnoreEmptyLines(true).withHeader();'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': '/app/AutoGPT/auto_gpt_workspace/csv_12_buggy/src/test/java/org/apache/commons/csv/CSVRecordTest.java', 'modifications': [{'line_number': 41, 'modified_line': '    private String[] values;\n    private CSVRecord record, recordWithHeader;\n    private Map<String, Integer> header;\n'}, {'line_number': 42, 'modified_line': '    public CSVFormat withHeader(final String... header) {\n        return new CSVFormat(delimiter, quoteCharacter, quoteMode, commentMarker, escapeCharacter,\n                ignoreSurroundingSpaces, ignoreEmptyLines, recordSeparator, nullString, header, skipHeaderRecord,\n                allowMissingColumnNames);\n    }\n'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['219', '    public static final CSVFormat EXCEL = DEFAULT.withIgnoreEmptyLines(false);']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['219', '    public static final CSVFormat EXCEL = DEFAULT.withIgnoreEmptyLines(false);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 219, 'modified_line': '    public static final CSVFormat EXCEL = DEFAULT.withIgnoreEmptyLines(true).withHeader();'}]}]
+
+###Fix:
+[{'file_name': '/app/AutoGPT/auto_gpt_workspace/csv_12_buggy/src/test/java/org/apache/commons/csv/CSVParserTest.java', 'modifications': [{'line_number': 380, 'modified_line': 'public boolean testExcelHeaderCountLessThanData(int headerCount, int dataCount) {\n        return headerCount < dataCount;\n    }'}]}]
+
+

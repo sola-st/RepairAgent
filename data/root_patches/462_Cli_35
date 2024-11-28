@@ -1,0 +1,16 @@
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Options.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 240, 'modified_line': '        for (String longOpt : longOpts.keySet()) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Options.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 239, 'modified_line': '// for a perfect match return the single option only\n        for (String longOpt : longOpts.keySet()) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Options.java', 'target_lines': [['240', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 240, 'modified_line': '        for (String longOpt : longOpts.keySet()) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Options.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 239, 'modified_line': '// for a perfect match return the single option only\n        for (String longOpt : longOpts.keySet()) {\n            if (longOpt.equals(opt)) {\n                matchingOpts.clear();\n                matchingOpts.add(longOpt);\n                return matchingOpts;\n            }\n        }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/Options.java', 'target_lines': [['240', '//']], 'insertions': [{'line_number': 240, 'new_lines': ['            if (longOpt.equals(opt)) {', '                matchingOpts.clear();', '                matchingOpts.add(longOpt);', '                return matchingOpts;', '            }']}], 'deletions': [], 'modifications': []}]
+
+

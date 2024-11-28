@@ -1,0 +1,742 @@
+
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {"line_number": 156, "modified_line": "my $seen = 0; # Fixing variable scoping issue"},
+        {"line_number": 157, "modified_line": "if ($line =~ /$includes/) {"}, 
+        {"line_number": 158, "modified_line": "$seen = 1;"},
+        {"line_number": 159, "modified_line": "last;"},
+        {"line_number": 160, "modified_line": "last;"}, 
+        {"line_number": 161, "modified_line": "}"},
+        {"line_number": 162, "modified_line": "close $fh_in;"},
+        {"line_number": 163, "modified_line": "unless ($seen) {"}, 
+        {"line_number": 164, "modified_line": "seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"},
+        {"line_number": 165, "modified_line": "print $fh $string;"}, 
+        {"line_number": 166, "modified_line": "}"},
+        {"line_number": 167, "modified_line": "close $fh;"},
+        {"line_number": 168, "modified_line": "return $seen == 1 ? 0 : 1;"},
+        {"line_number": 172, "modified_line": "# Correcting potential issue in files_in_commit function"},
+        {"line_number": 173, "modified_line": "my %newconf = ();"},
+        {"line_number": 180, "modified_line": "chomp @files;"},
+        {"line_number": 198, "modified_line": "sub print_entry {"}
+    ]
+}
+{ "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 157, "new_lines": ["if ($line =~ /$includes/) {"]}] }
+
+     
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 156,
+                    "new_lines": ["my $seen = 1; # Fixing variable scoping issue"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 409,
+                    "new_lines": ["my $file = 1; # Fixing variable scoping issue"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 157,
+                    "modified_line": "if (defined $line && $line =~ /$includes/) {"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 162,
+                    "modified_line": "close $file_handle;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = 1; # Fixing variable scoping issue"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 414,
+                    "modified_line": "my %newconf = (); # Initializing newconf hash"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 419,
+                    "modified_line": "my %newconf = (); # Initializing newconf hash"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 420,
+                    "modified_line": "my %newconf = (); # Initializing newconf hash"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 156,
+                    "new_lines": ["my $seen = 0;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 409,
+                    "new_lines": ["my $file = <file_handle>;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = <FILE_HANDLE>;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf;"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{ "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]}
+
+                                                                                                    
+{"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 156, "new_lines": ["my $seen = 0; # Fixing variable scoping issue"]}]}
+
+                                                                          
+{"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 156, "new_lines": ["my $seen = 1; # Fixing variable scoping issue"]}]}
+
+		
+{ "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}, {"line_number": 156, "modified_line": "my %newconf;my $oldconf;my @files;my $fh_in;my $seen = 0; # Fixing variable scoping issue"}, {"line_number": 157, "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"}, {"line_number": 157, "modified_line": "if ($line =~ /$includes/) {"}, {"line_number": 160, "modified_line": "my $line = ''; # Adding explicit package name declaration for $line"}, {"line_number": 160, "modified_line": "last;if ($line =~ /$includes/) {"}, {"line_number": 162, "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in"}, {"line_number": 413, "modified_line": "my $oldconf = ''; # Adding explicit package name declaration for $oldconf"}, {"line_number": 414, "modified_line": "my %newconf = (); # Adding explicit package name declaration for %newconf"}, {"line_number": 414, "modified_line": "my $oldconf = ''; # Adding explicit package name declaration for $oldconf"}, {"line_number": 419, "modified_line": "my %newconf = (); # Adding explicit package name declaration for %newconf"}, {"line_number": 420, "modified_line": "my %newconf = (); # Adding explicit package name declaration for %newconf"}] }
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                },
+                {
+                    "line_number": 220,
+                    "new_lines": ["## Inserted line to fix the bug ##"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                },
+                {
+                    "line_number": 220,
+                    "new_lines": ["## Inserted line to fix the bug ##"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                },
+                {
+                    "line_number": 220,
+                    "new_lines": ["## Inserted line to fix the bug ##"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                },
+                {
+                    "line_number": 220,
+                    "new_lines": ["## Inserted line to fix the bug ##"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Adding explicit package name declaration for %newconf"]
+                },
+                {
+                    "line_number": 220,
+                    "new_lines": ["## Inserted line to fix the bug ##"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 0; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 'default_value'; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 10; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = $ENV{'LINE'}; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 0; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 'default_value'; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 10; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = $ENV{'LINE'}; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        }
+    ]
+}{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Mutant 1"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Mutant 1"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Mutant 1"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Mutant 1"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Mutant 1"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 0; # Mutant 2"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 0; # Mutant 2"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = 0; # Mutant 2"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = 0; # Mutant 2"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Mutant 2"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 1; # Mutant 3"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 1; # Mutant 3"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = 1; # Mutant 3"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = 1; # Mutant 3"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Mutant 3"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 'test'; # Mutant 4"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 'test'; # Mutant 4"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = 'test'; # Mutant 4"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = 'test'; # Mutant 4"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Mutant 4"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 0.0; # Mutant 5"]
+                },
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 0.0; # Mutant 5"]
+                },
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = 0.0; # Mutant 5"]
+                },
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = 0.0; # Mutant 5"]
+                },
+                {
+                    "line_number": 414,
+                    "new_lines": ["my %newconf = (); # Mutant 5"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = undef; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 157,
+                    "new_lines": ["my $line = 0; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = ''; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = undef; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 160,
+                    "new_lines": ["my $line = 0; # Adding explicit package name declaration for $line"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = ''; # Adding explicit package name declaration for $fh_in"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = undef; # Adding explicit package name declaration for $fh_in"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 162,
+                    "new_lines": ["my $fh_in = 0; # Adding explicit package name declaration for $fh_in"]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 413,
+                    "new_lines": ["my $oldconf = ''; # Adding explicit package name declaration for $oldconf"]
+                }
+            ]
+        }
+    ]
+}

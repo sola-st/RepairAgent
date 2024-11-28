@@ -1,0 +1,46 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 32, 'new_lines': ['import java.util.HashSet;']}, {'line_number': 350, 'new_lines': ['Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (!headerSet.add(header[i])) {', '    throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 32, 'new_lines': ['import java.util.HashSet;']}, {'line_number': 350, 'new_lines': ['Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', '    Set<String> headerSet = new HashSet<>();', '    for (int i = 0; i < header.length; i++) {', '        if (!headerSet.add(header[i])) {', '            throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '        }', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 32, 'new_lines': ['import java.util.HashSet;']}, {'line_number': 350, 'new_lines': ['Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', '    Set<String> headerSet = new HashSet<>();', '    for (int i = 0; header != null && i < header.length; i++) {', '        if (!headerSet.add(header[i])) {', '            throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '        }', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 32, 'new_lines': ['import java.util.HashSet;']}, {'line_number': 350, 'new_lines': ['Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', '    Set<String> headerSet = new HashSet<>();', '    for (int i = 0; header != null && i < header.length; i++) {', '        if (headerSet != null && !headerSet.add(header[i])) {', '            throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '        }', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 32, 'new_lines': ['import java.util.HashSet;']}, {'line_number': 350, 'new_lines': ['Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', '    Set<String> headerSet = new HashSet<>();', '    for (int i = 0; header != null && i < header.length; i++) {', '        if (headerSet != null && headerSet.add(header[i])) {', '            throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '        }', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 32, 'new_lines': ['import java.util.HashSet;']}, {'line_number': 350, 'new_lines': ['Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', '    Set<String> headerSet = new HashSet<>();', '    for (int i = 0; header != null && i < header.length; i++) {', '        if (headerSet != null) {', '            if (headerSet.add(header[i])) {', '                throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '            }', '        }', '    }', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 370, 'new_lines': ['Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['for (int i = 0; header != null && i < header.length; i++) {', 'if (!headerSet.add(header[i])) {', 'throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 370, 'new_lines': ['if (header != null) {', 'Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['for (int i = 0; header != null && i < header.length; i++) {', 'if (!headerSet.add(header[i])) {', 'throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 370, 'new_lines': ['if (header != null) {', 'Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', 'for (int i = 0; header != null && i < header.length; i++) {', 'if (!headerSet.add(header[i])) {', 'throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 370, 'new_lines': ['if (header != null) {', 'Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', 'for (int i = 0; header != null && i < header.length; i++) {', 'if (header != null && !headerSet.add(header[i])) {', 'throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 370, 'new_lines': ['if (header != null) {', 'Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', 'for (int i = 0; header != null && i < header.length; i++) {', 'if (header != null && !headerSet.add(header[i])) {', 'throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 370, 'new_lines': ['if (header != null) {', 'Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', 'for (int i = 0; header != null && i < header.length; i++) {', 'if (header != null && !headerSet.add(header[i])) {', 'throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVParser.java', 'insertions': [{'line_number': 370, 'new_lines': ['if (header != null) {', 'Set<String> headerSet = new HashSet<>();']}, {'line_number': 371, 'new_lines': ['if (header != null) {', 'Set<String> headerSet = new HashSet<>();', 'for (int i = 0; header != null && i < header.length; i++) {', 'if (headerSet != null && !headerSet.add(header[i])) {', 'throw new IllegalStateException("Duplicate header entry found: " + header[i]);', '}']}]}]
+
+

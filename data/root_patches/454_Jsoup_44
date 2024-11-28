@@ -1,0 +1,31 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'insertions': [{'line_number': 65, 'new_lines': ['start.reset();']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'target_lines': [['61', '//'], ['65', '//'], ['71', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'target_lines': [['61', '//'], ['65', '//'], ['71', '//']], 'insertions': [{'line_number': 61, 'new_lines': ['return process(start.reset().name(name));']}, {'line_number': 65, 'new_lines': ['start.reset();']}, {'line_number': 71, 'new_lines': ['return process(end.reset().name(name));']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'insertions': [{'line_number': 65, 'new_lines': ['start.reset();', 'start.nameAttr(name, attrs);']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'target_lines': [['61', '//'], ['65', '//'], ['71', '//']], 'insertions': [{'line_number': 61, 'new_lines': ['return process(start.reset().name(name));']}, {'line_number': 65, 'new_lines': ['start.reset(); start.nameAttr(name, attrs);']}, {'line_number': 71, 'new_lines': ['return process(end.reset().name(name));']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'insertions': [{'line_number': 65, 'new_lines': ['start.reset(); start.nameAttr(name, attrs);']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'target_lines': [['61', '//'], ['65', '//'], ['71', '//']], 'insertions': [{'line_number': 61, 'new_lines': ['return process(start.reset().name(name));']}, {'line_number': 65, 'new_lines': ['start.reset();']}, {'line_number': 71, 'new_lines': ['return process(end.reset().name(name));']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'insertions': [{'line_number': 64, 'new_lines': ['if (name.equals("!--")) return processComment();']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'target_lines': [['61', '//'], ['65', '//'], ['71', '//']], 'insertions': [{'line_number': 61, 'new_lines': ['return process(start.reset().name(name));']}, {'line_number': 65, 'new_lines': ['start.reset(); start.nameAttr(name, attrs);']}, {'line_number': 71, 'new_lines': ['return process(end.reset().name(name));']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TreeBuilder.java', 'insertions': [{'line_number': 71, 'new_lines': ['end.reset();']}]}]
+
+

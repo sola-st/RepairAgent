@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [{'line_number': 86, 'new_lines': ['        return StringEscapeUtils.escapeHtml(input);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [{'line_number': 86, 'new_lines': ['        return StringEscapeUtils.escapeHtml(input); // Modified to call itself recursively for proper handling of high unicode characters']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [{'line_number': 86, 'new_lines': ['        return escapeHtml(input); // Modified to call itself recursively for proper handling of high unicode characters']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return Entities.HTML40.escape(writer, string); // Modified to directly escape high unicode characters'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return StringEscapeUtils.escapeHtml(input); // Modified to call itself recursively for proper handling of high unicode characters'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/Entities.java', 'insertions': [{'line_number': 831, 'new_lines': ['                if (c > 0x7F) {', '                    writer.write("&#" + (int) c + ";"); // Modified to directly write high unicode characters']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [{'line_number': 86, 'new_lines': ['        return Entities.HTML40.escape(writer, string); // Modified to directly escape high unicode characters']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [{'line_number': 86, 'new_lines': ['        return Entities.HTML40.escape(writer, string); // Modified to directly escape high unicode characters']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [{'line_number': 86, 'new_lines': ['        return escapeHtml(input); // Modified to call the new escapeHtml method for proper character escaping']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return Entities.HTML40.escape(writer, string); // Modified to directly escape high unicode characters'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return new String(Entities.HTML40.escape(writer, string).getBytes(), "UTF-8"); // Modified to handle encoding for high unicode characters'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return Entities.HTML40.escape(writer, string); // Modified to directly escape high unicode characters'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return Entities.HTML40.escape(writer, string); // Modified to directly escape high unicode characters'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return Entities.HTML40.escape(writer, string); // Modified to directly escape high unicode characters'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang/StringEscapeUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': '        return escapeHtml(input); // Modified to handle high unicode characters directly'}]}]
+
+

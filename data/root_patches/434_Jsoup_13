@@ -1,0 +1,76 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey.equals("abs:href")) {', 'return attr(attributeKey);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if ("abs:href".equals(attributeKey)) {', 'return attr(attributeKey);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Simplified absUrl method implementation', 'String relUrl = attr(attributeKey); // Get the attribute value', 'if (StringUtil.isBlank(relUrl)) {', 'return ""; // Return empty string if attribute value is blank', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, relUrl);', 'return absUrl.toExternalForm(); // Return the absolute URL as a string', '} catch (MalformedURLException e) {', 'throw new RuntimeException("Malformed URL: " + e.getMessage());', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Simplified absUrl method implementation', 'String relUrl = attr(attributeKey); // Get the attribute value', 'if (StringUtil.isBlank(relUrl)) {', 'return ""; // Return empty string if attribute value is blank', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, relUrl);', 'return absUrl.toExternalForm(); // Return the absolute URL as a string', '} catch (MalformedURLException e) {', 'throw new RuntimeException("Malformed URL: " + e.getMessage());', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Simplified absUrl method implementation', 'String relUrl = attr(attributeKey); // Get the attribute value', 'if (StringUtil.isBlank(relUrl)) {', 'return ""; // Return empty string if attribute value is blank', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, relUrl);', 'return absUrl.toExternalForm(); // Return the absolute URL as a string', '} catch (MalformedURLException e) {', 'throw new RuntimeException("Malformed URL: " + e.getMessage());', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue.equals("")) {', 'return "";', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return "";', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue == null || attrValue.isEmpty()) {', 'return "";', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return "";', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributes != null && attributes.hasKey(attributeKey)) {', 'return attr(attributeKey);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.substring("abs:".length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.substring("abs:".length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey != "" && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.substring("abs:".length());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey != "" && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey != "" && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey != null && attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && !attributeKey.isEmpty() && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue == null || attrValue.isEmpty()) {', 'return ";"', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return ";"', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue == null || attrValue.isEmpty()) {', 'return ";"', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return ";"', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue == null || attrValue.isEmpty()) {', 'return ";"', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return ";"', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue == null || attrValue.isEmpty()) {', 'return ";"', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return ";"', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey != null && attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey != "" && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['if (attributeKey != null && attributeKey != "" && attributeKey.startsWith("abs:")) {', 'attributeKey = attributeKey.length() > 4 ? attributeKey.substring(4) : attributeKey;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue == null || attrValue.isEmpty()) {', 'return ";"', '}', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return ";"', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 107, 'new_lines': ['// Updated absUrl method implementation', 'Validate.notNull(attributeKey);', 'String attrValue = attr(attributeKey);', 'if (attrValue == null || attrValue.isEmpty()) {', 'return ";"', '} else {', 'try {', 'URL base = new URL(baseUri);', 'URL absUrl = new URL(base, attrValue);', 'return absUrl.toExternalForm();', '} catch (MalformedURLException e) {', 'return ";"', '}', '}']}], 'deletions': [], 'modifications': []}]
+
+

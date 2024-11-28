@@ -1,0 +1,16 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1521, 'modified_line': 'if (inferred && (rhsValue == null || !rhsValue.isFunction() || (info == null && scope.isDeclared(qName, false)))) {'}, {'line_number': 1523, 'modified_line': 'inferred = !(rhsValue != null && rhsValue.isFunction() && (info != null || !scope.isDeclared(qName, false)));'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'target_lines': [['1521', '      if (inferred) {'], ['1523', '        inferred = !(rhsValue != null &&'], ['1524', '            rhsValue.isFunction &&'], ['1525', '            (info != null || !scope.isDeclared(qName, false));']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1521, 'modified_line': 'if (inferred && (rhsValue == null || !rhsValue.isFunction() || (info == null || !scope.isDeclared(qName, false))) {'}, {'line_number': 1523, 'modified_line': '        inferred = !(rhsValue != null && rhsValue.isFunction() && (info != null || !scope.isDeclared(qName, false)));'}, {'line_number': 1524, 'modified_line': '            rhsValue.isFunction() &&'}, {'line_number': 1525, 'modified_line': '            (info != null || !scope.isDeclared(qName, false)));'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1521, 'modified_line': 'if (inferred && (rhsValue == null || !rhsValue.isFunction() || (info == null || !scope.isDeclared(qName, false))) {'}, {'line_number': 1523, 'modified_line': 'inferred = !(rhsValue != null && rhsValue.isFunction() && (info != null || !scope.isDeclared(qName, false)));'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'target_lines': [['1521', '      if (inferred) {'], ['1523', '        inferred = !(rhsValue != null &&'], ['1524', '            rhsValue.isFunction() &&'], ['1525', '            (info != null || !scope.isDeclared(qName, false));']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 1521, 'modified_line': 'if (inferred && (rhsValue == null || !rhsValue.isFunction() || (info == null || !scope.isDeclared(qName, false))) {'}, {'line_number': 1523, 'modified_line': 'inferred = !(rhsValue != null && rhsValue.isFunction() && (info != null || !scope.isDeclared(qName, false));'}, {'line_number': 1524, 'modified_line': '            rhsValue.isFunction() &&'}, {'line_number': 1525, 'modified_line': '            (info != null || !scope.isDeclared(qName, false));'}]}]
+
+

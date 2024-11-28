@@ -1,0 +1,34 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (!startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                Element el = insertEmpty(startTag);', '                stack.add(el);', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '                return el;', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                Element el = insertEmpty(startTag);', '                stack.add(el);', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '                return el;', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            } else {', '                // Handle the case when the tag is not self-closing', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            } else {', '                // Handle the case when the tag is not self-closing', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            } else {', '                // Handle the case when the tag is not self-closing', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/HtmlTreeBuilder.java', 'insertions': [{'line_number': 162, 'new_lines': ['            if (startTag.isSelfClosing()) {', '                tokeniser.emit(new Token.EndTag(el.tagName()));', '            } else {', '                // Handle the case when the tag is not self-closing', '            }']}]}]
+
+

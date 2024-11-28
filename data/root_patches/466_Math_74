@@ -1,0 +1,43 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 250, 'modified_line': 'scale = vecAbsoluteTolerance;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 245, 'modified_line': '          final double[] scale = vecAbsoluteTolerance;'}, {'line_number': 247, 'modified_line': '              scale = new double[y0.length];'}, {'line_number': 248, 'modified_line': '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'}, {'line_number': 250, 'modified_line': '              // scale = vecAbsoluteTolerance; // Commented out the problematic line'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 245, 'modified_line': 'final double[] scale = vecAbsoluteTolerance;'}, {'line_number': 247, 'modified_line': 'scale = new double[y0.length];'}, {'line_number': 248, 'modified_line': 'java.util.Arrays.fill(scale, scalAbsoluteTolerance);'}, {'line_number': 250, 'modified_line': '// scale = vecAbsoluteTolerance; // Commented out the problematic line'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 250, 'modified_line': '// scale = vecAbsoluteTolerance; // Commented out the problematic line'}, {'line_number': 247, 'modified_line': 'scale = new double[y0.length];'}, {'line_number': 248, 'modified_line': 'java.util.Arrays.fill(scale, scalAbsoluteTolerance);'}, {'line_number': 245, 'modified_line': 'final double[] scale = vecAbsoluteTolerance;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 250, 'modified_line': '// scale = vecAbsoluteTolerance; // Commented out the problematic line'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 245, 'modified_line': 'final double[] scale = vecAbsoluteTolerance;'}, {'line_number': 247, 'modified_line': 'scale = new double[y0.length];'}, {'line_number': 248, 'modified_line': 'java.util.Arrays.fill(scale, scalAbsoluteTolerance);'}, {'line_number': 250, 'modified_line': '// scale = vecAbsoluteTolerance; // Commented out the problematic line'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 250, 'modified_line': '// scale = vecAbsoluteTolerance; // Commented out the problematic line'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [{'line_number': 246, 'new_lines': ['if (vecAbsoluteTolerance == null) {', '    scale = new double[y0.length];', '    java.util.Arrays.fill(scale, scalAbsoluteTolerance);', '} else {', '    scale = vecAbsoluteTolerance;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [{'line_number': 246, 'new_lines': ['if (vecAbsoluteTolerance == null) {', '    scale = new double[y0.length];', '    java.util.Arrays.fill(scale, scalAbsoluteTolerance);', '} else {', '    scale = vecAbsoluteTolerance;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [{'line_number': 246, 'new_lines': ['if (vecAbsoluteTolerance == null) {', '    scale = new double[y0.length];', '    java.util.Arrays.fill(scale, scalAbsoluteTolerance);', '} else {', '    scale = vecAbsoluteTolerance;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [{'line_number': 246, 'new_lines': ['if (vecAbsoluteTolerance == null) {', '    scale = new double[y0.length];', '    java.util.Arrays.fill(scale, scalAbsoluteTolerance);', '} else {', '    scale = vecAbsoluteTolerance;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'target_lines': [['245', '          final double[] scale;'], ['247', '              scale = new double[y0.length];'], ['248', '              java.util.Arrays.fill(scale, scalAbsoluteTolerance);'], ['250', '              scale = vecAbsoluteTolerance;']], 'insertions': [{'line_number': 246, 'new_lines': ['if (vecAbsoluteTolerance == null) {', '    scale = new double[y0.length];', '    java.util.Arrays.fill(scale, scalAbsoluteTolerance);', '} else {', '    scale = vecAbsoluteTolerance;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java', 'modifications': [{'line_number': 245, 'modified_line': 'final double[] scale = vecAbsoluteTolerance;'}, {'line_number': 247, 'modified_line': 'scale = new double[y0.length];'}, {'line_number': 248, 'modified_line': 'java.util.Arrays.fill(scale, scalAbsoluteTolerance);'}, {'line_number': 250, 'modified_line': '// scale = vecAbsoluteTolerance; // Commented out the problematic line'}]}]
+
+

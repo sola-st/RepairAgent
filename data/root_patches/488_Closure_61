@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'insertions': [{'line_number': 958, 'new_lines': ['if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math")) {', '    return false;']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'insertions': [{'line_number': 958, 'new_lines': ['if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math")) {', '    return false;']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'modifications': [{'line_number': 958, 'modified_line': '      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math")) {'}, {'line_number': 959, 'modified_line': '        return false;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'modifications': [{'line_number': 958, 'modified_line': '      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math")) {'}, {'line_number': 959, 'modified_line': '        return false;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'modifications': [{'line_number': 958, 'modified_line': '      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math") && nameNode.getLastChild().getString().equals("sin")) {'}, {'line_number': 959, 'modified_line': '        return false;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'modifications': [{'line_number': 958, 'modified_line': '      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math") && (nameNode.getLastChild().getString().equals("sin") || nameNode.getLastChild().getString().equals("random"))) {'}, {'line_number': 959, 'modified_line': '        return false;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'modifications': [{'line_number': 958, 'modified_line': '      if (n.isCall()) {'}, {'line_number': 959, 'modified_line': '        Node target = n.getFirstChild();'}, {'line_number': 960, 'modified_line': '        if (target.isName()) {'}, {'line_number': 961, 'modified_line': '          String functionName = target.getString();'}, {'line_number': 962, 'modified_line': '          List<String> functionsWithSideEffects = Arrays.asList("alert", "confirm", "prompt");'}, {'line_number': 963, 'modified_line': '          return functionsWithSideEffects.contains(functionName);'}, {'line_number': 964, 'modified_line': '        }'}, {'line_number': 965, 'modified_line': '      }'}, {'line_number': 966, 'modified_line': '      return false;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/PeepholeRemoveDeadCodeTest.java', 'modifications': [{'line_number': 544, 'modified_line': '    test("Math.sin(0);", "");'}, {'line_number': 548, 'modified_line': '    test("1 + Math.sin(0);", "");'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'target_lines': [['958', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'target_lines': [['958', '//']], 'insertions': [{'line_number': 958, 'new_lines': ['      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math")) {', '        return false;']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/NodeUtil.java', 'modifications': [{'line_number': 958, 'modified_line': '      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals("Math") && nameNode.getLastChild().getString().equals("sin")) {'}, {'line_number': 959, 'modified_line': '        return false;'}]}]
+
+

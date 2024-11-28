@@ -1,0 +1,73 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // for negative sign']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // append negative sign"]}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // for negative sign']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // append negative sign"]}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // for negative sign']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // append negative sign"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1098, 'new_lines': ['                sum = Math.max(sum, 4); // Ensure minimum output is 4 digits for negative values']}, {'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}], 'deletions': [1142], 'modifications': [{'line_number': 1098, 'modified_line': '                sum = Math.max(sum, 4); // Ensure minimum output is 4 digits for negative values'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'insertions': [{'line_number': 1098, 'new_lines': ['                sum = Math.max(sum, 4); // Ensure minimum output is 4 digits for negative values']}, {'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/joda/time/format/PeriodFormatterBuilder.java', 'target_lines': [['1098', '                sum = Math.max(sum, 4);'], ['1133', '//'], ['1142', '//']], 'insertions': [{'line_number': 1133, 'new_lines': ['                if (valueLong < 0) {', '                    sum++; // Adjust sum for negative values']}, {'line_number': 1142, 'new_lines': ['                    if (valueLong < 0) {', "                        buf.append('-'); // Append negative sign for negative values"]}]}, 'deletions', 'modifications']
+
+

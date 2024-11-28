@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'insertions': [{'line_number': 731, 'new_lines': ['            prop.removeNonVisible(inferMutators);', '            prop.removeNonVisible(true); // Ensure visibility check is correctly handled']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'target_lines': [['731', '            prop.removeNonVisible(inferMutators);']], 'insertions': [{'line_number': 731, 'new_lines': ['            prop.removeNonVisible(inferMutators);', '            prop.removeNonVisible(true); // Ensure visibility check is correctly handled']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'target_lines': [['644', '    public void removeNonVisible(boolean inferMutators)'], ['683', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 644, 'modified_line': '    public void removeNonVisible(boolean inferMutators) { // Modify method signature to handle visibility checks correctly'}, {'line_number': 683, 'modified_line': '    // insert new line(s) here to fix the bug'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'modifications': [{'line_number': 644, 'modified_line': '    public void removeNonVisible(boolean inferMutators) { // Modify method signature to handle visibility checks correctly'}, {'line_number': 683, 'modified_line': '    // insert new line(s) here to fix the bug'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'target_lines': [['731', '            prop.removeNonVisible(inferMutators);']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'target_lines': [['644', '    public void removeNonVisible(boolean inferMutators)'], ['683', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'target_lines': [['731', '            prop.removeNonVisible(inferMutators);']], 'insertions': [{'line_number': 731, 'new_lines': ['            prop.removeNonVisible(inferMutators);', '            prop.removeNonVisible(true); // Ensure visibility check is correctly handled']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'target_lines': [['644', '    public void removeNonVisible(boolean inferMutators)'], ['683', '//']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 644, 'modified_line': '    public void removeNonVisible(boolean inferMutators) { // Modify method signature to handle visibility checks correctly'}, {'line_number': 683, 'modified_line': '// insert new line(s) here to fix the bug'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'insertions': [{'line_number': 731, 'new_lines': ['            prop.removeNonVisible(inferMutators);', '            prop.removeNonVisible(true); // Ensure visibility check is correctly handled']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'target_lines': [['731', '            prop.removeNonVisible(inferMutators);']], 'insertions': []}, {'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'target_lines': [['644', '    public void removeNonVisible(boolean inferMutators)'], ['683', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'target_lines': [['731', '            prop.removeNonVisible(inferMutators);']], 'insertions': [{'line_number': 731, 'new_lines': ['            prop.removeNonVisible(inferMutators);', '            prop.removeNonVisible(true); // Ensure visibility check is correctly handled']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'target_lines': [['644', '    public void removeNonVisible(boolean inferMutators)'], ['683', '//']], 'insertions': [{'line_number': 644, 'new_lines': ['    public void removeNonVisible(boolean inferMutators) { // Modify method signature to handle visibility checks correctly']}, {'line_number': 683, 'new_lines': ['    // insert new line(s) here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'insertions': [{'line_number': 731, 'new_lines': ['            prop.removeNonVisible(inferMutators);', '            prop.removeNonVisible(true); // Ensure visibility check is correctly handled']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 731, 'modified_line': '            prop.removeNonVisible(inferMutators); // Ensure visibility check is correctly handled'}]}, {'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 644, 'modified_line': '    public void removeNonVisible(boolean inferMutators) { // Modify method signature to handle visibility checks correctly'}, {'line_number': 683, 'modified_line': '    // insert new line(s) here to fix the bug'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertiesCollector.java', 'insertions': [{'line_number': 731, 'new_lines': ['            prop.removeNonVisible(inferMutators);', '            prop.removeNonVisible(true); // Ensure visibility check is correctly handled']}]}, {'file_name': 'com/fasterxml/jackson/databind/introspect/POJOPropertyBuilder.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 644, 'modified_line': '    public void removeNonVisible(boolean inferMutators) { // Modify method signature to handle visibility checks correctly'}, {'line_number': 683, 'modified_line': '    // insert new line(s) here to fix the bug'}]}]
+
+

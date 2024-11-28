@@ -1,0 +1,59 @@
+[
+    {"file_name": "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java", "target_lines": [["163", "        if (ser == null) {"]], "insertions": [], "deletions": [163], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/BeanSerializerBase.java", "target_lines": [["370", "                    JsonSerializer<?> ser = provider.findValueSerializer(delegateType, prop);"]], "insertions": [], "deletions": [370], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["126", "        return (delSer == _delegateSerializer) ? this"], "insertions": [], "deletions": [126], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["127", "                : withDelegate(_converter, delegateType, delSer);"]], "insertions": [], "deletions": [127], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["161", "        _delegateSerializer.serialize(delegateValue, gen, provider);"]], "insertions": [], "deletions": [161], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["172", "        _delegateSerializer.serializeWithType(delegateValue, gen, provider, typeSer);"]], "insertions": [], "deletions": [172], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["224", "        _delegateSerializer.acceptJsonFormatVisitor(visitor, typeHint);"]], "insertions": [], "deletions": [224], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["121", "//"]], "insertions": [{"line_number": 121, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["122", "//"]], "insertions": [{"line_number": 122, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["180", "//"]], "insertions": [{"line_number": 180, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["187", "//"]], "insertions": [{"line_number": 187, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["256", "//"]], "insertions": [{"line_number": 256, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["257", "//"]], "insertions": [{"line_number": 257, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java", "target_lines": [["163", "        if (ser == null) {"]], 
+     "insertions": [
+         {"line_number": 163, "new_lines": ["            ser = prov.findValueSerializer(origType, null);"]}
+     ], 
+     "deletions": [163], 
+     "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/BeanSerializerBase.java", "target_lines": [["370", "                    JsonSerializer<?> ser = provider.findValueSerializer(delegateType, prop);"]], 
+     "insertions": [
+         {"line_number": 370, "new_lines": ["                    if (ser == null) {", "                        ser = provider.findValueSerializer(delegateType, prop);"]}
+     ], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["126", "        return (delSer == _delegateSerializer) ? this"], 
+     "insertions": [
+         {"line_number": 126, "new_lines": ["        return (delSer == _delegateSerializer) ? this : withDelegate(_converter, delegateType, delSer);"]}
+     ], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["127", "                : withDelegate(_converter, delegateType, delSer);"]], 
+     "insertions": [
+         {"line_number": 127, "new_lines": ["        return (delSer == _delegateSerializer) ? this : withDelegate(_converter, delegateType, delSer);"]}
+     ], 
+     "deletions": [], 
+     "modifications": []
+    },
+    {"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["161", "        _delegateSerializer.serialize(delegateValue, gen, provider);"]], 
+     "insertions": [
+         {"line_number": 161, "new_lines": ["        if (_delegateSerializer != null) {", "            _delegateSerializer.serialize(delegateValue, gen, provider);"]}
+     ], 
+     "deletions": [], 
+     "modifications": []
+    }
+][
+{"file_name": "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java", "target_lines": [["163", "        if (ser == null) {"]], "insertions": [{"line_number": 302, "new_lines": ["        if (ser == null) {", "            ser = prov.findValueSerializer(origType, null);", "        "]}], "deletions": [163], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java", "target_lines": [["163", "        if (ser == null) {"]], "insertions": [{"line_number": 302, "new_lines": ["        if (ser == null) {", "            ser = prov.findValueSerializer(origType, null);", "        "]}], "deletions": [163], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ser/BeanSerializerFactory.java", "target_lines": [["163", "        if (ser == null) {"]], "insertions": [{"line_number": 302, "new_lines": ["        if (ser == null) {", "            ser = prov.findValueSerializer(origType, null);", "        "]}], "deletions": [163], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ser/std/BeanSerializerBase.java", "target_lines": [["370", "                    JsonSerializer<?> ser = provider.findValueSerializer(delegateType, prop);"]], "insertions": [], "deletions": [370], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ser/std/StdDelegatingSerializer.java", "target_lines": [["126", "        return (delSer == _delegateSerializer) ? this"], ["127", "                : withDelegate(_converter, delegateType, delSer);"], ["161", "        _delegateSerializer.serialize(delegateValue, gen, provider);"], ["172", "        _delegateSerializer.serializeWithType(delegateValue, gen, provider, typeSer);"], ["224", "        _delegateSerializer.acceptJsonFormatVisitor(visitor, typeHint);"]], "insertions": [{"line_number": 121, "new_lines": ["        // Inserted line for fixing the bug"]}, {"line_number": 122, "new_lines": ["        // Inserted line for fixing the bug"]}, {"line_number": 180, "new_lines": ["        // Inserted line for fixing the bug"]}, {"line_number": 187, "new_lines": ["        // Inserted line for fixing the bug"]}, {"line_number": 256, "new_lines": ["        // Inserted line for fixing the bug"]}, {"line_number": 257, "new_lines": ["        // Inserted line for fixing the bug"]}], "deletions": [126, 127, 161, 172, 224], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ser/std/StdSerializer.java", "target_lines": [["262", "                    if (existingSerializer == null) {"]], "insertions": [], "deletions": [262], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/JavaType.java", "target_lines": [["302", "//"]], "insertions": [{"line_number": 302, "new_lines": ["        // Inserted line for fixing the bug"]}], "deletions": [], "modifications": []}
+]

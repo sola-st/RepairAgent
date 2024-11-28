@@ -1,0 +1,1344 @@
+
+{ "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+  "insertions": [
+    { "line_number": 554, "new_lines": [""] },
+    { "line_number": 358, "new_lines": ["        // Mutation: Adding a comment for clarification"] },
+    { "line_number": 383, "new_lines": ["            // Mutation: Changing 'function NAME() { ... }' to 'var NAME;' for aliasing within goog.scope."] },
+    { "line_number": 384, "new_lines": ["            // Mutation: Detach the expression for VAR to maintain tree validity."] },
+    { "line_number": 392, "new_lines": ["            // Mutation: Adjust the scoped aliasing logic here."] },
+    { "line_number": 393, "new_lines": ["              // Mutation: Detach the expression for VAR to maintain tree validity."] },
+    { "line_number": 395, "new_lines": ["              // Mutation: Ensure proper handling of VAR expressions."] },
+    { "line_number": 408, "new_lines": ["            // Mutation: Implement custom logic for scope management."] },
+    { "line_number": 409, "new_lines": ["            // Mutation: Adjust the expression handling for scoped aliases."] }
+  ],
+  "deletions": [366, 368, 369, 371],
+  "modifications": []
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 554,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 366,
+                    "modified_line": "        } else if (!isVar) { // Mutant 2: Modified conditional check"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 368,
+                    "modified_line": "          Node value = n.hasChildren() ? v.getInitialValue().detachFromParent() : null; // Mutant 3: Simplified ternary operation"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 369,
+                    "modified_line": "          Node varNode = parent; // Mutant 4: Moved varNode initialization"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "deletions": [371] 	}
+       	,
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 358,
+                    "new_lines": ["// Mutant 6: Added a comment for line 358"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 383,
+                    "new_lines": ["// Mutant 7: Inserted line for mutation at 383"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 384,
+                    "new_lines": ["// Mutant 8: Inserted line for mutation at 384"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 392,
+                    "modified_line": "          // Mutant 9: Updated comment for line 392"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "deletions": [393] 	}
+       	,
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 395,
+                    "new_lines": ["// Mutant 11: Inserted line for mutation at 395"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 408,
+                    "new_lines": ["// Mutant 12: Inserted line for mutation at 408"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 409,
+                    "new_lines": ["// Mutant 13: Inserted line for mutation at 409"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 366,
+                    "modified_line": "        } else if (isVar && n.getFirstChild() != null) { // Mutant 14: Added condition to isVar"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 368,
+                    "modified_line": "          Node value = n.hasChildren() ? v.getInitialValue().detachFromParent() : v; // Mutant 15: Changed ternary operation"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 369,
+                    "modified_line": "          Node varNode = n; // Mutant 16: Changed varNode assignment"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "modifications": [
+                {
+                    "line_number": 366,
+                    "modified_line": "        } else { // Mutant 17: Removed conditional check"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "deletions": [368] 	}
+       	,
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "deletions": [369] 	}
+       	,
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["        // Mutant 20: Added a comment for line 366"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation 1"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation 1"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation 1"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation 1"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation 2"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation 2"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation 2"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation 2"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation 3"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation 3"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation 3"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation 3"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation 4"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation 4"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation 4"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation 4"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation 5"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation 5"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation 5"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation 5"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 6: Inserted line for mutation 6"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 6: Inserted line for mutation 6"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 6: Inserted line for mutation 6"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 6: Inserted line for mutation 6"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 554,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 358,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 383,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 384,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 392,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 393,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 395,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 408,
+                    "new_lines": ["// Inserted line to address the bug"]
+                },
+                {
+                    "line_number": 409,
+                    "new_lines": ["// Inserted line to address the bug"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 554,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 358,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 383,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 384,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 392,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 393,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 395,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 408,
+                    "new_lines": ["// Potential fix for the bug"]
+                },
+                {
+                    "line_number": 409,
+                    "new_lines": ["// Potential fix for the bug"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 554,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 358,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 383,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 384,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 392,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 393,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 395,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 408,
+                    "new_lines": ["// Fix attempt for the bug"]
+                },
+                {
+                    "line_number": 409,
+                    "new_lines": ["// Fix attempt for the bug"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 554,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 358,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 383,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 384,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 392,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 393,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 395,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 408,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                },
+                {
+                    "line_number": 409,
+                    "new_lines": ["// Possible mutation to address the bug"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutation 1: Changed isVar to !isVar"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutation 1: Changed ? to :"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutation 1: Changed detachFromParent() to detachFromParent(null)"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutation 1: Changed varNode = parent; to varNode = null;"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutation 2: Changed isVar to false"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutation 2: Changed ? to ||"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutation 2: Changed detachFromParent() to detachFromParent(null)"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutation 2: Changed varNode = parent; to varNode = null;"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutation 3: Changed isVar to !isVar"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutation 3: Changed ? to &&"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutation 3: Changed detachFromParent() to detachFromParent() || null"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutation 3: Changed varNode = parent; to varNode = null;"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutation 4: Changed isVar to false"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutation 4: Changed ? to &&"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutation 4: Changed detachFromParent() to detachFromParent() || null"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutation 4: Changed varNode = parent; to varNode = null;"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutation 5: Changed isVar to !isVar"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutation 5: Changed ? to &&"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutation 5: Changed detachFromParent() to detachFromParent() && null"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutation 5: Changed varNode = parent; to varNode = null;"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 1: Inserted line to fix aliasing issue"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 1: Inserted line to handle variable initialization"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 1: Inserted line for value initialization"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 1: Inserted line to maintain tree validity"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 2: Inserted line to address aliasing issue"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 2: Inserted line for initializing value"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 2: Inserted line for value assignment"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 2: Inserted line to ensure tree validity"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 3: Inserted line to fix aliasing issue"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 3: Inserted line to handle variable initialization"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 3: Inserted line for initializing value"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 3: Inserted line to maintain tree validity"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 4: Inserted line to address aliasing issue"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 4: Inserted line for value initialization"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 4: Inserted line to handle value assignment"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 4: Inserted line to ensure tree validity"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 5: Inserted line to fix aliasing issue"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 5: Inserted line to handle variable initialization"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 5: Inserted line for value assignment"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 5: Inserted line to maintain tree validity"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 6: Inserted line to address aliasing issue"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 6: Inserted line for initializing value"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 6: Inserted line to handle value assignment"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 6: Inserted line to ensure tree validity"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 554,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 358,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 383,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 384,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 392,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 393,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 395,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 408,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 409,
+                    "new_lines": ["// Mutated line for testing purposes"]
+                }
+            ],
+            "deletions": [366, 368, 369, 371]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 1: Changing the condition to isVar == true"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 1: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 2: Changing the condition to isVar == false"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 2: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 3: Changing the condition to parent.getType() == Token.LP"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 3: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 4: Changing the condition to v.isBleedingFunction()"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 4: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 5: Changing the condition to n.getFirstChild() == null"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 5: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 6: Changing the condition to n.getFirstChild() != null && n.getFirstChild().isQualifiedName()"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 6: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 7: Changing the condition to isVar && n.getFirstChild() == null"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 7: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 8: Changing the condition to parent.getType() != Token.LP"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 8: Inserting a new line after value declaration"]
+                }
+            ],
+            "deletions": [369, 371]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 1: Inserted line for mutation"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 2: Inserted line for mutation"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 3: Inserted line for mutation"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 4: Inserted line for mutation"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {
+                    "line_number": 366,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 368,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 369,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation"]
+                },
+                {
+                    "line_number": 371,
+                    "new_lines": ["// Mutant 5: Inserted line for mutation"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 554, "new_lines": ["// Mutant 1: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 358, "new_lines": ["// Mutant 2: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 383, "new_lines": ["// Mutant 3: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 384, "new_lines": ["// Mutant 4: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 392, "new_lines": ["// Mutant 5: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 393, "new_lines": ["// Mutant 6: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 395, "new_lines": ["// Mutant 7: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 408, "new_lines": ["// Mutant 8: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 409, "new_lines": ["// Mutant 9: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 554, "modified_line": "// Mutant 10: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 358, "modified_line": "// Mutant 11: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 383, "modified_line": "// Mutant 12: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 384, "modified_line": "// Mutant 13: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 392, "modified_line": "// Mutant 14: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 393, "modified_line": "// Mutant 15: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 395, "modified_line": "// Mutant 16: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 408, "modified_line": "// Mutant 17: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 409, "modified_line": "// Mutant 18: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 554, "new_lines": ["// Mutant 19: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 358, "new_lines": ["// Mutant 20: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 383, "new_lines": ["// Mutant 21: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 384, "new_lines": ["// Mutant 22: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 392, "new_lines": ["// Mutant 23: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 393, "new_lines": ["// Mutant 24: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 395, "new_lines": ["// Mutant 25: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 408, "new_lines": ["// Mutant 26: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [
+                {"line_number": 409, "new_lines": ["// Mutant 27: Inserted line for mutation"]}
+            ],
+            "deletions": [366, 368, 369, 371],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 554, "modified_line": "// Mutant 28: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 358, "modified_line": "// Mutant 29: Modified line for mutation"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ScopedAliases.java",
+            "insertions": [],
+            "deletions": [366, 368, 369, 371],
+            "modifications": [
+                {"line_number": 383, "modified_line": "// Mutant 30: Modified line for mutation"}
+            ]
+        }
+    ]
+}

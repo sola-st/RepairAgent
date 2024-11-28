@@ -1,0 +1,1252 @@
+
+{
+    "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+    "insertions": [
+        {
+            "line_number": 183,
+            "new_lines": [
+                "if (!(other instanceof ValuedEnum)) {",
+                "    throw new IllegalArgumentException(\"Object is not a ValuedEnum\");",
+                "}"
+            ]
+        }
+    ],
+    "deletions": [],
+    "modifications": []
+}
+  
+    
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+{
+    "mutations": [
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 183, "new_lines": ["if (other == null) return 1;"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 192, "new_lines": ["return 0;"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 193, "new_lines": ["return 1;"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 194, "new_lines": ["return -1;"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 195, "new_lines": ["if (this.iValue < ((ValuedEnum) other).iValue) return -1;"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 183, "new_lines": ["return getClass().getName().compareTo(other.getClass().getName()); // Modified comparison based on class names"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 192, "new_lines": ["return 1; // Changed default return value to 1"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 193, "new_lines": ["return -1; // Changed default return value to -1"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 194, "new_lines": ["return 0; // Changed default return value to 0"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 195, "new_lines": ["if (this.iValue > ((ValuedEnum) other).iValue) return 1; // Modified comparison to check for greater value"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 183, "new_lines": ["return this.iValue - ((ValuedEnum) other).iValue; // Fixed subtraction order"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 192, "new_lines": ["return -1; // Changed default return value to -1 for comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 193, "new_lines": ["return 1; // Changed default return value to 1 for comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 194, "new_lines": ["return 0; // Changed default return value to 0 for comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 195, "new_lines": ["if (this.iValue == ((ValuedEnum) other).iValue) return 0; // Added equality check for comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 183, "new_lines": ["return ((ValuedEnum) other).iValue - this.iValue; // Fixed subtraction order for correct comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 192, "new_lines": ["return 0; // Changed default return value to 0 for proper comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 193, "new_lines": ["return -1; // Changed default return value to -1 for proper comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 194, "new_lines": ["return 1; // Changed default return value to 1 for proper comparison"]}], "deletions": [], "modifications": []},
+        {"file_name": "org/apache/commons/lang/enums/ValuedEnum.java", "insertions": [{"line_number": 195, "new_lines": ["if (this.iValue <= ((ValuedEnum) other).iValue) return -1; // Adjusted comparison for less than or equal to condition"]}], "deletions": [], "modifications": []}
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue + ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue * ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue / ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue % ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue + 1 - ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue - 1 - ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue * 2 - ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue + 1) * ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue - 1) * ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue * 2) - ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue + 1) / ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue - 1) / ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue * 2) / ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue + 1 + ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue - 1 + ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue * 2 + ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue + 1) % ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue - 1) % ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue * 2) % ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue + 1 * ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue - 1 * ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return iValue * 2 * ((ValuedEnum) other).iValue;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue + 1) * ((ValuedEnum) other).iValue + 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return (iValue - 1) * ((ValuedEnum) other).iValue + 1;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 1: Adding a null check before accessing iValue\n",
+                        "        if (other == null) {\n",
+                        "            throw new NullPointerException(\"Object 'other' cannot be null\");\n",
+                        "        }\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 2: Casting 'other' to ValuedEnum before accessing iValue\n",
+                        "        ValuedEnum otherEnum = (ValuedEnum) other;\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 3: Swapping the operands in the subtraction operation\n",
+                        "        return other.iValue - iValue;\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 4: Adding a conditional check before returning the result\n",
+                        "        if (iValue == other.iValue) {\n",
+                        "            return 0;\n",
+                        "        }\n",
+                        "        return iValue < other.iValue ? -1 : 1;\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 5: Adding a type check before casting 'other'\n",
+                        "        if (!(other instanceof ValuedEnum)) {\n",
+                        "            throw new ClassCastException(\"Object 'other' is not of type ValuedEnum\");\n",
+                        "        }\n",
+                        "        return iValue - ((ValuedEnum) other).iValue;\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 6: Adding a try-catch block for potential ClassCastException\n",
+                        "        try {\n",
+                        "            return iValue - ((ValuedEnum) other).iValue;\n",
+                        "        } catch (ClassCastException ex) {\n",
+                        "            throw new ClassCastException(\"Unable to compare different types of enums\");\n",
+                        "        }\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 7: Using a method to compare iValue with 'other'\n",
+                        "        return compareValues(iValue, ((ValuedEnum) other).iValue);\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 8: Adding a random number offset to the comparison\n",
+                        "        return iValue - ((ValuedEnum) other).iValue + 5;\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 9: Using a different comparison logic with 'other'\n",
+                        "        return Integer.compare(iValue, ((ValuedEnum) other).iValue);\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 10: Adding a conditional check before accessing iValue\n",
+                        "        if (this.equals(other)) {\n",
+                        "            return 0;\n",
+                        "        }\n",
+                        "        return iValue - ((ValuedEnum) other).iValue;\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName());"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) * -1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) + 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) - 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) * 2;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) / 2;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) % 2;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) == 0 ? 1 : -1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) == 0 ? -1 : 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) > 0 ? 1 : -1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName()) < 0 ? -1 : 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().length() - ((ValuedEnum) other).getClass().getSimpleName().length();"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().length() + ((ValuedEnum) other).getClass().getSimpleName().length();"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().length() * ((ValuedEnum) other).getClass().getSimpleName().length();"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getName().compareToIgnoreCase(other.getClass().getName());"
+                },
+                {
+                    "line_number": 192,
+                    "modified_line": "// Handle special case for comparing enums"
+                },
+                {
+                    "line_number": 193,
+                    "modified_line": "// Handle special case for comparing enums"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "// Handle special case for comparing enums"
+                },
+                {
+                    "line_number": 195,
+                    "modified_line": "// Handle special case for comparing enums"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getName().compareTo(((ValuedEnum) other).getName());"
+                },
+                {
+                    "line_number": 192,
+                    "modified_line": "// Compare enum names instead of values"
+                },
+                {
+                    "line_number": 193,
+                    "modified_line": "// Compare enum names instead of values"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "// Compare enum names instead of values"
+                },
+                {
+                    "line_number": 195,
+                    "modified_line": "// Compare enum names instead of values"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getName().compareToIgnoreCase(((ValuedEnum) other).getName());"
+                },
+                {
+                    "line_number": 192,
+                    "modified_line": "// Compare enum names case-insensitively"
+                },
+                {
+                    "line_number": 193,
+                    "modified_line": "// Compare enum names case-insensitively"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "// Compare enum names case-insensitively"
+                },
+                {
+                    "line_number": 195,
+                    "modified_line": "// Compare enum names case-insensitively"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getName().compareTo(((ValuedEnum) other).getName());"
+                },
+                {
+                    "line_number": 192,
+                    "modified_line": "// Use enum names for comparison"
+                },
+                {
+                    "line_number": 193,
+                    "modified_line": "// Use enum names for comparison"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "// Use enum names for comparison"
+                },
+                {
+                    "line_number": 195,
+                    "modified_line": "// Use enum names for comparison"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName());"
+                },
+                {
+                    "line_number": 192,
+                    "modified_line": "// Compare class names for ordering"
+                },
+                {
+                    "line_number": 193,
+                    "modified_line": "// Compare class names for ordering"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "// Compare class names for ordering"
+                },
+                {
+                    "line_number": 195,
+                    "modified_line": "// Compare class names for ordering"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        if (other == null) {\n",
+                        "            throw new NullPointerException(\"Object to compare with is null\");\n",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        if (!(other instanceof ValuedEnum)) {\n",
+                        "            throw new IllegalArgumentException(\"Object is not of type ValuedEnum\");\n",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        ValuedEnum otherEnum = (ValuedEnum) other;\n",
+                        "        return iValue - otherEnum.iValue;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        if (other == null) {\n",
+                        "            throw new NullPointerException(\"Object to compare with is null\");\n",
+                        "        }\n",
+                        "        ValuedEnum otherEnum = (ValuedEnum) other;\n",
+                        "        return iValue - otherEnum.iValue;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        return Integer.compare(iValue, ((ValuedEnum) other).iValue);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [
+                183
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        return Integer.compare(iValue, ((ValuedEnum) other).iValue);"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        return Integer.max(iValue, ((ValuedEnum) other).iValue);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        return Integer.sum(iValue, ((ValuedEnum) other).iValue);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [
+                183
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        return getClass().getSimpleName().compareTo(((ValuedEnum) other).getClass().getSimpleName());"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        return Integer.signum(iValue - ((ValuedEnum) other).iValue);"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        return Long.compare((long)iValue, (long)((ValuedEnum) other).iValue);"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        return Double.compare((double)iValue, (double)((ValuedEnum) other).iValue);"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        return Float.compare((float)iValue, (float)((ValuedEnum) other).iValue);"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        if (this.equals(other)) {\n",
+                        "            return 0;\n",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        if (iValue == ((ValuedEnum) other).iValue) {\n",
+                        "            return 0;\n",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [
+                183
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        if (iValue == ((ValuedEnum) other).iValue) {\n            return 0;\n        } else if (iValue < ((ValuedEnum) other).iValue) {\n            return -1;\n        } else {\n            return 1;\n        }"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        if (iValue == ((ValuedEnum) other).iValue) {\n            return 0;\n        } else if (iValue < ((ValuedEnum) other).iValue) {\n            return 1;\n        } else {\n            return -1;\n        }"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        if (iValue == ((ValuedEnum) other).iValue) {\n            return 0;\n        } else if (iValue > ((ValuedEnum) other).iValue) {\n            return 1;\n        } else {\n            return -1;\n        }"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        if (iValue == ((ValuedEnum) other).iValue) {\n            return 0;\n        } else if (iValue > ((ValuedEnum) other).iValue) {\n            return -1;\n        } else {\n            return 1;\n        }"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        return this.getClass().getName().compareTo(((ValuedEnum) other).getClass().getName());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        return Integer.divideUnsigned(iValue, ((ValuedEnum) other).iValue);"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [
+                183
+            ],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "        return iValue == ((ValuedEnum) other).iValue ? 0 : (iValue < ((ValuedEnum) other).iValue ? -1 : 1);"
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        if (iValue == ((ValuedEnum) other).iValue) {\n",
+                        "            return 0;\n",
+                        "        } else {\n",
+                        "            return iValue < ((ValuedEnum) other).iValue ? -1 : 1;\n",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 1: Updated comparison using class name",
+                        "        return getClass().getName().compareTo(((ValuedEnum) other).getClass().getName());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 2: Updated comparison using hash code",
+                        "        return Integer.compare(hashCode(), other.hashCode());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 3: Updated comparison using enum ordinal values",
+                        "        return Integer.compare(ordinal(), ((ValuedEnum) other).ordinal());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 4: Updated comparison using enum names",
+                        "        return name().compareTo(((ValuedEnum) other).name());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "        // Mutant 5: Updated comparison using enum toString values",
+                        "        return toString().compareTo(other.toString());"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 192,
+                    "new_lines": [
+                        "        // Mutant 6: Additional comment for future reference",
+                        "        // Inserted new line(s) here to fix the bug"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 193,
+                    "new_lines": [
+                        "        // Mutant 7: Additional comment for future reference",
+                        "        // Inserted new line(s) here to fix the bug"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 194,
+                    "new_lines": [
+                        "        // Mutant 8: Additional comment for future reference",
+                        "        // Inserted new line(s) here to fix the bug"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang/enums/ValuedEnum.java",
+            "insertions": [
+                {
+                    "line_number": 195,
+                    "new_lines": [
+                        "        // Mutant 9: Additional comment for future reference",
+                        "        // Inserted new line(s) here to fix the bug"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}

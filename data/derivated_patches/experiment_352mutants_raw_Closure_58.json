@@ -1,0 +1,1142 @@
+
+  {"file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java", "insertions": [{"line_number": 206, "new_lines": ["// Mutant 1: Inserted new line to fix the bug"]}]}
+ 				
+ 		
+ 		
+ 		
+ 		
+ 	
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 		
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 	       
+ 
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 1: Handling 'for in' loop differently in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(rhs, kill);",
+                        "    addToSetIfLocal(rhs, gen);",
+                        "    computeGenKill(lhs, gen, kill, conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 2: Modifying handling of 'for in' loop in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(lhs, kill);",
+                        "    addToSetIfLocal(rhs, gen);",
+                        "    computeGenKill(lhs, gen, kill, conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 3: Adjusting 'for in' loop processing in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(lhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(n.getNext(), gen, kill, conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 4: Changing 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(lhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(rhs.getNext(), gen, kill, conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 5: Revising 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(rhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(rhs, gen, kill, conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 6: Reframing 'for in' loop logic in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(rhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(rhs, gen, kill, !conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 7: Adjusting 'for in' loop processing in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(lhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(lhs, gen, kill, !conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 8: Changing 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(lhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(rhs.getNext(), gen, kill, !conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 9: Revising 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(rhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(rhs, gen, kill, !conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 10: Reframing 'for in' loop logic in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "    Node lhs = n.getFirstChild();",
+                        "    Node rhs = lhs.getNext();",
+                        "    if (NodeUtil.isVar(lhs)) {",
+                        "        lhs = lhs.getLastChild();",
+                        "    }",
+                        "    addToSetIfLocal(rhs, kill);",
+                        "    addToSetIfLocal(lhs, gen);",
+                        "    computeGenKill(rhs, gen, kill, conditional);",
+                        "    return;",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(rhs, kill);",
+                        "addToSetIfLocal(rhs, gen);",
+                        "computeGenKill(lhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(rhs, kill);",
+                        "addToSetIfLocal(rhs, gen);",
+                        "computeGenKill(lhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(lhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(lhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(rhs, kill);",
+                        "addToSetIfLocal(rhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(rhs, kill);",
+                        "addToSetIfLocal(rhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(rhs, kill);",
+                        "addToSetIfLocal(rhs, gen);",
+                        "computeGenKill(lhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 1: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 1: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 2: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 2: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 3: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 3: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 4: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 4: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 5: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 5: Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Fixing bug related to 'for in' loop handling in computeGenKill method",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": ["// Mutant 1: Adding a log message before handling 'for in' loop", "System.out.println(\"Handling 'for in' loop\");", "if (NodeUtil.isForIn(n)) {"]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": ["// Mutant 1: Adding a log message before handling 'for in' loop", "System.out.println(\"Handling 'for in' loop\");", "if (NodeUtil.isForIn(n)) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": ["// Mutant 2: Changing 'NodeUtil.isForIn(n)' to 'NodeUtil.isForOf(n)'", "if (NodeUtil.isForOf(n)) {"]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": ["// Mutant 2: Changing 'NodeUtil.isForIn(n)' to 'NodeUtil.isForOf(n)'", "if (NodeUtil.isForOf(n)) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": ["// Mutant 3: Adding a null check before handling 'for in' loop", "if (n != null && NodeUtil.isForIn(n)) {"]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": ["// Mutant 3: Adding a null check before handling 'for in' loop", "if (n != null && NodeUtil.isForIn(n)) {"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": ["// Mutant 4: Swapping the order of 'gen' and 'kill' BitSet parameters", "if (NodeUtil.isForIn(n)) {", "Node lhs = n.getFirstChild();", "Node rhs = lhs.getNext();", "if (NodeUtil.isVar(lhs)) {", "lhs = lhs.getLastChild();", "}", "addToSetIfLocal(lhs, gen);", "addToSetIfLocal(lhs, kill);", "computeGenKill(rhs, gen, kill, conditional);", "return;"]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": ["// Mutant 4: Swapping the order of 'gen' and 'kill' BitSet parameters", "if (NodeUtil.isForIn(n)) {", "Node lhs = n.getFirstChild();", "Node rhs = lhs.getNext();", "if (NodeUtil.isVar(lhs)) {", "lhs = lhs.getLastChild();", "}", "addToSetIfLocal(lhs, gen);", "addToSetIfLocal(lhs, kill);", "computeGenKill(rhs, gen, kill, conditional);", "return;"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": ["// Mutant 5: Removing 'conditional' parameter from 'computeGenKill' method call", "if (NodeUtil.isForIn(n)) {", "Node lhs = n.getFirstChild();", "Node rhs = lhs.getNext();", "if (NodeUtil.isVar(lhs)) {", "lhs = lhs.getLastChild();", "}", "addToSetIfLocal(lhs, kill);", "addToSetIfLocal(lhs, gen);", "computeGenKill(rhs, gen, kill);", "return;"]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": ["// Mutant 5: Removing 'conditional' parameter from 'computeGenKill' method call", "if (NodeUtil.isForIn(n)) {", "Node lhs = n.getFirstChild();", "Node rhs = lhs.getNext();", "if (NodeUtil.isVar(lhs)) {", "lhs = lhs.getLastChild();", "}", "addToSetIfLocal(lhs, kill);", "addToSetIfLocal(lhs, gen);", "computeGenKill(rhs, gen, kill);", "return;"]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": ["// Mutant 6: Adding a try-catch block around the 'for in' loop handling", "try {", "if (NodeUtil.isForIn(n)) {", "Node lhs = n.getFirstChild();", "Node rhs = lhs.getNext();", "if (NodeUtil.isVar(lhs)) {", "lhs = lhs.getLastChild();", "}", "addToSetIfLocal(lhs, kill);", "addToSetIfLocal(lhs, gen);", "computeGenKill(rhs, gen, kill, conditional);", "return;"]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": ["// Mutant 6: Adding a try-catch block around the 'for in' loop handling", "try {", "if (NodeUtil.isForIn(n)) {", "Node lhs = n.getFirstChild();", "Node rhs = lhs.getNext();", "if (NodeUtil.isVar(lhs)) {", "lhs = lhs.getLastChild();", "}", "addToSetIfLocal(lhs, kill);", "addToSetIfLocal(lhs, gen);", "computeGenKill(rhs, gen, kill, conditional);", "return;"]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 1: Changing NodeUtil.isForIn(n) condition to NodeUtil.isForIn(lhs)",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 1: Changing NodeUtil.isForIn(n) condition to NodeUtil.isForIn(lhs)",
+                        "if (NodeUtil.isForIn(lhs)) {",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 2: Adding an extra addToSetIfLocal(lhs, kill) before existing addToSetIfLocal(lhs, gen)",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 2: Adding an extra addToSetIfLocal(lhs, kill) before existing addToSetIfLocal(lhs, gen)",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 3: Changing NodeUtil.isVar(lhs) condition to NodeUtil.isVar(rhs)",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(rhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 3: Changing NodeUtil.isVar(lhs) condition to NodeUtil.isVar(rhs)",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(rhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 4: Swapping the addToSetIfLocal calls",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, gen);",
+                        "addToSetIfLocal(lhs, kill);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 4: Swapping the addToSetIfLocal calls",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "addToSetIfLocal(lhs, gen);",
+                        "addToSetIfLocal(lhs, kill);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/LiveVariablesAnalysis.java",
+            "insertions": [
+                {
+                    "line_number": 206,
+                    "new_lines": [
+                        "// Mutant 5: Removing the addToSetIfLocal(lhs, kill) call",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "// addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                },
+                {
+                    "line_number": 208,
+                    "new_lines": [
+                        "// Mutant 5: Removing the addToSetIfLocal(lhs, kill) call",
+                        "if (NodeUtil.isForIn(n)) {",
+                        "Node lhs = n.getFirstChild();",
+                        "Node rhs = lhs.getNext();",
+                        "if (NodeUtil.isVar(lhs)) {",
+                        "lhs = lhs.getLastChild();",
+                        "}",
+                        "// addToSetIfLocal(lhs, kill);",
+                        "addToSetIfLocal(lhs, gen);",
+                        "computeGenKill(rhs, gen, kill, conditional);",
+                        "return;",
+                        "}"
+                    ]
+                }
+            ]
+        }
+    ]
+}

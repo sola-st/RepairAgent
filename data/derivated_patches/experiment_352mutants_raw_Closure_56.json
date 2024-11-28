@@ -1,0 +1,1229 @@
+
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() - 1); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) - 1); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() + 1); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 1); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() + 2); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 2); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() - 2); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) - 2); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos + 1, js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos + 1, js.indexOf('\\n', pos)); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() - 1); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) - 1); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() + 1); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 1); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() - 2); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) - 2); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() + 2); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 2); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() / 2); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) / 2); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() * 2); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) * 2); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, pos + 10); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 10); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, pos - 1); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) - 1); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, pos + 1); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 1); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, pos + 2); // Adjust end index for substring\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 2); // Adjust end index for substring\n"
+                    ]
+                }
+            ],
+            "deletions": []
+        }
+    ]
+}
+{ "fixes": [
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated end of file handling\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated end of file handling\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file condition\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file condition\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handling end of file edge case\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handling end of file edge case\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file scenario\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file scenario\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated handling for end of file\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated handling for end of file\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file condition\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file condition\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handling end of file edge case\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handling end of file edge case\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated end of file handling\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated end of file handling\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file scenario\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file scenario\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated handling for end of file\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated handling for end of file\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file condition\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file condition\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handling end of file edge case\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handling end of file edge case\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated end of file handling\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Updated end of file handling\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/SourceFile.java",
+        "insertions": [
+            {
+                "line_number": 242,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file scenario\n"
+                ]
+            },
+            {
+                "line_number": 243,
+                "new_lines": [
+                    "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Fix for end of file scenario\n"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length()); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : pos + 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos + 1)); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.indexOf('\\n', pos) + 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.lastIndexOf('\\n', pos) + 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.lastIndexOf('\\n', pos) + 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.indexOf('\\n', pos) - 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : pos); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : pos + 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : pos - 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() + 1); // Handle end of file case\n"]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() + 1); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() - 1); // Handle end of file case\n"]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() - 1); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() * 2); // Handle end of file case\n"]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() * 2); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() / 2); // Handle end of file case\n"]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() / 2); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() % 3); // Handle end of file case\n"]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() % 3); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() - 1); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) - 1); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() + 1); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 1); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() + 5); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + 5); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() - 5); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) - 5); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() / 2); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) / 2); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() * 2); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) * 2); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() + pos); // Handle end of file case\n"
+                    ]
+                },
+                {
+                    "line_number": 243,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) + pos); // Handle end of line case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length()); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        " return js.substring(pos, js.length()); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos)); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.length() - 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        "      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() - 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        " return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() - 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        " return js.substring(pos, js.length() - 1); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": [
+                        " return js.substring(pos, js.indexOf('\\n', pos)); // Handle end of file case\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.length() != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != js.length() ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.length() != -1 ? js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.length() != -1 ? js.indexOf('\\n', pos) : js.length() != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.length() != -1 ? js.indexOf('\\n', pos) != -1 ? js.indexOf('\\n', pos) : js.length() : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.indexOf('\\n', pos) != js.length() ? js.indexOf('\\n', pos) : js.length() != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.length() != -1 ? js.indexOf('\\n', pos) != js.length() ? js.indexOf('\\n', pos) : js.length() : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.length() != -1 ? js.indexOf('\\n', pos) : js.length() != js.length() ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/SourceFile.java",
+            "insertions": [
+                {
+                    "line_number": 242,
+                    "new_lines": ["      return js.substring(pos, js.length() != -1 ? js.indexOf('\\n', pos) : js.length() != -1 ? js.indexOf('\\n', pos) : js.length()); // Handle end of file case\n"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}

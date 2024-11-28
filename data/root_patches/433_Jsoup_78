@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 3, 'new_lines': ['        if (input.available() == 0) {', '            return new Document(baseUri);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['        if (in.available() == 0) {', '            return new Document(baseUri);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['        if (in != null && in.available() == 0) {', '            return new Document(baseUri);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['        // Updated implementation of parseInputStream method to handle input stream differently', '        public static Document parseInputStream(InputStream input, String baseUri, String charsetName) throws IOException {', '            // Read the input stream and convert it to a string', '            StringBuilder html = new StringBuilder();', '            try (BufferedReader br = new BufferedReader(new InputStreamReader(input, charsetName))) {', '                String line;', '                while ((line = br.readLine()) != null) {', '                    html.append(line).append("\\n");', '                }', '            }', '', '            // Parse the HTML string to create a Document object', '            return Parser.parse(html.toString(), baseUri);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['        if (input != null && input.available() == 0) {', '            return new Document(baseUri);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['    /**', '     * Parses an InputStream to a Document.', '     *', '     * @param input the InputStream to parse', '     * @param charset the character set to use for decoding the input stream', '     * @param baseUri the base URI of the document', '     * @return the Document parsed from the InputStream', '     * @throws IOException if an I/O error occurs', '     */', '    public static Document parseInputStream(InputStream input, String charset, String baseUri) throws IOException {', '        ConstrainableInputStream cis = ConstrainableInputStream.wrap(input, bufferSize, 0);', '        cis.restrictBy(firstReadBufferSize);', '        ByteBuffer byteData = cis.readToByteBuffer();', '', '        Document doc;', '        String docData = Charset.forName(charset).decode(byteData).toString();', '        Parser parser = Parser.htmlParser();', '        doc = parser.parseInput(docData, baseUri);', '', '        return doc;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['    /**', '     * Parses an InputStream to a Document.', '     *', '     * @param inputStream the input stream to parse', '     * @param charsetName the charset name to use for parsing', '     * @param baseUri the base URI of the document', '     * @return the parsed Document object', '     * @throws IOException if an I/O error occurs', '     */', '    public static Document parseInputStream(InputStream inputStream, String charsetName, String baseUri) throws IOException {', '        ConstrainableInputStream input = ConstrainableInputStream.wrap(inputStream, bufferSize, 0);', '        try {', '            byte[] inputBytes = input.readToByteBuffer(firstReadBufferSize).array();', '            Charset charset = Charset.forName(charsetName);', '            String docData = new String(inputBytes, charset);', '            Parser parser = Parser.htmlParser();', '            return parser.parseInput(docData, baseUri);', '        } finally {', '            input.close();', '        }', '    }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['    /**', "     * Parses the input stream to create a Document object using Jsoup's Parser.", '     *', '     * @param inputStream the input stream to be parsed', '     * @param charsetName the charset name to be used for parsing', '     * @param baseUri the base URI of the document', '     * @return the Document object created from the input stream', '     * @throws IOException if an I/O error occurs', '     */', '    public static Document parseInputStream(InputStream inputStream, String charsetName, String baseUri) throws IOException {', '        // Read the input stream and convert it to a string', '        Charset charset = Charset.forName(charsetName);', '        StringBuilder stringBuilder = new StringBuilder();', '        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, charset))) {', '            char[] buffer = new char[firstReadBufferSize];', '            int read;', '            while ((read = reader.read(buffer)) != -1) {', '                stringBuilder.append(buffer, 0, read);', '            }', '        }', '', '        // Parse the string to create a Document object', '        String html = stringBuilder.toString();', '        return Parser.htmlParser().parseInput(html, baseUri);', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['    /**', '     * Parse the input stream to get the document using the provided charset.', '     *', '     * @param inputStream the input stream to parse', '     * @param charset the charset to use for parsing', '     * @return the parsed document', '     * @throws IOException if an I/O error occurs', '     */', '    public static Document parseInputStream(InputStream inputStream, String charset) throws IOException {', '        // Initialize variables', '        Charset detectedCharset = null;', '        ConstrainableInputStream input = null;', '        Document doc = null;', '', '        try {', '            // Detect charset from input stream', '            input = ConstrainableInputStream.wrap(inputStream, bufferSize, firstReadBufferSize);', '            byte[] firstBytes = input.readFirstBytes();', '            String detectedCharsetStr = DataUtil.getCharsetFromContentType(input.getContentType(), firstBytes);', '            detectedCharset = detectedCharsetStr != null ? Charset.forName(detectedCharsetStr) : null;', '', '            // Use the detected charset or fallback to provided charset', '            Charset usedCharset = charset != null ? Charset.forName(charset) : detectedCharset;', '', '            // Parse the input stream to get the document', '            BufferedReader reader = new BufferedReader(new InputStreamReader(input, usedCharset));', '            doc = Parser.htmlParser().parseInput(reader, input.url(), usedCharset.toString());', '        } finally {', '            if (input != null) {', '                input.close();', '            }', '        }', '', '        return doc;', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['    /**', '     * Parse the input stream and return the parsed document.', '     *', '     * @param input the input stream to parse', '     * @param charset the charset to use for decoding the input stream', '     * @param baseUri the base URI of the document', ' * @return the parsed document', ' * @throws IOException if an I/O error occurs', ' */', 'public static Document parseInputStream(InputStream input, String charset, String baseUri) throws IOException {', 'ConstrainableInputStream conInput = ConstrainableInputStream.constrainToBufferSize(input, bufferSize);', '', 'Document doc = null;', 'boolean fullyRead = false;', '', 'try {', 'Document.OutputSettings outputSettings = new Document.OutputSettings().charset(charset);', 'doc = new Document(baseUri);', 'Element root = doc.appendElement("root");', '', 'Charset detectedCharset = null;', '', 'byte[] buffer = new byte[firstReadBufferSize];', 'int read = conInput.read(buffer);', 'if (read > 0) {', 'ByteBuffer byteData = ByteBuffer.wrap(buffer, 0, read);', 'detectedCharset = Charset.forName(outputSettings.detectedCharset());', 'Charset usefulCharset = detectedCharset;', 'if (Charset.isSupported(charset)) {', 'usefulCharset = Charset.forName(charset);', '}', '', '// Convert the byte data to a string using the useful charset', 'String data = usefulCharset.decode(byteData).toString();', 'Parser parser = Parser.htmlParser();', '', '// Parse the data using the parser', 'doc = parser.parseInput(data, baseUri, outputSettings);', '', '// Check if the input stream is fully read', 'fullyRead = conInput.read() == -1;', '}', '} finally {', 'if (!fullyRead) {', 'conInput.discardToEof();', '}', '}', '', 'return doc;', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['        if (input != null && input.available() == 0) {', '            return new Document(baseUri);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['        if (input != null && input.available() == 0) {', '            return new Document(baseUri);', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/helper/DataUtil.java', 'insertions': [{'line_number': 50, 'new_lines': ['        if (input != null && input.available() == 0) {', '            return new Document(baseUri);', '        }']}]}]
+
+

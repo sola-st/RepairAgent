@@ -1,0 +1,67 @@
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 70, 'modified_line': '        cVerbose.set(Boolean.FALSE); // Thread-safe initialization'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { cVerbose.set(Boolean.FALSE); }'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        cVerbose.set(Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 70, 'modified_line': '        cVerbose.set(Boolean.FALSE); // Thread-safe initialization using synchronized block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        cVerbose.set(Boolean.FALSE); // Thread-safe initialization using synchronized block'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }}'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }} // Thread-safe initialization'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization using synchronized block'}]}]
+
+###Fix:
+[{'file_name': 'org/joda/time/tz/ZoneInfoCompiler.java', 'target_lines': [['68', '    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();'], ['69', '    static {'], ['70', '        cVerbose.set(Boolean.FALSE);'], ['71', '    }']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 68, 'modified_line': '    static ThreadLocal<Boolean> cVerbose = ThreadLocal.withInitial(() -> Boolean.FALSE); // Thread-safe initialization'}, {'line_number': 69, 'modified_line': '    static { synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); }'}, {'line_number': 70, 'modified_line': '        synchronized(ZoneInfoCompiler.class) { cVerbose.set(Boolean.FALSE); } // Thread-safe initialization'}, {'line_number': 71, 'modified_line': '    } // End of static initialization block'}]}]
+
+

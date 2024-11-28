@@ -1,0 +1,1565 @@
+
+{ "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java", "insertions": [ { "line_number": 119, "new_lines": [ "      // Inserted new line to fix the bug" ] } ], "deletions": [], "modifications": [] }
+ 
+{
+    "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+    "insertions": [
+        {
+            "line_number": 183,
+            "new_lines": [
+                "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replace(\"foo\", \"\"));"
+            ]
+        }
+    ]
+}  
+      
+  {
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replaceAll(\"foo\", \"bar\"));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).toUpperCase());"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")) + \"_newModuleName\");"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replace(\"foo\", \"bar\"));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).substring(0, 5));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).toLowerCase());"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).trim());"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).substring(5));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replace(\"foo\", \"\"));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replace(\"foo\", \"baz\"));"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"))); // Mutated by escaping the backslash differently"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"\"))); // Mutated by removing the backslash replacement"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replaceAll(\"\\\\\", \"/\"))); // Mutated by using replaceAll instead of replace"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace('\\', '/'))); // Mutated by using single quotes for char escape"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", File.separator))); // Mutated by using File.separator instead of hardcoded separator"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").replace(\"foo\", \"bar\"))); // Mutated by chaining multiple replacements"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\", \"\"))); // Mutated by removing a specific substring"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().toLowerCase())); // Mutated by changing the case of the file name"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().toUpperCase())); // Mutated by changing the case of the file name"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().trim())); // Mutated by trimming the file name"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replaceAll(\"foo\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                    ]
+                }
+            ],
+            "deletions": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").replace(\"foo\\\\\", \"\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\").replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"baz.js\", \"\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"\\\\\", \"\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"baz.js\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo\", \"\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"baz.js\", \"foo.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"baz.js\", \"/foo.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"baz.js\", \"bar.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"baz.js\", \"/bar.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"baz.js\", \"\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo.js\", \"baz.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo.js\", \"/baz.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo.js\", \"bar.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo.js\", \"/bar.js\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\").replace(\"foo.js\", \"\")));"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").replace(\"foo\", \"bar\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").replaceAll(\"foo\", \"bar\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").toUpperCase()));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").toLowerCase()));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").substring(0, 3)));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").substring(1)));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").trim()));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").concat(\"/newpath\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").split(\"/\")[0]));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\").split(\"/\")[1]));"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"bar\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\", \"bar\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"baz\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\", \"baz\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\\\", \"qux\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"foo\\\", \"qux\"));"
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replace(\"foo\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replace(\"foo\\\\\", \"bar\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).toUpperCase());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).toLowerCase());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).substring(3));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).substring(0, 3));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replaceAll(\"foo\", \"bar\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replaceAll(\"\\\\\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replaceFirst(\"foo\", \"bar\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")).replaceFirst(\"\\\\\\\\\", \"/\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(\"newFileName.js\");"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(\"foo/bar/baz.js\");"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().toUpperCase());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(script.getSourceFileName().toLowerCase());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = \"module$baz\";"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = \"module$bar$baz\";"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = \"module$foo$baz\";"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = \"module$foo/bar/baz\";"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = \"module$foo\\baz\";"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()).replace(\"\\\\\", \"\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()).replace(\"foo\", \"bar\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\".js\", \".txt\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().toUpperCase()));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().toLowerCase()));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replaceAll(\"\\\\.\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replaceAll(\"foo\", \"bar\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()).toUpperCase());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()).toLowerCase());"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "      // Inserted line to fix the bug"
+                    ]
+                }
+            ],
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"/\", \"\\\\\"));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"/\", \"\\\\\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "      // Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                },
+                {
+                    "line_number": 119,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "      // Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "      // Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"/\", \"\\\\\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"/\", \"\\\\\")));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"/\", \"\\\\\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 119,
+                    "new_lines": [
+                        "      // Inserted line to fix the bug"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "insertions": [
+                {
+                    "line_number": 183,
+                    "new_lines": [
+                        "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/ProcessCommonJSModules.java",
+            "modifications": [
+                {
+                    "line_number": 183,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                },
+                {
+                    "line_number": 119,
+                    "modified_line": "      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName().replace(\"\\\\\", \"/\")));"
+                }
+            ]
+        }
+    ]
+}

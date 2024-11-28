@@ -1,0 +1,61 @@
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 319, 'modified_line': '.withQuote(null).withNullString("").withRecordSeparator(LF);'}]}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', 'if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty())) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 319, 'modified_line': '.withQuote(null).withNullString("").withRecordSeparator(LF);'}]}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', 'if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty())) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 319, 'modified_line': '.withQuote(null).withNullString("").withRecordSeparator(LF);'}]}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', 'if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 319, 'modified_line': '.withQuote(null).withNullString("").withRecordSeparator(LF);'}]}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', 'if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 319, 'modified_line': '.withQuote(null).withNullString("").withRecordSeparator(LF);'}]}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', 'if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object) || "\\n".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', '        if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '            .withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', '        if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '            .withQuote(null).withRecordSeparator(LF);']], 'insertions': [{'line_number': 319, 'new_lines': ['.withQuote(null).withNullString("").withRecordSeparator(LF);']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', '        if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': '        if (format.isQuoteCharacterSet() && object != null) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() && !"NULL".equals(object) && !"\\N".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object) || "\\n".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 319, 'modified_line': '.withQuote(null).withNullString("").withRecordSeparator(LF);'}]}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', 'if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object) || "\\n".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object) || "\\n".equals(object) || "\\N".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVFormat.java', 'target_lines': [['319', '.withQuote(null).withRecordSeparator(LF);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 319, 'modified_line': '.withQuote(null).withNullString("").withRecordSeparator(LF);'}]}, {'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'target_lines': [['139', 'if (format.isQuoteCharacterSet()) {']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object) || "\\n".equals(object) || "\\N".equals(object))) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVPrinter.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 139, 'modified_line': 'if (format.isQuoteCharacterSet() && object != null && !(object instanceof String && ((String) object).isEmpty() || "NULL".equals(object) || "\\N".equals(object) || "".equals(object) || "\\n".equals(object) || "\\N".equals(object) || "\\N".equals(object))) {'}]}]
+
+

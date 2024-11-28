@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);\n', '                if (abs.getQuery() == null) {\n', '                    abs = new URL(abs.toString() + "?");\n', '                }\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);\n', '                if (abs.getQuery() == null) {\n', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);\n', '                }\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);\n', '                if (abs.getQuery() == null) {\n', '                    abs = new URL(abs.toString() + "?" + relUrl);\n', '                }\n']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(new URL(base, relUrl).toExternalForm());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);', '                }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);', '                }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);', '                }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);', '                }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);', '                }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Node.java', 'insertions': [{'line_number': 173, 'new_lines': ['                URL abs = new URL(base, relUrl);', '                if (abs.getQuery() == null) {', '                    abs = new URL(abs.toString() + (relUrl.contains("?") ? "" : "?") + relUrl);']}], 'deletions': [], 'modifications': []}]
+
+

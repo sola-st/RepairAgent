@@ -1,0 +1,91 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block.isFunction || block.isLoop) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'boolean isAssignedOnceInLifetime(String variableName, String methodBody) {\n        int assignCount = 0;\n        String[] lines = methodBody.split("\\n");\n\n        for (String line : lines) {\n            if (line.contains(variableName + "=") || line.contains(variableName + " = ")) {\n                assignCount++;\n            }\n        }\n\n        return assignCount == 1;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'boolean isAssignedOnceInLifetime() {\n      Reference ref = getOneAndOnlyAssignment();\n      if (ref == null) {\n        return false;\n      }\n\n      // Make sure this assignment is not in a loop or a function.\n      for (BasicBlock block = ref.getBasicBlock();\n           block != null; block = block.getParent()) {\n        if (block.isFunction || block.isLoop) {\n          return false;\n        }\n      }\n\n      return true;\n    }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block.isFunction || block.isLoop) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block.isFunction || block.isLoop)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    for (int i = 0; i < this.statements.size(); i++) {\n        Statement statement = this.statements.get(i);\n        if (statement instanceof AssignmentStatement) {\n            AssignmentStatement assignment = (AssignmentStatement) statement;\n            if (assignment.getVariableName().equals(variableName)) {\n                count++;\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    if (this.statements != null) {\n        for (int i = 0; i < this.statements.size(); i++) {\n            Statement statement = this.statements.get(i);\n            if (statement instanceof AssignmentStatement) {\n                AssignmentStatement assignment = (AssignmentStatement) statement;\n                if (assignment.getVariableName().equals(variableName)) {\n                    count++;\n                }\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    if (this.statements != null) {\n        for (int i = 0; this.statements != null && i < this.statements.size(); i++) {\n            Statement statement = this.statements.get(i);\n            if (statement instanceof AssignmentStatement) {\n                AssignmentStatement assignment = (AssignmentStatement) statement;\n                if (assignment.getVariableName().equals(variableName)) {\n                    count++;\n                }\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    if (this.statements != null) {\n        for (int i = 0; this.statements != null && i < this.statements.size(); i++) {\n            Statement statement = this.statements.get(i);\n            if (statement instanceof AssignmentStatement) {\n                AssignmentStatement assignment = (AssignmentStatement) statement;\n                if (assignment != null && assignment.getVariableName().equals(variableName)) {\n                    count++;\n                }\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    if (this.statements != null) {\n        for (int i = 0; i < this.statements.size(); i++) {\n            Statement statement = this.statements.get(i);\n            if (statement instanceof AssignmentStatement) {\n                AssignmentStatement assignment = (AssignmentStatement) statement;\n                if (assignment != null && assignment.getVariableName().equals(variableName)) {\n                    count++;\n                }\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    if (this.statements != null && this.statements.size() > 0) {\n        for (int i = 0; i < this.statements.size(); i++) {\n            Statement statement = this.statements.get(i);\n            if (statement instanceof AssignmentStatement) {\n                AssignmentStatement assignment = (AssignmentStatement) statement;\n                if (assignment != null && assignment.getVariableName().equals(variableName)) {\n                    count++;\n                }\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    if (this.statements != null) {\n        for (Statement statement : this.statements) {\n            if (statement instanceof AssignmentStatement) {\n                AssignmentStatement assignment = (AssignmentStatement) statement;\n                if (assignment != null && assignment.getVariableName().equals(variableName)) {\n                    count++;\n                }\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 421, 'modified_line': 'public boolean isAssignedOnceInLifetime(String variableName) {\n    int count = 0;\n    if (this.statements != null && !this.statements.isEmpty()) {\n        for (Statement statement : this.statements) {\n            if (statement instanceof AssignmentStatement) {\n                AssignmentStatement assignment = (AssignmentStatement) statement;\n                if (assignment != null && assignment.getVariableName().equals(variableName)) {\n                    count++;\n                }\n            }\n        }\n    }\n    return count == 1;\n}'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block.isFunction || block.isLoop)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && block != null && (block.isFunction || block.isLoop)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block.isFunction || block.isLoop)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block.isFunction || block.isLoop)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block.isFunction || block.isLoop)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block.isFunction || block.isLoop)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/ReferenceCollectingCallback.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 431, 'modified_line': '        if (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block != null && (block.isFunction || block.isLoop))) {'}]}]
+
+

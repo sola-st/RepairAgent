@@ -1,0 +1,37 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index.intValue() >= values.length) {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && index.intValue() >= values.length) {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && values != null && index.intValue() >= values.length) {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && values != null && index.intValue() < values.length && index.intValue() >= 0) {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && values != null && index.intValue() < values.length && index.intValue() >= 0) {', 'return values[index.intValue()];', '} else {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && index.intValue() >= 0 && index.intValue() < values.length) {', 'return values[index.intValue()];', '} else {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && index.intValue() >= 0 && index.intValue() < values.length) {', 'return values[index.intValue()];', '} else {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && values != null && index.intValue() >= 0 && index.intValue() < values.length) {', 'return values[index.intValue()];', '} else {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && values != null && index.intValue() >= 0 && values != null && index.intValue() < values.length) {', 'return values[index.intValue()];', '} else {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && values != null && index.intValue() >= 0 && values != null && values.length > 0 && index.intValue() < values.length) {', 'return values[index.intValue()];', '} else {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/csv/CSVRecord.java', 'insertions': [{'line_number': 85, 'new_lines': ['if (index != null && index.intValue() >= 0 && index.intValue() < values.length) {', 'return values[index.intValue()];', '} else {', 'throw new IllegalArgumentException("Index out of bounds");', '}']}]}]
+
+

@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'insertions': [{'line_number': 115, 'new_lines': ['    // Check if the node is a function node', '    if (n.isFunction()) {', '        return false; // Do not traverse function nodes', '    }', '', "    // Check if the node is an assignment to 'this'", '    if (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) {', "        return false; // Do not traverse assignments to 'this'", '    }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString()))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'insertions': [{'line_number': 115, 'new_lines': ['    // Check if the node is a function node', '    if (n.isFunction()) {', '        return false; // Do not traverse function nodes', '    }', '', "    // Check if the node is an assignment to 'this'", '    if (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) {', "        return false; // Do not traverse assignments to 'this'", '    }']}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString()))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString()))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis()) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || n.isGetProp()) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || n.isGetProp()) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis()) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || (n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("prototype"))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || (n.isGetProp() && (n.getFirstChild().getLastChild().getString().equals("prototype") || n.getFirstChild().getLastChild().getString().equals("this")))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || (n.isGetProp() && (n.getFirstChild().getLastChild().getString().equals("prototype") || n.getFirstChild().getLastChild().getString().equals("this")) || n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("this"))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || (n.isGetProp() && (n.getFirstChild().getLastChild().getString().equals("prototype") || n.getFirstChild().getLastChild().getString().equals("this")) || n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("this")) || (n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("this"))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || (n.isGetProp() && (n.getFirstChild().getLastChild().getString().equals("prototype") || n.getFirstChild().getLastChild().getString().equals("this")) || n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("this")) || (n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("this")) || (n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("this")) || (n.isGetProp() && n.getFirstChild().getLastChild().getString().equals("this"))) { return false; }'}]}]
+
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.CheckGlobalThis.java', 'modifications': [{'line_number': 115, 'modified_line': '    if (n.isFunction() || (n.isAssign() && n.getFirstChild().isName() && "this".equals(n.getFirstChild().getString())) || n.isThis() || (n.isGetProp() && (n.getFirstChild().getLastChild().getString().equals("prototype") || n.getFirstChild().getLastChild().getString().equals("this"))) { return false; }'}]}]
+
+

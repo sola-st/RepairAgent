@@ -1,0 +1,34 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['228', '//'], ['251', '//']], 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}, {'line_number': 251, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}, {'line_number': 251, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['228', '//'], ['251', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        ']}, {'line_number': 251, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        ']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        ']}, {'line_number': 251, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        ']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        ']}, {'line_number': 251, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        ']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 242, 'new_lines': ['    protected void _deserializeAndSet(JsonParser jp, DeserializationContext ctxt,', '            Object bean, int index, String typeId)', '        throws IOException', '    {', '        TokenBuffer merged = new TokenBuffer(jp, ctxt);', '        merged.writeStartArray();', '        merged.writeString(typeId);', '        JsonParser p2 = _tokens[index].asParser(jp);', '        p2.nextToken();', '        merged.copyCurrentStructure(p2);', '        merged.writeEndArray();', '        ', '        // Need to point to the merged structure...', '        p2 = merged.asParser(jp);', '        p2.nextToken(); // to point to the first START_OBJECT', '        ', '        SettableBeanProperty prop = _properties[index].getProperty();', '        prop.deserializeAndSet(p2, ctxt, bean);', '    }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'target_lines': [['228', '//'], ['251', '//']], 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately']}, {'line_number': 251, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/impl/ExternalTypeHandler.java', 'insertions': [{'line_number': 228, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}, {'line_number': 251, 'new_lines': ['        if (t == JsonToken.VALUE_STRING) {', '            // Handle VALUE_STRING token appropriately', '        }']}], 'deletions': [], 'modifications': []}]
+
+

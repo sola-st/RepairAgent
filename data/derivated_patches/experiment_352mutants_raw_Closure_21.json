@@ -1,0 +1,1603 @@
+
+  {
+        "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 101,
+                "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp()) {"
+            }
+        ]
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (!n.isExprResult()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() != Token.COMMA) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 114,
+                    "modified_line": "      if (!isResultUsed) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 115,
+                    "modified_line": "        return false;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 116,
+                    "modified_line": "      } else {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "      if (n != parent.getLastChild()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 118,
+                    "modified_line": "        for (Node an : parent.getAncestors()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 119,
+                    "modified_line": "          int ancestorType = an.getType();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 120,
+                    "modified_line": "          if (ancestorType == Token.COMMA) break;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 121,
+                    "modified_line": "          if (ancestorType == Token.EXPR_RESULT || ancestorType == Token.BLOCK) continue;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "          return false;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 123,
+                    "modified_line": "        } else {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 124,
+                    "modified_line": "          return isResultUsed && n == parent.getLastChild();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 125,
+                    "modified_line": "    } else if (parent.getType() == Token.EXPR_RESULT || parent.getType() == Token.BLOCK) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "      if (parent.getType() != Token.FOR || parent.getChildCount() != 4 || (n != parent.getFirstChild() && n != parent.getFirstChild().getNext().getNext())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 127,
+                    "modified_line": "        return false;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 128,
+                    "modified_line": "      } else {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 129,
+                    "modified_line": "        return parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext());"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 130,
+                    "modified_line": "    }"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 101, "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || n.isExprResult()) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 113, "modified_line": "    if (parent.getType() != Token.COMMA) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 114, "modified_line": "      if (!isResultUsed) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 115, "modified_line": "        return; // Updated condition to return if result is not used"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 116, "modified_line": "      if (n == parent.getLastChild() && !isResultUsed) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 117, "modified_line": "      if (n == parent.getLastChild() && isResultUsed) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 118, "modified_line": "        for (Node an : parent.getAncestors()) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 119, "modified_line": "          int ancestorType = an.getType(); // Updated the ancestor type check"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 120, "modified_line": "          if (ancestorType == Token.COMMA || ancestorType == Token.BLOCK) return; // Updated the condition to check for COMMA or BLOCK type"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 121, "modified_line": "          if (ancestorType != Token.EXPR_RESULT) return; // Updated the condition to return if ancestor type is not EXPR_RESULT"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 122, "modified_line": "          if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK) break; // Updated the condition for breaking the loop"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 123, "modified_line": "          if (ancestorType != Token.EXPR_RESULT || ancestorType != Token.BLOCK) return; // Modified condition for checking ancestor type to return if not EXPR_RESULT or BLOCK"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 124, "modified_line": "          if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK) continue; // Update the loop continuation condition"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 125, "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 126, "modified_line": "      if (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext())) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 127, "modified_line": "        if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext()))) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 128, "modified_line": "          return; // Updated condition for returning if parent type conditions are not met"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 129, "modified_line": "    } // Removed the unnecessary closing brace for better code structure"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "deletions": [130]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "insertions": [
+                {"line_number": 130, "new_lines": ["    // Add new logic here to handle the side effects"]}
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() && n.isNew() && n.isDelProp() && NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && !isResultUsed) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      // Removed the return statement"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "      // Removed the return statement"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 129,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK && parent.getType() != Token.FUNCTION) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 119,
+                    "modified_line": "          if (ancestorType != Token.EXPR_RESULT && ancestorType == Token.BLOCK) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "deletions": [122]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "      if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext() && true))) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "      if (n == parent.getLastChild() && parent.getType() == Token.COMMA) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() && n.isNew() && n.isDelProp()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 125,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK && parent.getType() == Token.FUNCTION) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "deletions": [123]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "insertions": [
+                {
+                    "line_number": 122,
+                    "new_lines": [
+                        "          if (ancestorType == Token.COMMA) return;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "deletions": [126]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 130,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK && parent.getType() != Token.FUNCTION) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "insertions": [
+                {
+                    "line_number": 113,
+                    "new_lines": [
+                        "      if (parent.getType() == Token.COMMA && !isResultUsed) {",
+                        "        // Additional logic here"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 119,
+                    "modified_line": "          if (ancestorType != Token.EXPR_RESULT && ancestorType == Token.BLOCK) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "deletions": [122]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "      if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext() && true))) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "      if (n == parent.getLastChild() && parent.getType() == Token.COMMA) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() && n.isNew() && n.isDelProp()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 125,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK && parent.getType() == Token.FUNCTION) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "deletions": [123]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "insertions": [
+                {
+                    "line_number": 122,
+                    "new_lines": [
+                        "          if (ancestorType == Token.COMMA) return;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "deletions": [126]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 130,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK && parent.getType() != Token.FUNCTION) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "insertions": [
+                {
+                    "line_number": 113,
+                    "new_lines": [
+                        "      if (parent.getType() == Token.COMMA && !isResultUsed) {",
+                        "        // Additional logic here"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 101, "modified_line": "    if (n.isCall() && n.isNew() && n.isDelProp()) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 113, "modified_line": "    if (parent.getType() == Token.COMMA && !isResultUsed) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 114, "modified_line": "      if (isResultUsed) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 115, "modified_line": "        // Some custom logic here"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 116, "modified_line": "      // Handle parent's last child"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 117, "modified_line": "        // Loop through ancestors to check for comma"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 118, "modified_line": "        // Some logic to handle ancestor types"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 119, "modified_line": "        // Check for expression results and blocks in ancestors"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 120, "modified_line": "        // Additional handling for different ancestor types"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 121, "modified_line": "        // Introduce a new logic here for ancestor types"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 122, "modified_line": "        // Break the loop if necessary conditions are met"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 123, "modified_line": "        // Some additional logic here for ancestor types"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 124, "modified_line": "        // Handle different cases based on ancestor types"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 125, "modified_line": "    } else if (parent.getType() == Token.EXPR_RESULT || parent.getType() == Token.BLOCK) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 126, "modified_line": "      if (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext())) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 127, "modified_line": "        // Handle specific conditions for parent in FOR loop"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 128, "modified_line": "      // Logic for cases where parent type is not EXPR_RESULT or BLOCK"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 129, "modified_line": "    } else if (parent.getType() == Token.EXPR_RESULT || parent.getType() == Token.BLOCK) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 130, "modified_line": "      if (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext())) {"}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 114,
+                    "modified_line": "      return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 116,
+                    "modified_line": "        t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "          continue;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 120,
+                    "modified_line": "        if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK) continue;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 121,
+                    "modified_line": "        else return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 129,
+                    "modified_line": "      if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext()))) continue;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 129,
+                    "modified_line": "      if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext()))) return;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                },
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                },
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed) {"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                },
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed) {"
+                },
+                {
+                    "line_number": 116,
+                    "modified_line": "        t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                },
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed) {"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "        t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                },
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed) {"
+                },
+                {
+                    "line_number": 118,
+                    "modified_line": "        t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                },
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed) {"
+                },
+                {
+                    "line_number": 119,
+                    "modified_line": "        t.reportCodeChange();"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 101, "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 113, "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 114, "modified_line": "      t.reportCodeChange();"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 115, "modified_line": "      return;"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 116, "modified_line": "      t.reportCodeChange();"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 117, "modified_line": "      if (n == parent.getLastChild()) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 118, "modified_line": "        for (Node an : parent.getAncestors()) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 119, "modified_line": "          int ancestorType = an.getType();"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 120, "modified_line": "          if (ancestorType == Token.COMMA) continue;"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 121, "modified_line": "          if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK) return;"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 122, "modified_line": "          else break;"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 123, "modified_line": "        }"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 124, "modified_line": "      } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 125, "modified_line": "        if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext()))) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 126, "modified_line": "          return;"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 127, "modified_line": "        }"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 128, "modified_line": "      } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 129, "modified_line": "        if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext()))) {"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {"line_number": 130, "modified_line": "          if (isSimpleOp || !NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 115,
+                    "modified_line": "      return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 116,
+                    "modified_line": "    if (n == parent.getLastChild()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "      for (Node an : parent.getAncestors()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 118,
+                    "modified_line": "        int ancestorType = an.getType();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 119,
+                    "modified_line": "        if (ancestorType == Token.COMMA) continue;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 120,
+                    "modified_line": "        if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 121,
+                    "modified_line": "        else break;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "      }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 123,
+                    "modified_line": "    }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 124,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 125,
+                    "modified_line": "      if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext()))) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 127,
+                    "modified_line": "      }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 128,
+                    "modified_line": "    }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 129,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 130,
+                    "modified_line": "      if (isSimpleOp || !NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler()) || NodeUtil.isSimpleOperatorType(n.getType())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                },
+                {
+                    "line_number": 129,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 116,
+                    "modified_line": "      if (n == parent.getLastChild() && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "          else if (NodeUtil.isSimpleOperatorType(n.getType())) break;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 125,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 130,
+                    "modified_line": "    if (NodeUtil.isSimpleOperatorType(n.getType()) || !NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        return;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "      if (n == parent.getLastChild() && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        return;"
+                },
+                {
+                    "line_number": 116,
+                    "modified_line": "      if (n == parent.getLastChild() && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "        for (Node an : parent.getAncestors()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        return;"
+                },
+                {
+                    "line_number": 116,
+                    "modified_line": "      if (n == parent.getLastChild() && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "        for (Node an : parent.getAncestors()) {"
+                },
+                {
+                    "line_number": 118,
+                    "modified_line": "          int ancestorType = an.getType();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        return;"
+                },
+                {
+                    "line_number": 116,
+                    "modified_line": "      if (n == parent.getLastChild() && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "        for (Node an : parent.getAncestors()) {"
+                },
+                {
+                    "line_number": 118,
+                    "modified_line": "          int ancestorType = an.getType();"
+                },
+                {
+                    "line_number": 119,
+                    "modified_line": "          if (ancestorType == Token.COMMA && NodeUtil.isSimpleOperatorType(n.getType())) continue;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA && isResultUsed && !NodeUtil.mayHaveSideEffects(n, t.getCompiler()) && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 114,
+                    "modified_line": "      t.reportCodeChange();"
+                },
+                {
+                    "line_number": 115,
+                    "modified_line": "        return;"
+                },
+                {
+                    "line_number": 116,
+                    "modified_line": "      if (n == parent.getLastChild() && NodeUtil.isSimpleOperatorType(n.getType())) {"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "        for (Node an : parent.getAncestors()) {"
+                },
+                {
+                    "line_number": 118,
+                    "modified_line": "          int ancestorType = an.getType();"
+                },
+                {
+                    "line_number": 119,
+                    "modified_line": "          if (ancestorType == Token.COMMA && NodeUtil.isSimpleOperatorType(n.getType())) continue;"
+                },
+                {
+                    "line_number": 120,
+                    "modified_line": "          if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK && NodeUtil.isSimpleOperatorType(n.getType())) return;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 101,
+                    "modified_line": "    if (n.isCall() || n.isNew() || n.isDelProp() || NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 113,
+                    "modified_line": "    if (parent.getType() == Token.COMMA) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 114,
+                    "modified_line": "      if (isResultUsed) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 115,
+                    "modified_line": "      t.reportCodeChange();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 116,
+                    "modified_line": "    if (n == parent.getLastChild()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "      for (Node an : parent.getAncestors()) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 118,
+                    "modified_line": "        int ancestorType = an.getType();"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 119,
+                    "modified_line": "        if (ancestorType == Token.COMMA) continue;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 120,
+                    "modified_line": "        if (ancestorType != Token.EXPR_RESULT && ancestorType != Token.BLOCK) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 121,
+                    "modified_line": "        else break;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "      }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 123,
+                    "modified_line": "    }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 124,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 125,
+                    "modified_line": "      if (! (parent.getType() == Token.FOR && parent.getChildCount() == 4 && (n == parent.getFirstChild() || n == parent.getFirstChild().getNext().getNext()))) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 126,
+                    "modified_line": "        return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 127,
+                    "modified_line": "      }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 128,
+                    "modified_line": "    }"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 129,
+                    "modified_line": "    } else if (parent.getType() != Token.EXPR_RESULT && parent.getType() != Token.BLOCK) {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CheckSideEffects.java",
+            "modifications": [
+                {
+                    "line_number": 130,
+                    "modified_line": "      if (isSimpleOp || !NodeUtil.mayHaveSideEffects(n, t.getCompiler())) {"
+                }
+            ]
+        }
+    ]
+}

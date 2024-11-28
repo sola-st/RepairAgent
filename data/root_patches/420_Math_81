@@ -1,0 +1,55 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'target_lines': [['905', '                    for (int i = 4 * i0; i < 4 * n0 - 11; i += 4) {'], ['906', '                        if ((work[i + 3] <= TOLERANCE_2 * work[i]) &&'], ['1543', '                if (end - start > 2) {'], ['603', '//']], 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'modifications': [{'line_number': 905, 'modified_line': '                    for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': '                        if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': '                if (end - start > 2 && end < work.length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'target_lines': [['905', '                    for (int i = 4 * i0; i < 4 * n0 - 11; i += 4) {'], ['906', '                        if ((work[i + 3] <= TOLERANCE_2 * work[i]) &&'], ['1543', '                if (end - start > 2) {'], ['603', '//']], 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': '                    for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': '                        if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': '                if (end - start > 2 && end < work.length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'target_lines': [['905', '                    for (int i = 4 * i0; i < 4 * n0 - 11; i += 4) {'], ['906', '                        if ((work[i + 3] <= TOLERANCE_2 * work[i]) &&'], ['1543', '                if (end - start > 2) {'], ['603', '//']], 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': '                        if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': '                if (end - start > 2 && end < work.length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': 'if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': 'if (end - start > 2 && end < work.length) {'}, {'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': 'if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': 'if (end - start > 2 && end < work.length) {'}, {'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0, work.length); i += 4) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'target_lines': [['905', '                    for (int i = 4 * i0; i < 4 * n0 - 11; i += 4) {'], ['906', '                        if ((work[i + 3] <= TOLERANCE_2 * work[i]) &&'], ['1543', '                if (end - start > 2) {'], ['603', '//']], 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': 'if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': 'if (end - start > 2 && end < work.length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0, work.length); i += 4) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'target_lines': [['905', '                    for (int i = 4 * i0; i < 4 * n0 - 11; i += 4) {'], ['906', '                        if ((work[i + 3] <= TOLERANCE_2 * work[i]) &&'], ['1543', '                if (end - start > 2) {'], ['603', '//']], 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': 'if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': 'if (end - start > 2 && end < work.length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'target_lines': [['905', '                    for (int i = 4 * i0; i < 4 * n0 - 11; i += 4) {'], ['906', '                        if ((work[i + 3] <= TOLERANCE_2 * work[i]) &&'], ['1543', '                if (end - start > 2) {']], 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': 'if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': 'if (end - start > 2 && end < work.length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0, work.length); i += 4) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0 - 11, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': 'if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': 'if (end - start > 2 && end < work.length) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/linear/EigenDecompositionImpl.java', 'insertions': [{'line_number': 603, 'new_lines': ['        if (n0 < 3) {', '            return;', '        }']}], 'deletions': [], 'modifications': [{'line_number': 905, 'modified_line': 'for (int i = 4 * i0; i < Math.min(4 * n0, work.length); i += 4) {'}, {'line_number': 906, 'modified_line': 'if (i + 3 < work.length && (work[i + 3] <= TOLERANCE_2 * work[i]) &&'}, {'line_number': 1543, 'modified_line': 'if (end - start > 2 && end < work.length) {'}]}]
+
+

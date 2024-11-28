@@ -1,0 +1,37 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [{'line_number': 268, 'new_lines': ['        public double getNumericalMean() {', '            return getSampleSize() * getNumberOfSuccesses() / getPopulationSize();', '        }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (getSampleSize() * getNumberOfSuccesses() / Math.max(1, getPopulationSize()));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * getNumberOfSuccesses()) / Math.max(1, getPopulationSize());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * getNumberOfSuccesses()) / Math.abs(getPopulationSize());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * getNumberOfSuccesses()) / Math.max(1, Math.abs(getPopulationSize()));'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * getNumberOfSuccesses()) / Math.max(1, Math.abs(getPopulationSize())); // Handle negative values in division'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * getNumberOfSuccesses()) / Math.max(1, Math.abs(getPopulationSize())); // Handle negative values in division by taking absolute value of population size'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * getNumberOfSuccesses()) / Math.max(1, Math.abs(getPopulationSize())); // Handle negative values in division by taking absolute value of population size and ensuring denominator is at least 1'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * Math.abs(getNumberOfSuccesses())) / Math.max(1, Math.abs(getPopulationSize())); // Handle negative values in division by taking absolute value of sample size, number of successes, and population size, ensuring denominator is at least 1'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * Math.abs(getNumberOfSuccesses())) / Math.max(1, Math.abs(getPopulationSize())); // Handle negative values in division by taking absolute value of sample size, number of successes, and population size, ensuring denominator is at least 1'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/HypergeometricDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 268, 'modified_line': 'return (double) (getSampleSize() * getNumberOfSuccesses()) / Math.max(1, getPopulationSize()); // Ensure sample size does not exceed population size in division'}]}]
+
+

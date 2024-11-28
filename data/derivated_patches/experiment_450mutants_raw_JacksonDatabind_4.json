@@ -1,0 +1,102 @@
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [
+        {"line_number": 59, "new_lines": [
+            "if (t == null) {",
+            "    throw new IllegalArgumentException(\"Unexpected null token\");"
+        ]},
+        {"line_number": 75, "new_lines": [
+            "if (result == null) {",
+            "    return new String[0];"
+        ]},
+        {"line_number": 76, "new_lines": [
+            "if (chunk == null) {",
+            "    throw new IllegalStateException(\"Chunk array is null\");"
+        ]},
+        {"line_number": 93, "new_lines": [
+            "if (t == null) {",
+            "    throw new IllegalArgumentException(\"Unexpected null token\");"
+        ]},
+        {"line_number": 102, "new_lines": [
+            "if (result == null) {",
+            "    return new String[0];"
+        ]},
+        {"line_number": 103, "new_lines": [
+            "if (chunk == null) {",
+            "    throw new IllegalStateException(\"Chunk array is null\");"
+        ]}
+    ], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [
+        {"line_number": 59, "new_lines": [
+            "if (t == JsonToken.VALUE_STRING) {",
+            "    value = jp.getText();"
+        ]},
+        {"line_number": 75, "new_lines": [
+            "if (result == null) {",
+            "    return new String[0];"
+        ]},
+        {"line_number": 76, "new_lines": [
+            "if (chunk == null) {",
+            "    throw new IllegalStateException(\"Chunk array is null\");"
+        ]},
+        {"line_number": 93, "new_lines": [
+            "if (t == JsonToken.VALUE_STRING) {",
+            "    value = jp.getText();"
+        ]},
+        {"line_number": 102, "new_lines": [
+            "if (chunk == null) {",
+            "    chunk = new Object[10];"
+        ]},
+        {"line_number": 103, "new_lines": [
+            "if (result == null) {",
+            "    throw new IllegalStateException(\"Result array is null\");"
+        ]}
+    ], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [
+        {"line_number": 59, "new_lines": [
+            "if (t != null) {",
+            "    value = jp.getText();"
+        ]},
+        {"line_number": 75, "new_lines": [
+            "if (result == null) {",
+            "    return new String[0];"
+        ]},
+        {"line_number": 76, "new_lines": [
+            "if (chunk == null) {",
+            "    chunk = new Object[20];"
+        ]},
+        {"line_number": 93, "new_lines": [
+            "if (t != null) {",
+            "    value = jp.getText();"
+        ]},
+        {"line_number": 102, "new_lines": [
+            "if (chunk == null) {",
+            "    throw new IllegalStateException(\"Chunk array is null\");"
+        ]},
+        {"line_number": 103, "new_lines": [
+            "if (result == null) {",
+            "    return new String[0];"
+        ]}
+    ], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                ix++;"]}, {"line_number": 75, "new_lines":["        if (result.length == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return result;"]}, {"line_number": 93, "new_lines":["            if (value == null) value = \"\";"]}, {"line_number": 102, "new_lines":["        if (result.length == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return result;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                if (value == null) value = \"\";"]}, {"line_number": 75, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            if (value == null) value = \"\";"]}, {"line_number": 102, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                if (value == null) value = \"\";"]}, {"line_number": 75, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return result;"]}, {"line_number": 93, "new_lines":["            if (value == null) value = \"\";"]}, {"line_number": 102, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return result;"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                if (value == null) value = \"\";"]}, {"line_number": 75, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            if (value == null) value = \"\";"]}, {"line_number": 102, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                value = value != null ? value : \"\";"]}, {"line_number": 75, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            value = value != null ? value : \"\";"]}, {"line_number": 102, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                if (value == null) value = \"\";"]}, {"line_number": 75, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            if (value == null) value = \"\";"]}, {"line_number": 102, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                value = value != null ? value : \"\";"]}, {"line_number": 75, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            value = value != null ? value : \"\";"]}, {"line_number": 102, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                if (value == null) value = \"\";"]}, {"line_number": 75, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            if (value == null) value = \"\";"]}, {"line_number": 102, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                value = value != null ? value : \"\";"]}, {"line_number": 75, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            value = value != null ? value : \"\";"]}, {"line_number": 102, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                if (value == null) value = \"\";"]}, {"line_number": 75, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            if (value == null) value = \"\";"]}, {"line_number": 102, "new_lines":["        if (ix == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/std/StringArrayDeserializer.java", "target_lines": [["59", "//"], ["75", "//"], ["76", "//"], ["93", "//"], ["102", "//"], ["103", "//"]], "insertions": [{"line_number": 59, "new_lines":["                value = value != null ? value : \"\";"]}, {"line_number": 75, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 76, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}, {"line_number": 93, "new_lines":["            value = value != null ? value : \"\";"]}, {"line_number": 102, "new_lines":["        if (chunk.length == 0) return new String[0];"]}, {"line_number": 103, "new_lines":["        return buffer.completeAndClearBuffer(chunk, ix, String.class);"]}], "deletions": [], "modifications": []}
+]

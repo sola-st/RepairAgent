@@ -1,0 +1,43 @@
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/LongToStringTypeAdapterFactory.java', 'insertions': [{'line_number': 0, 'new_lines': ['import com.google.gson.Gson;', 'import com.google.gson.TypeAdapter;', 'import com.google.gson.TypeAdapterFactory;', 'import com.google.gson.reflect.TypeToken;', 'import com.google.gson.stream.JsonReader;', 'import com.google.gson.stream.JsonWriter;', '', 'import java.io.IOException;', '', 'public class LongToStringTypeAdapterFactory implements TypeAdapterFactory {', '', '    @Override', '    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {', '        if (typeToken.getRawType() != Long.class) {', '            return null;', '        }', '', '        TypeAdapter<T> longTypeAdapter = gson.getDelegateAdapter(this, typeToken);', '        ', '        @SuppressWarnings("unchecked")', '        TypeAdapter<T> stringTypeAdapter = (TypeAdapter<T>) new TypeAdapter<Long>() {', '            @Override', '            public void write(JsonWriter out, Long value) throws IOException {', '                if (value == null) {', '                    out.nullValue();', '                    return;', '                }', '                out.value(String.valueOf(value));', '            }', '', '            @Override', '            public Long read(JsonReader in) throws IOException {', '                if (in.peek() == com.google.gson.stream.JsonToken.NULL) {', '                    in.nextNull();', '                    return null;', '                }', '                String stringValue = in.nextString();', '                try {', '                    return Long.parseLong(stringValue);', '                } catch (NumberFormatException e) {', '                    return null;', '                }', '            }', '        };', '', '        return stringTypeAdapter.nullSafe();', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'target_lines': [['122', '        TypeAdapter t ='], ['123', '          new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']], 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'target_lines': [['122', '        TypeAdapter t ='], ['123', '          new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']], 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = new TypeAdapterRuntimeTypeWrapper<>(context, typeAdapter, fieldType.getType());']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper<>(context, typeAdapter, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = context.getAdapter(fieldType);']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper(context, t, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = context.getAdapter(fieldType);']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper<>(context, t, fieldType.getType());']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = context.getAdapter(fieldType);']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper<>(context, t, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper<>(context, typeAdapter, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'target_lines': [['122', '        TypeAdapter t ='], ['123', '          new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']], 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = new TypeAdapterRuntimeTypeWrapper<>(context, typeAdapter, fieldType.getType());']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper<>(context, typeAdapter, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'target_lines': [['122', '        TypeAdapter t ='], ['123', '          new TypeAdapterRuntimeTypeWrapper(context, typeAdapter, fieldType.getType());']], 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = context.getAdapter(fieldType);']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper<>(context, t, fieldType.getType());']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java', 'insertions': [{'line_number': 122, 'new_lines': ['        TypeAdapter t = context.getAdapter(fieldType);']}, {'line_number': 123, 'new_lines': ['          new TypeAdapterRuntimeTypeWrapper<>(context, t, fieldType.getType());']}]}]
+
+

@@ -1,0 +1,13 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 748, 'modified_line': '|| _hasAnnotation(a, JsonRawValue.class)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 748, 'modified_line': '|| _hasAnnotation(a, JsonRawValue.class) || _hasAnnotation(a, JsonTypeId.class)'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/introspect/JacksonAnnotationIntrospector.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 748, 'modified_line': 'protected String findNameForSerialization(AnnotatedField field) { PropertyName name = _annotationIntrospector.findNameForSerialization(field); if (name == null || name.isEmpty()) { String fieldName = field.getName(); return _annotationIntrospector == null ? fieldName : _annotationIntrospector.findImplicitPropertyName(field); } return name.getSimpleName(); }'}]}]
+
+

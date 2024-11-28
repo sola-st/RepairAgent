@@ -1,0 +1,22 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokeniserState.java', 'insertions': [{'line_number': 883, 'new_lines': ['if (reader.isEmpty()) {', 't.emit(currentToken);', 't.transition(Data);', '} else {', 't.transition(BeforeAttributeName);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokeniserState.java', 'insertions': [{'line_number': 883, 'new_lines': ['if (reader.isEmpty()) {', 't.emit(currentToken);', 't.transition(Data);', "} else if (reader.matchesAny('/', '>')) {", 't.transition(SelfClosingStartTag);', '} else {', 't.transition(BeforeAttributeName);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokeniserState.java', 'insertions': [{'line_number': 883, 'new_lines': ['if (reader.isEmpty()) {', 't.emit(currentToken);', 't.transition(Data);', "} else if (reader.matchesAny('/', '>')) {", 't.transition(SelfClosingStartTag);', '} else {', 't.transition(BeforeAttributeName);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokeniserState.java', 'modifications': [{'line_number': 883, 'modified_line': "if (reader.isEmpty()) { t.emit(currentToken); t.transition(Data); } else if (reader.matchesAny('/', '>')) { t.transition(SelfClosingStartTag); } else { t.transition(BeforeAttributeName); }"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokeniserState.java', 'modifications': [{'line_number': 883, 'modified_line': "if (reader.isEmpty()) { t.emit(currentToken); t.transition(Data); } else if (reader.matchesAny('/', '>')) { t.transition(SelfClosingStartTag); } else { t.transition(BeforeAttributeName); }"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/TokeniserState.java', 'modifications': [{'line_number': 883, 'modified_line': "if (reader.isEmpty()) { t.emit(currentToken); t.transition(Data); } else if (reader.matchesAny('/', '>')) { t.transition(SelfClosingStartTag); } else { t.transition(BeforeAttributeName); }"}]}]
+
+

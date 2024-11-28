@@ -1,0 +1,58 @@
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 101, 'new_lines': ['if (!in.nextString().isEmpty()) { // Check if the date is not empty string\n']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'target_lines': [['99', '    if (in.peek() != JsonToken.STRING) {'], ['100', '      throw new JsonParseException("The date should be a string value");']], 'insertions': [{'line_number': 99, 'new_lines': ['if (!in.nextString().isEmpty()) { // Check if the date is not empty string']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'target_lines': [['99', '    if (in.peek() != JsonToken.STRING) {'], ['100', '      throw new JsonParseException("The date should be a string value");']], 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING || in.peek() == JsonToken.NULL) { // Check if the date is a string value or null']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING || in.peek() == JsonToken.NULL) { // Check if the date is a string value or null']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING || in.peek() == JsonToken.NULL || in.peek() == JsonToken.NUMBER) { // Check if the date is a string value or null or number']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL) { // Check if the date is a string value or null']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL && in.peek() != JsonToken.NUMBER) { // Check if the date is a string value, null, or number']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL && in.peek() != JsonToken.NUMBER) { // Check if the date is a string value, null, or number']}, {'line_number': 100, 'new_lines': ['if (in.peek() == JsonToken.NULL) { // Check if the date is null']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL && in.peek() != JsonToken.NUMBER) { // Check if the date is a string value, null, or number']}, {'line_number': 100, 'new_lines': ['if (in.peek() == JsonToken.NULL || in.peek() == JsonToken.NUMBER) { // Check if the date is null or number']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL && in.peek() != JsonToken.NUMBER) { // Check if the date is a string value, null, or number']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL && in.peek() != JsonToken.NUMBER) { // Check if the date is a string value, null, or number']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL) { // Check if the date is a string value or null']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value or null"); // Update exception message to include null']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL) { // Check if the date is a string value or null']}, {'line_number': 100, 'new_lines': ['if (in.peek() == JsonToken.NULL) { // Check if the date is null']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL) { // Check if the date is a string value or null']}, {'line_number': 100, 'new_lines': ['if (in.peek() == JsonToken.NULL || in.peek() == JsonToken.NUMBER) { // Check if the date is null or number']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING && in.peek() != JsonToken.NULL) { // Check if the date is a string value or null']}, {'line_number': 100, 'new_lines': ['if (in.peek() == JsonToken.NULL) { // Check if the date is null']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING) { // Check if the date is a string value']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'target_lines': [['99', '    if (in.peek() != JsonToken.STRING) {'], ['100', '      throw new JsonParseException("The date should be a string value");']], 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING) { // Check if the date is a string value']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/DefaultDateTypeAdapter.java', 'insertions': [{'line_number': 99, 'new_lines': ['if (in.peek() != JsonToken.STRING) { // Check if the date is a string value']}, {'line_number': 100, 'new_lines': ['throw new JsonParseException("The date should be a string value"); // Retain the original exception']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+

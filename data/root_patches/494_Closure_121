@@ -1,0 +1,22 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineVariables.java', 'insertions': [{'line_number': 308, 'new_lines': ['// Adding a check to handle variables declared constant\n', 'if (v.isDeclaredConstant()) continue;']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineVariables.java', 'target_lines': [['304', '          referenceInfo.isAssignedOnceInLifetime()) {'], ['308', '//']], 'insertions': [{'line_number': 304, 'new_lines': ['// Adding a check to handle variables assigned once in their lifetime\n', 'if (referenceInfo.isAssignedOnceInLifetime() && !v.isDeclaredConstant()) {']}, {'line_number': 308, 'new_lines': ['// Adding a check to handle variables declared constant\n', 'if (v.isDeclaredConstant()) continue;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineVariables.java', 'insertions': [{'line_number': 307, 'new_lines': ['// Adjusting condition to skip inlining for constant variables', 'if (v.isDeclaredConstant()) continue;']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineVariables.java', 'target_lines': [['304', '          referenceInfo.isAssignedOnceInLifetime()) {'], ['308', '//']], 'insertions': [{'line_number': 304, 'new_lines': ['// Adding a check to handle variables assigned once in their lifetime', 'if (referenceInfo.isAssignedOnceInLifetime() && !v.isDeclaredConstant()) {']}, {'line_number': 308, 'new_lines': ['// Adding a check to handle variables declared constant', 'if (v.isDeclaredConstant()) continue;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineVariables.java', 'insertions': [{'line_number': 304, 'new_lines': ['// Adding a check to handle variables assigned once in their lifetime and those declared constant', 'if (referenceInfo.isAssignedOnceInLifetime() && v.isDeclaredConstant()) {']}, {'line_number': 308, 'new_lines': ['// Adjusting condition to skip inlining for constant variables', 'if (v.isDeclaredConstant()) continue;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/InlineVariables.java', 'insertions': [{'line_number': 304, 'new_lines': ['// Refining conditions for inlining to handle variables assigned once in their lifetime and those declared constant', 'if (referenceInfo.isAssignedOnceInLifetime() && v.isDeclaredConstant()) {']}, {'line_number': 308, 'new_lines': ['// Adjusting condition to skip inlining for constant variables', 'if (v.isDeclaredConstant()) continue;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+

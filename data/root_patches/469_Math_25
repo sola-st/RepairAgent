@@ -1,0 +1,16 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/fitting/HarmonicFitter.java', 'insertions': [{'line_number': 325, 'new_lines': ['if (c2 <= 0 || c3 <= 0) {', '    throw new MathIllegalStateException(LocalizedFormats.ILL_CONDITIONED_PROBLEM, c2, c3);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/fitting/HarmonicFitter.java', 'target_lines': [['323', '//'], ['325', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/fitting/HarmonicFitter.java', 'target_lines': [['323', '//'], ['325', '//']], 'insertions': [{'line_number': 323, 'new_lines': ['// Inserted to fix the bug: if (c2 <= 0 || c3 <= 0) {', '    throw new MathIllegalStateException(LocalizedFormats.ILL_CONDITIONED_PROBLEM, c2, c3);', '}']}, {'line_number': 325, 'new_lines': ['// Inserted to fix the bug: if (c2 <= 0 || c3 <= 0) {', '    throw new MathIllegalStateException(LocalizedFormats.ILL_CONDITIONED_PROBLEM, c2, c3);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/fitting/HarmonicFitter.java', 'insertions': [{'line_number': 325, 'new_lines': ['if (c2 <= 0 || c3 <= 0) {', '    throw new MathIllegalStateException(LocalizedFormats.ILL_CONDITIONED_PROBLEM, c2, c3);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/optimization/fitting/HarmonicFitter.java', 'target_lines': [['323', '//'], ['325', '//']], 'insertions': [{'line_number': 323, 'new_lines': ['// Inserted to fix the bug: if (c1 <= 0 || c2 <= 0 || c3 <= 0) {', '    throw new MathIllegalStateException(LocalizedFormats.ILL_CONDITIONED_PROBLEM, c1, c2, c3);', '}']}, {'line_number': 325, 'new_lines': ['// Inserted to fix the bug: if (c1 <= 0 || c2 <= 0 || c3 <= 0) {', '    throw new MathIllegalStateException(LocalizedFormats.ILL_CONDITIONED_PROBLEM, c1, c2, c3);', '}']}], 'deletions': [], 'modifications': []}]
+
+

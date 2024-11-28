@@ -1,0 +1,52 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreatorTest.java', 'insertions': [{'line_number': 551, 'new_lines': ['globalScope = new GlobalScope(); // Initialize globalScope\n']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'target_lines': [['731', '    if (objectType == null) {'], ['732', '      return scope;'], ['733', '    }'], ['734', '    boolean hasLendsName = n.getJSDocInfo() != null &&'], ['735', '        n.getJSDocInfo().getLendsName() != null;'], ['736', '    if (objectType.hasReferenceName() && !hasLendsName) {']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'target_lines': [['1669', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}]}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    // Inserted line to fix the bug']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    // Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    // Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    globalScope = new GlobalScope(); // Initialize globalScope']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreatorTest.java', 'insertions': [{'line_number': 551, 'new_lines': ['globalScope = new GlobalScope(); // Initialize globalScope']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'target_lines': [['731', '    if (objectType == null) {'], ['732', '      return scope;'], ['733', '    }'], ['734', '    boolean hasLendsName = n.getJSDocInfo() != null &&'], ['735', '        n.getJSDocInfo().getLendsName() != null;'], ['736', '    if (objectType.hasReferenceName() && !hasLendsName) {']], 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'target_lines': [['1669', '//']], 'insertions': [{'line_number': 1669, 'new_lines': ['    // Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 732, 'new_lines': ['      return scope;']}, {'line_number': 733, 'new_lines': ['    }']}, {'line_number': 734, 'new_lines': ['    boolean hasLendsName = n.getJSDocInfo() != null &&']}, {'line_number': 735, 'new_lines': ['        n.getJSDocInfo().getLendsName() != null;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    // Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreatorTest.java', 'insertions': [{'line_number': 551, 'new_lines': ['globalScope = new GlobalScope(); // Initialize globalScope']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    globalScope = new GlobalScope(); // Initialize globalScope']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'target_lines': [['731', '    if (objectType == null) {'], ['732', '      return scope;'], ['733', '    }'], ['734', '    boolean hasLendsName = n.getJSDocInfo() != null &&'], ['735', '        n.getJSDocInfo().getLendsName() != null;'], ['736', '    if (objectType.hasReferenceName() && !hasLendsName) {']], 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 732, 'new_lines': ['      return scope;']}, {'line_number': 733, 'new_lines': ['    }']}, {'line_number': 734, 'new_lines': ['    boolean hasLendsName = n.getJSDocInfo() != null &&']}, {'line_number': 735, 'new_lines': ['        n.getJSDocInfo().getLendsName() != null;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'target_lines': [['1669', '//']], 'insertions': [{'line_number': 1669, 'new_lines': ['    globalScope = new GlobalScope(); // Initialize globalScope']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreatorTest.java', 'insertions': [{'line_number': 1, 'new_lines': ['// Initialize globalScope at the beginning of the test setup', 'GlobalScope globalScope = new GlobalScope();']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    globalScope = new GlobalScope(); // Initialize globalScope']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'insertions': [{'line_number': 1669, 'new_lines': ['    globalScope = new GlobalScope(); // Initialize globalScope']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypedScopeCreatorTest.java', 'insertions': [{'line_number': 551, 'new_lines': ['globalScope = new GlobalScope(); // Initialize globalScope']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/TypeInference.java', 'target_lines': [['731', '    if (objectType == null) {'], ['732', '      return scope;'], ['733', '    }'], ['734', '    boolean hasLendsName = n.getJSDocInfo() != null &&'], ['735', '        n.getJSDocInfo().getLendsName() != null;'], ['736', '    if (objectType.hasReferenceName() && !hasLendsName) {']], 'insertions': [{'line_number': 731, 'new_lines': ['    if (objectType == null) {', '        // Inserted line to handle null objectType', '        return scope;']}, {'line_number': 736, 'new_lines': ['    if (objectType.hasReferenceName() && !hasLendsName) {', '        // Inserted line to handle objectType reference name']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/TypedScopeCreator.java', 'target_lines': [['1669', '//']], 'insertions': [{'line_number': 1669, 'new_lines': ['    globalScope = new GlobalScope(); // Initialize globalScope']}], 'deletions': [], 'modifications': []}]
+
+

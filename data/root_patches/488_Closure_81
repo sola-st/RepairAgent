@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'com.google.javascript.jscomp.parsing.ParserTest', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 21, 'modified_line': 'parseError("function() {};", "unnamed function statement");'}, {'line_number': 22, 'modified_line': 'parseError("if (true) { function() {}; }", "unnamed function statement");'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'target_lines': [['517', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'target_lines': [['517', '//']], 'insertions': [{'line_number': 517, 'new_lines': ['// Inserted fix for the bug at line 517']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Inserted fix for the bug at line 517']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Inserted fix for the bug at line 517', 'if (fn.isArrowFunction()) {', 'processArrowFunction(fn);', '} else {', 'processRegularFunction(fn);', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Fix for handling unnamed functions', 'if (name.getIdentifier().isEmpty()) {', '   name.setIdentifier("<unnamed>");', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Inserted fix for handling unnamed functions']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Fix for handling unnamed functions']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Fix for handling unnamed functions in processFunctionNode method']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Fix for handling unnamed functions in processFunctionNode method', 'if (name.getIdentifier().isEmpty()) {', '   name.setIdentifier("<unnamed>");', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Fix for handling unnamed functions in processFunctionNode method', 'if (name.getIdentifier().isEmpty()) {', '   name.setIdentifier("<unnamed>");', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Fix for handling unnamed functions in processFunctionNode method', 'if (name.getIdentifier().isEmpty()) {', '   name.setIdentifier("<unnamed>");', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Inserted fix for handling unnamed functions at line 517', 'if (name == null) {', '   name = new Name();', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/parsing/IRFactory.java', 'insertions': [{'line_number': 517, 'new_lines': ['// Fix for handling unnamed functions at line 517', 'if (name.getIdentifier().isEmpty()) {', '   name.setIdentifier("<unnamed>");', '}']}], 'deletions': [], 'modifications': []}]
+
+

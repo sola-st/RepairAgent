@@ -1,0 +1,55 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 278, 'new_lines': ['import java.lang.reflect.ParameterizedType;', 'import java.lang.reflect.Type;', 'import java.util.Map;', '', 'public class SupertypeUtils {', '', '    public static Type getSupertype(Type type, Class<?> superClass, Class<?> superInterface) {', '        if (type instanceof Class) {', '            Class<?> clazz = (Class<?>) type;', '            if (superClass.isAssignableFrom(clazz) && superInterface.isAssignableFrom(clazz)) {', '                return clazz;', '            }', '        } else if (type instanceof ParameterizedType) {', '            ParameterizedType parameterizedType = (ParameterizedType) type;', '            Type rawType = parameterizedType.getRawType();', '            if (rawType instanceof Class) {', '                Class<?> rawClass = (Class<?>) rawType;', '                if (superClass.isAssignableFrom(rawClass) && superInterface.isAssignableFrom(rawClass)) {', '                    return rawClass;', '                }', '            }', '        } else if (type instanceof Map.Entry) {', '            Map.Entry<?, ?> entry = (Map.Entry<?, ?>) type;', '            Type keyType = entry.getKey();', '            Type valueType = entry.getValue();', '            Type keySupertype = getSupertype(keyType, superClass, superInterface);', '            Type valueSupertype = getSupertype(valueType, superClass, superInterface);', '            if (keySupertype != null && valueSupertype != null) {', '                return new MapEntryType(keySupertype, valueSupertype);', '            }', '        }', '        return null;', '    }', '', '    private static class MapEntryType implements Type {', '        private final Type keyType;', '        private final Type valueType;', '', '        public MapEntryType(Type keyType, Type valueType) {', '            this.keyType = keyType;', '            this.valueType = valueType;', '        }', '    }', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'target_lines': [['278', '//'], ['279', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'target_lines': [['278', '//'], ['279', '//']], 'insertions': [{'line_number': 278, 'new_lines': ['// Inserted line to fix the bug at line 278']}, {'line_number': 279, 'new_lines': ['// Inserted line to fix the bug at line 279']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 279, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'target_lines': [['278', '//'], ['279', '//']], 'insertions': [{'line_number': 278, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}, {'line_number': 279, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 278, 'modified_line': '// Refining type validation and casting logic to prevent ClassCastException'}, {'line_number': 279, 'modified_line': 'if (!supertype.isAssignableFrom(contextRawType)) { throw new IllegalArgumentException("Supertype not assignable from contextRawType"); }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 278, 'modified_line': '// Refining type validation and casting logic to prevent ClassCastException'}, {'line_number': 279, 'modified_line': 'if (!supertype.isAssignableFrom(contextRawType)) { throw new IllegalArgumentException("Supertype not assignable from contextRawType"); }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 279, 'new_lines': ['// Further refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'target_lines': [['278', '//'], ['279', '//']], 'insertions': [{'line_number': 278, 'new_lines': ['// Further refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}, {'line_number': 279, 'new_lines': ['// Further refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 279, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'target_lines': [['278', '//'], ['279', '//']], 'insertions': [{'line_number': 278, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException']}, {'line_number': 279, 'new_lines': ['if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 278, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}, {'line_number': 279, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 278, 'new_lines': ['// Further refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}, {'line_number': 279, 'new_lines': ['// Further refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 279, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', 'throw new IllegalArgumentException("Supertype not assignable from contextRawType");', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'target_lines': [['278', '//'], ['279', '//']], 'insertions': [{'line_number': 278, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}, {'line_number': 279, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType) && !contextRawType.isAssignableFrom(supertype)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'insertions': [{'line_number': 279, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException', 'if (!supertype.isAssignableFrom(contextRawType)) {', '    throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/gson/internal/$Gson$Types.java', 'target_lines': [['278', '//'], ['279', '//']], 'insertions': [{'line_number': 278, 'new_lines': ['// Refining type validation and casting logic to prevent ClassCastException']}, {'line_number': 279, 'new_lines': ['if (!supertype.isAssignableFrom(contextRawType)) { throw new IllegalArgumentException("Supertype not assignable from contextRawType");']}], 'deletions': [], 'modifications': []}]
+
+

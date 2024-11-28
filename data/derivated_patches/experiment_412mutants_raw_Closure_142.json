@@ -1,0 +1,404 @@
+[
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"], ["1183", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Inserted line to fix the bug"]}, {"line_number": 1183, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [
+            ["108", "liveness.analyze();"]
+        ],
+        "insertions": [
+            {
+                "line_number": 108,
+                "new_lines": [
+                    "UndiGraph<Var, Void> interferenceGraph = computeVariableNamesInterferenceGraph(t, cfg, liveness.getEscapedLocals()); // Inserted new line to fix the bug"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+        "target_lines": [
+            ["1168", "//"]
+        ],
+        "insertions": [
+            {
+                "line_number": 1168,
+                "new_lines": [
+                    "// Inserted new line to fix the bug at line 1168"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+        "target_lines": [
+            ["1183", "//"]
+        ],
+        "insertions": [
+            {
+                "line_number": 1183,
+                "new_lines": [
+                    "// Inserted new line to fix the bug at line 1183"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Inserted new line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["liveness.analyze(); // Fixing the bug by calling liveness analysis"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["liveness.analyze(); // Potential fix by invoking liveness analysis"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Performing liveness analysis to resolve the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Fixing bug by running liveness analysis"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Bug fix: ensure liveness analysis is performed"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Inserted new line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Potential fix by adding a new line here"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Add line here to resolve the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Fixing the bug by adding a line here"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Ensure bug is resolved by inserting new line"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Inserted new line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Potential fix by adding a new line here"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Add line here to resolve the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Fixing the bug by adding a line here"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Ensure bug is resolved by inserting new line"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {
+                "line_number": 108,
+                "new_lines": [
+                    "UndiGraph<Var, Void> interferenceGraph = computeVariableNamesInterferenceGraph(t, cfg, liveness.getEscapedLocals()); // New line added to fix the bug"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+        "target_lines": [["1168", "//"], ["1183", "//"]],
+        "insertions": [
+            {
+                "line_number": 1168,
+                "new_lines": [
+                    "// Inserted line 1 to fix the bug"
+                ]
+            },
+            {
+                "line_number": 1183,
+                "new_lines": [
+                    "// Inserted line 2 to fix the bug"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Inserted new line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["liveness.analyze(); // Inserted new line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 107, "new_lines": ["liveness.analyze(); // Inserted new line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 109, "new_lines": ["liveness.analyze(); // Inserted new line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Additional line added for bug fixing"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 109, "new_lines": ["// Additional line added for bug fixing"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 110, "new_lines": ["// Additional line added for bug fixing"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 107, "new_lines": ["liveness.analyze(); // Fixing the bug by calling liveness.analyze()"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 109, "new_lines": ["liveness.analyze(); // Fixing the bug by calling liveness.analyze()"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 110, "new_lines": ["liveness.analyze(); // Fixing the bug by calling liveness.analyze()"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Inserted line to fix the bug"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Inserted line to fix the bug"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Inserted line to fix the bug"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Potential fix for the bug at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Potential fix for the bug at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Potential fix for the bug at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Proposed fix at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Proposed fix at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Proposed fix at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Fix added at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Fix added at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Fix added at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Adjusted code at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Adjusted code at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Adjusted code at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Mutated code at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Mutated code at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Mutated code at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Line modification for bug fix at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Line modification for bug fix at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Line modification for bug fix at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Code adjustment at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Code adjustment at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Code adjustment at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Bug fix at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Bug fix at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Bug fix at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Potential solution for line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Potential solution for line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Potential solution for line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Line fix at 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Line fix at 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Line fix at 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Code fix at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Code fix at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Code fix at line 1183"]}]}
+
+][
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["liveness.analyze(); // New line added to resolve the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Fixing the bug by adding necessary analysis"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Additional line inserted to handle the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Fixing bug by performing liveness analysis"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Inserted line to correct the issue"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["extractMultilineTextualBlock(token, option); // Added line to fix bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Fixing bug by extracting multiline textual block"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Additional line inserted to resolve the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Correcting bug by parsing multiline textual block"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Inserted line to handle the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Fixing the bug by adding necessary parsing logic"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["JsDocInfoParser.newMethod(); // Added new method call to fix bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Resolving bug by parsing JsDoc information with a new method call"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["// Inserted line to fix the bug at line 108"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1168", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["// Inserted line to fix the bug at line 1168"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1183", "//"]],
+        "insertions": [
+            {"line_number": 1183, "new_lines": ["// Inserted line to fix the bug at line 1183"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Inserted line to fix the bug at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["liveness.analyze(); // Inserted line to fix the bug at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Potential fix for the bug at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Code added to address the issue at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["liveness.analyze(); // Added line to resolve bug at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Fix added to address the bug at line 108"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Inserted line to fix the bug at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Added line to correct the issue at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Potential fix for the bug at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Code added to address the issue at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Fix added to address the bug at line 1168"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Inserted line to fix the bug at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Added line to correct the issue at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Potential fix for the bug at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Code added to address the issue at line 1183"]}]},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1183", "//"]], "insertions": [{"line_number": 1183, "new_lines": ["// Fix added to address the bug at line 1183"]}]}
+
+][
+    {"file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java", "target_lines": [["108", "//"]], "insertions": [{"line_number": 108, "new_lines": ["// Inserted new line to fix the bug\n"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java", "target_lines": [["1168", "//"], ["1183", "//"]], "insertions": [{"line_number": 1168, "new_lines": ["// Inserted new line to fix the bug\n"]}, {"line_number": 1183, "new_lines": ["// Inserted new line to fix the bug\n"]}], "deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["// Inserted line to fix the bug at line 108"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+        "target_lines": [["1168", "//"], ["1183", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["// Inserted line to fix the bug at line 1168"]},
+            {"line_number": 1183, "new_lines": ["// Inserted line to fix the bug at line 1183"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["liveness.analyze(); // Mutation: Added method call for liveness analysis"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["// Inserted a new line here to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["// Added a new line for liveness analysis before the bug line"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["// Added liveness analysis call here to address the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1168", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["// Inserted new line for JsDoc parsing fix"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1168", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["JsDocInfoParser.parseLicense(); // Added license parsing call to fix the bug"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1168", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["// Added new line here to handle license parsing in JsDoc"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1168", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["// Inserted license parsing call to improve JsDoc parsing"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1183", "//"]],
+        "insertions": [
+            {"line_number": 1183, "new_lines": ["// Added new line for fixing JsDoc parsing issue"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["1183", "//"]],
+        "insertions": [
+            {"line_number": 1183, "new_lines": ["// Inserted line to handle JsDoc parsing correctly"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["// Inserted line to fix the bug at line 108"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+        "target_lines": [["1168", "//"], ["1183", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["// Inserted line to fix the bug at line 1168"]},
+            {"line_number": 1183, "new_lines": ["// Inserted line to fix the bug at line 1183"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {
+                "line_number": 108,
+                "new_lines": [
+                    "    // Inserted line to fix the bug"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+        "target_lines": [["1168", "//"], ["1183", "//"]],
+        "insertions": [
+            {
+                "line_number": 1168,
+                "new_lines": [
+                    "    // Inserted line to fix the bug"
+                ]
+            },
+            {
+                "line_number": 1183,
+                "new_lines": [
+                    "    // Inserted line to fix the bug"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+][
+    {
+        "file_name": "com/google/javascript/jscomp/CoalesceVariableNames.java",
+        "target_lines": [["108", "//"]],
+        "insertions": [
+            {"line_number": 108, "new_lines": ["// Inserted line to fix the bug at line 108"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    },
+    {
+        "file_name": "com/google/javascript/jscomp/parsing/JsDocInfoParser.java",
+        "target_lines": [["1168", "//"], ["1183", "//"]],
+        "insertions": [
+            {"line_number": 1168, "new_lines": ["// Inserted line to fix the bug at line 1168"]},
+            {"line_number": 1183, "new_lines": ["// Inserted line to fix the bug at line 1183"]}
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+]

@@ -1,0 +1,959 @@
+
+    {
+        "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+        "modifications": [
+            {
+                "line_number": 71,
+                "modified_line": "    my $log = qx{$cmd}; my $ret = $?;"
+            },
+            {
+                "line_number": 72,
+                "modified_line": "    $$log_ref = $log if defined $log_ref;"
+            }
+        ]
+    }
+    
+    { "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 71, "modified_line": "    my $log = qx($cmd); my $ret = $?;"}, {"line_number": 72, "modified_line": "    $$log_ref = $log if defined $log_ref;"}]}
+    
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = undef; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Initialize pid variable"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 1; # Initialize pid variable"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 100; # Initialize pid variable"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = -1; # Initialize pid variable"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0.5; # Initialize pid variable"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $? + 1;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; # Mutated line for testing"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid; // Mutation for testing"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; # Modified for testing"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; # Fix for error handling"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid; // Adjusted for clarity"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; # Update for better error handling"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid; // Code clarity improvement"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; # Log command for debugging"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; # Handling log reference"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid; // PID declaration"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?; # Command execution"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; # Log reference assignment"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid; // PID initialization"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = undef; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 42; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = -1; # Explicit declaration for $pid"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'default'; # Explicit declaration for $pid"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = undef; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 1; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 100; # Explicit declaration for $pid"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = undef; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'default_pid'; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = $PID_VALUE; # Explicit declaration for $pid"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'new_pid_value'; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'another_pid_value'; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'different_pid_value'; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'different_pid_value'; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = `$cmd`; my $ret = $?;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'another_pid_value'; # Explicit declaration for $pid"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my @cmd = @_; my $log = `$cmd[0]`; my $ret = $?;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_; my $log = `$cmd`; my $ret = $?;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_; my $log = `$cmd[0]`; my $ret = $?;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_; my $log = `$cmd[0]`; my $ret = $?; $$log_ref = $log if defined $log_ref;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'fixed_pid'; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 117,
+                    "new_lines": [
+                        "my $new_pid = 'new_pid'; # New explicit declaration for $new_pid"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid; # Mutation: Remove explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 117,
+                    "modified_line": "my $new_pid = ''; # New explicit declaration for $new_pid; # Mutation: Remove explicit declaration for $new_pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 117,
+                    "new_lines": [
+                        "my $temp_pid = ''; # Temporary explicit declaration for $temp_pid"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 71,
+                    "new_lines": [
+                        "    my $new_cmd = `$cmd`; my $new_log = `$cmd`; my $new_ret = $?;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = qx($cmd); my $ret = $?-1;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; // Mutation: Changed return code by subtracting 1"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = qx($cmd); my $ret = $?+1;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; // Mutation: Changed return code by adding 1"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = qx($cmd); my $ret = 0;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; // Mutation: Set return code to 0"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = qx($cmd); my $ret = 1;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; // Mutation: Set return code to 1"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my $log = qx($cmd); my $ret = -1;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    $$log_ref = $log if defined $log_ref; // Mutation: Set return code to -1"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = qx($cmd); my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = ''; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = qx($cmd); my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 0; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = qx($cmd); my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 'some_value'; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = qx($cmd); my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = -1; # Explicit declaration for $pid"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 71,
+                    "modified_line": "    my ($cmd, $descr, $log_ref) = @_;"
+                },
+                {
+                    "line_number": 72,
+                    "modified_line": "    my $log = qx($cmd); my $ret = $?;"
+                },
+                {
+                    "line_number": 117,
+                    "modified_line": "my $pid = 1; # Explicit declaration for $pid"
+                }
+            ]
+        }
+    ]
+}

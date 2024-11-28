@@ -1,0 +1,13 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/EnumSerializer.java', 'modifications': [{'line_number': 103, 'modified_line': 'Boolean serializeAsIndex = _isShapeWrittenUsingIndex(property.getType().getRawClass(), format, true);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/EnumSerializer.java', 'target_lines': [['86', '        Boolean serializeAsIndex = _isShapeWrittenUsingIndex(enumClass, format, true);'], ['104', '                        format, false;'], ['217', '            JsonFormat.Value format, boolean fromClass)'], ['221', '            return null;'], ['225', '            return null;']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': 'Boolean serializeAsIndex = _isShapeWrittenUsingIndex(enumClass, format, true);'}, {'line_number': 104, 'modified_line': '                        format, true;'}, {'line_number': 217, 'modified_line': '            JsonFormat.Value format, true)'}, {'line_number': 221, 'modified_line': '            return true;'}, {'line_number': 225, 'modified_line': '            return true;'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/EnumSerializer.java', 'modifications': [{'line_number': 103, 'modified_line': 'Boolean serializeAsIndex = _isShapeWrittenUsingIndex(property.getType().getRawClass(), format, true);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/EnumSerializer.java', 'target_lines': [['86', '        Boolean serializeAsIndex = _isShapeWrittenUsingIndex(enumClass, format, true);'], ['104', '                        format, false);'], ['217', '            JsonFormat.Value format, boolean fromClass)'], ['221', '            return null;'], ['225', '            return null;']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 86, 'modified_line': 'Boolean serializeAsIndex = _isShapeWrittenUsingIndex(enumClass, format, true);'}, {'line_number': 104, 'modified_line': '                        format, true;'}, {'line_number': 217, 'modified_line': '            JsonFormat.Value format, true)'}, {'line_number': 221, 'modified_line': '            return true;'}, {'line_number': 225, 'modified_line': '            return true;'}]}]
+
+

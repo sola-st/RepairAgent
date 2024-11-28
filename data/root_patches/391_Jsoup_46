@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': "// Handling character 'c' properly to avoid '?' in output"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': "// Refactoring the logic to properly handle character 'c' to prevent '?' in the output"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': 'if (c == \'?\' || c == \'&\') accum.append("&" + c); else accum.append(c);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': 'if (c == \'?\' || c == \'&\' || c == \'<\' || c == \'>\' || c == \'"\') accum.append("&" + c); else accum.append(c);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': '// Refactoring the logic to properly handle special characters in the append method'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': "// Refactoring the logic to properly handle special characters in the append method to prevent '?' in the output"}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': 'if (c == \'?\' || c == \'&\' || c == \'<\' || c == \'>\' || c == \'"\') accum.append(\'&\' + c); else accum.append(c);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': 'if (c == \'?\' || c == \'&\' || c == \'<\' || c == \'>\' || c == \'"\') accum.append(\'&amp;\' + c); else accum.append(c);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': 'if (c == \'&\' || c == \'<\' || c == \'>\' || c == \'"\') accum.append(\'&amp;\' + c); else accum.append(c);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': 'if (c == \'&\' || c == \'<\' || c == \'>\' || c == \'"\' || c == \'\\\'\' || c == \'\\n\' || c == \'\\r\' || c == \'\\t\') accum.append(\'&amp;\' + c); else accum.append(c);'}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Entities.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 118, 'modified_line': 'if (c == \'&\' || c == \'<\' || c == \'>\' || c == \'"\' || c == \'\\\'\' || c == \'\\n\' || c == \'\\r\' || c == \'\\t\') accum.append(\'&amp;\' + c); else if (c == \'?\') accum.append("&quot;"); else accum.append(c);'}]}]
+
+

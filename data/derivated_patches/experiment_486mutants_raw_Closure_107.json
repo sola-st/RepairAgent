@@ -1,0 +1,534 @@
+[
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["// Fixing bug by adding missing logic here\n", "return options;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["// Bug fix: include proper logic here\n", "return options;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["// Added fix for bug\n", "return options;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["// Inserted code to resolve bug\n", "return options;"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["// Fix added to address bug\n", "return options;"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    if (flags.debug) {",
+"        level.setDebugOptionsForCompilationLevel(options);",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    if (flags.useTypesForOptimization) {",
+"        level.setTypeBasedOptimizationOptions(options);",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    if (flags.generateExports) {",
+"        options.setGenerateExports(flags.generateExports);",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    options.closurePass = flags.processClosurePrimitives;"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    options.jqueryPass = CompilationLevel.ADVANCED_OPTIMIZATIONS == level && flags.processJqueryPrimitives;"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    options.angularPass = flags.angularPass;"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty()) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    throw new IllegalArgumentException(\"Invalid flags configuration\");"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (flags.processJqueryPrimitives) {",
+"        options.setCodingConvention(new JqueryCodingConvention());",
+"    } else {",
+"        options.setCodingConvention(new ClosureCodingConvention());",
+"    }",
+"    options.setExtraAnnotationNames(flags.extraAnnotationName);"
+]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level != CompilationLevel.WHITESPACE_ONLY) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS && !flags.processJqueryPrimitives) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS || flags.processClosurePrimitives) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && !flags.processJqueryPrimitives) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && flags.angularPass && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS && flags.angularPass) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "        options.setLanguageIn(CompilerOptions.LanguageMode.ECMASCRIPT5);", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "        options.setLanguageIn(CompilerOptions.LanguageMode.ECMASCRIPT6);", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "        options.setLanguageIn(CompilerOptions.LanguageMode.ECMASCRIPT8);", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "        options.setLanguageIn(CompilerOptions.LanguageMode.ECMASCRIPT6);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "        options.setLanguageIn(CompilerOptions.LanguageMode.ECMASCRIPT8);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "        options.setLanguageIn(CompilerOptions.LanguageMode.ECMASCRIPT9);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "        options.setLanguageIn(CompilerOptions.LanguageMode.ECMASCRIPT5);", "        options.setLanguageOut(CompilerOptions.LanguageMode.ECMASCRIPT6);", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && flags.processJqueryPrimitives) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && flags.processClosurePrimitives) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && flags.useTypesForOptimization) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && flags.generateExports) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && flags.debug) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && flags.warningLevel != WarningLevel.QUIET) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level && !flags.processClosurePrimitives && !flags.processJqueryPrimitives) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS && flags.processClosurePrimitives && flags.processJqueryPrimitives && flags.angularPass && flags.useTypesForOptimization && flags.generateExports && flags.debug) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS && flags.processClosurePrimitives && flags.processJqueryPrimitives && flags.angularPass && flags.useTypesForOptimization && flags.generateExports && flags.debug && flags.warningLevel != WarningLevel.QUIET) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (level == CompilationLevel.ADVANCED_OPTIMIZATIONS && !flags.processClosurePrimitives && !flags.processJqueryPrimitives && !flags.angularPass && !flags.useTypesForOptimization && !flags.generateExports && !flags.debug && flags.warningLevel == WarningLevel.QUIET) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (level != CompilationLevel.ADVANCED_OPTIMIZATIONS || flags.processClosurePrimitives || flags.processJqueryPrimitives || flags.angularPass || flags.useTypesForOptimization || flags.generateExports || flags.debug || flags.warningLevel != WarningLevel.QUIET) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+    {"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (level != CompilationLevel.ADVANCED_OPTIMIZATIONS || !flags.processClosurePrimitives || !flags.processJqueryPrimitives || !flags.angularPass || !flags.useTypesForOptimization || !flags.generateExports || !flags.debug || flags.warningLevel != WarningLevel.QUIET) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }",
+"    // Add a log statement here to track message bundle creation",
+"    logger.info(\"Message bundle created successfully\");"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"        logger.debug(\"Message bundle created successfully\");",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"        // Log a warning if message bundle is empty",
+"        logger.warn(\"Message bundle is empty\");"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"        // Perform additional validation on message bundle here",
+"        validateMessageBundle(options.messageBundle);"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"        // Notify user about message bundle creation",
+"        System.out.println(\"Message bundle created successfully\");"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"        // Add a debug log for message bundle creation",
+"        System.out.println(\"Debug: Message bundle created\");"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"        // Log success message for message bundle creation",
+"        log.info(\"Message bundle created successfully\");",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"        log.debug(\"Message bundle created successfully\");",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"        // Log message bundle creation event",
+"        log.info(\"Message bundle created successfully\");",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"        // Add a log entry for message bundle creation",
+"        log.info(\"Message bundle created\");",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"        // Log a message when message bundle is created",
+"        log.debug(\"Message bundle created successfully\");"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"        // Additional logging for message bundle creation",
+"        System.out.println(\"Message bundle created\");",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Check for translations file and create message bundle if necessary",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Initialize message bundle if translations file is provided",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Set message bundle based on translations file presence",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Handle message bundle creation based on translations file",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Perform message bundle creation if translations file is provided",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Log message bundle creation for debugging",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Conditionally create message bundle based on translations file",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Check if translations file exists before creating message bundle",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Create message bundle only if translations file is provided",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Log message bundle creation for monitoring",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Message bundle creation logic based on translations file availability",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Handle message bundle creation based on translations file presence",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Log message bundle creation for tracking purposes",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Set message bundle based on translations file presence",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Check for translations file and create message bundle if necessary",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Initialize message bundle if translations file is provided",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        // Set message bundle based on translations file presence",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "insert new line(s) here to fix the bug"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level[
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level == CompilationLevel.ADVANCED_OPTIMIZATIONS) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    // Fixing the issue by initializing options.messageBundle to null"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS.equals(level)) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && flags.translationsProject != null && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = null;", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS.equals(level)) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS.equals(level)) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = null;"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS.equals(level)) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && flags.translationsProject != null && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS.equals(level)) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = null;", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = null;"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = null;"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS.equals(level)) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS.equals(level)) {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}]}
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty()) {", "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);", "    } else {", "        options.messageBundle = new EmptyMessageBundle();", "    }"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862, 863]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862, 863, 864]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862, 863]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862, 863, 864]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862, 863]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "deletions": [862, 863, 864]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": ["    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"]}, {"line_number": 863, "new_lines": ["        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && flags.translationsFile.length() > 0 && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}]}
+][
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (!flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level != null && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}, {"line_number": 864, "modified_line": "    } else {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}, {"line_number": 866, "modified_line": "    }"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}, {"line_number": 864, "modified_line": "    } else {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}, {"line_number": 866, "modified_line": "    }"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 862, "modified_line": "    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {"}, {"line_number": 863, "modified_line": "        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);"}, {"line_number": 864, "modified_line": "    } else {"}, {"line_number": 865, "modified_line": "        options.messageBundle = new EmptyMessageBundle();"}, {"line_number": 866, "modified_line": "    }"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 866, "modified_line": "        options.messageBundle = flags.translationsFile != null && !flags.translationsFile.isEmpty() ? new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject) : new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": []},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "modifications": [{"line_number": 866, "modified_line": "        options.messageBundle = flags.translationsFile != null && !flags.translationsFile.isEmpty() ? new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject) : new EmptyMessageBundle();"}]},
+{"file_name": "com/google/javascript/jscomp/CommandLineRunner.java", "target_lines": [["862", "//"]], "insertions": [{"line_number": 862, "new_lines": [
+"    if (flags.translationsFile != null && !flags.translationsFile.isEmpty() && level != null && CompilationLevel.ADVANCED_OPTIMIZATIONS == level) {",
+"        options.messageBundle = new XtbMessageBundle(new FileInputStream(flags.translationsFile), flags.translationsProject);",
+"    } else {",
+"        options.messageBundle = new EmptyMessageBundle();",
+"    }"
+]}]}
+]

@@ -1,0 +1,187 @@
+[
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["        if (str.length() < 3) return false;"]}]}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str.length() < 3) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.length() < 3) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.isEmpty() || str.length() < 3) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.length() == 0 || str.length() < 3) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.length() <= 0 || str.length() < 3) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.length() < 3) { return false; } else if (str.length() == 3) { return true; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.length() < 3) { return false; } else { return true; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.length() < 3) { return false; } else return true;"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null || str.length() < 3) { return false; } else { return true; } // Handle other cases here"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null) { return false; } else if (str.length() < 3) { return false; } else { return true; }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+    "if (str.length() < 3) { return false; }"
+]}, {"line_number": 682, "new_lines": [
+    "if (str == null || str.isEmpty()) { return false; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+    "if (str == null || str.length() < 3) { return false; }"
+]}, {"line_number": 682, "new_lines": [
+    "if (str.isEmpty() || str.length() < 3) { return false; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+    "if (str == null || str.length() < 4) { return false; }"
+]}, {"line_number": 682, "new_lines": [
+    "if (str.isEmpty() || str.length() < 4) { return false; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+    "if (str == null || str.length() <= 3) { return false; }"
+]}, {"line_number": 682, "new_lines": [
+    "if (str.isEmpty() || str.length() <= 3) { return false; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+    "if (str == null || str.length() == 0) { return false; }"
+]}, {"line_number": 682, "new_lines": [
+    "if (str.isEmpty() || str.length() == 0) { return false; }"
+]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str) || \"on\".equalsIgnoreCase(str) || \"yes\".equalsIgnoreCase(str))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) && \"on\".equalsIgnoreCase(str.trim()) && \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim())) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim())) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str == null) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str.isEmpty()) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str != null && !str.isBlank()) { return true; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["if (str != null && str.length() > 0) { return true; }"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str == null) { return false; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str.equals(\"true\")) { return true; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str.equalsIgnoreCase(\"true\")) { return true; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()) || \"false\".equalsIgnoreCase(str.trim()))) { return true; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str == null || str.isEmpty()) { return false; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str == null || str.length() == 0) { return false; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.equalsIgnoreCase(\"true\")) { return true; }"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && (str.equalsIgnoreCase(\"true\") || str.equalsIgnoreCase(\"yes\") || str.equalsIgnoreCase(\"on\"))) { return true; }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines":["// Fixing the StringIndexOutOfBoundsException bug by adding a check for string length before accessing characters"]}]}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str.length() >= 3) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 'r' || str.charAt(1) == 'R') && (str.charAt(2) == 'u' || str.charAt(2) == 'U') && (str.charAt(3) == 'e' || str.charAt(3) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 4) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 'r' || str.charAt(1) == 'R') && (str.charAt(2) == 'u' || str.charAt(2) == 'U') && (str.charAt(3) == 'e' || str.charAt(3) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str.length() > 3) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 'r' || str.charAt(1) == 'R') && (str.charAt(2) == 'u' || str.charAt(2) == 'U') && (str.charAt(3) == 'e' || str.charAt(3) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() == 4) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 'r' || str.charAt(1) == 'R') && (str.charAt(2) == 'u' || str.charAt(2) == 'U') && (str.charAt(3) == 'e' || str.charAt(3) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() == 3) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 'r' || str.charAt(1) == 'R') && (str.charAt(2) == 'u' || str.charAt(2) == 'U') && (str.charAt(3) == 'e' || str.charAt(3) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 3) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 't' || str.charAt(1) == 'T') && (str.charAt(2) == 'r' || str.charAt(2) == 'R') && (str.charAt(3) == 'u' || str.charAt(3) == 'U') && (str.charAt(4) == 'e' || str.charAt(4) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 4) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 't' || str.charAt(1) == 'T') && (str.charAt(2) == 'r' || str.charAt(2) == 'R') && (str.charAt(3) == 'u' || str.charAt(3) == 'U') && (str.charAt(4) == 'e' || str.charAt(4) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 3) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 't' || str.charAt(1) == 'T') && (str.charAt(2) == 'r' || str.charAt(2) == 'R') && (str.charAt(3) == 'u' || str.charAt(3) == 'U') && (str.charAt(4) == 'e' || str.charAt(4) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() == 4) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 't' || str.charAt(1) == 'T') && (str.charAt(2) == 'r' || str.charAt(2) == 'R') && (str.charAt(3) == 'u' || str.charAt(3) == 'U') && (str.charAt(4) == 'e' || str.charAt(4) == 'E');", "}"]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() > 4) {", "char ch = str.charAt(0);", "return (str.charAt(1) == 't' || str.charAt(1) == 'T') && (str.charAt(2) == 'r' || str.charAt(2) == 'R') && (str.charAt(3) == 'u' || str.charAt(3) == 'U') && (str.charAt(4) == 'e' || str.charAt(4) == 'E');", "}"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["    if (str != null && (\"true\".equalsIgnoreCase(str.trim()) || \"on\".equalsIgnoreCase(str.trim()) || \"yes\".equalsIgnoreCase(str.trim()) || \"false\".equalsIgnoreCase(str.trim()))) { return true; }"]}]}
+][
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["        if (str == null) {", "            return false;", "        }", "        str = str.trim().toLowerCase();", "        return str.equals(\"true\") || str.equals(\"yes\") || str.equals(\"1\");"]}]}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str == null || str.length() < 4) { return false; }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 3) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null) { // Check if the string is not null"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() == 4) { // Check if the string has exactly 4 characters"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() == 3) { // Check if the string has exactly 3 characters"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() == 2) { // Check if the string has exactly 2 characters"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && !str.isEmpty()) { // Check if the string is not empty"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.trim().length() == 4) { // Check if the trimmed string has length 4"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() > 0) { // Check if the string is not empty"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 4 && (str.charAt(0) == 't' && str.charAt(1) == 'r' && str.charAt(2) == 'u' && str.charAt(3) == 'e')) { return true; }"]}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 4 && (str.charAt(0) == 'T' && str.charAt(1) == 'R' && str.charAt(2) == 'U' && str.charAt(3) == 'E')) { return true; }"]}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": ["if (str != null && str.length() >= 4 && (str.substring(0, 4).equalsIgnoreCase(\"true\"))) { return true; }"]}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "deletions": [682]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "modifications": [{"line_number": 682, "modified_line": "if (str != null && str.length() >= 4 && (str.charAt(0) == 't' && str.charAt(1) == 'r' && str.charAt(2) == 'u' && str.charAt(3) == 'E')) { return true; }"}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "modifications": [{"line_number": 682, "modified_line": "if (str != null && str.length() >= 4 && (str.charAt(0) == 'T' && str.charAt(1) == 'R' && str.charAt(2) == 'U' && str.charAt(3) == 'e')) { return true; }"}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "modifications": [{"line_number": 682, "modified_line": "if (str != null && str.length() >= 4 && (str.equals(\"true\"))) { return true; }"}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "modifications": [{"line_number": 682, "modified_line": "if (str != null && str.length() >= 4 && (str.equalsIgnoreCase(\"true\"))) { return true; }"}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "modifications": [{"line_number": 682, "modified_line": "if (str != null && str.length() >= 4 && (str.equalsIgnoreCase(\"TRUE\"))) { return true; }"}]},
+    {"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "modifications": [{"line_number": 682, "modified_line": "if (str != null && str.length() >= 4 && (str.equals(\"TRUE\"))) { return true; }"}]}
+][
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 3 && ((str.charAt(0) == 't' || str.charAt(0) == 'T') && (str.charAt(1) == 'r' || str.charAt(1) == 'R') && (str.charAt(2) == 'u' || str.charAt(2) == 'U'))) { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.startsWith(\"true\")) { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.substring(0, 4).equalsIgnoreCase(\"true\")) { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.regionMatches(true, 0, \"true\", 0, 4)) { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.codePointAt(0) == 't' && str.codePointAt(1) == 'r' && str.codePointAt(2) == 'u' && str.codePointAt(3) == 'e') { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.substring(0, 4).equalsIgnoreCase(\"true\")) { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.codePointCount(0, 4) == 4 && str.subSequence(0, 4).toString().equalsIgnoreCase(\"true\")) { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.intern() == \"true\") { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.codePoints().allMatch(c -> c == 't' || c == 'r' || c == 'u' || c == 'e')) { return true; }"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "org/apache/commons/lang/BooleanUtils.java", "target_lines": [["682", "//"]], "insertions": [{"line_number": 682, "new_lines": [
+"if (str != null && str.length() >= 4 && str.matches(\"(?i)true\")) { return true; }"
+]}], "deletions": [], "modifications": []}
+]

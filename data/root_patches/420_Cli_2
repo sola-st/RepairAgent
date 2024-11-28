@@ -1,0 +1,28 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/PosixParser.java', 'insertions': [{'line_number': 305, 'new_lines': ["// Modified code to handle options with '-' prefix", "if (ch == 'o') {", 'tokens.add("-o");', '} else {', 'tokens.add("-" + ch);', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/PosixParser.java', 'insertions': [{'line_number': 305, 'new_lines': ["// Modified code to handle options with '-' prefix", "if (ch == 'o') {", 'tokens.add("-o");', '} else {', 'tokens.add("-" + ch);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/PosixParser.java', 'insertions': [{'line_number': 305, 'new_lines': ["// Modified code to handle options with '-' prefix", "if (ch.equals('o')) {", 'tokens.add("-o");', '} else {', 'tokens.add("-" + ch);', '}']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/PosixParser.java', 'insertions': [{'line_number': 305, 'new_lines': ["// Modified code to handle options with '-' prefix", "if (ch == 'o') {", 'tokens.add("-o");', '} else {', 'tokens.add("-" + ch);', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/PosixParser.java', 'target_lines': [['305', '                tokens.add("-" + ch);'], ['309', '}']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 305, 'modified_line': "// Modified code to handle options with '-' prefix"}, {'line_number': 305, 'modified_line': "if (ch == 'o') {"}, {'line_number': 305, 'modified_line': 'tokens.add("-o");'}, {'line_number': 305, 'modified_line': '} else {'}, {'line_number': 305, 'modified_line': 'tokens.add("-" + ch);'}, {'line_number': 309, 'modified_line': '} // End of burstToken method'}]}]
+
+

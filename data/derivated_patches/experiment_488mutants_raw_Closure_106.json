@@ -1,0 +1,301 @@
+[
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [189, 191], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["populated = true;"]}], "deletions": [189, 191], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["populated = true;"]}, {"line_number": 191, "new_lines": ["return currentInfo.documentBlock(description);"]}], "deletions": [189], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["populated = true;"]}], "deletions": [191], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["populated = true;"]}, {"line_number": 191, "new_lines": ["return currentInfo.documentBlock(description);"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "if (parseDocumentation && populated) {"}]},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 191, "modified_line": "return true;"}]},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "if (parseDocumentation && populated) {"]},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 191, "modified_line": "return currentInfo.documentBlock(description);"}]},
+    {"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "if (parseDocumentation) { // check for documentation"}]},
+    {"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", ""]], "insertions": [{"line_number": 907, "new_lines": ["// Fix the bug by adding necessary code here"]}],"deletions": [], "modifications": []}
+][
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [],
+        "deletions": [189, 191],
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}, 
+            {"line_number": 191, "modified_line": "    populated = true;"}
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}, 
+            {"line_number": 191, "modified_line": "    return;"}  # Changed the contents of the line to prevent the unnecessary block
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [{"line_number": 190, "new_lines": ["        // Additional logic here"]}],  # Inserted an additional line inside the if block
+        "deletions": [],
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"},  # Modified the condition
+            {"line_number": 191, "modified_line": "    populated = true;"}  # Modified the content of the block
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [{"line_number": 192, "new_lines": ["        return true;"]}],  # Inserted a return statement after the block
+        "deletions": [],
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"},  # Modified the condition
+            {"line_number": 191, "modified_line": "    populated = true;"}  # Modified the content of the block
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (populated) {"},  # Changed the condition
+            {"line_number": 191, "modified_line": "    return;"}  # Changed the contents of the line to prevent the unnecessary block
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [{"line_number": 191, "new_lines": ["        // Additional logic here"]}],  # Inserted a comment inside the block
+        "deletions": [],
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"},  # Modified the condition
+            {"line_number": 191, "modified_line": "    populated = true;"}  # Modified the content of the block
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [{"line_number": 190, "new_lines": ["        populated = true;"]}],  # Inserted logic inside the if block
+        "deletions": [191],  # Deleted the unnecessary closing bracket line
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}  # Modified the condition
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (!parseDocumentation) {"},  # Changed the condition
+            {"line_number": 191, "modified_line": "    }"}  # Removed the unnecessary block
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [{"line_number": 192, "new_lines": ["        return false;"]}],  # Inserted a return statement after the block
+        "deletions": [191],  # Deleted the unnecessary closing bracket line
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}  # Modified the condition
+        ]
+    },
+    {
+        "file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java",
+        "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]],
+        "insertions": [],
+        "deletions": [191],  # Deleted the unnecessary closing bracket line
+        "modifications": [
+            {"line_number": 189, "modified_line": "    if (populated) {"}  # Changed the condition
+        ]
+    }
+][
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [189, 191], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}, {"line_number": 191, "modified_line": "    return true;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = true;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && populated) {"]}, {"line_number": 192, "new_lines": ["    populated = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && !populated) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && !populated) {"]}, {"line_number": 190, "new_lines": ["        return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return true;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return true;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (!parseDocumentation) {"]}, {"line_number": 191, "new_lines": ["    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (!parseDocumentation) {"]}, {"line_number": 191, "new_lines": ["    return false;"]}], "deletions": [], "modifications": [{"line_number": 191, "modified_line": "    return true;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return false;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (!parseDocumentation) {"]}, {"line_number": 191, "new_lines": ["    return false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = true;"]}], "deletions": [191], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = true;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return true;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return true;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [189, 191], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}, {"line_number": 191, "modified_line": "    return true;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = true;"]}], "deletions": [], "modifications": [{"line_number": 191, "modified_line": "    return true;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [189, 191], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = true;"]}], "deletions": [191], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = true;"]}], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}, {"line_number": 191, "modified_line": "    return true;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return true;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [189, 191], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    return false;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return true;"]}], "deletions": [189], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [189, 191], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && populated) {"}, {"line_number": 191, "modified_line": "    return true;"}]}
+][
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation && !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation || populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation || populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation || !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && !populated && someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation && populated && someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated && someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!populated && someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation || populated && someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation || populated && someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation || !populated && someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated || someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!populated || someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && populated || someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation && !populated || someCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated && someCondition || anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!populated && someCondition || anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation || populated && someCondition || anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation || populated && someCondition || anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation || !populated && someCondition || anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated || someCondition && anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!populated || someCondition && anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && populated || someCondition && anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation && !populated || someCondition && anotherCondition) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (!parseDocumentation) {"}, {"line_number": 191, "modified_line": "    }"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation || populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && !populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 189, "modified_line": "    if (parseDocumentation && !populated) {"}, {"line_number": 191, "modified_line": "    return;"}]},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && !populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    return;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        // Adding a comment to explain the condition"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190, 191], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = false; // Changing the value of populated to false"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        // Adding a comment to mark the end of the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && populated) { // Adding populated check"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        return; // Exiting early from the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        throw new IllegalStateException(); // Throwing an exception at the end of the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        return false; // Returning false instead of setting a variable"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        // End of block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation) { // Adding a comment to describe the condition"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        return; // Exiting early from the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        populated = false; // Setting populated to false at the end of the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        throw new UnsupportedOperationException(); // Throwing an exception at the end of the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && !populated) { // Adding check for !populated"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        throw new UnsupportedOperationException(); // Throwing exception if condition not met"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        return false; // Returning false instead of setting a variable"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (!parseDocumentation) { // Modifying condition to negate parseDocumentation"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        // End of block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        // Adding a comment to mark the condition"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        return true; // Returning true at the end of the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        // Check completed"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        populated = false; // Reset populated at the end of the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 189, "new_lines": ["    if (parseDocumentation && !populated) { // Additional condition check"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        // Exiting early from the block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["        populated = false; // Setting populated to false"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        // End of block"]} ], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 191, "new_lines": ["        throw new UnsupportedOperationException(); // Throwing an exception at the end of the block"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation && !populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (!parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (populated) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    populated = false;"]], "insertions": [], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (parseDocumentation) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (!parseDocumentation) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (parseDocumentation && !populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (!populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [191], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = false;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (!parseDocumentation) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (!populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    if (populated) {"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [191], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    }"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Inserted fix for line 907"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Fix applied at line 907"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Potential fix at line 907"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Solution added for line 907"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Line 907 fix added"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Fix for line 907 inserted"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Line 907 fix"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [], "deletions": [907], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [], "deletions": [907], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [{"line_number": 907, "new_lines": ["    // Fix for line 907"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [], "deletions": [907], "modifications": []},
+{"file_name": "com/google/javascript/jscomp/GlobalNamespace.java", "target_lines": [["907", "//"]], "insertions": [], "deletions": [907], "modifications": []}
+][
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true;"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [190], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true; // Fixing bug by setting 'populated' to true after checking 'parseDocumentation'"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true; // Adding missing assignment to 'populated' variable"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [], "deletions": [189, 191], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true; // Marking 'populated' as true if 'parseDocumentation' is true"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true; // Set 'populated' flag to true if 'parseDocumentation' is true"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true; // Ensure 'populated' is set to true when 'parseDocumentation' is true"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true; // Adding assignment to 'populated' flag for proper initialization"]}], "deletions": [], "modifications": []},
+{"file_name": "com/google/javascript/rhino/JSDocInfoBuilder.java", "target_lines": [["189", "    if (parseDocumentation) {"], ["191", "    }"]], "insertions": [{"line_number": 190, "new_lines": ["    populated = true; // Fixing bug by setting 'populated' to true after 'parseDocumentation' check"]}], "deletions": [], "modifications": []}
+]

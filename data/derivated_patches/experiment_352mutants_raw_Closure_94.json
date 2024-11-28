@@ -1,0 +1,1301 @@
+
+    {
+        "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+        "insertions": [
+            {
+                "line_number": 329,
+                "new_lines": [
+                    "    my $line = 20;",
+                    "    my $line = 30;"
+                ]
+            },
+            {
+                "line_number": 333,
+                "new_lines": [
+                    "    my $line = '';",
+                    "    my $line = 'test';"
+                ]
+            },
+            {
+                "line_number": 337,
+                "new_lines": [
+                    "    my $line = <file_handle>;",
+                    "    my $line = <FH_IN>;"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+    
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {
+            "line_number": 256,
+            "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (1,2,3); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error case 1"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": [
+                        "my $new_variable = 10;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue, mutant 2"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (1,2,3); # Fixing variable scoping issue, mutant 2"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error case 2"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue, mutant 3"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (1,2,3); # Fixing variable scoping issue, mutant 3"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error case 3"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue, mutant 4"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (1,2,3); # Fixing variable scoping issue, mutant 4"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error case 4"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue, mutant 5"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (1,2,3); # Fixing variable scoping issue, mutant 5"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error case 5"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 5; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = 'test'; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = ''; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = 10; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 0; # Correction for variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Correction for variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Correction for syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = $val; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = $key; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        }
+    ]
+}{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 'test'; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = ''; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1.5; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = 2; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = ''; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = 'test'; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = ''; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = 0; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 5; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = ''; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 'test'; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 'test'; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                },
+                {
+                    "line_number": 329,
+                    "modified_line": "# Fixing issue at line 329"
+                },
+                {
+                    "line_number": 333,
+                    "modified_line": "# Fixing issue at line 333"
+                },
+                {
+                    "line_number": 337,
+                    "modified_line": "# Fixing issue at line 337"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 'test'; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 'test'; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                },
+                {
+                    "line_number": 329,
+                    "modified_line": "# Fixing issue at line 329"
+                },
+                {
+                    "line_number": 333,
+                    "modified_line": "# Fixing issue at line 333"
+                },
+                {
+                    "line_number": 337,
+                    "modified_line": "# Fixing issue at line 337"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 256, "modified_line": "my $seen = 'test'; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 256, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 256, "modified_line": "my $seen = 0.5; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 260, "modified_line": "my $oldconf = 'test'; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 260, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 260, "modified_line": "my $oldconf = 0.5; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error in method declaration"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 329, "new_lines": ["# Fixing issue at line 329"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 333, "new_lines": ["# Fixing issue at line 333"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [{"line_number": 337, "new_lines": ["# Fixing issue at line 337"]}],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Mutant 1: Add new line for mutation"]}], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Mutant 2: Add new line for mutation"]}], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Mutant 3: Add new line for mutation"]}], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 2; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 3; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 4; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 5; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 5; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = -1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 10; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 2; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -1; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 10; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -10; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 5; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -5; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 100; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -100; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 50; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -50; # Fixing variable scoping issue"}, {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}, {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]}
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 2; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 10; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = -1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 256,
+                    "modified_line": "my $seen = 5; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 260,
+                    "modified_line": "my $oldconf = (); # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 272,
+                    "modified_line": "sub get_dir { # Fixing syntax error"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = 1; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = -1; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = 10; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = -10; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = 100; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = -100; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = 5.5; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = -5.5; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = 'abc'; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 256, "modified_line": "my $seen = ''; # Fixing variable scoping issue"},
+                {"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"},
+                {"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing mutation 1 at line 329"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing mutation 2 at line 329"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing mutation 3 at line 329"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing mutation 4 at line 329"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing mutation 5 at line 329"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing mutation 6 at line 333"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing mutation 7 at line 333"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing mutation 8 at line 333"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing mutation 9 at line 333"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing mutation 10 at line 333"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing mutation 11 at line 337"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing mutation 12 at line 337"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing mutation 13 at line 337"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing mutation 14 at line 337"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing mutation 15 at line 337"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [260], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [272], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing mutation 19 at line 329"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing mutation 20 at line 333"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing mutation 21 at line 337"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256, 260, 272], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256, 260, 272], "modifications": [{"line_number": 329, "modified_line": "# Fixing mutation 24 at line 329"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256, 260, 272], "modifications": [{"line_number": 333, "modified_line": "# Fixing mutation 25 at line 333"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256, 260, 272], "modifications": [{"line_number": 337, "modified_line": "# Fixing mutation 26 at line 337"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256, 260, 272], "modifications": [{"line_number": 329, "modified_line": "# Fixing mutation 27 at line 329"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256, 260, 272], "modifications": [{"line_number": 333, "modified_line": "# Fixing mutation 28 at line 333"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [256, 260, 272], "modifications": [{"line_number": 337, "modified_line": "# Fixing mutation 29 at line 337"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing mutation 30 at line 329"]}], "deletions": [], "modifications": []}
+    ]
+}
+{
+    "mutants": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = (1, 2, 3); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error in function declaration"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = (0); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error in function definition"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 10; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = ('a'); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error and function declaration"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -10; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = (false); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error and function definition"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 100; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = (true); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error in function signature"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = -100; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = (null); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error in function parameters"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = (); # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing issue at line 329"]}, {"line_number": 333, "new_lines": ["# Fixing issue at line 333"]}, {"line_number": 337, "new_lines": ["# Fixing issue at line 337"]}], "deletions": [], "modifications": []}
+    ]
+}{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 1: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 1: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 1: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 2: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 2: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 2: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 3: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 3: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 3: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 4: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 4: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 4: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 5: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 5: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 5: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 6: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 6: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 6: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 7: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 7: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 7: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 8: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 8: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 8: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 9: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 9: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 9: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 329,
+                    "new_lines": ["# Mutant 10: Inserted line 1"]
+                },
+                {
+                    "line_number": 333,
+                    "new_lines": ["# Mutant 10: Inserted line 2"]
+                },
+                {
+                    "line_number": 337,
+                    "new_lines": ["# Mutant 10: Inserted line 3"]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error and scoping"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing issue at line 329 - mutation 1"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing issue at line 333 - mutation 1"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing issue at line 337 - mutation 1"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 256, "modified_line": "my $seen = 2; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 260, "modified_line": "my $oldconf = 2; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 272, "modified_line": "sub get_dir { # Fixing syntax error and scoping - mutation 2"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 329, "new_lines": ["# Fixing issue at line 329 - mutation 2"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 333, "new_lines": ["# Fixing issue at line 333 - mutation 2"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 337, "new_lines": ["# Fixing issue at line 337 - mutation 2"]}], "deletions": [], "modifications": []}
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 329,
+                    "modified_line": "my $seen = 1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 333,
+                    "modified_line": "# Fixing issue at line 333 by adding a comment"
+                },
+                {
+                    "line_number": 337,
+                    "modified_line": "# Fixing issue at line 337 by adding a comment"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 329,
+                    "modified_line": "my $seen = -1; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 333,
+                    "modified_line": "# Issue fixed at line 333"
+                },
+                {
+                    "line_number": 337,
+                    "modified_line": "# Issue fixed at line 337"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 329,
+                    "modified_line": "my $seen = 2; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 333,
+                    "modified_line": "# Resolved issue at line 333"
+                },
+                {
+                    "line_number": 337,
+                    "modified_line": "# Resolved issue at line 337"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 329,
+                    "modified_line": "my $seen = -2; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 333,
+                    "modified_line": "# Solved issue at line 333"
+                },
+                {
+                    "line_number": 337,
+                    "modified_line": "# Solved issue at line 337"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 329,
+                    "modified_line": "my $seen = 3; # Fixing variable scoping issue"
+                },
+                {
+                    "line_number": 333,
+                    "modified_line": "# Addressed issue at line 333"
+                },
+                {
+                    "line_number": 337,
+                    "modified_line": "# Addressed issue at line 337"
+                }
+            ]
+        }
+    ]
+}

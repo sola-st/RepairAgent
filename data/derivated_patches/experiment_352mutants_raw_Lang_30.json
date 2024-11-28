@@ -1,0 +1,1827 @@
+
+  {
+    "file_name": "org/apache/commons/lang3/StringUtils.java",
+    "modifications": [
+      {
+        "line_number": 1443,
+        "modified_line": "    public static boolean containsAny(CharSequence cs, char[] searchChars) {"
+      }
+    ]
+  }
+{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i <= csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() != 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars != null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (!isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars != null || searchChars.length() == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j >= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i > csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{ "fixes": [
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1443,
+                "new_lines": [
+                    "        if (isEmpty(cs) || searchChars == null || searchChars.length == 0) {",
+                    "            return false;",
+                    "        }"
+                ]
+            }
+        ]
+    },
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1455,
+                "new_lines": [
+                    "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                    "                        if (searchChars == null) {",
+                    "                            return false;"
+                    ]
+                }
+            ]
+    },
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1457,
+                "new_lines": [
+                    "                        if (searchChars == null) {",
+                    "                            return false;"
+                    ]
+                }
+            ]
+    },
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1497,
+                "new_lines": [
+                    "            if (cs == null || searchChars == null) {",
+                    "                return false;",
+                    "            }"
+                ]
+            }
+    ],
+    "fixes": [
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1576,
+                "new_lines": [
+                    "            if (searchChars == null || cs == null) {",
+                    "                return false;",
+                    "            }"
+                ]
+            }
+        ]
+    },
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1443,
+                "new_lines": [
+                    "        if (isEmpty(cs) || searchChars == null || searchChars.length == 0) {",
+                    "            return false;",
+                    "        }"
+                ]
+            }
+        ]
+    },
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1455,
+                "new_lines": [
+                    "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                    "                        if (searchChars == null) {",
+                    "                            return false;"
+                    ]
+                }
+            ]
+    },
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1457,
+                "new_lines": [
+                    "                        if (searchChars == null) {",
+                    "                            return false;"
+                    ]
+                }
+            ]
+    },
+    {
+        "file_name": "org/apache/commons/lang3/StringUtils.java",
+        "insertions": [
+            {
+                "line_number": 1497,
+                "new_lines": [
+                    "            if (cs == null || searchChars == null) {",
+                    "                return false;",
+                    "            }"
+                ]
+            }
+    ]
+    }
+]
+}  
+
+
+
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() != 0) {",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j] == cs.charAt(i)) {",
+                        "                            return true;"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0) {",
+                        "            return false;"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j] == cs.charAt(i)) {",
+                        "                            return true;"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j] != cs.charAt(i)) {",
+                        "                            return true;"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() != 0) {",
+                        "            return false;"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null && searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) >= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length != 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null && searchChars.length != 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) >= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length != 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars != null && searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) >= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+    {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        // Mutation: Change logical operator && to ||", "        // Mutation: Change comparison operator < to <=", "        // Mutation: Change comparison operator <= to <"]}]}
+    
+{
+    "mutants": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (searchChars != null && searchChars.length() > 0) {",
+                        "            return true;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1443],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1455],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (searchChars != null || searchChars.length() > 0) {",
+                        "            return true;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1457],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars != null && searchChars.length > 0) {",
+                        "            return true;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1497],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (searchChars != null && searchChars.length() > 0) {",
+                        "            return true;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ],
+            "deletions": [1443, 1455, 1457, 1497, 1576],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0 || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars) || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && cs != null) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1) && cs != null) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0 && cs != null) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0 && cs != null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0 || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars) || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && cs != null) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1) && cs != null) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0 && cs != null) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0 && cs != null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() == 0 || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars) || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE && cs != null) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1) && cs != null) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0 && cs != null) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0 && cs != null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch != Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) >= 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) >= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return true;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return true;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {",
+                        "            return true;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() <= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars) || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) <= 0 || cs == null) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) <= 0 || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() <= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars) || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) <= 0 || cs == null) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) >= 0 || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() <= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars) || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return false;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return false;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) > 0 || cs == null) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) > 0 || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() <= 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars) || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) < 0 || cs == null) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0 || cs == null) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1443],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1455],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1457],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1497],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1576],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1376],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1377],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1381],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1382],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1383],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1533],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1534],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1539],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1540],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1578],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1678],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1679],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1683],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1684],
+            "modifications": []
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [],
+            "deletions": [1686],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars == null || searchChars.length() != 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (!isEmpty(cs) || !ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i >= csLast && j > searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) > 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1377,
+                    "new_lines": [
+                        "        if (searchChars != null || searchChars.length == 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (!isEmpty(cs) && ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i <= csLast && j < searchLast && ch <= Character.MIN_HIGH_SURROGATE && ch >= Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) == 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) < 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "org/apache/commons/lang3/StringUtils.java",
+            "insertions": [
+                {
+                    "line_number": 1376,
+                    "new_lines": [
+                        "        if (searchChars != null && searchChars.length != 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1443,
+                    "new_lines": [
+                        "        if (!isEmpty(cs) && !ArrayUtils.isEmpty(searchChars)) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 1455,
+                    "new_lines": [
+                        "                    if (i > csLast && j >= searchLast && ch < Character.MIN_HIGH_SURROGATE && ch > Character.MAX_HIGH_SURROGATE) {",
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1457,
+                    "new_lines": [
+                        "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {",
+                        "                            return true;",
+                        "                        }"
+                    ]
+                },
+                {
+                    "line_number": 1497,
+                    "new_lines": [
+                        "            if (searchChars.indexOf(ch) != 0) {",
+                        "                return false;",
+                        "            }"
+                    ]
+                },
+                {
+                    "line_number": 1576,
+                    "new_lines": [
+                        "        if (searchChars.indexOf(ch) > 0) {",
+                        "            return false;",
+                        "        }"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i <= csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) >= 0) {", "                return true;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) >= 0) {", "            return true;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isNotEmpty(cs) && !ArrayUtils.isEmpty(searchChars)) {", "            // Perform the original logic here", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) < 0) {", "                return false;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) < 0) {", "            return false;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars == null || searchChars.length == 0) {", "            return false;", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (cs != null && searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) < 0) {", "                return false;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) < 0) {", "            return false;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars == null || searchChars.length == 0) {", "            return false;", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (cs != null && searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) >= 0) {", "                return true;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) >= 0) {", "            return true;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isNotEmpty(cs) && !ArrayUtils.isEmpty(searchChars)) {", "            // Perform the original logic here", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) < 0) {", "                return false;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) < 0) {", "            return false;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i < csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) < 0) {", "                return false;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) < 0) {", "            return false;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i <= csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) >= 0) {", "                return true;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) >= 0) {", "            return true;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isNotEmpty(cs) && !ArrayUtils.isEmpty(searchChars)) {", "            // Perform the original logic here", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) >= 0) {", "                return true;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) >= 0) {", "            return true;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i <= csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) < 0) {", "                return false;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) < 0) {", "            return false;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isNotEmpty(cs) && !ArrayUtils.isEmpty(searchChars)) {", "            // Perform the original logic here", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i <= csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) < 0) {", "                return false;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) < 0) {", "            return false;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i < csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) >= 0) {", "                return true;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) >= 0) {", "            return true;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i <= csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) >= 0) {", "                return true;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) >= 0) {", "            return true;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isNotEmpty(cs) && !ArrayUtils.isEmpty(searchChars)) {", "            // Perform the original logic here", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i < csLast && j <= searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] == cs.charAt(i + 1)) {", "                            return true;", "                        }"]}, {"line_number": 1497, "new_lines": ["            if (searchChars.indexOf(ch) >= 0) {", "                return true;", "            }"]}, {"line_number": 1576, "new_lines": ["        if (searchChars.indexOf(ch) >= 0) {", "            return true;", "        }"]}, {"line_number": 1376, "new_lines": ["        if (searchChars != null && searchChars.length > 0) {", "            // Perform the original logic here", "        }"]}]},
+        {"file_name": "org/apache/commons/lang3/StringUtils.java", "insertions": [{"line_number": 1443, "new_lines": ["        if (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) {", "            return false;", "        }"]}, {"line_number": 1455, "new_lines": ["                    if (i < csLast && j < searchLast && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE) {", "                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return false;", "                        }"]}, {"line_number": 1457, "new_lines": ["                        if (searchChars[j + 1] != cs.charAt(i + 1)) {", "                            return

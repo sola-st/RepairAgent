@@ -1,0 +1,1282 @@
+
+    {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169], "modifications": []}
+    
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {"line_number": 156, "modified_line": "my %newconfig;my $oldconf;my @files;my $fh_in;my %newconfig;my $oldconf;my @files;my $fh_in;my $seen = 0;my %newconfig;my $oldconf;my @files;my $fh_in;my %newconfig;my $oldconf;my @files;my $fh_in = <FILE_HANDLE>;my %newconfig;my $oldconf;my @files;my $fh_in = <FILE_HANDLE>;my $seen = 0;my %newconfig;my $oldconf;my @files;my $fh_in;my %newconfig;my $oldconf;my @files;my $fh_in;my %newconfig;my $oldconf;my @files;my $fh_in;while (my $line = <$fh_in>) {"},
+        {"line_number": 157, "modified_line": "        if ($line =~ /$includes/) {"},
+        {"line_number": 158, "modified_line": "            $seen = 1;"},
+        {"line_number": 159, "modified_line": "            last;"},
+        {"line_number": 160, "modified_line": "$seen = 0;        }"},
+        {"line_number": 161, "modified_line": "    }"},
+        {"line_number": 162, "modified_line": "    close $fh_in;"},
+        {"line_number": 163, "modified_line": "    unless ($seen) {"},
+        {"line_number": 164, "modified_line": "        seek ($fh, 0, SEEK_END) or die \"Cannot seek: $!\"; # seek if someone appended while we were waiting"},
+        {"line_number": 165, "modified_line": "        print $fh $string;"},
+        {"line_number": 166, "modified_line": "    }"},
+        {"line_number": 167, "modified_line": "    close $fh;"},
+        {"line_number": 168, "modified_line": "    return $seen == 1 ? 0 : 1;"},
+        {"line_number": 169, "modified_line": "}"},
+        {"line_number": 170, "modified_line": ""},
+        {"line_number": 171, "modified_line": "=pod"},
+        {"line_number": 172, "modified_line": "# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function=pod# Correcting potential issue in files_in_commit function # Mutation 6=pod# Correcting potential issue in files_in_commit function=pod"},
+        {"line_number": 173, "modified_line": "=item C<Utils::files_in_commit(repo_dir, commit)>"},
+        {"line_number": 174, "modified_line": ""},
+        {"line_number": 175, "modified_line": ""},
+        {"line_number": 176, "modified_line": ""},
+        {"line_number": 177, "modified_line": "=cut"},
+        {"line_number": 178, "modified_line": ""},
+        {"line_number": 179, "modified_line": "my %newconfig;my $oldconf;my @files;my %newconfig;my $oldconf;my @files;my $fh_in;my %newconfig;my $oldconf;my @files;my $seen = 0;my @files;my %newconfig;my $oldconf;my @files;my @files;sub files_in_commit {"}
+    ]
+}{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\n$oldconf;\n@files;\n$fh_in;\n$seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "%newconf;\n$oldconf;\n@files;\n$fh_in;\n$seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen += 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen -= 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen * 2;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen / 2;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen == 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen != 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen > 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 179,
+                    "modified_line": "my %newconf;\nmy $oldconf;\n@files;\n$fh_in;\n$seen < 1;\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 711,
+                    "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"
+                },
+                {
+                    "line_number": 712,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 713,
+                    "modified_line": "Determines all Defects4J test suite archives that exist in F<suite_dir> and that\n"
+                },
+                {
+                    "line_number": 714,
+                    "modified_line": "match the given project id (C<pid>) and version id (C<vid>). Note that C<vid> is\n"
+                },
+                {
+                    "line_number": 715,
+                    "modified_line": "optional.\n"
+                },
+                {
+                    "line_number": 716,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 717,
+                    "modified_line": "This subroutine returns a reference to a hierarchical hash that holds all\n"
+                },
+                {
+                    "line_number": 718,
+                    "modified_line": "\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 711,
+                    "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"
+                },
+                {
+                    "line_number": 712,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 713,
+                    "modified_line": "Determines all Defects4J test suite archives that exist in F<suite_dir> and that\n"
+                },
+                {
+                    "line_number": 714,
+                    "modified_line": "match the given project id (C<pid>) and version id (C<vid>). Note that C<vid> is\n"
+                },
+                {
+                    "line_number": 715,
+                    "modified_line": "optional.\n"
+                },
+                {
+                    "line_number": 716,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 717,
+                    "modified_line": "This subroutine returns a reference to a hierarchical hash that holds all\n"
+                },
+                {
+                    "line_number": 718,
+                    "modified_line": " "
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 711,
+                    "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"
+                },
+                {
+                    "line_number": 712,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 713,
+                    "modified_line": "Determines all Defects4J test suite archives that exist in F<suite_dir> and that\n"
+                },
+                {
+                    "line_number": 714,
+                    "modified_line": "match the given project id (C<pid>) and version id (C<vid>). Note that C<vid> is\n"
+                },
+                {
+                    "line_number": 715,
+                    "modified_line": "optional.\n"
+                },
+                {
+                    "line_number": 716,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 717,
+                    "modified_line": "This subroutine returns a reference to a hierarchical hash that holds all\n"
+                },
+                {
+                    "line_number": 718,
+                    "modified_line": "\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 711,
+                    "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"
+                },
+                {
+                    "line_number": 712,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 713,
+                    "modified_line": "Determines all Defects4J test suite archives that exist in F<suite_dir> and that\n"
+                },
+                {
+                    "line_number": 714,
+                    "modified_line": "match the given project id (C<pid>) and version id (C<vid>). Note that C<vid> is\n"
+                },
+                {
+                    "line_number": 715,
+                    "modified_line": "optional.\n"
+                },
+                {
+                    "line_number": 716,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 717,
+                    "modified_line": "This subroutine returns a reference to a hierarchical hash that holds all\n"
+                },
+                {
+                    "line_number": 718,
+                    "modified_line": "\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 711,
+                    "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"
+                },
+                {
+                    "line_number": 712,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 713,
+                    "modified_line": "Determines all Defects4J test suite archives that exist in F<suite_dir> and that\n"
+                },
+                {
+                    "line_number": 714,
+                    "modified_line": "match the given project id (C<pid>) and version id (C<vid>). Note that C<vid> is\n"
+                },
+                {
+                    "line_number": 715,
+                    "modified_line": "optional.\n"
+                },
+                {
+                    "line_number": 716,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 717,
+                    "modified_line": "This subroutine returns a reference to a hierarchical hash that holds all\n"
+                },
+                {
+                    "line_number": 718,
+                    "modified_line": "\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen != 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen == 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen += 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen -= 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen *= 2;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\n$seen /= 2;\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 2;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 3;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 4;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 5;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 6;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 7;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 8;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconfig;\nmy $oldconfig;\nmy @all_files;\nmy $file_handle;\nmy $seen = 9;\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %oldconf;\nmy $newconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [711, 718],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [
+                {
+                    "line_number": 156,
+                    "new_lines": [
+                        "my %newconf;\n",
+                        "my $oldconf;\n",
+                        "my @files;\n",
+                        "my $fh_in;\n",
+                        "my $seen = 0;\n"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [711, 718],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %oldconf;\nmy $newconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [711, 718],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [711, 718],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 10;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [711, 718],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %oldconf;\nmy $newconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"
+                },
+                {
+                    "line_number": 711,
+                    "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"
+                },
+                {
+                    "line_number": 712,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 713,
+                    "modified_line": "Determines all Defects4J test suite archives that exist in F<suite_dir> and that\n"
+                },
+                {
+                    "line_number": 714,
+                    "modified_line": "match the given project id (C<pid>) and version id (C<vid>). Note that C<vid> is\n"
+                },
+                {
+                    "line_number": 715,
+                    "modified_line": "optional.\n"
+                },
+                {
+                    "line_number": 716,
+                    "modified_line": "\n"
+                },
+                {
+                    "line_number": 717,
+                    "modified_line": "This subroutine returns a reference to a hierarchical hash that holds all\n"
+                },
+                {
+                    "line_number": 718,
+                    "modified_line": "\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\nmy $seen = 10;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\nmy $seen = 5;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\nmy $seen = -1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\nmy $seen = 100;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\nmy $seen = -10;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\n$seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\n$seen = !0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\n@files = ();\nmy $fh_in = ();\n$seen = -!0;\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my @newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf = ();\nmy $oldconf = ();\nmy @files = ();\nmy $fh_in = ();\nmy $seen = 1;\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 2;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 10;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -10;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = $oldconf;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = @files;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = $fh_in;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = $seen + 1;\n"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"}, {"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"}, {"line_number": 718, "modified_line": ""}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 2;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 2;\n"}, {"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 2;\n"}, {"line_number": 718, "modified_line": ""}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [711, 718], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 156, "new_lines": ["my %newconf;my $oldconf;my @files;my $fh_in;my $seen = 1;"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 711, "new_lines": ["=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 718, "new_lines": []}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 10;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 718, "new_lines": []}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [711, 718], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -1;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -1;\n"}, {"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -1;\n"}, {"line_number": 718, "modified_line": ""}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -10;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 718, "modified_line": ""}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 156, "new_lines": ["my %newconf;my $oldconf;my @files;my $fh_in;my $seen = -1;"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 711, "new_lines": ["=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [711, 718], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 100;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 718, "new_lines": []}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [711, 718], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 156, "new_lines": ["my %newconf;my $oldconf;my @files;my $fh_in;my $seen = 0; // Mutation 1"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 711, "new_lines": ["=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 718, "new_lines": []}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [711, 718], "modifications": []}
+    ]
+}
+{
+    "fixes": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 718, "modified_line": "\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"}, {"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}, {"line_number": 718, "modified_line": "\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 156, "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 711, "modified_line": "=item C<Utils::get_all_test_suites(suite_dir, pid [, vid])>\n"}]}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 2;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -2;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 10;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = -10;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = $oldconf;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = @files;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = $fh_in;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1 if $oldconf == 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0 if $oldconf == 1;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 1 unless $oldconf == 0;\n"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 156,
+                    "modified_line": "my %newconf;\nmy $oldconf;\nmy @files;\nmy $fh_in;\nmy $seen = 0 unless $oldconf == 1;\n"
+                }
+            ]
+        }
+    ]
+}

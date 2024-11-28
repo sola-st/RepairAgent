@@ -1,0 +1,67 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy\n']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (!array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (!array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (array1 != null && array2 != null && array1.getClass().getComponentType() != null && array2.getClass().getComponentType() != null && !array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (array1 != null && array2 != null && array1.getClass() != null && array2.getClass() != null && array1.getClass().getComponentType() != null && array2.getClass().getComponentType() != null && !array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (array1 != null && array2 != null && !array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (!array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2963, 'modified_line': '            // Check if problem is incompatible types before arraycopy'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2963, 'modified_line': '            // Check if problem is incompatible types before arraycopy\n            if (!array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {\n                throw new IllegalArgumentException("Cannot add elements of incompatible types");\n            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2963, 'modified_line': '            // Check if problem is incompatible types before arraycopy\n            if (!array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {\n                throw new IllegalArgumentException("Cannot add elements of incompatible types");\n            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2963, 'modified_line': '            // Check if problem is incompatible types before arraycopy\n            if (array1 != null && array2 != null && !array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {\n                throw new IllegalArgumentException("Cannot add elements of incompatible types");\n            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2963, 'modified_line': '            // Check if problem is incompatible types before arraycopy\n            if (array1 != null && array2 != null && !array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {\n                throw new IllegalArgumentException("Cannot add elements of incompatible types");\n            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2963, 'modified_line': '            // Check if problem is incompatible types before arraycopy\n            if (array1 != null && array2 != null && !array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {\n                throw new IllegalArgumentException("Cannot add elements of incompatible types");\n            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (array1 != null && array2 != null && !array1.getClass().equals(array2.getClass())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (array1 != null && array2 != null && !array1.getClass().isAssignableFrom(array2.getClass())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (!array1.getClass().isAssignableFrom(array2.getClass())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (array1 != null && array2 != null && !array1.getClass().isAssignableFrom(array2.getClass())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2963, 'modified_line': '            // Check if problem is incompatible types before arraycopy\n            if (!array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {\n                throw new IllegalArgumentException("Cannot add elements of incompatible types");\n            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'insertions': [{'line_number': 2963, 'new_lines': ['            // Check if problem is incompatible types before arraycopy', '            if (!array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) {', '                throw new IllegalArgumentException("Cannot add elements of incompatible types");', '            }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2962, 'modified_line': '        final Class<?> type1 = array1.getClass().getComponentType();'}, {'line_number': 2963, 'modified_line': '        final Class<?> type2 = array2.getClass().getComponentType();'}, {'line_number': 2964, 'modified_line': '        if (type1 != null && type2 != null && !type1.isAssignableFrom(type2)) { throw new IllegalArgumentException("Cannot add elements of incompatible types"); }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/ArrayUtils.java', 'modifications': [{'line_number': 2962, 'modified_line': '        if (array1 == null || array2 == null) { throw new IllegalArgumentException("Cannot add elements from null arrays"); }'}, {'line_number': 2963, 'modified_line': '        if (array1 != null && array2 != null && array1.getClass().getComponentType() != null && array2.getClass().getComponentType() != null && !array1.getClass().getComponentType().isAssignableFrom(array2.getClass().getComponentType())) { throw new IllegalArgumentException("Cannot add elements of incompatible types"); }'}]}]
+
+

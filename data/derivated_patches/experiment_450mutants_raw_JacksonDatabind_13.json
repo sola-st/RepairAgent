@@ -1,0 +1,296 @@
+[
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines":["throw new IllegalArgumentException(\"Object id cannot be null\");"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines":["return null;"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "modifications": [{"line_number": 87, "modified_line": "if (id == null) { throw new IllegalArgumentException(\"Object id cannot be null\"); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "modifications": [{"line_number": 87, "modified_line": "if (id == null) { return null; }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines":["throw new NullPointerException(\"Object id is null\");"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines":["return new ReadableObjectId(id);"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "modifications": [{"line_number": 87, "modified_line": "if (id == null) { throw new NullPointerException(\"Object id is null\"); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "modifications": [{"line_number": 87, "modified_line": "if (id == null) { return new ReadableObjectId(id); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines":["throw new IllegalStateException(\"Object id is missing\");"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines":["return new ReadableObjectId(id);"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "modifications": [{"line_number": 87, "modified_line": "if (id == null) { throw new IllegalStateException(\"Object id is missing\"); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "modifications": [{"line_number": 87, "modified_line": "if (id == null) { return new ReadableObjectId(id); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines":["throw new IllegalArgumentException(\"Object id cannot be null\");"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines":["return null;"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "modifications": [{"line_number": 92, "modified_line": "if (id == null) { throw new IllegalArgumentException(\"Object id cannot be null\"); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "modifications": [{"line_number": 92, "modified_line": "if (id == null) { return null; }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines":["throw new NullPointerException(\"Object id is null\");"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines":["return new ReadableObjectId(id);"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "modifications": [{"line_number": 92, "modified_line": "if (id == null) { throw new NullPointerException(\"Object id is null\"); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "modifications": [{"line_number": 92, "modified_line": "if (id == null) { return new ReadableObjectId(id); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines":["throw new IllegalStateException(\"Object id is missing\");"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines":["return new ReadableObjectId(id);"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "modifications": [{"line_number": 92, "modified_line": "if (id == null) { throw new IllegalStateException(\"Object id is missing\"); }"}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "modifications": [{"line_number": 92, "modified_line": "if (id == null) { return new ReadableObjectId(id); }"}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (gen == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (gen == null) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (resolverType == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (resolverType == null) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.equals(\"someValue\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.equals(\"someValue\")) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (gen.key(id) == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (gen.key(id) == null) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.toString().isEmpty()) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.toString().isEmpty()) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id instanceof String) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id instanceof String) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.hashCode() == 0) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.hashCode() == 0) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.hashCode() != 0) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.hashCode() != 0) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.hashCode() > 0) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.hashCode() > 0) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.hashCode() < 0) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.hashCode() < 0) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.hashCode() == -1) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.hashCode() == -1) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id.hashCode() > -1) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id.hashCode() > -1) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (!id.equals(\"someValue\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (!id.equals(\"someValue\")) {", "    return null;", "}"]}]
+},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (gen.key(id).toString().isEmpty()) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (gen.key(id).toString().isEmpty()) {", "    return null;", "}"]}]
+}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (gen == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (gen == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (resolverType == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (resolverType == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // process id further", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // process id further", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (gen != null) {", "    // process gen further", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (gen != null) {", "    // process gen further", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (resolverType != null) {", "    // process resolverType further", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (resolverType != null) {", "    // process resolverType further", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    throw new IllegalArgumentException('id cannot be null');", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    throw new IllegalArgumentException('id cannot be null');", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (gen == null) {", "    throw new IllegalArgumentException('gen cannot be null');", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (gen == null) {", "    throw new IllegalArgumentException('gen cannot be null');", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (resolverType == null) {", "    throw new IllegalArgumentException('resolverType cannot be null');", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (resolverType == null) {", "    throw new IllegalArgumentException('resolverType cannot be null');", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["// Handling special case for id being null", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["// Handling special case for id being null", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["// Additional check for id", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["// Additional check for id", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["// Checking if id is null", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["// Checking if id is null", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["// Ensure id is not null", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["// Ensure id is not null", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["// Null check for id", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["// Null check for id", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["// Handling id being null scenario", "if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["// Handling id being null scenario", "if (id == null) {", "    return null;", "}"]}]},
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (gen == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (resolverType == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null && gen == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null || gen == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (ctxt == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (_objectIdReader == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null && ctxt == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null || ctxt == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}],
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number":87, "new_lines":["if (id != null) {", "    final ObjectIdGenerator.IdKey key = gen.key(id);"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    ReadableObjectId roid = ctxt.findObjectId(id, _objectIdReader.generator, _objectIdReader.resolver);"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle null ID case", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle null ID case", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    throw new IllegalArgumentException(\"ID cannot be null\");", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    throw new IllegalArgumentException(\"ID cannot be null\");", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Perform custom handling here for null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Perform custom handling here for null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Add logic to handle null ID case", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Add logic to handle null ID case", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle the case when ID is null", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle the case when ID is null", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Check for null ID and handle it", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Check for null ID and handle it", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle scenario with null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle scenario with null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Null ID handling goes here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Null ID handling goes here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Add handling for null ID case", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Add handling for null ID case", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Add logic for handling null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Add logic for handling null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Custom handling for null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Custom handling for null ID", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle null ID scenario", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle null ID scenario", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Add null ID handling logic", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Add null ID handling logic", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Null ID logic here", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Null ID logic here", "}"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle the object id here", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle the object id here", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Fix the object id issue", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Fix the object id issue", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Check for null id", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Check for null id", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle null id situation", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle null id situation", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Null id check", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Null id check", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle id being null", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle id being null", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Fix for null id", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Fix for null id", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Null id handling", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Null id handling", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle the null id case", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle the null id case", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Check for id being null", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Check for id being null", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle null id scenario", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle null id scenario", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Fix for null id", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Fix for null id", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id != null) {", "    // Handle id being null", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id != null) {", "    // Handle id being null", "}"]}]}
+
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+    {"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    // Handle null id", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    // Handle null id", "    return null;", "}"]}]
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]}
+
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "insertions": [{"line_number": 87, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "insertions": [{"line_number": 92, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "insertions": [{"line_number": 87, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "insertions": [{"line_number": 92, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "insertions": [{"line_number": 87, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "insertions": [{"line_number": 92, "new_lines": ["if (id == null || id.equals(\"null\")) {", "    return null;", "}"]}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/deser/DefaultDeserializationContext.java", "target_lines": [["87", "//"]], "insertions": [{"line_number": 87, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/deser/impl/ObjectIdValueProperty.java", "target_lines": [["92", "//"]], "insertions": [{"line_number": 92, "new_lines": ["if (id == null) {", "    return null;", "}"]}], "deletions": [], "modifications": []}
+]

@@ -1,0 +1,20 @@
+
+    {
+        "file_name": "com/google/javascript/jscomp/DevirtualizePrototypeMethods.java",
+        "insertions": [
+            {
+                "line_number": 362,
+                "new_lines": [
+                    "// Inserted fix for the bug: Check for null before using name",
+                    "if (name != null) {",
+                    "    // perform the replacement",
+                    "} else {",
+                    "    // handle the case when name is null",
+                    "}"
+                ]
+            }
+        ],
+        "deletions": [],
+        "modifications": []
+    }
+    

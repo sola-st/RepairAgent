@@ -1,0 +1,439 @@
+[
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["        // Fix the bug by adding missing logic here", "        // Some additional code here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["        // Insert logic here to fix the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["        // Add missing code here to resolve the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["        // Implement the missing logic here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["        // Code to fix the issue should be placed here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["        // Fix missing logic here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]}
+][
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number":522, "new_lines":["        if (getRegistry() == null) {","            REGISTRY.set(new HashSet<IDKey>());","        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number":522, "new_lines":["        if (getRegistry() == null) {","            REGISTRY.set(new HashSet<IDKey>());","        }","        return getRegistry();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number":522, "new_lines":["        if (getRegistry() == null) {","            REGISTRY.set(new HashSet<IDKey>());","        }","        return REGISTRY.get();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number":522, "new_lines":["        if (getRegistry() == null) {","            REGISTRY.set(new HashSet<IDKey>());","        }","        getRegistry().add(new IDKey(value));"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number":522, "new_lines":["        if (getRegistry() == null) {","            REGISTRY.set(new HashSet<IDKey>());","            getRegistry().add(new IDKey(value));","        }"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Inserted fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// New line added for fixing issue at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix inserted here for line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Mutation for fixing line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix for line 522 added here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Mutation applied for line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix for line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Mutation at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Line 522 fix here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fixing line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix added for line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix at line 522 added here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fixing line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix added on line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix here for line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix inserted for line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix added to line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix at line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106",[
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Insert fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Potential fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines":["// Fix for line 522 should be inserted here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []}
+][
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here to address the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["if (getRegistry() != null) { // Insert fix for line 522 here to address the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["if (getRegistry() != null && getRegistry().contains(new IDKey(value)) != null) { // Insert fix for line 522 here to address the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Add a fix for line 522 here to address the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Implement a fix for line 522 here to address the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []}
+]```python
+[
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Add fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Implement fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+    {"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Adjust line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []}
+]
+```  [
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Inserted fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Potential fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 goes here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Line 522 fix here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix line 522 by adding code here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Add fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Potential fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 goes here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Implemented fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []}
+][
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 should be added here to prevent the bug"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Potential fix for line 522 can be inserted here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Inserted fix for line 522 should go here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Potential solution for line 522 insertion"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Inserted fix for line 522 should be here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]}
+][
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 1: Adding a comment for mutation 1 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 2: Adding a comment for mutation 2 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 3: Adding a comment for mutation 3 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 4: Adding a comment for mutation 4 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 5: Adding a comment for mutation 5 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 6: Adding a comment for mutation 6 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 7: Adding a comment for mutation 7 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 8: Adding a comment for mutation 8 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 9: Adding a comment for mutation 9 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation 10: Adding a comment for mutation 10 at line 522"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538]}
+]```python
+# Mutant 1: Modifying the condition in line 152
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry() == null || getRegistry().contains(new IDKey(value));"}]
+    }
+]
+
+# Mutant 2: Modifying the condition in line 152
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry() != null && !getRegistry().contains(new IDKey(value));"}]
+    }
+]
+
+# Mutant 3: Modifying the condition in line 538
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["538", "        getRegistry().remove(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() != null && getRegistry().contains(new IDKey(value))) { getRegistry().remove(new IDKey(value)); }"}]
+    }
+]
+
+# Mutant 4: Modifying the condition in line 538
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["538", "        getRegistry().remove(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() == null) { getRegistry().remove(new IDKey(value)); }"}]
+    }
+]
+
+# Mutant 5: Changing the initialization of REGISTRY in line 104
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"],
+                         ["105", "        @Override"],
+                         ["106", "        protected Set<IDKey> initialValue() {"],
+                         ["107", "            return new HashSet<IDKey>();"],
+                         ["108", "        }"],
+                         ["109", "    };"],
+                         ["152", "        return getRegistry().contains(new IDKey(value));"],
+                         ["538", "        getRegistry().remove(new IDKey(value));"],
+                         ["522", "//"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 104, "modified_line": "    private static final ThreadLocal<Set<IDKey>> REGISTRY = ThreadLocal.withInitial(() -> new HashSet<IDKey>());"}
+        ]
+    }
+]
+
+# Mutant 6: Adding a null check before accessing getRegistry() in line 152
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry() != null && getRegistry().contains(new IDKey(value));"}]
+    }
+]
+
+# Mutant 7: Adding a null check before removing from getRegistry() in line 538
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["538", "        getRegistry().remove(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() != null) { getRegistry().remove(new IDKey(value)); }"}]
+    }
+]
+
+# Mutant 8: Changing the condition in line 152 to != null only
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry() != null && getRegistry().contains(new IDKey(value));"}]
+    }
+]
+
+# Mutant 9: Changing the condition in line 538 to check for null before removal
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["538", "        getRegistry().remove(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() != null) { getRegistry().remove(new IDKey(value)); }"}]
+    }
+]
+
+# Mutant 10: Modifying the condition in line 152 to check for null
+[
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry() != null && getRegistry().contains(new IDKey(value));"}]
+    }
+]
+``````python
+[
+    # Mutant 1: Change the condition in line 152 to check for null before calling contains
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry() != null && getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 2: Change the condition in line 152 to check for empty registry before calling contains
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return !getRegistry().isEmpty() && getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 3: Modify the condition in line 538 to remove only if registry is not null
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [538],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() != null) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 4: Change the return value in line 152 to always return true
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return true;"}]
+    },
+    # Mutant 5: Remove the conditional check in line 538 and unconditionally remove from registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [538],
+        "modifications": [{"line_number": 538, "modified_line": "        getRegistry().remove(new IDKey(value));"}]
+    },
+    # Mutant 6: Insert a null check in line 538 before removing from registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() != null) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 7: Change the condition in line 152 to check for existence of value before calling contains
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return value != null && getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 8: Change the condition in line 152 to check for value not in registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return !getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 9: Change the condition in line 538 to remove only if registry is not empty
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [538],
+        "modifications": [{"line_number": 538, "modified_line": "        if (!getRegistry().isEmpty()) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 10: Invert the conditional check in line 152 for registry contains
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return !getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 11: Change the condition in line 152 to check for a different key in registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry().contains(new IDKey(\"different_key\"));"}]
+    },
+    # Mutant 12: Add a null check in line 152 before calling contains on registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry() != null && getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 13: Change the condition in line 152 to check for a different value in registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry().contains(new IDKey(\"different_value\"));"}]
+    },
+    # Mutant 14: Remove the null check in line 152 before calling contains on registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 15: Invert the conditional check in line 538 for registry removal
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [538],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() == null) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 16: Change the condition in line 152 to always return false
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return false;"}]
+    },
+    # Mutant 17: Change the condition in line 538 to remove only if registry is empty
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [538],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry().isEmpty()) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 18: Change the condition in line 152 to check for a different object in registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry().contains(new IDKey(new Object()));"}]
+    },
+    # Mutant 19: Add a null check in line 538 before removing from registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() != null) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 20: Change the condition in line 152 to check for a different key in registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry().contains(new IDKey(\"different_key\"));"}]
+    },
+    # Mutant 21: Remove the null check in line 152 before calling contains on registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry().contains(new IDKey(value));"}]
+    },
+    # Mutant 22: Invert the conditional check in line 538 for registry removal
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [538],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry() == null) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 23: Change the condition in line 152 to always return false
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return false;"}]
+    },
+    # Mutant 24: Change the condition in line 538 to remove only if registry is empty
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [538],
+        "modifications": [{"line_number": 538, "modified_line": "        if (getRegistry().isEmpty()) { getRegistry().remove(new IDKey(value)); }"}]
+    },
+    # Mutant 25: Change the condition in line 152 to check for a different object in registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [152],
+        "modifications": [{"line_number": 152, "modified_line": "        return getRegistry().contains(new IDKey(new Object()));"}]
+    },
+    # Mutant 26: Add a null check in line 538 before removing from registry
+    {
+        "file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java",
+        "target_lines": [["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]],
+        "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here"]}],
+        "deletions": [],
+        "modifications": [{"line_number": [
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 here"]}], "deletions": [105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], "insertions": [], "deletions": [105, 106, 107, 108, 109, 152, 538], "modifications": [{"line_number": 522, "modified_line": "// Fix for line 522 here"}]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], "insertions": [], "deletions": [105, 106, 107, 108, 109, 152, 538], "modifications": [{"line_number": 522, "modified_line": "// Potential fix for line 522 here"}]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["152", "        return getRegistry().contains(new IDKey(value));"], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["152", "        return getRegistry().contains(new IDKey(value));"], "insertions": [], "deletions": [104, 105, 106, 107, 108, 109, 538], "modifications": [{"line_number": 522, "modified_line": "// Fix for line 522 here"}]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["152", "        return getRegistry().contains(new IDKey(value));"], "insertions": [], "deletions": [104, 105, 106, 107, 108, 109, 538], "modifications": [{"line_number": 522, "modified_line": "// Potential fix for line 522 here"}]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["538", "        getRegistry().remove(new IDKey(value));"], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["538", "        getRegistry().remove(new IDKey(value));"], "insertions": [], "deletions": [104, 105, 106, 107, 108, 109, 152], "modifications": [{"line_number": 522, "modified_line": "// Fix for line 522 here"}]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["538", "        getRegistry().remove(new IDKey(value));"], "insertions": [], "deletions": [104, 105, 106, 107, 108, 109, 152], "modifications": [{"line_number": 522, "modified_line": "// Potential fix for line 522 here"}]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["522", "//"], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 here"]}], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["522", "//"], "insertions": [], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": [{"line_number": 522, "modified_line": "// Fix for line 522 here"}]},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": ["522", "//"], "insertions": [], "deletions": [104, 105, 106, 107, 108, 109, 152, 538], "modifications": [{"line_number": 522, "modified_line": "// Potential fix for line 522 here"}]}
+][
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Insert fix for line 522 here to address the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix inserted at line 522"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Bug fix at line 522"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix for line 522 here"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Mutation at line 522"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Potential fix for line 522"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix suggestion for line 522"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Inserted fix for line 522 here"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Potential solution for line 522"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang3/builder/HashCodeBuilder.java", "target_lines": [["104", "    private static final ThreadLocal<Set<IDKey>> REGISTRY = new ThreadLocal<Set<IDKey>>() {"], ["105", "        @Override"], ["106", "        protected Set<IDKey> initialValue() {"], ["107", "            return new HashSet<IDKey>();"], ["108", "        }"], ["109", "    };"], ["152", "        return getRegistry().contains(new IDKey(value));"], ["538", "        getRegistry().remove(new IDKey(value));"], ["522", "//"]], "insertions": [{"line_number": 522, "new_lines": ["// Fix at line 522"]}], "deletions": [], "modifications": []}
+]

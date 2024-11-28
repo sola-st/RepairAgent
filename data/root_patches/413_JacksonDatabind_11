@@ -1,0 +1,22 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/type/TypeFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 895, 'modified_line': 'return _unknownType(); // Original line: return _unknownType();'}, {'line_number': 902, 'modified_line': 'JavaType actualType = context.findType(name); // Original line: JavaType actualType = context.findType(name);'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/type/TypeFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 898, 'modified_line': "            // Ok: here's where context might come in handy! Adjusting handling of unresolved type variables."}, {'line_number': 899, 'modified_line': "            /* 19-Mar-2015, tatu: As per [databind#609], may need to allow unresolved type variables to handle some cases where bounds are enough. Let's hope it does not hide real fail cases. Modified handling of unresolved type variables. */"}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/type/TypeFactory.java', 'target_lines': [['895', '            return _unknownType();'], ['902', '            JavaType actualType = context.findType(name);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 895, 'modified_line': 'return _unknownType(); // Original line: return _unknownType();'}, {'line_number': 902, 'modified_line': 'JavaType actualType = context.findType(name); // Original line: JavaType actualType = context.findType(name);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/type/TypeFactory.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 898, 'modified_line': "// Ok: here's where context might come in handy! Refining handling of unresolved type variables."}, {'line_number': 899, 'modified_line': "/* 19-Mar-2015, tatu: As per [databind#609], may need to allow unresolved type variables to handle some cases where bounds are enough. Let's hope it does not hide real fail cases. Modified handling of unresolved type variables. */"}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/type/TypeFactory.java', 'target_lines': [['895', '            return _unknownType();'], ['902', '            JavaType actualType = context.findType(name);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 895, 'modified_line': 'return _unknownType(); // Original line: return _unknownType();'}, {'line_number': 902, 'modified_line': 'JavaType actualType = context.findType(name); // Original line: JavaType actualType = context.findType(name);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/type/TypeFactory.java', 'insertions': [{'line_number': 895, 'new_lines': ['    /**', '     * Method that constructs a concrete {@link JavaType} instance.', '     * ', '     * @param typeReference The {@link TypeReference} to construct the JavaType from.', '     * @return The constructed JavaType instance.', '     */', '    public JavaType constructType(TypeReference<?> typeReference) {', '        // Get the Type from the TypeReference', '        Type type = typeReference.getType();', '        // Call internal method to construct JavaType', '        return _fromAny(null, type, null);', '    }']}], 'deletions': [902]}]
+
+

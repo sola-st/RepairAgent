@@ -1,0 +1,25 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'insertions': [{'line_number': 865, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS)) {']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/DeserializationConfig.java', 'target_lines': [['780', '//']], 'insertions': [{'line_number': 780, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_FIELDS)) {']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'target_lines': [['865', '//']], 'insertions': [{'line_number': 865, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS)) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'insertions': [{'line_number': 865, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_FIELDS)) {']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/DeserializationConfig.java', 'target_lines': [['780', '//']], 'insertions': [{'line_number': 780, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_FIELDS) || !isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS)) {']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'target_lines': [['865', '//']], 'insertions': [{'line_number': 865, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_FIELDS)) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'modifications': [{'line_number': 865, 'modified_line': '        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_FIELDS)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/DeserializationConfig.java', 'target_lines': [['780', '//']], 'insertions': [{'line_number': 780, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_FIELDS) || !isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS)) {']}], 'deletions': [], 'modifications': []}, {'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'target_lines': [['865', '//']], 'insertions': [{'line_number': 865, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_FIELDS)) {']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'modifications': [{'line_number': 865, 'modified_line': '        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_FIELDS)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/DeserializationConfig.java', 'target_lines': [['780', '//']], 'insertions': [{'line_number': 780, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_FIELDS) || !isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS)) {']}]}, {'file_name': 'com/fasterxml/jackson/databind/SerializationConfig.java', 'target_lines': [['865', '//']], 'insertions': [{'line_number': 865, 'new_lines': ['        if (!isEnabled(MapperFeature.AUTO_DETECT_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_IS_GETTERS) || !isEnabled(MapperFeature.AUTO_DETECT_FIELDS)) {']}]}]
+
+

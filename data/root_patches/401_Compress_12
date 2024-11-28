@@ -1,0 +1,34 @@
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/TarTestCase.java', 'modifications': [{'line_number': 309, 'modified_line': 'assertTrue("Expected cause = IOException", t instanceof IOException);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'target_lines': [['198', '        currEntry = new TarArchiveEntry(headerBuf);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'target_lines': [['198', '        currEntry = new TarArchiveEntry(headerBuf);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': '        currEntry = new TarArchiveEntry(headerBuf, true);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'target_lines': [['198', '        currEntry = new TarArchiveEntry(headerBuf);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': '        currEntry = new TarArchiveEntry(headerBuf); // Original line remains unchanged'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': '        setCurrentEntry(new TarArchiveEntry(headerBuf)); // Initialize currEntry using setCurrentEntry method'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': '        currEntry = new TarArchiveEntry(headerBuf, true); // Initialize currEntry with the correct flag'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': 'setCurrentEntry(new TarArchiveEntry(headerBuf)); // Initialize currEntry using setCurrentEntry method'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': 'currEntry = new TarArchiveEntry(headerBuf, true); // Initialize currEntry with the correct flag'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': 'currEntry = new TarArchiveEntry(headerBuf, false); // Initialize currEntry with a different flag'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/compress/archivers/tar/TarArchiveInputStream.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 198, 'modified_line': 'currEntry = new TarArchiveEntry(headerBuf, true); // Initialize currEntry with the correct flag'}]}]
+
+

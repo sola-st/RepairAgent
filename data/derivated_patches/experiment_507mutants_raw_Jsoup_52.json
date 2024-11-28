@@ -1,0 +1,456 @@
+[
+    {
+        "file_name": "org/jsoup/helper/DataUtil.java",
+        "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]],
+        "insertions": [],
+        "deletions": [112, 113, 115, 116, 117, 118],
+        "modifications": []
+    },
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]],
+        "insertions": [],
+        "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68],
+        "modifications": []
+    },
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]],
+        "insertions": [],
+        "deletions": [3],
+        "modifications": []
+    }
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        foundCharset = null;"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [113], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            sb.append(\" encoding=\\\"\" + encoding + \"\\\"\");"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "// Insert code here to handle the XML tree building"}]}
+]```
+[
+    {
+        "file_name": "org/jsoup/helper/DataUtil.java",
+        "target_lines": [
+            ["112", "                    try {"],
+            ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"],
+            ["115", "                        }"],
+            ["116", "                    } catch (IllegalCharsetNameException e) {"],
+            ["117", "                        foundCharset = null;"],
+            ["118", "                    }"]
+        ],
+        "insertions": [],
+        "deletions": [112, 113, 115, 116, 117, 118],
+        "modifications": []
+    },
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [
+            ["46", "        final String decl = this.name;"],
+            ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"],
+            ["48", "            StringBuilder sb = new StringBuilder(decl);"],
+            ["49", "            final String version = attributes.get(\"version\");"],
+            ["50", "            if( version != null ) {"],
+            ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"],
+            ["52", "            }"],
+            ["53", "            final String encoding = attributes.get(\"encoding\");"],
+            ["54", "            if( encoding != null ) {"],
+            ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"],
+            ["56", "            }"],
+            ["57", "            return sb.toString();"],
+            ["58", "        }"],
+            ["59", "        else {"],
+            ["60", "            return this.name;"],
+            ["61", "        }"],
+            ["68", "                .append(getWholeDeclaration())"]
+        ],
+        "insertions": [],
+        "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68],
+        "modifications": []
+    },
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [
+            ["76", "                String declaration = data.substring(1);"],
+            ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"],
+            ["3", "//"]
+        ],
+        "insertions": [],
+        "deletions": [76, 77, 3],
+        "modifications": []
+    }
+]
+```[
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [68], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [3], "modifications": []}
+]```json
+[
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"], ["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68, 76, 77], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [76, 77], "modifications": []}
+]
+```[
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"], ["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [76, 77, 3], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 114, "new_lines": ["// Inserted line for mutation"]}], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [{"line_number": 58, "new_lines": ["// Inserted line for mutation"]}], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 59, 60, 61, 68], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 78, "new_lines": ["// Inserted line for mutation"]}], "deletions": [76, 77, 3], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 116, "new_lines":["// Inserted line for mutation"]}]}],
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [{"line_number": 60, "new_lines":["// Inserted line for mutation"]}]}],
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 77, "new_lines":["// Inserted line for mutation"]}]}]
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(!decl.equals(\"xml\") || attributes.size() <= 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version == null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding == null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "return insert;"]], "insertions": [], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [3], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 114, "new_lines":["// Inserted line for mutation"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [{"line_number": 54, "new_lines":["// Inserted line for mutation"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [{"line_number": 4, "new_lines":["// Inserted line for mutation"]} ], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = \"unknown\";"], ["118", "                    }"]], "insertions": [], "deletions": [112, 115], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            if( encoding == null ) {"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"]], "insertions": [{"line_number": 3, "new_lines": ["// Inserted new line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Mutation: Inserted line to fix bug"]}], "deletions": [3], "modifications": []}
+]```python
+[
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [76, 77], "modifications": []}
+]
+```  [
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines":["// Perform necessary XML tree building operations here"]}], "deletions": [3], "modifications": []}
+]```python
+[
+    # Mutant 1: Change the condition from checking if encoding is not null to checking if it is null
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["54", "            if( encoding != null ) {"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 54, "modified_line": "            if( encoding == null ) {"}]
+    },
+    # Mutant 2: Change the appended string in the modification line
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["55", "            sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 55, "modified_line": "            sb.append(\" charset=\\\"\").append(encoding).append(\"\\\"\");"}]
+    },
+    # Mutant 3: Add a new line to fix the bug
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["3", "//"]],
+        "insertions": [{"line_number": 3, "new_lines": ["// Insert new line here to fix the bug"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    # Mutant 4: Remove the unnecessary check for the declaration name
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 47, "modified_line": "        if(attributes.size() > 1 ) {"}]
+    },
+    # Mutant 5: Change the way version is appended in the XmlDeclaration
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 51, "modified_line": "                sb.append(\" ver=\\\"\").append(version).append(\"\\\"\");"}]
+    },
+    # Mutant 6: Change the way the whole declaration is appended in the XmlDeclaration
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["68", "                .append(getWholeDeclaration())"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 68, "modified_line": "                .append(getDeclaration())"}]
+    },
+    # Mutant 7: Modify the try-catch block to catch a more specific exception
+    {
+        "file_name": "org/jsoup/helper/DataUtil.java",
+        "target_lines": [["116", "                    } catch (IllegalCharsetNameException e) {"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 116, "modified_line": "                    } catch (UnsupportedCharsetException e) {"}]
+    },
+    # Mutant 8: Change the condition to check for a different attribute in the XmlDeclaration
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.get(\"charset\");"}]
+    },
+    # Mutant 9: Insert a line to fix the bug in XmlTreeBuilder
+    {
+        "file_name": "org/jsoup/parser/XmlTreeBuilder.java",
+        "target_lines": [["3", "//"]],
+        "insertions": [{"line_number": 3, "new_lines": ["// Insert a line to fix the bug"]}],
+        "deletions": [],
+        "modifications": []
+    },
+    # Mutant 10: Modify the condition for appending version in XmlDeclaration
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["50", "            if( version != null ) {"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 50, "modified_line": "            if( version == null ) {"}]
+    },
+    # Mutant 11: Change the way the XmlDeclaration name is checked
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 47, "modified_line": "        if(attributes.containsKey(\"xml\") && attributes.size() > 1 ) {"}]
+    },
+    # Mutant 12: Modify the catch block in DataUtil to handle a different exception
+    {
+        "file_name": "org/jsoup/helper/DataUtil.java",
+        "target_lines": [["116", "                    } catch (IllegalCharsetNameException e) {"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 116, "modified_line": "                    } catch (UnsupportedEncodingException e) {"}]
+    },
+    # Mutant 13: Change the way version is appended in the XmlDeclaration
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 51, "modified_line": "                sb.append(\" ver=\\\"\").append(version).append(\"\\\"\");"}]
+    },
+    # Mutant 14: Remove the unnecessary check for the declaration name
+    {
+        "file_name": "org/jsoup/nodes/XmlDeclaration.java",
+        "target_lines": [["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [{"line_number": 47, "modified_line": "        if(attributes.size() > 1 ) {"}]
+    },
+]
+``````python
+[
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [117], "modifications": []},
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [113], "modifications": []},
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [116], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [53], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"]], "insertions": [], "deletions": [55], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["57", "            return sb.toString();"]], "insertions": [], "deletions": [57], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["48", "            StringBuilder sb = new StringBuilder(decl);"]], "insertions": [], "deletions": [48], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"]], "insertions": [], "deletions": [76], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"]], "insertions": [], "deletions": [77], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Insert new logic here to handle the declaration"]}], "deletions": [], "modifications": []}
+]
+``````python
+[
+    # Mutant 1
+    {"file_name": "org/jsoup/helper/DataUtil.java", 
+     "target_lines": [["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], 
+                     ["118", "                    } catch (IllegalCharsetNameException e) {foundCharset = null;}"]], 
+     "insertions": [],
+     "deletions": [112, 115, 116, 117],
+     "modifications": []
+    },
+    
+    # Mutant 2
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", 
+     "target_lines": [["53", "            if( encoding == null ) {"]], 
+     "insertions": [],
+     "deletions": [54, 55, 56],
+     "modifications": []
+    },
+    
+    # Mutant 3
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", 
+     "target_lines": [["3", "NEW_LINE_HERE"]], 
+     "insertions": [{"line_number": 3, "new_lines": ["// Fix the bug by adding necessary code here"]}],
+     "deletions": [],
+     "modifications": []
+    },
+    
+    # Mutant 4
+    {"file_name": "org/jsoup/helper/DataUtil.java", 
+     "target_lines": [["112", "                    try { /* Mutated line */"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) { /* Mutated line */"], ["115", "                        /* Mutated line */"], ["116", "                    } catch (IllegalCharsetNameException e) { /* Mutated line */"], ["117", "                        foundCharset = null; /* Mutated line */"], ["118", "                    } /* Mutated line */"]], 
+     "insertions": [],
+     "deletions": [],
+     "modifications": []
+    },
+    
+    # Mutant 5
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", 
+     "target_lines": [["61", "        return this.name; // Mutated line"]], 
+     "insertions": [],
+     "deletions": [],
+     "modifications": [{"line_number": 61, "modified_line": "        return this.getWholeDeclaration();"}]
+    },
+    
+    # Mutant 6
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", 
+     "target_lines": [["76", "                String declaration = data.substring(1); /* Mutated line */"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\")); /* Mutated line */"]], 
+     "insertions": [],
+     "deletions": [],
+     "modifications": [{"line_number": 76, "modified_line": "                String declaration = data.substring(0);"}, {"line_number": 77, "modified_line": "                insert = new XmlDeclaration(declaration, comment.baseUri(), !data.startsWith(\"!\"));"}]
+    },
+    
+    # Mutant 7
+    {"file_name": "org/jsoup/helper/DataUtil.java", 
+     "target_lines": [["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"]], 
+     "insertions": [],
+     "deletions": [112, 115, 116, 117, 118],
+     "modifications": []
+    },
+    
+    # Mutant 8
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", 
+     "target_lines": [["53", "            if( encoding != null ) {"]], 
+     "insertions": [],
+     "deletions": [54, 55, 56],
+     "modifications": []
+    },
+    
+    # Mutant 9
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", 
+     "target_lines": [["3", "NEW_LINE_HERE"]], 
+     "insertions": [{"line_number": 3, "new_lines": ["// Implement the fix by adding necessary code here"]}],
+     "deletions": [],
+     "modifications": []
+    },
+    
+    # Mutant 10
+    {"file_name": "org/jsoup/helper/DataUtil.java", 
+     "target_lines": [["112", "                    try { /* Mutated line */"], ["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) { /* Mutated line */"], ["115", "                        /* Mutated line */"], ["116", "                    } catch (IllegalCharsetNameException e) { /* Mutated line */"], ["117", "                        foundCharset = null; /* Mutated line */"], ["118", "                    } /* Mutated line */"]], 
+     "insertions": [],
+     "deletions": [],
+     "modifications": []
+    },
+    
+    # Mutant 11
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", 
+     "target_lines": [["61", "        return this.name; // Mutated line"]], 
+     "insertions": [],
+     "deletions": [],
+     "modifications": [{"line_number": 61, "modified_line": "        return getWholeDeclaration();"}]
+    },
+    
+    # Mutant 12
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", 
+     "target_lines": [["76", "                String declaration = data.substring(1); /* Mutated line */"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\")); /* Mutated line */"]], 
+     "insertions": [],
+     "deletions": [],
+     "modifications": [{"line_number": 76, "modified_line": "                String declaration = data.substring(2);"}, {"line_number": 77, "modified_line": "                insert = new XmlDeclaration(declaration, comment.baseUri(), !data.startsWith(\"!\"));"}]
+    }
+    # Continue with more mutants...
+]
+```
+[
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [{"line_number": 53, "new_lines": ["if (encoding == null) {", "    return sb.toString();", "}"]}], "deletions": [], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 113, "new_lines": ["                            if (meta.attr(\"charset\") != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 115, "new_lines": ["                            foundCharset = Charset.defaultCharset();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 115, "new_lines": ["                            foundCharset = Charset.forName(\"UTF-8\");"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 113, "new_lines": ["                            if (meta.attr(\"charset\") != null) {"]}, {"line_number": 115, "new_lines": ["                            foundCharset = Charset.defaultCharset();"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 113, "new_lines": ["                            if (meta.attr(\"charset\") != null) {"]}, {"line_number": 115, "new_lines": ["                            foundCharset = Charset.forName(\"UTF-8\");"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 113, "new_lines": ["                            if (meta.attr(\"charset\") != null) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [113], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [115], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [113, 115], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (meta.attr(\"charset\") == null) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "sb.append(\" encoding=\\\"\" + encoding + \"\\\"\");"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "sb.append(\" encoding=\" + encoding + \"\");"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "sb.append(\" encoding='\" + encoding + \"'\");"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "sb.append(\" encoding=['\" + encoding + \"']\");"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "sb.append(\" encoding=\\\"\" + encoding + \"\\\"\");"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "sb.append(\" encoding=['\" + encoding + \"']\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"*\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"?\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"*\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"?\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"*\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"?\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"*\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"?\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 3, "modified_line": "insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"*\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(),[
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 3, "new_lines":["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [{"line_number": 3, "new_lines":["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines":["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                            foundCharset = null;"], ["116", "                        }"], ["117", "                    } catch (IllegalCharsetNameException e) {"], ["118", "                    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") || attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), !data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": []}
+][{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 3, "new_lines": ["// Fixing the bug by adding missing logic here"]} ], "deletions": [], "modifications": []}
+
+,{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [{"line_number": 3, "new_lines": ["// Insert missing line to handle encoding declaration"]} ], "deletions": [], "modifications": []}
+
+,{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Add missing logic here to fix the bug"]} ], "deletions": [], "modifications": []}][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["54", "            if( encoding == null ) {"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["115", "                        foundCharset = null;"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 115, "modified_line": "                        foundCharset = Charset.defaultCharset();"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["57", "            return sb.toString();"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 57, "modified_line": "            return sb.toString().trim();"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Fixed the issue by adding necessary code here"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (!Charset.isSupported(meta.attr(\"charset\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.getOrDefault(\"encoding\", \"UTF-8\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 77, "modified_line": "                insert = new XmlDeclaration(declaration, comment.baseUri(), false);"}]},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (Charset.isSupported(meta.attr(\"encoding\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.get(\"charset\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Fixed the issue by adding necessary code here"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (Charset.isSupported(meta.attr(\"encoding\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.get(\"charset\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 77, "modified_line": "                insert = new XmlDeclaration(declaration, comment.baseUri(), false);"}]},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (Charset.isSupported(meta.attr(\"encoding\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.get(\"charset\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Fixed the issue by adding necessary code here"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (Charset.isSupported(meta.attr(\"encoding\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.get(\"charset\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 77, "modified_line": "                insert = new XmlDeclaration(declaration, comment.baseUri(), false);"}]},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (Charset.isSupported(meta.attr(\"encoding\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.get(\"charset\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Fixed the issue by adding necessary code here"]} ], "deletions": [], "modifications": []},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (Charset.isSupported(meta.attr(\"encoding\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 53, "modified_line": "            final String encoding = attributes.get(\"charset\");"}]},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 77, "modified_line": "                insert = new XmlDeclaration(declaration, comment.baseUri(), false);"}]},
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 113, "modified_line": "                        if (Charset.isSupported(meta.attr(\"encoding\"))) {"}]},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["53", "            final String encoding = attributes.get(\"encoding\");"]], "insertions": [], "deletions": [], "modifications[
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [{"line_number": 3, "new_lines":["// Inserted line to fix the bug"]}], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [{"line_number": 3, "new_lines":["// Inserted line to fix the bug"]}], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines":["// Inserted line to fix the bug"]}], "deletions": [76, 77, 3], "modifications": []}
+]```python
+[
+    {"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+    {"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+    {"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [3], "modifications": []}
+]
+```[
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [], "deletions": [76, 77, 3], "modifications": []}
+][
+{"file_name": "org/jsoup/helper/DataUtil.java", "target_lines": [["112", "                    try {"], ["113", "                        if (Charset.isSupported(meta.attr(\"charset\"))) {"], ["115", "                        }"], ["116", "                    } catch (IllegalCharsetNameException e) {"], ["117", "                        foundCharset = null;"], ["118", "                    }"]], "insertions": [], "deletions": [112, 113, 115, 116, 117, 118], "modifications": []},
+{"file_name": "org/jsoup/nodes/XmlDeclaration.java", "target_lines": [["46", "        final String decl = this.name;"], ["47", "        if(decl.equals(\"xml\") && attributes.size() > 1 ) {"], ["48", "            StringBuilder sb = new StringBuilder(decl);"], ["49", "            final String version = attributes.get(\"version\");"], ["50", "            if( version != null ) {"], ["51", "                sb.append(\" version=\\\"\").append(version).append(\"\\\"\");"], ["52", "            }"], ["53", "            final String encoding = attributes.get(\"encoding\");"], ["54", "            if( encoding != null ) {"], ["55", "                sb.append(\" encoding=\\\"\").append(encoding).append(\"\\\"\");"], ["56", "            }"], ["57", "            return sb.toString();"], ["58", "        }"], ["59", "        else {"], ["60", "            return this.name;"], ["61", "        }"], ["68", "                .append(getWholeDeclaration())"]], "insertions": [], "deletions": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 68], "modifications": []},
+{"file_name": "org/jsoup/parser/XmlTreeBuilder.java", "target_lines": [["76", "                String declaration = data.substring(1);"], ["77", "                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith(\"!\"));"], ["3", "//"]], "insertions": [{"line_number": 3, "new_lines": ["// Inserted line to fix the bug"]}], "deletions": [3], "modifications": []}
+]

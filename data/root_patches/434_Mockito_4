@@ -1,0 +1,85 @@
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 430, 'new_lines': ['    public void noMoreInteractionsWanted(Invocation invocation, List<VerificationAwareInvocation> invocations) {', '        if (invocations.isEmpty()) {', '            return;', '        }', '', '        List<Invocation> unusedInvocations = new ArrayList<>();', '        for (VerificationAwareInvocation unusedInvocation : invocations) {', '            unusedInvocations.add(unusedInvocation.getInvocation());', '        }', '', '        Location lastLocation = unusedInvocations.get(unusedInvocations.size() - 1).getLocation();', '        String message = pluralize(unusedInvocations.size()) + " unused invocation" + pluralize(unusedInvocations.size()) + ". Last used here:";', '        if (lastLocation != null) {', '            message += "\\n" + lastLocation;', '        }', '', '        throw new UnnecessaryStubbingException(message);', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '                "But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':"']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':"']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'target_lines': [['424', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['434', '"But found this interaction on mock \'" + undesired.getMock() + "\':"'], ['677', '//']], 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";', '                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':"']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':"']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':"']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':"']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+###Fix:
+[{'file_name': 'org/mockito/exceptions/Reporter.java', 'insertions': [{'line_number': 424, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 434, 'new_lines': ['                "But found this interaction on mock \'" + undesired.getMock() + "\':";']}, {'line_number': 677, 'new_lines': ['        // Insert new code here to fix the bug;']}]}]
+
+

@@ -1,0 +1,329 @@
+
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 1: Changing return value to READ instead of KILL"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 1: Changing return value to READ instead of KILL"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 2: Adding a condition to switch between READ and KILL based on a variable"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 2: Adding a condition to switch between READ and KILL based on a variable"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 3: Swapping the return values, returning KILL instead of READ"
+                    ]
+                },
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 3: Swapping the return values, returning KILL instead of READ"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.MAYBE_LIVE; // Mutant 4: Changing KILL to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.KILL : VariableLiveness.MAYBE_LIVE; // Mutant 5: Changing READ to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.MAYBE_LIVE; // Mutant 6: Always returning MAYBE_LIVE"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 7: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 8: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.MAYBE_LIVE; // Mutant 9: Changing KILL to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.KILL : VariableLiveness.MAYBE_LIVE; // Mutant 10: Changing READ to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.MAYBE_LIVE; // Mutant 11: Always returning MAYBE_LIVE"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 12: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 13: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.MAYBE_LIVE; // Mutant 14: Changing KILL to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.KILL : VariableLiveness.MAYBE_LIVE; // Mutant 15: Changing READ to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.MAYBE_LIVE; // Mutant 16: Always returning MAYBE_LIVE"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 17: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 18: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.MAYBE_LIVE; // Mutant 19: Changing KILL to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.KILL : VariableLiveness.MAYBE_LIVE; // Mutant 20: Changing READ to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.MAYBE_LIVE; // Mutant 21: Always returning MAYBE_LIVE"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 22: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 23: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.MAYBE_LIVE; // Mutant 24: Changing KILL to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.KILL : VariableLiveness.MAYBE_LIVE; // Mutant 25: Changing READ to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        return VariableLiveness.MAYBE_LIVE; // Mutant 26: Always returning MAYBE_LIVE"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 327,
+                    "new_lines": [
+                        "        // Mutant 27: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "insertions": [
+                {
+                    "line_number": 330,
+                    "new_lines": [
+                        "        // Mutant 28: Adding a new condition to return MAYBE_LIVE in certain cases"
+                    ]
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.READ : VariableLiveness.MAYBE_LIVE; // Mutant 29: Changing KILL to MAYBE_LIVE"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/DeadAssignmentsElimination.java",
+            "modifications": [
+                {
+                    "line_number": 330,
+                    "modified_line": "        return NodeUtil.isLhs(n, n.getParent()) ? VariableLiveness.KILL : VariableLiveness.MAYBE_LIVE; // Mutant 30: Changing READ to MAYBE_LIVE"
+                }
+            ]
+        }
+    ]
+}

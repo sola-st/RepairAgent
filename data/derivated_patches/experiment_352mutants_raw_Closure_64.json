@@ -1,0 +1,1034 @@
+
+{ "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 185, "modified_line": "# Removed duplicate variable declaration: my $oldconf [Mutant 1]"}, {"line_number": 186, "modified_line": "# Removed duplicate variable declaration: my %file_info [Mutant 2]"}, {"line_number": 187, "modified_line": "# Removed duplicate variable declaration: my %newconf [Mutant 3]"}, {"line_number": 194, "modified_line": "# Removed duplicate variable declaration: my $file_data [Mutant 4]"}, {"line_number": 196, "modified_line": "# Removed duplicate variable declaration: my %file_info [Mutant 5]"}, {"line_number": 201, "modified_line": "# Removed duplicate variable declaration: my %newconf [Mutant 6]"}, {"line_number": 213, "modified_line": "# Removed duplicate variable declaration: my %hash_data [Mutant 7]"}, {"line_number": 214, "modified_line": "# Fixed variable scoping issue: my $seen = 0 [Mutant 8]"}, {"line_number": 215, "modified_line": "# Removed duplicate variable declaration: my $file_data [Mutant 9]"}, {"line_number": 216, "modified_line": "# Removed duplicate variable declaration: my %newconf [Mutant 10]"}]}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $oldconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 186,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 187,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 196,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 201,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 213,
+                    "modified_line": "# Removed duplicate variable declaration: my %hash_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 214,
+                    "modified_line": "# Fixed variable scoping issue: my $seen = 0;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 215,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 216,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {"line_number": 185, "modified_line": "my $oldconf = (); # Mutant 1"},
+                {"line_number": 186, "modified_line": "my %file_info = (); # Mutant 2"},
+                {"line_number": 187, "modified_line": "my %newconf = (); # Mutant 3"},
+                {"line_number": 194, "modified_line": "my $file_data = ''; # Mutant 4"},
+                {"line_number": 196, "modified_line": "my %file_info = (1, 2, 3); # Mutant 5"},
+                {"line_number": 201, "modified_line": "my %newconf = (1, 2, 3); # Mutant 6"},
+                {"line_number": 213, "modified_line": "my %hash_data = (); # Mutant 7"},
+                {"line_number": 214, "modified_line": "my $seen = ''; # Mutant 8"},
+                {"line_number": 215, "modified_line": "my $file_data = undef; # Mutant 9"},
+                {"line_number": 216, "modified_line": "my %newconf = undef; # Mutant 10"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {"line_number": 185, "modified_line": "my $oldconf = 1; # Mutant 11"},
+                {"line_number": 186, "modified_line": "my %file_info = 1; # Mutant 12"},
+                {"line_number": 187, "modified_line": "my %newconf = 1; # Mutant 13"},
+                {"line_number": 194, "modified_line": "my $file_data = 0; # Mutant 14"},
+                {"line_number": 196, "modified_line": "my %file_info = 0; # Mutant 15"},
+                {"line_number": 201, "modified_line": "my %newconf = 0; # Mutant 16"},
+                {"line_number": 213, "modified_line": "my %hash_data = 0; # Mutant 17"},
+                {"line_number": 214, "modified_line": "my $seen = 0; # Mutant 18"},
+                {"line_number": 215, "modified_line": "my $file_data = 'test'; # Mutant 19"},
+                {"line_number": 216, "modified_line": "my %newconf = 'test'; # Mutant 20"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {"line_number": 185, "modified_line": "my $oldconf = -1; # Mutant 21"},
+                {"line_number": 186, "modified_line": "my %file_info = -1; # Mutant 22"},
+                {"line_number": 187, "modified_line": "my %newconf = -1; # Mutant 23"},
+                {"line_number": 194, "modified_line": "my $file_data = 1.5; # Mutant 24"},
+                {"line_number": 196, "modified_line": "my %file_info = 1.5; # Mutant 25"},
+                {"line_number": 201, "modified_line": "my %newconf = 1.5; # Mutant 26"},
+                {"line_number": 213, "modified_line": "my %hash_data = 1.5; # Mutant 27"},
+                {"line_number": 214, "modified_line": "my $seen = 1.5; # Mutant 28"},
+                {"line_number": 215, "modified_line": "my $file_data = 10; # Mutant 29"},
+                {"line_number": 216, "modified_line": "my %newconf = 10; # Mutant 30"}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = 0;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = -1;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = 'new_value';"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = $new_value;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = $old_value + 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = $old_value - 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = $old_value * 2;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = $old_value / 2;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [1432, 1461, 1467, 1473],
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Modified variable declaration: my $file_data = $old_value % 2;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutants": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $oldconf;"
+                },
+                {
+                    "line_number": 186,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 187,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 196,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 201,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 213,
+                    "modified_line": "# Removed duplicate variable declaration: my %hash_data;"
+                },
+                {
+                    "line_number": 214,
+                    "modified_line": "# Fixed variable scoping issue: my $seen = 0;"
+                },
+                {
+                    "line_number": 215,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 216,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $oldconf;"
+                },
+                {
+                    "line_number": 186,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 187,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 196,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 201,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 213,
+                    "modified_line": "# Removed duplicate variable declaration: my %hash_data;"
+                },
+                {
+                    "line_number": 214,
+                    "modified_line": "# Fixed variable scoping issue: my $seen = 0;"
+                },
+                {
+                    "line_number": 215,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 216,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $oldconf;"
+                },
+                {
+                    "line_number": 186,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 187,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 196,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 201,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 213,
+                    "modified_line": "# Removed duplicate variable declaration: my %hash_data;"
+                },
+                {
+                    "line_number": 214,
+                    "modified_line": "# Fixed variable scoping issue: my $seen = 0;"
+                },
+                {
+                    "line_number": 215,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 216,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $oldconf;"
+                },
+                {
+                    "line_number": 186,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 187,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 194,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 196,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                },
+                {
+                    "line_number": 201,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                },
+                {
+                    "line_number": 213,
+                    "modified_line": "# Removed duplicate variable declaration: my %hash_data;"
+                },
+                {
+                    "line_number": 214,
+                    "modified_line": "# Fixed variable scoping issue: my $seen = 0;"
+                },
+                {
+                    "line_number": 215,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                },
+                {
+                    "line_number": 216,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 185, "modified_line": "# Removed duplicate variable declaration: my $oldconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 186, "modified_line": "# Removed duplicate variable declaration: my %file_info;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 187, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 194, "modified_line": "# Removed duplicate variable declaration: my $file_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 196, "modified_line": "# Removed duplicate variable declaration: my %file_info;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 201, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 213, "modified_line": "# Removed duplicate variable declaration: my %hash_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 214, "modified_line": "# Fixed variable scoping issue: my $seen = 0;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 215, "modified_line": "# Removed duplicate variable declaration: my $file_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 216, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1432, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1461, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1467, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1473, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 185, "modified_line": "# Removed duplicate variable declaration: my $oldconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 186, "modified_line": "# Removed duplicate variable declaration: my %file_info;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 187, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 194, "modified_line": "# Removed duplicate variable declaration: my $file_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 196, "modified_line": "# Removed duplicate variable declaration: my %file_info;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 201, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 213, "modified_line": "# Removed duplicate variable declaration: my %hash_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 214, "modified_line": "# Fixed variable scoping issue: my $seen = 0;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 215, "modified_line": "# Removed duplicate variable declaration: my $file_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 216, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1432, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1461, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1467, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 1473, "new_lines": ["# Inserted line to fix scoping issue: my $seen = 0;"]}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 185, "modified_line": "# Removed duplicate variable declaration: my $oldconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 186, "modified_line": "# Removed duplicate variable declaration: my %file_info;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 187, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 194, "modified_line": "# Removed duplicate variable declaration: my $file_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 196, "modified_line": "# Removed duplicate variable declaration: my %file_info;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 201, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 213, "modified_line": "# Removed duplicate variable declaration: my %hash_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 214, "modified_line": "# Fixed variable scoping issue: my $seen = 0;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 215, "modified_line": "# Removed duplicate variable declaration: my $file_data;"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "modifications": [{"line_number": 216, "modified_line": "# Removed duplicate variable declaration: my %newconf;"}]}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $oldconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my %hash_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Fixed variable scoping issue: my $seen = 0;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Mutant 1: Modified line to fix scoping issue: my $seen = 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Mutant 2: Modified line to fix scoping issue: my $seen = 10.5;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Mutant 3: Modified line to fix scoping issue: my $seen = 'test';"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Mutant 4: Modified line to fix scoping issue: my $seen = '';"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Mutant 5: Modified line to fix scoping issue: my $seen = 15;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Mutant 6: Modified line to fix scoping issue: my $seen = 1 + 2;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Mutant 7: Modified line to fix scoping issue: my $seen = <file_handle>;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Mutant 8: Modified line to fix scoping issue: my $seen = <FH_IN>;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 1;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 2;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 3;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 4;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 5;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 6;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 7;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 8;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 9;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 10;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 11;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 12;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 13;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 14;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 15;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 16;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 17;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 18;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 19;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 20;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 21;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 22;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 23;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 24;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 25;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1461,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 26;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1467,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 27;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1473,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 28;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 1432,
+                    "modified_line": "# Modified line to fix scoping issue: my $seen = 29;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 185,
+                    "modified_line": "# Removed duplicate variable declaration: my $oldconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 186,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 187,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 194,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 196,
+                    "modified_line": "# Removed duplicate variable declaration: my %file_info;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 201,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 213,
+                    "modified_line": "# Removed duplicate variable declaration: my %hash_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 214,
+                    "modified_line": "# Fixed variable scoping issue: my $seen = 0;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 215,
+                    "modified_line": "# Removed duplicate variable declaration: my $file_data;"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "modifications": [
+                {
+                    "line_number": 216,
+                    "modified_line": "# Removed duplicate variable declaration: my %newconf;"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+###Fix:
+[{'file_name': 'org/apache/commons/cli/OptionGroup.java', 'insertions': [], 'deletions': [98, 100], 'modifications': [{'line_number': 98, 'modified_line': '        for (Option opt : getOptions()) {'}, {'line_number': 99, 'modified_line': '            if (opt.equals(option)) {'}, {'line_number': 100, 'modified_line': '                opt.setSelected(true);'}, {'line_number': 101, 'modified_line': '            } else {'}, {'line_number': 102, 'modified_line': '                opt.setSelected(false);'}, {'line_number': 103, 'modified_line': '            }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/OptionGroup.java', 'insertions': [], 'deletions': [98, 100], 'modifications': [{'line_number': 98, 'modified_line': '        if (selected == null || selected.equals(option.getOpt()))'}, {'line_number': 99, 'modified_line': '        {'}, {'line_number': 100, 'modified_line': '            selected = option.getOpt();'}, {'line_number': 101, 'modified_line': '        } else {'}, {'line_number': 102, 'modified_line': '            throw new AlreadySelectedException(this, option);'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/cli/OptionGroup.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 98, 'modified_line': '        if (selected == null || selected.equals(option.getOpt()))'}, {'line_number': 100, 'modified_line': '            selected = option.getOpt();'}]}]
+
+

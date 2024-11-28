@@ -1,0 +1,328 @@
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 829, "new_lines": ["// Adding a condition to handle high unicode characters"]},
+    {"line_number": 832, "new_lines": ["// Escaping high unicode characters"]}
+],
+"deletions": [],
+"modifications": [
+    {"line_number": 828, "modified_line": "            int codePoint = str.codePointAt(i); // Using codePointAt to handle high unicode characters"}
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 830, "new_lines": ["// Checking if the code point is greater than 0x7F"]}
+],
+"deletions": [],
+"modifications": [
+    {"line_number": 831, "modified_line": "                if (codePoint > 0x7F) {"}
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 828, "new_lines": ["            int codePoint = str.codePointAt(i); // Using codePointAt to handle high unicode characters"]},
+    {"line_number": 832, "new_lines": ["// Escaping high unicode characters"]}
+],
+"deletions": [],
+"modifications": []
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 831, "new_lines": ["                if (Character.isHighSurrogate(c)) { // Checking for high surrogate pair"]},
+    {"line_number": 832, "new_lines": ["// Escaping high surrogate pair"]}
+],
+"deletions": [],
+"modifications": []
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 831, "new_lines": ["                if (Character.isSurrogate(c)) { // Checking for surrogate pair"]},
+    {"line_number": 832, "new_lines": ["// Escaping surrogate pair"]}
+],
+"deletions": [],
+"modifications": []
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 828, "new_lines": ["            int codePoint = str.codePointAt(i); // Using codePointAt to handle high unicode characters"]},
+    {"line_number": 831, "new_lines": ["                if (codePoint > 0x7F) { // Checking if the code point is greater than 0x7F"]},
+    {"line_number": 832, "new_lines": ["// Escaping high unicode characters"]}
+],
+"deletions": [],
+"modifications": []
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 829, "new_lines": ["// Adding a condition to handle high unicode characters"]},
+    {"line_number": 831, "new_lines": ["                if (Character.isHighSurrogate(c)) { // Checking for high surrogate pair"]},
+    {"line_number": 832, "new_lines": ["// Escaping high surrogate pair"]}
+],
+"deletions": [],
+"modifications": [
+    {"line_number": 828, "modified_line": "            int codePoint = str.codePointAt(i); // Using codePointAt to handle high unicode characters"}
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 829, "new_lines": ["// Adding a condition to handle high unicode characters"]},
+    {"line_number": 831, "new_lines": ["                if (Character.isLowSurrogate(c)) { // Checking for low surrogate pair"]},
+    {"line_number": 832, "new_lines": ["// Escaping low surrogate pair"]}
+],
+"deletions": [],
+"modifications": [
+    {"line_number": 828, "modified_line": "            int codePoint = str.codePointAt(i); // Using codePointAt to handle high unicode characters"}
+]},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+    {"line_number": 829, "new_lines": ["// Adding a condition to handle high unicode characters"]},
+    {"line_number": 831, "new_lines": ["                if (Character.isLetter(c)) { // Checking if character is a letter"]},
+    {"line_number": 832, "new_lines": ["// Escaping letter characters"]}
+],
+"deletions": [],
+"modifications": [
+    {"line_number": 828, "modified_line": "            int codePoint = str.codePointAt(i); // Using codePointAt to handle high unicode characters"}
+]}
+][
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+{"line_number": 829, "new_lines":["// Mutation 1: Changing the comparison operator from > to < for high unicode check"]},
+{"line_number": 830, "new_lines":["// Mutation 2: Adding a condition to skip checking for high unicode for performance reasons"]},
+{"line_number": 831, "new_lines":["// Mutation 3: Modifying the comparison value from 0x7F to a higher threshold"]}],
+
+"deletions": [], 
+"modifications": []},
+
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+{"line_number": 828, "new_lines":["// Mutation 4: Adding a null check for 'str' variable before accessing its character"]},
+{"line_number": 830, "new_lines":["// Mutation 5: Adding a log statement to track the value of 'c' for debugging purposes"]}],
+"deletions": [], 
+"modifications": []},
+
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+{"line_number": 828, "new_lines":["// Mutation 6: Casting 'c' to a higher data type for comparison"]},
+{"line_number": 831, "new_lines":["// Mutation 7: Adding a fallback mechanism for handling high unicode characters"]}],
+
+"deletions": [], 
+"modifications": []},
+
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+{"line_number": 829, "new_lines":["// Mutation 8: Reversing the condition to handle low unicode characters"]}],
+
+"deletions": [], 
+"modifications": []},
+
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], 
+"insertions": [
+{"line_number": 828, "new_lines":["// Mutation 9: Adding a check for special characters before high unicode check"]}],
+"deletions": [], 
+"modifications": []}
+][
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+1);"}, {"line_number": 831, "modified_line": "                if (c >= 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i-1);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i-2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i); // Mutation 1"}, {"line_number": 831, "modified_line": "                if (c >= 0x7F) { // Mutation 1"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i); // Mutation 2"}, {"line_number": 831, "modified_line": "                if (c <= 0x7F) { // Mutation 2"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i); // Mutation 3"}, {"line_number": 831, "modified_line": "                if (c == 0x7F) { // Mutation 3"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i); // Mutation 4"}, {"line_number": 831, "modified_line": "                if (c != 0x7F) { // Mutation 4"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 829, "new_lines": ["// Inserted line for mutation 5"]}], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i); // Mutation 5"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) { // Mutation 5"}]}
+]
+
+[{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [831], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+1);"}]}
+][
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+1);"}, {"line_number": 831, "modified_line": "                if (c >= 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i-1);"}, {"line_number": 831, "modified_line": "                if (c > 0x80) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i*2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i-2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i/2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i-3);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+3);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i*3);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i*4);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+
+[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+][
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+1);"}, {"line_number": 831, "modified_line": "                if (c >= 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i-1);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(0);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i-2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i*2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(5);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i/2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(10);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i*3);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i/3);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = str.charAt(i+3);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = Character.toUpperCase(str.charAt(i));"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = Character.toLowerCase(str.charAt(i));"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) + 1);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) - 1);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) * 2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) / 2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) % 2);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) * str.charAt(i));"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) + 'a');"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) + '1');"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) + 1.5);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) - 1.5);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]
+,{
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [], "deletions": [], "modifications": [{"line_number": 828, "modified_line": "            char c = (char) (str.charAt(i) * 1.5);"}, {"line_number": 831, "modified_line": "                if (c > 0x7F) {"}]}
+]```json
+[
+    {
+        "file_name": "org/apache/commons/lang/Entities.java",
+        "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 828, "modified_line": "            char c = str.charAt(i+1);"},
+            {"line_number": 831, "modified_line": "                if (c >= 0x7F) {"}
+        ]
+    },
+    {
+        "file_name": "org/apache/commons/lang/Entities.java",
+        "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 828, "modified_line": "            char c = str.charAt(i-1);"},
+            {"line_number": 831, "modified_line": "                if (c >= 0x7F) {"}
+        ]
+    },
+    {
+        "file_name": "org/apache/commons/lang/Entities.java",
+        "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]],
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {"line_number": 828, "modified_line": "            char c = str.charAt(i+2);"},
+            {"line_number": 831, "modified_line": "                if (c >= 0x7F) {"}
+        ]
+    }
+]
+```[
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing comparison operator from greater than to less than or equal to\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - adding a condition to include c == 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to include c == 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be greater or equal to 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be less than 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c >= 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c <= 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be equal to 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c != 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be not equal to 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c < 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c >= 0x7F or c == 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - adding a condition to include c < 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be greater than 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be greater than or equal to 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c > 0x7F or c == 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be less than or equal to 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c > 0x7F or c < 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be less than 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be less than or equal to 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c > 0x7F or c != 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be not equal to 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be greater than 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - changing the condition to be c < 0x7F or c == 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 831, "new_lines": ["                // Mutated - adding a condition to include c < 0x7F or c == 0x7F\n"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/lang/Entities.java", "target_lines": [["828", "            char c = str.charAt(i);"], ["831", "                if (c > 0x7F) {"]], "insertions": [{"line_number": 828, "new_lines": ["            // Mutated - changing the variable c to be greater or equal to 0x7F\n"]}], "deletions": [], "modifications": []}
+]

@@ -1,0 +1,49 @@
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 236, 'new_lines': ["                    end = 'z';", "                    start = 'a';"]}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int min, int max, boolean useLetters, boolean useNumbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '', '        for (int i = 0; i < length; i++) {', '            if (useLetters && useNumbers) {', '                int randomOption = random.nextInt(2);', '                if (randomOption == 0) {', "                    sb.append((char) (random.nextInt(26) + 'a')); // lowercase letters", '                } else {', '                    sb.append(random.nextInt(10)); // numbers', '                }', '            } else if (useLetters) {', "                sb.append((char) (random.nextInt(26) + 'a')); // lowercase letters", '            } else if (useNumbers) {', '                sb.append(random.nextInt(10)); // numbers', '            }', '        }', '', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int start, int end, boolean letters, boolean numbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '        for (int i = 0; i < length; i++) {', '            char randomChar;', '            do {', '                randomChar = (char) (start + random.nextInt(end - start));', '            } while ((Character.isLetter(randomChar) && !letters) || (Character.isDigit(randomChar) && !numbers));', '            sb.append(randomChar);', '        }', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int start, int end, boolean letters, boolean numbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '        for (int i = 0; i < length; i++) {', '            char randomChar;', '            do {', '                randomChar = (char) (start + random.nextInt(end - start));', '            } while ((Character.isLetter(randomChar) && !letters) || (Character.isDigit(randomChar) && !numbers));', '            sb.append(randomChar);', '        }', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 235, 'new_lines': ["                    end = 'z';", "                    start = 'a';"]}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 235, 'new_lines': ["                    end = 'z';", "                    start = 'a';"]}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 235, 'new_lines': ["                    end = 'z';", "                    start = 'a';"]}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public String random(int length, int minASCII, int maxASCII, boolean includeNum, boolean includeSym, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '        int diff = maxASCII - minASCII + 1;', '', '        for (int i = 0; i < length; i++) {', '            int randomChar = random.nextInt(diff) + minASCII;', '            char ch = (char) randomChar;', '', '            if (!includeNum && Character.isDigit(ch)) {', '                i--;', '                continue;', '            }', '', '            if (!includeSym && !Character.isLetterOrDigit(ch)) {', '                i--;', '                continue;', '            }', '', '            sb.append(ch);', '        }', '', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int min, int max, boolean useLetters, boolean useNumbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '', '        for (int i = 0; i < length; i++) {', '            if (useLetters && useNumbers) {', '                int randomOption = random.nextInt(2);', '                if (randomOption == 0) {', "                    sb.append((char) (random.nextInt(26) + 'a')); // lowercase letters", '                } else {', '                    sb.append(random.nextInt(10)); // numbers', '                }', '            } else if (useLetters) {', "                sb.append((char) (random.nextInt(26) + 'a')); // lowercase letters", '            } else if (useNumbers) {', '                sb.append(random.nextInt(10)); // numbers', '            }', '        }', '', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int start, int end, boolean letters, boolean numbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '        for (int i = 0; i < length; i++) {', '            char randomChar;', '            do {', '                randomChar = (char) (start + random.nextInt(end - start));', '            } while ((Character.isLetter(randomChar) && !letters) || (Character.isDigit(randomChar) && !numbers));', '            sb.append(randomChar);', '        }', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int start, int end, boolean letters, boolean numbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '        for (int i = 0; i < length; i++) {', '            char randomChar;', '            do {', '                randomChar = (char) (start + random.nextInt(end - start));', '            } while ((Character.isLetter(randomChar) && !letters) || (Character.isDigit(randomChar) && !numbers));', '            sb.append(randomChar);', '        }', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int start, int end, boolean letters, boolean numbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '        for (int i = 0; i < length; i++) {', '            char randomChar;', '            do {', '                randomChar = (char) (start + random.nextInt(end - start));', '            } while ((Character.isLetter(randomChar) && !letters) || (Character.isDigit(randomChar) && !numbers));', '            sb.append(randomChar);', '        }', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/RandomStringUtils.java', 'insertions': [{'line_number': 230, 'new_lines': ['    public static String random(int length, int start, int end, boolean letters, boolean numbers, Random random) {', '        StringBuilder sb = new StringBuilder(length);', '        ', '        if (!letters && !numbers) {', '            return ""; // If neither letters nor numbers are selected, return an empty string', '        }', '        ', '        if (letters) {', "            end = Math.min(end, 'z');", "            start = Math.max(start, 'a');", '        }', '        ', '        if (numbers) {', "            end = Math.min(end, '9');", "            start = Math.max(start, '0');", '        }', '        ', '        for (int i = 0; i < length; i++) {', '            char randomChar = (char) (random.nextInt(end - start + 1) + start);', '            sb.append(randomChar);', '        }', '        ', '        return sb.toString();', '    }']}]}]
+
+###Fix:
+[]
+
+

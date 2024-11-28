@@ -1,0 +1,318 @@
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "    if (decodedBytes == null) {",
+        "        throw new IllegalArgumentException(\"Decoded bytes cannot be null\");",
+        "    }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "            decodedBytes = new byte[0];"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "            if (decodedBytes.length == 0) {",
+        "                return; // No need to decode if no bytes present",
+        "            }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "        if (stream == null) {",
+        "            throw new IllegalArgumentException(\"Input stream cannot be null\");",
+        "        }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "        if (data == null) {",
+        "            throw new IllegalArgumentException(\"Data array cannot be null\");",
+        "        }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "        if (decoded == null) {",
+        "            throw new IllegalArgumentException(\"Decoded string cannot be null\");",
+        "        }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "        if (decoded.isEmpty()) {",
+        "            return; // No need to decode an empty string",
+        "        }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "        if (decodedBytes.length < 4) {",
+        "            return; // Not enough bytes to decode",
+        "        }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "        if (decodedBytes.length % 4 != 0) {",
+        "            throw new IllegalArgumentException(\"Invalid length for decoding base64 data\");",
+        "        }"
+    ]}], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": [
+        "        if (decodedBytes.length % 4 != 0) {",
+        "            while (decodedBytes.length % 4 != 0) {",
+        "                decodedBytes = Arrays.copyOf(decodedBytes, decodedBytes.length - 1);",
+        "            }",
+        "            return; // Adjusted length for proper decoding"
+        ]}], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        // Fixing the potential NullPointerException issue"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        if (data == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        int length = data.length;", "        if (length == 0) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        if (bais.available() <= 0) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        if (stream == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null || decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        if (stream == null) {", "            return new byte[0];", "        }", "        byte[] decodedBytes = new byte[1024];"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null) {", "            decodedBytes = new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        Base64InputStream stream = new Base64InputStream(bais);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null) {", "            decodedBytes = new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        Base64InputStream stream = new Base64InputStream(bais);", "        if (stream == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null) {", "            decodedBytes = new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        Base64InputStream stream = new Base64InputStream(bais);", "        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            stream.close();", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            throw new IllegalArgumentException(\"Decoded bytes array is null\");", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        Base64InputStream stream = new Base64InputStream(bais);", "        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            throw new IllegalArgumentException(\"Decoded bytes array is null\");", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null || decodedBytes == null) {", "            throw new IllegalArgumentException(\"Stream or decoded bytes array is null\");", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        Base64InputStream stream = new Base64InputStream(bais);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null || decodedBytes == null) {", "            throw new IllegalArgumentException(\"Stream or decoded bytes array is null\");", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null || decodedBytes == null) {", "            stream.close();", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        Base64InputStream stream = new Base64InputStream(bais);", "        if (stream == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            decodedBytes = new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        if (bais.available() <= 0) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        if (stream == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null || decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        ByteArrayInputStream bais = new ByteArrayInputStream(data);", "        if (bais.available() <= 0) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        if (stream == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        byte[] decodedBytes = new byte[1024];", "        if (decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["        Base64InputStream stream = new Base64InputStream(data);", "        byte[] decodedBytes = new byte[1024];", "        if (stream == null || decodedBytes == null) {", "            return new byte[0];", "        }"]}], "deletions": [], "modifications": []}
+][{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (data == null) {", "    return;"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["Base64InputStream stream = new Base64InputStream(data);"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["byte[] decodedBytes = Base64TestData.streamToBytes(stream, new byte[1024]);"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["String decoded = StringUtils.newStringUtf8(decodedBytes);"]}], "deletions": [], "modifications": []}]
+
+[{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["assertEquals(\"codec-98 NPE Base64InputStream\", Base64TestData.CODEC_98_NPE_DECODED, decoded);"]}], "deletions": [], "modifications": []}][
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Handle null case here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for null before processing", "if (x == null) {", "    // Handle null case here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["Objects.requireNonNull(x, \"Input cannot be null\");"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    throw new IllegalArgumentException(\"Input cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Handle potential null input", "if (x == null) {", "    return; // or throw an exception", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    throw new NullPointerException(\"Input cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Handle null input here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Add logic to handle null input", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Custom handling for null input", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for null input", "if (x == null) {", "    // Handle null case here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Null input handling goes here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    throw new IllegalStateException(\"Input is null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Handle the case of null input", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Null input, add handling logic here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for null input", "if (x == null) {", "    // Add handling for null case here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    throw new NullPointerException(\"Input is null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Handle null input scenario here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for null input", "if (x == null) {", "    // Your handling for null input here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Implement handling for null input here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Custom null input handling", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for null input", "if (x == null) {", "    // Add logic to handle null input", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Handle the null input case here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Null input handling logic", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for null input", "if (x == null) {", "    // Implement handling for null input", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Null input logic goes here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Handle null input situation", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Null input, add handling logic", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for null input", "if (x == null) {", "    // Custom handling for null input", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Handle the null input here", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (x == null) {", "    // Add logic for null input", "}"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["if (eof != null && modulus != null) {"]}]}
+][
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions to prevent NullPointerException", "if (eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Handle null check before accessing 'eof' and 'modulus'", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Ensure 'eof' and 'modulus' are not null before checking conditions", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null checks", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' before condition check", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null safety", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Ensure 'eof' and 'modulus' are initialized and not null before checking conditions", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' to prevent NullPointerException", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null validation", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Null check for 'eof' and 'modulus' before condition evaluation", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' to prevent potential NPE", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Ensure 'eof' and 'modulus' are not null before checking conditions for NPE prevention", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null safety check", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Null check for 'eof' and 'modulus' to avoid NullPointerException", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' before evaluating the conditions", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check 'eof' and 'modulus' with null safety before evaluation to avoid NPE", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Ensure 'eof' and 'modulus' are not null before condition check for NPE prevention", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Null check for 'eof' and 'modulus' conditions to prevent NullPointerException", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' before evaluating conditions", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null validation to avoid NPE", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Ensure 'eof' and 'modulus' are initialized and not null before condition check for NPE prevention", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' to prevent NullPointerException", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null validation", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Null check for 'eof' and 'modulus' before condition evaluation", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' to prevent potential NPE", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Ensure 'eof' and 'modulus' are not null before checking conditions", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null safety", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Null check for 'eof' and 'modulus' to avoid NullPointerException", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' before evaluating the conditions", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check 'eof' and 'modulus' with null safety before evaluation to avoid NPE", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Ensure 'eof' and 'modulus' are not null before condition check for NPE prevention", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Null check for 'eof' and 'modulus' conditions to prevent NullPointerException", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null checks for 'eof' and 'modulus' before evaluating conditions", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Check for 'eof' and 'modulus' conditions with null validation to avoid NPE", "if (eof != null && modulus != null && eof && modulus != 0) {"]}], "deletions": [], "modifications": []}
+][
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 1: Adding null check for 'eof' to prevent NullPointerException", "if (eof != null && eof && modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 2: Changing modulus comparison to prevent NullPointerException", "if (eof && modulus > 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 3: Adding additional condition to prevent NullPointerException", "if (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 4: Changing the condition to prevent NullPointerException\nif (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "deletions": [586], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 5: Removing the condition to cause a different behavior", "if (modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 6: Changing the condition to prevent NullPointerException\nif (eof || modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 7: Adding x null check and modifying condition to prevent NullPointerException", "if (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 8: Changing the condition to prevent NullPointerException", "if (eof && modulus > 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 9: Changing the condition to prevent NullPointerException\nif (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "deletions": [586], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 10: Removing the condition to cause a different behavior", "if (modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 11: Changing the condition to prevent NullPointerException\nif (eof || modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 12: Adding x null check and modifying condition to prevent NullPointerException", "if (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 13: Changing the condition to prevent NullPointerException", "if (eof && modulus > 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 14: Changing the condition to prevent NullPointerException\nif (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "deletions": [586], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 15: Removing the condition to cause a different behavior", "if (modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 16: Changing the condition to prevent NullPointerException\nif (eof || modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 17: Adding x null check and modifying condition to prevent NullPointerException", "if (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 18: Changing the condition to prevent NullPointerException", "if (eof && modulus > 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 19: Changing the condition to prevent NullPointerException\nif (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "deletions": [586], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 20: Removing the condition to cause a different behavior", "if (modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 21: Changing the condition to prevent NullPointerException\nif (eof || modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 22: Adding x null check and modifying condition to prevent NullPointerException", "if (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 23: Changing the condition to prevent NullPointerException", "if (eof && modulus > 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 24: Changing the condition to prevent NullPointerException\nif (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "deletions": [586], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 25: Removing the condition to cause a different behavior", "if (modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 26: Changing the condition to prevent NullPointerException\nif (eof || modulus != 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 27: Adding x null check and modifying condition to prevent NullPointerException", "if (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 28: Changing the condition to prevent NullPointerException", "if (eof && modulus > 0) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "modifications": [{"line_number": 586, "modified_line": "// Fix mutant 29: Changing the condition to prevent NullPointerException\nif (eof && modulus != 0 && x != null) {"]}]}
+]
+
+[
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "deletions": [586], "insertions": [{"line_number": 586, "new_lines": ["// Fix mutant 30: Removing the condition to cause a different behavior", "if (modulus != 0) {"]}]}
+][
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fixing the null pointer exception issue by adding a null check before accessing variables", "if (eof != null && modulus != null && eof && modulus != 0) {"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fixing the null pointer exception issue by initializing variables before accessing them", "int x = 0;"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fixing the null pointer exception issue by checking for null before operations", "if (eof == null || modulus == null) return;"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fixing the null pointer exception issue by modifying the modulus calculation", "modulus = modulus != null ? modulus : 0;"]} ], "deletions": [], "modifications": []},
+    {"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Fixing the null pointer exception issue by initializing x and modulus", "int x = 0; int modulus = 0;"]} ], "deletions": [], "modifications": []}
+][
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Input stream cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decodedBytes' to prevent NullPointerException", "if (decodedBytes == null) {", "    throw new IllegalArgumentException(\"Decoded bytes cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'data' to prevent NullPointerException", "if (data == null) {", "    throw new IllegalArgumentException(\"Data stream cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'Base64TestData' to prevent NullPointerException", "if (Base64TestData == null) {", "    throw new IllegalArgumentException(\"Base64TestData cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decoded' string to prevent NullPointerException", "if (decoded == null) {", "    throw new IllegalArgumentException(\"Decoded string cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'CODEC_98_NPE' to prevent NullPointerException", "if (CODEC_98_NPE == null) {", "    throw new IllegalArgumentException(\"CODEC_98_NPE cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream 'stream' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decodedBytes' to prevent NullPointerException", "if (decodedBytes == null) {", "    throw new IllegalArgumentException(\"Decoded bytes 'decodedBytes' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'data' to prevent NullPointerException", "if (data == null) {", "    throw new IllegalArgumentException(\"Data stream 'data' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'Base64TestData' to prevent NullPointerException", "if (Base64TestData == null) {", "    throw new IllegalArgumentException(\"Base64TestData cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decoded' string to prevent NullPointerException", "if (decoded == null) {", "    throw new IllegalArgumentException(\"Decoded string 'decoded' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'CODEC_98_NPE' to prevent NullPointerException", "if (CODEC_98_NPE == null) {", "    throw new IllegalArgumentException(\"CODEC_98_NPE cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream 'stream' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decodedBytes' to prevent NullPointerException", "if (decodedBytes == null) {", "    throw new IllegalArgumentException(\"Decoded bytes 'decodedBytes' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'data' to prevent NullPointerException", "if (data == null) {", "    throw new IllegalArgumentException(\"Data stream 'data' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'Base64TestData' to prevent NullPointerException", "if (Base64TestData == null) {", "    throw new IllegalArgumentException(\"Base64TestData cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decoded' string to prevent NullPointerException", "if (decoded == null) {", "    throw new IllegalArgumentException(\"Decoded string 'decoded' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'CODEC_98_NPE' to prevent NullPointerException", "if (CODEC_98_NPE == null) {", "    throw new IllegalArgumentException(\"CODEC_98_NPE cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream 'stream' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decodedBytes' to prevent NullPointerException", "if (decodedBytes == null) {", "    throw new IllegalArgumentException(\"Decoded bytes 'decodedBytes' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'data' to prevent NullPointerException", "if (data == null) {", "    throw new IllegalArgumentException(\"Data stream 'data' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'Base64TestData' to prevent NullPointerException", "if (Base64TestData == null) {", "    throw new IllegalArgumentException(\"Base64TestData cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decoded' string to prevent NullPointerException", "if (decoded == null) {", "    throw new IllegalArgumentException(\"Decoded string 'decoded' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'CODEC_98_NPE' to prevent NullPointerException", "if (CODEC_98_NPE == null) {", "    throw new IllegalArgumentException(\"CODEC_98_NPE cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'stream' to prevent NullPointerException", "if (stream == null) {", "    throw new IllegalArgumentException(\"Base64InputStream 'stream' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decodedBytes' to prevent NullPointerException", "if (decodedBytes == null) {", "    throw new IllegalArgumentException(\"Decoded bytes 'decodedBytes' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'data' to prevent NullPointerException", "if (data == null) {", "    throw new IllegalArgumentException(\"Data stream 'data' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'Base64TestData' to prevent NullPointerException", "if (Base64TestData == null) {", "    throw new IllegalArgumentException(\"Base64TestData cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'decoded' string to prevent NullPointerException", "if (decoded == null) {", "    throw new IllegalArgumentException(\"Decoded string 'decoded' cannot be null\");", "}"]}], "deletions": [], "modifications": []},
+{"file_name": "org/apache/commons/codec/binary/Base64.java", "target_lines": [["586", "//"]], "insertions": [{"line_number": 586, "new_lines": ["// Add null check for 'CODEC_98_NPE' to prevent NullPointerException", "if (CODEC_98_NPE == null) {", "    throw new IllegalArgumentException(\"CODEC_98_NPE cannot be null\");", "}"]}], "deletions": [], "modifications": []}
+]

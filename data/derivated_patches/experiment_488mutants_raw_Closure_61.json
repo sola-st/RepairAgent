@@ -1,0 +1,385 @@
+[
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"return functionHasSideEffects(nameNode, compiler);"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (isMathFunction(nameNode)) {",
+"  return false;",
+"}"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"return isMathFunction(nameNode);"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (isMathFunction(nameNode)) {",
+"  return false;",
+"} else {",
+"  return true;",
+"}"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"return !isMathFunction(nameNode);"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"return isMathFunction(nameNode) ? false : true;"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"return !functionHasSideEffects(nameNode, compiler);"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (!isMathFunction(nameNode)) {",
+"  return true;",
+"}"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"return !isMathFunction(nameNode) ? true : false;"
+]}], "deletions": [], "modifications": []},
+
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"return !functionHasSideEffects(nameNode, compiler);"
+]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+]
+[
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+]
+[
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+]
+[
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+]
+[
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+]
+[
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "}"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "} else {",
+     "    // Handle other cases",
+     "    return true;",
+     "}"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "// Checking for Math namespace",
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "}"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "} // End of Math namespace check"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "} // Added for Math namespace"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "} // Check for Math namespace"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "} // Ensure Math namespace"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "} // Safeguard for Math namespace"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "// Check if function belongs to Math namespace",
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "}"
+ ]}]
+},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], 
+ "insertions": [{"line_number": 958, "new_lines": [
+     "// Verify if function is in Math namespace",
+     "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+     "    return false;",
+     "}"
+ ]}]
+}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Checking for side effects in Math namespace functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Fixing side effect evaluation for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Addressing side effects in Math namespace", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Fix side effect detection for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Enhancing side effect check for Math namespace", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Correcting side effect assessment for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Fixing side effect validation for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Modifying side effect detection for Math namespace", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Adjusting side effect check for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Improving side effect evaluation for Math namespace", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Refining side effect detection for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Fixing side effect check for Math namespace functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Correcting side effect evaluation for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Adjusting side effect validation for Math namespace functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Enhancing side effect detection for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Modifying side effect validation for Math namespace", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Correcting side effect check for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Improving side effect assessment for Math namespace functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Refining side effect validation for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Adjusting side effect assessment for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Enhancing side effect validation for Math namespace", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Fixing side effect assessment for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Modifying side effect evaluation for Math namespace functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Correcting side effect evaluation for Math namespace functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Adjusting side effect validation for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Enhancing side effect assessment for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+,
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["// Modifying side effect validation for Math functions", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // This is a fix for the failing test cases related to Math.sin and Math.random",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // This fix is related to the failing tests in PeepholeRemoveDeadCodeTest",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // Bug fix for functionCallHasSideEffects to handle Math namespace functions",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // Inserted fix for the failing tests in PeepholeRemoveDeadCodeTest",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // Fix added based on failing tests for Math.sin and Math.random",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // Fix for functionCallHasSideEffects related to Math namespace functions",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // Bug fix added after failing tests investigation",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // Fix for functionCallHasSideEffects based on Math namespace functions",
+"    return false;"
+]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": [
+"if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {",
+"    // Fix added for failing tests related to Math.sin and Math.random",
+"    return false;"
+]}]}
+][{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"random\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && !nameNode.getFirstChild().getString().equals(\"random\")) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && !nameNode.getLastChild().getString().equals(\"random\")) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sin\")) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && !nameNode.getLastChild().getString().equals(\"sin\")) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && !nameNode.getLastChild().getString().equals(\"sin\") && !nameNode.getLastChild().getString().equals(\"random\")) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && !nameNode.getLastChild().getString().equals(\"random\")) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"cos\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"cos\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"tan\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"tan\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"tan\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"random\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"random\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"random\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"log\") || nameNode.getLastChild().getString().equals(\"exp\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"log\") || nameNode.getLastChild().getString().equals(\"exp\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"log\") || nameNode.getLastChild().getString().equals(\"exp\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"tan\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"sin\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}, {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && (nameNode.getLastChild().getString().equals(\"random\") || nameNode.getLastChild().getString().equals(\"cos\") || nameNode.getLastChild().getString().equals(\"log\"))) {", "    return false;"]}]}][
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sin\")) {"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sin\")) {", "    return false;"]}]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "if (compiler != null && !compiler.hasRegExpGlobalReferences()) {"]], "insertions": [{"line_number": 958, "new_lines": ["if (compiler != null && !compiler.hasRegExpGlobalReferences()) {", "    if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {", "        return false;"]}"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "if (compiler != null && !compiler.hasRegExpGlobalReferences()) {"]], "insertions": [{"line_number": 958, "new_lines": ["if (compiler != null && !compiler.hasRegExpGlobalReferences()) {", "    if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {", "        return false;"]}"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "if (compiler != null && !compiler.hasRegExpGlobalReferences()) {"]], "insertions": [{"line_number": 958, "new_lines": ["if (compiler != null && !compiler.hasRegExpGlobalReferences()) {", "    if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {", "        return false;"]}"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "if (compiler != null && !compiler.hasRegExpGlobalReferences()) {"]], "insertions": [{"line_number": 958, "new_lines": ["if (compiler != null && !compiler.hasRegExpGlobalReferences()) {", "    if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {", "        return false;"]}"}]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "// Functions in the \"Math\" namespace have no side effects."]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}"]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {", "    return false;"]}]}
+][
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sin\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"cos\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"tan\")) {", "    return false;"]}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "modifications": [{"line_number": 958, "modified_line": "      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\")) {"}, {"line_number": 959, "modified_line": "        return false;"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "modifications": [{"line_number": 958, "modified_line": "      if (nameNode.getFirstChild().getType() == Token.STRING && nameNode.getFirstChild().getString().equals(\"Math\")) {"}, {"line_number": 959, "modified_line": "        return false;"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "modifications": [{"line_number": 958, "modified_line": "      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {"}, {"line_number": 959, "modified_line": "        return false;"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "modifications": [{"line_number": 958, "modified_line": "      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"pow\")) {"}, {"line_number": 959, "modified_line": "        return false;"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "modifications": [{"line_number": 958, "modified_line": "      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sqrt\")) {"}, {"line_number": 959, "modified_line": "        return false;"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "modifications": [{"line_number": 958, "modified_line": "      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"log\")) {"}, {"line_number": 959, "modified_line": "        return false;"}]},
+{"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "modifications": [{"line_number": 958, "modified_line": "      if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"abs\")) {"}, {"line_number": 959, "modified_line": "        return false;"}]}
+][
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {", "    return false;"]}]},
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"cos\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"tan\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"log\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sqrt\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"pow\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"ceil\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"floor\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"round\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"abs\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"exp\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sign\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"random\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"log10\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"log1p\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"cbrt\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"expm1\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"hypot\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"sinh\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"cosh\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"tanh\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"acos\")) {", "    return false;"]}]}
+    {"file_name": "com/google/javascript/jscomp/NodeUtil.java", "target_lines": [["958", "//"]], "insertions": [{"line_number": 958, "new_lines": ["if (nameNode.getFirstChild().getType() == Token.NAME && nameNode.getFirstChild().getString().equals(\"Math\") && nameNode.getLastChild().getString().equals(\"asin\")) {", "    return false;"]}]}
+]

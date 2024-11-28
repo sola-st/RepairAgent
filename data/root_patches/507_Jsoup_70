@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1092, 'new_lines': ['                    return el.tag.preserveWhitespace() && (el.parent() == null || el.parent().tag.preserveWhitespace());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'target_lines': [['1093', '                else'], ['1094', '                    return el.parent() != null && el.parent().tag.preserveWhitespace();'], ['1091', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'target_lines': [['1093', '                else'], ['1094', '                    return el.parent() != null && el.parent().tag.preserveWhitespace();'], ['1091', '//']], 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el.parent() != null) {']}, {'line_number': 1093, 'new_lines': ['                    return el.tag.preserveWhitespace() && el.parent().tag.preserveWhitespace();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'target_lines': [['1093', '                else'], ['1094', '                    return el.parent() != null && el.parent().tag.preserveWhitespace();'], ['1091', '//']], 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el.parent() != null) {']}, {'line_number': 1093, 'new_lines': ['                    return el.tag.preserveWhitespace() && el.parent().tag.preserveWhitespace();']}, {'line_number': 1094, 'new_lines': ["                    // Fixing the bug by considering parent tag's whitespace preservation as well"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1093, 'new_lines': ['                    return el.tag.preserveWhitespace() && (el.parent() == null || el.parent().tag.preserveWhitespace());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1094, 'new_lines': ['                    return el.parent() != null && el.parent().tag.preserveWhitespace();']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'target_lines': [['1093', '                else'], ['1094', '                    return el.parent() != null && el.parent().tag.preserveWhitespace();'], ['1091', '//']], 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el.parent() != null) {']}, {'line_number': 1093, 'new_lines': ['                    return el.tag.preserveWhitespace() && el.parent().tag.preserveWhitespace();']}, {'line_number': 1094, 'new_lines': ["                    // Fixing the bug by considering parent tag's whitespace preservation as well"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1094, 'new_lines': ['                    return el.parent() != null && el.parent().tag.preserveWhitespace();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'target_lines': [['1093', '                else'], ['1094', '                    return el.parent() != null && el.parent().tag.preserveWhitespace();'], ['1091', '//']], 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el.parent() != null) {']}, {'line_number': 1093, 'new_lines': ['                    return el.tag.preserveWhitespace() && el.parent().tag.preserveWhitespace();']}, {'line_number': 1094, 'new_lines': ["                    // Fixing the bug by considering parent tag's whitespace preservation as well"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'insertions': [{'line_number': 1094, 'new_lines': ["                    return el.parent() != null && el.parent().tag.preserveWhitespace(); // Fixing the bug by considering parent tag's whitespace preservation as well"]}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/nodes/Element.java', 'target_lines': [['1093', '                else'], ['1094', '                    return el.parent() != null && el.parent().tag.preserveWhitespace();'], ['1091', '//']], 'insertions': [{'line_number': 1091, 'new_lines': ['        if (el.parent() != null) {']}, {'line_number': 1093, 'new_lines': ['                    return el.tag.preserveWhitespace() && el.parent().tag.preserveWhitespace();']}, {'line_number': 1094, 'new_lines': ["                    // Fixing the bug by considering parent tag's whitespace preservation as well"]}], 'deletions': [], 'modifications': []}]
+
+

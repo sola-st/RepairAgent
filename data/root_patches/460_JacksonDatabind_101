@@ -1,0 +1,43 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'insertions': [{'line_number': 776, 'new_lines': ["// 28-Aug-2018, tatu: Let's add sanity check here, easier to catch off-by-some", '//    problems if we maintain invariants', 'if (bean == null) {', '    ctxt.reportInputMismatch(creatorProp, "Failed to create instance with unwrapped values");', '    return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'target_lines': [['771', '                        p.nextToken();'], ['777', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'target_lines': [['771', '                        p.nextToken();'], ['777', '//']], 'insertions': [{'line_number': 771, 'new_lines': ['// Inserted to fix bug: Ensure token is consumed before proceeding', 't = p.nextToken();']}, {'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'insertions': [{'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'target_lines': [['771', '                        p.nextToken();'], ['777', '//']], 'insertions': [{'line_number': 771, 'new_lines': ['// Inserted to fix bug: Ensure token is consumed before proceeding', 't = p.nextToken();']}, {'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'insertions': [{'line_number': 776, 'new_lines': ['// 23-Sep-2015, tatu: This is wrong at many levels, but for now... it is', '//    what it is, including "expected behavior".', 'return deserializeFromObject(p, ctxt);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'target_lines': [['771', '                        p.nextToken();'], ['777', '//']], 'insertions': [{'line_number': 771, 'new_lines': ['// Inserted to fix bug: Ensure token is consumed before proceeding', 't = p.nextToken();']}, {'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'insertions': [{'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'target_lines': [['771', '                        p.nextToken();'], ['777', '//']], 'insertions': [{'line_number': 771, 'new_lines': ['// Inserted to fix bug: Ensure token is consumed before proceeding', 't = p.nextToken();']}, {'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'insertions': [{'line_number': 778, 'new_lines': ['// Inserted to fix bug: Add a null check before class comparison', 'if (bean == null) {', '    ctxt.reportInputMismatch(creatorProp, "Failed to create instance with unwrapped values");', '    return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'insertions': [{'line_number': 778, 'new_lines': ['// Inserted to fix bug: Add a null check before class comparison', 'if (bean == null) {', '    ctxt.reportInputMismatch(creatorProp, "Failed to create instance with unwrapped values");', '    return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'target_lines': [['771', '                        p.nextToken();'], ['777', '//']], 'insertions': [{'line_number': 771, 'new_lines': ['// Inserted to fix bug: Ensure token is consumed before proceeding', 't = p.nextToken();']}, {'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'insertions': [{'line_number': 778, 'new_lines': ['// Refining the fix: Add a null check before class comparison to handle potential null bean', 'if (bean == null) {', '    ctxt.reportInputMismatch(creatorProp, "Failed to create instance with unwrapped values");', '    return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/deser/BeanDeserializer.java', 'target_lines': [['771', '                        p.nextToken();'], ['777', '//']], 'insertions': [{'line_number': 771, 'new_lines': ['// Inserted to fix bug: Ensure token is consumed before proceeding', 't = p.nextToken();']}, {'line_number': 777, 'new_lines': ['// Inserted to fix bug: Add missing end object token', 'tokens.writeEndObject();']}], 'deletions': [], 'modifications': []}]
+
+

@@ -1,0 +1,82 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [{'line_number': 239, 'new_lines': ['        return new ClassLoaderAwareObjectInputStream(in, classLoader);']}, {'line_number': 252, 'new_lines': ['        return new ClassLoaderAwareObjectInputStream(in, classLoader);']}, {'line_number': 268, 'new_lines': ['        return new ClassLoaderAwareObjectInputStream(in, classLoader);']}, {'line_number': 269, 'new_lines': ['        return new ClassLoaderAwareObjectInputStream(in, classLoader);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [{'line_number': 239, 'new_lines': ['        private ClassLoader classLoader;', '        private ClassResolver classResolver;']}], 'deletions': [], 'modifications': [{'line_number': 262, 'modified_line': '        protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {'}, {'line_number': 266, 'modified_line': '                return classResolver.resolveClass(name);'}, {'line_number': 268, 'modified_line': '                    return classResolver.resolveClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 262, 'modified_line': '        protected Class<?> resolveClass(String name) throws ClassNotFoundException {'}, {'line_number': 266, 'modified_line': '            Class<?> resolvedClass = Class.forName(name);'}, {'line_number': 267, 'modified_line': '            System.out.println("Resolved class: " + resolvedClass.getName());'}, {'line_number': 268, 'modified_line': '        } catch (ClassNotFoundException e) {'}, {'line_number': 269, 'modified_line': '            System.err.println("Class not found: " + name);'}, {'line_number': 270, 'modified_line': '            throw e;'}, {'line_number': 271, 'modified_line': '        }'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 262, 'modified_line': '        protected void resolveClass(String className, ClassLoader classLoader) throws ClassNotFoundException {'}, {'line_number': 266, 'modified_line': '        Class<?> resolvedClass = Class.forName(className, true, classLoader);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': 'return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': 'return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [{'line_number': 252, 'new_lines': ['        return new ClassLoaderAwareObjectInputStream(in, classLoader);']}, {'line_number': 268, 'new_lines': ['        return new ClassLoaderAwareObjectInputStream(in, classLoader);']}, {'line_number': 269, 'new_lines': ['        return new ClassLoaderAwareObjectInputStream(in, classLoader);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 262, 'modified_line': '        protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {'}, {'line_number': 266, 'modified_line': '                return Class.forName(name, false, classLoader);'}, {'line_number': 268, 'modified_line': '                    return Class.forName(name, false, Thread.currentThread().getContextClassLoader());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [{'line_number': 265, 'new_lines': ['                return Class.forName(name, false, classLoader);']}, {'line_number': 268, 'new_lines': ['                    return Class.forName(name, false, Thread.currentThread().getContextClassLoader());']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 262, 'modified_line': '        protected Class<?> resolveClass(ObjectStreamClass desc) throws IOException, ClassNotFoundException {'}, {'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [{'line_number': 267, 'new_lines': ['                return Class.forName(name, false, classLoader);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [{'line_number': 266, 'new_lines': ['                return classLoader.loadClass(name);']}, {'line_number': 268, 'new_lines': ['                    return Thread.currentThread().getContextClassLoader().loadClass(name);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return Class.forName(name, false, classLoader);'}, {'line_number': 268, 'modified_line': '                    return Class.forName(name, false, Thread.currentThread().getContextClassLoader());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return Class.forName(name, false, classLoader);'}, {'line_number': 268, 'modified_line': '                    return Class.forName(name, false, Thread.currentThread().getContextClassLoader());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return Class.forName(name, false, classLoader);'}, {'line_number': 268, 'modified_line': '                    return Class.forName(name, false, Thread.currentThread().getContextClassLoader());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return Class.forName(name, false, classLoader);'}, {'line_number': 268, 'modified_line': '                    return Class.forName(name, false, Thread.currentThread().getContextClassLoader());'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/lang3/SerializationUtils.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 266, 'modified_line': '                return classLoader.loadClass(name);'}, {'line_number': 268, 'modified_line': '                    return Thread.currentThread().getContextClassLoader().loadClass(name);'}]}]
+
+

@@ -1,0 +1,34 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'insertions': [{'line_number': 99, 'new_lines': ['        if (current.isGetProp() && current.getFirstChild().isName() && current.getFirstChild().getString().equals("this")) {', '            return false;', '        }']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'target_lines': [['146', '    return false;'], ['99', '//']], 'insertions': [{'line_number': 99, 'new_lines': ['        if (current.isGetProp() && current.getFirstChild().isName() && current.getFirstChild().getString().equals("this")) {', '            return false;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'target_lines': [['146', '    return false;'], ['99', '//']], 'insertions': [{'line_number': 146, 'new_lines': ['    // Inserted to fix the bug at line 146', '    return false;']}, {'line_number': 99, 'new_lines': ['    // Inserted to fix the bug at line 99', '        if (current.isGetProp() && current.getFirstChild().isName() && current.getFirstChild().getString().equals("this")) {', '            return false;', '        }']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 99, 'modified_line': '        if (current.isGetProp() && current.getFirstChild().isName() && current.getFirstChild().getString().equals("this")) {\n            return false;\n        }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'target_lines': [['146', '    return false;'], ['99', '//']], 'insertions': [{'line_number': 146, 'new_lines': ['    // Inserted to fix the bug at line 146', '    return false;']}, {'line_number': 99, 'new_lines': ['    // Inserted to fix the bug at line 99', '        if (current.isGetProp() && current.getFirstChild().isName() && current.getFirstChild().getString().equals("this")) {', '            return false;', '        ']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'insertions': [{'line_number': 99, 'new_lines': ['        if (assignLhsChild != null) {', '            // Always report a THIS on the left side of an assign.', '            return true;', '        }', '        // Also report a THIS with a property access.', '        return false;']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'target_lines': [['146', '    return false;'], ['99', '//']], 'insertions': [{'line_number': 146, 'new_lines': ['    // Inserted to fix the bug at line 146', '    return false;']}, {'line_number': 99, 'new_lines': ['    // Inserted to fix the bug at line 99', '        if (assignLhsChild != null) {', '            // Always report a THIS on the left side of an assign.', '            return true;', '        }', '        // Also report a THIS with a property access.', '        return false;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'modifications': [{'line_number': 99, 'modified_line': '    if (assignLhsChild != null) {\n      // Always report a THIS on the left side of an assign.\n      return true;\n    }\n\n    // Also report a THIS with a property access.\n    return false;'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'modifications': [{'line_number': 99, 'modified_line': '        if (current.isGetProp() && current.getFirstChild().isName() && current.getFirstChild().getString().equals("this")) {\n            return false;\n        }'}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/CheckGlobalThis.java', 'target_lines': [['146', '    return false;'], ['99', '//']], 'insertions': [{'line_number': 146, 'new_lines': ['    // Inserted to fix the bug at line 146', '    return false;']}, {'line_number': 99, 'new_lines': ['    // Inserted to fix the bug at line 99', '        if (current.isGetProp() && current.getFirstChild().isName() && current.getFirstChild().getString().equals("this")) {', '            return false;', '        ']}], 'deletions': [], 'modifications': []}]
+
+

@@ -1,0 +1,46 @@
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 119, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [{'line_number': 119, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;', '}']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [{'line_number': 119, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;', '}']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 119, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 119, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [{'line_number': 119, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;', '}']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 119, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [{'line_number': 135, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 119, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 119, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;', '}']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 135, 'modified_line': '            String nameRef = reader.consumeLetterSequence(); if (!reader.matchConsume(";")) { characterReferenceError("missing semicolon"); // missing semi return null; }'}]}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'target_lines': [['135', '            String nameRef = reader.consumeLetterSequence();']], 'insertions': [{'line_number': 135, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'target_lines': [['118', '//'], ['119', '//']], 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 119, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 135, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 119, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 135, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 119, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 135, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/CharacterReader.java', 'insertions': [{'line_number': 118, 'new_lines': ['// Inserted line to fix the bug']}, {'line_number': 119, 'new_lines': ['// Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/parser/Tokeniser.java', 'insertions': [{'line_number': 119, 'new_lines': ['if (!reader.matchConsume(";")) {', 'characterReferenceError("missing semicolon"); // missing semi', 'return null;', '}']}]}]
+
+

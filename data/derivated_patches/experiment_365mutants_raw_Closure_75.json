@@ -1,0 +1,790 @@
+
+{
+    "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+    "insertions": [
+        {
+            "line_number": 313,
+            "new_lines": [
+                "        return TernaryValue.FALSE;"
+            ]
+        },
+        {
+            "line_number": 314,
+            "new_lines": [
+                "        return TernaryValue.FALSE;"
+            ]
+        }
+    ],
+    "deletions": [],
+    "modifications": [
+        {
+            "line_number": 375,
+            "modified_line": "        return TernaryValue.TRUE;"
+        }
+    ]
+}
+    
+    
+{ "file_name": "com/google/javascript/jscomp/NodeUtil.java", "insertions": [ { "line_number": 313, "new_lines": [ "        if (!isStrWhiteSpaceChar(c)) {\n", "          return TernaryValue.TRUE;\n", "        }\n" ] }, { "line_number": 314, "new_lines": [ "        if (isStrWhiteSpaceChar(c)) {\n", "          return TernaryValue.TRUE;\n", "        }\n" ] } ], "deletions": [], "modifications": [] }
+  
+  
+{
+    "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+    "insertions": [
+        {
+            "line_number": 313,
+            "new_lines": [
+                "        if (!isStrWhiteSpaceChar(c)) {\n",
+                "          return TernaryValue.FALSE;\n",
+                "        }\n"
+            ]
+        },
+        {
+            "line_number": 314,
+            "new_lines": [
+                "        if (isStrWhiteSpaceChar(c)) {\n",
+                "          return TernaryValue.TRUE;\n",
+                "        }\n"
+            ]
+        }
+    ],
+    "deletions": [],
+    "modifications": []
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (c == ' ') {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isWhitespace(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (Character.isWhitespace(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.UNKNOWN;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.UNKNOWN;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.UNKNOWN;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.UNKNOWN;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.UNKNOWN;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.UNKNOWN;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.NULL;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.NULL;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (c != ' ') {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (c != ' ') {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.UNKNOWN;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.FALSE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 375,
+                    "new_lines": [
+                        "        // Inserted to fix the bug at line 375",
+                        "        return TernaryValue.TRUE;"
+                    ]
+                },
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 375,
+                    "new_lines": [
+                        "        // Inserted to fix the bug at line 375",
+                        "        return TernaryValue.FALSE;"
+                    ]
+                },
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.TRUE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 375,
+                    "new_lines": [
+                        "        // Inserted to fix the bug at line 375",
+                        "        return TernaryValue.TRUE;"
+                    ]
+                },
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/NodeUtil.java",
+            "insertions": [
+                {
+                    "line_number": 375,
+                    "new_lines": [
+                        "        // Inserted to fix the bug at line 375",
+                        "        return TernaryValue.FALSE;"
+                    ]
+                },
+                {
+                    "line_number": 313,
+                    "new_lines": [
+                        "        if (!isStrWhiteSpaceChar(c)) {",
+                        "          return TernaryValue.FALSE;",
+                        "        }"
+                    ]
+                },
+                {
+                    "line_number": 314,
+                    "new_lines": [
+                        "        return TernaryValue.TRUE;"
+                    ]
+                }
+            ],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}

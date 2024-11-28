@@ -1,0 +1,40 @@
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 984, 'modified_line': '        hash ^= (hash >>> 15);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'target_lines': [['925', '        if (_spilloverEnd >= hashArea.length) {'], ['984', '        hash ^= (hash >>> 12);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 925, 'modified_line': '        if (_spilloverEnd > hashArea.length) {'}, {'line_number': 984, 'modified_line': '        hash ^= (hash >>> 15);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 984, 'modified_line': '        hash ^= (hash >>> 15); // Updated the hash calculation logic'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'target_lines': [['925', '        if (_spilloverEnd >= hashArea.length) {'], ['984', '        hash ^= (hash >>> 12);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 925, 'modified_line': '        if (_spilloverEnd > hashArea.length) { // Fixed array index comparison'}, {'line_number': 984, 'modified_line': '        hash ^= (hash >>> 15); // Updated the hash calculation logic'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'target_lines': [['925', '        if (_spilloverEnd >= hashArea.length) {'], ['984', '        hash ^= (hash >>> 12);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 925, 'modified_line': '        if (_spilloverEnd >= hashArea.length) { // Fixed array index comparison'}, {'line_number': 984, 'modified_line': '        hash ^= (hash >>> 15); // Updated the hash calculation logic'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'modifications': [{'line_number': 925, 'modified_line': '        if (_spilloverEnd >= hashArea.length) { // Fixed array index comparison'}]}, {'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'modifications': [{'line_number': 984, 'modified_line': '        hash ^= (hash >>> 15); // Updated the hash calculation logic'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 975, 'modified_line': '    public int calcHash(int q1) {'}, {'line_number': 976, 'modified_line': '        int hash = _seed;'}, {'line_number': 977, 'modified_line': '        int i = 0;'}, {'line_number': 978, 'modified_line': '        final int len = 4;'}, {'line_number': 979, 'modified_line': '        byte[] buf = new byte[len];'}, {'line_number': 980, 'modified_line': '        buf[0] = (byte) (q1 & 0xFF);'}, {'line_number': 981, 'modified_line': '        buf[1] = (byte) ((q1 >> 8) & 0xFF);'}, {'line_number': 982, 'modified_line': '        buf[2] = (byte) ((q1 >> 16) & 0xFF);'}, {'line_number': 983, 'modified_line': '        buf[3] = (byte) ((q1 >> 24) & 0xFF);'}, {'line_number': 984, 'modified_line': '        return calcHash(buf, 0, len);'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 975, 'modified_line': '    public int calcHash(int q1) {'}, {'line_number': 976, 'modified_line': '        int hash = q1 ^ _seed;'}, {'line_number': 977, 'modified_line': '        hash += (hash >>> 16); // to xor hi- and low- 16-bits'}, {'line_number': 978, 'modified_line': '        hash ^= (hash >>> 12);'}, {'line_number': 979, 'modified_line': '        return hash;'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'target_lines': [['925', '        if (_spilloverEnd >= hashArea.length) {'], ['984', '        hash ^= (hash >>> 12);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 925, 'modified_line': '        if (_spilloverEnd > hashArea.length) { // Fixed array index comparison'}, {'line_number': 984, 'modified_line': '        hash ^= (hash >>> 15); // Updated the hash calculation logic'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/TestByteBasedSymbols.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 37, 'modified_line': '        JsonParser p = jsonF.createParser(stringBuilder.toString().getBytes("UTF-8")); // Updated createParser method call'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 975, 'modified_line': '    public int calcHash(int q1) {'}, {'line_number': 976, 'modified_line': '        int hash = q1 ^ _seed;'}, {'line_number': 977, 'modified_line': '        hash += (hash >>> 16); // to xor hi- and low- 16-bits'}, {'line_number': 978, 'modified_line': '        hash ^= (hash >>> 12);'}, {'line_number': 979, 'modified_line': '        return hash;'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/core/sym/ByteQuadsCanonicalizer.java', 'target_lines': [['925', '        if (_spilloverEnd >= hashArea.length) {'], ['984', '        hash ^= (hash >>> 12);']], 'insertions': [{'line_number': 925, 'new_lines': ['        if (_spilloverEnd > hashArea.length) { // Fixed array index comparison']}, {'line_number': 984, 'new_lines': ['        hash ^= (hash >>> 15); // Updated the hash calculation logic']}], 'deletions': [], 'modifications': []}]
+
+

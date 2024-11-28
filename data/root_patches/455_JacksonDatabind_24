@@ -1,0 +1,61 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/TestConfig.java', 'modifications': [{'line_number': 204, 'modified_line': 'if (!tz1.equals(tz2)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64;']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/TestConfig.java', 'modifications': [{'line_number': 204, 'modified_line': 'if (!tz1.equals(tz2)) {'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/TestConfig.java', 'modifications': [{'line_number': 204, 'modified_line': 'if (!tz1.equals(tz2)) {'}]}, {'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64;']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['        tz = (df == null) ? _timeZone : df.getTimeZone();']}], 'deletions': [237], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 235, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64;']], 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}, {'line_number': 234, 'new_lines': ['TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();']}, {'line_number': 237, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64;']], 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();']}, {'line_number': 237, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();']}, {'line_number': 237, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);']}, {'line_number': 237, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64);']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64);']], 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();']}, {'line_number': 237, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 234, 'modified_line': '        TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);'}, {'line_number': 237, 'modified_line': '                tz, _defaultBase64;'}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64);']], 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);']}, {'line_number': 237, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/cfg/BaseSettings.java', 'target_lines': [['234', '        TimeZone tz = (df == null) ? _timeZone : df.getTimeZone();'], ['237', '                tz, _defaultBase64);']], 'insertions': [{'line_number': 234, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug', 'TimeZone tz = (df == null) ? _timeZone : (df != null ? df.getTimeZone() : _timeZone);']}, {'line_number': 237, 'new_lines': ['// Adjusting time zone assignment logic to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+

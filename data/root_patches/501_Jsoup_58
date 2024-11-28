@@ -1,0 +1,34 @@
+###Fix:
+[{'file_name': 'org.jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 78, 'new_lines': ['        Document dirty = Document.createShell("");', '        ParseErrorList errorList = ParseErrorList.tracking(1);', '        Document clean = parseInput(html, dirty, errorList);', '        return errorList.size() == 0 && clean != null;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/Jsoup.java', 'target_lines': [['250', '        return new Cleaner(whitelist).isValid(parseBodyFragment(bodyHtml, ""));']], 'insertions': []}, {'file_name': 'org/jsoup/safety/Cleaner.java', 'target_lines': [['78', '        return numDiscarded == 0;'], ['17', '//'], ['81', '//']], 'insertions': []}, {'file_name': 'org/jsoup/parser/Parser.java', 'target_lines': [['129', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/Jsoup.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 250, 'modified_line': '        return new Cleaner(whitelist).isValid(parseBodyFragment(bodyHtml, ""));'}]}, {'file_name': 'org/jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 17, 'new_lines': ['        // Inserted line to fix the bug']}, {'line_number': 81, 'new_lines': ['        // Inserted line to fix the bug']}], 'deletions': [], 'modifications': [{'line_number': 78, 'modified_line': '        // Modified line to fix the bug'}]}, {'file_name': 'org/jsoup/parser/Parser.java', 'insertions': [{'line_number': 129, 'new_lines': ['        // Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 78, 'new_lines': ['        // Enhance validation logic to consider whitelist rules and discarded nodes', '        return numDiscarded == 0 && clean != null;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/Jsoup.java', 'target_lines': [['250', '        return new Cleaner(whitelist).isValid(parseBodyFragment(bodyHtml, ""));']], 'insertions': []}, {'file_name': 'org/jsoup/safety/Cleaner.java', 'target_lines': [['78', '        return numDiscarded == 0;'], ['17', '//'], ['81', '//']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/Parser.java', 'target_lines': [['129', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/Jsoup.java', 'target_lines': [['250', '        return new Cleaner(whitelist).isValid(parseBodyFragment(bodyHtml, ""));']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/safety/Cleaner.java', 'target_lines': [['78', '        return numDiscarded == 0;'], ['17', '//'], ['81', '//']], 'insertions': [{'line_number': 17, 'new_lines': ['        // Inserted line to fix the bug']}, {'line_number': 81, 'new_lines': ['        // Inserted line to fix the bug']}], 'deletions': [], 'modifications': [{'line_number': 78, 'modified_line': '        // Modified line to fix the bug'}]}, {'file_name': 'org/jsoup/parser/Parser.java', 'target_lines': [['129', '//']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org.jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 78, 'new_lines': ['        // Enhance validation logic to consider whitelist rules and discarded nodes', '        return numDiscarded == 0 && clean != null;']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 78, 'new_lines': ['        // Enhance validation logic to consider whitelist rules and discarded nodes', '        return numDiscarded == 0 && clean != null;']}]}]
+
+###Fix:
+[{'file_name': 'org.jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 78, 'new_lines': ['        // Enhance validation logic to consider whitelist rules and discarded nodes', '        return numDiscarded == 0 && clean != null;']}]}]
+
+###Fix:
+[{'file_name': 'org/jsoup/Jsoup.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 250, 'modified_line': '        return new Cleaner(whitelist).isValid(parseBodyFragment(bodyHtml, ""));'}]}, {'file_name': 'org/jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 17, 'new_lines': ['        // Inserted line to fix the bug']}, {'line_number': 78, 'new_lines': ['        // Enhance validation logic to consider whitelist rules and discarded nodes', '        return numDiscarded == 0 && clean != null;']}, {'line_number': 81, 'new_lines': ['        // Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/jsoup/parser/Parser.java', 'insertions': [{'line_number': 129, 'new_lines': ['        // Inserted line to fix the bug']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/jsoup/safety/Cleaner.java', 'insertions': [{'line_number': 73, 'new_lines': ['        Validate.notNull(dirtyDocument);', '        Document clean = Document.createShell(dirtyDocument.baseUri());', '        NodeTraversor.traverse(new CleaningVisitor(clean.body(), whitelist), dirtyDocument.body());', '        return clean;']}]}]
+
+

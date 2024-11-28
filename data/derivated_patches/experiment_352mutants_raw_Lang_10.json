@@ -1,0 +1,933 @@
+
+    {
+        "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+        "insertions": [],
+        "deletions": [152, 161, 162, 163, 164, 165, 166, 167, 168, 173, 175, 176, 177, 178, 180, 181, 182],
+        "modifications": [
+            {
+                "line_number": 155,
+                "modified_line": "my $seen = 0; # Fixing variable scoping issue"
+            }
+        ]
+    }
+   
+    
+{
+    "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+    "insertions": [],
+    "deletions": [],
+    "modifications": [
+        {"line_number": 152, "modified_line": "open my $fh, '>>$file' or die 'Cannot open file for appending $file: $!';    open my $fh, \">>$file\" or die \"Cannot open file for appending $file: $!\";"},
+        {"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"},
+        {"line_number": 156, "modified_line": "my $seen = 0; # Fixing variable scoping issuemy $fh_in = ();my @files = ();my $oldconf = ();my %newconf = ();my $seen = 1; # Fixing variable scoping issue"},
+        {"line_number": 161, "modified_line": "my $seen = 0; # Fixing variable scoping issue"},
+        {"line_number": 163, "modified_line": "my $seen = 0; # Fixing variable scoping issue"},
+        {"line_number": 164, "modified_line": "my $seen = 0; # Fixing variable scoping issue"},
+        {"line_number": 165, "modified_line": "my $seen = 0; # Fixing variable scoping issue"},
+        {"line_number": 166, "modified_line": "my $seen = 1; # Fixing variable scoping issue"},
+        {"line_number": 173, "modified_line": "close $fh_in; # Adding explicit package name declaration for $fh_in"},
+        {"line_number": 177, "modified_line": "my $oldconf = (); # Adding explicit package name declaration for $oldconf"},
+        {"line_number": 180, "modified_line": "chomp @files;    close $fh; # Adding explicit package name declaration for $fh"}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {"line_number": 304, "modified_line": "# Inserted line 1"},
+                {"line_number": 307, "modified_line": "# Inserted line 2"},
+                {"line_number": 308, "modified_line": "# Inserted line 3"},
+                {"line_number": 309, "modified_line": "# Inserted line 4"},
+                {"line_number": 310, "modified_line": "# Inserted line 5"},
+                {"line_number": 311, "modified_line": "# Inserted line 6"},
+                {"line_number": 312, "modified_line": "# Inserted line 7"},
+                {"line_number": 313, "modified_line": "# Inserted line 8"},
+                {"line_number": 314, "modified_line": "# Inserted line 9"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {"line_number": 304, "modified_line": "# Inserted line 10"},
+                {"line_number": 307, "modified_line": "# Inserted line 11"},
+                {"line_number": 308, "modified_line": "# Inserted line 12"},
+                {"line_number": 309, "modified_line": "# Inserted line 13"},
+                {"line_number": 310, "modified_line": "# Inserted line 14"},
+                {"line_number": 311, "modified_line": "# Inserted line 15"},
+                {"line_number": 312, "modified_line": "# Inserted line 16"},
+                {"line_number": 313, "modified_line": "# Inserted line 17"},
+                {"line_number": 314, "modified_line": "# Inserted line 18"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {"line_number": 304, "modified_line": "# Inserted line 19"},
+                {"line_number": 307, "modified_line": "# Inserted line 20"},
+                {"line_number": 308, "modified_line": "# Inserted line 21"},
+                {"line_number": 309, "modified_line": "# Inserted line 22"},
+                {"line_number": 310, "modified_line": "# Inserted line 23"},
+                {"line_number": 311, "modified_line": "# Inserted line 24"},
+                {"line_number": 312, "modified_line": "# Inserted line 25"},
+                {"line_number": 313, "modified_line": "# Inserted line 26"},
+                {"line_number": 314, "modified_line": "# Inserted line 27"}
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {"line_number": 304, "modified_line": "# Inserted line 28"},
+                {"line_number": 307, "modified_line": "# Inserted line 29"},
+                {"line_number": 308, "modified_line": "# Inserted line 30"},
+                {"line_number": 309, "modified_line": "# Inserted line 31"},
+                {"line_number": 310, "modified_line": "# Inserted line 32"},
+                {"line_number": 311, "modified_line": "# Inserted line 33"},
+                {"line_number": 312, "modified_line": "# Inserted line 34"},
+                {"line_number": 313, "modified_line": "# Inserted line 35"},
+                {"line_number": 314, "modified_line": "# Inserted line 36"}
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 160, "modified_line": "my $oldconf = undef; # Changing variable initialization"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 173, "modified_line": "my $fh_in; # Adding explicit package name declaration for $fh_in"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [], "modifications": [{"line_number": 177, "modified_line": "my $oldconf = (); # Changing variable initialization"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 155, "new_lines": ["my $seen = 0; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 160, "new_lines": ["my $oldconf = undef; # Changing variable initialization"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 173, "new_lines": ["my $fh_in; # Adding explicit package name declaration for $fh_in"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 177, "new_lines": ["my $oldconf = (); # Changing variable initialization"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [155, 156], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [160, 161], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [173, 174], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [177, 178], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 155, "new_lines": ["my $seen = 1; # Fixing variable scoping issue"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 160, "new_lines": ["my $oldconf = undef; # Changing variable initialization"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 173, "new_lines": ["my $fh_in; # Adding explicit package name declaration for $fh_in"]}], "deletions": [], "modifications": []},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [{"line_number": 177, "new_lines": ["my $oldconf = (); # Changing variable initialization"]}], "deletions": [], "modifications": []}
+    ]
+}
+{
+    "mutants": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 1"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 2"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 3"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 4"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 5"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 6"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 7"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 8"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 10"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 11"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 12"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 13"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 14"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 15"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 16"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 17"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 18"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 19"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 20"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 21"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 22"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 23"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 24"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 25"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 26"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 27"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 28"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 29"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Inserted line 30"}]}
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 1: # Inserted line 1"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 2: # Inserted line 2"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 3: # Inserted line 3"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 4: # Inserted line 4"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 5: # Inserted line 5"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 6: # Inserted line 6"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 7: # Inserted line 7"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 8: # Inserted line 8"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 9: # Inserted line 9"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 10: # Inserted line 10"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 11: # Inserted line 11"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 12: # Inserted line 12"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 13: # Inserted line 13"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 14: # Inserted line 14"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 15: # Inserted line 15"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 16: # Inserted line 16"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 17: # Inserted line 17"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 18: # Inserted line 18"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 19: # Inserted line 19"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 20: # Inserted line 20"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 21: # Inserted line 21"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 22: # Inserted line 22"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 23: # Inserted line 23"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 24: # Inserted line 24"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 25: # Inserted line 25"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 26: # Inserted line 26"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 27: # Inserted line 27"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 28: # Inserted line 28"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 29: # Inserted line 29"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Mutant 30: # Inserted line 30"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 155, "modified_line": "my $seen = 1; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 160, "modified_line": "my $oldconf = (); # Adding explicit package name declaration for $oldconf"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 173, "modified_line": "my $fh_in = (); # Adding explicit package name declaration for $fh_in"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 177, "modified_line": "my $oldconf = 1; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 155, "modified_line": "my $seen = 0; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 160, "modified_line": "my $oldconf = 0; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 173, "modified_line": "my $fh_in = 0; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 177, "modified_line": "my $oldconf = ''; # Adding explicit package name declaration for $oldconf"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 155, "modified_line": "my $seen = ''; # Adding explicit package name declaration for $seen"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 160, "modified_line": "my $oldconf = ''; # Adding explicit package name declaration for $oldconf"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 173, "modified_line": "my $fh_in = ''; # Adding explicit package name declaration for $fh_in"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 177, "modified_line": "my $oldconf = 0.0; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 155, "modified_line": "my $seen = 1.0; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 160, "modified_line": "my $oldconf = 1.0; # Fixing variable scoping issue"}]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 173, "modified_line": "my $fh_in = 1.0; # Fixing variable scoping issue"}]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 1"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 2"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 3"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 4"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 5"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 6"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 7"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 8"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 9"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 10"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 11"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 12"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 13"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 14"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 15"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 16"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 17"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 18"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 19"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 20"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 21"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 22"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 23"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 24"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 25"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 26"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 27"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 28"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 29"
+                }
+            ]
+        },
+        {
+            "file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm",
+            "insertions": [],
+            "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314],
+            "modifications": [
+                {
+                    "line_number": 304,
+                    "modified_line": "# Inserted line 30"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 1: // Changed line 1"}, {"line_number": 307, "modified_line": "# Mutant 1: // Changed line 2"}, {"line_number": 308, "modified_line": "# Mutant 1: // Changed line 3"}, {"line_number": 309, "modified_line": "# Mutant 1: // Changed line 4"}, {"line_number": 310, "modified_line": "# Mutant 1: // Changed line 5"}, {"line_number": 311, "modified_line": "# Mutant 1: // Changed line 6"}, {"line_number": 312, "modified_line": "# Mutant 1: // Changed line 7"}, {"line_number": 313, "modified_line": "# Mutant 1: // Changed line 8"}, {"line_number": 314, "modified_line": "# Mutant 1: // Changed line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 2: // Changed line A"}, {"line_number": 307, "modified_line": "# Mutant 2: // Changed line B"}, {"line_number": 308, "modified_line": "# Mutant 2: // Changed line C"}, {"line_number": 309, "modified_line": "# Mutant 2: // Changed line D"}, {"line_number": 310, "modified_line": "# Mutant 2: // Changed line E"}, {"line_number": 311, "modified_line": "# Mutant 2: // Changed line F"}, {"line_number": 312, "modified_line": "# Mutant 2: // Changed line G"}, {"line_number": 313, "modified_line": "# Mutant 2: // Changed line H"}, {"line_number": 314, "modified_line": "# Mutant 2: // Changed line I"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 3: // Changed line X"}, {"line_number": 307, "modified_line": "# Mutant 3: // Changed line Y"}, {"line_number": 308, "modified_line": "# Mutant 3: // Changed line Z"}, {"line_number": 309, "modified_line": "# Mutant 3: // Changed line W"}, {"line_number": 310, "modified_line": "# Mutant 3: // Changed line V"}, {"line_number": 311, "modified_line": "# Mutant 3: // Changed line U"}, {"line_number": 312, "modified_line": "# Mutant 3: // Changed line T"}, {"line_number": 313, "modified_line": "# Mutant 3: // Changed line S"}, {"line_number": 314, "modified_line": "# Mutant 3: // Changed line R"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 4: // New line 1"}, {"line_number": 307, "modified_line": "# Mutant 4: // New line 2"}, {"line_number": 308, "modified_line": "# Mutant 4: // New line 3"}, {"line_number": 309, "modified_line": "# Mutant 4: // New line 4"}, {"line_number": 310, "modified_line": "# Mutant 4: // New line 5"}, {"line_number": 311, "modified_line": "# Mutant 4: // New line 6"}, {"line_number": 312, "modified_line": "# Mutant 4: // New line 7"}, {"line_number": 313, "modified_line": "# Mutant 4: // New line 8"}, {"line_number": 314, "modified_line": "# Mutant 4: // New line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 5: // Altered line 1"}, {"line_number": 307, "modified_line": "# Mutant 5: // Altered line 2"}, {"line_number": 308, "modified_line": "# Mutant 5: // Altered line 3"}, {"line_number": 309, "modified_line": "# Mutant 5: // Altered line 4"}, {"line_number": 310, "modified_line": "# Mutant 5: // Altered line 5"}, {"line_number": 311, "modified_line": "# Mutant 5: // Altered line 6"}, {"line_number": 312, "modified_line": "# Mutant 5: // Altered line 7"}, {"line_number": 313, "modified_line": "# Mutant 5: // Altered line 8"}, {"line_number": 314, "modified_line": "# Mutant 5: // Altered line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 6: // Updated line 1"}, {"line_number": 307, "modified_line": "# Mutant 6: // Updated line 2"}, {"line_number": 308, "modified_line": "# Mutant 6: // Updated line 3"}, {"line_number": 309, "modified_line": "# Mutant 6: // Updated line 4"}, {"line_number": 310, "modified_line": "# Mutant 6: // Updated line 5"}, {"line_number": 311, "modified_line": "# Mutant 6: // Updated line 6"}, {"line_number": 312, "modified_line": "# Mutant 6: // Updated line 7"}, {"line_number": 313, "modified_line": "# Mutant 6: // Updated line 8"}, {"line_number": 314, "modified_line": "# Mutant 6: // Updated line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 7: // Revised line 1"}, {"line_number": 307, "modified_line": "# Mutant 7: // Revised line 2"}, {"line_number": 308, "modified_line": "# Mutant 7: // Revised line 3"}, {"line_number": 309, "modified_line": "# Mutant 7: // Revised line 4"}, {"line_number": 310, "modified_line": "# Mutant 7: // Revised line 5"}, {"line_number": 311, "modified_line": "# Mutant 7: // Revised line 6"}, {"line_number": 312, "modified_line": "# Mutant 7: // Revised line 7"}, {"line_number": 313, "modified_line": "# Mutant 7: // Revised line 8"}, {"line_number": 314, "modified_line": "# Mutant 7: // Revised line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 8: // Edited line 1"}, {"line_number": 307, "modified_line": "# Mutant 8: // Edited line 2"}, {"line_number": 308, "modified_line": "# Mutant 8: // Edited line 3"}, {"line_number": 309, "modified_line": "# Mutant 8: // Edited line 4"}, {"line_number": 310, "modified_line": "# Mutant 8: // Edited line 5"}, {"line_number": 311, "modified_line": "# Mutant 8: // Edited line 6"}, {"line_number": 312, "modified_line": "# Mutant 8: // Edited line 7"}, {"line_number": 313, "modified_line": "# Mutant 8: // Edited line 8"}, {"line_number": 314, "modified_line": "# Mutant 8: // Edited line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 9: // Modified line 1"}, {"line_number": 307, "modified_line": "# Mutant 9: // Modified line 2"}, {"line_number": 308, "modified_line": "# Mutant 9: // Modified line 3"}, {"line_number": 309, "modified_line": "# Mutant 9: // Modified line 4"}, {"line_number": 310, "modified_line": "# Mutant 9: // Modified line 5"}, {"line_number": 311, "modified_line": "# Mutant 9: // Modified line 6"}, {"line_number": 312, "modified_line": "# Mutant 9: // Modified line 7"}, {"line_number": 313, "modified_line": "# Mutant 9: // Modified line 8"}, {"line_number": 314, "modified_line": "# Mutant 9: // Modified line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 10: // Tweaked line 1"}, {"line_number": 307, "modified_line": "# Mutant 10: // Tweaked line 2"}, {"line_number": 308, "modified_line": "# Mutant 10: // Tweaked line 3"}, {"line_number": 309, "modified_line": "# Mutant 10: // Tweaked line 4"}, {"line_number": 310, "modified_line": "# Mutant 10: // Tweaked line 5"}, {"line_number": 311, "modified_line": "# Mutant 10: // Tweaked line 6"}, {"line_number": 312, "modified_line": "# Mutant 10: // Tweaked line 7"}, {"line_number": 313, "modified_line": "# Mutant 10: // Tweaked line 8"}, {"line_number": 314, "modified_line": "# Mutant 10: // Tweaked line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 11: // Adjusted line 1"}, {"line_number": 307, "modified_line": "# Mutant 11: // Adjusted line 2"}, {"line_number": 308, "modified_line": "# Mutant 11: // Adjusted line 3"}, {"line_number": 309, "modified_line": "# Mutant 11: // Adjusted line 4"}, {"line_number": 310, "modified_line": "# Mutant 11: // Adjusted line 5"}, {"line_number": 311, "modified_line": "# Mutant 11: // Adjusted line 6"}, {"line_number": 312, "modified_line": "# Mutant 11: // Adjusted line 7"}, {"line_number": 313, "modified_line": "# Mutant 11: // Adjusted line 8"}, {"line_number": 314, "modified_line": "# Mutant 11: // Adjusted line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 12: // Modified line 1"}, {"line_number": 307, "modified_line": "# Mutant 12: // Modified line 2"}, {"line_number": 308, "modified_line": "# Mutant 12: // Modified line 3"}, {"line_number": 309, "modified_line": "# Mutant 12: // Modified line 4"}, {"line_number": 310, "modified_line": "# Mutant 12: // Modified line 5"}, {"line_number": 311, "modified_line": "# Mutant 12: // Modified line 6"}, {"line_number": 312, "modified_line": "# Mutant 12: // Modified line 7"}, {"line_number": 313, "modified_line": "# Mutant 12: // Modified line 8"}, {"line_number": 314, "modified_line": "# Mutant 12: // Modified line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 13: // Altered line 1"}, {"line_number": 307, "modified_line": "# Mutant 13: // Altered line 2"}, {"line_number": 308, "modified_line": "# Mutant 13: // Altered line 3"}, {"line_number": 309, "modified_line": "# Mutant 13: // Altered line 4"}, {"line_number": 310, "modified_line": "# Mutant 13: // Altered line 5"}, {"line_number": 311, "modified_line": "# Mutant 13: // Altered line 6"}, {"line_number": 312, "modified_line": "# Mutant 13: // Altered line 7"}, {"line_number": 313, "modified_line": "# Mutant 13: // Altered line 8"}, {"line_number": 314, "modified_line": "# Mutant 13: // Altered line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 14: // Updated line 1"}, {"line_number": 307, "modified_line": "# Mutant 14: // Updated line 2"}, {"line_number": 308, "modified_line": "# Mutant 14: // Updated line 3"}, {"line_number": 309, "modified_line": "# Mutant 14: // Updated line 4"}, {"line_number": 310, "modified_line": "# Mutant 14: // Updated line 5"}, {"line_number": 311, "modified_line": "# Mutant 14: // Updated line 6"}, {"line_number": 312, "modified_line": "# Mutant 14: // Updated line 7"}, {"line_number": 313, "modified_line": "# Mutant 14: // Updated line 8"}, {"line_number": 314, "modified_line": "# Mutant 14: // Updated line 9"}]},
+        {"file_name": "/app/AutoGPT/defects4j/framework/core/Utils.pm", "insertions": [], "deletions": [304, 307, 308, 309, 310, 311, 312, 313, 314], "modifications": [{"line_number": 304, "modified_line": "# Mutant 15: // Revised line 1"}, {"line_number": 307, "modified_line": "# Mutant 15: // Revised line 2"}, {"line_number": 308, "modified_line": "# Mutant 15: // Revised line 3"}, {"line_number": 309, "modified_line": "# Mutant 15: // Revised line 4"}, {"line_number": 310, "modified_line": "# Mutant 15: // Revised line 5"}, {"line_number": 311, "modified_line": "# Mutant 15: // Revised line 6"}, {"line_number": 312, "modified_line": "# Mutant 15: // Revised line 7"}, {"line_number": 313, "modified_line": "# Mutant 15: // Revised line 8"}, {"line_number": 314, "modified_line": "# Mutant 

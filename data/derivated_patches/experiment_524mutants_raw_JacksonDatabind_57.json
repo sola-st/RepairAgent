@@ -1,0 +1,541 @@
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["// Adding a try-catch block to handle CharConversionException", "try {", ""]}]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["// Adding a check for null src before creating parser", "if (src == null) {", "return null;", "}"]}]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null, "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.trim(), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src.trim()), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src.getBytes()), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src.getCharStream()), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(new StringReader(src)), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(new ByteArrayInputStream(src.getBytes(\"UTF-8\"))), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "deletions": [1441]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["// Fixing the issue with CharConversionException by using UTF-8 encoding", "return _bindAndReadValues(_considerFilter(_parserFactory.createParser(new ByteArrayInputStream(src.getBytes(\"UTF-8\"))), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["// Using UTF-8 encoding when creating the parser", "return _bindAndReadValues(_considerFilter(_parserFactory.createParser(new ByteArrayInputStream(src.getBytes(\"UTF-8\"))), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["// Checking for null src before creating the parser", "if (src == null) {", "return null;", "}"]]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["// Adding a null check for src parameter", "if (src == null) {", "return null;", "}"]]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(new ByteArrayInputStream(src.getBytes())), "]}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(new ByteArrayInputStream(src.getBytes(\"UTF-8\"))), "]}]}
+][
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "someModificationsHere"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "someOtherModifications"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "someDifferentModifications"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "anotherModification"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "modificationHere"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "mutation"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "changeHere"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "adjustment"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "modification"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "fixHere"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "changeThis"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "fixThis"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "modificationRequired"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "adjustmentNeeded"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "potentialFix"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "bugFix"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "codeChange"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "updateRequired"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "improvement"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "enhancement"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "adjustment"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "modification"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "fixHere"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "changeThis"}]}
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), " + "fixThis"}]}
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new ObjectMapper())"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), MAPPER)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonFactory)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapper)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonParser)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new JsonFactory())"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new JsonParser())"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperFactory)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonReader)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonWriter)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new JsonReader())"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new JsonWriter())"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonGenerator)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new JsonGenerator())"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonNode)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperReader)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperWriter)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonNodeReader)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonNodeWriter)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperGenerator)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperParser)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonNodeGenerator)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonNodeParser)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperGeneratorFactory)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperParserFactory)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonNodeGeneratorFactory)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), jsonNodeParserFactory)"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), objectMapperGeneratorReader)"}]}
+]Here are 30 mutants of the target buggy line for the fix format:
+
+1. 
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}]
+```
+
+2.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+```
+
+3.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]}]
+```
+
+4.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"]}], "deletions": [], "modifications": []}]
+```
+
+5.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]}]
+```
+
+6.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"]}], "deletions": [1441], "modifications": []}]
+```
+
+7.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"]}], "deletions": [], "modifications": []}]
+```
+
+8.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"]}], "deletions": [1441], "modifications": []}]
+```
+
+9.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]}]
+```
+
+10.
+```json
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]}]
+```
+
+Please let me know if you need more mutations or assistance.```python
+# Mutant 1
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]}]
+
+# Mutant 2
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString());"}]}]
+
+# Mutant 3
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString());"}]}]
+
+# Mutant 4
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes());"}]}]
+
+# Mutant 5
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes());"}]}]
+
+# Mutant 6
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes('UTF-8'));"}]}]
+
+# Mutant 7
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes('UTF-8'));"}]}]
+
+# Mutant 8
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_8));"}]}]
+
+# Mutant 9
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_8));"}]}]
+
+# Mutant 10
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new String(src).getBytes(StandardCharsets.UTF_8));"}]}]
+
+# Mutant 11
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_16));"}]}]
+
+# Mutant 12
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_16));"}]}]
+
+# Mutant 13
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new String(src).getBytes(StandardCharsets.UTF_16));"}]}]
+
+# Mutant 14
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_32));"}]}]
+
+# Mutant 15
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_32));"}]}]
+
+# Mutant 16
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new String(src).getBytes(StandardCharsets.UTF_32));"}]}]
+
+# Mutant 17
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_16BE));"}]}]
+
+# Mutant 18
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_16BE));"}]}]
+
+# Mutant 19
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new String(src).getBytes(StandardCharsets.UTF_16BE));"}]}]
+
+# Mutant 20
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_16LE));"}]}]
+
+# Mutant 21
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_16LE));"}]}]
+
+# Mutant 22
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new String(src).getBytes(StandardCharsets.UTF_16LE));"}]}]
+
+# Mutant 23
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_32BE));"}]}]
+
+# Mutant 24
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_32BE));"}]}]
+
+# Mutant 25
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new String(src).getBytes(StandardCharsets.UTF_32BE));"}]}]
+
+# Mutant 26
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_32LE));"}]}]
+
+# Mutant 27
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_32LE));"}]}]
+
+# Mutant 28
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), new String(src).getBytes(StandardCharsets.UTF_32LE));"}]}]
+
+# Mutant 29
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.getBytes(StandardCharsets.UTF_8).clone());"}]}]
+
+# Mutant 30
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().getBytes(StandardCharsets.UTF_8).clone());"}]}
+```[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number":1441, "new_lines":["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [{"line_number": 1441, "new_lines": ["        // Inserted new line to handle the exception if src is null"]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [{"line_number": 1441, "new_lines": ["        // Inserted new line to handle the exception if CharConversionException occurs"]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [{"line_number": 1441, "new_lines": ["        // Inserted new line to log the exception message for debugging"]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [{"line_number": 1441, "new_lines": ["        // Inserted new line to retry reading values after catching CharConversionException"]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [{"line_number": 1441, "new_lines": ["        // Inserted new line to handle the invalid character in the input"]}], 
+"deletions": [], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [], 
+"deletions": [1441], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [], 
+"deletions": [1440, 1442], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [], 
+"deletions": [1441, 1443], 
+"modifications": []
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [], 
+"deletions": [1441], 
+"modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), // Modified to handle CharConversionException"}]
+},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], 
+"insertions": [], 
+"deletions": [1441], 
+"modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), // Updated to handle invalid character"}]
+}
+]```python
+# Mutant 1
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}]
+
+# Mutant 2
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+
+# Mutant 3
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null, "]}]
+
+# Mutant 4
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = null;"]}], "deletions": [], "modifications": []}]
+
+# Mutant 5
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(null, "]}]
+
+# Mutant 6
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}]
+
+# Mutant 7
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(null, "]}]
+
+# Mutant 8
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(null), "]}]
+
+# Mutant 9
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null, "]}], "deletions": [], "modifications": []}]
+
+# Mutant 10
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+
+# Mutant 11
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(null, "]}]
+
+# Mutant 12
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}]
+
+# Mutant 13
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(null, "]}]
+
+# Mutant 14
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+
+# Mutant 15
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(null, "]}]
+
+# Mutant 16
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null, "]}], "deletions": [], "modifications": []}]
+
+# Mutant 17
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+
+# Mutant 18
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(null, "]}]
+
+# Mutant 19
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null, "]}], "deletions": [], "modifications": []}]
+
+# Mutant 20
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+
+# Mutant 21
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(null, "]}]
+
+# Mutant 22
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}]
+
+# Mutant 23
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(null, "]}]
+
+# Mutant 24
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+
+# Mutant 25
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(null, "]}]
+
+# Mutant 26
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null, "]}], "deletions": [], "modifications": []}]
+
+# Mutant 27
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+
+# Mutant 28
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(null, "]}]
+
+# Mutant 29
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null, "]}], "deletions": [], "modifications": []}]
+
+# Mutant 30
+[{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [1441], "modifications": []}]
+```[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), null);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), \"\" + src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString());"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), String.valueOf(src));"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString() + \"extra\");"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), \"extra\" + src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src + \"extra\");"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), \"extra\".concat(src.toString()));"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src.toString().concat(\"extra\"));"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), src);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), null);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), \"\" + src);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), src.toString());"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), String.valueOf(src);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), src.toString() + \"extra\");"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), \"extra\" + src);"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), src + \"extra\");"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), \"extra\".concat(src.toString());"]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), src.toString().concat(\"extra\"));"]}], "deletions": [], "modifications": []}
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src, 0);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src, 1);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src, 2);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        "]}], "deletions": [], "modifications": []},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]}
+]```python
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        // Handle the CharConversionException here"]} ], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), src);"}]},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        // Add try-catch block to handle CharConversionException"]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []},
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        // Fix for CharConversionException: provide alternative source or handle the exception"]} ], "deletions": [], "modifications": []}
+]
+```[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+]
+
+[
+    {"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+][
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []}
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        src = _considerFilter(_parserFactory.createParser(src), "]}], "deletions": [], "modifications": []
+]
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [{"line_number": 1441, "new_lines": ["        try {", "            src = _considerFilter(_parserFactory.createParser(src),", "        } catch (CharConversionException e) {", "            // Handle the CharConversionException here", "        }"]}], "deletions": [], "modifications": []
+}
+
+[
+{"file_name": "com/fasterxml/jackson/databind/ObjectReader.java", "target_lines": [["1441", "        return _bindAndReadValues(_considerFilter(_parserFactory.createParser(src), "]], "insertions": [], "deletions": [], "modifications": [{"line_number": 1441, "modified_line": "        src = _considerFilter(_parserFactory.createParser(src), "}]
+}

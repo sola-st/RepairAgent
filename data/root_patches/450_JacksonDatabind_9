@@ -1,0 +1,40 @@
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 29, 'new_lines': ['gen.writeFieldName(String.valueOf(((Date) value).getTime()));']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'target_lines': [['28', '        if (value instanceof Date) {'], ['27', '//'], ['31', '//']], 'insertions': [{'line_number': 27, 'new_lines': ['            gen.writeFieldName(String.valueOf(value));']}, {'line_number': 31, 'new_lines': ['            return;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'target_lines': [['28', '        if (value instanceof Date) {'], ['27', '//'], ['31', '//']], 'insertions': [{'line_number': 27, 'new_lines': ['            gen.writeFieldName(String.valueOf(value));']}, {'line_number': 28, 'new_lines': ['            gen.writeFieldName(String.valueOf(value));']}, {'line_number': 31, 'new_lines': ['            return;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 27, 'new_lines': ['            if (value instanceof Date) {']}, {'line_number': 28, 'new_lines': ['                gen.writeFieldName(String.valueOf(((Date) value).getTime()));']}, {'line_number': 31, 'new_lines': ['                return;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 29, 'new_lines': ['            gen.writeFieldName(String.valueOf(((Date) value).getTime()));']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 29, 'new_lines': ['provider.defaultSerializeDateKey((Date) value, jgen);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 27, 'new_lines': ['            if (value instanceof Date) {', '                gen.writeFieldName(String.valueOf(((Date) value).getTime()));', '                return;']}, {'line_number': 28, 'new_lines': ['                gen.writeFieldName(String.valueOf(((Date) value).getTime()));']}, {'line_number': 31, 'new_lines': ['                return;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 29, 'new_lines': ['provider.defaultSerializeDateKey((Date) value, jgen);', 'return;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 28, 'new_lines': ['        if (value instanceof Date) {', '            gen.writeString(value.toString());', '            return;']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'target_lines': [['28', '        if (value instanceof Date) {'], ['27', '//'], ['31', '//']], 'insertions': [{'line_number': 27, 'new_lines': ['            gen.writeString(value.toString());']}, {'line_number': 28, 'new_lines': ['            gen.writeString(value.toString());']}, {'line_number': 31, 'new_lines': ['            return;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 29, 'new_lines': ['provider.defaultSerializeDateKey((Date) value, jgen);']}]}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 27, 'new_lines': ['            gen.writeFieldName(String.valueOf(value));']}, {'line_number': 28, 'new_lines': ['            gen.writeFieldName(String.valueOf(value));']}, {'line_number': 31, 'new_lines': ['            return;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/fasterxml/jackson/databind/ser/std/StdKeySerializer.java', 'insertions': [{'line_number': 29, 'new_lines': ['provider.defaultSerializeDateKey((Date) value, jgen);']}]}]
+
+

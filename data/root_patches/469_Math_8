@@ -1,0 +1,37 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [181, 187], 'modifications': [{'line_number': 181, 'modified_line': 'public void sample(String param1, int param2) {'}, {'line_number': 182, 'modified_line': '    // Implementation here'}, {'line_number': 183, 'modified_line': '    System.out.println("Param1: " + param1);'}, {'line_number': 184, 'modified_line': '    System.out.println("Param2: " + param2);'}, {'line_number': 185, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final Object[] out = java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final Object[] out = java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [{'line_number': 181, 'new_lines': ['        @SuppressWarnings("unchecked")', '        final T[] out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']}], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final Object[] out = java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [181, 187], 'modifications': [{'line_number': 181, 'modified_line': 'public void sample(String input) {'}, {'line_number': 182, 'modified_line': '    // Check if input is null'}, {'line_number': 183, 'modified_line': '    if (input == null) {'}, {'line_number': 184, 'modified_line': '        System.out.println("Input is null");'}, {'line_number': 185, 'modified_line': '        return;'}, {'line_number': 186, 'modified_line': '    }'}, {'line_number': 187, 'modified_line': '}'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [{'line_number': 181, 'new_lines': ['@SuppressWarnings("unchecked")', '        final T[] out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']}], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final Object[] out = java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [{'line_number': 187, 'new_lines': ['        @SuppressWarnings("unchecked")', '        final T[] out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']}], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': '        final T[] out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 181, 'modified_line': '    public Object[] sample(int sampleSize) throws NotStrictlyPositiveException {'}, {'line_number': 187, 'modified_line': '        final Object[] out = java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': 'final T[] out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 181, 'modified_line': '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'}, {'line_number': 187, 'modified_line': '        final T[] out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 187, 'modified_line': 'final Object[] out = java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math3/distribution/DiscreteDistribution.java', 'target_lines': [['181', '    public T[] sample(int sampleSize) throws NotStrictlyPositiveException {'], ['187', '        final T[]out = (T[]) java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);']], 'insertions': [], 'deletions': [181, 187], 'modifications': [{'line_number': 181, 'modified_line': '    public Object[] sample(int sampleSize) throws NotStrictlyPositiveException {'}, {'line_number': 187, 'modified_line': '        final Object[] out = java.lang.reflect.Array.newInstance(singletons.get(0).getClass(), sampleSize);'}]}]
+
+

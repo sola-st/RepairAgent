@@ -1,0 +1,917 @@
+
+  {
+    "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+    "insertions": [],
+    "deletions": [122, 123, 124],
+    "modifications": [
+      {
+        "line_number": 122,
+        "modified_line": "// Mutant 1: Adding a comment here"
+      },
+      {
+        "line_number": 123,
+        "modified_line": "// Mutant 2: Adding a comment here"
+      },
+      {
+        "line_number": 124,
+        "modified_line": "// Mutant 3: Adding a comment here"
+      }
+    ]
+  }
+  
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "addExpr(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "cc.addOp(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutated line - changing operator priority\naddExpr(last, p - 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutated line - handling null check\nif (first != null) addExpr(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "cc.addOp(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "addExpr(last, p + 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "addExpr(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutated line - adding debug log\nSystem.out.println(\"Adding operator: \" + opstr); cc.addOp(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "addExpr(last, p + 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "addExpr(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "cc.addOp(opstr, false); // Mutated line - changed boolean parameter"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "addExpr(last, p + 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "addExpr(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "cc.addOp(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutated line - changing context\naddExpr(last, p + 1, getContextForNoInOperator(context));"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodePrinter.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 334,
+                    "modified_line": "// Mutated line - checking for special character\nif (getLastChar() == ';') {"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 122, "modified_line": "addExpr(first, p, context); // Mutation 1: Modified line to include a comment"},
+                {"line_number": 123, "modified_line": "cc.addOp(opstr, true); // Mutation 1: Modified line to include a comment"},
+                {"line_number": 124, "modified_line": "addExpr(last, p + 1, rhsContext); // Mutation 1: Modified line to include a comment"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 122, "modified_line": "addExpr(first, p, context); // Mutation 2: Modified line to simplify the expression"},
+                {"line_number": 123, "modified_line": "cc.addOp(opstr, false); // Mutation 2: Modified line to change boolean value"},
+                {"line_number": 124, "modified_line": "addExpr(last, p, rhsContext); // Mutation 2: Modified line to use same context as first"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 122, "modified_line": "addExpr(first, p, context); // Mutation 3: Modified line to use different context"},
+                {"line_number": 123, "modified_line": "cc.addOp(opstr, true); // Mutation 3: Reverted line to original"},
+                {"line_number": 124, "modified_line": "addExpr(last, p - 1, rhsContext); // Mutation 3: Modified line to subtract from p"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 122, "modified_line": "addExpr(first, p, context); // Mutation 4: Modified line to keep only the first parameter"},
+                {"line_number": 123, "modified_line": "cc.addOp(opstr, false); // Mutation 4: Modified line to change boolean value"},
+                {"line_number": 124, "modified_line": "addExpr(last, p + 1, rhsContext); // Mutation 4: Reverted line to original"}
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodePrinter.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {"line_number": 334, "modified_line": "if (getLastChar() == ' ') { // Mutation 5: Changed inequality comparison to equality"}
+            ]
+        }
+    ]
+}
+{
+    "fixes": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 1: Changing addExpr to add instead\nadd(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 1: Changing cc.addOp to cc.add\ncc.add(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 1: Changing addExpr to add instead\nadd(last, p + 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 2: Swapping addExpr arguments p and context\nadd(first, context, p);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 2: Changing cc.addOp to cc.add with false argument\ncc.add(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 2: Changing p + 1 to p - 1\nadd(last, p - 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 3: Adding 1 to p in addExpr call\nadd(first, p + 1, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 3: Removing true argument from cc.addOp\ncc.addOp(opstr);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 3: Changing rhsContext to context in addExpr call\nadd(last, p + 1, context);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 4: Adding 2 to p in addExpr call\nadd(first, p + 2, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 4: Changing opstr to reverse of itself\ncc.addOp(rtspo, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 4: Removing 1 from p in addExpr call\nadd(last, p, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 5: Changing addExpr to add and adding 1 to p\nadd(first, p + 1, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 5: Changing true to false in cc.addOp call\ncc.addOp(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 5: Changing rhsContext to context in addExpr call\nadd(last, p + 1, context);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodePrinter.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 334,
+                    "modified_line": "// Mutant 6: Changing getLastChar to getFirstChar\nif (getFirstChar() != ' ') {"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 1: Changing condition to prevent excessive recursion\nif (p >= MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 1: Changing condition to prevent excessive recursion\nif (p >= MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 1: Changing condition to prevent excessive recursion\nif (p >= MAX_DEPTH) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 2: Adjusting depth for recursion limit\nif (p >= MAX_DEPTH - 1) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 2: Adjusting depth for recursion limit\nif (p >= MAX_DEPTH - 1) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 2: Adjusting depth for recursion limit\nif (p >= MAX_DEPTH - 1) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 3: Adding additional check for recursion depth\nif (p > MAX_DEPTH + 1) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 3: Adding additional check for recursion depth\nif (p > MAX_DEPTH + 1) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 3: Adding additional check for recursion depth\nif (p > MAX_DEPTH + 1) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 4: Modifying recursion depth condition\nif (p >= MAX_DEPTH / 2) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 4: Modifying recursion depth condition\nif (p >= MAX_DEPTH / 2) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 4: Modifying recursion depth condition\nif (p >= MAX_DEPTH / 2) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 5: Changing recursion depth threshold\nif (p > MAX_DEPTH * 2) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 5: Changing recursion depth threshold\nif (p > MAX_DEPTH * 2) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 5: Changing recursion depth threshold\nif (p > MAX_DEPTH * 2) return;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Modifying base case condition to prevent excessive recursion\nif (p >= MAX_DEPTH) return;"}, {"line_number": 123, "modified_line": "// Modifying base case condition to prevent excessive recursion\nif (p >= MAX_DEPTH) return;"}, {"line_number": 124, "modified_line": "// Modifying base case condition to prevent excessive recursion\nif (p >= MAX_DEPTH) return;"}, {"line_number": 754, "modified_line": "// Modifying base case condition to prevent excessive recursion\nif (p >= MAX_DEPTH) return;"}]},
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Adjusting recursion depth limit\nif (p > MAX_DEPTH - 1) return;"}, {"line_number": 123, "modified_line": "// Adjusting recursion depth limit\nif (p > MAX_DEPTH - 1) return;"}, {"line_number": 124, "modified_line": "// Adjusting recursion depth limit\nif (p > MAX_DEPTH - 1) return;"}, {"line_number": 754, "modified_line": "// Adjusting recursion depth limit\nif (p > MAX_DEPTH - 1) return;"}]},
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Fixing recursion depth check\nif (p >= MAX_DEPTH - 1) return;"}, {"line_number": 123, "modified_line": "// Fixing recursion depth check\nif (p >= MAX_DEPTH - 1) return;"}, {"line_number": 124, "modified_line": "// Fixing recursion depth check\nif (p >= MAX_DEPTH - 1) return;"}, {"line_number": 754, "modified_line": "// Fixing recursion depth check\nif (p >= MAX_DEPTH - 1) return;"}]},
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Updating recursion depth condition\nif (p < MAX_DEPTH) {}"}, {"line_number": 123, "modified_line": "// Updating recursion depth condition\nif (p < MAX_DEPTH) {}"}, {"line_number": 124, "modified_line": "// Updating recursion depth condition\nif (p < MAX_DEPTH) {}"}, {"line_number": 754, "modified_line": "// Updating recursion depth condition\nif (p < MAX_DEPTH) {}"}]},
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Limiting recursion depth\nif (p < MAX_DEPTH) return;"}, {"line_number": 123, "modified_line": "// Limiting recursion depth\nif (p < MAX_DEPTH) return;"}, {"line_number": 124, "modified_line": "// Limiting recursion depth\nif (p < MAX_DEPTH) return;"}, {"line_number": 754, "modified_line": "// Limiting recursion depth\nif (p < MAX_DEPTH) return;"}]},
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Adding depth check to prevent stack overflow\nif (p >= MAX_DEPTH) return;"}, {"line_number": 123, "modified_line": "// Adding depth check to prevent stack overflow\nif (p >= MAX_DEPTH) return;"}, {"line_number": 124, "modified_line": "// Adding depth check to prevent stack overflow\nif (p >= MAX_DEPTH) return;"}, {"line_number": 754, "modified_line": "// Adding depth check to prevent stack overflow\nif (p >= MAX_DEPTH) return;"}]},
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Fixing recursive depth limit\nif (p <= MAX_DEPTH) return;"}, {"line_number": 123, "modified_line": "// Fixing recursive depth limit\nif (p <= MAX_DEPTH) return;"}, {"line_number": 124, "modified_line": "// Fixing recursive depth limit\nif (p <= MAX_DEPTH) return;"}, {"line_number": 754, "modified_line": "// Fixing recursive depth limit\nif (p <= MAX_DEPTH) return;"}]},
+        {"file_name": "com/google/javascript/jscomp/CodeGenerator.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 122, "modified_line": "// Adjusting recursion limit\nif (p < MAX_DEPTH) return;"}, {"line_number": 123, "modified_line": "// Adjusting recursion limit\nif (p < MAX_DEPTH) return;"}, {"line_number": 124, "modified_line": "// Adjusting recursion limit\nif (p < MAX_DEPTH) return;"}, {"line_number": 754, "modified_line": "// Adjusting recursion limit\nif (p < MAX_DEPTH) return;"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Modifying condition to prevent stack overflow\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Adding check to prevent overflow\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Updating condition to avoid stack overflow\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Fixing stack overflow possibility\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Adjusting condition to prevent overflow\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Limiting recursion depth\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Adding depth check to prevent stack overflow\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Fixing recursive depth limit\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Adjusting recursion limit\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]},
+        {"file_name": "com/google/javascript/jscomp/CodePrinter.java", "insertions": [], "deletions": [], "modifications": [{"line_number": 334, "modified_line": "// Modifying base case condition to prevent excessive recursion\nif (getLastChar() != ' ' && p < MAX_DEPTH) {"}]}
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 122, "modified_line": "// Changing recursive call to addExpr(first, p + 1, context);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 123, "modified_line": "// Changing recursive call to cc.addOp(opstr, true);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 124, "modified_line": "// Changing recursive call to addExpr(last, p, rhsContext);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 122, "modified_line": "// Modifying recursive call to addExpr(first, p, newContext);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 123, "modified_line": "// Modifying recursive call to cc.addOp(opstr, false);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 124, "modified_line": "// Modifying recursive call to addExpr(last, p - 1, rhsContext);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 754, "modified_line": "// Changing list separator logic here"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodePrinter.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 334, "modified_line": "// Modifying getLastChar() condition to check for a different character"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 122, "modified_line": "// Refactoring addExpr call for better performance\naddExpr(first, p, context);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 123, "modified_line": "// Refactoring cc.addOp call for better performance\ncc.addOp(opstr, true);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 124, "modified_line": "// Refactoring addExpr call for better performance\naddExpr(last, p + 1, rhsContext);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 122, "modified_line": "// Improving recursion depth in addExpr(first, p, context);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 123, "modified_line": "// Improving recursion depth in cc.addOp(opstr, true);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 124, "modified_line": "// Improving recursion depth in addExpr(last, p + 1, rhsContext);"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [{"line_number": 754, "modified_line": "// Modifying list separator behavior for optimization"}]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 122, "new_lines": ["// Inserting new line for additional check\nif (first == null) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 123, "new_lines": ["// Inserting new line for special case handling\nif (opstr.equals(\"specialCase\")) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 124, "new_lines": ["// Inserting new line for edge case scenario\nif (last == null) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 122, "new_lines": ["// Add null check for first before recursive call\nif (first == null) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 123, "new_lines": ["// Add validation check before calling cc.addOp\nif (opstr.isEmpty()) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 124, "new_lines": ["// Add safety check for last node before processing\nif (last == null) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 122, "new_lines": ["// Handling null case for first in addExpr call\nif (first == null) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 123, "new_lines": ["// Check for special condition before cc.addOp call\nif (opstr.equals(\"special\")) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 124, "new_lines": ["// Handle null case for last node in recursive call\nif (last == null) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [{"line_number": 754, "new_lines": ["// Add condition to check for special case in listSeparator\nif (cc.needsSpecialHandling()) return;"]}],
+            "deletions": [],
+            "modifications": []
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodePrinter.java",
+            "insertions": [{"line_number": 334, "new_lines": ["// Add check for additional condition in getLastChar\nif (getLastChar() == 'X') return;"]}],
+            "deletions": [],
+            "modifications": []
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 1: Changing addExpr call arguments\naddExpr(p, first, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 1: Changing cc.addOp arguments\ncc.addOp(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 1: Changing addExpr call arguments\naddExpr(p + 1, last, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 2: Swapping the order of addExpr arguments\naddExpr(p, context, first);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 2: Removing the boolean argument from cc.addOp\nc.addOp(opstr);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 2: Swapping the order of addExpr arguments\naddExpr(p + 1, rhsContext, last);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 3: Adding 1 to the first argument of addExpr\naddExpr(first + 1, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 3: Changing cc.addOp method call\ncc.addOp(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 3: Adding 1 to the first argument of addExpr\naddExpr(last + 1, p, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 4: Adding 10 to the second argument of addExpr\naddExpr(first, p + 10, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 4: Changing cc.addOp method call\ncc.addOp(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 4: Adding 10 to the second argument of addExpr\naddExpr(last, p + 10, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 5: Changing addExpr call arguments to constants\naddExpr(0, 0, 0);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 5: Changing cc.addOp arguments\nc.addOp(\"newOp\", true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 5: Changing addExpr call arguments to constants\naddExpr(1, 1, 1);"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutated: Changing condition to check for p < MAX_DEPTH instead of p > MAX_DEPTH\nif (p < MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutated: Changing condition to check for p < MAX_DEPTH instead of p > MAX_DEPTH\nif (p < MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutated: Changing condition to check for p < MAX_DEPTH instead of p > MAX_DEPTH\nif (p < MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 754,
+                    "modified_line": "// Mutated: Changing condition to check for p < MAX_DEPTH instead of p > MAX_DEPTH\nif (p < MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 334,
+                    "modified_line": "// Mutated: Changing condition to check for p < MAX_DEPTH instead of p > MAX_DEPTH\nif (getLastChar() != ' ') {"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutated: Replacing return with a log message\nif (p > MAX_DEPTH) System.out.println(\"Excessive recursion detected at p = \" + p);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutated: Replacing return with a log message\nif (p > MAX_DEPTH) System.out.println(\"Excessive recursion detected at p = \" + p);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutated: Replacing return with a log message\nif (p > MAX_DEPTH) System.out.println(\"Excessive recursion detected at p = \" + p);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutated: Adding a counter to track recursive calls\nint recursiveCalls = 0;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutated: Adding a counter to track recursive calls\nint recursiveCalls = 0;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutated: Adding a counter to track recursive calls\nint recursiveCalls = 0;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutated: Changing context variable name for clarity\nif (p > MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutated: Changing context variable name for clarity\nif (p > MAX_DEPTH) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutated: Changing context variable name for clarity\nif (p > MAX_DEPTH) return;"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutated: Adding a check for null context\nif (p > MAX_DEPTH && context != null) return;"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutated: Adding a check for null context\nif (p > MAX_DEPTH && context != null) return;"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutated: Adding a check for null context\nif (p > MAX_DEPTH && context != null) return;"
+                }
+            ]
+        }
+    ]
+}
+{
+    "mutations": [
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 1: Changing addExpr method call arguments\naddExpr(first, p - 1, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 1: Changing addOp method call arguments\ncc.addOp(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 1: Changing addExpr method call arguments\naddExpr(last, p + 2, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 2: Changing addExpr method call arguments\naddExpr(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 2: Changing addOp method call arguments\ncc.addOp(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 2: Changing addExpr method call arguments\naddExpr(last, p + 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 3: Changing addExpr method call arguments\naddExpr(first, p + 1, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 3: Changing addOp method call arguments\ncc.addOp(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 3: Changing addExpr method call arguments\naddExpr(last, p, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 4: Changing addExpr method call arguments\naddExpr(first, p - 2, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 4: Changing addOp method call arguments\ncc.addOp(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 4: Changing addExpr method call arguments\naddExpr(last, p, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 5: Changing addExpr method call arguments\naddExpr(first, p, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 5: Changing addOp method call arguments\ncc.addOp(opstr, false);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 5: Changing addExpr method call arguments\naddExpr(last, p - 1, rhsContext);"
+                }
+            ]
+        },
+        {
+            "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+            "insertions": [],
+            "deletions": [],
+            "modifications": [
+                {
+                    "line_number": 122,
+                    "modified_line": "// Mutant 6: Changing addExpr method call arguments\naddExpr(first, p + 1, context);"
+                },
+                {
+                    "line_number": 123,
+                    "modified_line": "// Mutant 6: Changing addOp method call arguments\ncc.addOp(opstr, true);"
+                },
+                {
+                    "line_number": 124,
+                    "modified_line": "// Mutant 6: Changing addExpr method call arguments\naddExpr(last, p + 2, rhsContext);"
+                }
+            ]
+        }
+    ]
+}
+    {
+        "file_name": "com/google/javascript/jscomp/CodeGenerator.java",
+        "insertions": [],
+        "deletions": [],
+        "modifications": [
+            {
+                "line_number": 122,
+                "modified_line": "// Modifying parameter values to prevent StackOverflowError\naddExpr(p, first, context);"
+            },
+            {
+                "line_number": 123,
+                "modified_line": "// Modifying parameter values to prevent StackOverflowError\ncc.addOp(true, opstr);"
+            },
+            {
+                "line_number": 124,
+                "modified_line": "// Modifying parameter values to prevent StackOverflowError\naddExpr(p + 1, last, rhsContext);"
+            }
+        ]
+    }

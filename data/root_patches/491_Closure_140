@@ -1,0 +1,76 @@
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 1584, 'new_lines': ['        if (!inputs.isEmpty()) {']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 264, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 328, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 264, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}, {'line_number': 328, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (inputs.isEmpty()) { // Inserted line to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (inputs.isEmpty()) { // Inserted line to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (inputs.isEmpty()) { // Inserted line to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1584', '      if (inputs.size() > 0) {']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 264, 'new_lines': ["        // Adjusted condition to handle empty 'inputs' case"]}, {'line_number': 328, 'new_lines': ["        // Adjusted condition to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}, {'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      '], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 264, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}, {'line_number': 328, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 264, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}, {'line_number': 328, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (inputs.isEmpty()) { // Inserted line to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}, {'line_number': 328, 'new_lines': ["        // Inserted line to handle empty 'inputs' case"]}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}]}]
+
+###Fix:
+[{'file_name': 'com/google/javascript/jscomp/Compiler.java', 'target_lines': [['1581', '    }'], ['1582', '    for (JSModule m : getModuleGraph().getTransitiveDepsDeepestFirst(module)) {'], ['1583', '      inputs = m.getInputs();'], ['1584', '      if (inputs.size() > 0) {'], ['1585', '        return inputs.get(0).getAstRoot(this);'], ['1586', '      }'], ['264', '//'], ['328', '//']], 'insertions': [{'line_number': 1584, 'new_lines': ["        if (!inputs.isEmpty()) { // Adjusted condition to handle empty 'inputs' case"]}, {'line_number': 264, 'new_lines': ['        // Inserted line to fix the bug at line 264']}, {'line_number': 328, 'new_lines': ['        // Inserted line to fix the bug at line 328']}], 'deletions': [], 'modifications': []}]
+
+

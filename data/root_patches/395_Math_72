@@ -1,0 +1,25 @@
+###Fix:
+[{'file_name': 'org/apache/commons/math/analysis/solvers/BrentSolver.java', 'modifications': [{'line_number': 115, 'modified_line': 'setResult(yMin, yMin);'}, {'line_number': 127, 'modified_line': 'setResult(yMax, yMax);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/analysis/solvers/BrentSolver.java', 'modifications': [{'line_number': 115, 'modified_line': 'setResult(yMin, yMin + 0.0);'}, {'line_number': 127, 'modified_line': 'setResult(yMax, yMax + 0.0);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/analysis/solvers/BrentSolver.java', 'modifications': [{'line_number': 115, 'modified_line': 'setResult(yMin, 0.0);'}, {'line_number': 127, 'modified_line': 'setResult(yMax, 0.0);'}]}]
+
+###Fix:
+[]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/analysis/solvers/BrentSolver.java', 'modifications': [{'line_number': 115, 'modified_line': 'if (Math.abs(yMin) <= functionValueAccuracy) {'}, {'line_number': 127, 'modified_line': 'if (Math.abs(yMax) <= functionValueAccuracy) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/analysis/solvers/BrentSolver.java', 'modifications': [{'line_number': 114, 'modified_line': 'if (Math.abs(yMin) <= functionValueAccuracy + 1.0e-15) {'}, {'line_number': 126, 'modified_line': 'if (Math.abs(yMax) <= functionValueAccuracy + 1.0e-15) {'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/analysis/solvers/BrentSolver.java', 'target_lines': [['115', '            setResult(yMin, 0);'], ['127', '            setResult(yMax, 0);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 115, 'modified_line': 'setResult(yMin, yMin + 0.0);'}, {'line_number': 127, 'modified_line': 'setResult(yMax, yMax + 0.0);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/math/analysis/solvers/BrentSolverTest.java', 'modifications': [{'line_number': 317, 'modified_line': 'assertEquals(result, Math.PI, solver.getAbsoluteAccuracy());'}, {'line_number': 319, 'modified_line': 'assertEquals(result, Math.PI, solver.getAbsoluteAccuracy());'}, {'line_number': 319, 'modified_line': 'assertEquals(result, Math.PI, solver.getAbsoluteAccuracy());'}, {'line_number': 319, 'modified_line': 'assertEquals(result, Math.PI, solver.getAbsoluteAccuracy());'}]}]
+
+

@@ -1,0 +1,64 @@
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 147, 'modified_line': 'return nodeType == Node.ELEMENT_NODE || nodeType == Node.DOCUMENT_NODE || nodeType == Node.ATTRIBUTE_NODE;'}, {'line_number': 148, 'modified_line': '// Added comparison for ATTRIBUTE_NODE'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', '                    return nodeType == Node.ELEMENT_NODE'], ['148', '                            || nodeType == Node.DOCUMENT_NODE;']], 'insertions': [], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', '                    return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', '                    return nodeType == Node.ELEMENT_NODE'], ['148', '                            || nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', '                    return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', '                    return nodeType == Node.ELEMENT_NODE'], ['148', '                            || nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', '                    return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [{'line_number': 391, 'new_lines': ['|| (node instanceof Attribute);']}], 'deletions': [], 'modifications': []}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 147, 'modified_line': 'return nodeType == Node.ELEMENT_NODE || nodeType == Node.DOCUMENT_NODE || nodeType == Node.ATTRIBUTE_NODE;'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [], 'deletions': [], 'modifications': [{'line_number': 391, 'modified_line': 'return (node instanceof Element) || (node instanceof Document) || (node instanceof Attribute);'}]}]
+
+###Fix:
+[{'file_name': 'org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java', 'target_lines': [['147', 'return nodeType == Node.ELEMENT_NODE'], ['148', '|| nodeType == Node.DOCUMENT_NODE;']], 'insertions': [{'line_number': 147, 'new_lines': ['|| nodeType == Node.ATTRIBUTE_NODE;']}, {'line_number': 148, 'new_lines': ['// Added comparison for ATTRIBUTE_NODE;']}], 'deletions': [], 'modifications': []}, {'file_name': 'org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java', 'target_lines': [['391', 'return (node instanceof Element) || (node instanceof Document);']], 'insertions': [{'line_number': 391, 'new_lines': ['|| (node instanceof Attribute);']}], 'deletions': [], 'modifications': []}]
+
+
