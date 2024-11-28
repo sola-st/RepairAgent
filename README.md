@@ -153,11 +153,14 @@ Documentation for this feature is forthcoming in version 0.7.0. We are working o
 
 ---
 
-## 🔧 IV. Our Patches
+## 📊 IV. Our Data
 
-In our experiments, we utilized RepairAgent on the Defects4J dataset, successfully fixing 164 bugs. You can view:
-- The list of fixed bugs [here](./final_list_of_fixed_bugs).
-- The implementation details of the patches in [this file](./fixes_implementation).
+In our experiments, we utilized RepairAgent on the Defects4J dataset, successfully fixing 164 bugs. You can check our data under the folder data.
+- The list of fixed bugs [here](./data/final_list_of_fixed_bugs).
+- The implementation details of the patches in [this file](./data/fixes_implementation).
+- The folder **data/root_patches** contains patches produced by RepairAgent in the main phase
+- The folder **data/derivated_pathces** contains patches obtained by mutating **root_patches**
+- Comming soon: plausible patches
 
 Note: RepairAgent encountered exceptions due to Middleware errors in 29 bugs, which were not re-run.
 
