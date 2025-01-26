@@ -1,0 +1,33 @@
+Experiment Results: experiment_60
+
+Number of Bugs: 2
+Correctly fixed bugs: 1
+Total Suggested Fixes: 4
+
+The list of suggested fixes:
+Cli_8
+
+###Fix:
+Lines:['812', '813', '814', '815', '816', '817', '818', '819', '820'] from file /workspace/Auto-GPT/auto_gpt_workspace/cli_8_buggy/src/java/org/apache/commons/cli/HelpFormatter.java were replaced with the following:
+{'812': 'pos = findWrapPos(text, width, 0);', '813': 'if (pos == -1) { sb.append(rtrim(text)); return sb; }', '814': 'sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);', '815': 'final String padding = createPadding(nextLineTabStop);', '816': 'while (true) {', '817': 'text = padding + text.substring(pos).trim();', '818': 'pos = findWrapPos(text, width, nextLineTabStop);', '819': 'if (pos == -1) { sb.append(text); return sb; }', '820': 'sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);'}
+
+###Fix:
+Lines:['812', '813', '814', '815', '816', '817', '818', '819', '820'] from file /workspace/Auto-GPT/auto_gpt_workspace/cli_8_buggy/src/java/org/apache/commons/cli/HelpFormatter.java were replaced with the following:
+{'812': 'pos = findWrapPos(text, width, nextLineTabStop);', '813': 'if (pos == -1) { sb.append(rtrim(text)); return sb; }', '814': 'sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);', '815': 'final String padding = createPadding(nextLineTabStop);', '816': 'while (true) {', '817': 'text = padding + text.substring(pos).trim();', '818': 'pos = findWrapPos(text, width, nextLineTabStop);', '819': 'if (pos == -1) { sb.append(text); return sb; }', '820': 'sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);'}
+
+###Fix:
+Lines:['812', '813', '814', '815', '816', '817', '818', '819', '820'] from file /workspace/Auto-GPT/auto_gpt_workspace/cli_8_buggy/src/java/org/apache/commons/cli/HelpFormatter.java were replaced with the following:
+{'812': 'pos = findWrapPos(text, width, nextLineTabStop);', '813': 'if (pos == -1) { sb.append(rtrim(text)); return sb; }', '814': 'sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);', '815': 'final String padding = createPadding(nextLineTabStop);', '816': 'while (true) {', '817': 'text = padding + text.substring(pos).trim();', '818': 'pos = findWrapPos(text, width, nextLineTabStop);', '819': 'if (pos == -1) { sb.append(text); return sb; }', '820': 'sb.append(rtrim(text.substring(0, pos))).append(defaultNewLine);'}
+
+Chart_1
+
+###Fix:
+Lines:['1797'] from file org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java were replaced with the following:
+{'1797': 'if (dataset == null) {'}
+
++----------+-----------------+-----------------+-------------------+
+| Log File | Correctly Fixed | Suggested Fixes | Number of Queries |
++----------+-----------------+-----------------+-------------------+
+| Cli_8    |        No       |        3        |         32        |
+| Chart_1  |       Yes       |        1        |         10        |
++----------+-----------------+-----------------+-------------------+
