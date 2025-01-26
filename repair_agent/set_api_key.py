@@ -20,11 +20,11 @@ def replace_placeholder(file_path, placeholder, new_value):
 
 def main():
     files_and_placeholders = [
-        ("/app/AutoGPT/autogpt/commands/defects4j_static.py", "API-KEY-PLACEHOLDER"),
-        ("/app/AutoGPT/autogpt/commands/defects4j.py", "API-KEY-PLACEHOLDER"),
-        ("/app/AutoGPT/autogpt/.env", "GLOBAL-API-KEY-PLACEHOLDER"),
-        ("/app/AutoGPT/run.sh", "GLOBAL-API-KEY-PLACEHOLDER"),
-        ("/app/AutoGPT/.env", "GLOBAL-API-KEY-PLACEHOLDER"),
+        ("autogpt/commands/defects4j_static.py", "API-KEY-PLACEHOLDER"),
+        ("autogpt/commands/defects4j.py", "API-KEY-PLACEHOLDER"),
+        ("autogpt/.env", "GLOBAL-API-KEY-PLACEHOLDER"),
+        ("run.sh", "GLOBAL-API-KEY-PLACEHOLDER"),
+        (".env", "GLOBAL-API-KEY-PLACEHOLDER"),
     ]
 
     print("Please provide your OpenAI API-KEY.")
