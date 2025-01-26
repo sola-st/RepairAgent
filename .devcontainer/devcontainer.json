@@ -9,7 +9,7 @@
 			"installTools": true,
 			"version": "3.10"
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -18,7 +18,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y openjdk-11-jdk && cd repair_agent/defects4j && sudo apt-get install -y cpanminus && cpanm --installdeps . && ./init.sh && sudo apt-get install -y libdbi-perl",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
