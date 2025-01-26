@@ -32,19 +32,22 @@ You have two ways to use RepairAgent:
 ### **STEP 1: Open RepairAgent in a DevContainer**
 
 1. Ensure you have the **Dev Containers** extension installed in VS Code. You can install it from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+
 2. Clone the RepairAgent repository:
 
    ```bash
    git clone https://github.com/your-organization/RepairAgent.git
    cd RepairAgent
-   cd repair-agent
+   cd repair_agent
    rm -rf defects4j
    git clone https://github.com/rjust/defects4j.git
-   cd ..
+   cd ../..
    ```
 
 3. Open the repository folder in VS Code.
+
 4. When prompted by VS Code to "Reopen in Container," click it. If not prompted, open the Command Palette (Ctrl+Shift+P) and select "Dev Containers: Reopen in Container." VS Code will now build and start the DevContainer, setting up the environment for you.
+
 5. Within your VS Code terminal, move to the folder repair_agent
     ```bash
     cd repair_agent
