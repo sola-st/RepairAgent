@@ -935,9 +935,6 @@ please use the indicated format and produce a list, like this:
         end_i = prompt_text.find(".\n2.")
         in_between = prompt_text[start_i:end_i]
         project_name, bug_index= in_between.replace("bug within the project ", "").replace(' and bug index ', " ").replace('"', "").split(" ")[:2]
-        
-        #with open("experimental_setups/experiments_list.txt") as eht:
-        #    exps = eht.read().splitlines()
 
         exps = self.exps
         with open(os.path.join("experimental_setups", exps[-1], "logs", "prompt_history_{}_{}".format(project_name, bug_index)), "a+") as patf:

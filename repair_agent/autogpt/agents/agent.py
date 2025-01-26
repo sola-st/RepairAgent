@@ -25,7 +25,7 @@ from autogpt.logs.log_cycle import (
     LogCycleHandler,
 )
 from autogpt.workspace import Workspace
-from autogpt.commands.defects4j_static import query_for_mutants, construct_fix_command, get_list_of_buggy_lines, get_detailed_list_of_buggy_lines
+from autogpt.commands.defects4j_static import query_for_mutants, construct_fix_command, get_detailed_list_of_buggy_lines
 
 from .base import AgentThoughts, BaseAgent, CommandArgs, CommandName
 
@@ -68,10 +68,6 @@ class Agent(BaseAgent):
         if kwargs.get("prepend_messages") is None:
             kwargs["prepend_messages"] = []
 
-        # Clock
-        #kwargs["prepend_messages"].append(
-        #    Message("system", f"The current time and date is {time.strftime('%c')}"),
-        #)
 
         # Add budget information (if any) to prompt
         api_manager = ApiManager()
@@ -182,9 +178,6 @@ class Agent(BaseAgent):
     ) -> tuple[CommandName | None, CommandArgs | None, AgentThoughts]:
         if not llm_response.content:
             raise SyntaxError("Assistant response has no text content")
-        
-        #with open("experimental_setups/experiments_list.txt") as eht:
-        #    exps = eht.read().splitlines()
 
         exps = self.exps
         with open(os.path.join("experimental_setups", exps[-1], "responses", "model_responses_{}_{}".format(self.project_name, self.bug_index)), "a+") as patf:
@@ -253,8 +246,6 @@ class Agent(BaseAgent):
                 
                 # Asking main agent for mutants
                 mutants = query_for_mutants(mutant_prompt)
-                #with open("experimental_setups/experiments_list.txt") as eht:
-                #    exps = eht.read().splitlines()
                 
                 exps = self.exps
                 existing_mutants = []
