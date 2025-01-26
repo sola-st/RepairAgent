@@ -71,10 +71,10 @@ By default, RepairAgent is configured to run on Defects4J bugs. To specify which
 2. Run the following command:
 
    ```bash
-   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparameters.json
+   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json
    ```
 
-You can open the `hyperparameters.json` file to review or customize its parameters (explained further in the customization section).
+You can open the `hyperparams.json` file to review or customize its parameters (explained further in the customization section).
 
 
 **If you went with this option, you can jump to section `4.1 What Happens When You Start RepairAgent?` to see more details on the results of running RepairAgent.**
@@ -123,10 +123,10 @@ By default, RepairAgent is configured to run on Defects4J bugs. To specify which
 2. Run the following command:
 
    ```bash
-   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparameters.json
+   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json
    ```
 
-You can open the `hyperparameters.json` file to review or customize its parameters (explained further in the customization section).
+You can open the `hyperparams.json` file to review or customize its parameters (explained further in the customization section).
 
 #### **4.1 What Happens When You Start RepairAgent?**
 
