@@ -37,6 +37,10 @@ You have two ways to use RepairAgent:
    ```bash
    git clone https://github.com/your-organization/RepairAgent.git
    cd RepairAgent
+   cd repair-agent
+   rm -rf defects4j
+   git clone https://github.com/rjust/defects4j.git
+   cd ..
    ```
 
 3. Open the repository folder in VS Code.
