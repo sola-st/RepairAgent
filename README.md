@@ -301,7 +301,7 @@ This part is about running RepairAgent on full evaluation datasets to replicate 
 ### Replicate GitBugsJava Experiment
 GitBugsJava is another dataset for program repair evaluation.
  
- 1. First,prepare the GitBugsJava VM. Since this dataset requires a heavy VM (at least 140 GB of disk), we could not include it in this artifact. We add more detailed instruction on how to prepare such VM. Please check the step by step process here: https://github.com/gitbugactions/gitbug-java
+ 1. First,prepare the GitBugsJava VM. Since this dataset requires a heavy VM (at least 140 GB of disk), we could not include it in this artifact. We added more detailed instruction on how to prepare such VM. Please check the step by step process here: https://github.com/gitbugactions/gitbug-java
 
  2. Copy the repository of RepairAgent inside the VM.
 
