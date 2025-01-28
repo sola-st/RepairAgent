@@ -267,8 +267,7 @@ In our experiments, we utilized RepairAgent on the Defects4J dataset, successful
  
 - The folder **data/root_patches** contains patches produced by RepairAgent in the main phase
 - The folder **data/derivated_pathces** contains patches obtained by mutating **root_patches**
-- Costs: The costs recorded for running RepairAgent are found under XX and XX
-  * To have costs plot, you can use the script XX.
+
 
 Note: RepairAgent encountered exceptions due to Middleware errors in 29 bugs, which were not re-run.
 
@@ -291,6 +290,13 @@ This part is about running RepairAgent on full evaluation datasets to replicate 
     ```
 
 3. Refer to sections `4.2 Retrieve Repair Logs and History` and `4.3 Analyze Logs` on how to analyze logs and summarize the results of the experiments.
+
+4. Furthermore, you can adapt the script `experimental_setups/generate_main_table.py` to generate the main comparative table (Table III in the paper)
+   - 4.1. You can also use `experimental_setups/draw_venn_chatrepair_clean.py` to draw a venn diagram to compare different techniques (Figure 6 of the paper)  
+5. You can use the script `experimental_setups/calculate_tokens.py` to calculate the costs of the agent (used to generate figure 9).
+
+6. You can use the script `experimental_setups/collect_plausible_patches_files.py` to get the list of plausible patches to inspect.
+
 
 ### Replicate GitBugsJava Experiment
 GitBugsJava is another dataset for program repair evaluation.
