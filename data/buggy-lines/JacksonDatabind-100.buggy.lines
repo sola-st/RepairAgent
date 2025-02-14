@@ -1,0 +1,9 @@
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#363#            byte[] data = n.binaryValue();
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#364#            if (data != null) {
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#365#                return data;
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#366#            }
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#367#            if (n.isPojo()) {
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#368#                Object ob = ((POJONode) n).getPojo();
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#369#                if (ob instanceof byte[]) {
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#370#                    return (byte[]) ob;
+com/fasterxml/jackson/databind/node/TreeTraversingParser.java#371#                }

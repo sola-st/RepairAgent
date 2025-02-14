@@ -1,0 +1,26 @@
+org/jsoup/helper/DataUtil.java#112#                    try {
+org/jsoup/helper/DataUtil.java#113#                        if (Charset.isSupported(meta.attr("charset"))) {
+org/jsoup/helper/DataUtil.java#115#                        }
+org/jsoup/helper/DataUtil.java#116#                    } catch (IllegalCharsetNameException e) {
+org/jsoup/helper/DataUtil.java#117#                        foundCharset = null;
+org/jsoup/helper/DataUtil.java#118#                    }
+org/jsoup/nodes/XmlDeclaration.java#46#        final String decl = this.name;
+org/jsoup/nodes/XmlDeclaration.java#47#        if(decl.equals("xml") && attributes.size() > 1 ) {
+org/jsoup/nodes/XmlDeclaration.java#48#            StringBuilder sb = new StringBuilder(decl);
+org/jsoup/nodes/XmlDeclaration.java#49#            final String version = attributes.get("version");
+org/jsoup/nodes/XmlDeclaration.java#50#            if( version != null ) {
+org/jsoup/nodes/XmlDeclaration.java#51#                sb.append(" version=\"").append(version).append("\"");
+org/jsoup/nodes/XmlDeclaration.java#52#            }
+org/jsoup/nodes/XmlDeclaration.java#53#            final String encoding = attributes.get("encoding");
+org/jsoup/nodes/XmlDeclaration.java#54#            if( encoding != null ) {
+org/jsoup/nodes/XmlDeclaration.java#55#                sb.append(" encoding=\"").append(encoding).append("\"");
+org/jsoup/nodes/XmlDeclaration.java#56#            }
+org/jsoup/nodes/XmlDeclaration.java#57#            return sb.toString();
+org/jsoup/nodes/XmlDeclaration.java#58#        }
+org/jsoup/nodes/XmlDeclaration.java#59#        else {
+org/jsoup/nodes/XmlDeclaration.java#60#            return this.name;
+org/jsoup/nodes/XmlDeclaration.java#61#        }
+org/jsoup/nodes/XmlDeclaration.java#68#                .append(getWholeDeclaration())
+org/jsoup/parser/XmlTreeBuilder.java#76#                String declaration = data.substring(1);
+org/jsoup/parser/XmlTreeBuilder.java#77#                insert = new XmlDeclaration(declaration, comment.baseUri(), data.startsWith("!"));
+org/jsoup/parser/XmlTreeBuilder.java#3#FAULT_OF_OMISSION

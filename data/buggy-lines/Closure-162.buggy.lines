@@ -1,0 +1,27 @@
+com/google/javascript/jscomp/ScopedAliases.java#307#        int type = n.getType();
+com/google/javascript/jscomp/ScopedAliases.java#308#        if (type == Token.NAME && parent.getType() == Token.VAR) {
+com/google/javascript/jscomp/ScopedAliases.java#309#          if (n.hasChildren() && n.getFirstChild().isQualifiedName()) {
+com/google/javascript/jscomp/ScopedAliases.java#310#            String name = n.getString();
+com/google/javascript/jscomp/ScopedAliases.java#311#            Var aliasVar = t.getScope().getVar(name);
+com/google/javascript/jscomp/ScopedAliases.java#312#            aliases.put(name, aliasVar);
+com/google/javascript/jscomp/ScopedAliases.java#315#            String qualifiedName =
+com/google/javascript/jscomp/ScopedAliases.java#316#                aliasVar.getInitialValue().getQualifiedName();
+com/google/javascript/jscomp/ScopedAliases.java#317#            transformation.addAlias(name, qualifiedName);
+com/google/javascript/jscomp/ScopedAliases.java#322#            report(t, n, GOOG_SCOPE_NON_ALIAS_LOCAL, n.getString());
+com/google/javascript/jscomp/ScopedAliases.java#323#          }
+com/google/javascript/jscomp/ScopedAliases.java#324#        }
+com/google/javascript/jscomp/ScopedAliases.java#325#        if (type == Token.NAME && NodeUtil.isAssignmentOp(parent) &&
+com/google/javascript/jscomp/ScopedAliases.java#326#            n == parent.getFirstChild()) {
+com/google/javascript/jscomp/ScopedAliases.java#342#        if (n.getType() == Token.NAME) {
+com/google/javascript/jscomp/ScopedAliases.java#343#          String name = n.getString();
+com/google/javascript/jscomp/ScopedAliases.java#344#          Var aliasVar = aliases.get(name);
+com/google/javascript/jscomp/ScopedAliases.java#345#          if (aliasVar != null &&
+com/google/javascript/jscomp/ScopedAliases.java#346#              t.getScope().getVar(name) == aliasVar) {
+com/google/javascript/jscomp/ScopedAliases.java#355#          }
+com/google/javascript/jscomp/Scope.java#568#FAULT_OF_OMISSION
+com/google/javascript/jscomp/ScopedAliases.java#226#FAULT_OF_OMISSION
+com/google/javascript/jscomp/ScopedAliases.java#271#FAULT_OF_OMISSION
+com/google/javascript/jscomp/ScopedAliases.java#272#FAULT_OF_OMISSION
+com/google/javascript/jscomp/ScopedAliases.java#273#FAULT_OF_OMISSION
+com/google/javascript/jscomp/ScopedAliases.java#303#FAULT_OF_OMISSION
+com/google/javascript/jscomp/ScopedAliases.java#304#FAULT_OF_OMISSION

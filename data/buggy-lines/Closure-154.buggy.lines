@@ -1,0 +1,22 @@
+com/google/javascript/jscomp/TypeCheck.java#185#  static final DiagnosticType HIDDEN_INTERFACE_PROPERTY_MISMATCH =
+com/google/javascript/jscomp/TypeCheck.java#186#      DiagnosticType.warning(
+com/google/javascript/jscomp/TypeCheck.java#187#          "JSC_HIDDEN_INTERFACE_PROPERTY_MISMATCH",
+com/google/javascript/jscomp/TypeCheck.java#188#          "mismatch of the {0} property type and the type " +
+com/google/javascript/jscomp/TypeCheck.java#189#          "of the property it overrides from interface {1}\n" +
+com/google/javascript/jscomp/TypeCheck.java#190#          "original: {2}\n" +
+com/google/javascript/jscomp/TypeCheck.java#191#          "override: {3}");
+com/google/javascript/jscomp/TypeCheck.java#242#      HIDDEN_INTERFACE_PROPERTY_MISMATCH,
+com/google/javascript/jscomp/TypeCheck.java#1048#        }
+com/google/javascript/jscomp/TypeCheck.java#1049#        if (interfaceHasProperty) {
+com/google/javascript/jscomp/TypeCheck.java#1050#          JSType interfacePropType =
+com/google/javascript/jscomp/TypeCheck.java#1051#              interfaceType.getPrototype().getPropertyType(propertyName);
+com/google/javascript/jscomp/TypeCheck.java#1052#          if (!propertyType.canAssignTo(interfacePropType)) {
+com/google/javascript/jscomp/TypeCheck.java#1053#            compiler.report(t.makeError(n,
+com/google/javascript/jscomp/TypeCheck.java#1054#                HIDDEN_INTERFACE_PROPERTY_MISMATCH, propertyName,
+com/google/javascript/jscomp/TypeCheck.java#1055#                interfaceType.getTopMostDefiningType(propertyName).toString(),
+com/google/javascript/jscomp/TypeCheck.java#1056#                interfacePropType.toString(), propertyType.toString()));
+com/google/javascript/jscomp/TypeCheck.java#1057#          }
+com/google/javascript/jscomp/TypeValidator.java#117#      INTERFACE_METHOD_NOT_IMPLEMENTED);
+com/google/javascript/jscomp/TypeValidator.java#110#FAULT_OF_OMISSION
+com/google/javascript/jscomp/TypeValidator.java#588#FAULT_OF_OMISSION
+com/google/javascript/jscomp/TypeValidator.java#589#FAULT_OF_OMISSION

@@ -36,11 +36,13 @@ You have two ways to use RepairAgent:
 2. Clone the RepairAgent repository:
 
    ```bash
-   git clone https://github.com/your-organization/RepairAgent.git
+   git clone https://github.com/sola-st/RepairAgent.git
    cd RepairAgent
    cd repair_agent
    rm -rf defects4j
    git clone https://github.com/rjust/defects4j.git
+   cp -r ../data/buggy-lines defects4j
+   cp -r ../data/buggy-methods defects4j
    cd ../..
    ```
 
@@ -138,7 +140,7 @@ You can open the `hyperparams.json` file to review or customize its parameters (
 
 RepairAgent saves the output in multiple files.
 
-- The primary logs are located in the folder `experimental_setups/experiment_X`, where `experiment_X` increments automatically with each run of the command `run_on_defects_4j`.
+- The primary logs are located in the folder `experimental_setups/experiment_X`, where `experiment_X` increments automatically with each run of the command `./run_on_defects_4j.sh`.
 
 - Within this folder, you may find several subfolders:
   - **logs**: Full chat history (prompts) and command outputs (one file per bug).
@@ -154,13 +156,17 @@ Within the `experimental_setups` folder, several scripts are available to post-p
   Use the script `collect_plausible_patches_files.py` to gather the generated plausible patches across multiple experiments:
   
   ```bash
-  python3.10 collect_plausible_patches.py 1 10
+  python3.10 collect_plausible_patches_files.py 1 10
   ```
   
   `A plausible patch is a patch that passes all test cases and is a candidate to be the correct patch`
 
 - **Get Fully Executed Runs**:
-  Use `get_list_of_fully_executed.py` to retrieve runs that reached at least 38 out of 40 cycles. This identifies executions that terminated unexpectedly or called the exit function prematurely.
+  Use `get_list_of_fully_executed.py` to retrieve runs that reached at least 38 out of 40 cycles. This allows to identify executions that terminated unexpectedly or called the exit function prematurely.
+
+  ```bash
+  python3.10 get_list_of_fully_executed.py
+  ```
 
 - **Analyze experiments results**:
   Produces a summary for all executed experiments so far. A text file is generated for each experiment where it shows all the suggested patches per bug and also a table with BugID, number of cycles, number of suggested patches and the number of plausible patches.
@@ -274,7 +280,7 @@ Note: RepairAgent encountered exceptions due to Middleware errors in 29 bugs, wh
 ---
 
 ## 🧫 V. Replicate Experiments
-This part is about running RepairAgent on full evaluation datasets to replicate our experiments. The process is the same as above; We just provide ready-to-use input files and instructs for replication.
+This part is about running RepairAgent on full evaluation datasets to replicate our experiments. The process is the same as above; We just provide ready-to-use input files and instructions for replication.
 
 ### Replicate Defects4J experiments
 1. Create the execution batches for Defects4J which will create lists of bugs to run on.

@@ -1,0 +1,32 @@
+org/apache/commons/jxpath/ri/NamespaceResolver.java#117#        if (uri == null && pointer != null) {
+org/apache/commons/jxpath/ri/NamespaceResolver.java#118#            uri = pointer.getNamespaceURI(prefix);
+org/apache/commons/jxpath/ri/NamespaceResolver.java#119#        }
+org/apache/commons/jxpath/ri/NamespaceResolver.java#120#        if (uri == null && parent != null) {
+org/apache/commons/jxpath/ri/NamespaceResolver.java#121#            return parent.getNamespaceURI(prefix);
+org/apache/commons/jxpath/ri/NamespaceResolver.java#122#        }
+org/apache/commons/jxpath/ri/NamespaceResolver.java#123#        return uri;
+org/apache/commons/jxpath/ri/NamespaceResolver.java#141#            NodeIterator ni = pointer.namespaceIterator();
+org/apache/commons/jxpath/ri/NamespaceResolver.java#142#            if (ni != null) {
+org/apache/commons/jxpath/ri/NamespaceResolver.java#143#                for (int position = 1; ni.setPosition(position); position++) {
+org/apache/commons/jxpath/ri/NamespaceResolver.java#144#                    NodePointer nsPointer = ni.getNodePointer();
+org/apache/commons/jxpath/ri/NamespaceResolver.java#145#                    String uri = nsPointer.getNamespaceURI();                    
+org/apache/commons/jxpath/ri/NamespaceResolver.java#146#                    String prefix = nsPointer.getName().getName();
+org/apache/commons/jxpath/ri/NamespaceResolver.java#147#                    if (!"".equals(prefix)) {
+org/apache/commons/jxpath/ri/NamespaceResolver.java#148#                        reverseMap.put(uri, prefix);
+org/apache/commons/jxpath/ri/NamespaceResolver.java#149#                    }
+org/apache/commons/jxpath/ri/NamespaceResolver.java#150#                }
+org/apache/commons/jxpath/ri/NamespaceResolver.java#151#            }
+org/apache/commons/jxpath/ri/NamespaceResolver.java#159#        if (prefix == null && parent != null) {
+org/apache/commons/jxpath/ri/NamespaceResolver.java#160#            return parent.getPrefix(namespaceURI);
+org/apache/commons/jxpath/ri/NamespaceResolver.java#161#        }
+org/apache/commons/jxpath/ri/NamespaceResolver.java#162#        return prefix;
+org/apache/commons/jxpath/ri/NamespaceResolver.java#200#}
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#415#            String ns = getNamespaceURI(prefix);
+org/apache/commons/jxpath/ri/NamespaceResolver.java#47#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/NamespaceResolver.java#108#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/NamespaceResolver.java#116#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/NamespaceResolver.java#132#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/NamespaceResolver.java#139#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#29#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#61#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#189#FAULT_OF_OMISSION

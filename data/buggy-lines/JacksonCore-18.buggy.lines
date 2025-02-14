@@ -1,0 +1,11 @@
+com/fasterxml/jackson/core/json/UTF8JsonGenerator.java#910#            String raw = Feature.WRITE_BIGDECIMAL_AS_PLAIN.enabledIn(_features) ? value.toPlainString() : value.toString();
+com/fasterxml/jackson/core/json/UTF8JsonGenerator.java#911#            _writeQuotedRaw(raw);
+com/fasterxml/jackson/core/json/UTF8JsonGenerator.java#912#        } else if (Feature.WRITE_BIGDECIMAL_AS_PLAIN.enabledIn(_features)) {
+com/fasterxml/jackson/core/json/UTF8JsonGenerator.java#913#            writeRaw(value.toPlainString());
+com/fasterxml/jackson/core/json/WriterBasedJsonGenerator.java#687#            String raw = isEnabled(Feature.WRITE_BIGDECIMAL_AS_PLAIN) ? value.toPlainString() : value.toString();
+com/fasterxml/jackson/core/json/WriterBasedJsonGenerator.java#688#            _writeQuotedRaw(raw);
+com/fasterxml/jackson/core/json/WriterBasedJsonGenerator.java#689#        } else if (isEnabled(Feature.WRITE_BIGDECIMAL_AS_PLAIN)) {
+com/fasterxml/jackson/core/json/WriterBasedJsonGenerator.java#690#            writeRaw(value.toPlainString());
+com/fasterxml/jackson/core/base/GeneratorBase.java#53#FAULT_OF_OMISSION
+com/fasterxml/jackson/core/base/GeneratorBase.java#434#FAULT_OF_OMISSION
+com/fasterxml/jackson/core/base/GeneratorBase.java#435#FAULT_OF_OMISSION

@@ -1,0 +1,23 @@
+com/google/javascript/jscomp/MethodCompilerPass.java#102#    boolean signatureAdded = false;
+com/google/javascript/jscomp/MethodCompilerPass.java#106#      signatureAdded = true;
+com/google/javascript/jscomp/MethodCompilerPass.java#107#    } else if (node.getType() == Token.NAME) {
+com/google/javascript/jscomp/MethodCompilerPass.java#108#      String functionName = node.getString();
+com/google/javascript/jscomp/MethodCompilerPass.java#109#      Scope.Var v = t.getScope().getVar(functionName);
+com/google/javascript/jscomp/MethodCompilerPass.java#110#      if (v == null) {
+com/google/javascript/jscomp/MethodCompilerPass.java#111#        if (compiler.isIdeMode()) {
+com/google/javascript/jscomp/MethodCompilerPass.java#112#          return;
+com/google/javascript/jscomp/MethodCompilerPass.java#113#        } else {
+com/google/javascript/jscomp/MethodCompilerPass.java#114#          throw new IllegalStateException(
+com/google/javascript/jscomp/MethodCompilerPass.java#115#              "VarCheck should have caught this undefined function");
+com/google/javascript/jscomp/MethodCompilerPass.java#116#        }
+com/google/javascript/jscomp/MethodCompilerPass.java#117#      }
+com/google/javascript/jscomp/MethodCompilerPass.java#118#      Node function = v.getInitialValue();
+com/google/javascript/jscomp/MethodCompilerPass.java#119#      if (function != null &&
+com/google/javascript/jscomp/MethodCompilerPass.java#120#          function.getType() == Token.FUNCTION) {
+com/google/javascript/jscomp/MethodCompilerPass.java#121#        addSignature(name, function, v.getInputName());
+com/google/javascript/jscomp/MethodCompilerPass.java#122#        signatureAdded = true;
+com/google/javascript/jscomp/MethodCompilerPass.java#123#      }
+com/google/javascript/jscomp/MethodCompilerPass.java#124#    }
+com/google/javascript/jscomp/MethodCompilerPass.java#125#    if (!signatureAdded) {
+com/google/javascript/jscomp/RenameVars.java#203#FAULT_OF_OMISSION
+com/google/javascript/jscomp/RenameVars.java#204#FAULT_OF_OMISSION

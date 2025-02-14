@@ -1,0 +1,20 @@
+com/google/javascript/jscomp/FunctionInjector.java#208#      return canInlineReferenceDirectly(callNode, fnNode);
+com/google/javascript/jscomp/FunctionInjector.java#690#      Node callNode, Node fnNode) {
+com/google/javascript/jscomp/FunctionInjector.java#695#    Node block = fnNode.getLastChild();
+com/google/javascript/jscomp/FunctionInjector.java#715#    Node fnParam = NodeUtil.getFunctionParameters(fnNode).getFirstChild();
+com/google/javascript/jscomp/FunctionInjector.java#716#    while (cArg != null || fnParam != null) {
+com/google/javascript/jscomp/FunctionInjector.java#717#      if (fnParam != null) {
+com/google/javascript/jscomp/FunctionInjector.java#718#        if (cArg != null) {
+com/google/javascript/jscomp/FunctionInjector.java#719#          if (NodeUtil.mayEffectMutableState(cArg, compiler)
+com/google/javascript/jscomp/FunctionInjector.java#720#              && NodeUtil.getNameReferenceCount(
+com/google/javascript/jscomp/FunctionInjector.java#721#                  block, fnParam.getString()) > 1) {
+com/google/javascript/jscomp/FunctionInjector.java#722#            return CanInlineResult.NO;
+com/google/javascript/jscomp/FunctionInjector.java#723#          }
+com/google/javascript/jscomp/FunctionInjector.java#724#        }
+com/google/javascript/jscomp/FunctionInjector.java#725#        fnParam = fnParam.getNext();
+com/google/javascript/jscomp/FunctionInjector.java#726#      }
+com/google/javascript/jscomp/FunctionInjector.java#728#      if (cArg != null) {
+com/google/javascript/jscomp/FunctionInjector.java#729#        if (NodeUtil.mayHaveSideEffects(cArg, compiler)) {
+com/google/javascript/jscomp/FunctionInjector.java#731#        }
+com/google/javascript/jscomp/FunctionInjector.java#732#        cArg = cArg.getNext();
+com/google/javascript/jscomp/FunctionInjector.java#46#FAULT_OF_OMISSION

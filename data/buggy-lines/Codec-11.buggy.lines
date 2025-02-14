@@ -1,0 +1,24 @@
+org/apache/commons/codec/net/QuotedPrintableCodec.java#114#    private static final void encodeQuotedPrintable(int b, ByteArrayOutputStream buffer) {
+org/apache/commons/codec/net/QuotedPrintableCodec.java#178#        for (byte c : bytes) {
+org/apache/commons/codec/net/QuotedPrintableCodec.java#179#            int b = c;
+org/apache/commons/codec/net/QuotedPrintableCodec.java#180#            if (b < 0) {
+org/apache/commons/codec/net/QuotedPrintableCodec.java#181#                b = 256 + b;
+org/apache/commons/codec/net/QuotedPrintableCodec.java#182#            }
+org/apache/commons/codec/net/QuotedPrintableCodec.java#183#            if (printable.get(b)) {
+org/apache/commons/codec/net/QuotedPrintableCodec.java#184#                buffer.write(b);
+org/apache/commons/codec/net/QuotedPrintableCodec.java#189#                encodeQuotedPrintable(b, buffer);
+org/apache/commons/codec/net/QuotedPrintableCodec.java#229#                    int u = Utils.digit16(bytes[++i]);
+org/apache/commons/codec/net/QuotedPrintableCodec.java#235#            } else {
+org/apache/commons/codec/net/QuotedPrintableCodec.java#70#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#71#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#73#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#120#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#132#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#144#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#152#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#175#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#177#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#187#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#195#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#199#FAULT_OF_OMISSION
+org/apache/commons/codec/net/QuotedPrintableCodec.java#200#FAULT_OF_OMISSION

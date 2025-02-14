@@ -1,0 +1,42 @@
+org/jsoup/nodes/Entities.java#103#        if (!string.contains("&"))
+org/jsoup/nodes/Entities.java#104#            return string;
+org/jsoup/nodes/Entities.java#105#        Matcher m = strict? strictUnescapePattern.matcher(string) : unescapePattern.matcher(string);
+org/jsoup/nodes/Entities.java#106#        StringBuffer accum = new StringBuffer(string.length());
+org/jsoup/nodes/Entities.java#107#        while (m.find()) {
+org/jsoup/nodes/Entities.java#108#            int charval = -1;
+org/jsoup/nodes/Entities.java#109#            String num = m.group(3);
+org/jsoup/nodes/Entities.java#110#            if (num != null) {
+org/jsoup/nodes/Entities.java#111#                try {
+org/jsoup/nodes/Entities.java#112#                    int base = m.group(2) != null ? 16 : 10;
+org/jsoup/nodes/Entities.java#113#                    charval = Integer.valueOf(num, base);
+org/jsoup/nodes/Entities.java#114#                } catch (NumberFormatException e) {
+org/jsoup/nodes/Entities.java#115#                }
+org/jsoup/nodes/Entities.java#116#            } else {
+org/jsoup/nodes/Entities.java#117#                String name = m.group(1);
+org/jsoup/nodes/Entities.java#118#                if (full.containsKey(name))
+org/jsoup/nodes/Entities.java#119#                    charval = full.get(name);
+org/jsoup/nodes/Entities.java#120#            }
+org/jsoup/nodes/Entities.java#121#            if (charval != -1 || charval > 0xFFFF) {
+org/jsoup/nodes/Entities.java#122#                String c = Character.toString((char) charval);
+org/jsoup/nodes/Entities.java#123#                m.appendReplacement(accum, Matcher.quoteReplacement(c));
+org/jsoup/nodes/Entities.java#124#            } else {
+org/jsoup/nodes/Entities.java#125#                m.appendReplacement(accum, Matcher.quoteReplacement(m.group(0)));
+org/jsoup/nodes/Entities.java#126#            }
+org/jsoup/nodes/Entities.java#127#        }
+org/jsoup/nodes/Entities.java#128#        m.appendTail(accum);
+org/jsoup/nodes/Entities.java#129#        return accum.toString();
+org/jsoup/parser/Tokeniser.java#136#            String origNameRef = new String(nameRef);
+org/jsoup/parser/Tokeniser.java#139#            boolean found = false;
+org/jsoup/parser/Tokeniser.java#140#            while (nameRef.length() > 0 && !found) {
+org/jsoup/parser/Tokeniser.java#141#                if (Entities.isNamedEntity(nameRef))
+org/jsoup/parser/Tokeniser.java#142#                    found = true;
+org/jsoup/parser/Tokeniser.java#143#                else {
+org/jsoup/parser/Tokeniser.java#144#                    nameRef = nameRef.substring(0, nameRef.length()-1);
+org/jsoup/parser/Tokeniser.java#145#                    reader.unconsume();
+org/jsoup/parser/Tokeniser.java#146#                }
+org/jsoup/parser/Tokeniser.java#147#            }
+org/jsoup/parser/Tokeniser.java#152#                    characterReferenceError(String.format("invalid named referenece '%s'", origNameRef));
+org/jsoup/nodes/Entities.java#3#FAULT_OF_OMISSION
+org/jsoup/nodes/Entities.java#61#FAULT_OF_OMISSION
+org/jsoup/parser/Parser.java#133#FAULT_OF_OMISSION
+org/jsoup/parser/Tokeniser.java#238#FAULT_OF_OMISSION

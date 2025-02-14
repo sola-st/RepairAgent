@@ -1,0 +1,15 @@
+org/apache/commons/compress/archivers/tar/TarUtils.java#53#        boolean stillPadding = true;
+org/apache/commons/compress/archivers/tar/TarUtils.java#58#            final byte currentByte = buffer[i];
+org/apache/commons/compress/archivers/tar/TarUtils.java#59#            if (currentByte == 0) {
+org/apache/commons/compress/archivers/tar/TarUtils.java#64#            if (currentByte == (byte) ' ' || currentByte == '0') {
+org/apache/commons/compress/archivers/tar/TarUtils.java#65#                if (stillPadding) {
+org/apache/commons/compress/archivers/tar/TarUtils.java#66#                   continue;
+org/apache/commons/compress/archivers/tar/TarUtils.java#67#            }
+org/apache/commons/compress/archivers/tar/TarUtils.java#68#                if (currentByte == (byte) ' ') {
+org/apache/commons/compress/archivers/tar/TarUtils.java#70#                }
+org/apache/commons/compress/archivers/tar/TarUtils.java#76#            stillPadding = false;
+org/apache/commons/compress/archivers/tar/TarUtils.java#57#FAULT_OF_OMISSION
+org/apache/commons/compress/archivers/tar/TarUtils.java#62#FAULT_OF_OMISSION
+org/apache/commons/compress/archivers/tar/TarUtils.java#72#FAULT_OF_OMISSION
+org/apache/commons/compress/archivers/tar/TarUtils.java#74#FAULT_OF_OMISSION
+org/apache/commons/compress/archivers/tar/TarUtils.java#75#FAULT_OF_OMISSION

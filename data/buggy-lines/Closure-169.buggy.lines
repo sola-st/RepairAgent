@@ -1,0 +1,37 @@
+com/google/javascript/rhino/jstype/ArrowType.java#177#  boolean hasEqualParameters(ArrowType that, boolean tolerateUnknowns) {
+com/google/javascript/rhino/jstype/ArrowType.java#187#                otherParamType, tolerateUnknowns)) {
+com/google/javascript/rhino/jstype/ArrowType.java#204#      ArrowType that, boolean tolerateUnknowns) {
+com/google/javascript/rhino/jstype/ArrowType.java#206#    if (!returnType.checkEquivalenceHelper(that.returnType, tolerateUnknowns)) {
+com/google/javascript/rhino/jstype/ArrowType.java#209#    return hasEqualParameters(that, tolerateUnknowns);
+com/google/javascript/rhino/jstype/FunctionType.java#792#    if (call.hasEqualParameters(other.call, false)) {
+com/google/javascript/rhino/jstype/FunctionType.java#890#      FunctionType that, boolean tolerateUnknowns) {
+com/google/javascript/rhino/jstype/FunctionType.java#908#        that.typeOfThis, tolerateUnknowns) &&
+com/google/javascript/rhino/jstype/FunctionType.java#909#        call.checkArrowEquivalenceHelper(that.call, tolerateUnknowns);
+com/google/javascript/rhino/jstype/FunctionType.java#918#    return this.call.checkArrowEquivalenceHelper(otherType.call, false);
+com/google/javascript/rhino/jstype/JSType.java#492#    return checkEquivalenceHelper(that, false);
+com/google/javascript/rhino/jstype/JSType.java#500#    return checkEquivalenceHelper(that, false);
+com/google/javascript/rhino/jstype/JSType.java#514#    return !checkEquivalenceHelper(that, true);
+com/google/javascript/rhino/jstype/JSType.java#520#  boolean checkEquivalenceHelper(JSType that, boolean tolerateUnknowns) {
+com/google/javascript/rhino/jstype/JSType.java#528#      if (tolerateUnknowns) {
+com/google/javascript/rhino/jstype/JSType.java#545#          that.toMaybeUnionType(), tolerateUnknowns);
+com/google/javascript/rhino/jstype/JSType.java#550#          that.toMaybeFunctionType(), tolerateUnknowns);
+com/google/javascript/rhino/jstype/JSType.java#555#          that.toMaybeRecordType(), tolerateUnknowns);
+com/google/javascript/rhino/jstype/JSType.java#565#            thatParamType.getParameterType(), tolerateUnknowns);
+com/google/javascript/rhino/jstype/JSType.java#566#      } else if (tolerateUnknowns) {
+com/google/javascript/rhino/jstype/JSType.java#571#      } else {
+com/google/javascript/rhino/jstype/JSType.java#572#        paramsMatch = false;
+com/google/javascript/rhino/jstype/JSType.java#580#          thisRootType.checkEquivalenceHelper(thatRootType, tolerateUnknowns);
+com/google/javascript/rhino/jstype/JSType.java#592#              that, tolerateUnknowns);
+com/google/javascript/rhino/jstype/JSType.java#598#          tolerateUnknowns);
+com/google/javascript/rhino/jstype/RecordType.java#118#      RecordType otherRecord, boolean tolerateUnknowns) {
+com/google/javascript/rhino/jstype/RecordType.java#126#              properties.get(key), tolerateUnknowns)) {
+com/google/javascript/rhino/jstype/RecordType.java#204#              (propType.isUnknownType() || altPropType.isUnknownType() ||
+com/google/javascript/rhino/jstype/RecordType.java#205#                  altPropType.isEquivalentTo(propType))) {
+com/google/javascript/rhino/jstype/RecordType.java#268#      if (!propA.isUnknownType() && !propB.isUnknownType()) {
+com/google/javascript/rhino/jstype/RecordType.java#280#          }
+com/google/javascript/rhino/jstype/UnionType.java#334#      UnionType that, boolean tolerateUnknowns) {
+com/google/javascript/rhino/jstype/UnionType.java#335#    if (!tolerateUnknowns
+com/google/javascript/rhino/jstype/UnionType.java#340#      if (!hasAlternate(alternate, tolerateUnknowns)) {
+com/google/javascript/rhino/jstype/UnionType.java#347#  private boolean hasAlternate(JSType type, boolean tolerateUnknowns) {
+com/google/javascript/rhino/jstype/UnionType.java#349#      if (alternate.checkEquivalenceHelper(type, tolerateUnknowns)) {
+com/google/javascript/rhino/jstype/JSType.java#531#FAULT_OF_OMISSION

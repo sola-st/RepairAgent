@@ -1,0 +1,15 @@
+com/google/javascript/jscomp/TypedScopeCreator.java#1451#      attachLiteralTypes(n);
+com/google/javascript/jscomp/TypedScopeCreator.java#1452#      switch (n.getType()) {
+com/google/javascript/jscomp/TypedScopeCreator.java#1453#        case Token.FUNCTION:
+com/google/javascript/jscomp/TypedScopeCreator.java#1454#          if (parent.getType() == Token.NAME) {
+com/google/javascript/jscomp/TypedScopeCreator.java#1455#            return;
+com/google/javascript/jscomp/TypedScopeCreator.java#1456#          }
+com/google/javascript/jscomp/TypedScopeCreator.java#1457#          defineDeclaredFunction(n, parent);
+com/google/javascript/jscomp/TypedScopeCreator.java#1458#          break;
+com/google/javascript/jscomp/TypedScopeCreator.java#1459#        case Token.CATCH:
+com/google/javascript/jscomp/TypedScopeCreator.java#1460#          defineCatch(n, parent);
+com/google/javascript/jscomp/TypedScopeCreator.java#1461#          break;
+com/google/javascript/jscomp/TypedScopeCreator.java#1462#        case Token.VAR:
+com/google/javascript/jscomp/TypedScopeCreator.java#1463#          defineVar(n, parent);
+com/google/javascript/jscomp/TypedScopeCreator.java#1464#          break;
+com/google/javascript/jscomp/TypedScopeCreator.java#1465#      }

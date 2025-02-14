@@ -1,0 +1,32 @@
+org/apache/commons/cli/CommandLine.java#19#import java.util.HashMap;
+org/apache/commons/cli/CommandLine.java#23#import java.util.Map;
+org/apache/commons/cli/CommandLine.java#46#    private Map options = new HashMap();
+org/apache/commons/cli/CommandLine.java#47#    private Map names = new HashMap();
+org/apache/commons/cli/CommandLine.java#51#    private Map hashcodeMap = new HashMap();
+org/apache/commons/cli/CommandLine.java#69#        return options.containsKey(opt);
+org/apache/commons/cli/CommandLine.java#93#        if (!options.containsKey(opt))
+org/apache/commons/cli/CommandLine.java#98#        Object type = ((Option) options.get(opt)).getType();
+org/apache/commons/cli/CommandLine.java#149#        opt = Util.stripLeadingHyphens(opt);
+org/apache/commons/cli/CommandLine.java#151#        String key = opt;
+org/apache/commons/cli/CommandLine.java#152#        if (names.containsKey(opt))
+org/apache/commons/cli/CommandLine.java#153#        {
+org/apache/commons/cli/CommandLine.java#154#            key = (String) names.get(opt);
+org/apache/commons/cli/CommandLine.java#155#        }
+org/apache/commons/cli/CommandLine.java#156#        if (options.containsKey(key))
+org/apache/commons/cli/CommandLine.java#158#            return ((Option) options.get(key)).getValues();
+org/apache/commons/cli/CommandLine.java#277#        hashcodeMap.put(new Integer(opt.hashCode()), opt);
+org/apache/commons/cli/CommandLine.java#278#        String key = opt.getKey();
+org/apache/commons/cli/CommandLine.java#279#        if (key == null)
+org/apache/commons/cli/CommandLine.java#280#        {
+org/apache/commons/cli/CommandLine.java#281#            key = opt.getLongOpt();
+org/apache/commons/cli/CommandLine.java#282#        }
+org/apache/commons/cli/CommandLine.java#283#        else
+org/apache/commons/cli/CommandLine.java#284#        {
+org/apache/commons/cli/CommandLine.java#285#            names.put(opt.getLongOpt(), key);
+org/apache/commons/cli/CommandLine.java#286#        }
+org/apache/commons/cli/CommandLine.java#287#        options.put(key, opt);
+org/apache/commons/cli/CommandLine.java#298#        return hashcodeMap.values().iterator();
+org/apache/commons/cli/CommandLine.java#308#        Collection processed = options.values();
+org/apache/commons/cli/CommandLine.java#316#}
+org/apache/commons/cli/CommandLine.java#169#FAULT_OF_OMISSION
+org/apache/commons/cli/CommandLine.java#170#FAULT_OF_OMISSION

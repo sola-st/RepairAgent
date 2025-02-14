@@ -1,0 +1,48 @@
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#197#    diagnosticGroups.setWarningLevels(
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#198#        options, config.jscompError, CheckLevel.ERROR);
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#199#    diagnosticGroups.setWarningLevels(
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#200#        options, config.jscompWarning, CheckLevel.WARNING);
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#201#    diagnosticGroups.setWarningLevels(
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#202#        options, config.jscompOff, CheckLevel.OFF);
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1497#    private final List<String> jscompError = Lists.newArrayList();
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1502#    CommandLineConfig setJscompError(List<String> jscompError) {
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1503#      this.jscompError.clear();
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1504#      this.jscompError.addAll(jscompError);
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1505#      return this;
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1506#    }
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1507#    private final List<String> jscompWarning = Lists.newArrayList();
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1508#    CommandLineConfig setJscompWarning(List<String> jscompWarning) {
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1509#      this.jscompWarning.clear();
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1510#      this.jscompWarning.addAll(jscompWarning);
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1511#      return this;
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1512#    }
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1513#    private final List<String> jscompOff = Lists.newArrayList();
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1514#    CommandLineConfig setJscompOff(List<String> jscompOff) {
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1515#      this.jscompOff.clear();
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1516#      this.jscompOff.addAll(jscompOff);
+com/google/javascript/jscomp/CommandLineRunner.java#552#          .setJscompError(flags.jscomp_error)
+com/google/javascript/jscomp/CommandLineRunner.java#553#          .setJscompWarning(flags.jscomp_warning)
+com/google/javascript/jscomp/CommandLineRunner.java#554#          .setJscompOff(flags.jscomp_off)
+com/google/javascript/jscomp/DiagnosticGroups.java#23#import java.util.List;
+com/google/javascript/jscomp/DiagnosticGroups.java#186#  void setWarningLevels(CompilerOptions options,
+com/google/javascript/jscomp/DiagnosticGroups.java#187#      List<String> diagnosticGroups, CheckLevel level) {
+com/google/javascript/jscomp/DiagnosticGroups.java#188#    for (String name : diagnosticGroups) {
+com/google/javascript/jscomp/DiagnosticGroups.java#192#    }
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1628#FAULT_OF_OMISSION
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1631#FAULT_OF_OMISSION
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1632#FAULT_OF_OMISSION
+com/google/javascript/jscomp/AbstractCommandLineRunner.java#1633#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#26#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#94#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#231#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#236#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#241#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#389#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#390#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#391#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#392#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#393#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#394#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#395#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#485#FAULT_OF_OMISSION
+com/google/javascript/jscomp/CommandLineRunner.java#500#FAULT_OF_OMISSION

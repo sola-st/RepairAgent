@@ -1,0 +1,26 @@
+com/google/javascript/jscomp/Normalize.java#638#        Scope s, String name, Node n, Node parent, Node gramps,
+com/google/javascript/jscomp/Normalize.java#639#        Node nodeWithLineNumber) {
+com/google/javascript/jscomp/Normalize.java#669#                NodeUtil.getSourceName(nodeWithLineNumber), nodeWithLineNumber,
+com/google/javascript/jscomp/Normalize.java#681#        replaceVarWithAssignment(n, parent, gramps);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#23#import com.google.javascript.rhino.jstype.JSType;
+com/google/javascript/jscomp/SyntacticScopeCreator.java#95#        declareVar(fnName, fnNameNode, n, null, null, n);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#103#        declareVar(a.getString(), a, args, n, null, n);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#125#          Preconditions.checkState(child.getType() == Token.NAME);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#126#          String name = child.getString();
+com/google/javascript/jscomp/SyntacticScopeCreator.java#127#          declareVar(name, child, n, parent, null, n);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#142#        declareVar(fnName, n.getFirstChild(), n, parent, null, n);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#154#        declareVar(var.getString(), var, n, parent, null, n);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#180#        Scope s, String name,
+com/google/javascript/jscomp/SyntacticScopeCreator.java#181#        Node n, Node parent, Node gramps, Node nodeWithLineNumber);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#189#        Scope s, String name,
+com/google/javascript/jscomp/SyntacticScopeCreator.java#190#        Node n, Node parent, Node gramps, Node nodeWithLineNumber) {
+com/google/javascript/jscomp/SyntacticScopeCreator.java#235#  private void declareVar(String name, Node n, Node parent,
+com/google/javascript/jscomp/SyntacticScopeCreator.java#236#                          Node gramps, JSType declaredType,
+com/google/javascript/jscomp/SyntacticScopeCreator.java#237#                          Node nodeWithLineNumber) {
+com/google/javascript/jscomp/SyntacticScopeCreator.java#242#          scope, name, n, parent, gramps, nodeWithLineNumber);
+com/google/javascript/jscomp/SyntacticScopeCreator.java#244#      scope.declare(name, n, declaredType, compiler.getInput(sourceName));
+com/google/javascript/jscomp/Normalize.java#631#FAULT_OF_OMISSION
+com/google/javascript/jscomp/Normalize.java#641#FAULT_OF_OMISSION
+com/google/javascript/jscomp/Normalize.java#643#FAULT_OF_OMISSION
+com/google/javascript/jscomp/Normalize.java#647#FAULT_OF_OMISSION
+com/google/javascript/jscomp/SyntacticScopeCreator.java#239#FAULT_OF_OMISSION

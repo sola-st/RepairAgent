@@ -1,0 +1,8 @@
+org/apache/commons/csv/CSVFormat.java#665#        if (header != null) {
+org/apache/commons/csv/CSVFormat.java#666#            final Set<String> set = new HashSet<String>(header.length);
+org/apache/commons/csv/CSVFormat.java#667#            set.addAll(Arrays.asList(header));
+org/apache/commons/csv/CSVFormat.java#668#            if (set.size() != header.length) {
+org/apache/commons/csv/CSVFormat.java#669#                throw new IllegalStateException("The header contains duplicate names: " + Arrays.toString(header));
+org/apache/commons/csv/CSVFormat.java#670#            }
+org/apache/commons/csv/CSVFormat.java#671#        }
+org/apache/commons/csv/CSVFormat.java#316#FAULT_OF_OMISSION

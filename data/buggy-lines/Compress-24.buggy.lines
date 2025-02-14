@@ -1,0 +1,9 @@
+org/apache/commons/compress/archivers/tar/TarUtils.java#129#        if (trailer == 0 || trailer == ' '){
+org/apache/commons/compress/archivers/tar/TarUtils.java#130#            end--;
+org/apache/commons/compress/archivers/tar/TarUtils.java#131#        } else {
+org/apache/commons/compress/archivers/tar/TarUtils.java#132#            throw new IllegalArgumentException(
+org/apache/commons/compress/archivers/tar/TarUtils.java#133#                    exceptionMessage(buffer, offset, length, end-1, trailer));
+org/apache/commons/compress/archivers/tar/TarUtils.java#134#        }
+org/apache/commons/compress/archivers/tar/TarUtils.java#135#        trailer = buffer[end - 1];
+org/apache/commons/compress/archivers/tar/TarUtils.java#136#        while (start < end - 1 && (trailer == 0 || trailer == ' ')) {
+org/apache/commons/compress/archivers/tar/TarUtils.java#139#FAULT_OF_OMISSION

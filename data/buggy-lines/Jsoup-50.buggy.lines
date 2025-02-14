@@ -1,0 +1,8 @@
+org/jsoup/helper/DataUtil.java#125#        }
+org/jsoup/helper/DataUtil.java#126#        if (docData.length() > 0 && docData.charAt(0) == UNICODE_BOM) {
+org/jsoup/helper/DataUtil.java#127#            byteData.rewind();
+org/jsoup/helper/DataUtil.java#128#            docData = Charset.forName(defaultCharset).decode(byteData).toString();
+org/jsoup/helper/DataUtil.java#129#            docData = docData.substring(1);
+org/jsoup/helper/DataUtil.java#130#            charsetName = defaultCharset;
+org/jsoup/helper/DataUtil.java#131#            doc = null;
+org/jsoup/helper/DataUtil.java#93#FAULT_OF_OMISSION

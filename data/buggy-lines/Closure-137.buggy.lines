@@ -1,0 +1,60 @@
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#26#import com.google.javascript.jscomp.NodeTraversal.AbstractPostOrderCallback;
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#235#  static class ContextualRenameInverter extends AbstractPostOrderCallback
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#236#      implements CompilerPass {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#244#    private Map<Var, String> nameMap = Maps.newHashMap();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#266#    private static String getOrginalNameInternal(String name, int index) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#267#      return name.substring(0, index);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#268#    }
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#274#    private static String getNameSuffix(String name, int index) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#275#      return name.substring(
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#276#          index + ContextualRenamer.UNIQUE_ID_SEPARATOR.length(),
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#277#          name.length());
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#284#    @Override
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#285#    public void visit(NodeTraversal t, Node node, Node parent) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#286#      if (node.getType() == Token.NAME) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#287#        String oldName = node.getString();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#288#        if (containsSeparator(oldName)) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#289#          Scope scope = t.getScope();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#290#          Var var = t.getScope().getVar(oldName);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#291#          if (var == null || var.isGlobal()) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#295#          if (nameMap.containsKey(var)) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#296#            node.setString(nameMap.get(var));
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#297#          } else {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#298#            int index = indexOfSeparator(oldName);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#299#            String newName = getOrginalNameInternal(oldName, index);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#300#            String suffix = getNameSuffix(oldName, index);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#307#            boolean recurseScopes = false;
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#308#            if (!suffix.matches("\\d+")) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#309#              recurseScopes = true;
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#310#            }
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#318#            if (var.scope.isDeclared(newName, recurseScopes) ||
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#319#                !TokenStream.isJSIdentifier(newName)) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#320#              newName = oldName;
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#321#            } else {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#322#              var.scope.declare(newName, var.nameNode, null, null);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#325#              Node parentNode = var.getParentNode();
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#326#              if (parentNode.getType() == Token.FUNCTION &&
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#327#                  parentNode == var.scope.getRootNode()) {
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#328#                var.getNameNode().setString(newName);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#329#              }
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#330#              node.setString(newName);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#334#            nameMap.put(var, newName);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#401#          declarations.put(name, newName);
+com/google/javascript/jscomp/Normalize.java#82#    removeDuplicateDeclarations(root);
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#48#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#240#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#242#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#273#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#304#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#317#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#333#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#336#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#338#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#340#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#341#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#345#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#391#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#400#FAULT_OF_OMISSION
+com/google/javascript/jscomp/MakeDeclaredNamesUnique.java#461#FAULT_OF_OMISSION
+com/google/javascript/jscomp/NodeUtil.java#1043#FAULT_OF_OMISSION
+com/google/javascript/jscomp/Normalize.java#102#FAULT_OF_OMISSION

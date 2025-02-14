@@ -1,0 +1,19 @@
+com/google/gson/stream/JsonReader.java#574#      if (stackSize == 1) {
+com/google/gson/stream/JsonReader.java#575#        checkLenient();
+com/google/gson/stream/JsonReader.java#576#      }
+com/google/gson/stream/JsonReader.java#584#    }
+com/google/gson/stream/JsonReader.java#585#    if (stackSize == 1) {
+com/google/gson/stream/JsonReader.java#586#      checkLenient();
+com/google/gson/stream/JsonWriter.java#325#    beforeValue(true);
+com/google/gson/stream/JsonWriter.java#418#    beforeValue(false);
+com/google/gson/stream/JsonWriter.java#435#    beforeValue(false);
+com/google/gson/stream/JsonWriter.java#454#    beforeValue(false);
+com/google/gson/stream/JsonWriter.java#466#    beforeValue(false);
+com/google/gson/stream/JsonWriter.java#483#    beforeValue(false);
+com/google/gson/stream/JsonWriter.java#495#    beforeValue(false);
+com/google/gson/stream/JsonWriter.java#518#    beforeValue(false);
+com/google/gson/stream/JsonWriter.java#613#  private void beforeValue(boolean root) throws IOException {
+com/google/gson/stream/JsonWriter.java#622#      if (!lenient && !root) {
+com/google/gson/stream/JsonWriter.java#623#        throw new IllegalStateException(
+com/google/gson/stream/JsonWriter.java#624#            "JSON must start with an array or an object.");
+com/google/gson/stream/JsonWriter.java#625#      }

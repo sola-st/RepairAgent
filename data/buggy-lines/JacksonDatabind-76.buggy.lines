@@ -1,0 +1,21 @@
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#583#                if (buffer.assignParameter(creatorProp, creatorProp.deserialize(p, ctxt))) {
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#584#                    t = p.nextToken();
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#585#                    Object bean;
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#586#                    try {
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#587#                        bean = creator.build(ctxt, buffer);
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#588#                    } catch (Exception e) {
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#589#                        wrapAndThrow(e, _beanType.getRawClass(), propName, ctxt);
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#590#                        continue;
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#591#                    }
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#592#                    while (t == JsonToken.FIELD_NAME) {
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#593#                        p.nextToken();
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#594#                        tokens.copyCurrentStructure(p);
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#595#                        t = p.nextToken();
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#596#                    }
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#597#                    tokens.writeEndObject();
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#598#                    if (bean.getClass() != _beanType.getRawClass()) {
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#599#                        ctxt.reportMappingException("Can not create polymorphic instances with unwrapped values");
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#600#                        return null;
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#601#                    }
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#602#                    return _unwrappedPropertyHandler.processUnwrapped(p, ctxt, bean, tokens);
+com/fasterxml/jackson/databind/deser/BuilderBasedDeserializer.java#603#                }

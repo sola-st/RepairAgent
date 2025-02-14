@@ -1,0 +1,17 @@
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#67#                if ((shape == JsonFormat.Shape.STRING) || format.hasPattern()
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#68#                                || format.hasLocale() || format.hasTimeZone()) {
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#69#                    TimeZone tz = format.getTimeZone();
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#70#                    final String pattern = format.hasPattern()
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#71#                                    ? format.getPattern()
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#72#                                    : StdDateFormat.DATE_FORMAT_STR_ISO8601;
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#76#                    SimpleDateFormat df = new SimpleDateFormat(pattern, loc);
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#77#                    if (tz == null) {
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#78#                        tz = serializers.getTimeZone();
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#79#                    }
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#94#        return this;
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#85#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#86#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#87#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#88#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#92#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.java#93#FAULT_OF_OMISSION

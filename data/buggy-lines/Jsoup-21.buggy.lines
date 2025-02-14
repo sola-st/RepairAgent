@@ -1,0 +1,11 @@
+org/jsoup/select/QueryParser.java#58#            if (tq.matchChomp(",")) {
+org/jsoup/select/QueryParser.java#59#                CombiningEvaluator.Or or = new CombiningEvaluator.Or(evals);
+org/jsoup/select/QueryParser.java#60#                evals.clear();
+org/jsoup/select/QueryParser.java#61#                evals.add(or);
+org/jsoup/select/QueryParser.java#62#                while (!tq.isEmpty()) {
+org/jsoup/select/QueryParser.java#63#                    String subQuery = tq.chompTo(",");
+org/jsoup/select/QueryParser.java#64#                    or.add(parse(subQuery));
+org/jsoup/select/QueryParser.java#65#                }
+org/jsoup/select/QueryParser.java#66#            } else if (tq.matchesAny(combinators)) {
+org/jsoup/select/CombiningEvaluator.java#64#FAULT_OF_OMISSION
+org/jsoup/select/QueryParser.java#101#FAULT_OF_OMISSION

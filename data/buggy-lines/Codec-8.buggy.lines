@@ -1,0 +1,10 @@
+org/apache/commons/codec/binary/Base64.java#419#    void setInitialBuffer(byte[] out, int outPos, int outAvail) {
+org/apache/commons/codec/binary/Base64.java#420#        if (out != null && out.length == outAvail) {
+org/apache/commons/codec/binary/Base64.java#421#            buffer = out;
+org/apache/commons/codec/binary/Base64.java#422#            pos = outPos;
+org/apache/commons/codec/binary/Base64.java#423#            readPos = outPos;
+org/apache/commons/codec/binary/Base64.java#424#        }
+org/apache/commons/codec/binary/Base64.java#425#    }
+org/apache/commons/codec/binary/Base64InputStream.java#169#                    if (c > 0 && b.length == len) {
+org/apache/commons/codec/binary/Base64InputStream.java#170#                        base64.setInitialBuffer(b, offset, len);
+org/apache/commons/codec/binary/Base64InputStream.java#171#                    }

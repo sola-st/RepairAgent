@@ -1,0 +1,32 @@
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#296#    protected String getLanguage() {
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#297#        Node n = node;
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#301#                String attr = e.getAttribute("xml:lang");
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#638#            String text = ((Comment) node).getData();
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#639#            return text == null ? "" : text.trim();
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#643#            return text == null ? "" : text.trim();
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#647#            return text == null ? "" : text.trim();
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#653#            if (child.getNodeType() == Node.TEXT_NODE) {
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#654#                buf.append(child.getNodeValue());
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#655#            }
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#656#            else {
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#658#            }
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#660#        return buf.toString().trim();
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#240#            return ((Element) node).getTextTrim();
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#250#            return ((Text) node).getTextTrim();
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#251#        }
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#252#        if (node instanceof CDATA) {
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#253#            return ((CDATA) node).getTextTrim();
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#256#            String text = ((ProcessingInstruction) node).getData();
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#257#            if (text != null) {
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#258#                text = text.trim();
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#259#            }
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#260#            return text;
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#262#        return null;
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#436#        Object n = node;
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#440#                String attr =
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#441#                    e.getAttributeValue("lang", Namespace.XML_NAMESPACE);
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#756#}
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#311#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#632#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/model/dom/DOMNodePointer.java#641#FAULT_OF_OMISSION
+org/apache/commons/jxpath/ri/model/jdom/JDOMNodePointer.java#249#FAULT_OF_OMISSION

@@ -1,0 +1,10 @@
+com/fasterxml/jackson/core/base/ParserBase.java#869#        final String numDesc = _longIntegerDesc(rawNum);
+com/fasterxml/jackson/core/base/ParserBase.java#870#        _reportError("Numeric value (%s) out of range of %s", numDesc,
+com/fasterxml/jackson/core/base/ParserBase.java#871#                (expType == NR_LONG) ? "long" : "int");
+com/fasterxml/jackson/core/base/ParserBase.java#887#                _reportError("Numeric value ("+getText()+") out of range of int");
+com/fasterxml/jackson/core/base/ParserMinimalBase.java#565#        _reportError(String.format("Numeric value (%s) out of range of int (%d - %s)",
+com/fasterxml/jackson/core/base/ParserMinimalBase.java#566#                _longIntegerDesc(numDesc), Integer.MIN_VALUE, Integer.MAX_VALUE));
+com/fasterxml/jackson/core/base/ParserMinimalBase.java#582#        _reportError(String.format("Numeric value (%s) out of range of long (%d - %s)",
+com/fasterxml/jackson/core/base/ParserMinimalBase.java#583#                _longIntegerDesc(numDesc), Long.MIN_VALUE, Long.MAX_VALUE));
+com/fasterxml/jackson/core/base/ParserMinimalBase.java#570#FAULT_OF_OMISSION
+com/fasterxml/jackson/core/base/ParserMinimalBase.java#587#FAULT_OF_OMISSION

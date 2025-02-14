@@ -1,0 +1,8 @@
+org/apache/commons/compress/archivers/tar/TarUtils.java#65#        boolean allNUL = true;
+org/apache/commons/compress/archivers/tar/TarUtils.java#66#        for (int i = start; i < end; i++){
+org/apache/commons/compress/archivers/tar/TarUtils.java#67#            if (buffer[i] != 0){
+org/apache/commons/compress/archivers/tar/TarUtils.java#68#                allNUL = false;
+org/apache/commons/compress/archivers/tar/TarUtils.java#69#                break;
+org/apache/commons/compress/archivers/tar/TarUtils.java#70#            }
+org/apache/commons/compress/archivers/tar/TarUtils.java#71#        }
+org/apache/commons/compress/archivers/tar/TarUtils.java#72#        if (allNUL) {

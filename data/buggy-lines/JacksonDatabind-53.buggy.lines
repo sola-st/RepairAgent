@@ -1,0 +1,30 @@
+com/fasterxml/jackson/databind/type/TypeFactory.java#117#    protected final LRUMap<Class<?>, JavaType> _typeCache = new LRUMap<Class<?>, JavaType>(16, 100);
+com/fasterxml/jackson/databind/type/TypeFactory.java#386#                newType = baseType.refine(subclass, TypeBindings.emptyBindings(), null, new JavaType[] { baseType });
+com/fasterxml/jackson/databind/type/TypeFactory.java#388#                newType = baseType.refine(subclass, TypeBindings.emptyBindings(), baseType, NO_TYPES);
+com/fasterxml/jackson/databind/type/TypeFactory.java#392#                TypeBindings tb = null;
+com/fasterxml/jackson/databind/type/TypeFactory.java#393#                if (baseType.containedTypeCount() == typeParamCount) {
+com/fasterxml/jackson/databind/type/TypeFactory.java#394#                    if (typeParamCount == 1) {
+com/fasterxml/jackson/databind/type/TypeFactory.java#395#                        tb = TypeBindings.create(subclass, baseType.containedType(0));
+com/fasterxml/jackson/databind/type/TypeFactory.java#396#                    } else if (typeParamCount == 2) {
+com/fasterxml/jackson/databind/type/TypeFactory.java#397#                        tb = TypeBindings.create(subclass, baseType.containedType(0),
+com/fasterxml/jackson/databind/type/TypeFactory.java#398#                                baseType.containedType(1));
+com/fasterxml/jackson/databind/type/TypeFactory.java#399#                    }
+com/fasterxml/jackson/databind/type/TypeFactory.java#400#                }
+com/fasterxml/jackson/databind/type/TypeFactory.java#401#                newType = _fromClass(null, subclass,
+com/fasterxml/jackson/databind/type/TypeFactory.java#402#                        (tb == null) ? TypeBindings.emptyBindings() : tb);
+com/fasterxml/jackson/databind/type/TypeFactory.java#1160#        boolean cachable = (bindings == null) || bindings.isEmpty();
+com/fasterxml/jackson/databind/type/TypeFactory.java#1161#        if (cachable) {
+com/fasterxml/jackson/databind/type/TypeFactory.java#1162#            result = _typeCache.get(rawType);
+com/fasterxml/jackson/databind/type/TypeFactory.java#1165#            }
+com/fasterxml/jackson/databind/type/TypeFactory.java#1225#        if (cachable) {
+com/fasterxml/jackson/databind/type/TypeFactory.java#1226#            _typeCache.putIfAbsent(rawType, result);
+com/fasterxml/jackson/databind/type/TypeFactory.java#1227#        }
+com/fasterxml/jackson/databind/type/TypeBindings.java#302#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeBindings.java#304#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeBindings.java#428#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeBindings.java#429#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeBindings.java#430#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeFactory.java#385#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeFactory.java#456#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeFactory.java#458#FAULT_OF_OMISSION
+com/fasterxml/jackson/databind/type/TypeFactory.java#459#FAULT_OF_OMISSION

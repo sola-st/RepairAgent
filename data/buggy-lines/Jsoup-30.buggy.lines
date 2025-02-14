@@ -1,0 +1,12 @@
+org/jsoup/safety/Cleaner.java#70#    private int copySafeNodes(Element root, Element destination) {
+org/jsoup/safety/Cleaner.java#71#        List<Node> sourceChildren = root.childNodes();
+org/jsoup/safety/Cleaner.java#72#        int numDiscarded = 0;
+org/jsoup/safety/Cleaner.java#74#        for (Node source : sourceChildren) {
+org/jsoup/safety/Cleaner.java#84#                    numDiscarded += copySafeNodes(sourceEl, destChild);
+org/jsoup/safety/Cleaner.java#85#                } else {
+org/jsoup/safety/Cleaner.java#87#                    numDiscarded += copySafeNodes(sourceEl, destination);
+org/jsoup/safety/Cleaner.java#95#        return numDiscarded;
+org/jsoup/safety/Cleaner.java#6#FAULT_OF_OMISSION
+org/jsoup/safety/Cleaner.java#93#FAULT_OF_OMISSION
+org/jsoup/safety/Cleaner.java#97#FAULT_OF_OMISSION
+org/jsoup/safety/Cleaner.java#98#FAULT_OF_OMISSION

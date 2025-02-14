@@ -1,0 +1,60 @@
+org/jsoup/parser/HtmlTreeBuilder.java#315#            if (next.nodeName().equals(elName)) {
+org/jsoup/parser/HtmlTreeBuilder.java#337#            if (next.nodeName().equals(elName))
+org/jsoup/parser/HtmlTreeBuilder.java#347#            if (inSorted(next.nodeName(), elNames))
+org/jsoup/parser/HtmlTreeBuilder.java#355#            if (next.nodeName().equals(elName)) {
+org/jsoup/parser/HtmlTreeBuilder.java#378#            if (StringUtil.in(next.nodeName(), nodeNames) || next.nodeName().equals("html"))
+org/jsoup/parser/HtmlTreeBuilder.java#420#            String name = node.nodeName();
+org/jsoup/parser/HtmlTreeBuilder.java#476#            final String elName = stack.get(pos).nodeName();
+org/jsoup/parser/HtmlTreeBuilder.java#517#            String elName = el.nodeName();
+org/jsoup/parser/HtmlTreeBuilder.java#569#        while ((excludeTag != null && !currentElement().nodeName().equals(excludeTag)) &&
+org/jsoup/parser/HtmlTreeBuilder.java#570#                inSorted(currentElement().nodeName(), TagSearchEndTags))
+org/jsoup/parser/HtmlTreeBuilder.java#581#        String name = el.nodeName();
+org/jsoup/parser/HtmlTreeBuilder.java#618#        return a.nodeName().equals(b.nodeName()) &&
+org/jsoup/parser/HtmlTreeBuilder.java#649#            Element newEl = insertStartTag(entry.nodeName());
+org/jsoup/parser/HtmlTreeBuilder.java#689#            else if (next.nodeName().equals(nodeName))
+org/jsoup/parser/HtmlTreeBuilderState.java#315#                            if (el.nodeName().equals("li")) {
+org/jsoup/parser/HtmlTreeBuilderState.java#319#                            if (tb.isSpecial(el) && !StringUtil.inSorted(el.nodeName(), Constants.InBodyStartLiBreakers))
+org/jsoup/parser/HtmlTreeBuilderState.java#339#                        if (stack.size() == 1 || (stack.size() > 2 && !stack.get(1).nodeName().equals("body"))) {
+org/jsoup/parser/HtmlTreeBuilderState.java#353#                        if (stack.size() == 1 || (stack.size() > 2 && !stack.get(1).nodeName().equals("body"))) {
+org/jsoup/parser/HtmlTreeBuilderState.java#372#                        if (StringUtil.inSorted(tb.currentElement().nodeName(), Constants.Headings)) {
+org/jsoup/parser/HtmlTreeBuilderState.java#398#                            if (StringUtil.inSorted(el.nodeName(), Constants.DdDt)) {
+org/jsoup/parser/HtmlTreeBuilderState.java#399#                                tb.processEndTag(el.nodeName());
+org/jsoup/parser/HtmlTreeBuilderState.java#402#                            if (tb.isSpecial(el) && !StringUtil.inSorted(el.nodeName(), Constants.InBodyStartLiBreakers))
+org/jsoup/parser/HtmlTreeBuilderState.java#531#                        if (tb.currentElement().nodeName().equals("option"))
+org/jsoup/parser/HtmlTreeBuilderState.java#538#                            if (!tb.currentElement().nodeName().equals("ruby")) {
+org/jsoup/parser/HtmlTreeBuilderState.java#574#                            } else if (!tb.inScope(formatEl.nodeName())) {
+org/jsoup/parser/HtmlTreeBuilderState.java#598#                                tb.popStackToClose(formatEl.nodeName());
+org/jsoup/parser/HtmlTreeBuilderState.java#633#                            if (StringUtil.inSorted(commonAncestor.nodeName(), Constants.InBodyEndTableFosters)) {
+org/jsoup/parser/HtmlTreeBuilderState.java#662#                            if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#675#                            if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#699#                            if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#711#                            if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#721#                            if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#731#                            if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#745#                            if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#768#            String name = tb.settings.normalizeTag(t.asEndTag().name());
+org/jsoup/parser/HtmlTreeBuilderState.java#772#                if (node.nodeName().equals(name)) {
+org/jsoup/parser/HtmlTreeBuilderState.java#774#                    if (!name.equals(tb.currentElement().nodeName()))
+org/jsoup/parser/HtmlTreeBuilderState.java#887#                if (tb.currentElement().nodeName().equals("html"))
+org/jsoup/parser/HtmlTreeBuilderState.java#897#            if (StringUtil.in(tb.currentElement().nodeName(), "table", "tbody", "tfoot", "thead", "tr")) {
+org/jsoup/parser/HtmlTreeBuilderState.java#926#                                if (StringUtil.in(tb.currentElement().nodeName(), "table", "tbody", "tfoot", "thead", "tr")) {
+org/jsoup/parser/HtmlTreeBuilderState.java#954#                    if (!tb.currentElement().nodeName().equals("caption"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1007#                        if (tb.currentElement().nodeName().equals("html")) {
+org/jsoup/parser/HtmlTreeBuilderState.java#1018#                    if (tb.currentElement().nodeName().equals("html"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1089#            tb.processEndTag(tb.currentElement().nodeName());
+org/jsoup/parser/HtmlTreeBuilderState.java#1173#                    if (!tb.currentElement().nodeName().equals(name))
+org/jsoup/parser/HtmlTreeBuilderState.java#1240#                        if (tb.currentElement().nodeName().equals("option"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1244#                        if (tb.currentElement().nodeName().equals("option"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1246#                        else if (tb.currentElement().nodeName().equals("optgroup"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1269#                            if (tb.currentElement().nodeName().equals("option") && tb.aboveOnStack(tb.currentElement()) != null && tb.aboveOnStack(tb.currentElement()).nodeName().equals("optgroup"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1271#                            if (tb.currentElement().nodeName().equals("optgroup"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1277#                            if (tb.currentElement().nodeName().equals("option"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1296#                    if (!tb.currentElement().nodeName().equals("html"))
+org/jsoup/parser/HtmlTreeBuilderState.java#1383#                if (tb.currentElement().nodeName().equals("html")) {
+org/jsoup/parser/HtmlTreeBuilderState.java#1388#                    if (!tb.isFragmentParsing() && !tb.currentElement().nodeName().equals("frameset")) {
+org/jsoup/parser/HtmlTreeBuilderState.java#1393#                if (!tb.currentElement().nodeName().equals("html")) {
+org/jsoup/nodes/Element.java#140#FAULT_OF_OMISSION
+org/jsoup/parser/Tag.java#4#FAULT_OF_OMISSION
+org/jsoup/parser/Tag.java#17#FAULT_OF_OMISSION
+org/jsoup/parser/Tag.java#28#FAULT_OF_OMISSION
+org/jsoup/parser/Tag.java#43#FAULT_OF_OMISSION

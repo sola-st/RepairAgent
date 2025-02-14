@@ -1,0 +1,14 @@
+org/jsoup/parser/HtmlTreeBuilder.java#227#                if (tag.isSelfClosing()) tokeniser.acknowledgeSelfClosingFlag();
+org/jsoup/parser/HtmlTreeBuilder.java#229#            else {
+org/jsoup/parser/HtmlTreeBuilder.java#231#                tokeniser.acknowledgeSelfClosingFlag();
+org/jsoup/parser/HtmlTreeBuilder.java#232#            }
+org/jsoup/parser/Tokeniser.java#36#    private boolean selfClosingFlagAcknowledged = true;
+org/jsoup/parser/Tokeniser.java#44#        if (!selfClosingFlagAcknowledged) {
+org/jsoup/parser/Tokeniser.java#45#            error("Self closing flag not acknowledged");
+org/jsoup/parser/Tokeniser.java#46#            selfClosingFlagAcknowledged = true;
+org/jsoup/parser/Tokeniser.java#47#        }
+org/jsoup/parser/Tokeniser.java#76#            if (startTag.selfClosing)
+org/jsoup/parser/Tokeniser.java#77#                selfClosingFlagAcknowledged = false;
+org/jsoup/parser/Tokeniser.java#124#    void acknowledgeSelfClosingFlag() {
+org/jsoup/parser/Tokeniser.java#125#        selfClosingFlagAcknowledged = true;
+org/jsoup/parser/Tokeniser.java#126#    }

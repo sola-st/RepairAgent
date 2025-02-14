@@ -1,0 +1,5 @@
+org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java#1034#        metaData.put(ze, new EntryMetaData(localHeaderStart, usesDataDescriptor(ze.getMethod())));
+org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java#1075#        final boolean dataDescriptor = usesDataDescriptor(zipMethod);
+org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java#1171#        if (ze.getMethod() != DEFLATED || channel != null) {
+org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java#1492#    private boolean usesDataDescriptor(final int zipMethod) {
+org/apache/commons/compress/archivers/zip/ZipArchiveOutputStream.java#1493#        return zipMethod == DEFLATED && channel == null;
