@@ -616,11 +616,13 @@ def get_detailed_list_of_buggy_lines(name, index):
             bug_lines = buggy_lines_file.read().splitlines()
         lines = []
         for bl in bug_lines:
-            lines.append("Line: "+ int(bl.split("#")[1], bl.split("#")[0]))
+            if bl.replace("\n", "").replace(" ", "").replace("\t", "") == "":
+                continue
+            lines.append((int(bl.split("#")[1]), bl.split("#")[0]))
         
         ret_val = "Your fix should target all the following lines by at least one edit type (modification, insertion, or deletion):\n"
         for l in lines:
-            ret_val += l[0] + " from file: " + l[1] + "\n"
+            ret_val += str(l[0]) + " from file: " + l[1] + "\n"
 
         ret_val += "\n"
         return ret_val

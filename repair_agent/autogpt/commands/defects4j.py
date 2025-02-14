@@ -865,9 +865,9 @@ def search_code_base(project_name:str, bug_index:str, key_words: list, agent: Ag
         source_dir = "source"
 
     java_files = list_files(os.path.join(workspace, project_dir))
-    new_keywords = []
-    for word in key_words:
-        new_keywords.extend(re.split('(?<=.)(?=[A-Z])', word))
+    new_keywords = key_words
+    #for word in key_words:
+    #    new_keywords.extend(re.split('(?<=.)(?=[A-Z])', word))
     
     split_simple = []
     for word in new_keywords:
