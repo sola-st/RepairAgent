@@ -872,17 +872,18 @@ def search_code_base(project_name:str, bug_index:str, key_words: list, agent: Ag
     split_simple = []
     for word in new_keywords:
         split_simple.extend(word.split("_"))
-    
-    split_dot = []
+
+    split_dot = [word for word in split_simple]
     for word in split_simple:
-        split_dot.extend(word.split(".")[-1])
+        print(word)
+        split_dot.append(word.split(".")[-1])
 
     lower_kwords = [kw.lower().replace("(", "").replace(")", "") for kw in split_dot]
-
+    
     matched_files = {}
     for file in java_files:
         #logger.debug("searching file: " + file)
-        with open(file) as jf:
+        with open(file, encoding='utf-8', errors='ignore') as jf:
             content = jf.read()
         tree = javalang.parse.parse(content)
         for path, node in tree:
@@ -913,7 +914,6 @@ def search_code_base(project_name:str, bug_index:str, key_words: list, agent: Ag
     logger.debug(str(matched_files))
     matched_names = [f for f in java_files if f.endswith(".java") and any(k in f.lower() for k in lower_kwords)]
     return "The following matches were found:\n"+str(matched_files) + "\nThe search also matched the following files names: \n" + "\n".join(matched_names)
-
 
 
 def extract_root_cause(info):
