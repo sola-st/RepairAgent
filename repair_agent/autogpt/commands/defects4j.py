@@ -1607,6 +1607,7 @@ def apply_changes(change_dict):
         line_number = int(insertion.get("line_number", 0)) + line_offset
         for new_line in insertion.get("new_lines", []):
             lines.insert(int(line_number) - 1, new_line)
+            line_number += 1
             line_offset += 1
 
 
