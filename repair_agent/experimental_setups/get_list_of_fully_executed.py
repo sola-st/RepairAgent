@@ -31,9 +31,10 @@ def main():
 
     with open('pairs_output.txt', 'w') as output_file:
         for experiment_folder in experiment_folders:
-            experiment_number = int(experiment_folder.split("_")[1])
-            if experiment_number > 0: ## can be changed
-                analyze_experiment(experiment_folder, output_file)
+            if os.path.exists(experiment_folder):
+                experiment_number = int(experiment_folder.split("_")[1])
+                if experiment_number > 0: ## can be changed
+                    analyze_experiment(experiment_folder, output_file)
 
     print("Pairs written to pairs_output.txt")
 

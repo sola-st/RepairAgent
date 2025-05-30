@@ -24,12 +24,12 @@ Before you start using RepairAgent, ensure that your system meets the following 
 
 You have two ways to use RepairAgent:
 
-1. **Start a VS Code DevContainer**: The easiest method, as it avoids pulling the large Docker image.
+1. **Start a VS Code Dev Container**: The easiest method, as it avoids pulling the large Docker image.
 2. **Use the Docker Image**: Suitable for users familiar with Docker.
 
-### 🚀 Option 1: Using a VS Code DevContainer
+### 🚀 Option 1: Using a VS Code Dev Container
 
-### **STEP 1: Open RepairAgent in a DevContainer**
+### **STEP 1: Open RepairAgent in a Dev Container**
 
 1. Ensure you have the **Dev Containers** extension installed in VS Code. You can install it from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
@@ -53,6 +53,22 @@ You have two ways to use RepairAgent:
 5. Within your VS Code terminal, move to the folder repair_agent
     ```bash
     cd repair_agent
+    ```
+
+6. Update Git indices to assume unchanged for the to-be-modified files, to avoid submitting these files accidentally:
+    ```bash
+    # Will be modified when setting the OpenAI API key
+    git update-index --assume-unchanged repair_agent/.env
+    git update-index --assume-unchanged repair_agent/autogpt/.env
+    git update-index --assume-unchanged repair_agent/autogpt/commands/defects4j.py
+    git update-index --assume-unchanged repair_agent/autogpt/commands/defects4j_static.py
+    git update-index --assume-unchanged repair_agent/run.sh
+
+    # Will be modified when running the experiments
+    git update-index --assume-unchanged repair_agent/ai_settings.yaml
+    git update-index --assume-unchanged repair_agent/defects4j
+    git update-index --assume-unchanged repair_agent/experimental_setups/bugs_list
+    git update-index --assume-unchanged repair_agent/experimental_setups/experiments_list.txt
     ```
 
 ### **STEP 2: Set the OpenAI API Key**
