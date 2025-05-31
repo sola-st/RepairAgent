@@ -681,6 +681,9 @@ def execute_read_range(project_name, bug_index, filepath, startline, endline, ag
 
     lines_str = ""
     for i in range(startline-1, endline, 1):
+        if i >= len(lines):
+            lines_str += "EOF"
+            break
         lines_str+="Line {}:".format(i+1) + lines[i]
     return lines_str
 
