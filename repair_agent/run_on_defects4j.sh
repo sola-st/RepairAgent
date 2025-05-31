@@ -1,5 +1,5 @@
 #!/bin/bash
-export PATH=$PATH:/workspaces/RepairAgent/repair_agent/defects4j/framework/bin
+export PATH=$PATH:$(pwd)/defects4j/framework/bin
 cpanm --local-lib=~/perl5 local::lib && eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
 for LANG in en_AU.UTF-8 en_GB.UTF-8 C.UTF-8 C; do
   if locale -a 2>/dev/null | grep -q "$LANG"; then
