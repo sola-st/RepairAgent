@@ -28,6 +28,9 @@ if __name__ == "__main__":
     start_exp = args.start_exp
     end_exp = args.end_exp
 
+    if not os.path.exists("all_plausibles"):
+        os.mkdir("all_plausibles")
+
     main(start_exp, end_exp)
 
 
