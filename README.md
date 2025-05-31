@@ -31,13 +31,13 @@ RepairAgent is an autonomous LLM-based agent designed for automated program repa
 Before you start using RepairAgent, ensure that your system meets the following requirements:
 
 - **Docker**: Version 20.04 or higher. For installation instructions, see the [Docker documentation](https://docs.docker.com/get-docker).
-- **VS Code**: Not a hard requirement but highly recommended. VS Code provides an easy way to interact with RepairAgent using DevContainers (see the instructions below).
+- **VS Code**: Not a hard requirement but highly recommended. VS Code provides an easy way to interact with RepairAgent using Dev Containers (see the instructions below).
 - **OpenAI Token and Credits**:
   - Create an account on the OpenAI website and purchase credits to use the API.
   - Generate an API token on the same website.
 - **Disk Space**:
     - At least 40GB of available disk space on your machine. The code itself does not take 40GB. However, the dependencies might take up to 8GB, and files generated from running on different instances may use more. 40GB is a safe estimate.
-    - If you are using VS Code DevContainers, you can avoid pulling the heavy Docker image (~22GB).
+    - If you are using VS Code Dev Containers, you can avoid pulling the heavy Docker image (~22GB).
 - **Internet Access**: Required while running RepairAgent to connect to OpenAI's API.
 
 ---
@@ -46,12 +46,12 @@ Before you start using RepairAgent, ensure that your system meets the following 
 
 You have two ways to use RepairAgent:
 
-1. **Start a VS Code Dev Container**: The easiest method, as it avoids pulling the large Docker image.
+1. **Start a VS Code Dev Containers**: The easiest method, as it avoids pulling the large Docker image.
 2. **Use the Docker Image**: Suitable for users familiar with Docker.
 
-### 🚀 Option 1: Using a VS Code Dev Container
+### 🚀 Option 1: Using a VS Code Dev Containers
 
-### **STEP 1: Open RepairAgent in a Dev Container**
+### **STEP 1: Open RepairAgent in a Dev Containers**
 
 1. Ensure you have the **Dev Containers** extension installed in VS Code. You can install it from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
@@ -80,17 +80,19 @@ You have two ways to use RepairAgent:
 6. Update Git indices to assume unchanged for the to-be-modified files, to avoid submitting these files accidentally:
     ```bash
     # Will be modified when setting the OpenAI API key
-    git update-index --assume-unchanged repair_agent/.env
-    git update-index --assume-unchanged repair_agent/autogpt/.env
-    git update-index --assume-unchanged repair_agent/autogpt/commands/defects4j.py
-    git update-index --assume-unchanged repair_agent/autogpt/commands/defects4j_static.py
-    git update-index --assume-unchanged repair_agent/run.sh
+    git update-index --assume-unchanged .env
+    git update-index --assume-unchanged autogpt/.env
+    git update-index --assume-unchanged autogpt/commands/defects4j.py
+    git update-index --assume-unchanged autogpt/commands/defects4j_static.py
+    git update-index --assume-unchanged run.sh
 
     # Will be modified when running the experiments
-    git update-index --assume-unchanged repair_agent/ai_settings.yaml
-    git update-index --assume-unchanged repair_agent/defects4j
-    git update-index --assume-unchanged repair_agent/experimental_setups/bugs_list
-    git update-index --assume-unchanged repair_agent/experimental_setups/experiments_list.txt
+    git update-index --assume-unchanged ai_settings.yaml
+    git update-index --assume-unchanged defects4j
+    git update-index --assume-unchanged experimental_setups/bugs_list
+    git update-index --assume-unchanged experimental_setups/experiments_list.txt
+    git update-index --assume-unchanged experimental_setups/fixed_so_far
+    git update-index --assume-unchanged model_logging_temp.txt
     ```
 
 ### **STEP 2: Set the OpenAI API Key**
