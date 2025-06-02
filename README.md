@@ -4,6 +4,28 @@ RepairAgent is an autonomous LLM-based agent designed for automated program repa
 
 ---
 
+## 🚨✨ **UPDATE – June 2025** ✨🚨
+
+> **⚡ The script now supports multiple AI models!**
+>
+> You can now specify the model using a command-line argument:
+>
+> ```bash
+> bash your_script.sh <input.txt> <params.json> <model-name>
+> ```
+> See below for detailed instructions.
+> If `<model-name>` is omitted, the script will use the default: `gpt-4o-mini`.
+
+**Supported Models:**
+- `gpt-4o-mini` (default)
+- `gpt-4.1`
+- `gpt-4o`
+- `gpt-4.1-mini`
+- `gpt-4.1-nano`
+
+> ⚠️ **Don't forget to update your command usage!**
+
+
 ## 📋 I. Requirements
 
 Before you start using RepairAgent, ensure that your system meets the following requirements:
@@ -89,7 +111,7 @@ By default, RepairAgent is configured to run on Defects4J bugs. To specify which
 2. Run the following command:
 
    ```bash
-   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json
+   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
    ```
 
 You can open the `hyperparams.json` file to review or customize its parameters (explained further in the customization section).
@@ -141,7 +163,7 @@ By default, RepairAgent is configured to run on Defects4J bugs. To specify which
 2. Run the following command:
 
    ```bash
-   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json
+   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
    ```
 
 You can open the `hyperparams.json` file to review or customize its parameters (explained further in the customization section).
