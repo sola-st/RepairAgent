@@ -22,63 +22,86 @@ from autogpt.llm.base import (
 from autogpt.logs import logger
 from autogpt.models.command_registry import CommandRegistry
 
+# Current as of May 2024 per https://platform.openai.com/docs/pricing
 OPEN_AI_CHAT_MODELS = {
     info.name: info
     for info in [
         ChatModelInfo(
-            name="gpt-3.5-turbo-16k-0301 ",
-            prompt_token_cost=0.003,
-            completion_token_cost=0.004,
-            max_tokens=16384,
+            name="gpt-4o",
+            prompt_token_cost=0.005,  # $5/M
+            completion_token_cost=0.015,  # $15/M
+            max_tokens=128000,
             supports_functions=True,
         ),
         ChatModelInfo(
-            name="gpt-4-0314",
-            prompt_token_cost=0.03,
-            completion_token_cost=0.06,
-            max_tokens=8192,
-        ),
-        ChatModelInfo(
-            name="gpt-4-0301",
-            prompt_token_cost=0.03,
-            completion_token_cost=0.06,
-            max_tokens=8191,
+            name="gpt-4o-mini",
+            prompt_token_cost=0.002,  # $2/M
+            completion_token_cost=0.006,  # $6/M
+            max_tokens=128000,
             supports_functions=True,
         ),
         ChatModelInfo(
-            name="gpt-4-32k-0301",
-            prompt_token_cost=0.06,
-            completion_token_cost=0.12,
-            max_tokens=32768,
+            name="gpt-4-1106-preview",
+            prompt_token_cost=0.01,  # $10/M
+            completion_token_cost=0.03,  # $30/M
+            max_tokens=128000,
+            supports_functions=True,
         ),
         ChatModelInfo(
-            name="gpt-4-32k-0301",
-            prompt_token_cost=0.06,
-            completion_token_cost=0.12,
-            max_tokens=32768,
+            name="gpt-4-0125-preview",
+            prompt_token_cost=0.01,
+            completion_token_cost=0.03,
+            max_tokens=128000,
+            supports_functions=True,
+        ),
+        ChatModelInfo(
+            name="gpt-4.1",
+            prompt_token_cost=0.01,  # $10/M
+            completion_token_cost=0.03,  # $30/M
+            max_tokens=128000,
+            supports_functions=True,
+        ),
+        ChatModelInfo(
+            name="gpt-4.1-mini",
+            prompt_token_cost=0.003,  # $3/M
+            completion_token_cost=0.009,  # $9/M
+            max_tokens=128000,
+            supports_functions=True,
+        ),
+        ChatModelInfo(
+            name="gpt-4.1-nano",
+            prompt_token_cost=0.0015,  # $1.5/M
+            completion_token_cost=0.0045,  # $4.5/M
+            max_tokens=128000,
             supports_functions=True,
         ),
         ChatModelInfo(
             name="gpt-3.5-turbo-0125",
-            prompt_token_cost=0.001,
-            completion_token_cost=0.002,
-            max_tokens=16000,
+            prompt_token_cost=0.0005,  # $0.5/M
+            completion_token_cost=0.0015,  # $1.5/M
+            max_tokens=16384,
             supports_functions=True,
-        )
-
+        ),
     ]
 }
-# Set aliases for rolling model IDs
+
+# Aliases for rolling model names (current as of 2024-05)
 chat_model_mapping = {
     "gpt-3.5-turbo": "gpt-3.5-turbo-0125",
-    "gpt-3.5-turbo-16k": "gpt-3.5-turbo-0125",
-    "gpt-4": "gpt-4-0301",
-    "gpt-4-32k": "gpt-4-32k-0301",
+    "gpt-4": "gpt-4-0125-preview",
+    "gpt-4-turbo": "gpt-4-1106-preview",
+    "gpt-4.1": "gpt-4.1",
+    "gpt-4.1-mini": "gpt-4.1-mini",
+    "gpt-4.1-nano": "gpt-4.1-nano",
+    "gpt-4o": "gpt-4o",
+    "gpt-4o-mini": "gpt-4o-mini",
 }
+
 for alias, target in chat_model_mapping.items():
-    alias_info = ChatModelInfo(**OPEN_AI_CHAT_MODELS[target].__dict__)
-    alias_info.name = alias
-    OPEN_AI_CHAT_MODELS[alias] = alias_info
+    if target in OPEN_AI_CHAT_MODELS:
+        alias_info = ChatModelInfo(**OPEN_AI_CHAT_MODELS[target].__dict__)
+        alias_info.name = alias
+        OPEN_AI_CHAT_MODELS[alias] = alias_info
 
 OPEN_AI_TEXT_MODELS = {
     info.name: info
@@ -97,7 +120,7 @@ OPEN_AI_EMBEDDING_MODELS = {
     for info in [
         EmbeddingModelInfo(
             name="text-embedding-ada-002",
-            prompt_token_cost=0.0001,
+            prompt_token_cost=0.00002,  # $0.02 per 1K tokens (May 2024 pricing)
             max_tokens=8191,
             embedding_dimensions=1536,
         ),

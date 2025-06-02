@@ -6,7 +6,7 @@ import json
 from autogpt.logs import logger
 
 
-STATIC_MODEL = "gpt-3.5-turbo-0125"
+STATIC_MODEL = "gpt-4o-mini"
 
 def get_info(name: str, index: int, workspace) -> str:
     """Create and execute a Python file in a Docker container and return the STDOUT of the

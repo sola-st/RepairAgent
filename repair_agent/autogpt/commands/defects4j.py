@@ -1236,7 +1236,7 @@ If the details in the given quetion are not enough, you should ask the user to a
 
     return response.content
 
-def validate_fix_against_hypothesis(bug_report, hypothesis, fix, model = "gpt-3.5-turbo-0125"):
+def validate_fix_against_hypothesis(bug_report, hypothesis, fix, model = "gpt-4o-mini"):
     chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
 
     messages = [
@@ -1558,7 +1558,7 @@ def extract_function_def_context(project_name, bug_index, method_name, filepath,
         }
     }
 )
-def auto_complete_functions(project_name, bug_index, filepath, method_name, agent, model="gpt-3.5-turbo-0125"):
+def auto_complete_functions(project_name, bug_index, filepath, method_name, agent, model="gpt-4o-mini"):
     context = extract_function_def_context(project_name, bug_index, method_name, filepath, agent)
     chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
     messages = [

@@ -29,6 +29,7 @@ def create_config(
     browser_name: str,
     allow_downloads: bool,
     skip_news: bool,
+    model: Optional[str] = None,   # NEW!
 ) -> None:
     """Updates the config object with the given arguments.
 
@@ -81,9 +82,12 @@ def create_config(
         config.speak_mode = True
 
     # Set the default LLM models
-    if gpt3only:
+    if model:
+        config.fast_llm = model
+        config.smart_llm = model
+        logger.typewriter_log(f"Model override: Using {model} for both fast_llm and smart_llm.", Fore.GREEN)
+    elif gpt3only:
         logger.typewriter_log("GPT3.5 Only Mode: ", Fore.GREEN, "ENABLED")
-        # --gpt3only should always use gpt-3.5-turbo, despite user's FAST_LLM config
         config.fast_llm = GPT_3_MODEL
         config.smart_llm = GPT_3_MODEL
     elif (
@@ -92,13 +96,12 @@ def create_config(
         == GPT_4_MODEL
     ):
         logger.typewriter_log("GPT4 Only Mode: ", Fore.GREEN, "ENABLED")
-        # --gpt4only should always use gpt-4, despite user's SMART_LLM config
         config.fast_llm = GPT_4_MODEL
         config.smart_llm = GPT_4_MODEL
     else:
         config.fast_llm = check_model(config.fast_llm, "fast_llm", config=config)
         config.smart_llm = check_model(config.smart_llm, "smart_llm", config=config)
-
+        
     if memory_type:
         supported_memory = get_supported_memory_backends()
         chosen = memory_type

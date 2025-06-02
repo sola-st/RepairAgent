@@ -54,7 +54,8 @@ def run_auto_gpt(
     ai_name: Optional[str] = None,
     ai_role: Optional[str] = None,
     ai_goals: tuple[str] = tuple(),
-    experiment_file: str = None
+    experiment_file: str = None,
+    model: Optional[str] = None,
 ):
     if not experiment_file:
         raise ValueError("Cannot proceed without experiment file")
@@ -85,6 +86,7 @@ def run_auto_gpt(
         browser_name,
         allow_downloads,
         skip_news,
+        model=model,    # Pass through to config
     )
 
     if config.continuous_mode:

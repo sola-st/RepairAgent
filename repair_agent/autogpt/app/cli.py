@@ -93,6 +93,13 @@ import click
     multiple=False,
     help="the path to the file containing the configuration of the agent for the experiment.",
 )
+@click.option(
+    "--model",
+    "-M",
+    type=str,
+    help="Specify the OpenAI model to use (e.g., gpt-4o, gpt-4.1, gpt-4.1-mini, gpt-4o-mini, gpt-3.5-turbo, etc.)."
+)
+
 @click.pass_context
 def main(
     ctx: click.Context,
@@ -114,7 +121,8 @@ def main(
     ai_name: Optional[str],
     ai_role: Optional[str],
     ai_goal: tuple[str],
-    experiment_file: str
+    experiment_file: str,
+    model: Optional[str],      # NEW!
 ) -> None:
     """
     Welcome to AutoGPT an experimental open-source application showcasing the capabilities of the GPT-4 pushing the boundaries of AI.
@@ -139,15 +147,14 @@ def main(
             browser_name=browser_name,
             allow_downloads=allow_downloads,
             skip_news=skip_news,
-            working_directory=Path(
-                __file__
-            ).parent.parent.parent,  # TODO: make this an option
+            working_directory=Path(__file__).parent.parent.parent,
             workspace_directory=workspace_directory,
             install_plugin_deps=install_plugin_deps,
             ai_name=ai_name,
             ai_role=ai_role,
             ai_goals=ai_goal,
-            experiment_file=experiment_file
+            experiment_file=experiment_file,
+            model=model,       # Pass through!
         )
 
 
