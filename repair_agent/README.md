@@ -95,9 +95,11 @@ Within the `experimental_setups` folder, several scripts are available to post-p
   Use the script `collect_plausible_patches_files.py` to gather the generated plausible patches across multiple experiments:
   
   ```bash
-  python3.10 collect_plausible_patches.py 1 10
+  python3.10 experimental_setups/collect_plausible_patches_files.py 1 10
   ```
   
+  This script collects both mutation-based patches from the `plausible_patches` directory and external fixes from the `external_fixes` directory. External fixes will be prefixed with `[External]` in the output list and `external_` in the filename.
+
 - **Get Fully Executed Runs**:
   Utilize `get_list_of_fully_executed.py` to retrieve runs that reached at least 38 out of 40 cycles. This identifies executions that terminated unexpectedly or called the exit function prematurely.
 
