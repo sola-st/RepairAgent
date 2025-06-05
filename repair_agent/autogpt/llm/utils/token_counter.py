@@ -81,5 +81,9 @@ def count_string_tokens(string: str, model_name: str) -> int:
     Returns:
         int: The number of tokens in the text string.
     """
-    encoding = tiktoken.encoding_for_model(model_name)
+    try:
+        encoding = tiktoken.encoding_for_model(model_name)
+    except KeyError:
+        logger.warn("Warning: model not found. Using o200k_base encoding.")
+        encoding = tiktoken.get_encoding("o200k_base")
     return len(encoding.encode(string))

@@ -27,14 +27,14 @@ OPEN_AI_CHAT_MODELS = {
     info.name: info
     for info in [
         ChatModelInfo(
-            name="gpt-4o",
+            name="gpt-4o-2024-08-06",
             prompt_token_cost=0.005,  # $5/M
             completion_token_cost=0.015,  # $15/M
             max_tokens=128000,
             supports_functions=True,
         ),
         ChatModelInfo(
-            name="gpt-4o-mini",
+            name="gpt-4o-mini-2024-07-18",
             prompt_token_cost=0.002,  # $2/M
             completion_token_cost=0.006,  # $6/M
             max_tokens=128000,
@@ -55,21 +55,21 @@ OPEN_AI_CHAT_MODELS = {
             supports_functions=True,
         ),
         ChatModelInfo(
-            name="gpt-4.1",
+            name="gpt-4.1-2025-04-14",
             prompt_token_cost=0.01,  # $10/M
             completion_token_cost=0.03,  # $30/M
             max_tokens=128000,
             supports_functions=True,
         ),
         ChatModelInfo(
-            name="gpt-4.1-mini",
+            name="gpt-4.1-mini-2025-04-14",
             prompt_token_cost=0.003,  # $3/M
             completion_token_cost=0.009,  # $9/M
             max_tokens=128000,
             supports_functions=True,
         ),
         ChatModelInfo(
-            name="gpt-4.1-nano",
+            name="gpt-4.1-nano-2025-04-14",
             prompt_token_cost=0.0015,  # $1.5/M
             completion_token_cost=0.0045,  # $4.5/M
             max_tokens=128000,
@@ -90,11 +90,11 @@ chat_model_mapping = {
     "gpt-3.5-turbo": "gpt-3.5-turbo-0125",
     "gpt-4": "gpt-4-0125-preview",
     "gpt-4-turbo": "gpt-4-1106-preview",
-    "gpt-4.1": "gpt-4.1",
-    "gpt-4.1-mini": "gpt-4.1-mini",
-    "gpt-4.1-nano": "gpt-4.1-nano",
-    "gpt-4o": "gpt-4o",
-    "gpt-4o-mini": "gpt-4o-mini",
+    "gpt-4.1": "gpt-4.1-2025-04-14",
+    "gpt-4.1-mini": "gpt-4.1-mini-2025-04-14",
+    "gpt-4.1-nano": "gpt-4.1-nano-2025-04-14",
+    "gpt-4o": "gpt-4o-2024-08-06",
+    "gpt-4o-mini": "gpt-4o-mini-2024-07-18",
 }
 
 for alias, target in chat_model_mapping.items():
