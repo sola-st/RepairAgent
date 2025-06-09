@@ -3,11 +3,22 @@ from __future__ import annotations
 
 from typing import List, overload
 
+import re
 import tiktoken
 
 from autogpt.llm.base import Message
 from autogpt.logs import logger
 
+
+def get_encoding(model_name):
+    try:
+        encoding = tiktoken.encoding_for_model(model_name)
+    except KeyError:
+        encoding_name = "cl100k_base" if model_name in ["gpt-3.5-turbo", "gpt-4"] else "o200k_base"
+        logger.warn(f"Warning: encoding for {model_name} not found. Using {encoding_name} encoding.")
+        encoding = tiktoken.get_encoding(encoding_name)
+    return encoding
+        
 
 @overload
 def count_message_tokens(messages: Message, model: str = "gpt-3.5-turbo") -> int:
@@ -46,18 +57,14 @@ def count_message_tokens(
     elif model.startswith("gpt-4"):
         tokens_per_message = 3
         tokens_per_name = 1
-        encoding_model = "gpt-4"
+        encoding_model = re.sub(r"(gpt-4(o|\.\d+)?).*", "\\1", model)
     else:
         raise NotImplementedError(
             f"count_message_tokens() is not implemented for model {model}.\n"
             " See https://github.com/openai/openai-python/blob/main/chatml.md for"
             " information on how messages are converted to tokens."
         )
-    try:
-        encoding = tiktoken.encoding_for_model(encoding_model)
-    except KeyError:
-        logger.warn("Warning: model not found. Using cl100k_base encoding.")
-        encoding = tiktoken.get_encoding("cl100k_base")
+    encoding = get_encoding(encoding_model)
 
     num_tokens = 0
     for message in messages:
@@ -81,5 +88,5 @@ def count_string_tokens(string: str, model_name: str) -> int:
     Returns:
         int: The number of tokens in the text string.
     """
-    encoding = tiktoken.encoding_for_model(model_name)
+    encoding = get_encoding(model_name)
     return len(encoding.encode(string))
