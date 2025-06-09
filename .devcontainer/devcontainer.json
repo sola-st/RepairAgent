@@ -18,7 +18,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y openjdk-11-jdk dos2unix && cd repair_agent/defects4j && sudo apt-get install -y cpanminus && cpanm --installdeps . && ./init.sh && sudo apt-get install -y libdbi-perl"
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y openjdk-11-jdk subversion dos2unix && cd repair_agent/defects4j && sudo apt-get install -y cpanminus && cpanm --installdeps . && ./init.sh && sudo apt-get install -y libdbi-perl"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
