@@ -92,10 +92,10 @@ class BaseAgent(metaclass=ABCMeta):
         end_i = len(prompt_goal)
         in_between = prompt_goal[start_i:end_i-1]
         try:
-            self.project_name, self.bug_index= in_between.replace("bug within the project ", "").replace(' and bug index ', " ").replace('"', "").split(" ")[:2]
+            self.project_name, self.bug_index = in_between.replace("bug within the project ", "").replace(' and bug index ', " ").replace('"', "").split(" ")[:2]
         except:
             print("PG:", self.prompt_dictionary["goals"][2])
-        self.localization_info = get_info(self.project_name, self.bug_index,"auto_gpt_workspace")
+        self.localization_info = get_info(self.project_name, self.bug_index, "auto_gpt_workspace")
         self.tests_results = run_tests(self.project_name, self.bug_index, "auto_gpt_workspace")
         """
         The system prompt sets up the AI's personality and explains its goals,
@@ -120,12 +120,11 @@ class BaseAgent(metaclass=ABCMeta):
         # These are new attributes used to construct the prompt
         """
         {
-            "file_path":
-                    {        self.ai_config = ai_config
-
-                        (XX, YY): [...]
-                    }
-                
+            "file_path": [
+                {
+                    "XX,YY": "..."
+                }
+            ]
         }
         """
         self.read_files = {}
@@ -152,7 +151,6 @@ class BaseAgent(metaclass=ABCMeta):
         """
         self.search_queries = []
 
-
         """
         {
             "get_info": "...",
@@ -160,8 +158,8 @@ class BaseAgent(metaclass=ABCMeta):
             "failing_test_code": "..."
         }
         """
-
         self.bug_report = {}
+
         self.commands_history = []
         self.human_feedback = []
         self.ask_chatgpt = None
@@ -193,7 +191,6 @@ class BaseAgent(metaclass=ABCMeta):
             self.exps = eht.read().splitlines()
 
     def save_context(self,):
-        return
         context = {
             "cycle_budget": self.cycle_budget,
             "cycle_count": self.cycle_count,
@@ -223,7 +220,7 @@ class BaseAgent(metaclass=ABCMeta):
         }
 
         #with open("experimental_setups/experiments_list.txt") as eht:
-        exps =self.exps
+        exps = self.exps
 
         with open(os.path.join("experimental_setups", exps[-1], "saved_contexts", "saved_context_{}_{}".format(self.project_name, self.bug_index)), "w") as patf:
             json.dump(context, patf)
@@ -235,8 +232,8 @@ class BaseAgent(metaclass=ABCMeta):
         query += """## Commands
 You have access to the following commands (EXCLUSIVELY):
 1. search_code_base: This utility function scans all Java files within a specified project for a given list of keywords. It generates a dictionary as output, organized by file names, classes, and method names. Within each method name, it provides a list of keywords that match the method's content. The resulting structure is as follows: { file_name: { class_name: { method_name: [...list of matched keywords...] } } }. This functionality proves beneficial for identifying pre-existing methods that may be reusable or for locating similar code to gain insights into implementing specific functionalities. It's important to note that this function does not return the actual code but rather the names of matched methods containing at least one of the specified keywords. It requires the following params params: (project_name: string, bug_index: integer, key_words: list). Once the method names are obtained, the extract_method_code command can be used to retrieve their corresponding code snippets (only do it for the ones that are relevant)
-2. get_classes_and_methods: This function allows you to get all classes and methods names within a file. It returns a dictinary where keys are classes names and values are list of methods names within each class. The required params are: (project_name: string, bug_index: integer, file_path: string)
-3. extract_similar_functions_calls: For a provided buggy code snippet in 'code_snippet' within the file 'file_path', this function extracts similar function calls. This aids in understanding how functions are utilized in comparable code snippets, facilitating the determination of appropriate parameters to pass to a function., params: (project_name: string, bug_index: string, file_path: string, code_snippet: string)
+2. get_classes_and_methods: This function allows you to get all classes and methods names within a file. It returns a dictionary where keys are classes names and values are list of methods names within each class. The required params are: (project_name: string, bug_index: integer, file_path: string)
+3. extract_similar_functions_calls: For a provided buggy code snippet in 'code_snippet' within the file 'file_path', this function extracts similar function calls. This aids in understanding how functions are utilized in comparable code snippets, facilitating the determination of appropriate parameters to pass to a function, params: (project_name: string, bug_index: string, file_path: string, code_snippet: string)
 4. extract_method_code: This command allows you to extract possible implementations of a given method name inside a file. The required params to call this command are: (project_name: string, bug_index: integer, filepath: string, method_name: string)\n"""
 
         query += self.construct_bug_report_context()
@@ -397,9 +394,7 @@ please use the indicated format and produce a list, like this:
                 if not self.validate_command_parsing(command_dict):
                     continue
                 if command_dict["command"]["name"] == command_name:
-                    lines_range=(
-                        command_dict["command"]["args"]["startline"],
-                        command_dict["command"]["args"]["endline"])
+                    lines_range = "{},{}".format(command_dict["command"]["args"]["startline"], command_dict["command"]["args"]["endline"])
                     file_path = command_dict["command"]["args"]["filepath"]
                     if i < len(messages_history) - 1:
                         j = i + 1
@@ -720,7 +715,8 @@ please use the indicated format and produce a list, like this:
         if self.read_files:
             for f in self.read_files:
                 for r in self.read_files[f]:
-                    read_files_section += "Lines {} to {} from file: {}\n{}\n\n".format(r[0], r[1], f, self.read_files[f][r])
+                    lines = r.split(",")
+                    read_files_section += "Lines {} to {} from file: {}\n{}\n\n".format(lines[0], lines[1], f, self.read_files[f][r])
         else:
             read_files_section+="No files have been read so far.\n"
 
@@ -745,7 +741,7 @@ please use the indicated format and produce a list, like this:
         return search_queries
     
     def construct_extracted_methods_context(self,):
-        extracted_methods = "## The list of emplementations of some methods in the code base:\n"
+        extracted_methods = "## The list of implementations of some methods in the code base:\n"
         if self.extracted_methods:
             for s in self.extracted_methods:
                 extracted_methods += s["result"] + "\n"
@@ -759,7 +755,7 @@ please use the indicated format and produce a list, like this:
             for s in self.similar_calls:
                 search_queries += "Code snippet: {}\ntarget file: {}\nsimilar functions calls that were found:\n{}\n\n".format(s["code_snippet"], s["file_path"],s["result"])
         else:
-            search_queries += "No similar functions  calls were extracted.\n"
+            search_queries += "No similar functions calls were extracted.\n"
         return search_queries
 
     def construct_bug_report_context(self,):
@@ -839,7 +835,7 @@ please use the indicated format and produce a list, like this:
         if "No extracted methods so far.\n" not in extracted_methods_context:
             info_sections.append(extracted_methods_context)
 
-        if "No similar functions  calls were extracted.\n" not in similar_calls_context:
+        if "No similar functions calls were extracted.\n" not in similar_calls_context:
             info_sections.append(similar_calls_context)
 
         if "No search queries executed so far.\n" not in search_queries:
@@ -934,7 +930,7 @@ please use the indicated format and produce a list, like this:
         start_i = prompt_text.find("bug within the project")
         end_i = prompt_text.find(".\n2.")
         in_between = prompt_text[start_i:end_i]
-        project_name, bug_index= in_between.replace("bug within the project ", "").replace(' and bug index ', " ").replace('"', "").split(" ")[:2]
+        project_name, bug_index = in_between.replace("bug within the project ", "").replace(' and bug index ', " ").replace('"', "").split(" ")[:2]
 
         exps = self.exps
         with open(os.path.join("experimental_setups", exps[-1], "logs", "prompt_history_{}_{}".format(project_name, bug_index)), "a+") as patf:

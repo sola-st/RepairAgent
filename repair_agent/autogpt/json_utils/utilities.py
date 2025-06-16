@@ -13,12 +13,12 @@ LLM_DEFAULT_RESPONSE_FORMAT = "llm_response_format_1"
 
 
 def extract_dict_from_response(response_content: str) -> dict[str, Any]:
-    # Someimes the response includes the JSON in a code block with ```
+    # Sometimes the response includes the JSON in a code block with ```
     start_triple_quote = response_content.find("```")
     if start_triple_quote != -1:
         response_content = response_content[start_triple_quote:]
         end_triple_quote = response_content[3:].find("```")
-        if end_triple_quote !=-1:
+        if end_triple_quote != -1:
             response_content = response_content[:end_triple_quote+3]
             response_content = "\n".join(response_content.split("\n")[1:])
             

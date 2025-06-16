@@ -123,6 +123,8 @@ def main():
     total_suggested_fixes = 0
 
     for experiment_folder in experiment_folders:
+        if not os.path.exists(experiment_folder):
+            continue
         num_log_files, table, correctly_fixed_bugs, suggested_fixes, total_queries, all_suggested_fixes = analyze_experiment(experiment_folder)
 
         #print(f"Experiment: {experiment_folder}")

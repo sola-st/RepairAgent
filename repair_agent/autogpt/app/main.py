@@ -463,8 +463,8 @@ def construct_main_ai_config(
         or config.skip_reprompt
         and all([ai_config.ai_name, ai_config.ai_role, ai_config.ai_goals])
     ):
-        logger.typewriter_log("Name :", Fore.GREEN, ai_config.ai_name)
-        logger.typewriter_log("Role :", Fore.GREEN, ai_config.ai_role)
+        logger.typewriter_log("Name:", Fore.GREEN, ai_config.ai_name)
+        logger.typewriter_log("Role:", Fore.GREEN, ai_config.ai_role)
         logger.typewriter_log("Goals:", Fore.GREEN, f"{ai_config.ai_goals}")
         logger.typewriter_log(
             "API Budget:",
@@ -496,7 +496,7 @@ Continue ({config.authorise_key}/{config.exit_key}): """,
 
     if config.restrict_to_workspace:
         logger.typewriter_log(
-            "NOTE:All files/directories created by this agent can be found inside its workspace at:",
+            "NOTE: All files/directories created by this agent can be found inside its workspace at:",
             Fore.YELLOW,
             f"{config.workspace_path}",
         )
