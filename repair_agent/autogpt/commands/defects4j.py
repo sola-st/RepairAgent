@@ -755,7 +755,7 @@ def extract_lines_range(name, index):
 @command(
     "get_classes_and_methods",
     "This function allows you to get all classes and methods names within a file.\
-    It returns a dictinary where keys are classes names and values are list of methods names\
+    It returns a dictionary where keys are classes names and values are list of methods names\
     The file path should start from source or src directory depending on the project, you whould know which one is it after you execute get_info command",
     {
         "project_name": {
@@ -778,7 +778,7 @@ def extract_lines_range(name, index):
 )
 def get_classes_and_methods(project_name: str, bug_index: str, file_path: str, agent: Agent):
     """This function allows you to get all classes and methods names within a file. 
-    It returns a dictinary where keys are classes names and values are list of methods names"""
+    It returns a dictionary where keys are classes names and values are list of methods names"""
     
     workspace = agent.config.workspace_path
     project_dir="{}_{}_buggy".format(project_name.lower(), bug_index)

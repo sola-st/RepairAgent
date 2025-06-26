@@ -13,7 +13,7 @@ from autogpt.agents.agent import Agent
         {
             "hypothesis":{
                 "type": "string",
-                "description": "The hypothesis that youo should express in text",
+                "description": "The hypothesis that you should express in text",
                 "required": True
             }
         }
