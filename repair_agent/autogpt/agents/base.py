@@ -338,9 +338,9 @@ please use the indicated format and produce a list, like this:
             commands_interface = json.load(cif)
 
         command_dict = command_dict.get("command", {"name": "", "args": {}})
-        if command_dict["name"] in list(commands_interface.keys()):
+        if command_dict.get("name", None) in list(commands_interface.keys()):
             ref_args = commands_interface[command_dict["name"]]
-            if isinstance(command_dict["args"], dict):
+            if isinstance(command_dict.get("args", None), dict):
                 command_args = list(command_dict["args"].keys())
                 if set(command_args) == set(ref_args):
                     return True

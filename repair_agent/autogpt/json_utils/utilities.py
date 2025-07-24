@@ -20,6 +20,8 @@ def extract_dict_from_response(response_content: str) -> dict[str, Any]:
         end_triple_quote = response_content[3:].find("```")
         if end_triple_quote != -1:
             response_content = response_content[:end_triple_quote+3]
+            if response_content.startswith('json'):
+                response_content = response_content[4:]
             response_content = "\n".join(response_content.split("\n")[1:])
             
         """if response_content.startswith("```") and response_content.endswith("```"):

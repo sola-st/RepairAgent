@@ -184,6 +184,11 @@ class Agent(BaseAgent):
             patf.write(llm_response.content)
         assistant_reply_dict = extract_dict_from_response(llm_response.content)
 
+        if not isinstance(assistant_reply_dict, dict):
+            raise SyntaxError(
+                "assistant_reply_dict is not dict"
+            )
+
         if "command" not in assistant_reply_dict:
             assistant_reply_dict["command"] = {"name": "missing_command", "args":{}}
         command_dict = assistant_reply_dict["command"]
