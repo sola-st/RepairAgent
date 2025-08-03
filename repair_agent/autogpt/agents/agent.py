@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import json
+import json_repair
 import time
 import os
+import re
 from datetime import datetime
 from typing import TYPE_CHECKING, Any, Optional
 
@@ -251,6 +253,17 @@ class Agent(BaseAgent):
                 
                 # Asking main agent for mutants
                 mutants = query_for_mutants(mutant_prompt)
+
+                matched_mutants = re.findall('```(?:json)?(.*?)```', mutants, flags=re.M | re.DOTALL)
+                if len(matched_mutants) == 0:
+                    matched_mutants.append(mutants)
+                mutants_json = []
+                for mutant in matched_mutants:
+                    mutant = json_repair.loads(mutant)
+                    if isinstance(mutant, dict):
+                        mutants_json.append(mutant)
+                    if isinstance(mutant, list):
+                        mutants_json.extend(mutant)
                 
                 exps = self.exps
                 existing_mutants = []
@@ -263,10 +276,8 @@ class Agent(BaseAgent):
                     raw_m.write(mutants)
                 
                 try:
-                    mutants_json = self.save_to_json(mutants_save_path, json.loads(mutants))
+                    self.save_to_json(mutants_save_path, mutants_json)
                     logger.info("MUTANTS LENGTH: " + str(len(mutants_json)) + "\n\n")
-                    if isinstance(mutants_json, dict):
-                        mutants_json = [mutants_json]
                     
                     for m in mutants_json:
                         if m not in existing_mutants:

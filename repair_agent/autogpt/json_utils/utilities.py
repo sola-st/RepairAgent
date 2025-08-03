@@ -2,6 +2,7 @@
 import ast
 import json
 import os.path
+from json_repair import repair_json
 from typing import Any, Literal
 
 from jsonschema import Draft7Validator
@@ -33,6 +34,7 @@ def extract_dict_from_response(response_content: str) -> dict[str, Any]:
             response_content = "\n".join(response_content)"""
             # Discard the first and last ```, then re-join in case the response naturally included ```
             #response_content = "```".join(response_content.split("```")[1:-1])
+    response_content = repair_json(response_content)
 
     # response content comes from OpenAI as a Python `str(content_dict)`, literal_eval reverses this
     try:
