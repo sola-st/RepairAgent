@@ -16,13 +16,12 @@ def extract_dict_from_response(response_content: str) -> dict[str, Any]:
     # Sometimes the response includes the JSON in a code block with ```
     start_triple_quote = response_content.find("```")
     if start_triple_quote != -1:
-        response_content = response_content[start_triple_quote:]
-        end_triple_quote = response_content[3:].find("```")
+        response_content = response_content[start_triple_quote+3:]
+        end_triple_quote = response_content.find("```")
         if end_triple_quote != -1:
-            response_content = response_content[:end_triple_quote+3]
+            response_content = response_content[:end_triple_quote]
             if response_content.startswith('json'):
                 response_content = response_content[4:]
-            response_content = "\n".join(response_content.split("\n")[1:])
             
         """if response_content.startswith("```") and response_content.endswith("```"):
             response_content = response_content.split("\n")[1:]
