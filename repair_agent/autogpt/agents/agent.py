@@ -179,8 +179,15 @@ class Agent(BaseAgent):
         if not llm_response.content:
             raise SyntaxError("Assistant response has no text content")
 
-        exps = self.exps
-        with open(os.path.join("experimental_setups", exps[-1], "responses", "model_responses_{}_{}".format(self.project_name, self.bug_index)), "a+") as patf:
+        """
+        Replication_Modification: Outputs to Individual Bug Directory
+        Originally, responses were written under experimental_setups/<last experiment>/responses using experiments_list.txt.
+        Now, responses are written directly into the current working directory (the per-bug folder) via self.output_dir.
+        This removes dependence on the experiment list and subdirectory layout for model responses.
+        """
+        # exps = self.exps
+        # with open(os.path.join("experimental_setups", exps[-1], "responses", "model_responses_{}_{}".format(self.project_name, self.bug_index)), "a+") as patf:
+        with open(os.path.join(self.output_dir, "model_responses_{}_{}".format(self.project_name, self.bug_index)), "a+") as patf:
             patf.write(llm_response.content)
         assistant_reply_dict = extract_dict_from_response(llm_response.content)
 
@@ -245,21 +252,42 @@ class Agent(BaseAgent):
                 
                 # create mutation prompt
                 mutant_prompt = self.construct_mutation_prompt(fix_content, detailed_buggies)
+                """
+                Replication_Modification: Outputs to Individual Bug Directory
+                Originally, mutation prompts were written under experimental_setups/<last experiment>/mutations_history using experiments_list.txt.
+                Now, mutation prompts are written directly into the current working directory (the per-bug folder) via self.output_dir.
+                This removes dependence on the experiment list and subdirectory layout for mutation prompt artifacts.
+                """
                 # save mutation prompt
-                with open(os.path.join("experimental_setups", exps[-1], "mutations_history", "mutations_prompt_{}_{}".format(self.project_name, self.bug_index)), "a") as mph:
+                # with open(os.path.join("experimental_setups", exps[-1], "mutations_history", "mutations_prompt_{}_{}".format(self.project_name, self.bug_index)), "a") as mph:
+                with open(os.path.join(self.output_dir, "mutations_prompt_{}_{}".format(self.project_name, self.bug_index)), "a") as mph:
                     mph.write(mutant_prompt)
                 
                 # Asking main agent for mutants
                 mutants = query_for_mutants(mutant_prompt)
                 
-                exps = self.exps
+                """
+                Replication_Modification: Outputs to Individual Bug Directory
+                Originally, mutant JSON artifacts were written under experimental_setups/<last experiment>/mutations_history using experiments_list.txt.
+                Now, mutant JSON artifacts are written directly into the current working directory (the per-bug folder) via self.output_dir.
+                This removes dependence on the experiment list and subdirectory layout for mutant JSON artifacts.
+                """
+                # exps = self.exps
                 existing_mutants = []
-                mutants_save_path = os.path.join("experimental_setups", exps[-1], "mutations_history", "mutants_{}_{}.json".format(self.project_name, self.bug_index))
+                # mutants_save_path = os.path.join("experimental_setups", exps[-1], "mutations_history", "mutants_{}_{}.json".format(self.project_name, self.bug_index))
+                mutants_save_path = os.path.join(self.output_dir, "mutants_{}_{}.json".format(self.project_name, self.bug_index))
                 
                 if os.path.exists(mutants_save_path):
                     with open(mutants_save_path) as json_file:
                         existing_mutants = json.load(json_file)
-                with open(os.path.join("experimental_setups", exps[-1], "mutations_history", "mutants_raw_{}_{}.json".format(self.project_name, self.bug_index)), "a") as raw_m:
+                """
+                Replication_Modification: Outputs to Individual Bug Directory
+                Originally, raw mutant outputs were written under experimental_setups/<last experiment>/mutations_history using experiments_list.txt.
+                Now, raw mutant outputs are written directly into the current working directory (the per-bug folder) via self.output_dir.
+                This removes dependence on the experiment list and subdirectory layout for raw mutant artifacts.
+                """
+                # with open(os.path.join("experimental_setups", exps[-1], "mutations_history", "mutants_raw_{}_{}.json".format(self.project_name, self.bug_index)), "a") as raw_m:
+                with open(os.path.join(self.output_dir, "mutants_raw_{}_{}.json".format(self.project_name, self.bug_index)), "a") as raw_m:
                     raw_m.write(mutants)
                 
                 try:
@@ -280,8 +308,14 @@ class Agent(BaseAgent):
                             logger.info("---------------------------\nRESULT OF TRYING {} returned\n {} \n----------------------------\n\n".format(args, exec_result))
                             if " 0 failing test" in exec_result:
                                 logger.info("PLAUSIBLE PATCH FOUND. REASON = 0 FAILING TESTS.\n\n")
-                                ## writing the plausible patch
-                                with open(os.path.join("experimental_setups", exps[-1], "plausible_patches", "plausible_patches_{}_{}.json".format(self.project_name, self.bug_index)), "a+") as exps:
+                                """
+                                Replication_Modification: Outputs to Individual Bug Directory
+                                Originally, plausible patches were written under experimental_setups/<last experiment>/plausible_patches using experiments_list.txt.
+                                Now, plausible patches are written directly into the current working directory (the per-bug folder) via self.output_dir.
+                                This removes dependence on the experiment list and subdirectory layout for plausible patch artifacts.
+                                """
+                                # with open(os.path.join("experimental_setups", exps[-1], "plausible_patches", "plausible_patches_{}_{}.json".format(self.project_name, self.bug_index)), "a+") as exps:
+                                with open(os.path.join(self.output_dir, "plausible_patches_{}_{}.json".format(self.project_name, self.bug_index)), "a+") as exps:
                                     exps.write("### PLAUSIBLE FIX\n{}\n".format(str(m)))
                 except Exception as e:
                     logger.info("Error in loading the mutants response: " + str(e) + "\n\n")

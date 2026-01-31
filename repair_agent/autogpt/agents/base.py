@@ -187,8 +187,15 @@ class BaseAgent(metaclass=ABCMeta):
         self.auto_complete = True
         self. generated_methods= None
         self.dummy_fix = False
-        with open("experimental_setups/experiments_list.txt") as eht:
-            self.exps = eht.read().splitlines()
+        """
+        Replication_Modification: Outputs to Individual Bug Directory
+        Originally, base.py read experimental_setups/experiments_list.txt to determine the latest experiment_* folder and wrote artifacts under experimental_setups/<last experiment>/... with subdirectories.
+        Now, base.py sets output_dir to BUG_DIR (if provided), so outputs are anchored to the per-bug folder.
+        This removes dependence on the shared experiments_list.txt and makes output location driven by the job's configured bug directory.
+        """
+        # with open("experimental_setups/experiments_list.txt") as eht:
+        # self.exps = eht.read().splitlines()
+        self.output_dir = os.getenv("BUG_DIR", os.getcwd())
 
     def save_context(self,):
         context = {
@@ -218,11 +225,16 @@ class BaseAgent(metaclass=ABCMeta):
             "hyperparams": self.hyperparams,
             "history": [{"role": msg.role, "content": msg.content} for _, msg in enumerate(self.history)]
         }
-
-        #with open("experimental_setups/experiments_list.txt") as eht:
-        exps = self.exps
-
-        with open(os.path.join("experimental_setups", exps[-1], "saved_contexts", "saved_context_{}_{}".format(self.project_name, self.bug_index)), "w") as patf:
+        
+        """
+        Replication_Modification: Outputs to Individual Bug Directory
+        Originally, saved context files were written under experimental_setups/<last experiment>/saved_contexts/ using the latest experiment name from experiments_list.txt.
+        Now, saved context files are written directly into the current working directory via self.output_dir, which points to the per‑bug folder created by the job.
+        This removes reliance on the experiment list and subdirectory structure for saved context artifacts.
+        """
+        # exps = self.exps
+        # with open(os.path.join("experimental_setups", exps[-1], "saved_contexts", "saved_context_{}_{}".format(self.project_name, self.bug_index)), "w") as patf:
+        with open(os.path.join(self.output_dir, "saved_context_{}_{}".format(self.project_name, self.bug_index)), "w") as patf:
             json.dump(context, patf)
         
 
@@ -932,8 +944,16 @@ please use the indicated format and produce a list, like this:
         in_between = prompt_text[start_i:end_i]
         project_name, bug_index = in_between.replace("bug within the project ", "").replace(' and bug index ', " ").replace('"', "").split(" ")[:2]
 
-        exps = self.exps
-        with open(os.path.join("experimental_setups", exps[-1], "logs", "prompt_history_{}_{}".format(project_name, bug_index)), "a+") as patf:
+
+        """
+        Replication_Modification: Outputs to Individual Bug Directory
+        Originally, saved context files were written under experimental_setups/<last experiment>/saved_contexts/ using the latest experiment name from experiments_list.txt.
+        Now, saved context files are written directly into the current working directory via self.output_dir, which points to the per‑bug folder created by the job.
+        This removes reliance on the experiment list and subdirectory structure for saved context artifacts.
+        """
+        # exps = self.exps
+        # with open(os.path.join("experimental_setups", exps[-1], "logs", "prompt_history_{}_{}".format(project_name, bug_index)), "a+") as patf:
+        with open(os.path.join(self.output_dir, "prompt_history_{}_{}".format(project_name, bug_index)), "a+") as patf:
             patf.write(prompt.dump())
         
         # handle querying strategy
@@ -943,7 +963,14 @@ please use the indicated format and produce a list, like this:
             if self.cycle_count % self.hyperparams["external_fix_strategy"] == 0:
                 query = self.construct_fix_query()
                 suggested_fixes = query_for_fix(query, )
-                self.save_to_json(os.path.join("experimental_setups", exps[-1], "external_fixes", "external_fixes_{}_{}.json".format(project_name, bug_index)), json.loads(suggested_fixes))
+                """
+                Replication_Modification: Outputs to Individual Bug Directory
+                Originally, external fix artifacts were saved under experimental_setups/<last experiment>/external_fixes/ using the latest experiment name from experiments_list.txt.
+                Now, external fix artifacts are written directly into self.output_dir (the current working directory), which points to the per‑bug folder created by the job.
+                This removes dependence on the experiment list and subdirectory layout for external fixes output.
+                """
+                # self.save_to_json(os.path.join("experimental_setups", exps[-1], "external_fixes", "external_fixes_{}_{}.json".format(project_name, bug_index)), json.loads(suggested_fixes))
+                self.save_to_json(os.path.join(self.output_dir, "external_fixes_{}_{}.json".format(project_name, bug_index)), json.loads(suggested_fixes))
 
         raw_response = create_chat_completion(
             prompt,

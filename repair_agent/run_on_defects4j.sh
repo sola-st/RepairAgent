@@ -9,7 +9,16 @@ for LANG in en_AU.UTF-8 en_GB.UTF-8 C.UTF-8 C; do
 done
 export LC_COLLATE=C
 
-python3 experimental_setups/increment_experiment.py
+"""
+Replication_Modification: Outputs to Individual Bug Directory
+Originally, every run of run_on_defects4j.sh would create a new experiment_* directory with subdirectories. Then for every bug, 
+autogpt/agents/base.py and autogpt/agents/agent.py would output artifacts to the appropriate subdirectory. This is unweildy for 
+a Kubernetes implementation where bugs are run concurrently because it can create a race condition on the experiments_list.txt.  
+Now, the folder experiment_1 is mounted as a PVC to each bug pod and the job creates a bug-specific directory. 
+Commenting out the increment_experiment.py script, will prevent every execution of run_on_defects4j.sh from creating 
+a new experiment directory for each and every bug.
+"""
+# python3 experimental_setups/increment_experiment.py
 python3 construct_commands_descriptions.py
 
 input="$1"
