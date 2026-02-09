@@ -1,12 +1,11 @@
 import os
+import shutil
 import subprocess
 from pathlib import Path
 import re
 import json
 from autogpt.logs import logger
 
-
-STATIC_MODEL = "gpt-4o-mini"
 
 def get_info(name: str, index: int, workspace) -> str:
     """Create and execute a Python file in a Docker container and return the STDOUT of the
@@ -139,8 +138,9 @@ def run_defects4j_tests(name: str, index:int, workspace):
 def run_checkout(name: str, index:int, workspace):
     cmd_temp = "defects4j checkout -p {} -v {}b -w {}"
     folder_name = "_".join([name.lower(), str(index), "buggy"])
-    if os.path.exists(os.path.join("auto_gpt_workspace", folder_name)):
-        os.system("rm -rf {}".format(os.path.join("auto_gpt_workspace", folder_name)))
+    workspace_dir = os.path.join("auto_gpt_workspace", folder_name)
+    if os.path.exists(workspace_dir):
+        shutil.rmtree(workspace_dir)
     cmd = cmd_temp.format(name, index, folder_name)
 
     """Undo the changes that you made to the project and restore the original content of all files
@@ -235,15 +235,15 @@ def extract_lines_range(name, index):
     diff = [x for x in whatthepatch.parse_patch(text)]
     min_max = []
     for diff0 in diff:
-        max = 0
-        min = 99999999999999
+        max_line = 0
+        min_line = float('inf')
         for d in diff0.changes:
             if d.new is not None:
-                if d.new < min:
-                    min = d.new
-                if d.new > max:
-                    max = d.new
-        min_max.append((min, max-5))
+                if d.new < min_line:
+                    min_line = d.new
+                if d.new > max_line:
+                    max_line = d.new
+        min_max.append((min_line, max_line-5))
     return min_max
 
 def get_localization(name, index):
@@ -269,7 +269,6 @@ def get_localization(name, index):
         with open(os.path.join(methods_dir, file_name)) as methods:
             methods_list = methods.read().splitlines()
 
-        print(methods_info)
         for m in methods_list:
             if m.endswith("1"):
                 methods_info += m +'\n'
@@ -310,8 +309,10 @@ def extract_fail_report(name: str, index: str, workspace):
                 current_case = []
                 case_base = ""
             current_case.append(line)
-            case_base = line[4:line.find("::") if "::" in line else 1/0]
-            ".".join(case_base.split(".")[:-1])
+            if "::" not in line:
+                raise ValueError(f"Expected '::' separator in test case line: {line}")
+            case_base = line[4:line.find("::")]
+            case_base = ".".join(case_base.split(".")[:-1])
         elif line.startswith("\tat "):
             if case_base in line:
                 current_case.append(line)
@@ -329,8 +330,8 @@ def extract_fail_report(name: str, index: str, workspace):
 from langchain.chat_models import ChatOpenAI
 from langchain.schema.messages import HumanMessage, SystemMessage, AIMessage
 
-def query_for_fix(query, model=STATIC_MODEL):
-    chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
+def query_for_fix(query, model):
+    chat = ChatOpenAI(model=model)
 
     messages = [
         SystemMessage(
@@ -346,12 +347,12 @@ def query_for_fix(query, model=STATIC_MODEL):
 
     return response.content
 
-def query_for_mutants(query, model=STATIC_MODEL):
-    chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
+def query_for_mutants(query, model):
+    chat = ChatOpenAI(model=model)
 
     messages = [
         SystemMessage(
-            content="You are a code assitant and program repair agent who suggests fixes to given bugs." +\
+            content="You are a code assistant and program repair agent who suggests fixes to given bugs." +\
                     "Particularly, you will be given some information about a bug." +\
                     "Your task is to suggest a list of possible mutations of the buggy code. Probably mutating it a little bit would fix the bug."+\
                     "Use the information that I give you and also your general knowledge of similar code snippets or bug fixes that you know of."+\
@@ -393,8 +394,8 @@ def construct_fix_command(fix_object, project_name, bug_index):
         }
 
 
-def query_for_commands(query, model=STATIC_MODEL):
-    chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
+def query_for_commands(query, model):
+    chat = ChatOpenAI(model=model)
 
     messages = [
         SystemMessage(
@@ -440,9 +441,10 @@ class FunctionExtractor(JavaListener):
 def extract_method_code(project_name, bug_index, method_name, file_path):
     workspace = "./auto_gpt_workspace"
     project_dir = "{}_{}_buggy".format(project_name.lower(), bug_index)
+    filepath = file_path
     if filepath.endswith(".java"):
         filepath = filepath[:-5]
-        filepath.replace(".", "/")
+        filepath = filepath.replace(".", "/")
         filepath += ".java"
     else:
         filepath = filepath.replace(".", "/")
@@ -480,7 +482,7 @@ import tiktoken
 def extract_function_def_context(project_name, bug_index, method_name, file_path):
     input_limit = 12000
     extracted_methods = extract_method_code(project_name, bug_index, method_name, file_path)
-    if len(extract_method_code) == 0:
+    if len(extracted_methods) == 0:
         raise ValueError("NO EXTRACTED METHODS, SHOULD NOT HAPPEN")
     method_body = extracted_methods[0]
     workspace = "./auto_gpt_workspace"
@@ -490,18 +492,18 @@ def extract_function_def_context(project_name, bug_index, method_name, file_path
 
     start_index = file_content.find(method_body)
     if start_index == -1:
-        raise ValueError("METHOD BODY NOT FOUD, INDEX = -1, SHOULD NOT HAPPEN")
+        raise ValueError("METHOD BODY NOT FOUND, INDEX = -1, SHOULD NOT HAPPEN")
     context = file_content[:start_index]
     enc = tiktoken.encoding_for_model("gpt-3.5-turbo")
     encoded_context = enc.encode(context)
     if len(encoded_context) < input_limit:
         return context
     else:
-        return enc.decode(context[-input_limit:])
+        return enc.decode(encoded_context[-input_limit:])
     
-def auto_complete_functions(project_name, bug_index, file_path, method_name, model=STATIC_MODEL):
+def auto_complete_functions(project_name, bug_index, file_path, method_name, model):
     context = extract_function_def_context(project_name, bug_index, method_name, file_path)
-    chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
+    chat = ChatOpenAI(model=model)
     messages = [
             SystemMessage(
                 content="implement the code for the method {}, here is the code before the method:".format(method_name)),
@@ -665,4 +667,4 @@ if __name__ =="__main__":
     method_name = "mayBeString"
     project_name = "Closure"
     bug_index = "10"
-    print(auto_complete_functions(project_name, bug_index, file_path, method_name))
+    print(auto_complete_functions(project_name, bug_index, file_path, method_name, model="gpt-4o-mini"))

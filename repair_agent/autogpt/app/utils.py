@@ -75,7 +75,7 @@ def get_current_git_branch() -> str:
         repo = Repo(search_parent_directories=True)
         branch = repo.active_branch
         return branch.name
-    except:
+    except Exception:
         return ""
 
 
@@ -83,9 +83,8 @@ def get_latest_bulletin() -> tuple[str, bool]:
     exists = os.path.exists("data/CURRENT_BULLETIN.md")
     current_bulletin = ""
     if exists:
-        current_bulletin = open(
-            "data/CURRENT_BULLETIN.md", "r", encoding="utf-8"
-        ).read()
+        with open("data/CURRENT_BULLETIN.md", "r", encoding="utf-8") as f:
+            current_bulletin = f.read()
     new_bulletin = get_bulletin_from_web()
     is_new_news = new_bulletin != "" and new_bulletin != current_bulletin
 
@@ -98,7 +97,8 @@ def get_latest_bulletin() -> tuple[str, bool]:
         )
 
     if new_bulletin and is_new_news:
-        open("data/CURRENT_BULLETIN.md", "w", encoding="utf-8").write(new_bulletin)
+        with open("data/CURRENT_BULLETIN.md", "w", encoding="utf-8") as f:
+            f.write(new_bulletin)
         current_bulletin = f"{Fore.RED}::NEW BULLETIN::{Fore.RESET}\n\n{new_bulletin}"
 
     return f"{news_header}\n{current_bulletin}", is_new_news

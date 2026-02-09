@@ -4,15 +4,12 @@ COMMAND_CATEGORY = "defects4j"
 COMMAND_CATEGORY_TITLE = "Run Tests"
 
 import os
+import shutil
 import subprocess
 import re
 import json
 import random
 import time
-
-import docker
-from docker.errors import DockerException, ImageNotFound
-from docker.models.containers import Container as DockerContainer
 
 from autogpt.agents.agent import Agent
 from autogpt.command_decorator import command
@@ -103,8 +100,9 @@ def create_deletion_template(project_name, bug_number):
 def run_checkout(project_name: str, bug_index:int, agent: Agent):
     cmd_temp = "defects4j checkout -p {} -v {}b -w {}"
     folder_name = "_".join([project_name.lower(), str(bug_index), "buggy"])
-    if os.path.exists(os.path.join("auto_gpt_workspace", folder_name)):
-        os.system("rm -rf {}".format(os.path.join("auto_gpt_workspace", folder_name)))
+    workspace_dir = os.path.join("auto_gpt_workspace", folder_name)
+    if os.path.exists(workspace_dir):
+        shutil.rmtree(workspace_dir)
     cmd = cmd_temp.format(project_name, bug_index, folder_name)
 
     """Undo the changes that you made to the project and restore the original content of all files
@@ -139,35 +137,16 @@ def run_checkout(project_name: str, bug_index:int, agent: Agent):
         logger.debug("Auto-GPT is not running in a Docker container")
         return "Tricky situation! Auto-GPT is not running in a Docker container"
 
-"""@command(
-    "undo_changes",
-    "Undo the changes that you made to the project, and restore the original content of all files",
-    {
-        "project_name": {
-            "type": "string",
-            "description": "The name of the project under scope",
-            "required": True,
-        },
-        "bug_index":{
-            "type": "integer",
-            "description": "The index (number) of the bug that you are trying to fix.",
-            "required": True
-
-        }
-    },
-)"""
 def undo_changes(project_name: str, bug_index: int, agent: Agent) -> str:
     """Undo the changes that you made to the project and restore the original content of all files
 
     Args:
         project_name (str): Project name
-        bug_index (int): The idex of the bug
+        bug_index (int): The index of the bug
 
     Returns:
         str: A success message or a failure message depending on the exit code
     """
-    ai_name = agent.ai_config.ai_name
-
     return run_checkout(project_name, bug_index, agent)
 
 @command(
@@ -197,8 +176,6 @@ def run_tests(project_name: str, bug_index: int, agent: Agent) -> str:
     Returns:
         str: The STDOUT captured from the code when it ran
     """
-    ai_name = agent.ai_config.ai_name
-
     return run_defects4j_tests(project_name, bug_index, agent)
 
 def run_defects4j_tests(project_name: str, bug_index:int, agent: Agent):
@@ -235,93 +212,28 @@ def run_defects4j_tests(project_name: str, bug_index:int, agent: Agent):
             if "BUILD FAILED" in result.stdout:
                 with open(os.path.join(agent.config.workspace_path, folder_name+"_test.txt"), "w") as testrf:
                     testrf.write("")
-                undo_c = undo_changes(project_name, bug_index, agent)
+                undo_changes(project_name, bug_index, agent)
                 return result.stdout[result.stdout.find("BUILD FAILED"):]
-                #return result.stdout
             else:
                 with open(os.path.join(agent.config.workspace_path, folder_name+"_test.txt"), "w") as testrf:
                     testrf.write(result.stdout)
                 fail_report = extract_fail_report(project_name, bug_index, agent)
-                undo_c = undo_changes(project_name, bug_index, agent)
+                undo_changes(project_name, bug_index, agent)
                 return fail_report
         else:
             if "BUILD FAILED" in result.stderr:
                 with open(os.path.join(agent.config.workspace_path, folder_name+"_test.txt"), "w") as testrf:
                     testrf.write("")
-                undo_c = undo_changes(project_name, bug_index, agent)
+                undo_changes(project_name, bug_index, agent)
                 return result.stderr[result.stderr.find("BUILD FAILED"):]
-                #return result.stderr
             else:
                 with open(os.path.join(agent.config.workspace_path, folder_name+"_test.txt"), "w") as testrf:
                     testrf.write("")
-                undo_c = undo_changes(project_name, bug_index, agent)
+                undo_changes(project_name, bug_index, agent)
                 return result.stderr
     else:
         logger.debug("Auto-GPT is not running in a Docker container")
         return "Tricky situation! Auto-GPT is not running in a Docker container"
-    
-    # TODO("Adapt this code later to run inside docker if it's not already running")
-    try:
-        client = docker.from_env()
-        # You can replace this with the desired Python image/version
-        # You can find available Python images on Docker Hub:
-        # https://hub.docker.com/_/python
-        image_name = "python:3-alpine"
-        try:
-            client.images.get(image_name)
-            logger.debug(f"Image '{image_name}' found locally")
-        except ImageNotFound:
-            logger.info(
-                f"Image '{image_name}' not found locally, pulling from Docker Hub..."
-            )
-            # Use the low-level API to stream the pull response
-            low_level_client = docker.APIClient()
-            for line in low_level_client.pull(image_name, stream=True, decode=True):
-                # Print the status and progress, if available
-                status = line.get("status")
-                progress = line.get("progress")
-                if status and progress:
-                    logger.info(f"{status}: {progress}")
-                elif status:
-                    logger.info(status)
-
-        logger.debug(f"Running {file_path} in a {image_name} container...")
-        container: DockerContainer = client.containers.run(
-            image_name,
-            [
-                "python",
-                file_path.relative_to(agent.workspace.root).as_posix(),
-            ],
-            volumes={
-                str(agent.config.workspace_path): {
-                    "bind": "/workspace",
-                    "mode": "rw",
-                }
-            },
-            working_dir="/workspace",
-            stderr=True,
-            stdout=True,
-            detach=True,
-        )  # type: ignore
-
-        container.wait()
-        logs = container.logs().decode("utf-8")
-        container.remove()
-
-        # print(f"Execution complete. Output: {output}")
-        # print(f"Logs: {logs}")
-
-        return logs
-
-    except DockerException as e:
-        logger.warn(
-            "Could not run the script in a container. If you haven't already, please install Docker https://docs.docker.com/get-docker/"
-        )
-        return f"Error: {str(e)}"
-
-    except Exception as e:
-        return f"Error: {str(e)}"
-
 
 
 def we_are_running_in_a_docker_container() -> bool:
@@ -363,8 +275,6 @@ def get_info(project_name: str, bug_index: int, agent: Agent) -> str:
     Returns:
         str: The info about the bug given by defects4j framework
     """
-    ai_name = agent.ai_config.ai_name
-
     return execute_get_info(project_name, bug_index, agent)
 
 def execute_get_info(project_name: str, bug_index:int, agent: Agent):
@@ -410,8 +320,6 @@ def execute_get_info(project_name: str, bug_index:int, agent: Agent):
     else:
         logger.debug("Auto-GPT is not running in a Docker container")
         return "Tricky situation! Auto-GPT is not running in a Docker container"
-    
-    # TODO("Adapt this code later to run inside docker if it's not already running")
 
 @command(
     "read_range",
@@ -447,7 +355,7 @@ def execute_get_info(project_name: str, bug_index:int, agent: Agent):
         }
     },
 )
-def read_range(project_name:str, bug_index:str, filepath: str, startline: int, endline:int, agent: Agent) -> str:
+def read_range(project_name:str, bug_index:int, filepath: str, startline: int, endline:int, agent: Agent) -> str:
     """Read a range of lines starting from line number startline and ending at line number endline
 
     Args:
@@ -460,8 +368,6 @@ def read_range(project_name:str, bug_index:str, filepath: str, startline: int, e
     Returns:
         str: The read lines between startline and endline
     """
-    ai_name = agent.ai_config.ai_name
-
     return execute_read_range(project_name, bug_index, filepath, startline, endline, agent)
 
 @command(
@@ -490,36 +396,26 @@ def read_range(project_name:str, bug_index:str, filepath: str, startline: int, e
 )
 def try_fixes(project_name: str, bug_index:int, fixes_list, agent: Agent):
     fixes_feedback = ""
-    sucessful_ones = []
+    successful_ones = []
     if len(fixes_list) == 0:
         return "The list of fixes you gave is empty. Please try again with a non empty list of fixes."
     elif isinstance(fixes_list[0], dict):
-        params = {
-            "project_name": project_name,
-            "bug_index": bug_index,
-            "changes_dicts": fixes_list
-        }
-        write_result = write_range(**params)
+        write_result = execute_write_range(project_name, bug_index, fixes_list, agent)
         if "0 failing test cases" in write_result:
-            sucessful_ones.append(i)
-        fixes_feedback += "Fix {}: ".format(i) + write_result + "\n"
+            successful_ones.append(0)
+        fixes_feedback += "Fix 0: " + write_result + "\n"
 
         return "In summary, we applied all your fixes and {} of them passed. The indexes of the ones that passed are {}.\
-          Here are more details:\n".format(len(sucessful_ones), sucessful_ones) +\
+          Here are more details:\n".format(len(successful_ones), successful_ones) +\
         fixes_feedback
     for i, fix in enumerate(fixes_list):
-        params = {
-            "project_name": project_name,
-            "bug_index": bug_index,
-            "changes_dicts": fix
-        }
-        write_result = write_range(**params)
+        write_result = execute_write_range(project_name, bug_index, fix, agent)
         if "0 failing test cases" in write_result:
-            sucessful_ones.append(i)
+            successful_ones.append(i)
         fixes_feedback += "Fix {}: ".format(i) + write_result + "\n"
 
     return "In summary, we applied all your fixes and {} of them passed. The indexes of the ones that passed are {}.\
-          Here are more details:\n".format(len(sucessful_ones), sucessful_ones) +\
+          Here are more details:\n".format(len(successful_ones), successful_ones) +\
         fixes_feedback
 
 @command(
@@ -564,10 +460,7 @@ def write_range(project_name:str, bug_index:int, changes_dicts: list, agent: Age
     Returns:
         str: Success message or error message if it was not successful
     """
-    ai_name = agent.ai_config.ai_name
-
     return execute_write_range(project_name, bug_index, changes_dicts, agent)
-
 
 
 @command(
@@ -612,69 +505,42 @@ def write_fix(project_name:str, bug_index:int, changes_dicts: list, agent: Agent
     Returns:
         str: Success message or error message if it was not successful
     """
-    ai_name = agent.ai_config.ai_name
-    bug_report =  agent.construct_bug_report_context()
-    hypothesis = agent.construct_hypothesises_context()
-    logger.info("PROBLEM LOCATION 1")
+    logger.debug("write_fix: starting fix validation")
     if len(changes_dicts) == 0:
         return "The fix you passed is empty. Please provide a non empty implementation of the fix."
-    fix = "The fix consist of the following changes:\n{}".format(
-        str(changes_dicts))
 
     try:
-        logger.info("PROBLEM LOCATION 2")
+        logger.debug("write_fix: extracting targeted lines from changes_dicts")
         target_lines = extract_targeted_lines(changes_dicts)
-        logger.info("PROBLEM LOCATION 3")
+        logger.debug("write_fix: fetching list of known buggy lines")
         buggy_lines = get_list_of_buggy_lines(project_name, bug_index)
-        logger.info("PROBLEM LOCATION 4")
+        logger.debug("write_fix: computing missed buggy lines")
         missed_lines = set(buggy_lines) - set(target_lines)
-    except:
+    except (KeyError, ValueError, TypeError) as e:
+        logger.warn(f"write_fix: failed to compute missed lines: {e}")
         missed_lines = []
 
     if not agent.dummy_fix:
-        logger.info("PROBLEM LOCATION 5")
+        logger.debug("write_fix: creating deletion template for dummy fix test")
         deletion_fix = create_deletion_template(project_name, bug_index)
-        logger.info("PROBLEM LOCATION 6")
+        logger.debug("write_fix: deletion template created, checking if applicable")
         if deletion_fix is not None:
             run_ret = execute_write_range(project_name, bug_index, deletion_fix, agent)
-            logger.info("PROBLEM LOCATION 7")
+            logger.debug("write_fix: deletion template applied, checking test results")
             agent.dummy_fix = True
             if " 0 failing test" in run_ret:
                 return "Deleting the buggy lines fixed the problem and passed all the test cases. 0 failing tests."
     if len(missed_lines)!=0:
-        logger.info("PROBLEM LOCATION 8")
+        logger.debug(f"write_fix: {len(missed_lines)} buggy lines not targeted by fix")
         fix_template = create_fix_template(project_name, bug_index)
-        logger.info("PROBLEM LOCATION 9")
+        logger.debug("write_fix: fix template created for missed lines")
         return "Your fix did not target all the buggy lines. Here is the list of all the buggy lines: {}. To help you, you can fill out the following the template to generate your fix {}".format(buggy_lines, fix_template)
     run_ret = execute_write_range(project_name, bug_index, changes_dicts, agent)
-    if 1 == 0:
-        validation_result = validate_fix_against_hypothesis(bug_report, hypothesis, fix)
-        return "First, we asked an expert about the fix you made and here is what the expert said:\n" + validation_result +\
-        "\nSecond, we applied your suggested fix and here are the results:\n"+\
-        run_ret+\
-        "\n **Note:** You are automatically switched to the state 'trying out candidate fixes'"
-    else:
-        return run_ret + "\n **Note:** You are automatically switched to the state 'trying out candidate fixes'"
+    return run_ret + "\n **Note:** You are automatically switched to the state 'trying out candidate fixes'"
     
 def execute_read_range(project_name, bug_index, filepath, startline, endline, agent):
     workspace = agent.config.workspace_path
     project_dir = os.path.join(workspace, project_name.lower()+"_"+str(bug_index)+"_buggy")
-    """
-    if not os.path.exists(os.path.join(project_dir,filepath)):
-        if not os.path.exists(os.path.join(project_dir, "files_index.txt")):
-            with open(os.path.join(project_dir, "files_index.txt"), "w") as fit:
-                fit.write("\n".join(list_java_files(project_dir)))
-            
-        with open(os.path.join(project_dir, "files_index.txt")) as fit:
-            files_index = [f for f in fit.read().splitlines() if filepath in f]
-        
-        if len(files_index) == 1:
-            filepath = files_index[0]
-        elif len(files_index) >= 1:
-            raise ValueError("Multiple Candidate Paths. We do not handle this yet!")
-        else:
-            return "The filepath {} does not exist.".format(filepath)
-    """
     filepath = preprocess_paths(agent, project_name, bug_index, filepath)
     with open(os.path.join(project_dir,filepath)) as fp:
         lines = fp.readlines()
@@ -691,27 +557,12 @@ def execute_read_range(project_name, bug_index, filepath, startline, endline, ag
 def execute_write_range(project_name, bug_index, changes_dicts, agent):
     project_dir = os.path.join(agent.config.workspace_path, project_name.lower()+"_"+str(bug_index)+"_buggy")
     for change_dict in changes_dicts:
-        filepath = change_dict["file_name"]
-        """
-        if not os.path.exists(os.path.join(project_dir,filepath)):
-            if not os.path.exists(os.path.join(project_dir, "files_index.txt")):
-                with open(os.path.join(project_dir, "files_index.txt"), "w") as fit:
-                    fit.write("\n".join(list_java_files(project_dir)))
-                
-            with open(os.path.join(project_dir, "files_index.txt")) as fit:
-                files_index = [f for f in fit.read().splitlines() if filepath in f]
-        
-            if len(files_index) == 1:
-                filepath = files_index[0]
-            elif len(files_index) >= 1:
-                raise ValueError("Multiple Candidate Paths. We do not handle this yet!")
-            else:
-                return "The filepath {} does not exist.".format(filepath)
-        """
+        resolved = dict(change_dict)
+        filepath = resolved["file_name"]
         filepath = preprocess_paths(agent, project_name, bug_index, filepath)
-        change_dict["file_name"] = os.path.join(project_dir,filepath)
-    
-        apply_changes(change_dict)
+        resolved["file_name"] = os.path.join(project_dir, filepath)
+
+        apply_changes(resolved)
 
     run_ret = run_defects4j_tests(project_name, bug_index, agent)
     return "Lines written successfully, the result of running test cases on the modified code is the following:\n" + run_ret
@@ -740,15 +591,15 @@ def extract_lines_range(name, index):
     diff = [x for x in whatthepatch.parse_patch(text)]
     min_max = []
     for diff0 in diff:
-        max = 0
-        min = 99999999999999
+        max_line = 0
+        min_line = float('inf')
         for d in diff0.changes:
             if d.new is not None:
-                if d.new < min:
-                    min = d.new
-                if d.new > max:
-                    max = d.new
-        min_max.append((min, max-5))
+                if d.new < min_line:
+                    min_line = d.new
+                if d.new > max_line:
+                    max_line = d.new
+        min_max.append((min_line, max_line-5))
     return min_max
 
 
@@ -788,25 +639,8 @@ def get_classes_and_methods(project_name: str, bug_index: str, file_path: str, a
     elif os.path.exists(os.path.join(os.path.join(workspace, project_dir, "src"))):
         source_dir = "src"
     else:
-        #return "Could not find source or src directory"
         pass
-    """
-    if not os.path.exists(os.path.join(workspace, project_dir,file_path)):
-        if not os.path.exists(os.path.join(workspace, project_dir, "files_index.txt")):
-            with open(os.path.join(workspace, project_dir, "files_index.txt"), "w") as fit:
-                fit.write("\n".join(list_java_files(os.path.join(workspace, project_dir))))
-            
-        with open(os.path.join(workspace, project_dir, "files_index.txt")) as fit:
-            files_index = [f for f in fit.read().splitlines() if file_path in f]
-
-        if len(files_index) == 1:
-            file_path = files_index[0]
-        elif len(files_index) >= 1:
-            raise ValueError("Multiple Candidate Paths. We do not handle this yet!")
-        else:
-            return "The filepath {} does not exist.".format(file_path)
-    """
-    file_path = preprocess_paths(agent, project_name, bug_index, file_path)    
+    file_path = preprocess_paths(agent, project_name, bug_index, file_path)
     with open(os.path.join(workspace, project_dir, file_path)) as tfp:
         content = tfp.read()
 
@@ -878,7 +712,6 @@ def search_code_base(project_name:str, bug_index:str, key_words: list, agent: Ag
 
     split_dot = [word for word in split_simple]
     for word in split_simple:
-        print(word)
         split_dot.append(word.split(".")[-1])
 
     lower_kwords = [kw.lower().replace("(", "").replace(")", "") for kw in split_dot]
@@ -902,18 +735,18 @@ def search_code_base(project_name:str, bug_index:str, key_words: list, agent: Ag
                     #method_code = method_declaration.body
                     #logger.debug(str(method_declaration.position))
                     #lower_code = method_code.lower()
-                    matched_keyworkds = []
+                    matched_keywords = []
                     for kw in lower_kwords:
                         if kw in method_name.lower():
-                            matched_keyworkds.append(kw)
-                    if matched_keyworkds:
+                            matched_keywords.append(kw)
+                    if matched_keywords:
                         if file in matched_files:
                             if class_name in matched_files[file]:
-                                matched_files[file][class_name][method_name] = matched_keyworkds
+                                matched_files[file][class_name][method_name] = matched_keywords
                             else:
-                                matched_files[file][class_name]={method_name:matched_keyworkds}
+                                matched_files[file][class_name]={method_name:matched_keywords}
                         else:
-                            matched_files[file] = {class_name:{method_name:matched_keyworkds}}
+                            matched_files[file] = {class_name:{method_name:matched_keywords}}
     logger.debug(str(matched_files))
     matched_names = [f for f in java_files if f.endswith(".java") and any(k in f.lower() for k in lower_kwords)]
     return "The following matches were found:\n"+str(matched_files) + "\nThe search also matched the following files names: \n" + "\n".join(matched_names)
@@ -1066,8 +899,10 @@ def extract_fail_report(name: str, index: str, agent: Agent):
                 current_case = []
                 case_base = ""
             current_case.append(line)
-            case_base = line[4:line.find("::") if "::" in line else 1/0]
-            ".".join(case_base.split(".")[:-1])
+            if "::" not in line:
+                raise ValueError(f"Expected '::' separator in test case line: {line}")
+            case_base = line[4:line.find("::")]
+            case_base = ".".join(case_base.split(".")[:-1])
         elif line.startswith("\tat "):
             if case_base in line:
                 current_case.append(line)
@@ -1100,15 +935,14 @@ def execute_command(command, init_req, req):
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stdin=subprocess.PIPE, text=True, shell=True)
     content_length = len(init_req)
     request = "Content-Length: {}\r\n\r\n{}".format(content_length, init_req)
-    print(request)
+    logger.debug(f"LSP init request: {request}")
     # Send the input to the subprocess
     process.stdin.write(request)
-    #
 
     time.sleep(3)
     content_length = len(req)
     request = "Content-Length: {}\r\n\r\n{}".format(content_length, req)
-    print(request)
+    logger.debug(f"LSP request: {request}")
     process.stdin.flush()
     process.stdin.write(request)
     #process.stdin.flush()
@@ -1146,12 +980,12 @@ def prepare_lsp_env(name, index, workspace):
     try:
         subprocess.run(command, check=True)
     except subprocess.CalledProcessError as e:
-        print(f"Error: {e}")
+        logger.error(f"Failed to copy LSP environment: {e}")
 
 
 
 def lsp_hover(name:str, index:str, file_path:str, line_number:int, column:int, agent: Agent):
-    base_dir = "home/isleem/research_projects_repos/AutoGPT"
+    base_dir = os.path.abspath(".")
     workspace = agent.config.workspace
     project_dir = "_".join([name.lower(), str(index), "buggy"])
     id = random.randint(100, 9999999999)
@@ -1218,11 +1052,11 @@ from langchain.schema.messages import HumanMessage, SystemMessage, AIMessage
 )
 """
 def ask_chatgpt(question: str, agent: Agent):
-    chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER")
+    chat = ChatOpenAI(model=agent.config.static_llm)
 
     if not agent.ask_chatgpt:
         messages = [
-        SystemMessage(content="You're a helpful assistant who answer questions mostly related to programming, software, debugging, code repair, code generation, code impelementation in all possible languages, you also a big base of knowledge regarding programming and software.\
+        SystemMessage(content="You're a helpful assistant who answer questions mostly related to programming, software, debugging, code repair, code generation, code implementation in all possible languages, you also a big base of knowledge regarding programming and software.\
 If the details in the given quetion are not enough, you should ask the user to add more details and ask again."),
         HumanMessage(content=question),
     ]
@@ -1236,12 +1070,12 @@ If the details in the given quetion are not enough, you should ask the user to a
 
     return response.content
 
-def validate_fix_against_hypothesis(bug_report, hypothesis, fix, model = "gpt-4o-mini"):
-    chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
+def validate_fix_against_hypothesis(bug_report, hypothesis, fix, model):
+    chat = ChatOpenAI(model=model)
 
     messages = [
         SystemMessage(
-            content="You are a helpful assitant in coding and debugging tasks." +\
+            content="You are a helpful assistant in coding and debugging tasks." +\
                     "Particularly, you will be given some information about a bug," +\
                     "a hypothesis about the bug made by a person and the fix suggested by that person."+\
                     "Based on the given information, you should check whether the suggested fix is consistent with hypothesis."+\
@@ -1253,7 +1087,7 @@ def validate_fix_against_hypothesis(bug_report, hypothesis, fix, model = "gpt-4o
                      f"{hypothesis}\n"+\
                      "## Suggested fix\n"+\
                      f"{fix}\n"+\
-                     "Is the fix consistent with the hypothesis? Does the hypothesis about the bug make sense? Also, check if the lines numbers are consistent or not and if some lines are unncessarily changed or rewritten. For example, if the buggy line is line 445, it would make sense to change that line only. If not, explain why and suggest a correction. Keep your answer very short and concise."
+                     "Is the fix consistent with the hypothesis? Does the hypothesis about the bug make sense? Also, check if the lines numbers are consistent or not and if some lines are unnecessarily changed or rewritten. For example, if the buggy line is line 445, it would make sense to change that line only. If not, explain why and suggest a correction. Keep your answer very short and concise."
             )  
     ]
     response = chat.invoke(messages)
@@ -1308,23 +1142,6 @@ def extract_function_calls(java_code):
 def extract_similar_functions_calls(project_name:str, bug_index: str, file_path: str, code_snippet: str, agent:Agent):
     workspace = agent.config.workspace_path
     project_dir = "{}_{}_buggy".format(project_name.lower(), bug_index)
-    
-    """
-    if not os.path.exists(os.path.join(workspace, project_dir,file_path)):
-        if not os.path.exists(os.path.join(workspace, project_dir, "files_index.txt")):
-            with open(os.path.join(workspace, project_dir, "files_index.txt"), "w") as fit:
-                fit.write("\n".join(list_java_files(os.path.join(workspace, project_dir))))
-            
-        with open(os.path.join(workspace, project_dir, "files_index.txt")) as fit:
-            files_index = [f for f in fit.read().splitlines() if file_path in f]
-
-        if len(files_index) == 1:
-            file_path = files_index[0]
-        elif len(files_index) >= 1:
-            raise ValueError("Multiple Candidate Paths. We do not handle this yet!")
-        else:
-            return "The filepath {} does not exist.".format(file_path)
-    """
 
     file_path = preprocess_paths(agent, project_name, bug_index, file_path)
     with open(os.path.join(workspace, project_dir, file_path)) as fpt:
@@ -1373,7 +1190,6 @@ def get_localization(name, index):
         with open(os.path.join(methods_dir, file_name)) as methods:
             methods_list = methods.read().splitlines()
 
-        print(methods_info)
         for m in methods_list:
             if m.endswith("1"):
                 methods_info += m +'\n'
@@ -1401,7 +1217,7 @@ class FunctionExtractor(JavaListener):
             if method_name == self.target_name:
                 self.matched_methods.append((method_name, method_body, method_params, start_index, end_index))
         except Exception as e:
-            print(e)
+            logger.debug(f"FunctionExtractor: failed to extract method: {e}")
 
 @command(
     "extract_method_code",
@@ -1433,30 +1249,6 @@ class FunctionExtractor(JavaListener):
 def extract_method_code(project_name: str, bug_index: str, filepath: str, method_name:str, agent: Agent):
     workspace = agent.config.workspace_path
     project_dir = "{}_{}_buggy".format(project_name.lower(), bug_index)
-    
-    """
-    if filepath.endswith(".java"):
-        filepath = filepath[:-5]
-        filepath = filepath.replace(".", "/")
-        filepath += ".java"
-    else:
-        filepath = filepath.replace(".", "/")
-    
-    if not os.path.exists(os.path.join(workspace, project_dir, filepath)):
-        if not os.path.exists(os.path.join(workspace, project_dir, "files_index.txt")):
-            with open(os.path.join(workspace, project_dir, "files_index.txt"), "w") as fit:
-                fit.write("\n".join(list_java_files(os.path.join(workspace, project_dir))))
-                
-        with open(os.path.join(workspace, project_dir, "files_index.txt")) as fit:
-            files_index = [f for f in fit.read().splitlines() if filepath in f]
-
-        if len(files_index) == 1:
-            filepath = files_index[0]
-        elif len(files_index) >= 1:
-            raise ValueError("Multiple Candidate Paths. We do not handle this yet!")
-        else:
-            return "The filepath {} does not exist.".format(filepath)
-    """
     filepath = preprocess_paths(agent, project_name, bug_index, filepath)
 
     input_stream = FileStream(os.path.join(workspace, project_dir, filepath))
@@ -1488,30 +1280,6 @@ def extract_function_def_context(project_name, bug_index, method_name, filepath,
     input_limit = 12000
     workspace = "./auto_gpt_workspace"
     project_dir = "{}_{}_buggy".format(project_name.lower(), bug_index)
-    
-    """
-    if filepath.endswith(".java"):
-        filepath = filepath[:-5]
-        filepath = filepath.replace(".", "/")
-        filepath += ".java"
-    else:
-        filepath = filepath.replace(".", "/")
-    
-    if not os.path.exists(os.path.join(workspace, project_dir, filepath)):
-        if not os.path.exists(os.path.join(workspace, project_dir, "files_index.txt")):
-            with open(os.path.join(workspace, project_dir, "files_index.txt"), "w") as fit:
-                fit.write("\n".join(list_java_files(os.path.join(workspace, project_dir))))
-                
-        with open(os.path.join(workspace, project_dir, "files_index.txt")) as fit:
-            files_index = [f for f in fit.read().splitlines() if filepath in f]
-
-        if len(files_index) == 1:
-            filepath = files_index[0]
-        elif len(files_index) >= 1:
-            raise ValueError("Multiple Candidate Paths. We do not handle this yet!")
-        else:
-            return "The filepath {} does not exist.".format(filepath)
-    """
     filepath = preprocess_paths(agent, project_name, bug_index, filepath)
     extracted_methods = extract_method_code(project_name, bug_index, filepath, method_name, agent)
     if len(extracted_methods) == 0:
@@ -1523,7 +1291,7 @@ def extract_function_def_context(project_name, bug_index, method_name, filepath,
 
     start_index = file_content.find(method_body)
     if start_index == -1:
-        raise ValueError("METHOD BODY NOT FOUD, INDEX = -1, SHOULD NOT HAPPEN")
+        raise ValueError("METHOD BODY NOT FOUND, INDEX = -1, SHOULD NOT HAPPEN")
     context = file_content[:start_index]
     enc = tiktoken.encoding_for_model("gpt-3.5-turbo")
     encoded_context = enc.encode(context)
@@ -1558,9 +1326,9 @@ def extract_function_def_context(project_name, bug_index, method_name, filepath,
         }
     }
 )
-def auto_complete_functions(project_name, bug_index, filepath, method_name, agent, model="gpt-4o-mini"):
+def auto_complete_functions(project_name, bug_index, filepath, method_name, agent):
     context = extract_function_def_context(project_name, bug_index, method_name, filepath, agent)
-    chat = ChatOpenAI(openai_api_key="API-KEY-PLACEHOLDER", model=model)
+    chat = ChatOpenAI(model=agent.config.static_llm)
     messages = [
             SystemMessage(
                 content="You are a code implementer and autocompletion engine. Basically, you would be given some already written code up to some line and you would be asked to implement the function/method that is declared at the last line. Always give full implementation of the method starting from declaration (public void myFunc(...)) to all the body. Take the given context into considration. Only give the implementation of the method and nothing else. If you want to add some explanation you can write it as comments above each line of code."),

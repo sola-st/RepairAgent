@@ -119,6 +119,33 @@ class Agent(BaseAgent):
         )
         return prompt
 
+    def _save_plausible_patch(self, patch_data, source="agent"):
+        """Save a plausible patch to the plausible patches JSON file.
+
+        Args:
+            patch_data: The patch content (dict or list of dicts).
+            source: Where this patch came from (e.g. "mutant", "write_fix", "try_fixes").
+        """
+        exps = self.exps
+        plausible_dir = os.path.join("experimental_setups", exps[-1], "plausible_patches")
+        os.makedirs(plausible_dir, exist_ok=True)
+        plausible_path = os.path.join(
+            plausible_dir,
+            "plausible_patches_{}_{}.json".format(self.project_name, self.bug_index),
+        )
+
+        plausible_patches = []
+        if os.path.exists(plausible_path):
+            with open(plausible_path) as pf:
+                plausible_patches = json.load(pf)
+
+        entry = {"source": source, "patch": patch_data}
+        if entry not in plausible_patches:
+            plausible_patches.append(entry)
+            with open(plausible_path, "w") as patch_file:
+                json.dump(plausible_patches, patch_file, indent=2)
+            logger.info(f"Plausible patch saved (source={source}), total: {len(plausible_patches)}")
+
     def execute(
         self,
         command_name: str | None,
@@ -164,6 +191,12 @@ class Agent(BaseAgent):
                 if not plugin.can_handle_post_command():
                     continue
                 result = plugin.post_command(command_name, result)
+
+            # Track plausible patches from fix-related commands
+            if command_name in ("write_fix", "write_range", "try_fixes") and " 0 failing test" in str(command_result):
+                patch_data = command_args.get("changes_dicts", command_args.get("fixes_list", command_args))
+                self._save_plausible_patch(patch_data, source=command_name)
+
         # Check if there's a result from the command append it to the message
         if result is None:
             self.history.add("user", "Unable to execute command", "action_result")
@@ -239,7 +272,7 @@ class Agent(BaseAgent):
                     fix_content = assistant_reply_dict["command"]["args"].get("changes_dicts", "[]")
                 except Exception as e:
                     fix_content = "No fix suggested yet."
-                    logger.info("NO FIX WAS SUGGESTED"+ str(e))
+                    logger.info(f"No fix was suggested: {e}")
                 # getting the list of buggy lines
                 detailed_buggies = get_detailed_list_of_buggy_lines(self.project_name, self.bug_index)
                 
@@ -250,7 +283,7 @@ class Agent(BaseAgent):
                     mph.write(mutant_prompt)
                 
                 # Asking main agent for mutants
-                mutants = query_for_mutants(mutant_prompt)
+                mutants = query_for_mutants(mutant_prompt, self.config.static_llm)
                 
                 exps = self.exps
                 existing_mutants = []
@@ -263,8 +296,15 @@ class Agent(BaseAgent):
                     raw_m.write(mutants)
                 
                 try:
-                    mutants_json = self.save_to_json(mutants_save_path, json.loads(mutants))
-                    logger.info("MUTANTS LENGTH: " + str(len(mutants_json)) + "\n\n")
+                    # Strip markdown fences / extra text around JSON
+                    mutants_text = mutants.strip()
+                    if "```" in mutants_text:
+                        mutants_text = mutants_text.split("```")[1]
+                        if mutants_text.startswith("json"):
+                            mutants_text = mutants_text[4:]
+                        mutants_text = mutants_text.strip()
+                    mutants_json = self.save_to_json(mutants_save_path, json.loads(mutants_text))
+                    logger.info(f"Generated {len(mutants_json)} mutants")
                     if isinstance(mutants_json, dict):
                         mutants_json = [mutants_json]
                     
@@ -272,19 +312,17 @@ class Agent(BaseAgent):
                         if m not in existing_mutants:
                             fix_command = construct_fix_command(m, self.project_name, self.bug_index)
                             if isinstance(fix_command, str):
-                                logger.info("MUTANT OBJECT: " + fix_command + "\n\n")
-                                raise TypeError("Error: EXPECTED 'DICT', RECEIEVED 'STR' INSTEAD" + fix_command)
+                                logger.info(f"Mutant returned string instead of dict: {fix_command}")
+                                raise TypeError(f"Expected dict for fix_command, received str instead: {fix_command}")
                             name, args = extract_command(fix_command, None, self.config)
-                            
+
                             exec_result = execute_command(name, args, self)
-                            logger.info("---------------------------\nRESULT OF TRYING {} returned\n {} \n----------------------------\n\n".format(args, exec_result))
+                            logger.info(f"Mutant fix result for {args}: {exec_result}")
                             if " 0 failing test" in exec_result:
-                                logger.info("PLAUSIBLE PATCH FOUND. REASON = 0 FAILING TESTS.\n\n")
-                                ## writing the plausible patch
-                                with open(os.path.join("experimental_setups", exps[-1], "plausible_patches", "plausible_patches_{}_{}.json".format(self.project_name, self.bug_index)), "a+") as exps:
-                                    exps.write("### PLAUSIBLE FIX\n{}\n".format(str(m)))
+                                logger.info("Plausible mutant patch found: 0 failing tests")
+                                self._save_plausible_patch(m, source="mutant")
                 except Exception as e:
-                    logger.info("Error in loading the mutants response: " + str(e) + "\n\n")
+                    logger.warn(f"Error loading/processing mutants response: {e}")
 
         valid, errors = validate_dict(assistant_reply_dict, self.config)
         
@@ -310,7 +348,7 @@ class Agent(BaseAgent):
                 )
                 response = command_name, arguments, assistant_reply_dict
             except Exception as e:
-                logger.error("Error: \n", str(e))
+                logger.error(f"Failed to extract command: {e}")
 
         self.log_cycle_handler.log_cycle(
             self.ai_config.ai_name,

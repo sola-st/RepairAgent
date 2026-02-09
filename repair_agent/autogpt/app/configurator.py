@@ -85,7 +85,8 @@ def create_config(
     if model:
         config.fast_llm = model
         config.smart_llm = model
-        logger.typewriter_log(f"Model override: Using {model} for both fast_llm and smart_llm.", Fore.GREEN)
+        config.static_llm = model
+        logger.typewriter_log(f"Model override: Using {model} for fast_llm, smart_llm, and static_llm.", Fore.GREEN)
     elif gpt3only:
         logger.typewriter_log("GPT3.5 Only Mode: ", Fore.GREEN, "ENABLED")
         config.fast_llm = GPT_3_MODEL

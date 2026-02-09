@@ -14,7 +14,7 @@ function find_python_command() {
 }
 
 PYTHON_CMD=$(find_python_command)
-export OPENAI_KEY=GLOBAL-API-KEY-PLACEHOLDER
+export OPENAI_API_KEY=GLOBAL-API-KEY-PLACEHOLDER
 if $PYTHON_CMD -c "import sys; sys.exit(sys.version_info < (3, 10))"; then
     $PYTHON_CMD scripts/check_requirements.py requirements.txt
     if [ $? -eq 1 ]

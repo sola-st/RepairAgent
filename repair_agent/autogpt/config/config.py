@@ -56,6 +56,7 @@ class Config(SystemSettings, arbitrary_types_allowed=True):
     # Model configuration
     fast_llm: str = "gpt-3.5-turbo-0125"
     smart_llm: str = "gpt-4-0314"
+    static_llm: str = "gpt-4o-mini"
     temperature: float = 0
     openai_functions: bool = False
     embedding_model: str = "text-embedding-ada-002"
@@ -237,6 +238,7 @@ class ConfigBuilder(Configurable[Config]):
             ),
             "fast_llm": os.getenv("FAST_LLM", os.getenv("FAST_LLM_MODEL")),
             "smart_llm": os.getenv("SMART_LLM", os.getenv("SMART_LLM_MODEL")),
+            "static_llm": os.getenv("STATIC_LLM"),
             "embedding_model": os.getenv("EMBEDDING_MODEL"),
             "browse_spacy_language_model": os.getenv("BROWSE_SPACY_LANGUAGE_MODEL"),
             "openai_api_key": os.getenv("OPENAI_API_KEY"),
