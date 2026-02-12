@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import json
+import json_repair
+import re
 import time
 import os
 from datetime import datetime
@@ -296,17 +298,21 @@ class Agent(BaseAgent):
                     raw_m.write(mutants)
                 
                 try:
-                    # Strip markdown fences / extra text around JSON
-                    mutants_text = mutants.strip()
-                    if "```" in mutants_text:
-                        mutants_text = mutants_text.split("```")[1]
-                        if mutants_text.startswith("json"):
-                            mutants_text = mutants_text[4:]
-                        mutants_text = mutants_text.strip()
-                    mutants_json = self.save_to_json(mutants_save_path, json.loads(mutants_text))
+                    # Extract JSON from markdown fences (LLMs often wrap in ```json ... ```)
+                    matched_blocks = re.findall(r'```(?:json)?(.*?)```', mutants, flags=re.DOTALL)
+                    if not matched_blocks:
+                        matched_blocks = [mutants]
+
+                    mutants_json = []
+                    for block in matched_blocks:
+                        parsed = json_repair.loads(block.strip())
+                        if isinstance(parsed, dict):
+                            mutants_json.append(parsed)
+                        elif isinstance(parsed, list):
+                            mutants_json.extend(parsed)
+
+                    self.save_to_json(mutants_save_path, mutants_json)
                     logger.info(f"Generated {len(mutants_json)} mutants")
-                    if isinstance(mutants_json, dict):
-                        mutants_json = [mutants_json]
                     
                     for m in mutants_json:
                         if m not in existing_mutants:
