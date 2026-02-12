@@ -10,8 +10,7 @@ For details on the approach and evaluation, see the [research paper](https://arx
 
 1. [Requirements](#i-requirements)
 2. [Getting Started](#ii-getting-started)
-   - [Option A: VS Code Dev Container](#option-a-vs-code-dev-container)
-   - [Option B: Docker Image](#option-b-docker-image)
+   - [VS Code Dev Container](#option-a-vs-code-dev-container)
 3. [Running RepairAgent](#iii-running-repairagent)
 4. [Configuration](#iv-configuration)
 5. [Analyzing Results](#v-analyzing-results)
@@ -33,7 +32,7 @@ For details on the approach and evaluation, see the [research paper](https://arx
 
 ## II. Getting Started
 
-### Option A: VS Code Dev Container
+### VS Code Dev Container
 
 This is the easiest method. It builds a lightweight container locally and avoids pulling the full Docker image (~22 GB).
 
@@ -79,25 +78,6 @@ This is the easiest method. It builds a lightweight container locally and avoids
    ```
 
 You are now ready to run RepairAgent (see [Running RepairAgent](#iii-running-repairagent)).
-
-### Option B: Docker Image
-
-1. **Pull and start the container:**
-
-   ```bash
-   docker pull islemdockerdev/repair-agent:v1
-   docker run -itd --name apr-agent islemdockerdev/repair-agent:v1
-   docker start -i apr-agent
-   ```
-
-2. **Attach to VS Code** (optional): Open VS Code, go to the Containers panel (requires the **Remote Explorer** extension), find `apr-agent`, and attach. The working directory is `/app/AutoGPT`. See this [1-minute tutorial](https://www.youtube.com/watch?v=8gUtN5j4QnY&t) for a walkthrough.
-
-3. **Set the OpenAI API key:**
-
-   ```bash
-   python3 set_api_key.py
-   ```
-
 ---
 
 ## III. Running RepairAgent
