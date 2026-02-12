@@ -1,42 +1,93 @@
-# RepairAgent
+<p align="center">
+  <h1 align="center">RepairAgent</h1>
+  <p align="center">
+    <strong>Autonomous LLM-powered bug repair for Java projects — no human intervention needed.</strong>
+  </p>
+</p>
 
-RepairAgent is an autonomous LLM-based agent for automated program repair. It targets the [Defects4J](https://github.com/rjust/defects4j) benchmark and uses an LLM-driven loop to localize, analyze, and fix Java bugs.
-
-For details on the approach and evaluation, see the [research paper](https://arxiv.org/abs/2403.17134).
-
----
-
-## Table of Contents
-
-1. [Requirements](#i-requirements)
-2. [Getting Started](#ii-getting-started)
-   - [VS Code Dev Container](#option-a-vs-code-dev-container)
-3. [Running RepairAgent](#iii-running-repairagent)
-4. [Configuration](#iv-configuration)
-5. [Analyzing Results](#v-analyzing-results)
-6. [Replicating Experiments](#vi-replicating-experiments)
-7. [Our Data](#vii-our-data)
-8. [Contributing](#viii-contributing)
+<p align="center">
+  <a href="https://github.com/codespaces/new?hide_repo_select=true&repo=sola-st/RepairAgent&ref=main"><img src="https://img.shields.io/badge/Open%20in-Codespaces-blue?logo=github" alt="Open in GitHub Codespaces"></a>
+  <a href="https://arxiv.org/abs/2403.17134"><img src="https://img.shields.io/badge/arXiv-2403.17134-b31b1b.svg" alt="arXiv"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python 3.10+"></a>
+</p>
 
 ---
 
-## I. Requirements
+RepairAgent is an autonomous agent that fixes bugs in Java projects using LLMs.
+It operates in a loop: **localize the bug -> analyze the code -> generate a fix -> test it -> iterate** — all without human guidance.
 
-- **Docker** >= 20.04 ([install](https://docs.docker.com/get-docker))
-- **VS Code** with the **Dev Containers** extension (recommended, not required)
-- **OpenAI API key** with credits ([get one here](https://platform.openai.com/account/api-keys))
-- **Disk space**: ~40 GB (dependencies ~8 GB; experiment artifacts grow over time)
-- **Internet access** for OpenAI API calls during execution
+On the [Defects4J](https://github.com/rjust/defects4j) benchmark, RepairAgent correctly fixed **164 bugs**, outperforming prior state-of-the-art tools:
+
+| Tool | Correct Fixes | Year |
+|------|:---:|:---:|
+| **RepairAgent** | **164** | 2024 |
+| ChatRepair | 162 | 2024 |
+| SelfAPR | 110 | 2023 |
+| ITER | 107 | 2023 |
+| AlphaRepair | 100 | 2022 |
+| Recoder | 68 | 2021 |
+
+> Published at [ICSE 2025](https://arxiv.org/abs/2403.17134). RepairAgent is the first autonomous agent-based approach to automated program repair.
+
+## How It Works
+
+```
+                     RepairAgent Workflow
+                     ====================
+
+  +---------------------------------------------------------------+
+  |                      LLM-Powered Agent                        |
+  |                                                               |
+  |   +-----------------+    +------------------+    +----------+ |
+  |   |  1. Understand  | -> |   2. Collect Info | -> | 3. Fix   | |
+  |   |     the Bug     |    |    to Fix the Bug |    | the Bug  | |
+  |   +-----------------+    +------------------+    +----------+ |
+  |   | - Extract test  |    | - Search codebase |    | - Write  | |
+  |   | - Form          |    | - Extract methods |    |   patch   | |
+  |   |   hypothesis    |    | - Find similar    |    | - Run    | |
+  |   |                 |    |   patterns        |    |   tests  | |
+  |   +-----------------+    +------------------+    +----+-----+ |
+  |         ^                                              |      |
+  |         |           iterate if tests fail              |      |
+  |         +----------------------------------------------+      |
+  +---------------------------------------------------------------+
+
+  Input: Buggy Java project + failing test
+  Output: Correct patch that passes all tests
+```
+
+The agent has three states, each with specialized commands:
+- **Understand the bug**: reads failing tests, forms hypotheses about root causes
+- **Collect information**: searches the codebase, extracts method signatures and similar code patterns
+- **Try fixes**: generates patches, applies them, runs the test suite, and iterates
+
+## Supported Models
+
+RepairAgent supports both **OpenAI** and **Anthropic (Claude)** models:
+
+| Provider | Models | Environment Variable |
+|----------|--------|---------------------|
+| OpenAI | `gpt-4o`, `gpt-4o-mini`, `gpt-4.1`, `gpt-4.1-mini`, `gpt-4.1-nano`, `gpt-4-turbo`, `gpt-3.5-turbo` | `OPENAI_API_KEY` |
+| Anthropic | `claude-sonnet-4-20250514`, `claude-haiku-4-20250414`, `claude-opus-4-20250514` | `ANTHROPIC_API_KEY` |
 
 ---
 
-## II. Getting Started
+## Quick Start
 
-### VS Code Dev Container
+### Option A: Open in Codespaces (zero install)
 
-This is the easiest method. It builds a lightweight container locally and avoids pulling the full Docker image (~22 GB).
+Click the badge above or go to **Code > Codespaces > New codespace**. Once the container is ready:
 
-1. **Clone and prepare the repository:**
+```bash
+cd repair_agent
+python3 set_api_key.py                    # enter your OpenAI or Anthropic API key
+./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
+```
+
+### Option B: VS Code Dev Container
+
+1. **Clone and prepare:**
 
    ```bash
    git clone https://github.com/sola-st/RepairAgent.git
@@ -50,39 +101,42 @@ This is the easiest method. It builds a lightweight container locally and avoids
 
 2. **Open in VS Code**, then click "Reopen in Container" when prompted (or use the Command Palette: `Dev Containers: Reopen in Container`).
 
-3. **In the VS Code terminal:**
+3. **Set your API key and run:**
 
    ```bash
    cd repair_agent
-   ```
-
-4. **Mark generated files as assume-unchanged** to keep your git status clean:
-
-   ```bash
-   git update-index --assume-unchanged .env autogpt/.env run.sh
-   git update-index --assume-unchanged ai_settings.yaml
-   git update-index --assume-unchanged experimental_setups/experiments_list.txt
-   git update-index --assume-unchanged experimental_setups/fixed_so_far
-   ```
-
-5. **Set the OpenAI API key:**
-
-   ```bash
    python3 set_api_key.py
+   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
    ```
 
-   This writes your key into the `.env` files and `run.sh`. Alternatively, export it directly:
-
-   ```bash
-   export OPENAI_API_KEY=sk-...
-   ```
-
-You are now ready to run RepairAgent (see [Running RepairAgent](#iii-running-repairagent)).
 ---
 
-## III. Running RepairAgent
+## Table of Contents
 
-### Quick start
+1. [Requirements](#requirements)
+2. [Running RepairAgent](#running-repairagent)
+3. [Configuration](#configuration)
+4. [Analyzing Results](#analyzing-results)
+5. [Replicating Experiments](#replicating-experiments)
+6. [Our Data](#our-data)
+7. [Contributing](#contributing)
+8. [Citation](#citation)
+
+---
+
+## Requirements
+
+- **Docker** >= 20.04 ([install](https://docs.docker.com/get-docker))
+- **VS Code** with the **Dev Containers** extension (recommended, not required)
+- **API key** for either [OpenAI](https://platform.openai.com/account/api-keys) or [Anthropic](https://console.anthropic.com/)
+- **Disk space**: ~40 GB (dependencies ~8 GB; experiment artifacts grow over time)
+- **Internet access** for LLM API calls during execution
+
+---
+
+## Running RepairAgent
+
+### Basic usage
 
 ```bash
 ./run_on_defects4j.sh <bugs_file> <hyperparams_file> [model]
@@ -94,12 +148,16 @@ You are now ready to run RepairAgent (see [Running RepairAgent](#iii-running-rep
 |----------|-------------|---------|
 | `bugs_file` | Text file with one `Project BugIndex` per line | `experimental_setups/bugs_list` |
 | `hyperparams_file` | JSON file with agent hyperparameters | `hyperparams.json` |
-| `model` | OpenAI model name (optional, default: `gpt-4o-mini`) | `gpt-4o`, `gpt-4.1` |
+| `model` | Model name (optional, default: `gpt-4o-mini`) | `gpt-4o`, `claude-sonnet-4-20250514` |
 
-**Example:**
+**Examples:**
 
 ```bash
+# OpenAI
 ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
+
+# Anthropic Claude
+./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json claude-sonnet-4-20250514
 ```
 
 The bugs file format is one bug per line:
@@ -120,7 +178,7 @@ Lang 22
 
 ### Choosing the LLM model
 
-The `--model` flag (or third argument to `run_on_defects4j.sh`) sets **all** LLM models used by RepairAgent:
+The `model` argument (third argument to `run_on_defects4j.sh`) sets **all** LLM models used by RepairAgent:
 
 - **Main agent** (`fast_llm` / `smart_llm`): drives the agent's reasoning loop
 - **Static/auxiliary** (`static_llm`): used for mutation generation, fix queries, and auto-completion
@@ -135,7 +193,7 @@ export STATIC_LLM=gpt-4o-mini     # auxiliary LLM calls
 
 ---
 
-## IV. Configuration
+## Configuration
 
 ### `hyperparams.json`
 
@@ -163,7 +221,7 @@ Example:
 
 ---
 
-## V. Analyzing Results
+## Analyzing Results
 
 ### Output structure
 
@@ -205,8 +263,6 @@ This produces:
 
 ### Individual analysis scripts
 
-These older scripts are still available for specific tasks:
-
 | Script | Purpose | Usage |
 |--------|---------|-------|
 | `analyze_experiment_results.py` | Generate per-experiment text reports | `python3 analyze_experiment_results.py` |
@@ -216,7 +272,7 @@ These older scripts are still available for specific tasks:
 
 ---
 
-## VI. Replicating Experiments
+## Replicating Experiments
 
 ### Defects4J
 
@@ -260,7 +316,7 @@ These older scripts are still available for specific tasks:
 
 ---
 
-## VII. Our Data
+## Our Data
 
 In our experiments, RepairAgent fixed **164 bugs** on the Defects4J dataset.
 
@@ -276,6 +332,22 @@ Note: RepairAgent encountered middleware exceptions on 29 bugs, which were not r
 
 ---
 
-## VIII. Contributing
+## Contributing
 
 If you find issues, bugs, or documentation gaps, please [open an issue](https://github.com/sola-st/RepairAgent/issues) or [email the author](mailto:fi_bouzenia@esi.dz).
+
+---
+
+## Citation
+
+If you use RepairAgent in your research, please cite:
+
+```bibtex
+@inproceedings{bouzenia2024repairagent,
+  title={RepairAgent: An Autonomous, LLM-Based Agent for Program Repair},
+  author={Bouzenia, Islem and Pradel, Michael},
+  booktitle={Proceedings of the 47th International Conference on Software Engineering (ICSE)},
+  year={2025},
+  url={https://arxiv.org/abs/2403.17134}
+}
+```
