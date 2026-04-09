@@ -1,5 +1,5 @@
 from .formatters import AutoGptFormatter, JsonFormatter, remove_color_codes
-from .handlers import ConsoleHandler, JsonFileHandler, TypingConsoleHandler
+from .handlers import ConsoleHandler, JsonFileHandler, RichConsoleHandler
 from .log_cycle import (
     CURRENT_CONTEXT_FILE_NAME,
     FULL_MESSAGE_HISTORY_FILE_NAME,

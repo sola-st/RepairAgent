@@ -69,23 +69,44 @@ RepairAgent supports both **OpenAI** and **Anthropic (Claude)** models:
 | Provider | Models | Environment Variable |
 |----------|--------|---------------------|
 | OpenAI | `gpt-4o`, `gpt-4o-mini`, `gpt-4.1`, `gpt-4.1-mini`, `gpt-4.1-nano`, `gpt-4-turbo`, `gpt-3.5-turbo` | `OPENAI_API_KEY` |
+| OpenAI (gpt-5) | `gpt-5-mini`, and other `gpt-5-*` variants | `OPENAI_API_KEY` |
 | Anthropic | `claude-sonnet-4-20250514`, `claude-haiku-4-20250414`, `claude-opus-4-20250514` | `ANTHROPIC_API_KEY` |
+
+> **Note:** You can pass any OpenAI or Anthropic model name via `--model` — the table above lists the models with pre-configured cost tracking, but unlisted models work too (cost tracking will be skipped).
+>
+> **gpt-5 family:** These models only accept `temperature=1.0`. RepairAgent handles this automatically — any `--temperature` value is overridden to `1.0` when using a `gpt-5-*` model.
 
 ---
 
 ## Quick Start
 
-### Option A: Open in Codespaces (zero install)
-
-Click the badge above or go to **Code > Codespaces > New codespace**. Once the container is ready:
+The guided CLI handles everything — environment checks, API key setup, model selection, and bug picking:
 
 ```bash
 cd repair_agent
-python3 set_api_key.py                    # enter your OpenAI or Anthropic API key
-./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
+python3 repairagent.py                    # Interactive wizard — walks you through everything
 ```
 
-### Option B: VS Code Dev Container
+Or run directly without prompts:
+
+```bash
+python3 repairagent.py run --bugs "Chart 1, Math 5" --model gpt-4o-mini
+```
+
+That's it. The CLI will tell you if anything is missing and help you set it up.
+
+### Environment options
+
+You need **Java 11**, **Perl**, and **Defects4J** installed. Pick whichever setup method is easiest for you:
+
+| Method | What to do |
+|--------|------------|
+| **Codespaces** (zero install) | Click the Codespaces badge above. Everything is pre-installed. |
+| **VS Code Dev Container** | Clone the repo, open in VS Code, click "Reopen in Container". See [details below](#vs-code-dev-container). |
+| **Docker** | `python3 repairagent.py run --docker --bugs "Chart 1" --model gpt-4o-mini` — builds and runs in a container. |
+| **Local** | Install Java 11, Perl, Defects4J manually. Run `python3 repairagent.py setup` to verify. |
+
+### VS Code Dev Container
 
 1. **Clone and prepare:**
 
@@ -99,22 +120,21 @@ python3 set_api_key.py                    # enter your OpenAI or Anthropic API k
    cd ..
    ```
 
-2. **Open in VS Code**, then click "Reopen in Container" when prompted (or use the Command Palette: `Dev Containers: Reopen in Container`).
+2. **Open in VS Code**, then click "Reopen in Container" (or Command Palette: `Dev Containers: Reopen in Container`).
 
-3. **Set your API key and run:**
+3. **Run:**
 
    ```bash
    cd repair_agent
-   python3 set_api_key.py
-   ./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
+   python3 repairagent.py
    ```
 
 ---
 
 ## Table of Contents
 
-1. [Requirements](#requirements)
-2. [Running RepairAgent](#running-repairagent)
+1. [Usage](#usage)
+2. [Requirements](#requirements)
 3. [Configuration](#configuration)
 4. [Analyzing Results](#analyzing-results)
 5. [Replicating Experiments](#replicating-experiments)
@@ -124,50 +144,79 @@ python3 set_api_key.py                    # enter your OpenAI or Anthropic API k
 
 ---
 
-## Requirements
+## Usage
 
-- **Docker** >= 20.04 ([install](https://docs.docker.com/get-docker))
-- **VS Code** with the **Dev Containers** extension (recommended, not required)
-- **API key** for either [OpenAI](https://platform.openai.com/account/api-keys) or [Anthropic](https://console.anthropic.com/)
-- **Disk space**: ~40 GB (dependencies ~8 GB; experiment artifacts grow over time)
-- **Internet access** for LLM API calls during execution
+### Interactive mode
 
----
+```bash
+python3 repairagent.py
+```
 
-## Running RepairAgent
+The wizard guides you through:
+1. **Environment check** — verifies Python, Java, Defects4J, API keys
+2. **API key setup** — configures OpenAI and/or Anthropic keys
+3. **Model selection** — pick from available models
+4. **Bug selection** — enter manually, pick from a project, or load a file
+5. **Run** — executes the agent and shows a results summary
 
-### Basic usage
+### Direct mode (for scripting/CI)
+
+```bash
+# Single bug
+python3 repairagent.py run --bugs "Chart 1" --model gpt-4o-mini
+
+# Multiple bugs
+python3 repairagent.py run --bugs "Chart 1, Math 5, Lang 22" --model claude-sonnet-4-20250514
+
+# From a file
+python3 repairagent.py run --bugs-file experimental_setups/bugs_list --model gpt-4o-mini
+
+# In Docker
+python3 repairagent.py run --docker --bugs "Chart 1" --model gpt-4o-mini
+
+# Custom cycle limit
+python3 repairagent.py run --bugs "Chart 1" --model gpt-4o --max-cycles 60
+
+# Custom temperature
+python3 repairagent.py run --bugs "Chart 1" --model gpt-4o --temperature 0.5
+
+# Custom hyperparameters file
+python3 repairagent.py run --bugs "Chart 1" --model gpt-4o-mini --hyperparams my_hyperparams.json
+```
+
+### CLI flags
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `--bugs` | Comma-separated bugs, e.g. `"Chart 1,Math 5"` | — |
+| `--bugs-file` | Path to a text file with one bug per line | — |
+| `--model` | LLM model name | `gpt-4o-mini` |
+| `--temperature` | LLM temperature (0.0–2.0). Ignored for gpt-5 family (forced to 1.0). | `0.0` |
+| `--max-cycles` | Maximum agent cycles per bug | `40` |
+| `--hyperparams` | Path to hyperparameters JSON file | `hyperparams.json` |
+| `--docker` | Run inside a Docker container | off |
+
+### Setup only
+
+```bash
+python3 repairagent.py setup                  # Check environment & configure API keys
+python3 repairagent.py setup --docker         # Build Docker image
+python3 repairagent.py setup --install-deps   # Install all missing dependencies automatically
+```
+
+### Shell script (advanced)
+
+For users who prefer the original shell-based workflow:
 
 ```bash
 ./run_on_defects4j.sh <bugs_file> <hyperparams_file> [model]
 ```
-
-**Arguments:**
 
 | Argument | Description | Example |
 |----------|-------------|---------|
 | `bugs_file` | Text file with one `Project BugIndex` per line | `experimental_setups/bugs_list` |
 | `hyperparams_file` | JSON file with agent hyperparameters | `hyperparams.json` |
 | `model` | Model name (optional, default: `gpt-4o-mini`) | `gpt-4o`, `claude-sonnet-4-20250514` |
-
-**Examples:**
-
-```bash
-# OpenAI
-./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json gpt-4o-mini
-
-# Anthropic Claude
-./run_on_defects4j.sh experimental_setups/bugs_list hyperparams.json claude-sonnet-4-20250514
-```
-
-The bugs file format is one bug per line:
-
-```
-Chart 1
-Math 5
-Closure 10
-Lang 22
-```
 
 ### What happens during a run
 
@@ -178,7 +227,7 @@ Lang 22
 
 ### Choosing the LLM model
 
-The `model` argument (third argument to `run_on_defects4j.sh`) sets **all** LLM models used by RepairAgent:
+The `--model` flag (or third argument to `run_on_defects4j.sh`) sets **all** LLM models used by RepairAgent:
 
 - **Main agent** (`fast_llm` / `smart_llm`): drives the agent's reasoning loop
 - **Static/auxiliary** (`static_llm`): used for mutation generation, fix queries, and auto-completion

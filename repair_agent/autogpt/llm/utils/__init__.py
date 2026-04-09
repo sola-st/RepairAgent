@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import List, Literal, Optional
 
+import openai
 from colorama import Fore
 
 from autogpt.config import Config
@@ -15,13 +16,20 @@ from ..base import (
     ResponseMessageDict,
 )
 from ..providers import openai as iopenai
+from ..providers import anthropic as ianthropic
 from ..providers.openai import (
-    OPEN_AI_CHAT_MODELS,
+    ALL_CHAT_MODELS,
     OpenAIFunctionCall,
     OpenAIFunctionSpec,
     count_openai_functions_tokens,
 )
+from ..providers.anthropic import is_anthropic_model
 from .token_counter import *
+
+# Models that require max_completion_tokens instead of max_tokens (and reject
+# temperature / response_format).  Populated on first failed call; avoids the
+# wasteful try→fail→retry cycle on every subsequent request to the same model.
+_REASONING_MODELS: set[str] = set()
 
 
 def call_ai_function(
@@ -101,7 +109,7 @@ def create_chat_completion(
     temperature: Optional[float] = None,
     max_tokens: Optional[int] = None,
 ) -> ChatModelResponse:
-    """Create a chat completion using the OpenAI API
+    """Create a chat completion using the OpenAI or Anthropic API
 
     Args:
         messages (List[Message]): The messages to send to the chat completion
@@ -119,11 +127,12 @@ def create_chat_completion(
         temperature = config.temperature
     if max_tokens is None:
         prompt_tlength = prompt.token_length
+        model_max = ALL_CHAT_MODELS[model].max_tokens if model in ALL_CHAT_MODELS else 128000
         max_tokens = (
-            min(OPEN_AI_CHAT_MODELS[model].max_tokens - prompt_tlength - 1, 4000)
+            min(model_max - prompt_tlength - 1, 4000)
         )  # the -1 is just here because we have a bug and we don't know how to fix it. When using gpt-4-0314 we get a token error.
         logger.debug(f"Prompt length: {prompt_tlength} tokens")
-        if functions:
+        if functions and not is_anthropic_model(model):
             functions_tlength = count_openai_functions_tokens(functions, model)
             max_tokens -= functions_tlength
             logger.debug(f"Functions take up {functions_tlength} tokens in API call")
@@ -138,8 +147,11 @@ def create_chat_completion(
         "model": model,
         "temperature": temperature,
         "max_tokens": max_tokens,
-        "response_format": { "type": "json_object" }
     }
+
+    # Anthropic models don't support response_format or OpenAI functions
+    if not is_anthropic_model(model):
+        chat_completion_kwargs["response_format"] = { "type": "json_object" }
 
     for plugin in config.plugins:
         if plugin.can_handle_chat_completion(
@@ -153,20 +165,55 @@ def create_chat_completion(
             if message is not None:
                 return message
 
-    chat_completion_kwargs.update(config.get_openai_credentials(model))
-
-    if functions:
-        chat_completion_kwargs["functions"] = [
-            function.schema for function in functions
-        ]
-
     # Print full prompt to debug log
     logger.debug(prompt.dump())
 
-    response = iopenai.create_chat_completion(
-        messages=prompt.raw(),
-        **chat_completion_kwargs,
-    )
+    # Route to the appropriate provider
+    if is_anthropic_model(model):
+        # Anthropic Claude models
+        response = ianthropic.create_chat_completion(
+            messages=prompt.raw(),
+            **chat_completion_kwargs,
+        )
+    else:
+        # OpenAI models
+        chat_completion_kwargs.update(config.get_openai_credentials(model))
+
+        if functions:
+            chat_completion_kwargs["functions"] = [
+                function.schema for function in functions
+            ]
+
+        if model in _REASONING_MODELS:
+            # Known reasoning model: go straight to the compatible kwargs.
+            chat_completion_kwargs["max_completion_tokens"] = chat_completion_kwargs.pop("max_tokens")
+            chat_completion_kwargs.pop("temperature", None)
+            chat_completion_kwargs.pop("response_format", None)
+
+        try:
+            response = iopenai.create_chat_completion(
+                messages=prompt.raw(),
+                **chat_completion_kwargs,
+            )
+        except openai.error.InvalidRequestError as e:
+            err = str(e)
+            if "max_tokens" in err and "max_completion_tokens" in err:
+                # Newer models (o1, o3, gpt-5-*…) use max_completion_tokens.
+                # Cache so subsequent calls skip this path.
+                _REASONING_MODELS.add(model)
+                logger.debug(
+                    f"Model {model} requires max_completion_tokens; caching and retrying."
+                )
+                chat_completion_kwargs["max_completion_tokens"] = chat_completion_kwargs.pop("max_tokens")
+                chat_completion_kwargs.pop("temperature", None)
+                chat_completion_kwargs.pop("response_format", None)
+                response = iopenai.create_chat_completion(
+                    messages=prompt.raw(),
+                    **chat_completion_kwargs,
+                )
+            else:
+                raise
+
     logger.debug(f"Response: {response}")
 
     if hasattr(response, "error"):
@@ -183,8 +230,18 @@ def create_chat_completion(
         # TODO: function call support in plugin.on_response()
         content = plugin.on_response(content)
 
+    if model not in ALL_CHAT_MODELS:
+        from autogpt.llm.base import ChatModelInfo
+        ALL_CHAT_MODELS[model] = ChatModelInfo(
+            name=model,
+            prompt_token_cost=0.0,
+            completion_token_cost=0.0,
+            max_tokens=128000,
+            supports_functions=False,
+        )
+
     return ChatModelResponse(
-        model_info=OPEN_AI_CHAT_MODELS[model],
+        model_info=ALL_CHAT_MODELS[model],
         content=content,
         function_call=OpenAIFunctionCall(
             name=function_call["name"], arguments=function_call["arguments"]

@@ -7,7 +7,7 @@ import tiktoken
 
 from autogpt.config import Config
 from autogpt.llm.base import ChatSequence
-from autogpt.llm.providers.openai import OPEN_AI_MODELS
+from autogpt.llm.providers.openai import ALL_MODELS
 from autogpt.llm.utils import count_string_tokens, create_chat_completion
 from autogpt.logs import logger
 
@@ -22,7 +22,7 @@ def batch(iterable, max_batch_length: int, overlap: int = 0):
 
 
 def _max_chunk_length(model: str, max: Optional[int] = None) -> int:
-    model_max_input_tokens = OPEN_AI_MODELS[model].max_tokens - 1
+    model_max_input_tokens = ALL_MODELS[model].max_tokens - 1
     if max is not None and max > 0:
         return min(max, model_max_input_tokens)
     return model_max_input_tokens
@@ -52,7 +52,11 @@ def chunk_content(
 
     max_chunk_length = max_chunk_length or _max_chunk_length(for_model)
 
-    tokenizer = tiktoken.encoding_for_model(for_model)
+    try:
+        tokenizer = tiktoken.encoding_for_model(for_model)
+    except KeyError:
+        # For non-OpenAI models (e.g. Claude), use cl100k_base as approximation
+        tokenizer = tiktoken.get_encoding("cl100k_base")
 
     tokenized_text = tokenizer.encode(content)
     total_length = len(tokenized_text)

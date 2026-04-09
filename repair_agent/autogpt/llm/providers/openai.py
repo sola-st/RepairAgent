@@ -133,6 +133,19 @@ OPEN_AI_MODELS: dict[str, ChatModelInfo | EmbeddingModelInfo | TextModelInfo] = 
     **OPEN_AI_EMBEDDING_MODELS,
 }
 
+# Combined model registry: includes OpenAI + Anthropic models
+from autogpt.llm.providers.anthropic import ANTHROPIC_CHAT_MODELS
+
+ALL_CHAT_MODELS: dict[str, ChatModelInfo] = {
+    **OPEN_AI_CHAT_MODELS,
+    **ANTHROPIC_CHAT_MODELS,
+}
+
+ALL_MODELS: dict[str, ChatModelInfo | EmbeddingModelInfo | TextModelInfo] = {
+    **OPEN_AI_MODELS,
+    **ANTHROPIC_CHAT_MODELS,
+}
+
 
 def meter_api(func: Callable):
     """Adds ApiManager metering to functions which make OpenAI API calls"""

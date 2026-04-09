@@ -1,0 +1,49 @@
+# Core requirements for running RepairAgent.
+# For the full set (dev tools, analysis, docs): pip install -r requirements.txt
+
+# CLI and display
+click
+rich>=13.0.0
+colorama==0.4.6
+
+# LLM providers
+openai==0.27.8
+anthropic>=0.18.0
+tiktoken
+langchain
+langchain-anthropic>=0.1.0
+
+# Configuration and serialization
+python-dotenv==0.21
+pyyaml>=6.0.1
+pydantic
+jsonschema
+orjson==3.8.10
+json-repair
+distro==1.8.0
+
+# Code analysis (Java parsing)
+javalang
+antlr4-python3-runtime
+
+# Text processing
+beautifulsoup4>=4.12.2
+charset-normalizer>=3.1.0
+ftfy>=6.1.1
+requests
+fuzzywuzzy
+spacy>=3.7.0,<4.0.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
+# Agent framework
+prompt_toolkit>=3.0.38
+inflection
+gitpython==3.1.31
+auto-gpt-plugin-template @ git+https://github.com/Significant-Gravitas/Auto-GPT-Plugin-Template@0.1.0
+
+# Audio (imported by app/main.py even when speak_mode=False)
+gTTS==2.3.1
+playsound==1.2.2
+
+# Defects4J experiment support
+whatthepatch

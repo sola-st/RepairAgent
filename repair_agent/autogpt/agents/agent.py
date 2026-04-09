@@ -227,6 +227,9 @@ class Agent(BaseAgent):
         if "command" not in assistant_reply_dict:
             assistant_reply_dict["command"] = {"name": "missing_command", "args":{}}
         command_dict = assistant_reply_dict["command"]
+        if not isinstance(command_dict, dict):
+            assistant_reply_dict["command"] = {"name": "unknown_command", "args":{}}
+            command_dict = assistant_reply_dict["command"]
 
         with open("commands_interface.json") as cif:
             commands_interface = json.load(cif)

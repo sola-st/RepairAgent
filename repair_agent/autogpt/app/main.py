@@ -9,6 +9,9 @@ from types import FrameType
 from typing import Optional
 
 from colorama import Fore, Style
+from rich.panel import Panel
+from rich.rule import Rule
+from rich.table import Table
 
 from autogpt.agents import Agent, AgentThoughts, CommandArgs, CommandName
 from autogpt.app.configurator import create_config
@@ -250,8 +253,14 @@ def run_interaction_loop(
     # Application Main Loop #
     #########################
 
+    cycle_count = 0
+
     while cycles_remaining > 0:
+        cycle_count += 1
         logger.debug(f"Cycle budget: {cycle_budget}; remaining: {cycles_remaining}")
+
+        # Display cycle header
+        display_cycle_header(agent, cycle_count, cycles_remaining, cycle_budget)
 
         ########
         # Plan #
@@ -305,13 +314,6 @@ def run_interaction_loop(
                 command_name = "human_feedback"
         else:
             user_input = None
-            # First log new-line so user can differentiate sections better in console
-            logger.typewriter_log("\n")
-            if cycles_remaining != math.inf:
-                # Print authorized commands left value
-                logger.typewriter_log(
-                    "AUTHORISED COMMANDS LEFT: ", Fore.CYAN, f"{cycles_remaining}"
-                )
 
         ###################
         # Execute Command #
@@ -328,6 +330,8 @@ def run_interaction_loop(
         else:
             logger.typewriter_log("SYSTEM: ", Fore.YELLOW, "Unable to execute command")
 
+        _display_cycle_cost_summary()
+
 
 def update_user(
     config: Config,
@@ -336,15 +340,7 @@ def update_user(
     command_args: CommandArgs | None,
     assistant_reply_dict: AgentThoughts,
 ) -> None:
-    """Prints the assistant's thoughts and the next command to the user.
-
-    Args:
-        config: The program's configuration.
-        ai_config: The AI's configuration.
-        command_name: The name of the command to execute.
-        command_args: The arguments for the command.
-        assistant_reply_dict: The assistant's reply.
-    """
+    """Prints the assistant's thoughts and the next command to the user."""
 
     print_assistant_thoughts(ai_config.ai_name, assistant_reply_dict, config)
 
@@ -360,19 +356,36 @@ def update_user(
             if config.speak_mode:
                 say_text(f"I want to execute {command_name}", config)
 
-            # First log new-line so user can differentiate sections better in console
-            logger.typewriter_log("\n")
-            logger.typewriter_log(
-                "NEXT ACTION: ",
-                Fore.CYAN,
-                f"COMMAND = {Fore.CYAN}{remove_ansi_escape(command_name)}{Style.RESET_ALL}  "
-                f"ARGUMENTS = {Fore.CYAN}{command_args}{Style.RESET_ALL}",
+            # Rich panel for next action
+            action_table = Table(show_header=False, box=None, padding=(0, 2))
+            action_table.add_column("key", style="bold")
+            action_table.add_column("value")
+            action_table.add_row("Command", remove_ansi_escape(command_name))
+            if command_args:
+                for key, val in command_args.items():
+                    val_str = str(val)
+                    if len(val_str) > 120:
+                        val_str = val_str[:117] + "..."
+                    action_table.add_row(f"  {key}", val_str)
+
+            logger.console.print(Panel(
+                action_table,
+                title="Next Action",
+                border_style="cyan",
+                expand=False,
+            ))
+
+            # Also log to file for activity.log
+            logger._log(
+                "NEXT ACTION:",
+                "",
+                f"COMMAND = {remove_ansi_escape(command_name)}  ARGUMENTS = {command_args}",
             )
     else:
         logger.typewriter_log(
             "NO ACTION SELECTED: ",
             Fore.RED,
-            f"The Agent failed to select an action.",
+            "The Agent failed to select an action.",
         )
 
 
@@ -531,9 +544,75 @@ def print_assistant_thoughts(
     config: Config,
 ) -> None:
     assistant_thoughts = assistant_reply_json_valid.get("thoughts", {})
-    if assistant_thoughts:
-        logger.typewriter_log(
-            f"{ai_name.upper()} THOUGHTS:", Fore.YELLOW, str(assistant_thoughts)
-        )
+    if not assistant_thoughts:
+        return
+
+    # Log to file for activity.log
+    logger._log(f"{ai_name.upper()} THOUGHTS:", "", str(assistant_thoughts))
+
+    # Build rich panel with structured thought sections
+    sections = []
+    if not isinstance(assistant_thoughts, dict):
+        # LLM returned thoughts as a plain string instead of a structured dict
+        sections.append(str(assistant_thoughts))
+    else:
+        thought_keys = ["text", "reasoning", "plan", "criticism"]
+        for key in thought_keys:
+            value = assistant_thoughts.get(key)
+            if value:
+                if isinstance(value, list):
+                    value = "\n".join(f"  - {item}" for item in value)
+                sections.append(f"[bold]{key.capitalize()}[/bold]: {value}")
+
+        # Include any other keys not in the standard set
+        for key, value in assistant_thoughts.items():
+            if key not in thought_keys and value:
+                sections.append(f"[bold]{key.capitalize()}[/bold]: {value}")
+
+    if sections:
+        content = "\n".join(sections)
+        logger.console.print(Panel(
+            content,
+            title=f"{ai_name} Thoughts",
+            border_style="yellow",
+            expand=False,
+        ))
+
+
+def display_cycle_header(
+    agent: Agent,
+    cycle_count: int,
+    cycles_remaining: int,
+    cycle_budget: int,
+) -> None:
+    """Display a rich cycle header with agent state info."""
+    logger.console.print()
+    logger.console.print(Rule(f"Cycle {cycle_count}", style="bold blue"))
+
+    info_table = Table(show_header=False, box=None, padding=(0, 2))
+    info_table.add_column("key", style="dim")
+    info_table.add_column("value")
+    info_table.add_row("Cycle", str(cycle_count))
+    info_table.add_row("State", getattr(agent, "current_state", "unknown"))
+    if cycles_remaining != math.inf:
+        info_table.add_row("Commands left", str(cycles_remaining))
+
+    logger.console.print(info_table)
+    logger.console.print()
+
+
+def _display_cycle_cost_summary() -> None:
+    """Show a dim line with token usage and cost after each command."""
+    api_manager = ApiManager()
+    prompt_tokens = api_manager.get_total_prompt_tokens()
+    completion_tokens = api_manager.get_total_completion_tokens()
+    cost = api_manager.get_total_cost()
+
+    logger.console.print(
+        f"  [dim]Tokens: {prompt_tokens:,} prompt + {completion_tokens:,} completion"
+        f" | Cost: ${cost:.4f}[/dim]"
+    )
+
+
 def remove_ansi_escape(s: str) -> str:
     return s.replace("\x1B", "")

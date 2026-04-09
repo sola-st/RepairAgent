@@ -38,13 +38,27 @@ def extract_dict_from_response(response_content: str) -> dict[str, Any]:
     # Repair malformed JSON before parsing (trailing commas, single quotes, etc.)
     response_content = repair_json(response_content)
 
-    # response content comes from OpenAI as a Python `str(content_dict)`, literal_eval reverses this
-    try:
-        return ast.literal_eval(response_content)
-    except BaseException as e:
-        logger.info(f"Error parsing JSON response with literal_eval {e}")
-        logger.debug(f"Invalid JSON received in response: {response_content}")
+    if not response_content or not response_content.strip():
         return {}
+
+    # Try json.loads first (handles null/true/false correctly).
+    # Fall back to ast.literal_eval for Python-dict-style responses (single quotes, etc.).
+    try:
+        result = json.loads(response_content)
+        if isinstance(result, dict):
+            return result
+    except json.JSONDecodeError:
+        pass
+
+    try:
+        result = ast.literal_eval(response_content)
+        if isinstance(result, dict):
+            return result
+    except BaseException:
+        pass
+
+    logger.debug(f"Could not parse response as dict: {response_content[:200]}")
+    return {}
 
 
 def llm_response_schema(

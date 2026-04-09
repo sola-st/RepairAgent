@@ -11,7 +11,7 @@ if TYPE_CHECKING:
 
 from autogpt.json_utils.utilities import extract_dict_from_response
 from autogpt.llm.base import ChatSequence, Message
-from autogpt.llm.providers.openai import OPEN_AI_CHAT_MODELS
+from autogpt.llm.providers.openai import ALL_CHAT_MODELS
 from autogpt.llm.utils import (
     count_message_tokens,
     count_string_tokens,
@@ -180,7 +180,17 @@ Latest Development:
             elif event.role == "user":
                 new_events.remove(event)
 
-        summ_model = OPEN_AI_CHAT_MODELS[config.fast_llm]
+        fast_llm_name = config.fast_llm
+        if fast_llm_name not in ALL_CHAT_MODELS:
+            from autogpt.llm.base import ChatModelInfo
+            ALL_CHAT_MODELS[fast_llm_name] = ChatModelInfo(
+                name=fast_llm_name,
+                prompt_token_cost=0.0,
+                completion_token_cost=0.0,
+                max_tokens=128000,
+                supports_functions=False,
+            )
+        summ_model = ALL_CHAT_MODELS[fast_llm_name]
 
         # Determine token lengths for use in batching
         prompt_template_length = len(

@@ -12,10 +12,8 @@ from typing import TYPE_CHECKING, List
 from urllib.parse import urlparse
 from zipimport import zipimporter
 
-import openapi_python_client
 import requests
 from auto_gpt_plugin_template import AutoGPTPluginTemplate
-from openapi_python_client.config import Config as OpenAPIConfig
 
 if TYPE_CHECKING:
     from autogpt.config import Config
@@ -65,6 +63,7 @@ def fetch_openai_plugins_manifest_and_spec(config: Config) -> dict:
     Returns:
         dict: per url dictionary of manifest and spec.
     """
+    import openapi_python_client  # noqa: PLC0415 – lazy import (optional dep)
     # TODO add directory scan
     manifests = {}
     for url in config.plugins_openai:
@@ -144,6 +143,8 @@ def initialize_openai_plugins(
     Returns:
         dict: per url dictionary of manifest, spec and client.
     """
+    import openapi_python_client  # noqa: PLC0415 – lazy import (optional dep)
+    from openapi_python_client.config import Config as OpenAPIConfig  # noqa: PLC0415
     openai_plugins_dir = f"{config.plugins_dir}/openai"
     if create_directory_if_not_exists(openai_plugins_dir):
         for url, manifest_spec in manifests_specs.items():

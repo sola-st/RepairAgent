@@ -1,7 +1,7 @@
 """Configurator module."""
 from __future__ import annotations
 
-from typing import Literal
+from typing import Literal, Optional
 
 import click
 from colorama import Back, Fore, Style
@@ -10,6 +10,8 @@ from autogpt import utils
 from autogpt.config import Config
 from autogpt.config.config import GPT_3_MODEL, GPT_4_MODEL
 from autogpt.llm.api_manager import ApiManager
+from autogpt.llm.providers.anthropic import is_anthropic_model
+from autogpt.llm.providers.openai import ALL_CHAT_MODELS
 from autogpt.logs import logger
 from autogpt.memory.vector import get_supported_memory_backends
 
@@ -86,7 +88,8 @@ def create_config(
         config.fast_llm = model
         config.smart_llm = model
         config.static_llm = model
-        logger.typewriter_log(f"Model override: Using {model} for fast_llm, smart_llm, and static_llm.", Fore.GREEN)
+        provider = "Anthropic" if is_anthropic_model(model) else "OpenAI"
+        logger.typewriter_log(f"Model override: Using {model} ({provider}) for fast_llm, smart_llm, and static_llm.", Fore.GREEN)
     elif gpt3only:
         logger.typewriter_log("GPT3.5 Only Mode: ", Fore.GREEN, "ENABLED")
         config.fast_llm = GPT_3_MODEL
@@ -175,6 +178,20 @@ def check_model(
     config: Config,
 ) -> str:
     """Check if model is available for use. If not, return gpt-3.5-turbo."""
+
+    # Anthropic/Claude models are validated by the API at call time,
+    # not by listing available models like OpenAI.
+    if is_anthropic_model(model_name):
+        if model_name in ALL_CHAT_MODELS:
+            return model_name
+        logger.typewriter_log(
+            "WARNING: ",
+            Fore.YELLOW,
+            f"Unknown Anthropic model '{model_name}'. Setting {model_type} to "
+            f"claude-sonnet-4-20250514.",
+        )
+        return "claude-sonnet-4-20250514"
+
     openai_credentials = config.get_openai_credentials(model_name)
     api_manager = ApiManager()
     models = api_manager.get_models(**openai_credentials)

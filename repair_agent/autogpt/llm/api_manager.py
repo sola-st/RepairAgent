@@ -35,10 +35,17 @@ class ApiManager(metaclass=Singleton):
         model (str): The model used for the API call.
         """
         # the .model property in API responses can contain version suffixes like -v2
-        from autogpt.llm.providers.openai import OPEN_AI_MODELS
+        from autogpt.llm.providers.openai import ALL_MODELS
 
         model = model[:-3] if model.endswith("-v2") else model
-        model_info = OPEN_AI_MODELS[model]
+
+        if model not in ALL_MODELS:
+            logger.warn(f"Unknown model '{model}' for cost tracking, skipping.")
+            self.total_prompt_tokens += prompt_tokens
+            self.total_completion_tokens += completion_tokens
+            return
+
+        model_info = ALL_MODELS[model]
 
         self.total_prompt_tokens += prompt_tokens
         self.total_completion_tokens += completion_tokens

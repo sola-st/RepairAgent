@@ -139,13 +139,22 @@ class ChatSequence:
         messages: list[Message] | ChatSequence = [],
         **kwargs,
     ) -> TChatSequence:
-        from autogpt.llm.providers.openai import OPEN_AI_CHAT_MODELS
+        from autogpt.llm.providers.openai import ALL_CHAT_MODELS
 
-        if not model_name in OPEN_AI_CHAT_MODELS:
-            raise ValueError(f"Unknown chat model '{model_name}'")
+        if model_name not in ALL_CHAT_MODELS:
+            # Unknown/custom model — register a generic entry so the agent can proceed.
+            # Pricing is unknown (0); token limit defaults to 128k.
+            generic = ChatModelInfo(
+                name=model_name,
+                prompt_token_cost=0.0,
+                completion_token_cost=0.0,
+                max_tokens=128000,
+                supports_functions=False,
+            )
+            ALL_CHAT_MODELS[model_name] = generic
 
         return cls(
-            model=OPEN_AI_CHAT_MODELS[model_name], messages=list(messages), **kwargs
+            model=ALL_CHAT_MODELS[model_name], messages=list(messages), **kwargs
         )
 
     @property

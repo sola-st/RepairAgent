@@ -48,7 +48,14 @@ def count_message_tokens(
     if isinstance(messages, Message):
         messages = [messages]
 
-    if model.startswith("gpt-3.5-turbo"):
+    if model.startswith("claude-"):
+        # Anthropic models: use cl100k_base as a reasonable approximation.
+        # Actual Anthropic tokenization differs, but this is close enough for
+        # budget/limit calculations.
+        tokens_per_message = 3
+        tokens_per_name = 1
+        encoding_model = "gpt-4"  # use gpt-4 tokenizer as approximation
+    elif model.startswith("gpt-3.5-turbo"):
         tokens_per_message = (
             4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
         )
@@ -59,11 +66,14 @@ def count_message_tokens(
         tokens_per_name = 1
         encoding_model = re.sub(r"(gpt-4(o|\.\d+)?).*", "\\1", model)
     else:
-        raise NotImplementedError(
-            f"count_message_tokens() is not implemented for model {model}.\n"
-            " See https://github.com/openai/openai-python/blob/main/chatml.md for"
-            " information on how messages are converted to tokens."
+        # Unknown/future model — fall back to gpt-4 tokenizer as a reasonable approximation.
+        logger.warn(
+            f"count_message_tokens() has no exact tokenizer for model '{model}'. "
+            "Using gpt-4 tokenizer as approximation."
         )
+        tokens_per_message = 3
+        tokens_per_name = 1
+        encoding_model = "gpt-4"
     encoding = get_encoding(encoding_model)
 
     num_tokens = 0

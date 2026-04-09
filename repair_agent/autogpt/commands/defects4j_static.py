@@ -330,8 +330,22 @@ def extract_fail_report(name: str, index: str, workspace):
 from langchain.chat_models import ChatOpenAI
 from langchain.schema.messages import HumanMessage, SystemMessage, AIMessage
 
+
+def _get_chat_model(model):
+    """Get the appropriate LangChain chat model for the given model name."""
+    from autogpt.llm.providers.anthropic import is_anthropic_model
+    temperature = float(os.environ.get("TEMPERATURE", "0.0"))
+    # gpt-5 family only accepts temperature=1.0
+    if model.startswith("gpt-5"):
+        temperature = 1.0
+    if is_anthropic_model(model):
+        from langchain_anthropic import ChatAnthropic
+        return ChatAnthropic(model=model, temperature=temperature)
+    return ChatOpenAI(model=model, temperature=temperature)
+
+
 def query_for_fix(query, model):
-    chat = ChatOpenAI(model=model)
+    chat = _get_chat_model(model)
 
     messages = [
         SystemMessage(
@@ -348,7 +362,7 @@ def query_for_fix(query, model):
     return response.content
 
 def query_for_mutants(query, model):
-    chat = ChatOpenAI(model=model)
+    chat = _get_chat_model(model)
 
     messages = [
         SystemMessage(
@@ -395,7 +409,7 @@ def construct_fix_command(fix_object, project_name, bug_index):
 
 
 def query_for_commands(query, model):
-    chat = ChatOpenAI(model=model)
+    chat = _get_chat_model(model)
 
     messages = [
         SystemMessage(
@@ -503,7 +517,7 @@ def extract_function_def_context(project_name, bug_index, method_name, file_path
     
 def auto_complete_functions(project_name, bug_index, file_path, method_name, model):
     context = extract_function_def_context(project_name, bug_index, method_name, file_path)
-    chat = ChatOpenAI(model=model)
+    chat = _get_chat_model(model)
     messages = [
             SystemMessage(
                 content="implement the code for the method {}, here is the code before the method:".format(method_name)),

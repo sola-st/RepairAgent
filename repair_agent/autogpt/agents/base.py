@@ -12,7 +12,7 @@ if TYPE_CHECKING:
     from autogpt.models.command_registry import CommandRegistry
 
 from autogpt.llm.base import ChatModelResponse, ChatSequence, Message
-from autogpt.llm.providers.openai import OPEN_AI_CHAT_MODELS, get_openai_command_specs
+from autogpt.llm.providers.openai import ALL_CHAT_MODELS, get_openai_command_specs
 from autogpt.llm.utils import count_message_tokens, create_chat_completion
 from autogpt.logs import logger
 from autogpt.memory.message_history import MessageHistory
@@ -103,7 +103,16 @@ class BaseAgent(metaclass=ABCMeta):
         """
 
         llm_name = self.config.smart_llm if self.big_brain else self.config.fast_llm
-        self.llm = OPEN_AI_CHAT_MODELS[llm_name]
+        if llm_name not in ALL_CHAT_MODELS:
+            from autogpt.llm.base import ChatModelInfo
+            ALL_CHAT_MODELS[llm_name] = ChatModelInfo(
+                name=llm_name,
+                prompt_token_cost=0.0,
+                completion_token_cost=0.0,
+                max_tokens=128000,
+                supports_functions=False,
+            )
+        self.llm = ALL_CHAT_MODELS[llm_name]
         """The LLM that the agent uses to think."""
 
         self.send_token_limit = send_token_limit or self.llm.max_tokens * 3 / 4
@@ -334,6 +343,8 @@ please use the indicated format and produce a list, like this:
             commands_interface = json.load(cif)
 
         command_dict = command_dict.get("command", {"name": "", "args": {}})
+        if not isinstance(command_dict, dict):
+            return False
         if command_dict.get("name", None) in list(commands_interface.keys()):
             ref_args = commands_interface[command_dict["name"]]
             if isinstance(command_dict.get("args", None), dict):

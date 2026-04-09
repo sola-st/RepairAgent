@@ -1052,7 +1052,7 @@ from langchain.schema.messages import HumanMessage, SystemMessage, AIMessage
 )
 """
 def ask_chatgpt(question: str, agent: Agent):
-    chat = ChatOpenAI(model=agent.config.static_llm)
+    chat = ChatOpenAI(model=agent.config.static_llm, temperature=agent.config.temperature)
 
     if not agent.ask_chatgpt:
         messages = [
@@ -1071,7 +1071,11 @@ If the details in the given quetion are not enough, you should ask the user to a
     return response.content
 
 def validate_fix_against_hypothesis(bug_report, hypothesis, fix, model):
-    chat = ChatOpenAI(model=model)
+    temperature = float(os.environ.get("TEMPERATURE", "0.0"))
+    # gpt-5 family only accepts temperature=1.0
+    if model.startswith("gpt-5"):
+        temperature = 1.0
+    chat = ChatOpenAI(model=model, temperature=temperature)
 
     messages = [
         SystemMessage(
@@ -1328,7 +1332,11 @@ def extract_function_def_context(project_name, bug_index, method_name, filepath,
 )
 def auto_complete_functions(project_name, bug_index, filepath, method_name, agent):
     context = extract_function_def_context(project_name, bug_index, method_name, filepath, agent)
-    chat = ChatOpenAI(model=agent.config.static_llm)
+    # gpt-5 family only accepts temperature=1.0
+    temperature = agent.config.temperature
+    if agent.config.static_llm.startswith("gpt-5"):
+        temperature = 1.0
+    chat = ChatOpenAI(model=agent.config.static_llm, temperature=temperature)
     messages = [
             SystemMessage(
                 content="You are a code implementer and autocompletion engine. Basically, you would be given some already written code up to some line and you would be asked to implement the function/method that is declared at the last line. Always give full implementation of the method starting from declaration (public void myFunc(...)) to all the body. Take the given context into considration. Only give the implementation of the method and nothing else. If you want to add some explanation you can write it as comments above each line of code."),

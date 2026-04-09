@@ -13,14 +13,14 @@ if TYPE_CHECKING:
 from autogpt.singleton import Singleton
 
 from .formatters import AutoGptFormatter, JsonFormatter
-from .handlers import ConsoleHandler, JsonFileHandler, TypingConsoleHandler
+from .handlers import ConsoleHandler, JsonFileHandler, RichConsoleHandler
 
 
 class Logger(metaclass=Singleton):
     """
     Logger that handle titles in different colors.
     Outputs logs in console, activity.log, and errors.log
-    For console handler: simulates typing
+    For console handler: uses rich for styled, instant output
     """
 
     def __init__(self):
@@ -35,12 +35,14 @@ class Logger(metaclass=Singleton):
 
         console_formatter = AutoGptFormatter("%(title_color)s %(message)s")
 
-        # Create a handler for console which simulate typing
-        self.typing_console_handler = TypingConsoleHandler()
-        self.typing_console_handler.setLevel(logging.INFO)
-        self.typing_console_handler.setFormatter(console_formatter)
+        # Create a handler for console using rich (instant, styled output)
+        self.rich_console_handler = RichConsoleHandler()
+        self.rich_console_handler.setLevel(logging.INFO)
+        # RichConsoleHandler handles its own formatting; set a minimal formatter
+        # so the file-level extras (title, color) still get attached to records
+        self.rich_console_handler.setFormatter(console_formatter)
 
-        # Create a handler for console without typing simulation
+        # Create a handler for console without rich (plain fallback)
         self.console_handler = ConsoleHandler()
         self.console_handler.setLevel(logging.DEBUG)
         self.console_handler.setFormatter(console_formatter)
@@ -63,7 +65,7 @@ class Logger(metaclass=Singleton):
         error_handler.setFormatter(error_formatter)
 
         self.typing_logger = logging.getLogger("TYPER")
-        self.typing_logger.addHandler(self.typing_console_handler)
+        self.typing_logger.addHandler(self.rich_console_handler)
         self.typing_logger.addHandler(self.file_handler)
         self.typing_logger.addHandler(error_handler)
         self.typing_logger.setLevel(logging.DEBUG)
@@ -90,8 +92,13 @@ class Logger(metaclass=Singleton):
     def config(self, config: Config):
         self._config = config
         if config.plain_output:
-            self.typing_logger.removeHandler(self.typing_console_handler)
+            self.typing_logger.removeHandler(self.rich_console_handler)
             self.typing_logger.addHandler(self.console_handler)
+
+    @property
+    def console(self):
+        """Expose the rich Console instance for direct rich output (panels, tables, etc.)."""
+        return self.rich_console_handler.rich_console
 
     def typewriter_log(
         self,

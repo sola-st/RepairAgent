@@ -13,7 +13,7 @@ from colorama import Fore
 from pydantic import Field, validator
 
 from autogpt.core.configuration.schema import Configurable, SystemSettings
-from autogpt.llm.providers.openai import OPEN_AI_CHAT_MODELS
+from autogpt.llm.providers.openai import ALL_CHAT_MODELS
 from autogpt.plugins.plugins_config import PluginsConfig
 
 AI_SETTINGS_FILE = "ai_settings.yaml"
@@ -119,6 +119,8 @@ class Config(SystemSettings, arbitrary_types_allowed=True):
     ###############
     # OpenAI
     openai_api_key: Optional[str] = None
+    # Anthropic
+    anthropic_api_key: Optional[str] = None
     openai_api_type: Optional[str] = None
     openai_api_base: Optional[str] = None
     openai_api_version: Optional[str] = None
@@ -153,10 +155,11 @@ class Config(SystemSettings, arbitrary_types_allowed=True):
     def validate_openai_functions(cls, v: bool, values: dict[str, Any]):
         if v:
             smart_llm = values["smart_llm"]
-            assert OPEN_AI_CHAT_MODELS[smart_llm].supports_functions, (
-                f"Model {smart_llm} does not support OpenAI Functions. "
-                "Please disable OPENAI_FUNCTIONS or choose a suitable model."
-            )
+            if smart_llm in ALL_CHAT_MODELS:
+                assert ALL_CHAT_MODELS[smart_llm].supports_functions, (
+                    f"Model {smart_llm} does not support OpenAI Functions. "
+                    "Please disable OPENAI_FUNCTIONS or choose a suitable model."
+                )
 
     def get_openai_credentials(self, model: str) -> dict[str, str]:
         credentials = {
@@ -242,6 +245,7 @@ class ConfigBuilder(Configurable[Config]):
             "embedding_model": os.getenv("EMBEDDING_MODEL"),
             "browse_spacy_language_model": os.getenv("BROWSE_SPACY_LANGUAGE_MODEL"),
             "openai_api_key": os.getenv("OPENAI_API_KEY"),
+            "anthropic_api_key": os.getenv("ANTHROPIC_API_KEY"),
             "use_azure": os.getenv("USE_AZURE") == "True",
             "azure_config_file": os.getenv("AZURE_CONFIG_FILE", AZURE_CONFIG_FILE),
             "execute_local_commands": os.getenv("EXECUTE_LOCAL_COMMANDS", "False")
@@ -375,7 +379,43 @@ class ConfigBuilder(Configurable[Config]):
 
 
 def check_openai_api_key(config: Config) -> None:
-    """Check if the OpenAI API key is set in config.py or as an environment variable."""
+    """Check if an API key (OpenAI or Anthropic) is set."""
+    from autogpt.llm.providers.anthropic import is_anthropic_model
+
+    # If using an Anthropic model, check for Anthropic key
+    using_anthropic = any(
+        is_anthropic_model(m)
+        for m in [config.fast_llm, config.smart_llm, config.static_llm]
+    )
+
+    if using_anthropic:
+        if not config.anthropic_api_key and not os.getenv("ANTHROPIC_API_KEY"):
+            print(
+                Fore.RED
+                + "Please set your Anthropic API key in .env or as an environment variable."
+                + Fore.RESET
+            )
+            print("You can get your key from https://console.anthropic.com/")
+            anthropic_api_key = input(
+                "If you do have the key, please enter your Anthropic API key now:\n"
+            )
+            anthropic_api_key = anthropic_api_key.strip()
+            if anthropic_api_key:
+                os.environ["ANTHROPIC_API_KEY"] = anthropic_api_key
+                config.anthropic_api_key = anthropic_api_key
+                print(
+                    Fore.GREEN
+                    + "Anthropic API key successfully set!\n"
+                    + Fore.YELLOW
+                    + "NOTE: The API key you've set is only temporary.\n"
+                    + "For longer sessions, please set it in .env file"
+                    + Fore.RESET
+                )
+            else:
+                print("Invalid Anthropic API key!")
+                exit(1)
+        return
+
     if not config.openai_api_key:
         print(
             Fore.RED
