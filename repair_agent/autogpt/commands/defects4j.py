@@ -530,13 +530,12 @@ def write_fix(project_name:str, bug_index:int, changes_dicts: list, agent: Agent
             agent.dummy_fix = True
             if " 0 failing test" in run_ret:
                 return "Deleting the buggy lines fixed the problem and passed all the test cases. 0 failing tests."
-    if len(missed_lines)!=0:
+    missed_warning = ""
+    if len(missed_lines) != 0:
         logger.debug(f"write_fix: {len(missed_lines)} buggy lines not targeted by fix")
-        fix_template = create_fix_template(project_name, bug_index)
-        logger.debug("write_fix: fix template created for missed lines")
-        return "Your fix did not target all the buggy lines. Here is the list of all the buggy lines: {}. To help you, you can fill out the following the template to generate your fix {}".format(buggy_lines, fix_template)
+        missed_warning = "\n **Warning:** Your fix did not target all the buggy lines. Missed lines: {}. Your fix was still tested, but if tests fail, consider also addressing the missed lines.".format(list(missed_lines))
     run_ret = execute_write_range(project_name, bug_index, changes_dicts, agent)
-    return run_ret + "\n **Note:** You are automatically switched to the state 'trying out candidate fixes'"
+    return run_ret + missed_warning + "\n **Note:** You are automatically switched to the state 'trying out candidate fixes'"
     
 def execute_read_range(project_name, bug_index, filepath, startline, endline, agent):
     workspace = agent.config.workspace_path
@@ -554,14 +553,119 @@ def execute_read_range(project_name, bug_index, filepath, startline, endline, ag
     return lines_str
 
 
+def _validate_java_syntax(file_path, lines):
+    """Validate that a Java file has basic syntactic correctness before writing."""
+    try:
+        source = "".join(lines)
+        javalang.parse.parse(source)
+        return True, None
+    except javalang.parser.JavaSyntaxError as e:
+        return False, "Java syntax error: {}".format(e)
+    except javalang.tokenizer.LexerError as e:
+        return False, "Java lexer error: {}".format(e)
+    except Exception as e:
+        # If javalang itself crashes, don't block — let javac catch it later
+        return True, None
+
+
+def _apply_changes_to_lines(lines, change_dict):
+    """Apply changes to a list of lines in memory (same logic as apply_changes but returns the result)."""
+    from operator import itemgetter
+
+    insertions = change_dict.get("insertions", [])
+    deletions = change_dict.get("deletions", [])
+    modifications = change_dict.get("modifications", [])
+
+    for line_number in deletions:
+        if 1 <= int(line_number) <= len(lines):
+            lines[int(line_number) - 1] = "\n"
+
+    for modification in modifications:
+        line_number = modification.get("line_number", 0)
+        modified_line = modification.get("modified_line", "")
+        if 1 <= int(line_number) <= len(lines):
+            orig_line = lines[int(line_number) - 1]
+            if fuzz.ratio(orig_line, modified_line) < 70:
+                continue
+            if modified_line.endswith("\n"):
+                lines[int(line_number) - 1] = modified_line
+            else:
+                lines[int(line_number) - 1] = modified_line + "\n"
+
+    line_offset = 0
+    sorted_insertions = sorted(insertions, key=itemgetter('line_number'))
+    for insertion in sorted_insertions:
+        line_number = int(insertion.get("line_number", 0)) + line_offset
+        for new_line in insertion.get("new_lines", []):
+            lines.insert(int(line_number) - 1, new_line if new_line.endswith("\n") else new_line + "\n")
+            line_number += 1
+            line_offset += 1
+
+    return lines
+
+
 def execute_write_range(project_name, bug_index, changes_dicts, agent):
     project_dir = os.path.join(agent.config.workspace_path, project_name.lower()+"_"+str(bug_index)+"_buggy")
+
+    # Phase 1: Resolve paths and validate syntax in-memory
+    resolved_changes = []
     for change_dict in changes_dicts:
         resolved = dict(change_dict)
         filepath = resolved["file_name"]
         filepath = preprocess_paths(agent, project_name, bug_index, filepath)
         resolved["file_name"] = os.path.join(project_dir, filepath)
+        resolved_changes.append(resolved)
 
+    for resolved in resolved_changes:
+        file_name = resolved["file_name"]
+        with open(file_name, 'r') as f:
+            original_lines = f.readlines()
+        test_lines = list(original_lines)
+        test_lines = _apply_changes_to_lines(test_lines, resolved)
+        ok, error_msg = _validate_java_syntax(file_name, test_lines)
+        if not ok:
+            return ("Your fix has a Java syntax error and was NOT applied to avoid wasting a test cycle.\n"
+                    "Error: {}\n"
+                    "Please fix the syntax and try again. Common issues:\n"
+                    "- Multiple statements on one line (each statement needs its own line)\n"
+                    "- Unbalanced braces {{}}\n"
+                    "- Missing semicolons").format(error_msg)
+
+    # Phase 1b: Auto-convert modifications that fail fuzz filter to delete+insert
+    for resolved in resolved_changes:
+        file_name = resolved["file_name"]
+        with open(file_name, 'r') as f:
+            orig_lines = f.readlines()
+        surviving_mods = []
+        for modification in resolved.get("modifications", []):
+            line_number = modification.get("line_number", 0)
+            modified_line = modification.get("modified_line", "")
+            if 1 <= int(line_number) <= len(orig_lines):
+                orig_line = orig_lines[int(line_number) - 1]
+                ratio = fuzz.ratio(orig_line, modified_line)
+                if ratio < 70:
+                    # Auto-convert: delete the original line, insert replacement
+                    deletions = resolved.get("deletions", [])
+                    if int(line_number) not in [int(d) for d in deletions]:
+                        deletions.append(line_number)
+                        resolved["deletions"] = deletions
+                    insertions = resolved.get("insertions", [])
+                    new_line = modified_line if modified_line.endswith("\n") else modified_line + "\n"
+                    insertions.append({
+                        "line_number": int(line_number),
+                        "new_lines": [new_line],
+                    })
+                    resolved["insertions"] = insertions
+                    logger.info("WRITE-FIX: Auto-converted mod at line {} (similarity {}%) to delete+insert".format(
+                        line_number, ratio))
+                else:
+                    surviving_mods.append(modification)
+            else:
+                surviving_mods.append(modification)
+        resolved["modifications"] = surviving_mods
+
+    # Phase 2: All changes validated — now write to disk
+    for resolved in resolved_changes:
         apply_changes(resolved)
 
     run_ret = run_defects4j_tests(project_name, bug_index, agent)
