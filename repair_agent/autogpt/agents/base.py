@@ -97,6 +97,25 @@ class BaseAgent(metaclass=ABCMeta):
             logger.error(f"Failed to parse project_name/bug_index from goal: {self.prompt_dictionary['goals'][2]}, error: {e}")
         self.localization_info = get_info(self.project_name, self.bug_index, "auto_gpt_workspace")
         self.tests_results = run_tests(self.project_name, self.bug_index, "auto_gpt_workspace")
+        # ── Generate behavioral spec at init ──
+        try:
+            from autogpt.commands.spec_generator import generate_spec
+            _spec_model = "gpt-4o"
+            _spec_result = generate_spec(
+                project_name=self.project_name,
+                bug_index=self.bug_index,
+                localization_info=self.localization_info,
+                test_results=self.tests_results,
+                model=_spec_model,
+                workspace="auto_gpt_workspace",
+            )
+            if _spec_result.get("success") and _spec_result.get("prompt_section"):
+                self.prompt_dictionary["spec_section"] = _spec_result["prompt_section"]
+                logger.info("SPEC-INIT: Generated ({} chars)".format(len(_spec_result["prompt_section"])))
+            else:
+                logger.info("SPEC-INIT: Failed: {}".format(_spec_result.get("error")))
+        except Exception as _spec_e:
+            logger.info("SPEC-INIT: Exception: {}".format(_spec_e))
         """
         The system prompt sets up the AI's personality and explains its goals,
         available resources, and restrictions.
@@ -1041,6 +1060,8 @@ please use the indicated format and produce a list, like this:
         
         definitions_prompt = ""
         static_sections_names = ["goals", "current state", "commands", "general guidelines"]
+        if "spec_section" in self.prompt_dictionary:
+            static_sections_names.append("spec_section")
         if self.current_state in ["collect information to fix the bug", "trying out candidate fixes"]:
             static_sections_names.append("fix format")
         for key in static_sections_names:
