@@ -95,8 +95,24 @@ class BaseAgent(metaclass=ABCMeta):
             self.project_name, self.bug_index = in_between.replace("bug within the project ", "").replace(' and bug index ', " ").replace('"', "").split(" ")[:2]
         except (ValueError, IndexError) as e:
             logger.error(f"Failed to parse project_name/bug_index from goal: {self.prompt_dictionary['goals'][2]}, error: {e}")
-        self.localization_info = get_info(self.project_name, self.bug_index, "auto_gpt_workspace")
-        self.tests_results = run_tests(self.project_name, self.bug_index, "auto_gpt_workspace")
+        # Seams A (localization) and B (initial test results). In the default
+        # Defects4J mode these call the original D4J helpers unchanged. In the
+        # additive "generic" mode they route to the build-tool / stack-trace
+        # backend instead. The branch keeps the eval path byte-for-byte.
+        if getattr(self.config, "repair_mode", "defects4j") == "generic":
+            from autogpt.commands.project_repair import (
+                generic_initial_test_report,
+                generic_localize,
+            )
+            self.localization_info = generic_localize(
+                self.project_name, self.bug_index, "auto_gpt_workspace"
+            )
+            self.tests_results = generic_initial_test_report(
+                self.project_name, self.bug_index, "auto_gpt_workspace"
+            )
+        else:
+            self.localization_info = get_info(self.project_name, self.bug_index, "auto_gpt_workspace")
+            self.tests_results = run_tests(self.project_name, self.bug_index, "auto_gpt_workspace")
         """
         The system prompt sets up the AI's personality and explains its goals,
         available resources, and restrictions.

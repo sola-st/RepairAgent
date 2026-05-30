@@ -165,6 +165,11 @@ def undo_changes(project_name: str, bug_index: int, agent: Agent) -> str:
     Returns:
         str: A success message or a failure message depending on the exit code
     """
+    # Seam D (restore). Generic mode reverts agent edits via git instead of a
+    # Defects4J re-checkout.
+    if getattr(agent.config, "repair_mode", "defects4j") == "generic":
+        from autogpt.commands.project_repair import generic_restore
+        return generic_restore(project_name, bug_index, agent)
     return run_checkout(project_name, bug_index, agent)
 
 @command(
@@ -197,6 +202,11 @@ def run_tests(project_name: str, bug_index: int, agent: Agent) -> str:
     return run_defects4j_tests(project_name, bug_index, agent)
 
 def run_defects4j_tests(project_name: str, bug_index:int, agent: Agent):
+    # Seam C (test oracle). Generic mode runs mvn/gradle and parses JUnit XML
+    # instead of the Defects4J compile+test cycle.
+    if getattr(agent.config, "repair_mode", "defects4j") == "generic":
+        from autogpt.commands.project_repair import generic_run_tests
+        return generic_run_tests(project_name, bug_index, agent)
     cmd_temp = "cd {} && defects4j compile && defects4j test"
     folder_name = "_".join([project_name.lower(), str(bug_index), "buggy"])
     cmd = cmd_temp.format(folder_name)
@@ -527,6 +537,11 @@ def write_fix(project_name:str, bug_index:int, changes_dicts: list, agent: Agent
     if len(changes_dicts) == 0:
         return "The fix you passed is empty. Please provide a non empty implementation of the fix."
 
+    # Generic mode has no ground-truth buggy lines, so the dummy-deletion test
+    # and the "missed buggy lines" template (both backed by Defects4J files) are
+    # skipped. The test oracle still validates the fix.
+    _generic = getattr(agent.config, "repair_mode", "defects4j") == "generic"
+
     try:
         logger.debug("write_fix: extracting targeted lines from changes_dicts")
         target_lines = extract_targeted_lines(changes_dicts)
@@ -538,7 +553,7 @@ def write_fix(project_name:str, bug_index:int, changes_dicts: list, agent: Agent
         logger.warn(f"write_fix: failed to compute missed lines: {e}")
         missed_lines = []
 
-    if not agent.dummy_fix:
+    if not agent.dummy_fix and not _generic:
         logger.debug("write_fix: creating deletion template for dummy fix test")
         deletion_fix = create_deletion_template(project_name, bug_index)
         logger.debug("write_fix: deletion template created, checking if applicable")
@@ -548,7 +563,7 @@ def write_fix(project_name:str, bug_index:int, changes_dicts: list, agent: Agent
             agent.dummy_fix = True
             if " 0 failing test" in run_ret:
                 return "Deleting the buggy lines fixed the problem and passed all the test cases. 0 failing tests."
-    if len(missed_lines)!=0:
+    if not _generic and len(missed_lines)!=0:
         logger.debug(f"write_fix: {len(missed_lines)} buggy lines not targeted by fix")
         fix_template = create_fix_template(project_name, bug_index)
         logger.debug("write_fix: fix template created for missed lines")

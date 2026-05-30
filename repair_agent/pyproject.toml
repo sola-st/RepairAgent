@@ -60,5 +60,6 @@ testpaths = ["tests"]
 addopts = "-ra"
 markers = [
     "requires_openai_api_key",
-    "requires_huggingface_api_key"
+    "requires_huggingface_api_key",
+    "slow: opt-in tests that build/run a real toolchain (e.g. Maven)"
 ]

@@ -18,6 +18,45 @@ python3 repairagent.py setup --install-deps
 cd experimental_setups && python3 experiment_overview.py
 ```
 
+## Fix Your Own Project (generic mode)
+
+Beyond the Defects4J benchmark, RepairAgent can attempt to repair an **arbitrary
+Maven or Gradle Java project** that has a failing test. This is an additive path
+selected by the `fix-project` command — the Defects4J evaluation flow is
+untouched.
+
+```bash
+python3 repairagent.py fix-project \
+    --path /abs/path/to/your/project \      # must be a git repo; or use --git <url> [--ref <sha>]
+    --test "com.foo.BarTest#testThing" \    # failing test (repeatable); auto-detected if omitted
+    --build auto \                          # maven | gradle | auto (default: auto-detect)
+    --model gpt-4o-mini \
+    --max-cycles 40
+```
+
+What it does:
+
+1. Copies your project into the workspace (your repo is left untouched) and runs
+   the test suite once to establish a baseline of already-failing tests.
+2. Localizes the fault from the failing test's **stack trace** (no ground-truth
+   buggy lines are needed). You can add hints with `--suspect src/.../Foo.java:120`
+   and narrow stack-frame filtering with `--package com.foo`.
+3. Runs the normal agent loop. After each candidate fix it validates the targeted
+   test first, then the full suite to check for regressions.
+4. On success (the failing test passes and nothing previously-passing regressed)
+   it writes the unified diff to `plausible_patch.diff` for **human review**.
+   Correctness is not auto-decided — there is no reference patch to compare to.
+
+Requirements & notes:
+
+- The target **must be a git repository** (the agent reverts its edits via git
+  between attempts). Run `git init && git add -A && git commit -m base` first if
+  needed.
+- Generic mode **builds and runs the target project's code on this host**. For
+  untrusted projects, prefer Docker (`--docker`).
+- Multi-module builds: pass `--module <subdir>` (single-module is the default).
+- The first build may download dependencies (network required).
+
 ## Directory Structure
 
 ```

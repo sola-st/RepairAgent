@@ -59,6 +59,7 @@ def run_auto_gpt(
     ai_goals: tuple[str] = tuple(),
     experiment_file: str = None,
     model: Optional[str] = None,
+    repair_mode: Optional[str] = None,
 ):
     if not experiment_file:
         raise ValueError("Cannot proceed without experiment file")
@@ -91,6 +92,11 @@ def run_auto_gpt(
         skip_news,
         model=model,    # Pass through to config
     )
+
+    # Repair backend selection. The CLI "fix-project" command sets this to
+    # "generic"; the default leaves the Defects4J eval path unchanged.
+    if repair_mode:
+        config.repair_mode = repair_mode
 
     if config.continuous_mode:
         for line in get_legal_warning().split("\n"):

@@ -832,6 +832,184 @@ def run_single_bug(project: str, bug_index: str, model: str, hyperparams_file: s
 
 
 # ---------------------------------------------------------------------------
+# Generic project repair ("fix-project") — repair an arbitrary Maven/Gradle
+# project with a failing test. Additive path; never touches the Defects4J flow.
+# ---------------------------------------------------------------------------
+
+def _sanitize_project_name(raw: str) -> str:
+    """Make a workspace-safe project name (alphanumeric, no spaces/underscores).
+
+    The agent parses ``project_name`` out of the ai_settings goal by splitting on
+    spaces and truncates at ``_`` later, so both must be absent.
+    """
+    name = "".join(ch for ch in raw if ch.isalnum())
+    return name or "project"
+
+
+def prepare_generic_project(
+    path: str,
+    build: str,
+    module: str,
+    tests: tuple,
+    suspects: tuple,
+    packages: tuple,
+):
+    """Copy a target project into the workspace and write the generic sidecar.
+
+    Returns the sanitized project name (workspace index is always ``1``).
+    Requires the target be a git repository (so edits can be reverted between
+    repair attempts). Runs the test suite once on the host to establish the
+    baseline of already-failing tests and to seed stack-trace localization.
+    """
+    from autogpt.commands import project_repair as pr
+
+    src = Path(path).resolve()
+    if not src.is_dir():
+        console.print(f"  [red]Project path does not exist: {src}[/red]")
+        sys.exit(1)
+    if not (src / ".git").exists():
+        console.print(
+            "  [red]The target is not a git repository.[/red] Generic mode requires "
+            "a git repo so the agent's edits can be reverted between attempts.\n"
+            "  Run 'git init && git add -A && git commit -m base' in the project first."
+        )
+        sys.exit(1)
+
+    name = _sanitize_project_name(src.name)
+    dest = SCRIPT_DIR / "auto_gpt_workspace" / f"{name.lower()}_1_buggy"
+    if dest.exists():
+        shutil.rmtree(dest)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    console.print(f"  Copying project into workspace: {dest}")
+    shutil.copytree(src, dest)
+
+    mod_dir = pr.module_dir(str(dest), {"module": module} if module else {})
+    build_tool = build if build and build != "auto" else pr.detect_build_tool(mod_dir)
+    if not build_tool:
+        console.print(
+            f"  [red]Could not detect a Maven or Gradle build in {mod_dir}.[/red] "
+            "Pass --build maven|gradle (and --module for multi-module repos)."
+        )
+        sys.exit(1)
+    console.print(f"  Build tool: {build_tool}")
+
+    # Baseline run: determine already-failing tests and capture a stack trace.
+    console.print("  Running the test suite once to establish a baseline (this may take a while)...")
+    baseline_failing = []
+    try:
+        parsed, combined = pr._run_suite_capture(build_tool, mod_dir, None)
+    except Exception as e:  # pragma: no cover - host build failures are environmental
+        console.print(f"  [yellow]Baseline test run failed to parse: {e}[/yellow]")
+        parsed, combined = None, ""
+    if parsed is not None:
+        baseline_failing = parsed["failed"]
+        # Seed localization with the raw output.
+        try:
+            (dest / "_initial_test_output.txt").write_text(combined or "", encoding="utf8")
+        except OSError:
+            pass
+        console.print(f"  Baseline: {len(baseline_failing)} failing test(s) detected.")
+    else:
+        console.print(
+            "  [yellow]Baseline build/compile failed; regression detection will be "
+            "best-effort.[/yellow]"
+        )
+
+    test_targets = list(tests) if tests else list(baseline_failing)
+    if not test_targets:
+        console.print(
+            "  [red]No failing test specified and none detected.[/red] Specify the "
+            "failing test with --test 'com.foo.BarTest#testThing'."
+        )
+        sys.exit(1)
+    console.print(f"  Targeting test(s): {', '.join(test_targets)}")
+
+    sidecar = {
+        "build_tool": build_tool,
+        "module": module or "",
+        "test_targets": test_targets,
+        "baseline_failing": baseline_failing,
+        "packages": list(packages),
+        "suspects": list(suspects),
+        "source_path": str(src),
+    }
+    pr.write_sidecar(str(dest), sidecar)
+    return name
+
+
+def run_single_project(name: str, model: str, hyperparams_file: str, max_cycles: int, temperature: float = 0.0):
+    """Run RepairAgent on a prepared generic project (index 1, generic mode)."""
+    prepare_ai_settings(name, "1")
+
+    os.environ["TEMPERATURE"] = str(temperature)
+
+    from autogpt.app.main import run_auto_gpt
+
+    run_auto_gpt(
+        continuous=True,
+        continuous_limit=max_cycles,
+        ai_settings="ai_settings.yaml",
+        prompt_settings=None,
+        skip_reprompt=True,
+        speak=False,
+        debug=False,
+        gpt3only=False,
+        gpt4only=False,
+        memory_type="json_file",
+        browser_name=None,
+        allow_downloads=False,
+        skip_news=True,
+        working_directory=SCRIPT_DIR,
+        workspace_directory=None,
+        install_plugin_deps=False,
+        experiment_file=hyperparams_file,
+        model=model,
+        repair_mode="generic",
+    )
+
+
+def execute_fix_project(
+    path: str,
+    build: str,
+    module: str,
+    tests: tuple,
+    suspects: tuple,
+    packages: tuple,
+    model: str,
+    hyperparams: str,
+    max_cycles: int,
+    temperature: float = 0.0,
+):
+    """Prepare and run generic repair on a single project."""
+    console.print()
+    console.print(
+        "  [yellow]Note:[/yellow] generic mode builds and runs the target project's "
+        "code on this host. For untrusted projects, prefer running inside Docker "
+        "(--docker)."
+    )
+    name = prepare_generic_project(path, build, module, tests, suspects, packages)
+
+    generate_commands_descriptions()
+    exp_dir = increment_experiment()
+
+    console.print(Rule("Running RepairAgent (generic mode)", style="bold green"))
+    console.print(f"  Experiment dir: {exp_dir}")
+    console.print()
+    try:
+        run_single_project(name, model, hyperparams, max_cycles, temperature)
+    except SystemExit as e:
+        if e.code not in (0, None):
+            raise
+    console.print()
+    console.print(Rule("Done", style="bold blue"))
+    console.print(
+        "  A plausible patch (if found) is saved as plausible_patch.diff next to the "
+        "experiment outputs, plus per-fix records under plausible_patches/."
+    )
+    console.print(f"  Results saved to: {exp_dir}")
+
+
+# ---------------------------------------------------------------------------
 # Docker support
 # ---------------------------------------------------------------------------
 
@@ -1092,6 +1270,60 @@ def run(bugs, bugs_file, model, temperature, hyperparams, max_cycles, docker):
         run_in_docker(bug_list, model, hyperparams, max_cycles, temperature)
     else:
         execute_run(bug_list, model, hyperparams, max_cycles, temperature)
+
+
+@cli.command(name="fix-project")
+@click.option("--path", "path", type=click.Path(exists=True, file_okay=False), default=None,
+              help="Path to the Java project (Maven or Gradle, must be a git repo)")
+@click.option("--git", "git_url", default=None, help="Git URL to clone instead of --path")
+@click.option("--ref", default=None, help="Git ref/branch/sha to check out (with --git)")
+@click.option("--test", "tests", multiple=True,
+              help="Failing test FQN#method (repeatable). Auto-detected if omitted.")
+@click.option("--build", type=click.Choice(["maven", "gradle", "auto"]), default="auto",
+              help="Build tool (default: auto-detect)")
+@click.option("--module", default=None, help="Sub-module directory for multi-module builds")
+@click.option("--suspect", "suspects", multiple=True,
+              help="Suspected location hint, e.g. src/.../Foo.java:120 (repeatable)")
+@click.option("--package", "packages", multiple=True,
+              help="Project package prefix to keep when filtering stack frames (repeatable)")
+@click.option("--model", default="gpt-4o-mini", help="LLM model name")
+@click.option("--temperature", default=0.0, type=float, help="LLM temperature (0.0-2.0)")
+@click.option("--hyperparams", default=None, help="Hyperparams JSON file path")
+@click.option("--max-cycles", default=40, type=int, help="Max agent cycles")
+def fix_project(path, git_url, ref, tests, build, module, suspects, packages, model, temperature, hyperparams, max_cycles):
+    """Repair an arbitrary Maven/Gradle Java project that has a failing test.
+
+    Produces a plausible patch (the failing test passes and no previously-passing
+    test regresses) plus a git diff for human review. Correctness is not
+    auto-decided; a human reviews the diff.
+    """
+    if not path and not git_url:
+        console.print("  [red]Specify the project with --path or --git.[/red]")
+        sys.exit(1)
+    if path and git_url:
+        console.print("  [red]Use either --path or --git, not both.[/red]")
+        sys.exit(1)
+
+    if git_url:
+        import tempfile
+        clone_dir = Path(tempfile.mkdtemp(prefix="repairagent_clone_"))
+        console.print(f"  Cloning {git_url} into {clone_dir}...")
+        try:
+            subprocess.run(["git", "clone", git_url, str(clone_dir)], check=True)
+            if ref:
+                subprocess.run(["git", "checkout", ref], cwd=str(clone_dir), check=True)
+        except subprocess.CalledProcessError as e:
+            console.print(f"  [red]Clone/checkout failed: {e}[/red]")
+            sys.exit(1)
+        path = str(clone_dir)
+
+    if hyperparams is None:
+        hyperparams = str(SCRIPT_DIR / "hyperparams.json")
+
+    execute_fix_project(
+        path, build, module, tests, suspects, packages,
+        model, hyperparams, max_cycles, temperature,
+    )
 
 
 @cli.command()

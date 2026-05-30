@@ -64,6 +64,10 @@ class Config(SystemSettings, arbitrary_types_allowed=True):
     # Run loop configuration
     continuous_mode: bool = False
     continuous_limit: int = 0
+    # Repair backend selection. "defects4j" (default) keeps the published eval
+    # path byte-for-byte; "generic" activates the Maven/Gradle + git +
+    # stack-trace backend in autogpt.commands.project_repair.
+    repair_mode: str = "defects4j"
 
     ##########
     # Memory #
