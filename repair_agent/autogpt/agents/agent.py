@@ -294,7 +294,12 @@ class Agent(BaseAgent):
             else:
                 assistant_reply_dict["command"] = {"name": "unknown_command", "args":{}}
             
-            if assistant_reply_dict["command"]["name"] == "write_fix":
+            # The mutation pipeline is a Defects4J-only augmentation: it relies on
+            # ground-truth buggy-lines/methods files to seed extra candidate
+            # fixes. Generic mode has no such ground truth, so it is skipped — the
+            # write_fix command itself still executes normally via execute().
+            _generic = getattr(self.config, "repair_mode", "defects4j") == "generic"
+            if assistant_reply_dict["command"]["name"] == "write_fix" and not _generic:
                 try:
                     fix_content = assistant_reply_dict["command"]["args"].get("changes_dicts", "[]")
                 except Exception as e:

@@ -1,0 +1,25 @@
+# Lean image for exercising RepairAgent's generic "fix-project" mode end-to-end.
+# Unlike the main Dockerfile, this bundles Maven (for generic builds) and skips
+# the heavy Defects4J clone/init, which generic mode does not use.
+FROM maven:3.9-eclipse-temurin-8
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 python3-pip python3-venv git \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=yes \
+    PIP_BREAK_SYSTEM_PACKAGES=1
+
+WORKDIR /app
+
+# Core runtime deps only (no dev/analysis/docs tooling).
+# langchain is pinned to a pre-langgraph release so it does not drag in
+# langgraph-sdk, which needs a newer orjson than the repo pins.
+COPY requirements-generic-docker.txt .
+RUN pip3 install --no-cache-dir -r requirements-generic-docker.txt
+
+COPY . .
+
+ENTRYPOINT ["python3", "repairagent.py"]
+CMD ["--help"]
