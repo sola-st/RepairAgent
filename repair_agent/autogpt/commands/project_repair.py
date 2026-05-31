@@ -443,7 +443,18 @@ def generic_restore(project_name, bug_index, agent) -> str:
             "mode requires a git repo so edits can be reverted between attempts."
         )
     try:
-        res = _run("git checkout -- . && git clean -fdq", proj_dir, timeout=120)
+        # Revert tracked files, then remove untracked files the agent created --
+        # but preserve generic-mode/RepairAgent bookkeeping that lives untracked
+        # in the project copy (the sidecar, the files index, captured test
+        # output). Without these excludes, `git clean` deletes the sidecar after
+        # the first restore, and every later cycle loses the targeted-test list
+        # and baseline, silently degrading the run.
+        cmd = (
+            "git checkout -- . && "
+            "git clean -fdq "
+            "-e {} -e files_index.txt -e _initial_test_output.txt -e '*_test.txt'"
+        ).format(SIDECAR_NAME)
+        res = _run(cmd, proj_dir, timeout=120)
     except subprocess.TimeoutExpired:
         return "Error: git restore timed out."
     if res.returncode == 0:
