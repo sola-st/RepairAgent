@@ -32,11 +32,18 @@ def apply_changes(change_dict):
     line_offset = 0
     from operator import itemgetter
 
-    sorted_insertions = sorted(insertions, key=itemgetter('line_number')) 
+    sorted_insertions = sorted(insertions, key=itemgetter('line_number'))
     for insertion in sorted_insertions:
-        line_number = int(insertion.get("line_number", 0)) + line_offset
+        # The position must advance with each inserted line. Holding it fixed
+        # inserts every line of a block at the same index, which writes the
+        # block out in reverse and turns any multi-line fix into invalid code.
+        # max(0, ...) keeps a malformed or missing line_number (which defaults
+        # to 0) from becoming a negative index: list.insert(-1, x) silently
+        # places the line before the LAST line and splits the block apart.
+        position = max(0, int(insertion.get("line_number", 0)) + line_offset - 1)
         for new_line in insertion.get("new_lines", []):
-            lines.insert(int(line_number) - 1, new_line)
+            lines.insert(position, new_line)
+            position += 1
             line_offset += 1
 
 

@@ -21,10 +21,31 @@ from create_files_index import list_java_files
 ALLOWLIST_CONTROL = "allowlist"
 DENYLIST_CONTROL = "denylist"
 
+def ensure_project_checkout(project_name, bug_index, workspace):
+    """Restore the buggy working copy if it is missing.
+
+    ``undo_changes`` deletes the checkout before re-creating it; when the
+    re-create step fails (e.g. a transient environment error) every later file
+    command surfaced a raw Errno 2 about files_index.txt for the rest of the
+    run. Restoring here makes that state self-healing instead.
+    """
+    project_dir = os.path.join(workspace, project_name.lower() + "_" + str(bug_index) + "_buggy")
+    if not os.path.isdir(project_dir):
+        folder_name = os.path.basename(project_dir)
+        subprocess.run(
+            "defects4j checkout -p {} -v {}b -w {}".format(project_name, bug_index, folder_name),
+            shell=True, cwd=workspace, capture_output=True,
+        )
+    return project_dir
+
+
 def preprocess_paths(agent, project_name, bug_index, filepath):
     workspace = agent.config.workspace_path
-    project_dir = os.path.join(workspace, project_name.lower()+"_"+str(bug_index)+"_buggy")
-    
+    project_dir = ensure_project_checkout(project_name, bug_index, workspace)
+    if not os.path.isdir(project_dir):
+        return ("The project workspace is currently unavailable and could not be "
+                "restored; run the tests once to restore it, then retry this command.")
+
     if filepath.endswith(".java"):
         filepath = filepath[:-5]
         filepath = filepath.replace(".", "/")
@@ -560,7 +581,13 @@ def execute_read_range(project_name, bug_index, filepath, startline, endline, ag
     workspace = agent.config.workspace_path
     project_dir = os.path.join(workspace, project_name.lower()+"_"+str(bug_index)+"_buggy")
     filepath = preprocess_paths(agent, project_name, bug_index, filepath)
-    with open(os.path.join(project_dir,filepath)) as fp:
+    # preprocess_paths returns an explanatory message when the path cannot be
+    # resolved; opening that message as a file surfaced a raw Errno 2 to the
+    # agent instead of the guidance it was meant to read.
+    target = os.path.join(project_dir, filepath)
+    if not os.path.isfile(target):
+        return filepath
+    with open(target) as fp:
         lines = fp.readlines()
 
     lines_str = ""
@@ -578,7 +605,12 @@ def execute_write_range(project_name, bug_index, changes_dicts, agent):
         resolved = dict(change_dict)
         filepath = resolved["file_name"]
         filepath = preprocess_paths(agent, project_name, bug_index, filepath)
-        resolved["file_name"] = os.path.join(project_dir, filepath)
+        target = os.path.join(project_dir, filepath)
+        if not os.path.isfile(target):
+            # Unresolvable path: report the guidance instead of writing to a
+            # file named after the error message.
+            return filepath
+        resolved["file_name"] = target
 
         apply_changes(resolved)
 
@@ -739,7 +771,14 @@ def search_code_base(project_name:str, bug_index:str, key_words: list, agent: Ag
         #logger.debug("searching file: " + file)
         with open(file, encoding='utf-8', errors='ignore') as jf:
             content = jf.read()
-        tree = javalang.parse.parse(content)
+        try:
+            tree = javalang.parse.parse(content)
+        except Exception:
+            # javalang predates newer Java syntax (switch expressions and
+            # friends) and raises JavaSyntaxError on it; skip such files
+            # instead of failing the whole search — file-NAME matching below
+            # still covers them.
+            continue
         for path, node in tree:
             if isinstance(node, javalang.tree.ClassDeclaration):
                 class_name = node.name
@@ -835,6 +874,7 @@ def extract_test_code(project_name:str, bug_index:str, test_file_path: str, agen
 
     workspace = agent.config.workspace_path
     project_dir = "{}_{}_buggy".format(project_name.lower(), bug_index)
+    ensure_project_checkout(project_name, bug_index, workspace)
     test_dir = ""
     all_dirs = os.listdir(os.path.join(workspace, project_dir))
     test_file_path = test_file_path.split("::")[0]
