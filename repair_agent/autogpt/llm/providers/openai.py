@@ -76,6 +76,20 @@ OPEN_AI_CHAT_MODELS = {
             supports_functions=True,
         ),
         ChatModelInfo(
+            name="gpt-5-mini",
+            prompt_token_cost=0.00025,  # $0.25/M
+            completion_token_cost=0.002,  # $2/M
+            max_tokens=128000,
+            supports_functions=True,
+        ),
+        ChatModelInfo(
+            name="gpt-5",
+            prompt_token_cost=0.00125,  # $1.25/M
+            completion_token_cost=0.01,  # $10/M
+            max_tokens=128000,
+            supports_functions=True,
+        ),
+        ChatModelInfo(
             name="gpt-3.5-turbo-0125",
             prompt_token_cost=0.0005,  # $0.5/M
             completion_token_cost=0.0015,  # $1.5/M
