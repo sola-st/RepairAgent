@@ -17,7 +17,6 @@ import pytest
 import tests.conftest  # noqa: F401  (sys.path / chdir / langchain stubs)
 from autogpt.commands import defects4j as d
 
-
 # --------------------------------------------------------------------------
 # search_code_base: one unparseable file must not abort the whole search
 # --------------------------------------------------------------------------
@@ -111,7 +110,14 @@ def test_write_range_does_not_create_a_file_named_after_the_error(
     result = d.execute_write_range(
         fixture.project_name,
         fixture.bug_index,
-        [{"file_name": "Foo.java", "insertions": [], "deletions": [], "modifications": []}],
+        [
+            {
+                "file_name": "Foo.java",
+                "insertions": [],
+                "deletions": [],
+                "modifications": [],
+            }
+        ],
         fixture.agent,
     )
 
