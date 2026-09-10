@@ -1,0 +1,40 @@
+spec_version: "0.1.0"
+name: repair-agent
+version: 0.6.5
+description: >
+  RepairAgent is an autonomous LLM-powered agent that fixes bugs in Java projects
+  without human intervention. Given a buggy project and a failing test, it operates
+  in a self-directed loop across three states — understanding the bug, collecting
+  code-context to plan a fix, and iteratively applying and testing candidate patches —
+  until all tests pass. It supports OpenAI (GPT-4o, GPT-4.1, GPT-5) and Anthropic
+  (Claude Sonnet/Haiku/Opus) model families. Published at ICSE 2025; it correctly
+  repaired 164 bugs on the Defects4J benchmark, outperforming all prior tools.
+author: sola-st
+license: MIT
+
+model:
+  preferred: anthropic:claude-sonnet-4-20250514
+  fallback:
+    - openai:gpt-4o
+    - openai:gpt-4o-mini
+  constraints:
+    temperature: 0.0
+    max_tokens: 8192
+
+skills:
+  - localize-bug
+  - collect-code-context
+  - apply-patch
+  - run-test-suite
+
+runtime:
+  max_turns: 40
+  timeout: 3600
+
+compliance:
+  risk_tier: standard
+  supervision:
+    human_in_the_loop: none
+    kill_switch: true
+  recordkeeping:
+    audit_logging: true
